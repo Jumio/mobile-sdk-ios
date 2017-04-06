@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>884B2843-682F-40FB-8567-73F86CF0242F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JumioMobileSDKSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FB0CC56B4C2A985C5FE2E72B02E27A7B4C929109</key>
+		<string>https://stash.int.jumio.com/scm/ios/mobile-sdk.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JumioMobileSDKSample/JumioMobileSDKSample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FB0CC56B4C2A985C5FE2E72B02E27A7B4C929109</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://stash.int.jumio.com/scm/ios/mobile-sdk.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FB0CC56B4C2A985C5FE2E72B02E27A7B4C929109</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB0CC56B4C2A985C5FE2E72B02E27A7B4C929109</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Mobil-SDK</string>
+		</dict>
+	</array>
+</dict>
+</plist>

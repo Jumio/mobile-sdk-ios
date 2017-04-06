@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FEF68FC1B909773003E55B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FEF68FB1B909773003E55B9 /* Images.xcassets */; };
+		30C268AD1A8E212700C879D6 /* CustomScanOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C268AB1A8E212700C879D6 /* CustomScanOverlayViewController.m */; };
+		30C268AE1A8E212700C879D6 /* CustomScanOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C268AC1A8E212700C879D6 /* CustomScanOverlayViewController.xib */; };
+		541724E41D3E6E21007143A3 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; };
+		541724E51D3E6E21007143A3 /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		541724E61D3E6E21007143A3 /* Netswipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD91AC06202000A16C2 /* Netswipe.framework */; };
+		541724E71D3E6E21007143A3 /* Netswipe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD91AC06202000A16C2 /* Netswipe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		541724E81D3E6E21007143A3 /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; };
+		541724E91D3E6E21007143A3 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		543E17B91C3C1673005F8EDE /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543E17B81C3C1673005F8EDE /* exportOptions.plist */; };
+		54A749C71E5587B70060CF63 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A749C61E5587B70060CF63 /* MainStoryboard.storyboard */; };
+		54A749CA1E558A130060CF63 /* NetswipeStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749C91E558A130060CF63 /* NetswipeStartViewController.m */; };
+		54A749CD1E558BF30060CF63 /* NetverifyStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749CC1E558BF30060CF63 /* NetverifyStartViewController.m */; };
+		54A749D01E5610C00060CF63 /* MultiDocumentStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749CF1E5610C00060CF63 /* MultiDocumentStartViewController.m */; };
+		54E0C54D1D4A5D9C001B3B5E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; };
+		54E0C54E1D4A5D9C001B3B5E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE01EEF51924A3E200B7CC49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE01EEF31924A3E200B7CC49 /* InfoPlist.strings */; };
+		EE01EEF71924A3E200B7CC49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
+		EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */; };
+		EE01EF041924A3E300B7CC49 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EF031924A3E300B7CC49 /* StartViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		541724EA1D3E6E22007143A3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				541724E51D3E6E21007143A3 /* JumioCore.framework in Embed Frameworks */,
+				541724E71D3E6E21007143A3 /* Netswipe.framework in Embed Frameworks */,
+				54E0C54E1D4A5D9C001B3B5E /* MicroBlink.framework in Embed Frameworks */,
+				541724E91D3E6E21007143A3 /* Netverify.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0FC8DCD51AC06202000A16C2 /* JumioCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioCore.framework; path = "../sdk-device-frameworks/JumioCore.framework"; sourceTree = SOURCE_ROOT; };
+		0FC8DCD91AC06202000A16C2 /* Netswipe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netswipe.framework; path = "../sdk-device-frameworks/Netswipe.framework"; sourceTree = "<group>"; };
+		0FC8DCDD1AC06202000A16C2 /* Netverify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netverify.framework; path = "../sdk-device-frameworks/Netverify.framework"; sourceTree = SOURCE_ROOT; };
+		0FEF68FB1B909773003E55B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		30C268AA1A8E212700C879D6 /* CustomScanOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScanOverlayViewController.h; sourceTree = "<group>"; };
+		30C268AB1A8E212700C879D6 /* CustomScanOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScanOverlayViewController.m; sourceTree = "<group>"; };
+		30C268AC1A8E212700C879D6 /* CustomScanOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomScanOverlayViewController.xib; sourceTree = "<group>"; };
+		543E17B81C3C1673005F8EDE /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
+		54A749C61E5587B70060CF63 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		54A749C81E558A130060CF63 /* NetswipeStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetswipeStartViewController.h; sourceTree = "<group>"; };
+		54A749C91E558A130060CF63 /* NetswipeStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetswipeStartViewController.m; sourceTree = "<group>"; };
+		54A749CB1E558BF30060CF63 /* NetverifyStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetverifyStartViewController.h; sourceTree = "<group>"; };
+		54A749CC1E558BF30060CF63 /* NetverifyStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetverifyStartViewController.m; sourceTree = "<group>"; };
+		54A749CE1E5610C00060CF63 /* MultiDocumentStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiDocumentStartViewController.h; sourceTree = "<group>"; };
+		54A749CF1E5610C00060CF63 /* MultiDocumentStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiDocumentStartViewController.m; sourceTree = "<group>"; };
+		54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = "../sdk-device-frameworks/MicroBlink.framework"; sourceTree = SOURCE_ROOT; };
+		EE01EEE71924A3E200B7CC49 /* JumioMobileSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JumioMobileSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE01EEF21924A3E200B7CC49 /* JumioMobileSDKSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JumioMobileSDKSample-Info.plist"; sourceTree = "<group>"; };
+		EE01EEF41924A3E200B7CC49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE01EEF61924A3E200B7CC49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE01EEF81924A3E300B7CC49 /* JumioMobileSDKSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JumioMobileSDKSample-Prefix.pch"; sourceTree = "<group>"; };
+		EE01EEF91924A3E300B7CC49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE01EF021924A3E300B7CC49 /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		EE01EF031924A3E300B7CC49 /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE01EEE41924A3E200B7CC49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54E0C54D1D4A5D9C001B3B5E /* MicroBlink.framework in Frameworks */,
+				541724E81D3E6E21007143A3 /* Netverify.framework in Frameworks */,
+				541724E41D3E6E21007143A3 /* JumioCore.framework in Frameworks */,
+				541724E61D3E6E21007143A3 /* Netswipe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30C268AF1A8E213000C879D6 /* CustomOverlayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				30C268AA1A8E212700C879D6 /* CustomScanOverlayViewController.h */,
+				30C268AB1A8E212700C879D6 /* CustomScanOverlayViewController.m */,
+				30C268AC1A8E212700C879D6 /* CustomScanOverlayViewController.xib */,
+			);
+			name = CustomOverlayViewController;
+			sourceTree = "<group>";
+		};
+		54A749D11E5618870060CF63 /* Netswipe */ = {
+			isa = PBXGroup;
+			children = (
+				54A749C81E558A130060CF63 /* NetswipeStartViewController.h */,
+				54A749C91E558A130060CF63 /* NetswipeStartViewController.m */,
+				30C268AF1A8E213000C879D6 /* CustomOverlayViewController */,
+			);
+			name = Netswipe;
+			sourceTree = "<group>";
+		};
+		54A749D21E56188F0060CF63 /* Netverify */ = {
+			isa = PBXGroup;
+			children = (
+				54A749CB1E558BF30060CF63 /* NetverifyStartViewController.h */,
+				54A749CC1E558BF30060CF63 /* NetverifyStartViewController.m */,
+			);
+			name = Netverify;
+			sourceTree = "<group>";
+		};
+		54A749D31E5618950060CF63 /* Multi Document */ = {
+			isa = PBXGroup;
+			children = (
+				54A749CE1E5610C00060CF63 /* MultiDocumentStartViewController.h */,
+				54A749CF1E5610C00060CF63 /* MultiDocumentStartViewController.m */,
+			);
+			name = "Multi Document";
+			sourceTree = "<group>";
+		};
+		54A749D41E56189F0060CF63 /* General classes */ = {
+			isa = PBXGroup;
+			children = (
+				EE01EEF91924A3E300B7CC49 /* AppDelegate.h */,
+				EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */,
+				EE01EF021924A3E300B7CC49 /* StartViewController.h */,
+				EE01EF031924A3E300B7CC49 /* StartViewController.m */,
+			);
+			name = "General classes";
+			sourceTree = "<group>";
+		};
+		EE01EEDE1924A3E200B7CC49 = {
+			isa = PBXGroup;
+			children = (
+				EE8E78101926419400896C42 /* JumioMobileSDK */,
+				EE01EEF01924A3E200B7CC49 /* JumioMobileSDKSample */,
+				EE01EEE91924A3E200B7CC49 /* Frameworks */,
+				EE01EEE81924A3E200B7CC49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE01EEE81924A3E200B7CC49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE01EEE71924A3E200B7CC49 /* JumioMobileSDKSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE01EEE91924A3E200B7CC49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE01EEF01924A3E200B7CC49 /* JumioMobileSDKSample */ = {
+			isa = PBXGroup;
+			children = (
+				54A749C61E5587B70060CF63 /* MainStoryboard.storyboard */,
+				0FEF68FB1B909773003E55B9 /* Images.xcassets */,
+				54A749D41E56189F0060CF63 /* General classes */,
+				54A749D11E5618870060CF63 /* Netswipe */,
+				54A749D21E56188F0060CF63 /* Netverify */,
+				54A749D31E5618950060CF63 /* Multi Document */,
+				EE01EEF11924A3E200B7CC49 /* Supporting Files */,
+			);
+			path = JumioMobileSDKSample;
+			sourceTree = "<group>";
+		};
+		EE01EEF11924A3E200B7CC49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE01EEF21924A3E200B7CC49 /* JumioMobileSDKSample-Info.plist */,
+				EE01EEF31924A3E200B7CC49 /* InfoPlist.strings */,
+				EE01EEF61924A3E200B7CC49 /* main.m */,
+				EE01EEF81924A3E300B7CC49 /* JumioMobileSDKSample-Prefix.pch */,
+				543E17B81C3C1673005F8EDE /* exportOptions.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE8E78101926419400896C42 /* JumioMobileSDK */ = {
+			isa = PBXGroup;
+			children = (
+				54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */,
+				0FC8DCD51AC06202000A16C2 /* JumioCore.framework */,
+				0FC8DCD91AC06202000A16C2 /* Netswipe.framework */,
+				0FC8DCDD1AC06202000A16C2 /* Netverify.framework */,
+			);
+			name = JumioMobileSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE01EEE61924A3E200B7CC49 /* JumioMobileSDKSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE01EF1C1924A3E300B7CC49 /* Build configuration list for PBXNativeTarget "JumioMobileSDKSample" */;
+			buildPhases = (
+				EE01EEE31924A3E200B7CC49 /* Sources */,
+				EE01EEE41924A3E200B7CC49 /* Frameworks */,
+				EE01EEE51924A3E200B7CC49 /* Resources */,
+				541724EA1D3E6E22007143A3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JumioMobileSDKSample;
+			productName = JumioMobileSDKSample;
+			productReference = EE01EEE71924A3E200B7CC49 /* JumioMobileSDKSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE01EEDF1924A3E200B7CC49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Jumio Inc.";
+				TargetAttributes = {
+					EE01EEE61924A3E200B7CC49 = {
+						DevelopmentTeam = JC7JKY534B;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = EE01EEE21924A3E200B7CC49 /* Build configuration list for PBXProject "JumioMobileSDKSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE01EEDE1924A3E200B7CC49;
+			productRefGroup = EE01EEE81924A3E200B7CC49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE01EEE61924A3E200B7CC49 /* JumioMobileSDKSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE01EEE51924A3E200B7CC49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54A749C71E5587B70060CF63 /* MainStoryboard.storyboard in Resources */,
+				0FEF68FC1B909773003E55B9 /* Images.xcassets in Resources */,
+				EE01EEF51924A3E200B7CC49 /* InfoPlist.strings in Resources */,
+				30C268AE1A8E212700C879D6 /* CustomScanOverlayViewController.xib in Resources */,
+				543E17B91C3C1673005F8EDE /* exportOptions.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE01EEE31924A3E200B7CC49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE01EF041924A3E300B7CC49 /* StartViewController.m in Sources */,
+				EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */,
+				54A749D01E5610C00060CF63 /* MultiDocumentStartViewController.m in Sources */,
+				54A749CD1E558BF30060CF63 /* NetverifyStartViewController.m in Sources */,
+				54A749CA1E558A130060CF63 /* NetswipeStartViewController.m in Sources */,
+				30C268AD1A8E212700C879D6 /* CustomScanOverlayViewController.m in Sources */,
+				EE01EEF71924A3E200B7CC49 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE01EEF31924A3E200B7CC49 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE01EEF41924A3E200B7CC49 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE01EF1A1924A3E300B7CC49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_MODULES_AUTOLINK = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/JumioMobileSDKSample/Build";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7";
+			};
+			name = Debug;
+		};
+		EE01EF1B1924A3E300B7CC49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_MODULES_AUTOLINK = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/JumioMobileSDKSample/Build";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7";
+			};
+			name = Release;
+		};
+		EE01EF1D1924A3E300B7CC49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_MODULES_AUTOLINK = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				DEVELOPMENT_TEAM = JC7JKY534B;
+				ENABLE_BITCODE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../sdk-device-frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JumioMobileSDKSample/JumioMobileSDKSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/JumioMobileSDK\"/**",
+				);
+				INFOPLIST_FILE = "JumioMobileSDKSample/JumioMobileSDKSample-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9d4a5243-fa56-4f7d-b0be-f64a81256e6d";
+				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentEnterprise;
+				VALID_ARCHS = "arm64 armv7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EE01EF1E1924A3E300B7CC49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_MODULES_AUTOLINK = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				DEVELOPMENT_TEAM = JC7JKY534B;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../sdk-device-frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JumioMobileSDKSample/JumioMobileSDKSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/JumioMobileSDK\"/**",
+				);
+				INFOPLIST_FILE = "JumioMobileSDKSample/JumioMobileSDKSample-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionEnterprise;
+				VALID_ARCHS = "arm64 armv7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE01EEE21924A3E200B7CC49 /* Build configuration list for PBXProject "JumioMobileSDKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE01EF1A1924A3E300B7CC49 /* Debug */,
+				EE01EF1B1924A3E300B7CC49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE01EF1C1924A3E300B7CC49 /* Build configuration list for PBXNativeTarget "JumioMobileSDKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE01EF1D1924A3E300B7CC49 /* Debug */,
+				EE01EF1E1924A3E300B7CC49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE01EEDF1924A3E200B7CC49 /* Project object */;
+}

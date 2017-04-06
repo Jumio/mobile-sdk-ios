@@ -1,0 +1,8 @@
+INSTALL(DIRECTORY recognizers dictionaries
+        DESTINATION data
+        PATTERN ".svn" EXCLUDE)
+
+FILE(GLOB ALL_CONFIG_FILES *.json)
+
+INSTALL(FILES ${ALL_CONFIG_FILES}
+  DESTINATION data)

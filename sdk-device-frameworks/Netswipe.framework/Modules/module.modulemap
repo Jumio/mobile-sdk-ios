@@ -1,0 +1,69 @@
+framework module Netswipe {
+    umbrella header "Netswipe.h"
+	link framework "Accelerate"
+	link framework "AudioToolbox"
+	link framework "AVFoundation"
+	link framework "CoreGraphics"
+	link framework "CoreImage"
+	link framework "CoreMedia"
+	link framework "CoreText"
+	link framework "CoreVideo"
+	link framework "Foundation"
+	link framework "JumioCore"
+	link framework "MobileCoreServices"
+	link framework "QuartzCore"
+	link framework "Security"
+	link framework "SystemConfiguration"
+	link framework "UIKit"
+	link "c"
+	link "c++"
+	link "iconv"
+	link "z"
+    export *
+    module * { export * }
+}
+
+module Netswipe.NetswipeViewController {
+    header "NetswipeViewController.h"
+    export *
+}
+
+module Netswipe.NetswipeCardInformation {
+    header "NetswipeCardInformation.h"
+    export *
+}
+
+module Netswipe.NetswipeCustomScanOverlayViewController {
+    header "NetswipeCustomScanOverlayViewController.h"
+    export *
+}
+
+module Netswipe.NetswipePositiveButton {
+    header "NetswipePositiveButton.h"
+    export *
+}
+
+module Netswipe.NetswipeNegativeButton {
+    header "NetswipeNegativeButton.h"
+    export *
+}
+
+module Netswipe.NetswipeBaseView {
+    header "NetswipeBaseView.h"
+    export *
+}
+
+module Netswipe.NetswipeScanOverlay{
+    header "NetswipeScanOverlay.h"
+    export *
+}
+
+module Netswipe.NetswipeNavigationBarTitleImageView {
+    header "NetswipeNavigationBarTitleImageView.h"
+    export *
+}
+
+module Netswipe.UINavigationBarNetswipeAppearance {
+    header "UINavigationBar+NetswipeAppearance.h"
+    export *
+}

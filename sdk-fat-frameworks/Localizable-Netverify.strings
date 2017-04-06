@@ -1,0 +1,86 @@
+/*
+  Localizable-Netverify.strings
+  Copyright © 2017 Jumio Corporation All rights reserved.
+*/
+
+
+
+// scanOptionsView
+"netverify.scan-options.navigationItem.title" = "Select your document";
+"netverify.scan-options.header.title" = "Select the type of document you wish to scan";
+"netverify.scan-options.section-header.country.title" = "YOUR COUNTRY";
+"netverify.scan-options.section-header.document-type.title" = "TYPE OF DOCUMENT";
+"netverify.scan-options.section-header.document-variant.title" = "LAYOUT OF DOCUMENT";
+"netverify.scan-options.cell.country.unselected.title" = "Select a country";
+"netverify.scan-options.cell.preselected.subtitle" = "Cannot be changed";
+"netverify.scan-options.cell.document-type.passport.title" = "Passport";
+"netverify.scan-options.cell.document-type.visa.title" = "Visa";
+"netverify.scan-options.cell.document-type.identity-card.title" = "Identity Card";
+"netverify.scan-options.cell.document-type.driver-license.title" = "Driver License";
+"netverify.scan-options.cell.document-variant.plastic.title" = "Plastic photocard";
+"netverify.scan-options.cell.document-variant.paper.title" = "Folded document";
+"netverify.country-selection.navigationItem.title" = "Select your country";
+"netverify.scan-options.accessibility-label.close-button" = "Close";
+
+// scanView
+"netverify.scan-view.navigationItem.title" = "Scan document";
+"netverify.scan-view.use-front-card.overlay.title" = "USE FRONT";
+"netverify.scan-view.use-back-card.overlay.title" = "USE BACK";
+"netverify.scan-view.accessibility-label.button.switch-to-front-camera" = "Switch to front camera";
+"netverify.scan-view.accessibility-label.button.switch-to-back-camera" = "Switch to back camera";
+"netverify.scan-view.accessibility-label.flash-button.activate" = "Activate flash";
+"netverify.scan-view.accessibility-label.flash-button.deactivate" = "Deactivate flash";
+"netverify.scan-view.accessibility-label.button.take-shot" = "Take a photo";
+"netverify.scan-view.face.navigation-item.title" = "Take a Selfie";
+"netverify.scan-view.face.label.moves-eyes-blink" = "Move your eyes or blink";
+"netverify.scan-help-view.headline.scan-passport" = "Scan Passport";
+"netverify.scan-help-view.headline.scan-visa" = "Scan Visa";
+"netverify.scan-help-view.headline.scan-identity-card-front" = "Scan Identity Card Front";
+"netverify.scan-help-view.headline.scan-identity-card-back" = "Scan Identity Card Back";
+"netverify.scan-help-view.headline.capture-identity-card-inside" = "Capture Identity Card Inside";
+"netverify.scan-help-view.headline.capture-identity-card-outside" = "Capture Identity Card Outside";
+"netverify.scan-help-view.headline.scan-driver-license-front" = "Scan Driver License Front";
+"netverify.scan-help-view.headline.scan-driver-license-back" = "Scan Driver License Back";
+"netverify.scan-help-view.headline.capture-driver-license-inside" = "Capture Driver License Inside";
+"netverify.scan-help-view.headline.capture-driver-license-outside" = "Capture Driver License Outside";
+"netverify.scan-help-view.headline.scan-face" = "Align your Face";
+"netverify.scan-help-view.steps" = "Step %lu of %lu";
+"netverify.scan-help-view.help-text-mrz.short" = "Align your document with the highlighted area of the overlay until it is captured automatically";
+"netverify.scan-help-view.help-text-mrz.full" = "Place your document within the frame as it is shown in the animation above. The capturing happens automatically.\n\nEnsure that all data is readable and avoid reflections.";
+"netverify.scan-help-view.help-text-template-matcher.short" = "Place your document in front of the camera until it is captured automatically";
+"netverify.scan-help-view.help-text-template-matcher.full" = "Place your document in front of the camera as it is shown in the animation above. The capturing happens automatically.\n\nEnsure that all data is readable and avoid reflections.";
+"netverify.scan-help-view.help-text-line-finder.short" = "Place your document within the frame until all 4 edges are aligned and it is captured automatically";
+"netverify.scan-help-view.help-text-line-finder.full" = "Place your document within the frame until all 4 edges are aligned as it is shown in the animation above. The capturing happens automatically.\n\nEnsure that all data is readable and avoid reflections.";
+"netverify.scan-help-view.help-text-barcode.short" = "Place the barcode in front of the camera until it is captured automatically";
+"netverify.scan-help-view.help-text-barcode.full" = "Place the barcode in front of the camera as it is shown in the picture above. The capturing happens automatically.\n\nEnsure that all data is readable and avoid reflections.";
+"netverify.scan-help-view.help-text-face.description" = "A picture of your face will now be taken automatically. Center your face within the overlay.\n\nBlink twice to complete the process.";
+"netverify.scan-help-view.button.general-fallback.title" = "CAPTURE IS NOT WORKING";
+"netverify.scan-help-view.button.barcode-fallback.title" = "NO BARCODE ON MY ID";
+"netverify.scan-help-view.face.duration" = "The scanning process takes 5 seconds.";
+"netverify.scan-help-view.face.button.continue" = "START";
+"netverify.confirmation-view.headline" = "Check readability";
+"netverify.confirmation-view.label" = "Make sure that all data on your document is fully visible, glare free and not blurred";
+"netverify.confirmation-view.manual-face.label" = "Make sure your face is fully visible and the image is not blurred";
+"netverify.confirmation-view.button.submit" = "READABLE";
+"netverify.confirmation-view.button.retry" = "RETAKE";
+
+// actionView
+"netverify.error.network-problem.title" = "We have encountered a network communication problem";
+"netverify.error.authentication-failed.title" = "Authentication failed";
+"netverify.error.invalid-key.title" = "Certificate not valid anymore. Please contact the app vendor";
+"netverify.error.device-is-offline.title" = "No Internet connection available";
+"netverify.error.cancelled-by-user.title" = "Cancelled by end-user";
+"netverify.error.transaction-already-finished.title" = "Transaction already finished";
+"netverify.error.user-address-missing.title" = "Scan front";
+"netverify.error.user-address-missing" = "The barcode of your document didn´t contain your address, turn your document and scan the front.";
+"netverify.error-view.address-missing.button.continue.title" = "Tap to continue";
+"netverify.error-view.error.header.title" = "Error";
+"netverify.error-view.button.retry.title" = "RETRY";
+"netverify.error-view.button.cancel.title" = "CANCEL";
+"netverify.alert-view.camera-access-disabled.title" = "Camera access disabled";
+"netverify.alert-view.camera-access-disabled.description" = "%@ needs access to your camera. Please check your privacy settings.";
+"netverify.alert-view.button.confirm.title" = "Confirm";
+"netverify.submission-view.uploading.headline" = "Uploading your documents";
+"netverify.submission-view.uploading.description" = "This should only take a couple of seconds, depending on your network connectivity";
+"netverify.submission-view.successful.headline" = "Upload successful";
+"netverify.submission-view.successful.description" = "";
