@@ -88,6 +88,8 @@ With accessibility support, visually impaired users can now enable __VoiceOver__
 # Support
 
 ## Previous version
+The previous release version 2.4.0 of the Jumio Mobile SDK is supported until 2017-07-06.
+
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 
 ## Contact
