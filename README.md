@@ -9,7 +9,13 @@
 # Release notes
 Applies to all products.
 
-- Changed provider for SDK frameworks, sample code and documentation to Github
+#### Additions
+* Cross-Platform Support - Cordova
+* Major camera and focus improvements 
+* Display specific error codes to users 
+
+#### Fixes
+* Overall stability improvements
 
 # Basic Setup
 
@@ -44,7 +50,7 @@ Choose the pod according to the product you use and suiting your configuration.
 ```
 pod 'JumioMobileSDK' # If you use BAM Checkout along Netverify in your app. Frameworks supporting device architectures only.
 
-pod 'JumioMobileSDK/Netswipe' # Specify Netswipe as subspec to only use the BAM Checkout part of the Jumio Mobile SDK
+pod 'JumioMobileSDK/BAMCheckout' # Specify BAMCheckout as subspec to only use the BAM Checkout part of the Jumio Mobile SDK
 pod 'JumioMobileSDK/Netverify' # Specify Netverify as subspec to only use the Netverify part of the Jumio Mobile SDK
 
 pod 'JumioMobileSDK-FAT' # For development purposes, use the frameworks with device and simulator support (also supports subspecs)
@@ -55,17 +61,17 @@ The Jumio Mobile SDK consists of several dynamic frameworks. Add specific framew
 
 The following table shows which frameworks have to be added:
 
-| Product | JumioCore | Netswipe | Netverify | MicroBlink (*) |
-| :--- | :---: | :---: | :---: | :---: |
-| Fastfill & Netverify | x |  | x | x |
-| Netverify Multi Document | x |  | x |  |
-| BAM Checkout credit card scanning | x | x |  |  |
-| BAM Checkout credit card + ID scanning | x | x | x | x |
+| Product | JumioCore | BAMCheckout | Netverify | MicroBlink (*) | UMoove (*) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Fastfill & Netverify | x |  | x | x | x |
+| Document Verification | x |  | x |  |  |
+| BAM Checkout credit card scanning | x | x |  |  |  |
+| BAM Checkout credit card + ID scanning | x | x | x | x | x |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
-Two packages are available with frameworks for device only and frameworks with device and simulator support. Make sure to use the device only frameworks for app submissions to the AppStore.
+Two packages are available with frameworks for device only and frameworks with device and simulator support. Make sure to use the device only frameworks for app submissions to the AppStore, as using the other package will cause a rejection by Apple.
 
-(*) The MicroBlink framework can optionally be left out (do not add to your app project) to reduce app size. Instead, the native barcode scanner is used, that has a slight disadvantage in speed and capture reliability.
+(*) The MicroBlink and UMoove framework can optionally be left out (do not add to your app project) to reduce app size. If MicroBlink is not linked in the app, the native barcode scanner is used, that has a slight disadvantage in speed and capture reliability. In case the UMoove is left out, the face liveness capability cannot be used.
 
 Add the following linker flags to your Xcode Build Settings:<br/>
 __Note:__ Added automatically if using CocoaPods.
@@ -82,14 +88,12 @@ With accessibility support, visually impaired users can now enable __VoiceOver__
 
 # Get started
 - [Integration Netverify & Fastfill](docs/integration_netverify-fastfill.md)
-- [Integration Netverify Multi Document](docs/integration_multi-document.md)
+- [Integration Document Verification](docs/integration_document-verification.md)
 - [Integration BAM Checkout](docs/integration_bam-checkout.md)
 
 # Support
 
 ## Previous version
-The previous release version 2.4.0 of the Jumio Mobile SDK is supported until 2017-07-06.
-
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 
 ## Contact

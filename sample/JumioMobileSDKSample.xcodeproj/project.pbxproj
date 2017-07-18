@@ -12,17 +12,19 @@
 		30C268AE1A8E212700C879D6 /* CustomScanOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C268AC1A8E212700C879D6 /* CustomScanOverlayViewController.xib */; };
 		541724E41D3E6E21007143A3 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; };
 		541724E51D3E6E21007143A3 /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		541724E61D3E6E21007143A3 /* Netswipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD91AC06202000A16C2 /* Netswipe.framework */; };
-		541724E71D3E6E21007143A3 /* Netswipe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD91AC06202000A16C2 /* Netswipe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		541724E81D3E6E21007143A3 /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; };
 		541724E91D3E6E21007143A3 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		543E17B91C3C1673005F8EDE /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543E17B81C3C1673005F8EDE /* exportOptions.plist */; };
+		548D5D521F17C596001E7828 /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548D5D511F17C596001E7828 /* Umoove.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		548D5D531F17C596001E7828 /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 548D5D511F17C596001E7828 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54A749C71E5587B70060CF63 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A749C61E5587B70060CF63 /* MainStoryboard.storyboard */; };
-		54A749CA1E558A130060CF63 /* NetswipeStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749C91E558A130060CF63 /* NetswipeStartViewController.m */; };
+		54A749CA1E558A130060CF63 /* BAMCheckoutStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749C91E558A130060CF63 /* BAMCheckoutStartViewController.m */; };
 		54A749CD1E558BF30060CF63 /* NetverifyStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749CC1E558BF30060CF63 /* NetverifyStartViewController.m */; };
-		54A749D01E5610C00060CF63 /* MultiDocumentStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749CF1E5610C00060CF63 /* MultiDocumentStartViewController.m */; };
-		54E0C54D1D4A5D9C001B3B5E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; };
+		54A749D01E5610C00060CF63 /* DocumentVerificationStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749CF1E5610C00060CF63 /* DocumentVerificationStartViewController.m */; };
+		54E0C54D1D4A5D9C001B3B5E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		54E0C54E1D4A5D9C001B3B5E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		778F6D581ECDD64C00973C7E /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778F6D571ECDD64C00973C7E /* BAMCheckout.framework */; };
+		778F6D591ECDD64C00973C7E /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 778F6D571ECDD64C00973C7E /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE01EEF51924A3E200B7CC49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE01EEF31924A3E200B7CC49 /* InfoPlist.strings */; };
 		EE01EEF71924A3E200B7CC49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
 		EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */; };
@@ -37,9 +39,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				541724E51D3E6E21007143A3 /* JumioCore.framework in Embed Frameworks */,
-				541724E71D3E6E21007143A3 /* Netswipe.framework in Embed Frameworks */,
 				54E0C54E1D4A5D9C001B3B5E /* MicroBlink.framework in Embed Frameworks */,
 				541724E91D3E6E21007143A3 /* Netverify.framework in Embed Frameworks */,
+				548D5D531F17C596001E7828 /* Umoove.framework in Embed Frameworks */,
+				778F6D591ECDD64C00973C7E /* BAMCheckout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,21 +51,22 @@
 
 /* Begin PBXFileReference section */
 		0FC8DCD51AC06202000A16C2 /* JumioCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioCore.framework; path = "../sdk-device-frameworks/JumioCore.framework"; sourceTree = SOURCE_ROOT; };
-		0FC8DCD91AC06202000A16C2 /* Netswipe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netswipe.framework; path = "../sdk-device-frameworks/Netswipe.framework"; sourceTree = "<group>"; };
 		0FC8DCDD1AC06202000A16C2 /* Netverify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netverify.framework; path = "../sdk-device-frameworks/Netverify.framework"; sourceTree = SOURCE_ROOT; };
 		0FEF68FB1B909773003E55B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		30C268AA1A8E212700C879D6 /* CustomScanOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScanOverlayViewController.h; sourceTree = "<group>"; };
 		30C268AB1A8E212700C879D6 /* CustomScanOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScanOverlayViewController.m; sourceTree = "<group>"; };
 		30C268AC1A8E212700C879D6 /* CustomScanOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomScanOverlayViewController.xib; sourceTree = "<group>"; };
 		543E17B81C3C1673005F8EDE /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
+		548D5D511F17C596001E7828 /* Umoove.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Umoove.framework; path = "../sdk-device-frameworks/Umoove.framework"; sourceTree = "<group>"; };
 		54A749C61E5587B70060CF63 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		54A749C81E558A130060CF63 /* NetswipeStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetswipeStartViewController.h; sourceTree = "<group>"; };
-		54A749C91E558A130060CF63 /* NetswipeStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetswipeStartViewController.m; sourceTree = "<group>"; };
+		54A749C81E558A130060CF63 /* BAMCheckoutStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAMCheckoutStartViewController.h; sourceTree = "<group>"; };
+		54A749C91E558A130060CF63 /* BAMCheckoutStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAMCheckoutStartViewController.m; sourceTree = "<group>"; };
 		54A749CB1E558BF30060CF63 /* NetverifyStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetverifyStartViewController.h; sourceTree = "<group>"; };
 		54A749CC1E558BF30060CF63 /* NetverifyStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetverifyStartViewController.m; sourceTree = "<group>"; };
-		54A749CE1E5610C00060CF63 /* MultiDocumentStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiDocumentStartViewController.h; sourceTree = "<group>"; };
-		54A749CF1E5610C00060CF63 /* MultiDocumentStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiDocumentStartViewController.m; sourceTree = "<group>"; };
+		54A749CE1E5610C00060CF63 /* DocumentVerificationStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentVerificationStartViewController.h; sourceTree = "<group>"; };
+		54A749CF1E5610C00060CF63 /* DocumentVerificationStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentVerificationStartViewController.m; sourceTree = "<group>"; };
 		54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = "../sdk-device-frameworks/MicroBlink.framework"; sourceTree = SOURCE_ROOT; };
+		778F6D571ECDD64C00973C7E /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BAMCheckout.framework; path = "../sdk-device-frameworks/BAMCheckout.framework"; sourceTree = "<group>"; };
 		EE01EEE71924A3E200B7CC49 /* JumioMobileSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JumioMobileSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE01EEF21924A3E200B7CC49 /* JumioMobileSDKSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JumioMobileSDKSample-Info.plist"; sourceTree = "<group>"; };
 		EE01EEF41924A3E200B7CC49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -82,7 +86,8 @@
 				54E0C54D1D4A5D9C001B3B5E /* MicroBlink.framework in Frameworks */,
 				541724E81D3E6E21007143A3 /* Netverify.framework in Frameworks */,
 				541724E41D3E6E21007143A3 /* JumioCore.framework in Frameworks */,
-				541724E61D3E6E21007143A3 /* Netswipe.framework in Frameworks */,
+				548D5D521F17C596001E7828 /* Umoove.framework in Frameworks */,
+				778F6D581ECDD64C00973C7E /* BAMCheckout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,14 +104,14 @@
 			name = CustomOverlayViewController;
 			sourceTree = "<group>";
 		};
-		54A749D11E5618870060CF63 /* Netswipe */ = {
+		54A749D11E5618870060CF63 /* BAMCheckout */ = {
 			isa = PBXGroup;
 			children = (
-				54A749C81E558A130060CF63 /* NetswipeStartViewController.h */,
-				54A749C91E558A130060CF63 /* NetswipeStartViewController.m */,
+				54A749C81E558A130060CF63 /* BAMCheckoutStartViewController.h */,
+				54A749C91E558A130060CF63 /* BAMCheckoutStartViewController.m */,
 				30C268AF1A8E213000C879D6 /* CustomOverlayViewController */,
 			);
-			name = Netswipe;
+			name = BAMCheckout;
 			sourceTree = "<group>";
 		};
 		54A749D21E56188F0060CF63 /* Netverify */ = {
@@ -118,13 +123,13 @@
 			name = Netverify;
 			sourceTree = "<group>";
 		};
-		54A749D31E5618950060CF63 /* Multi Document */ = {
+		54A749D31E5618950060CF63 /* Document Verification */ = {
 			isa = PBXGroup;
 			children = (
-				54A749CE1E5610C00060CF63 /* MultiDocumentStartViewController.h */,
-				54A749CF1E5610C00060CF63 /* MultiDocumentStartViewController.m */,
+				54A749CE1E5610C00060CF63 /* DocumentVerificationStartViewController.h */,
+				54A749CF1E5610C00060CF63 /* DocumentVerificationStartViewController.m */,
 			);
-			name = "Multi Document";
+			name = "Document Verification";
 			sourceTree = "<group>";
 		};
 		54A749D41E56189F0060CF63 /* General classes */ = {
@@ -169,9 +174,9 @@
 				54A749C61E5587B70060CF63 /* MainStoryboard.storyboard */,
 				0FEF68FB1B909773003E55B9 /* Images.xcassets */,
 				54A749D41E56189F0060CF63 /* General classes */,
-				54A749D11E5618870060CF63 /* Netswipe */,
+				54A749D11E5618870060CF63 /* BAMCheckout */,
 				54A749D21E56188F0060CF63 /* Netverify */,
-				54A749D31E5618950060CF63 /* Multi Document */,
+				54A749D31E5618950060CF63 /* Document Verification */,
 				EE01EEF11924A3E200B7CC49 /* Supporting Files */,
 			);
 			path = JumioMobileSDKSample;
@@ -192,10 +197,11 @@
 		EE8E78101926419400896C42 /* JumioMobileSDK */ = {
 			isa = PBXGroup;
 			children = (
-				54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */,
 				0FC8DCD51AC06202000A16C2 /* JumioCore.framework */,
-				0FC8DCD91AC06202000A16C2 /* Netswipe.framework */,
+				778F6D571ECDD64C00973C7E /* BAMCheckout.framework */,
 				0FC8DCDD1AC06202000A16C2 /* Netverify.framework */,
+				54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */,
+				548D5D511F17C596001E7828 /* Umoove.framework */,
 			);
 			name = JumioMobileSDK;
 			sourceTree = "<group>";
@@ -276,9 +282,9 @@
 			files = (
 				EE01EF041924A3E300B7CC49 /* StartViewController.m in Sources */,
 				EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */,
-				54A749D01E5610C00060CF63 /* MultiDocumentStartViewController.m in Sources */,
+				54A749D01E5610C00060CF63 /* DocumentVerificationStartViewController.m in Sources */,
 				54A749CD1E558BF30060CF63 /* NetverifyStartViewController.m in Sources */,
-				54A749CA1E558A130060CF63 /* NetswipeStartViewController.m in Sources */,
+				54A749CA1E558A130060CF63 /* BAMCheckoutStartViewController.m in Sources */,
 				30C268AD1A8E212700C879D6 /* CustomScanOverlayViewController.m in Sources */,
 				EE01EEF71924A3E200B7CC49 /* main.m in Sources */,
 			);
@@ -392,6 +398,7 @@
 		EE01EF1D1924A3E300B7CC49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = YES;
@@ -406,10 +413,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JumioMobileSDKSample/JumioMobileSDKSample-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/JumioMobileSDK\"/**",
-				);
+				HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;
 				INFOPLIST_FILE = "JumioMobileSDKSample/JumioMobileSDKSample-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -426,6 +430,7 @@
 		EE01EF1E1924A3E300B7CC49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = YES;
@@ -439,10 +444,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JumioMobileSDKSample/JumioMobileSDKSample-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/JumioMobileSDK\"/**",
-				);
+				HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;
 				INFOPLIST_FILE = "JumioMobileSDKSample/JumioMobileSDKSample-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";

@@ -18,7 +18,7 @@
 
 @protocol CameraProcessingDelegate <NSObject>
 - (void) captureSessionManagerDidOutputSampleBuffer: (CMSampleBufferRef) sampleBuffer;
-- (void) captureSessionManagerDidFinishProcessingImageFrame: (uint8_t*) processedImageFrame size: (CGSize) size;
+- (void) captureSessionManagerDidFinishProcessingSampleBuffer: (CMSampleBufferRef) sampleBuffer outputImageFrame: (uint8_t*) imageFrame outputRect: (CGRect) rect;
 
 @optional
 - (void) captureSessionManagerFlashNeeded:(BOOL)flashNeeded;
@@ -100,7 +100,7 @@
 - (void) startCapturingAndPreview;
 - (void) stopCapturingAndPreview;
 
-- (void) setRequiresFaceMetaDataWithCaptureDevicePosition:(AVCaptureDevicePosition)devicePosition minFrameCount:(int)minFrames maxFrameCount:(int)maxFrames;
+- (void) setRequiresFaceMetaDataWithCaptureDevicePosition:(AVCaptureDevicePosition)devicePosition;
 - (void) enableVideoDataOutput;
 - (void) disableVideoDataOutput;
 - (void) addDefaultVideoInput;
@@ -158,4 +158,7 @@
  * @return image quality value or -1 if some error occured in the process.
  */
 + (float)focusConfidenceFromData:(char *)data length:(int)length width:(int)width height:(int)height stride:(int)stride channels:(int)channels;
+
+- (BOOL) detectFaceOnSampleBuffer: (CMSampleBufferRef) sampleBuffer inRect: (CGRect) rect;
+
 @end

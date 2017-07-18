@@ -11,5 +11,6 @@
 + (NSString*)systemVersionString;
 + (float)systemVersionNumber;
 + (BOOL)isSystemVersionAtLeastOS9;
++ (BOOL)isSystemVersionAtLeastOS10;
 
 @end

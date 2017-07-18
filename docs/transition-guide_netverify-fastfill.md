@@ -1,6 +1,11 @@
 ![Fastfill & Netverify](images/netverify.png)
 
-# Transition guide for Fastfill & Netverify Mobile
+# Transition guide for Fastfill & Netverify
+
+## 2.7.0
+
+#### Changes in Localizable-Netverify.strings
+Several additions and changes, mostly in regards to the new liveness screen.
 
 ## 2.5.0
 
@@ -25,7 +30,7 @@ Renamed the following enum types:
  * `NVExtractionMethod` to `NetverifyExtractionMethod`.
 
 #### Removed name match feature
-Name matching by comparing a provided name with the extracted name from a document was removed. The property _name_ in NetswipeViewController class is deleted, as well as the boolean _nameMatch_ and integer _nameDistance_ in NetswipeCardInformation class.
+Name matching by comparing a provided name with the extracted name from a document was removed. The property _name_ in BAMCheckoutViewController class is deleted, as well as the boolean _nameMatch_ and integer _nameDistance_ in BAMCheckoutCardInformation class.
 
 ## 2.2.0
 #### Removed liveness detection result

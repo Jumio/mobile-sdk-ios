@@ -1,6 +1,6 @@
 ![BAM Checkout](images/bam_checkout.png)
 
-# BAM Checkout Mobile SDK for iOS
+# BAM Checkout SDK for iOS
 BAM Checkout is a powerful, cutting-edge solution to extract data from your customer´s credit card and / or ID in your mobile application within seconds, including home address. It fits perfectly, and fully automates, every checkout flow to avoid manual input at all which leads to an increased conversion rate.
 
 ## Table of Content
@@ -16,24 +16,28 @@ BAM Checkout is a powerful, cutting-edge solution to extract data from your cust
 For changes in the technical area, please read our [transition guide](transition-guide_bam-checkout.md).
 
 #### Changes
-* BIN range list updated
+* Renamed SDK from Netswipe to BamCheckout
+* Removed Adyen functionality
+
+#### Fixes
+* Miscellaneous bugfixes
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for BAM Checkout.
 
 ## Initialization
-Log into your Jumio merchant backend, and you can find your merchant API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the `NetswipeConfiguration` object, an exception will be thrown. Whenever a exception is thrown, the `NetswipeViewController` instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `NetswipeConfiguration` instance is passed to the initializer.
+Log into your Jumio merchant backend, and you can find your merchant API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the `BAMCheckoutConfiguration` object, an exception will be thrown. Whenever a exception is thrown, the `BAMCheckoutViewController` instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `BAMCheckoutConfiguration` instance is passed to the initializer.
 
 ```
-NetswipeConfiguration *config = [NetswipeConfiguration new];
+BAMCheckoutConfiguration *config = [BAMCheckoutConfiguration new];
 config.merchantApiToken = @"YOURAPITOKEN";
 config.merchantApiSecret = @"YOURAPISECRET";
 config.dataCenter = JumioDataCenterEU; // Change this parameter if your merchant account is in the EU data center. Default is US.
 config.delegate = self;
 
-NetswipeViewController *netswipeViewController;
+BAMCheckoutViewController *bamCheckoutViewController;
 @try {
-	netswipeViewController = [[NetswipeViewController alloc] initWithConfiguration:config];
+	bamCheckoutViewController = [[BAMCheckoutViewController alloc] initWithConfiguration:config];
 } @catch (NSException *exception) {
 	// HANDLE EXCEPTION
 }
@@ -41,22 +45,22 @@ NetswipeViewController *netswipeViewController;
 
 It is possible to update parameters of the configuration in case a scan was finished with error and the user is required to perform another scan. This can only be used if the SDK is currently not presented.
 ```
-[netswipeViewController updateConfiguration:config];
+[bamCheckoutViewController updateConfiguration:config];
 ```
 
 Make sure initialization and presentation are timely within one minute. On iPads, the presentation style `UIModalPresentationFormSheet` is default and mandatory.
 ```
-[self presentViewController: netswipeViewController animated: YES completion: nil];
+[self presentViewController: bamCheckoutViewController animated: YES completion: nil];
 ```
 
 ## Configuration
 
 ### Card details
 
-BAM Checkout supports Visa, MasterCard, American Express, JCB, China UnionPay, Discover, Diners and Starbucks. To restrict supported card types, set a bitmask of `NetswipeCreditCardTypes` to the property `supportedCreditCardTypes`.
+BAM Checkout supports Visa, MasterCard, American Express, JCB, China UnionPay, Discover, Diners and Starbucks. To restrict supported card types, set a bitmask of `BAMCheckoutCreditCardTypes` to the property `supportedCreditCardTypes`.
 ```
-NetswipeCreditCardTypes cardTypes = NetswipeCreditCardTypeAmericanExpress |
-NetswipeCreditCardTypeMasterCard | NetswipeCreditCardTypeVisa;
+BAMCheckoutCreditCardTypes cardTypes = BAMCheckoutCreditCardTypeAmericanExpress |
+BAMCheckoutCreditCardTypeMasterCard | BAMCheckoutCreditCardTypeVisa;
 config.supportedCreditCardTypes = cardTypes;
 ```
 
@@ -84,7 +88,7 @@ In your Jumio merchant backend on the "Settings" page under "API credentials" yo
 config.offlineToken = @"YOUROFFLINETOKEN";
 ```
 
-In case the bundle identifier of your app does not match with the token, the expiration date of the token is reached or if the token itself is invalid value an exception will be thrown at initialization time and `netswipeViewController` will be nil.
+In case the bundle identifier of your app does not match with the token, the expiration date of the token is reached or if the token itself is invalid value an exception will be thrown at initialization time and `bamCheckoutViewController` will be nil.
 
 ### Miscellaneous
 You can set a short vibration (only on iPhone) and sound effect to notify the user that the card has been detected.
@@ -119,14 +123,8 @@ The style of the status bar can be specified.
 config.statusBarStyle = UIStatusBarStyleLightContent;
 ```
 
-### Adyen encryption
-Adyen client-side-encryption is supported. To successfully create an encrypted data object, enable expiry date, CVC and card holder name. Please be aware that transmission of the encrypted object to the Adyen payment gateway is not part of the SDK.
-```
-config.adyenPublicKey = @"ADYENPUBLICKEY";
-```
-
 ### Custom scan view
-The BAM Checkout Mobile SDK gives the opportunity to use a completely customized scan view, that is created by you and just uses a protocol to control the scanning process as well as get informed about certain events. The following actions and events are offered.
+The BAM Checkout SDK gives the opportunity to use a completely customized scan view, that is created by you and just uses a protocol to control the scanning process as well as get informed about certain events. The following actions and events are offered.
 * Get location and dimension of card frame
 * Check if front and back camera available
 * Get camera position (front or back)
@@ -137,7 +135,7 @@ The BAM Checkout Mobile SDK gives the opportunity to use a completely customized
 * Restart card scanning if retry possible upon error
 * Stop card scanning
 
-To get started, subclass `NetswipeCustomScanOverlayViewController` and see the protocol `NetswipeCustomScanOverlayViewControllerDelegate`. Once the native method `viewDidAppear` is called in your subclass, the actions and events are available.
+To get started, subclass `BAMCheckoutCustomScanOverlayViewController` and see the protocol `BAMCheckoutCustomScanOverlayViewControllerDelegate`. Once the native method `viewDidAppear` is called in your subclass, the actions and events are available.
 
 ```
 config.customOverlay = yourCustomScanOverlayViewController;
@@ -154,12 +152,12 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 * Scan overlay: border color, text color
 
 ## Delegation
-Implement the delegate methods of the `NetswipeViewControllerDelegate` protocol to be notified of scan attempts, successful scans and error situations. Dismiss the SDK view in your app in case or success or error.
+Implement the delegate methods of the `BAMCheckoutViewControllerDelegate` protocol to be notified of scan attempts, successful scans and error situations. Dismiss the SDK view in your app in case or success or error.
 
 #### Scan attempt
 You receive a Jumio scan reference for each attempt, if the Internet connection is available. For offline scans the parameter scanReference will be nil.
 ```
-- (void) netswipeViewController: (NetswipeViewController *) controller didStartScanAttemptWithScanReference: (NSString *) scanReference {
+- (void) bamCheckoutViewController: (BAMCheckoutViewController *) controller didStartScanAttemptWithScanReference: (NSString *) scanReference {
 	// YOURCODE
 }
 ```
@@ -167,7 +165,7 @@ You receive a Jumio scan reference for each attempt, if the Internet connection 
 #### Success
 Upon success, the parameter `cardInformation` will be returned. Call clear after processing the card information to make sure no sensitive data remains in the device's memory.
 ```
-- (void) netswipeViewController: (NetswipeViewController *) controller didFinishScanWithCardInformation: (NetswipeCardInformation *) cardInformation scanReference: (NSString *) scanReference {
+- (void) bamCheckoutViewController: (BAMCheckoutViewController *) controller didFinishScanWithCardInformation: (BAMCheckoutCardInformation *) cardInformation scanReference: (NSString *) scanReference {
 	// YOURCODE
 	[cardInformation clear];
 }
@@ -177,16 +175,16 @@ Upon success, the parameter `cardInformation` will be returned. Call clear after
 This method is fired when the user presses the cancel button upon an error situation. The parameter _error_ contains an error code and a message, also the corresponding scan reference is available.
 Note: The error codes 200, 210, 220, 240, 250, 260 and 310 will be returned. Using the custom scan view, the error codes 260 and 310 will be returned.
 ```
-- (void) netswipeViewController: (NetswipeViewController *) controller didCancelWithError: (NSError*) error scanReference:(NSString *)scanReference {
+- (void) bamCheckoutViewController: (BAMCheckoutViewController *) controller didCancelWithError: (NSError*) error scanReference:(NSString *)scanReference {
 	// YOURCODE
 }
 ```
 
-Class **_NetswipeCardInformation_**
+Class **_BAMCheckoutCardInformation_**
 
 |Parameter | Type | Max. length | Description |
 |:---------------------------- 	|:-------------|:-----------------|:-------------|
-| cardType | NetswipeCreditCardType |  |  NetswipeCreditCardTypeAmericanExpress, NetswipeCreditCardTypeChinaUnionPay, NetswipeCreditCardTypeDiners, NetswipeCreditCardTypeDiscover, NetswipeCreditCardTypeJCB, NetswipeCreditCardTypeMasterCard, NetswipeCreditCardTypeVisa or NetswipeCreditCardTypeStarbucks  |
+| cardType | BAMCheckoutCreditCardType |  |  BAMCheckoutCreditCardTypeAmericanExpress, BAMCheckoutCreditCardTypeChinaUnionPay, BAMCheckoutCreditCardTypeDiners, BAMCheckoutCreditCardTypeDiscover, BAMCheckoutCreditCardTypeJCB, BAMCheckoutCreditCardTypeMasterCard, BAMCheckoutCreditCardTypeVisa or BAMCheckoutCreditCardTypeStarbucks  |
 | cardNumber | NSMutableString | 16 | Full credit card number |
 | cardNumberGrouped | NSMutableString | 19 | Grouped credit card number |
 | cardNumberMasked | NSMutableString | 19 | First 6 and last 4 digits of the grouped credit card number, other digits are masked with "X" |
@@ -199,7 +197,6 @@ Class **_NetswipeCardInformation_**
 | cardAccountNumber | NSMutableString | 8 | Account number if enabled, available and readable |
 | cardSortCodeValid | BOOL |  | True if sort code valid, otherwise false |
 | cardAccountNumberValid | BOOL |  | True if account number code valid, otherwise false |
-| encryptedAdyenString | NSString |  | Encrypted ADYEN string |
 
 | Method | Parameter type | Return type | Description |
 | --------------------|:-------|:-------|:-------------|

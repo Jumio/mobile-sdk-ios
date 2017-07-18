@@ -15,4 +15,4 @@
 #import <Netverify/NetverifyScanOptionButton.h>
 #import <Netverify/UINavigationBar+NetverifyAppearance.h>
 #import <Netverify/ISOCountryConverter.h>
-#import <Netverify/MultiDocumentViewController.h>
+#import <Netverify/DocumentVerificationViewController.h>

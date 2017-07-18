@@ -4,9 +4,9 @@
 //  Copyright © 2017 Jumio Corporation All rights reserved.
 //
 
-#import <Netswipe/NetswipeCustomScanOverlayViewController.h>
+#import <BAMCheckout/BAMCheckoutCustomScanOverlayViewController.h>
 
-@interface CustomScanOverlayViewController : NetswipeCustomScanOverlayViewController<NetswipeCustomScanOverlayViewControllerDelegate>
+@interface CustomScanOverlayViewController : BAMCheckoutCustomScanOverlayViewController<BAMCheckoutCustomScanOverlayViewControllerDelegate>
 
 
 @end

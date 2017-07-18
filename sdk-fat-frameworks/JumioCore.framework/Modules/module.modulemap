@@ -4,3 +4,7 @@ framework module JumioCore {
   export *
   module * { export * }
 }
+
+module JumioCore.Swift {
+    header "JumioCore-Swift.h"
+}

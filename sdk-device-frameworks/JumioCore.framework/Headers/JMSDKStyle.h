@@ -29,5 +29,5 @@
 #define JMColor_NVTextColorDarker [UIColor colorWithWhite: 0.0 alpha: 0.8]
 #define JMColor_NVLightTextColor [UIColor colorWithWhite: 1.0 alpha: 0.65]
 
-#define JMColor_NSWTextColor [UIColor colorWithWhite: 0.0 alpha: 0.8]
-#define JMColor_NSWTextColorDarker [UIColor colorWithWhite: 0.0 alpha: 0.85]
+#define JMColor_BAMTextColor [UIColor colorWithWhite: 0.0 alpha: 0.8]
+#define JMColor_BAMTextColorDarker [UIColor colorWithWhite: 0.0 alpha: 0.85]

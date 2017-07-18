@@ -6,7 +6,7 @@
 
 #import "CustomScanOverlayViewController.h"
 
-@interface CustomScanOverlayViewController () <UIAlertViewDelegate>
+@interface CustomScanOverlayViewController ()
 
 @property (nonatomic, strong) IBOutlet UIButton *flashButton;
 @property (nonatomic, strong) IBOutlet UIButton *cameraButton;
@@ -42,7 +42,7 @@
     _startStopButton.layer.cornerRadius = 20.0;
 }
 
-//Once viewWillAppear is called within your NetswipeCustomScanOverlayViewController, you can perform the following actions:
+//Once viewWillAppear is called within your BAMCheckoutCustomScanOverlayViewController, you can perform the following actions:
 // - Get location and dimension of card frame
 // - Check if front and back camera available
 // - Get camera position (front or back)
@@ -120,39 +120,32 @@
 }
 
 
-#pragma mark - NetswipeCustomScanOverlayViewControllerDelegate
+#pragma mark - BAMCheckoutCustomScanOverlayViewControllerDelegate
 
 /**
  * This method is called when an error occured while the ScanViewController is opend
  * @param error The error codes 200, 210, 220, 240, 300 and 320 will be returned.
  * @param retryPossible indicates whether [self retryScan] can be called or not
  **/
-- (void) netswipeStoppedWithError:(NSError *)error retryPossible:(BOOL)retryPossible {
+- (void) bamCheckoutStoppedWithError:(NSError *)error retryPossible:(BOOL)retryPossible {
     NSString *retryString = (retryPossible) ? @"retry possible" : @"no retry possible";
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%ld", (long)error.code]
-                                                    message:error.localizedDescription
-                                                   delegate:self
-                                          cancelButtonTitle:@"close"
-                                          otherButtonTitles:retryString , nil];
-    alert.tag = 100;
-    [alert show];
+
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%ld", (long)error.code]
+                                                                             message:error.localizedDescription
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    
+     [alertController addAction:[UIAlertAction actionWithTitle:@"close" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+         [self dismissViewControllerAnimated:YES completion:nil];
+    }]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:retryString style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self retryScan];
+    }]];
+
+    
+     [self presentViewController:alertController animated:YES completion:nil];
+
 }
-
-#pragma mark - Dismissing UIAlertView
-
-- (void) dismissAlertView:(UIAlertView *)alert {
-    [alert dismissWithClickedButtonIndex:0 animated:YES];
-}
-
-- (void) alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (alertView.tag == 100) {
-        if (buttonIndex == 1) {
-            [self retryScan];
-        } else {
-            [self close:alertView];
-        }
-    }
-}
-
 
 @end

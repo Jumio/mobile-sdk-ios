@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -86,7 +86,7 @@
         <!--BAM Checkout-->
         <scene sceneID="JmQ-qZ-Qrd">
             <objects>
-                <viewController title="BAM Checkout" id="nZj-si-Cge" customClass="NetswipeStartViewController" sceneMemberID="viewController">
+                <viewController title="BAM Checkout" id="nZj-si-Cge" customClass="BAMCheckoutStartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vnf-Ha-u6i"/>
                         <viewControllerLayoutGuide type="bottom" id="N2l-ny-kf0"/>
@@ -102,7 +102,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="startNetswipe:" destination="nZj-si-Cge" eventType="touchUpInside" id="ea6-o0-Uom"/>
+                                    <action selector="startBAMCheckout:" destination="nZj-si-Cge" eventType="touchUpInside" id="6Ic-OR-cKB"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m4L-Wv-Lal" userLabel="Switch CVV Required">
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="-598" y="-188"/>
         </scene>
-        <!--MultiDocument-->
+        <!--DocumentVerification-->
         <scene sceneID="yhj-Zm-zSJ">
             <objects>
-                <viewController title="MultiDocument" id="Jad-cK-FTC" customClass="MultiDocumentStartViewController" sceneMemberID="viewController">
+                <viewController title="DocumentVerification" id="Jad-cK-FTC" userLabel="DocumentVerification" customClass="DocumentVerificationStartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rvK-Ci-yuM"/>
                         <viewControllerLayoutGuide type="bottom" id="TZp-g5-zNM"/>
@@ -172,11 +172,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSz-ie-lnE">
                                 <rect key="frame" x="36" y="315.5" width="303" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start Multi Document">
+                                <state key="normal" title="Start Document Verification">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="startMultiDocument:" destination="Jad-cK-FTC" eventType="touchUpInside" id="a57-a5-ftY"/>
+                                    <action selector="startDocumentVerification:" destination="Jad-cK-FTC" eventType="touchUpInside" id="9t2-Vd-8Ig"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -187,7 +187,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="XSz-ie-lnE" secondAttribute="trailing" constant="20" id="jAA-Ht-7Tj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MultiDocument" image="NVicon" selectedImage="NVicon" id="6ST-d5-gL0"/>
+                    <tabBarItem key="tabBarItem" title="DocumentVerification" image="NVicon" selectedImage="NVicon" id="6ST-d5-gL0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQr-Df-jfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -49,7 +49,7 @@ FOUNDATION_EXPORT const unsigned char JumioCoreVersionString[];
 
 //Utilities
 #import <JumioCore/JMUtilities.h>
- 
+
 //State Machine Framework
 #import <JumioCore/JMBaseState.h>
 #import <JumioCore/JMState.h>

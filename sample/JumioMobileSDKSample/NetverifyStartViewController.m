@@ -77,11 +77,10 @@
     @try {
         self.netverifyViewController = [[NetverifyViewController alloc] initWithConfiguration:config];
     } @catch (NSException *exception) {
-        [[[UIAlertView alloc] initWithTitle:exception.name
-                                    message:exception.reason
-                                   delegate:nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles: nil] show];
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:exception.name message:exception.reason preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
     
     //Localizing labels

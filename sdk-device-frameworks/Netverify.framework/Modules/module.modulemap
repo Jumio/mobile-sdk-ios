@@ -78,7 +78,7 @@ module Netverify.ISOCountryConverter {
     export *
 }
 
-module Netverify.MultiDocumentViewController {
-    header "MultiDocumentViewController.h"
+module Netverify.DocumentVerificationViewController {
+    header "DocumentVerificationViewController.h"
     export *
 }

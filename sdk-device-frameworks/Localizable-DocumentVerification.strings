@@ -1,0 +1,60 @@
+/*
+  Localizable-DocumentVerification.strings
+  Copyright © 2017 Jumio Corporation All rights reserved.
+*/
+
+
+
+// scanView
+"dv.scan-view.navigationItem.title" = "Scan document";
+"dv.scan-view.confirmation.text" = "Make sure that all data on your document is fully visible, glare free and not blurred";
+"dv.scan-view.confirmation.button.retake" = "RETAKE";
+"dv.scan-view.confirmation.button.readable" = "READABLE";
+"dv.scan-view.help.document.headline.prefix" = "Capture";
+"dv.scan-view.help.document-BS" = "Bank statement";
+"dv.scan-view.help.document-CC" = "Credit card";
+"dv.scan-view.help.document-IC" = "Insurance card";
+"dv.scan-view.help.document-UB" = "Utility bill";
+"dv.scan-view.help.document-CAAP" = "Cash advance application";
+"dv.scan-view.help.document-CRC" = "Corporate resolution certificate";
+"dv.scan-view.help.document-CCS" = "Credit card statement";
+"dv.scan-view.help.document-LAG" = "Lease agreement";
+"dv.scan-view.help.document-LOAP" = "Loan application";
+"dv.scan-view.help.document-MOAP" = "Mortgage application";
+"dv.scan-view.help.document-TR" = "Tax return";
+"dv.scan-view.help.document-VT" = "Vehicle title";
+"dv.scan-view.help.document-VC" = "Voided check";
+"dv.scan-view.help.document-STUC" = "Student card";
+"dv.scan-view.help.document-HCC" = "Health care card";
+"dv.scan-view.help.document-CB" = "Council bill";
+"dv.scan-view.help.document-SENC" = "Seniors card";
+"dv.scan-view.help.document-MEDC" = "Medicare card";
+"dv.scan-view.help.document-BC" = "Birth certificate";
+"dv.scan-view.help.document-USSS" = "US social security card";
+"dv.scan-view.help.document-WWCC" = "Working with children check";
+"dv.scan-view.help.document-SS" = "Superannuation statement";
+"dv.scan-view.help.document-TAC" = "Trade association card";
+"dv.scan-view.help.document-SEL" = "School enrolment letter";
+"dv.scan-view.help.document-PB" = "Phone bill";
+"dv.scan-view.help.document-SSC" = "Social security card";
+"dv.scan-view.help.document-CUSTOM" = "Document";
+
+// submissionView
+"dv.submission-view.navigationItem.title" = "";
+"dv.submission-view.uploading.headline" = "Uploading your documents";
+"dv.submission-view.uploading.description" = "This should only take a couple of seconds, depending on your network connectivity";
+"dv.submission-view.successful.headline" = "Upload successful";
+"dv.submission-view.successful.description" = "";
+
+// errorView
+"dv.error-view.button.retry" = "RETRY";
+"dv.error-view.button.cancel" = "CANCEL";
+"dv.error-view.error.headline" = "Error";
+"dv.error-view.device-is-offline" = "No Internet connection available";
+"dv.error-view.authentication-failed" = "Authentication failed";
+"dv.error-view.invalid-key" = "Certificate not valid anymore. Please contact the app vendor";
+"dv.error-view.network-problem" = "We have encountered a network communication problem";
+"dv.error-view.camera-access-disabled.button.title" = "Confirm";
+"dv.error-view.camera-access-disabled.content" = "%@ needs access to your camera. Please check your privacy settings.";
+"dv.error-view.camera-access-disabled.title" = "Camera access disabled";
+"dv.error-view.cancelled-by-user" = "Cancelled by end-user";

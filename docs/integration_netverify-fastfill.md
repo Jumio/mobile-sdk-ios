@@ -1,7 +1,7 @@
 ![Fastfill & Netverify](images/netverify.png)
 
-# Fastfill & Netverify Mobile SDK for iOS
-Netverify Mobile SDK offers scanning and authentication of governmental issued IDs.
+# Fastfill & Netverify SDK for iOS
+Netverify SDK offers scanning and authentication of government issued IDs.
 
 ## Table of Content
 
@@ -17,10 +17,10 @@ Netverify Mobile SDK offers scanning and authentication of governmental issued I
 For changes in the technical area, please read our [transition guide](transition-guide_netverify-fastfill.md).
 
 #### Additions
-* New Error Code 290 in case a transaction is already finished
+* Advanced Liveness Detection  
+* Added mechanism to avoid capturing of front as back side
 
 #### Changes
-* Improved guidance / help during document scanning
 * Minor UI/UX changes
 
 #### Fixes
@@ -62,8 +62,8 @@ Make sure initialization and presentation are timely within one minute. On iPads
 ### ID verification
 By default, the SDK is used in Fastfill mode which means it is limited to data extraction only. No verification of the ID is performed.
 
-Enable ID verification to receive a verification status and verified data positions (see [Callback for Netverify](https://github.com/Jumio/mobile-sdk-android/blob/master/docs/integration_callback.md)). Ensure that your merchant account is allowed to use this feature.
-A callback URL can be specified for individual transactions (constraints see chapter [Callback URL](https://github.com/Jumio/mobile-sdk-android/blob/master/docs/integration_callback.md)). This setting overrides your Jumio merchant settings.
+Enable ID verification to receive a verification status and verified data positions (see [Callback for Netverify](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-for-netverify)). Ensure that your merchant account is allowed to use this feature.
+A callback URL can be specified for individual transactions (constraints see chapter [Callback URL](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-url)). This setting overrides your Jumio merchant settings.
 
 __Note:__ Not available for accounts configured as Fastfill only.
 ```
@@ -71,7 +71,7 @@ config.requireVerification = YES;
 config.callbackUrl = @"YOURCALLBACKURL";
 ```
 
-You can enable face match during the ID verification for a specific transaction (in case it is enabled for your account).
+You can enable face match during the ID verification for a specific transaction (if it is enabled for your account). Make sure to link the UMoove framework to make use of the liveness capability in your app.
 
 __Note:__ Face match requires Portrait orientation in your app.
 ```
@@ -161,7 +161,7 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 Implement the delegate methods of the `NetverifyViewControllerDelegate` protocol to be notified of successful initialisation, successful scans and error situations. Dismiss the SDK view in your app in case or success or error.
 
 ### Initialization
-When this method is fired, the SDK finished initialisation as well as loading tasks and is ready to use. The error object is only set in case an error occurred (e.g. wrong credentials are set).
+When this method is fired, the SDK finished initialization as well as loading tasks and is ready to use. The error object is only set in case an error occurred (e.g. wrong credentials are set).
 ```
 - (void) netverifyViewController: (NetverifyViewController*) netverifyViewController didFinishInitializingWithError:(NSError*)error {
 	// YOURCODE
@@ -243,4 +243,4 @@ Class **_NetverifyMrzData_**
 | 290 | Transaction already finished | User did not complete SDK journey within token lifetime|
 
 ## Callback
-To get information about callbacks, Netverify Retrieval API, Netverify Delete API and Global Netverify settings and more, please read our [page with server related information](https://github.com/Jumio/mobile-sdk-android/blob/master/docs/integration_callback.md).
+To get information about callbacks, Netverify Retrieval API, Netverify Delete API and Global Netverify settings and more, please read our [page with server related information](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md).

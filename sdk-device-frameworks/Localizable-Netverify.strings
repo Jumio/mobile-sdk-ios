@@ -26,13 +26,19 @@
 "netverify.scan-view.navigationItem.title" = "Scan document";
 "netverify.scan-view.use-front-card.overlay.title" = "USE FRONT";
 "netverify.scan-view.use-back-card.overlay.title" = "USE BACK";
+"netverify.scan-view.compliance-alertview.confirmation" = "OK";
+"netverify.scan-view.compliance-alertview.message.NL" = "Please redact your BSN before capturing";
+"netverify.scan-view.compliance-alertview.message.KR" = "Please redact your Resident Registration Number before capturing";
 "netverify.scan-view.accessibility-label.button.switch-to-front-camera" = "Switch to front camera";
 "netverify.scan-view.accessibility-label.button.switch-to-back-camera" = "Switch to back camera";
 "netverify.scan-view.accessibility-label.flash-button.activate" = "Activate flash";
 "netverify.scan-view.accessibility-label.flash-button.deactivate" = "Deactivate flash";
-"netverify.scan-view.accessibility-label.button.take-shot" = "Take a photo";
+"netverify.scan-view.accessibility-label.button.take-photo" = "Take a photo";
 "netverify.scan-view.face.navigation-item.title" = "Take a Selfie";
-"netverify.scan-view.face.label.moves-eyes-blink" = "Move your eyes or blink";
+"netverify.scan-view.face.label.follow-the-circle" = "Follow the circle";
+"netverify.scan-view.face.label.move-closer" = "Move closer";
+"netverify.scan-view.face.label.move-farther" = "Move back";
+"netverify.scan-view.face.label.description" = "Put your face in the frame to proceed.";
 "netverify.scan-help-view.headline.scan-passport" = "Scan Passport";
 "netverify.scan-help-view.headline.scan-visa" = "Scan Visa";
 "netverify.scan-help-view.headline.scan-identity-card-front" = "Scan Identity Card Front";
@@ -43,7 +49,6 @@
 "netverify.scan-help-view.headline.scan-driver-license-back" = "Scan Driver License Back";
 "netverify.scan-help-view.headline.capture-driver-license-inside" = "Capture Driver License Inside";
 "netverify.scan-help-view.headline.capture-driver-license-outside" = "Capture Driver License Outside";
-"netverify.scan-help-view.headline.scan-face" = "Align your Face";
 "netverify.scan-help-view.steps" = "Step %lu of %lu";
 "netverify.scan-help-view.help-text-mrz.short" = "Align your document with the highlighted area of the overlay until it is captured automatically";
 "netverify.scan-help-view.help-text-mrz.full" = "Place your document within the frame as it is shown in the animation above. The capturing happens automatically.\n\nEnsure that all data is readable and avoid reflections.";
@@ -53,14 +58,10 @@
 "netverify.scan-help-view.help-text-line-finder.full" = "Place your document within the frame until all 4 edges are aligned as it is shown in the animation above. The capturing happens automatically.\n\nEnsure that all data is readable and avoid reflections.";
 "netverify.scan-help-view.help-text-barcode.short" = "Place the barcode in front of the camera until it is captured automatically";
 "netverify.scan-help-view.help-text-barcode.full" = "Place the barcode in front of the camera as it is shown in the picture above. The capturing happens automatically.\n\nEnsure that all data is readable and avoid reflections.";
-"netverify.scan-help-view.help-text-face.description" = "A picture of your face will now be taken automatically. Center your face within the overlay.\n\nBlink twice to complete the process.";
 "netverify.scan-help-view.button.general-fallback.title" = "CAPTURE IS NOT WORKING";
 "netverify.scan-help-view.button.barcode-fallback.title" = "NO BARCODE ON MY ID";
-"netverify.scan-help-view.face.duration" = "The scanning process takes 5 seconds.";
-"netverify.scan-help-view.face.button.continue" = "START";
 "netverify.confirmation-view.headline" = "Check readability";
 "netverify.confirmation-view.label" = "Make sure that all data on your document is fully visible, glare free and not blurred";
-"netverify.confirmation-view.manual-face.label" = "Make sure your face is fully visible and the image is not blurred";
 "netverify.confirmation-view.button.submit" = "READABLE";
 "netverify.confirmation-view.button.retry" = "RETAKE";
 
@@ -74,6 +75,8 @@
 "netverify.error.user-address-missing.title" = "Scan front";
 "netverify.error.user-address-missing" = "The barcode of your document didn´t contain your address, turn your document and scan the front.";
 "netverify.error-view.address-missing.button.continue.title" = "Tap to continue";
+"netverify.error.face-on-backside.title" = "Scan back";
+"netverify.error.face-on-backside" = "You recently scanned the front of your document.\nPlease flip your document and scan the back.";
 "netverify.error-view.error.header.title" = "Error";
 "netverify.error-view.button.retry.title" = "RETRY";
 "netverify.error-view.button.cancel.title" = "CANCEL";
