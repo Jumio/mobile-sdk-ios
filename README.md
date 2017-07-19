@@ -78,7 +78,12 @@ __Note:__ Added automatically if using CocoaPods.
 - "-lc++"
 - "-ObjC" (recommended) or -all_load
 
-Make sure that the Xcode build setting *"Link Frameworks Automatically"* in your project is set to YES.
+Make sure that the following Xcode build settings in your app are set accordingly:
+
+| Setting | Value |
+| :--- | :---: |
+| Link Frameworks Automatically | YES |
+| Always Embed Swift Standard Libraries | YES |
 
 ## Localization
 All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language and add it to your app project. This way, when upgrading our SDK to a newer version, your localization file won't be overwritten. Make sure, that the content of your localization file is up to date after an SDK update.
