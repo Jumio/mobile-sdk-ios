@@ -21,5 +21,6 @@
 #import "PPQuadDetectorResult.h"
 
 #import "PPBlinkBarcodeRecognizers.h"
+#import "MicroBlinkDynamic.h"
 
 #endif
