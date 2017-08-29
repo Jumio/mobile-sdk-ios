@@ -10,9 +10,9 @@
 Applies to all products.
 
 #### Additions
-* Cross-Platform Support - Cordova
-* Major camera and focus improvements 
-* Display specific error codes to users 
+* Cross-Platform Support - React Native
+* Cordova - added Demo application
+* Swift - added Demo implementation to existing sample project
 
 #### Fixes
 * Overall stability improvements
@@ -46,6 +46,11 @@ source 'http://mobile-sdk.jumio.com/distribution.git'
 use_frameworks!
 ```
 
+Update your local clone of the specs repo to ensure you are using the latest podspec files:
+```
+pod repo update
+```
+
 Choose the pod according to the product you use and suiting your configuration.
 ```
 pod 'JumioMobileSDK' # If you use BAM Checkout along Netverify in your app. Frameworks supporting device architectures only.
@@ -61,7 +66,7 @@ The Jumio Mobile SDK consists of several dynamic frameworks. Add specific framew
 
 The following table shows which frameworks have to be added:
 
-| Product | JumioCore | BAMCheckout | Netverify | MicroBlink (*) | UMoove (*) |
+| Product | JumioCore | BAMCheckout | Netverify | MicroBlink | UMoove |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | Fastfill & Netverify | x |  | x | x | x |
 | Document Verification | x |  | x |  |  |
@@ -70,8 +75,6 @@ The following table shows which frameworks have to be added:
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 Two packages are available with frameworks for device only and frameworks with device and simulator support. Make sure to use the device only frameworks for app submissions to the AppStore, as using the other package will cause a rejection by Apple.
-
-(*) The MicroBlink and UMoove framework can optionally be left out (do not add to your app project) to reduce app size. If MicroBlink is not linked in the app, the native barcode scanner is used, that has a slight disadvantage in speed and capture reliability. In case the UMoove is left out, the face liveness capability cannot be used.
 
 Add the following linker flags to your Xcode Build Settings:<br/>
 __Note:__ Added automatically if using CocoaPods.
@@ -99,6 +102,8 @@ With accessibility support, visually impaired users can now enable __VoiceOver__
 # Support
 
 ## Previous version
+The previous release version 2.7.0 of the Jumio Mobile SDK is supported until 2017-11-29.
+
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 
 ## Contact

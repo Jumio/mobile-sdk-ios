@@ -12,5 +12,6 @@
 + (float)systemVersionNumber;
 + (BOOL)isSystemVersionAtLeastOS9;
 + (BOOL)isSystemVersionAtLeastOS10;
++ (BOOL)isSystemVersionAtLeastOS11;
 
 @end

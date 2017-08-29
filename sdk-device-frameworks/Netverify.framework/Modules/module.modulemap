@@ -68,6 +68,11 @@ module Netverify.NetverifyScanOptionButton {
     export *
 }
 
+module Netverify.NetverifyScanOverlayView {
+    header "NetverifyScanOverlayView.h"
+    export *
+}
+
 module Netverify.UINavigationBarNetverifyAppearance {
     header "UINavigationBar+NetverifyAppearance.h"
     export *

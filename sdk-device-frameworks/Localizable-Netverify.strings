@@ -26,9 +26,6 @@
 "netverify.scan-view.navigationItem.title" = "Scan document";
 "netverify.scan-view.use-front-card.overlay.title" = "USE FRONT";
 "netverify.scan-view.use-back-card.overlay.title" = "USE BACK";
-"netverify.scan-view.compliance-alertview.confirmation" = "OK";
-"netverify.scan-view.compliance-alertview.message.NL" = "Please redact your BSN before capturing";
-"netverify.scan-view.compliance-alertview.message.KR" = "Please redact your Resident Registration Number before capturing";
 "netverify.scan-view.accessibility-label.button.switch-to-front-camera" = "Switch to front camera";
 "netverify.scan-view.accessibility-label.button.switch-to-back-camera" = "Switch to back camera";
 "netverify.scan-view.accessibility-label.flash-button.activate" = "Activate flash";

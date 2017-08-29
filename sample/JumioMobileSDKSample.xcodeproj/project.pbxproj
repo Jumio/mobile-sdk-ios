@@ -7,25 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FEF68FC1B909773003E55B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FEF68FB1B909773003E55B9 /* Images.xcassets */; };
-		30C268AD1A8E212700C879D6 /* CustomScanOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C268AB1A8E212700C879D6 /* CustomScanOverlayViewController.m */; };
-		30C268AE1A8E212700C879D6 /* CustomScanOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C268AC1A8E212700C879D6 /* CustomScanOverlayViewController.xib */; };
 		541724E41D3E6E21007143A3 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; };
 		541724E51D3E6E21007143A3 /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		541724E81D3E6E21007143A3 /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; };
 		541724E91D3E6E21007143A3 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		543E17B91C3C1673005F8EDE /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543E17B81C3C1673005F8EDE /* exportOptions.plist */; };
+		547B46CC1F46F1FE0029781C /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EF031924A3E300B7CC49 /* StartViewController.m */; };
+		547B46CD1F46F1FE0029781C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */; };
+		547B46D21F46F1FE0029781C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
+		547B46D41F46F1FE0029781C /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		547B46D51F46F1FE0029781C /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; };
+		547B46D61F46F1FE0029781C /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; };
+		547B46D71F46F1FE0029781C /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548D5D511F17C596001E7828 /* Umoove.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		547B46D81F46F1FE0029781C /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778F6D571ECDD64C00973C7E /* BAMCheckout.framework */; };
+		547B46E01F46F1FE0029781C /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		547B46E11F46F1FE0029781C /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		547B46E21F46F1FE0029781C /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		547B46E31F46F1FE0029781C /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 548D5D511F17C596001E7828 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		547B46E41F46F1FE0029781C /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 778F6D571ECDD64C00973C7E /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		547B46EC1F46F70B0029781C /* MainStoryboardObjC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547B46EB1F46F70B0029781C /* MainStoryboardObjC.storyboard */; };
+		547B46EF1F46F71B0029781C /* BAMCheckoutStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B46EE1F46F71B0029781C /* BAMCheckoutStartViewController.m */; };
+		547B46F31F46F73B0029781C /* CustomScanOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B46F11F46F73B0029781C /* CustomScanOverlayViewController.m */; };
+		547B46F71F46F7520029781C /* NetverifyStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B46F61F46F7520029781C /* NetverifyStartViewController.m */; };
+		547B46FC1F46F77F0029781C /* DocumentVerificationStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B46F91F46F77F0029781C /* DocumentVerificationStartViewController.m */; };
+		547B47031F46F80E0029781C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547B47021F46F80E0029781C /* Images.xcassets */; };
+		547B47041F46F80E0029781C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547B47021F46F80E0029781C /* Images.xcassets */; };
+		547B47061F46FC880029781C /* MainStoryboardSwift.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547B47051F46FC880029781C /* MainStoryboardSwift.storyboard */; };
+		547B47081F46FFFD0029781C /* BAMCheckoutStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B47071F46FFFD0029781C /* BAMCheckoutStartViewController.swift */; };
 		548D5D521F17C596001E7828 /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548D5D511F17C596001E7828 /* Umoove.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		548D5D531F17C596001E7828 /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 548D5D511F17C596001E7828 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		54A749C71E5587B70060CF63 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A749C61E5587B70060CF63 /* MainStoryboard.storyboard */; };
-		54A749CA1E558A130060CF63 /* BAMCheckoutStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749C91E558A130060CF63 /* BAMCheckoutStartViewController.m */; };
-		54A749CD1E558BF30060CF63 /* NetverifyStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749CC1E558BF30060CF63 /* NetverifyStartViewController.m */; };
-		54A749D01E5610C00060CF63 /* DocumentVerificationStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A749CF1E5610C00060CF63 /* DocumentVerificationStartViewController.m */; };
+		54CD99821F4708BC00E9CB14 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99811F4708BC00E9CB14 /* exportOptions.plist */; };
+		54CD99831F4708BC00E9CB14 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99811F4708BC00E9CB14 /* exportOptions.plist */; };
+		54CD99881F4AA49300E9CB14 /* NetverifyStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD99871F4AA49300E9CB14 /* NetverifyStartViewController.swift */; };
+		54CD998A1F4AB08500E9CB14 /* DocumentVerificationStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD99891F4AB08500E9CB14 /* DocumentVerificationStartViewController.swift */; };
+		54CD998C1F4AB6EF00E9CB14 /* SampleSwift-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99841F4708CC00E9CB14 /* SampleSwift-Info.plist */; };
+		54CD998D1F4AB6F200E9CB14 /* SampleObjC-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 547B47001F46F7F50029781C /* SampleObjC-Info.plist */; };
+		54CD998F1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD998E1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift */; };
+		54CD99921F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99911F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib */; };
+		54CD99941F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99931F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib */; };
 		54E0C54D1D4A5D9C001B3B5E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		54E0C54E1D4A5D9C001B3B5E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		778F6D581ECDD64C00973C7E /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778F6D571ECDD64C00973C7E /* BAMCheckout.framework */; };
 		778F6D591ECDD64C00973C7E /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 778F6D571ECDD64C00973C7E /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE01EEF51924A3E200B7CC49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE01EEF31924A3E200B7CC49 /* InfoPlist.strings */; };
 		EE01EEF71924A3E200B7CC49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
 		EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */; };
 		EE01EF041924A3E300B7CC49 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EF031924A3E300B7CC49 /* StartViewController.m */; };
@@ -47,38 +69,73 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		547B46DF1F46F1FE0029781C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				547B46E01F46F1FE0029781C /* JumioCore.framework in Embed Frameworks */,
+				547B46E11F46F1FE0029781C /* MicroBlink.framework in Embed Frameworks */,
+				547B46E21F46F1FE0029781C /* Netverify.framework in Embed Frameworks */,
+				547B46E31F46F1FE0029781C /* Umoove.framework in Embed Frameworks */,
+				547B46E41F46F1FE0029781C /* BAMCheckout.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0FC8DCD51AC06202000A16C2 /* JumioCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioCore.framework; path = "../sdk-device-frameworks/JumioCore.framework"; sourceTree = SOURCE_ROOT; };
 		0FC8DCDD1AC06202000A16C2 /* Netverify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netverify.framework; path = "../sdk-device-frameworks/Netverify.framework"; sourceTree = SOURCE_ROOT; };
-		0FEF68FB1B909773003E55B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		30C268AA1A8E212700C879D6 /* CustomScanOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScanOverlayViewController.h; sourceTree = "<group>"; };
-		30C268AB1A8E212700C879D6 /* CustomScanOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScanOverlayViewController.m; sourceTree = "<group>"; };
-		30C268AC1A8E212700C879D6 /* CustomScanOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomScanOverlayViewController.xib; sourceTree = "<group>"; };
-		543E17B81C3C1673005F8EDE /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
+		547B46E81F46F1FE0029781C /* SampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		547B46EB1F46F70B0029781C /* MainStoryboardObjC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboardObjC.storyboard; path = SampleObjC/MainStoryboardObjC.storyboard; sourceTree = SOURCE_ROOT; };
+		547B46ED1F46F71B0029781C /* BAMCheckoutStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAMCheckoutStartViewController.h; path = SampleObjC/BAMCheckoutStartViewController.h; sourceTree = SOURCE_ROOT; };
+		547B46EE1F46F71B0029781C /* BAMCheckoutStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAMCheckoutStartViewController.m; path = SampleObjC/BAMCheckoutStartViewController.m; sourceTree = SOURCE_ROOT; };
+		547B46F01F46F73B0029781C /* CustomScanOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomScanOverlayViewController.h; path = SampleObjC/CustomScanOverlayViewController.h; sourceTree = SOURCE_ROOT; };
+		547B46F11F46F73B0029781C /* CustomScanOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomScanOverlayViewController.m; path = SampleObjC/CustomScanOverlayViewController.m; sourceTree = SOURCE_ROOT; };
+		547B46F51F46F7520029781C /* NetverifyStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetverifyStartViewController.h; path = SampleObjC/NetverifyStartViewController.h; sourceTree = SOURCE_ROOT; };
+		547B46F61F46F7520029781C /* NetverifyStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetverifyStartViewController.m; path = SampleObjC/NetverifyStartViewController.m; sourceTree = SOURCE_ROOT; };
+		547B46F81F46F77F0029781C /* DocumentVerificationStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentVerificationStartViewController.h; path = SampleObjC/DocumentVerificationStartViewController.h; sourceTree = SOURCE_ROOT; };
+		547B46F91F46F77F0029781C /* DocumentVerificationStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocumentVerificationStartViewController.m; path = SampleObjC/DocumentVerificationStartViewController.m; sourceTree = SOURCE_ROOT; };
+		547B46FE1F46F7A90029781C /* JumioMobileSDKSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JumioMobileSDKSample-Prefix.pch"; path = "SampleObjC/JumioMobileSDKSample-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		547B47001F46F7F50029781C /* SampleObjC-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SampleObjC-Info.plist"; path = "SampleObjC/SampleObjC-Info.plist"; sourceTree = SOURCE_ROOT; };
+		547B47021F46F80E0029781C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		547B47051F46FC880029781C /* MainStoryboardSwift.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboardSwift.storyboard; path = SampleSwift/MainStoryboardSwift.storyboard; sourceTree = SOURCE_ROOT; };
+		547B47071F46FFFD0029781C /* BAMCheckoutStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BAMCheckoutStartViewController.swift; path = SampleSwift/BAMCheckoutStartViewController.swift; sourceTree = SOURCE_ROOT; };
 		548D5D511F17C596001E7828 /* Umoove.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Umoove.framework; path = "../sdk-device-frameworks/Umoove.framework"; sourceTree = "<group>"; };
-		54A749C61E5587B70060CF63 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		54A749C81E558A130060CF63 /* BAMCheckoutStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAMCheckoutStartViewController.h; sourceTree = "<group>"; };
-		54A749C91E558A130060CF63 /* BAMCheckoutStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAMCheckoutStartViewController.m; sourceTree = "<group>"; };
-		54A749CB1E558BF30060CF63 /* NetverifyStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetverifyStartViewController.h; sourceTree = "<group>"; };
-		54A749CC1E558BF30060CF63 /* NetverifyStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetverifyStartViewController.m; sourceTree = "<group>"; };
-		54A749CE1E5610C00060CF63 /* DocumentVerificationStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentVerificationStartViewController.h; sourceTree = "<group>"; };
-		54A749CF1E5610C00060CF63 /* DocumentVerificationStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentVerificationStartViewController.m; sourceTree = "<group>"; };
+		54CD99811F4708BC00E9CB14 /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = SOURCE_ROOT; };
+		54CD99841F4708CC00E9CB14 /* SampleSwift-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SampleSwift-Info.plist"; path = "SampleSwift/SampleSwift-Info.plist"; sourceTree = SOURCE_ROOT; };
+		54CD99861F4713A300E9CB14 /* Sample-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Sample-BridgingHeader.h"; path = "SampleSwift/Sample-BridgingHeader.h"; sourceTree = SOURCE_ROOT; };
+		54CD99871F4AA49300E9CB14 /* NetverifyStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetverifyStartViewController.swift; path = SampleSwift/NetverifyStartViewController.swift; sourceTree = SOURCE_ROOT; };
+		54CD99891F4AB08500E9CB14 /* DocumentVerificationStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DocumentVerificationStartViewController.swift; path = SampleSwift/DocumentVerificationStartViewController.swift; sourceTree = SOURCE_ROOT; };
+		54CD998E1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomScanOverlayViewController.swift; path = SampleSwift/CustomScanOverlayViewController.swift; sourceTree = SOURCE_ROOT; };
+		54CD99911F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomScanOverlayViewController.xib; path = SampleObjC/CustomScanOverlayViewController.xib; sourceTree = SOURCE_ROOT; };
+		54CD99931F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomScanOverlayViewControllerSwift.xib; path = SampleSwift/CustomScanOverlayViewControllerSwift.xib; sourceTree = SOURCE_ROOT; };
 		54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = "../sdk-device-frameworks/MicroBlink.framework"; sourceTree = SOURCE_ROOT; };
 		778F6D571ECDD64C00973C7E /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BAMCheckout.framework; path = "../sdk-device-frameworks/BAMCheckout.framework"; sourceTree = "<group>"; };
-		EE01EEE71924A3E200B7CC49 /* JumioMobileSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JumioMobileSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE01EEF21924A3E200B7CC49 /* JumioMobileSDKSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JumioMobileSDKSample-Info.plist"; sourceTree = "<group>"; };
-		EE01EEF41924A3E200B7CC49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EE01EEF61924A3E200B7CC49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EE01EEF81924A3E300B7CC49 /* JumioMobileSDKSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JumioMobileSDKSample-Prefix.pch"; sourceTree = "<group>"; };
-		EE01EEF91924A3E300B7CC49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EE01EF021924A3E300B7CC49 /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
-		EE01EF031924A3E300B7CC49 /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		EE01EEE71924A3E200B7CC49 /* SampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE01EEF61924A3E200B7CC49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		EE01EEF91924A3E300B7CC49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		EE01EF021924A3E300B7CC49 /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = SOURCE_ROOT; };
+		EE01EF031924A3E300B7CC49 /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		547B46D31F46F1FE0029781C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547B46D41F46F1FE0029781C /* MicroBlink.framework in Frameworks */,
+				547B46D51F46F1FE0029781C /* Netverify.framework in Frameworks */,
+				547B46D61F46F1FE0029781C /* JumioCore.framework in Frameworks */,
+				547B46D71F46F1FE0029781C /* Umoove.framework in Frameworks */,
+				547B46D81F46F1FE0029781C /* BAMCheckout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE01EEE41924A3E200B7CC49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,18 +154,31 @@
 		30C268AF1A8E213000C879D6 /* CustomOverlayViewController */ = {
 			isa = PBXGroup;
 			children = (
-				30C268AA1A8E212700C879D6 /* CustomScanOverlayViewController.h */,
-				30C268AB1A8E212700C879D6 /* CustomScanOverlayViewController.m */,
-				30C268AC1A8E212700C879D6 /* CustomScanOverlayViewController.xib */,
+				547B46F01F46F73B0029781C /* CustomScanOverlayViewController.h */,
+				547B46F11F46F73B0029781C /* CustomScanOverlayViewController.m */,
+				54CD99911F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib */,
 			);
 			name = CustomOverlayViewController;
+			sourceTree = "<group>";
+		};
+		547B46EA1F46F5050029781C /* SampleSwift */ = {
+			isa = PBXGroup;
+			children = (
+				547B47051F46FC880029781C /* MainStoryboardSwift.storyboard */,
+				54CD99951F4B017600E9CB14 /* BAMCheckout */,
+				54CD99961F4B018100E9CB14 /* Netverify */,
+				54CD99971F4B018B00E9CB14 /* DocumentVerification */,
+				54CD998B1F4AB4A300E9CB14 /* Supporting Files */,
+			);
+			name = SampleSwift;
+			path = JumioMobileSDKSample;
 			sourceTree = "<group>";
 		};
 		54A749D11E5618870060CF63 /* BAMCheckout */ = {
 			isa = PBXGroup;
 			children = (
-				54A749C81E558A130060CF63 /* BAMCheckoutStartViewController.h */,
-				54A749C91E558A130060CF63 /* BAMCheckoutStartViewController.m */,
+				547B46ED1F46F71B0029781C /* BAMCheckoutStartViewController.h */,
+				547B46EE1F46F71B0029781C /* BAMCheckoutStartViewController.m */,
 				30C268AF1A8E213000C879D6 /* CustomOverlayViewController */,
 			);
 			name = BAMCheckout;
@@ -117,37 +187,86 @@
 		54A749D21E56188F0060CF63 /* Netverify */ = {
 			isa = PBXGroup;
 			children = (
-				54A749CB1E558BF30060CF63 /* NetverifyStartViewController.h */,
-				54A749CC1E558BF30060CF63 /* NetverifyStartViewController.m */,
+				547B46F51F46F7520029781C /* NetverifyStartViewController.h */,
+				547B46F61F46F7520029781C /* NetverifyStartViewController.m */,
 			);
 			name = Netverify;
 			sourceTree = "<group>";
 		};
-		54A749D31E5618950060CF63 /* Document Verification */ = {
+		54A749D31E5618950060CF63 /* DocumentVerification */ = {
 			isa = PBXGroup;
 			children = (
-				54A749CE1E5610C00060CF63 /* DocumentVerificationStartViewController.h */,
-				54A749CF1E5610C00060CF63 /* DocumentVerificationStartViewController.m */,
+				547B46F81F46F77F0029781C /* DocumentVerificationStartViewController.h */,
+				547B46F91F46F77F0029781C /* DocumentVerificationStartViewController.m */,
 			);
-			name = "Document Verification";
+			name = DocumentVerification;
 			sourceTree = "<group>";
 		};
 		54A749D41E56189F0060CF63 /* General classes */ = {
 			isa = PBXGroup;
 			children = (
+				EE01EEF61924A3E200B7CC49 /* main.m */,
 				EE01EEF91924A3E300B7CC49 /* AppDelegate.h */,
 				EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */,
 				EE01EF021924A3E300B7CC49 /* StartViewController.h */,
 				EE01EF031924A3E300B7CC49 /* StartViewController.m */,
 			);
 			name = "General classes";
+			path = JumioMobileSDKSample;
+			sourceTree = "<group>";
+		};
+		54CD998B1F4AB4A300E9CB14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				54CD99841F4708CC00E9CB14 /* SampleSwift-Info.plist */,
+				54CD99861F4713A300E9CB14 /* Sample-BridgingHeader.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		54CD99951F4B017600E9CB14 /* BAMCheckout */ = {
+			isa = PBXGroup;
+			children = (
+				547B47071F46FFFD0029781C /* BAMCheckoutStartViewController.swift */,
+				54CD99981F4B019F00E9CB14 /* CustomOverlayViewController */,
+			);
+			name = BAMCheckout;
+			sourceTree = "<group>";
+		};
+		54CD99961F4B018100E9CB14 /* Netverify */ = {
+			isa = PBXGroup;
+			children = (
+				54CD99871F4AA49300E9CB14 /* NetverifyStartViewController.swift */,
+			);
+			name = Netverify;
+			sourceTree = "<group>";
+		};
+		54CD99971F4B018B00E9CB14 /* DocumentVerification */ = {
+			isa = PBXGroup;
+			children = (
+				54CD99891F4AB08500E9CB14 /* DocumentVerificationStartViewController.swift */,
+			);
+			name = DocumentVerification;
+			sourceTree = "<group>";
+		};
+		54CD99981F4B019F00E9CB14 /* CustomOverlayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				54CD998E1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift */,
+				54CD99931F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib */,
+			);
+			name = CustomOverlayViewController;
 			sourceTree = "<group>";
 		};
 		EE01EEDE1924A3E200B7CC49 = {
 			isa = PBXGroup;
 			children = (
 				EE8E78101926419400896C42 /* JumioMobileSDK */,
-				EE01EEF01924A3E200B7CC49 /* JumioMobileSDKSample */,
+				54A749D41E56189F0060CF63 /* General classes */,
+				EE01EEF01924A3E200B7CC49 /* SampleObjC */,
+				547B46EA1F46F5050029781C /* SampleSwift */,
+				547B47021F46F80E0029781C /* Images.xcassets */,
+				54CD99811F4708BC00E9CB14 /* exportOptions.plist */,
 				EE01EEE91924A3E200B7CC49 /* Frameworks */,
 				EE01EEE81924A3E200B7CC49 /* Products */,
 			);
@@ -156,7 +275,8 @@
 		EE01EEE81924A3E200B7CC49 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE01EEE71924A3E200B7CC49 /* JumioMobileSDKSample.app */,
+				EE01EEE71924A3E200B7CC49 /* SampleObjC.app */,
+				547B46E81F46F1FE0029781C /* SampleSwift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,28 +288,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EE01EEF01924A3E200B7CC49 /* JumioMobileSDKSample */ = {
+		EE01EEF01924A3E200B7CC49 /* SampleObjC */ = {
 			isa = PBXGroup;
 			children = (
-				54A749C61E5587B70060CF63 /* MainStoryboard.storyboard */,
-				0FEF68FB1B909773003E55B9 /* Images.xcassets */,
-				54A749D41E56189F0060CF63 /* General classes */,
+				547B46EB1F46F70B0029781C /* MainStoryboardObjC.storyboard */,
 				54A749D11E5618870060CF63 /* BAMCheckout */,
 				54A749D21E56188F0060CF63 /* Netverify */,
-				54A749D31E5618950060CF63 /* Document Verification */,
+				54A749D31E5618950060CF63 /* DocumentVerification */,
 				EE01EEF11924A3E200B7CC49 /* Supporting Files */,
 			);
+			name = SampleObjC;
 			path = JumioMobileSDKSample;
 			sourceTree = "<group>";
 		};
 		EE01EEF11924A3E200B7CC49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EE01EEF21924A3E200B7CC49 /* JumioMobileSDKSample-Info.plist */,
-				EE01EEF31924A3E200B7CC49 /* InfoPlist.strings */,
-				EE01EEF61924A3E200B7CC49 /* main.m */,
-				EE01EEF81924A3E300B7CC49 /* JumioMobileSDKSample-Prefix.pch */,
-				543E17B81C3C1673005F8EDE /* exportOptions.plist */,
+				547B47001F46F7F50029781C /* SampleObjC-Info.plist */,
+				547B46FE1F46F7A90029781C /* JumioMobileSDKSample-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -209,9 +325,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EE01EEE61924A3E200B7CC49 /* JumioMobileSDKSample */ = {
+		547B46CA1F46F1FE0029781C /* SampleSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE01EF1C1924A3E300B7CC49 /* Build configuration list for PBXNativeTarget "JumioMobileSDKSample" */;
+			buildConfigurationList = 547B46E51F46F1FE0029781C /* Build configuration list for PBXNativeTarget "SampleSwift" */;
+			buildPhases = (
+				547B46CB1F46F1FE0029781C /* Sources */,
+				547B46D31F46F1FE0029781C /* Frameworks */,
+				547B46D91F46F1FE0029781C /* Resources */,
+				547B46DF1F46F1FE0029781C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleSwift;
+			productName = JumioMobileSDKSample;
+			productReference = 547B46E81F46F1FE0029781C /* SampleSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE01EEE61924A3E200B7CC49 /* SampleObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE01EF1C1924A3E300B7CC49 /* Build configuration list for PBXNativeTarget "SampleObjC" */;
 			buildPhases = (
 				EE01EEE31924A3E200B7CC49 /* Sources */,
 				EE01EEE41924A3E200B7CC49 /* Frameworks */,
@@ -222,9 +356,9 @@
 			);
 			dependencies = (
 			);
-			name = JumioMobileSDKSample;
+			name = SampleObjC;
 			productName = JumioMobileSDKSample;
-			productReference = EE01EEE71924A3E200B7CC49 /* JumioMobileSDKSample.app */;
+			productReference = EE01EEE71924A3E200B7CC49 /* SampleObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -233,9 +367,13 @@
 		EE01EEDF1924A3E200B7CC49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = "Jumio Inc.";
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Jumio Corporation";
 				TargetAttributes = {
+					547B46CA1F46F1FE0029781C = {
+						DevelopmentTeam = JC7JKY534B;
+						LastSwiftMigration = 0830;
+					};
 					EE01EEE61924A3E200B7CC49 = {
 						DevelopmentTeam = JC7JKY534B;
 						ProvisioningStyle = Manual;
@@ -255,55 +393,143 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE01EEE61924A3E200B7CC49 /* JumioMobileSDKSample */,
+				EE01EEE61924A3E200B7CC49 /* SampleObjC */,
+				547B46CA1F46F1FE0029781C /* SampleSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		547B46D91F46F1FE0029781C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54CD998C1F4AB6EF00E9CB14 /* SampleSwift-Info.plist in Resources */,
+				547B47061F46FC880029781C /* MainStoryboardSwift.storyboard in Resources */,
+				54CD99921F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib in Resources */,
+				54CD99941F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib in Resources */,
+				54CD99831F4708BC00E9CB14 /* exportOptions.plist in Resources */,
+				547B47041F46F80E0029781C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE01EEE51924A3E200B7CC49 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54A749C71E5587B70060CF63 /* MainStoryboard.storyboard in Resources */,
-				0FEF68FC1B909773003E55B9 /* Images.xcassets in Resources */,
-				EE01EEF51924A3E200B7CC49 /* InfoPlist.strings in Resources */,
-				30C268AE1A8E212700C879D6 /* CustomScanOverlayViewController.xib in Resources */,
-				543E17B91C3C1673005F8EDE /* exportOptions.plist in Resources */,
+				547B47031F46F80E0029781C /* Images.xcassets in Resources */,
+				54CD998D1F4AB6F200E9CB14 /* SampleObjC-Info.plist in Resources */,
+				54CD99821F4708BC00E9CB14 /* exportOptions.plist in Resources */,
+				547B46EC1F46F70B0029781C /* MainStoryboardObjC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		547B46CB1F46F1FE0029781C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54CD998F1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift in Sources */,
+				547B46CC1F46F1FE0029781C /* StartViewController.m in Sources */,
+				54CD998A1F4AB08500E9CB14 /* DocumentVerificationStartViewController.swift in Sources */,
+				547B46CD1F46F1FE0029781C /* AppDelegate.m in Sources */,
+				547B46D21F46F1FE0029781C /* main.m in Sources */,
+				54CD99881F4AA49300E9CB14 /* NetverifyStartViewController.swift in Sources */,
+				547B47081F46FFFD0029781C /* BAMCheckoutStartViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE01EEE31924A3E200B7CC49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EE01EF041924A3E300B7CC49 /* StartViewController.m in Sources */,
+				547B46EF1F46F71B0029781C /* BAMCheckoutStartViewController.m in Sources */,
+				547B46F31F46F73B0029781C /* CustomScanOverlayViewController.m in Sources */,
+				547B46F71F46F7520029781C /* NetverifyStartViewController.m in Sources */,
 				EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */,
-				54A749D01E5610C00060CF63 /* DocumentVerificationStartViewController.m in Sources */,
-				54A749CD1E558BF30060CF63 /* NetverifyStartViewController.m in Sources */,
-				54A749CA1E558A130060CF63 /* BAMCheckoutStartViewController.m in Sources */,
-				30C268AD1A8E212700C879D6 /* CustomScanOverlayViewController.m in Sources */,
 				EE01EEF71924A3E200B7CC49 /* main.m in Sources */,
+				547B46FC1F46F77F0029781C /* DocumentVerificationStartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		EE01EEF31924A3E200B7CC49 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE01EEF41924A3E200B7CC49 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		547B46E61F46F1FE0029781C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_MODULES_AUTOLINK = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build";
+				DEVELOPMENT_TEAM = JC7JKY534B;
+				ENABLE_BITCODE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../sdk-device-frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;
+				INFOPLIST_FILE = "$(SRCROOT)/SampleSwift/SampleSwift-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9d4a5243-fa56-4f7d-b0be-f64a81256e6d";
+				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentEnterprise;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SampleSwift/Sample-BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		547B46E71F46F1FE0029781C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_MODULES_AUTOLINK = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build";
+				DEVELOPMENT_TEAM = JC7JKY534B;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../sdk-device-frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;
+				INFOPLIST_FILE = "$(SRCROOT)/SampleSwift/SampleSwift-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionEnterprise;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SampleSwift/Sample-BridgingHeader.h";
+				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		EE01EF1A1924A3E300B7CC49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -389,6 +615,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "arm64 armv7";
@@ -404,6 +631,7 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build";
 				DEVELOPMENT_TEAM = JC7JKY534B;
 				ENABLE_BITCODE = YES;
 				ENABLE_TESTABILITY = YES;
@@ -412,9 +640,9 @@
 					"$(PROJECT_DIR)/../sdk-device-frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JumioMobileSDKSample/JumioMobileSDKSample-Prefix.pch";
+				GCC_PREFIX_HEADER = "SampleObjC/JumioMobileSDKSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;
-				INFOPLIST_FILE = "JumioMobileSDKSample/JumioMobileSDKSample-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SampleObjC/SampleObjC-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -436,6 +664,7 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build";
 				DEVELOPMENT_TEAM = JC7JKY534B;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -443,9 +672,9 @@
 					"$(PROJECT_DIR)/../sdk-device-frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JumioMobileSDKSample/JumioMobileSDKSample-Prefix.pch";
+				GCC_PREFIX_HEADER = "SampleObjC/JumioMobileSDKSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;
-				INFOPLIST_FILE = "JumioMobileSDKSample/JumioMobileSDKSample-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SampleObjC/SampleObjC-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -461,6 +690,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		547B46E51F46F1FE0029781C /* Build configuration list for PBXNativeTarget "SampleSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				547B46E61F46F1FE0029781C /* Debug */,
+				547B46E71F46F1FE0029781C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EE01EEE21924A3E200B7CC49 /* Build configuration list for PBXProject "JumioMobileSDKSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -470,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE01EF1C1924A3E300B7CC49 /* Build configuration list for PBXNativeTarget "JumioMobileSDKSample" */ = {
+		EE01EF1C1924A3E300B7CC49 /* Build configuration list for PBXNativeTarget "SampleObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE01EF1D1924A3E300B7CC49 /* Debug */,

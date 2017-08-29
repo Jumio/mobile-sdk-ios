@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Netverify-->
+        <scene sceneID="OLO-Bj-4VN">
+            <objects>
+                <viewController title="Netverify" id="wPR-i1-qVN" customClass="NetverifyStartViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ny8-xy-HQl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q2L-Nu-gLx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LrE-4M-hhh" userLabel="View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFO-CS-Kty">
+                                <rect key="frame" x="36" y="315.5" width="303" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Netverify">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startNetverify" destination="wPR-i1-qVN" eventType="touchUpInside" id="HsB-aC-uBf"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dC8-8e-xdg">
+                                <rect key="frame" x="290" y="368" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYx-Zn-Gtj">
+                                <rect key="frame" x="36" y="373" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="yfJ-MW-Pvw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A45-KA-VwT" userLabel="Switch Face match">
+                                <rect key="frame" x="290" y="418" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face match required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOq-pP-UqN">
+                                <rect key="frame" x="36" y="423" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="bwz-YN-kA8"/>
+                                    <constraint firstAttribute="width" constant="200" id="fya-zX-r6N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PFO-CS-Kty" firstAttribute="leading" secondItem="LrE-4M-hhh" secondAttribute="leadingMargin" constant="20" id="1Ku-2e-1Yv"/>
+                            <constraint firstItem="aYx-Zn-Gtj" firstAttribute="leading" secondItem="LrE-4M-hhh" secondAttribute="leadingMargin" constant="20" id="7o3-J8-v9M"/>
+                            <constraint firstItem="dC8-8e-xdg" firstAttribute="centerY" secondItem="LrE-4M-hhh" secondAttribute="centerY" constant="50" id="ASG-eg-yHi"/>
+                            <constraint firstItem="A45-KA-VwT" firstAttribute="centerY" secondItem="LrE-4M-hhh" secondAttribute="centerY" constant="100" id="ILW-LT-4PP"/>
+                            <constraint firstItem="VOq-pP-UqN" firstAttribute="centerY" secondItem="LrE-4M-hhh" secondAttribute="centerY" constant="100" id="KP0-sz-I5w"/>
+                            <constraint firstItem="VOq-pP-UqN" firstAttribute="leading" secondItem="LrE-4M-hhh" secondAttribute="leadingMargin" constant="20" id="PCr-1k-3nX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A45-KA-VwT" secondAttribute="trailing" constant="20" id="TTh-vQ-UOa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dC8-8e-xdg" secondAttribute="trailing" constant="20" id="aVi-Ek-lYh"/>
+                            <constraint firstItem="aYx-Zn-Gtj" firstAttribute="centerY" secondItem="LrE-4M-hhh" secondAttribute="centerY" constant="50" id="mtj-Qm-vUQ"/>
+                            <constraint firstItem="PFO-CS-Kty" firstAttribute="centerY" secondItem="LrE-4M-hhh" secondAttribute="centerY" id="qfl-JU-ghO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PFO-CS-Kty" secondAttribute="trailing" constant="20" id="tjf-Hv-0fW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Netverify" image="NVicon" selectedImage="NVicon" id="BZ9-cI-5R1"/>
+                    <connections>
+                        <outlet property="switchRequireFaceMatch" destination="A45-KA-VwT" id="gAD-rq-lOm"/>
+                        <outlet property="switchRequireVerification" destination="dC8-8e-xdg" id="ODy-MC-A58"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBD-9T-sLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="-188"/>
+        </scene>
+        <!--BAM Checkout-->
+        <scene sceneID="JmQ-qZ-Qrd">
+            <objects>
+                <viewController title="BAM Checkout" id="nZj-si-Cge" customClass="BAMCheckoutStartViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vnf-Ha-u6i"/>
+                        <viewControllerLayoutGuide type="bottom" id="N2l-ny-kf0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="74y-vc-d3H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RT5-py-oYZ">
+                                <rect key="frame" x="36" y="315.5" width="303" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start BAM Checkout">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBAMCheckout" destination="nZj-si-Cge" eventType="touchUpInside" id="Ath-tK-eIB"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m4L-Wv-Lal" userLabel="Switch CVV Required">
+                                <rect key="frame" x="290" y="368" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVV required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hw-Lt-AGG" userLabel="CVV required">
+                                <rect key="frame" x="36" y="373" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Eyg-aH-6Q3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m4L-Wv-Lal" firstAttribute="centerY" secondItem="74y-vc-d3H" secondAttribute="centerY" constant="50" id="1wk-wl-8zj"/>
+                            <constraint firstItem="6hw-Lt-AGG" firstAttribute="centerY" secondItem="74y-vc-d3H" secondAttribute="centerY" constant="50" id="Ej0-Pw-VQW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m4L-Wv-Lal" secondAttribute="trailing" constant="20" id="Vl5-kP-t4o"/>
+                            <constraint firstItem="RT5-py-oYZ" firstAttribute="leading" secondItem="74y-vc-d3H" secondAttribute="leadingMargin" constant="20" id="anz-0g-zSH"/>
+                            <constraint firstItem="RT5-py-oYZ" firstAttribute="centerY" secondItem="74y-vc-d3H" secondAttribute="centerY" id="meM-9q-3f2"/>
+                            <constraint firstItem="6hw-Lt-AGG" firstAttribute="leading" secondItem="74y-vc-d3H" secondAttribute="leadingMargin" constant="20" id="ugP-oj-Fdp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RT5-py-oYZ" secondAttribute="trailing" constant="20" id="war-T7-eD0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="BAM Checkout" image="NSicon" selectedImage="NSicon" id="M0v-fS-0vZ"/>
+                    <connections>
+                        <outlet property="switchCvvRequired" destination="m4L-Wv-Lal" id="eUP-a9-gHJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c26-wS-aFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="-850"/>
+        </scene>
+        <!--Jumio Mobile SDK-->
+        <scene sceneID="25f-SI-KHe">
+            <objects>
+                <tabBarController title="Jumio Mobile SDK" id="KgN-VJ-uIM" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="vL4-eG-PcY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wPR-i1-qVN" kind="relationship" relationship="viewControllers" id="OF5-oW-afD"/>
+                        <segue destination="Jad-cK-FTC" kind="relationship" relationship="viewControllers" id="bw3-Km-UQm"/>
+                        <segue destination="nZj-si-Cge" kind="relationship" relationship="viewControllers" id="Ayr-VF-gYD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BN1-Ab-Qrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-598" y="-188"/>
+        </scene>
+        <!--DocumentVerification-->
+        <scene sceneID="yhj-Zm-zSJ">
+            <objects>
+                <viewController title="DocumentVerification" id="Jad-cK-FTC" userLabel="DocumentVerification" customClass="DocumentVerificationStartViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rvK-Ci-yuM"/>
+                        <viewControllerLayoutGuide type="bottom" id="TZp-g5-zNM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NCy-na-uBN" userLabel="View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSz-ie-lnE">
+                                <rect key="frame" x="36" y="315.5" width="303" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Document Verification">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDocumentVerification" destination="Jad-cK-FTC" eventType="touchUpInside" id="Cex-Ks-cmD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XSz-ie-lnE" firstAttribute="centerY" secondItem="NCy-na-uBN" secondAttribute="centerY" id="Amn-Wz-UaE"/>
+                            <constraint firstItem="XSz-ie-lnE" firstAttribute="leading" secondItem="NCy-na-uBN" secondAttribute="leadingMargin" constant="20" id="Zzf-Jf-pDJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XSz-ie-lnE" secondAttribute="trailing" constant="20" id="jAA-Ht-7Tj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="DocumentVerification" image="NVicon" selectedImage="NVicon" id="6ST-d5-gL0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQr-Df-jfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="573"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSicon" width="29" height="29"/>
+        <image name="NVicon" width="29" height="29"/>
+    </resources>
+</document>

@@ -2,6 +2,9 @@
 
 # Transition guide for BAM Checkout
 
+## 2.8.0
+No backward incompatible changes.
+
 ## 2.7.0
 #### Product re-rebranding
 Please note that the Netswipe product has been re-branded to BAMCheckout. This applies to all public classes, methods and Localizable string keys.

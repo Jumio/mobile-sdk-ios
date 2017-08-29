@@ -2,6 +2,14 @@
 
 # Transition guide for Fastfill & Netverify
 
+## 2.8.0
+
+#### Additions in visual customization
+Added customization options to colorize the scan overlay screens.
+
+#### Changes in Localizable-Netverify.strings
+Removed three values in regards to a compliance hint
+
 ## 2.7.0
 
 #### Changes in Localizable-Netverify.strings

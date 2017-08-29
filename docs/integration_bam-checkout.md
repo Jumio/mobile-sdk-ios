@@ -15,10 +15,6 @@ BAM Checkout is a powerful, cutting-edge solution to extract data from your cust
 ## Release notes
 For changes in the technical area, please read our [transition guide](transition-guide_bam-checkout.md).
 
-#### Changes
-* Renamed SDK from Netswipe to BamCheckout
-* Removed Adyen functionality
-
 #### Fixes
 * Miscellaneous bugfixes
 

@@ -37,8 +37,6 @@ FOUNDATION_EXPORT const unsigned char JumioCoreVersionString[];
 #import <JumioCore/JMString.h>
 #import <JumioCore/JMTableView.h>
 #import <JumioCore/JMThemeableButton.h>
-#import <JumioCore/JMToggleCameraButton.h>
-#import <JumioCore/JMToggleFlashButton.h>
 #import <JumioCore/NSData+Base64.h>
 #import <JumioCore/JMSDK.h>
 #import <JumioCore/JMLoadingTableViewCell.h>

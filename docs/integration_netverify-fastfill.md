@@ -16,11 +16,8 @@ Netverify SDK offers scanning and authentication of government issued IDs.
 ## Release notes
 For changes in the technical area, please read our [transition guide](transition-guide_netverify-fastfill.md).
 
-#### Additions
-* Advanced Liveness Detection  
-* Added mechanism to avoid capturing of front as back side
-
 #### Changes
+* Stability improvements
 * Minor UI/UX changes
 
 #### Fixes
@@ -153,6 +150,7 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 - Fallback button (Detection not working): title color and background
 - Scan Options button: title color and background
 - Camera and flash toggle button: title color and background
+- Scan overlay: standard color, valid color and invalid color
 
 ### Customization tool
 [Jumio Surface](https://jumio.github.io/surface-ios) is a web tool that offers the possibility to apply and visualize, in real-time, all available customization options as well as an export feature to import the applied changes straight into the your codebase.
@@ -173,7 +171,6 @@ Upon success, the extracted document data is returned including its scan referen
 ```
 - (void) netverifyViewController: (NetverifyViewController *) netverifyViewController didFinishWithDocumentData: (NetverifyDocumentData *) documentData scanReference: (NSString *) scanReference  {
 	// YOURCODE
-	[documentData clear];
 }
 ```
 

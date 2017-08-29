@@ -16,3 +16,4 @@
 #import <Netverify/UINavigationBar+NetverifyAppearance.h>
 #import <Netverify/ISOCountryConverter.h>
 #import <Netverify/DocumentVerificationViewController.h>
+#import <Netverify/NetverifyScanOverlayView.h>
