@@ -30,6 +30,9 @@ typedef enum
     IPHONE_7,
     IPHONE_7_PLUS,
     IPHONE_SE,
+    IPHONE_8,
+    IPHONE_8_PLUS,
+    IPHONE_X,
     
     IPOD_TOUCH_1G,
     IPOD_TOUCH_2G,

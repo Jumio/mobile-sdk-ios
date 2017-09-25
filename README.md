@@ -10,12 +10,7 @@
 Applies to all products.
 
 #### Additions
-* Cross-Platform Support - React Native
-* Cordova - added Demo application
-* Swift - added Demo implementation to existing sample project
-
-#### Fixes
-* Overall stability improvements
+* iOS 11 support
 
 # Basic Setup
 
