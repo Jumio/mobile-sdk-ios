@@ -8,7 +8,7 @@
 @import Netverify;
 
 @interface DocumentVerificationStartViewController () <DocumentVerificationViewControllerDelegate>
-@property (nonatomic, strong) DocumentVerificationViewController *DocumentVerificationViewController;
+@property (nonatomic, strong) DocumentVerificationViewController *documentVerificationViewController;
 @end
 
 @implementation DocumentVerificationStartViewController
@@ -62,7 +62,7 @@
     
     //Perform the following call as soon as your app’s view controller is initialized. Create the DocumentVerificationViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
     @try {
-        self.DocumentVerificationViewController = [[DocumentVerificationViewController alloc] initWithConfiguration:config];
+        self.documentVerificationViewController = [[DocumentVerificationViewController alloc] initWithConfiguration:config];
     } @catch (NSException *exception) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:exception.name message:exception.reason preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
@@ -83,8 +83,8 @@
 - (IBAction) startDocumentVerification: (id) sender {
     [self createDocumentVerificationController];
     
-    if (self.DocumentVerificationViewController) {
-        [self presentViewController: self.DocumentVerificationViewController animated:YES completion:nil];
+    if (self.documentVerificationViewController) {
+        [self presentViewController: self.documentVerificationViewController animated:YES completion:nil];
     } else {
         [self showAlertWithTitle:@"Document Verification SDK" message: @"DocumentVerificationViewController is nil"];
     }

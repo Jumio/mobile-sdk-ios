@@ -14,10 +14,19 @@ Netverify SDK offers scanning and authentication of government issued IDs.
 - [Callback](#callback)
 
 ## Release notes
-For changes in the technical area, please read our [transition guide](transition-guide_netverify-fastfill.md).
+For technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md).
 
 #### Additions
-* iOS 11 support
+* Full offline functionality for Fastfill
+* Legal hints for specific countries 
+
+#### Changes
+* Redesign of document type and country selection
+* Improved face caputure process
+* Removed support for iOS 8
+
+#### Fixes
+* Bug fixes and stability improvements
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Netverify.
@@ -119,6 +128,20 @@ after initializing or before dismissing the SDK.
 ```
 NSUUID *debugSessionID = self.netverifyViewController.debugID;
 ```
+
+### Offline scanning
+
+If you want to use the SDK in offline mode please contact Jumio Customer Service at support@jumio.com or https://support.jumio.com. Once they have enabled this feature for your account, you can find your offline token in your Jumio merchant backend on the "Settings" page under "API credentials".
+
+```
+config.offlineToken = @"YOUROFFLINETOKEN";
+```
+
+In case of the following cases an exception will be thrown at initialization time and netverifyViewController will be nil:
+- The bundle identifier of your app does not match with the token
+- The expiration date of the token is reached
+- The wrong product is used
+- The token itself is invalid
 
 ### Miscellaneous
 

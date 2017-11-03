@@ -6,7 +6,7 @@
 	<string>enterprise</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.jumio.SampleObjC</key>
+		<key>com.jumio.JumioMobileSDKSample</key>
 		<string>JumioDistributionEnterprise</string>
 	</dict>
 	<key>teamID</key>

@@ -2,6 +2,15 @@
 
 # Transition guide for Fastfill & Netverify
 
+## 2.9.0
+
+#### Changes in Localizable-Netverify.strings
+Several additions and changes, mostly in regards to the new scan options and face guidance screen.
+
+#### Additions in visual customization
+Enhanced customization options to colorize the scan options header and buttons.
+Class `NetverifyScanOptionsButton` was replaced by `NetverifyDocumentSelectionButton` and `NetverifyDocumentSelectionHeaderView`.
+
 ## 2.8.1
 No backward incompatible changes.
 

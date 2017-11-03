@@ -30,6 +30,9 @@
     //Set the dataCenter; default is JumioDataCenterUS
     //config.dataCenter = JumioDataCenterEU;
     
+    //Use the following property to enable offline scanning.
+    //config.offlineToken = @"YOUR_OFFLINE_TOKEN";
+    
     // Use the following method to convert ISO 3166-1 alpha-2 into alpha-3 country code (optional)
     // NSString* alpha3CountryCode = [ISOCountryConverter convertToAlpha3: @"AT"];
     
@@ -106,14 +109,18 @@
     // - Custom general appearance - foreground color (text-elements and icons)
     //[[NetverifyBaseView netverifyAppearance] setForegroundColor: [UIColor redColor]];
     
-    // - Scan options Button Background and Title Colors, custom class has to be imported
-    //[[NetverifyScanOptionButton netverifyAppearance] setBackgroundColor:[UIColor yellowColor] forState:UIControlStateNormal];
-    //[[NetverifyScanOptionButton netverifyAppearance] setBackgroundColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    //[[NetverifyScanOptionButton netverifyAppearance] setBackgroundColor:[UIColor blueColor] forState:UIControlStateDisabled];
+    // - Scan options Button/Header Background, Icon and Title Colors, custom class has to be imported
+    //[[NetverifyDocumentSelectionButton netverifyAppearance] setBackgroundColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    //[[NetverifyDocumentSelectionButton netverifyAppearance] setBackgroundColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    //[[NetverifyDocumentSelectionHeaderView netverifyAppearance] setBackgroundColor:[UIColor brownColor]];
     
-    //[[NetverifyScanOptionButton netverifyAppearance] setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    //[[NetverifyScanOptionButton netverifyAppearance] setTitleColor:[UIColor yellowColor] forState:UIControlStateHighlighted];
-    //[[NetverifyScanOptionButton netverifyAppearance] setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
+    //[[NetverifyDocumentSelectionButton netverifyAppearance] setIconColor:[UIColor redColor] forState:UIControlStateNormal];
+    //[[NetverifyDocumentSelectionButton netverifyAppearance] setIconColor:[UIColor yellowColor] forState:UIControlStateHighlighted];
+    //[[NetverifyDocumentSelectionHeaderView netverifyAppearance] setIconColor:[UIColor magentaColor]];
+    
+    //[[NetverifyDocumentSelectionButton netverifyAppearance] setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    //[[NetverifyDocumentSelectionButton netverifyAppearance] setTitleColor:[UIColor yellowColor] forState:UIControlStateHighlighted];
+    //[[NetverifyDocumentSelectionHeaderView netverifyAppearance] setTitleColor:[UIColor magentaColor]];
     
     // - Custom general appearance - font
     //The font has to be loaded upfront within the mainBundle before initializing the SDK

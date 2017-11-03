@@ -14,10 +14,10 @@ Document Verification is a powerful solution to enable scanning various types (U
 - [Callback](#callback)
 
 ## Release notes
-For changes in the technical area, please read our [transition guide](transition-guide_document-verification.md).
+For technical changes, please read our [transition guide](transition-guide_document_verification.md).
 
-#### Additions
-* iOS 11 support
+#### Fixes
+* Miscellaneous bugfixes
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for DocumentVerification.

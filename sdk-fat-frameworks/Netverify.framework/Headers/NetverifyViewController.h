@@ -41,6 +41,8 @@
 
 @property (nonatomic, assign) JumioDataCenter dataCenter;               // Specifiy the DataCenter that should be used
 
+@property (nonatomic, strong, nullable) NSString* offlineToken;                       // Set this token to use the SDK offline
+
 @property (nonatomic, weak, nullable) id<NetverifyViewControllerDelegate> delegate;  // A delegate implementing the NetverifyViewControllerDelegate protocol
 
 @property (nonatomic, strong, nullable) NSString* preselectedCountry;             // Specify a country to skip selection by the user (format: ISO 3166-1 Alpha 3 code)

@@ -5,9 +5,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JMBaseState.h"
+#import "JMState.h"
 
-@interface JMFinalState : JMBaseState
+@interface JMFinalState : JMState
 
 + (instancetype)finalStateWithName:(NSString*)name;
 

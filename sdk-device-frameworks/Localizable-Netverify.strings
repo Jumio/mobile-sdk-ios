@@ -6,7 +6,7 @@
 
 
 // scanOptionsView
-"netverify.scan-options.navigationItem.title" = "Select your document";
+"netverify.scan-options.navigationItem.title" = "";
 "netverify.scan-options.header.title" = "Select the type of document you wish to scan";
 "netverify.scan-options.section-header.country.title" = "YOUR COUNTRY";
 "netverify.scan-options.section-header.document-type.title" = "TYPE OF DOCUMENT";
@@ -17,15 +17,26 @@
 "netverify.scan-options.cell.document-type.visa.title" = "Visa";
 "netverify.scan-options.cell.document-type.identity-card.title" = "Identity Card";
 "netverify.scan-options.cell.document-type.driver-license.title" = "Driver License";
-"netverify.scan-options.cell.document-variant.plastic.title" = "Plastic photocard";
-"netverify.scan-options.cell.document-variant.paper.title" = "Folded document";
-"netverify.country-selection.navigationItem.title" = "Select your country";
+
+"netverify.scan-options.cell.document-variant.plastic.title" = "Plastic Card";
+"netverify.scan-options.cell.document-variant.paper.title" = "Other Format";
+"netverify.country-selection.navigationItem.title" = "";
+"netverify.country-selection.hint" = "Select the issuing country of your document";
+"netverify.country-selection.search.placeholder" = "Search Country";
+
 "netverify.scan-options.accessibility-label.close-button" = "Close";
+
+"netverify.scan-options.hint" = "Select the type of document you wish to scan.";
+"netverify.scan-options.issuing-country.text" = " has been set as issuing country of your documents. ";
+"netverify.scan-options.change-country.link" = "Change country";
 
 // scanView
 "netverify.scan-view.navigationItem.title" = "Scan document";
 "netverify.scan-view.use-front-card.overlay.title" = "USE FRONT";
 "netverify.scan-view.use-back-card.overlay.title" = "USE BACK";
+"netverify.scan-view.compliance-alertview.confirmation" = "OK";
+"netverify.scan-view.compliance-alertview.message.NLD" = "Please redact your BSN before capturing";
+"netverify.scan-view.compliance-alertview.message.KOR" = "Redact the second block of your Resident Registration Number before capturing";
 "netverify.scan-view.accessibility-label.button.switch-to-front-camera" = "Switch to front camera";
 "netverify.scan-view.accessibility-label.button.switch-to-back-camera" = "Switch to back camera";
 "netverify.scan-view.accessibility-label.flash-button.activate" = "Activate flash";
@@ -57,6 +68,11 @@
 "netverify.scan-help-view.help-text-barcode.full" = "Place the barcode in front of the camera as it is shown in the picture above. The capturing happens automatically.\n\nEnsure that all data is readable and avoid reflections.";
 "netverify.scan-help-view.button.general-fallback.title" = "CAPTURE IS NOT WORKING";
 "netverify.scan-help-view.button.barcode-fallback.title" = "NO BARCODE ON MY ID";
+"netverify.scan-view.liveness-help.navigation-item.title" = "Experiencing problems?";
+"netverify.scan-help-view.liveness-help.glasses" = "Do not wear glasses, remove if possible";
+"netverify.scan-help-view.liveness-help.headwear" = "Remove any headwear";
+"netverify.scan-help-view.liveness-help.light-conditions" = "Use good lighting and avoid strong light from behind";
+"netverify.scan-help-view.liveness-help.button-continue.title" = "CONTINUE";
 "netverify.confirmation-view.headline" = "Check readability";
 "netverify.confirmation-view.label" = "Make sure that all data on your document is fully visible, glare free and not blurred";
 "netverify.confirmation-view.button.submit" = "READABLE";

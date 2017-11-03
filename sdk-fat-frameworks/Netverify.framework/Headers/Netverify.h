@@ -12,7 +12,8 @@
 #import <Netverify/NetverifyNegativeButton.h>
 #import <Netverify/NetverifyFallbackButton.h>
 #import <Netverify/NetverifyBaseView.h>
-#import <Netverify/NetverifyScanOptionButton.h>
+#import <Netverify/NetverifyDocumentSelectionButton.h>
+#import <Netverify/NetverifyDocumentSelectionHeaderView.h>
 #import <Netverify/UINavigationBar+NetverifyAppearance.h>
 #import <Netverify/ISOCountryConverter.h>
 #import <Netverify/DocumentVerificationViewController.h>

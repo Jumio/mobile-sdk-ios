@@ -63,8 +63,13 @@ module Netverify.NetverifyFallbackButton {
     export *
 }
 
-module Netverify.NetverifyScanOptionButton {
-    header "NetverifyScanOptionButton.h"
+module Netverify.NetverifyDocumentSelectionButton {
+    header "NetverifyDocumentSelectionButton.h"
+    export *
+}
+
+module Netverify.NetverifyDocumentSelectionHeaderView {
+    header "NetverifyDocumentSelectionHeaderView.h"
     export *
 }
 

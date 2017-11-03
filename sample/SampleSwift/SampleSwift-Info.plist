@@ -30,14 +30,14 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>This will allow ${PRODUCT_NAME} to take photos of your credentials.</string>
-	<key>UILaunchStoryboardName</key>
-	<string>ViewController</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboardSwift</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UIStatusBarHidden</key>
 	<true/>
 	<key>UIStatusBarStyle</key>

@@ -6,17 +6,19 @@
 - [Get started](#get-started)
 - [Support](#support)
 
+
 # Release notes
+
 Applies to all products.
 
 #### Additions
-* iOS 11 support
+* Added full support for iOS 11
 
 # Basic Setup
 
 ## General Requirements
 The minimum requirements for the SDK are:
-- iOS 8.0 and higher
+- iOS 9.0 and higher
 - Internet connection
 
 The following architectures are supported in the SDK:
@@ -97,7 +99,7 @@ With accessibility support, visually impaired users can now enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.7.0 of the Jumio Mobile SDK is supported until 2017-11-29.
+The previous release version 2.8.1 of the Jumio Mobile SDK is supported until 2018-02-03.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 

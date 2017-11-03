@@ -70,4 +70,8 @@ typedef enum {
 // Raw MRZ data
 @property (nonatomic, strong, nullable) NetverifyMrzData *mrzData;
 
+@property (nonatomic, strong, nullable) UIImage* frontImage;
+@property (nonatomic, strong, nullable) UIImage* backImage;
+@property (nonatomic, strong, nullable) UIImage* faceImage;
+
 @end

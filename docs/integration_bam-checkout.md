@@ -13,10 +13,10 @@ BAM Checkout is a powerful, cutting-edge solution to extract data from your cust
 - [Delegation](#delegation)
 
 ## Release notes
-For changes in the technical area, please read our [transition guide](transition-guide_bam-checkout.md).
+For technical changes, please read our [transition guide](transition-guide_bam-checkout.md).
 
-#### Additions
-* iOS 11 support
+#### Fixes
+* Miscellaneous bugfixes
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for BAM Checkout.

@@ -39,8 +39,6 @@
 		54CD99831F4708BC00E9CB14 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99811F4708BC00E9CB14 /* exportOptions.plist */; };
 		54CD99881F4AA49300E9CB14 /* NetverifyStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD99871F4AA49300E9CB14 /* NetverifyStartViewController.swift */; };
 		54CD998A1F4AB08500E9CB14 /* DocumentVerificationStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD99891F4AB08500E9CB14 /* DocumentVerificationStartViewController.swift */; };
-		54CD998C1F4AB6EF00E9CB14 /* SampleSwift-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99841F4708CC00E9CB14 /* SampleSwift-Info.plist */; };
-		54CD998D1F4AB6F200E9CB14 /* SampleObjC-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 547B47001F46F7F50029781C /* SampleObjC-Info.plist */; };
 		54CD998F1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD998E1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift */; };
 		54CD99921F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99911F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib */; };
 		54CD99941F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99931F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib */; };
@@ -367,7 +365,7 @@
 		EE01EEDF1924A3E200B7CC49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Jumio Corporation";
 				TargetAttributes = {
 					547B46CA1F46F1FE0029781C = {
@@ -404,7 +402,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54CD998C1F4AB6EF00E9CB14 /* SampleSwift-Info.plist in Resources */,
 				547B47061F46FC880029781C /* MainStoryboardSwift.storyboard in Resources */,
 				54CD99921F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib in Resources */,
 				54CD99941F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib in Resources */,
@@ -418,7 +415,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				547B47031F46F80E0029781C /* Images.xcassets in Resources */,
-				54CD998D1F4AB6F200E9CB14 /* SampleObjC-Info.plist in Resources */,
 				54CD99821F4708BC00E9CB14 /* exportOptions.plist in Resources */,
 				547B46EC1F46F70B0029781C /* MainStoryboardObjC.storyboard in Resources */,
 			);
@@ -480,6 +476,7 @@
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleSwift/SampleSwift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -516,6 +513,7 @@
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleSwift/SampleSwift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -539,14 +537,20 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_MODULES_AUTOLINK = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -571,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,14 +592,20 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_MODULES_AUTOLINK = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -613,7 +623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -643,6 +653,7 @@
 				GCC_PREFIX_HEADER = "SampleObjC/JumioMobileSDKSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleObjC/SampleObjC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -675,6 +686,7 @@
 				GCC_PREFIX_HEADER = "SampleObjC/JumioMobileSDKSample-Prefix.pch";
 				HEADER_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include;
 				INFOPLIST_FILE = "$(SRCROOT)/SampleObjC/SampleObjC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";

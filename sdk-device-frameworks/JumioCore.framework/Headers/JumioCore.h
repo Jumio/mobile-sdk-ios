@@ -44,6 +44,7 @@ FOUNDATION_EXPORT const unsigned char JumioCoreVersionString[];
 #import <JumioCore/JMDeviceOrientationChangeNotifier.h>
 #import <JumioCore/JMEndpoint.h>
 #import <JumioCore/JMNavigationController.h>
+#import <JumioCore/JMOfflineManager.h>
 
 //Utilities
 #import <JumioCore/JMUtilities.h>

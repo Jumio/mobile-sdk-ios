@@ -12,9 +12,9 @@
 
 
 typedef enum : NSInteger {
-	NotReachable = 0,
-	ReachableViaWiFi,
-	ReachableViaWWAN
+	JMNotReachable = 0,
+	JMReachableViaWiFi,
+	JMReachableViaWWAN
 } JMNetworkStatus;
 
 #pragma mark IPv6 Support

@@ -28,6 +28,7 @@
 
 - (void)activate;
 - (void)reset;
+- (void)cleanUp;
 - (void)resetToStateWithName:(NSString*)stateName;
 
 - (JMStateTransition*)transitionWithEventName:(NSString*)name;
