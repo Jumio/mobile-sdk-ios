@@ -9,10 +9,10 @@
 
 # Release notes
 
-Applies to all products.
+Applies to all products. SDK version: 2.9.1
 
-#### Additions
-* Added full support for iOS 11
+#### Changes
+* Compatibility update for Swift 4.0.2
 
 # Basic Setup
 
@@ -99,7 +99,7 @@ With accessibility support, visually impaired users can now enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.8.1 of the Jumio Mobile SDK is supported until 2018-02-03.
+The previous release version 2.9.0 of the Jumio Mobile SDK is supported until 2018-02-08.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 
