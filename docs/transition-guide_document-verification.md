@@ -2,6 +2,9 @@
 
 # Transition guide for Document Verification
 
+## 2.9.2
+No backward incompatible changes.
+
 ## 2.9.1
 No backward incompatible changes.
 

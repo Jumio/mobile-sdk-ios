@@ -9,10 +9,10 @@
 
 # Release notes
 
-Applies to all products. SDK version: 2.9.1
+Applies to all products. SDK version: 2.9.2
 
-#### Changes
-* Compatibility update for Swift 4.0.2
+#### Fixes
+* Fixed a critical capturing problem on iPhone X
 
 # Basic Setup
 
@@ -83,7 +83,6 @@ Make sure that the following Xcode build settings in your app are set accordingl
 | Setting | Value |
 | :--- | :---: |
 | Link Frameworks Automatically | YES |
-| Always Embed Swift Standard Libraries | YES |
 
 ## Localization
 All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language and add it to your app project. This way, when upgrading our SDK to a newer version, your localization file won't be overwritten. Make sure, that the content of your localization file is up to date after an SDK update.
@@ -99,7 +98,7 @@ With accessibility support, visually impaired users can now enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.9.0 of the Jumio Mobile SDK is supported until 2018-02-08.
+The previous release version 2.9.1 of the Jumio Mobile SDK is supported until 2018-03-01.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 

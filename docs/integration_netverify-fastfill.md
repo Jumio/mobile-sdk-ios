@@ -16,17 +16,8 @@ Netverify SDK offers scanning and authentication of government issued IDs.
 ## Release notes
 For technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md).
 
-#### Additions
-* Full offline functionality for Fastfill
-* Legal hints for specific countries 
-
-#### Changes
-* Redesign of document type and country selection
-* Improved face caputure process
-* Removed support for iOS 8
-
 #### Fixes
-* Bug fixes and stability improvements
+* Fixed a critical capturing problem on iPhone X
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Netverify.

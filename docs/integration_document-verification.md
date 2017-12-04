@@ -17,7 +17,7 @@ Document Verification is a powerful solution to enable scanning various types (U
 For technical changes, please read our [transition guide](transition-guide_document_verification.md).
 
 #### Fixes
-* Miscellaneous bugfixes
+* Fixed a critical capturing problem on iPhone X
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for DocumentVerification.

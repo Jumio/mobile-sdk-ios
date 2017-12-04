@@ -16,7 +16,7 @@ BAM Checkout is a powerful, cutting-edge solution to extract data from your cust
 For technical changes, please read our [transition guide](transition-guide_bam-checkout.md).
 
 #### Fixes
-* Miscellaneous bugfixes
+* Fixed a critical capturing problem on iPhone X
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for BAM Checkout.
