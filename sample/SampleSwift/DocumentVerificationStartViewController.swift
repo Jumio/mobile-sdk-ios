@@ -8,7 +8,7 @@ import Netverify
 
 class DocumentVerificationStartViewController: StartViewController, DocumentVerificationViewControllerDelegate {
 
-    var documentVerificationViewController:DocumentVerificationViewController!
+    var documentVerificationViewController:DocumentVerificationViewController?
     
     func createDocumentVerificationController() -> Void {
         //Setup the Configuration for DocumentVerification
@@ -59,8 +59,15 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         
         //Perform the following call as soon as your app’s view controller is initialized. Create the DocumentVerificationViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
         
-        self.documentVerificationViewController = DocumentVerificationViewController.init(configuration: config)
-                
+        do {
+            try ObjcExceptionHelper.catchException {
+                self.documentVerificationViewController = DocumentVerificationViewController.init(configuration: config)
+            }
+        } catch {
+            let err = error as NSError
+            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as! String, cancelButtonTitle: "OK", completion: nil)
+        }
+        
         //Localizing labels
         //All label texts and button titles can be changed and localized using the Localizable-DocumentVerification.strings file. Just adapt the values to your required language and use this file in your app.
         
@@ -75,10 +82,10 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
     @IBAction func startDocumentVerification() -> Void {
         self.createDocumentVerificationController()
         
-        if (self.documentVerificationViewController != nil) {
-            self.present(self.documentVerificationViewController, animated: true, completion: nil)
+        if let documentVC = self.documentVerificationViewController {
+            self.present(documentVC, animated: true, completion: nil)
         } else {
-            self.showAlert(withTitle: "DocumentVerification Mobile SDK", message: "DocumentVerificationViewController is nil")
+            print("DocumentVerificationViewController is nil")
         }
     }
     

@@ -1,5 +1,6 @@
 sample/JumioMobileSDKSample/Build
-sample/JumioMobileSDK
+sample/JumioMobileSDKSample.xcodeproj/xcuserdata/*
+sample/JumioMobileSDKSample.xcodeproj/project.xcworkspace/xcuserdata/*
 */.DS_Store
 .DS_Store
 

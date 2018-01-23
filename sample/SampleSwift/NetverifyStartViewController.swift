@@ -9,7 +9,7 @@ import Netverify
 class NetverifyStartViewController: StartViewController, NetverifyViewControllerDelegate {
     @IBOutlet weak var switchRequireVerification:UISwitch!
     @IBOutlet weak var switchRequireFaceMatch:UISwitch!
-    var netverifyViewController:NetverifyViewController!
+    var netverifyViewController:NetverifyViewController?
     
     func createNetverifyController() -> Void {
         //Setup the Configuration for Netverify
@@ -74,10 +74,17 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         
         //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
         
-        self.netverifyViewController = NetverifyViewController.init(configuration: config)
+        do {
+            try ObjcExceptionHelper.catchException {
+                self.netverifyViewController = NetverifyViewController(configuration: config)
+            }
+        } catch {
+            let err = error as NSError
+            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as! String, cancelButtonTitle: "OK", completion: nil)
+        }
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
-            self.netverifyViewController.modalPresentationStyle = UIModalPresentationStyle.formSheet;  // For iPad, present from sheet
+            self.netverifyViewController?.modalPresentationStyle = UIModalPresentationStyle.formSheet;  // For iPad, present from sheet
         }
         
         //Localizing labels
@@ -153,10 +160,10 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
     @IBAction func startNetverify() -> Void {
         self.createNetverifyController()
         
-        if (self.netverifyViewController != nil) {
-            self.present(self.netverifyViewController, animated: true, completion: nil)
+        if let netverifyVC = self.netverifyViewController {
+            self.present(netverifyVC, animated: true, completion: nil)
         } else {
-            self.showAlert(withTitle: "Netverify Mobile SDK", message: "NetverifyViewController is nil")
+            print("NetverifyViewController is nil")
         }
     }
     

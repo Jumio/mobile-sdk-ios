@@ -7,23 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		541724E41D3E6E21007143A3 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; };
-		541724E51D3E6E21007143A3 /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		541724E81D3E6E21007143A3 /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; };
-		541724E91D3E6E21007143A3 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A7A1FEBDECA00626D55 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; };
+		54042A841FEBDED400626D55 /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; };
+		54042A851FEBDED400626D55 /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A861FEBDED400626D55 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; };
+		54042A871FEBDED400626D55 /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A881FEBDED400626D55 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; };
+		54042A891FEBDED400626D55 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A8A1FEBDED400626D55 /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; };
+		54042A8B1FEBDED400626D55 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A8C1FEBDED400626D55 /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; };
+		54042A8D1FEBDED400626D55 /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A8E1FEBDEF500626D55 /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; };
+		54042A8F1FEBDEF500626D55 /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A901FEBDEF500626D55 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; };
+		54042A911FEBDEF500626D55 /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A921FEBDEF500626D55 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; };
+		54042A931FEBDEF500626D55 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A941FEBDEF500626D55 /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; };
+		54042A951FEBDEF500626D55 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A961FEBDEF500626D55 /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; };
+		54042A971FEBDEF500626D55 /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		547B46CC1F46F1FE0029781C /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EF031924A3E300B7CC49 /* StartViewController.m */; };
 		547B46CD1F46F1FE0029781C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */; };
 		547B46D21F46F1FE0029781C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
-		547B46D41F46F1FE0029781C /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		547B46D51F46F1FE0029781C /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; };
-		547B46D61F46F1FE0029781C /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; };
-		547B46D71F46F1FE0029781C /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548D5D511F17C596001E7828 /* Umoove.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		547B46D81F46F1FE0029781C /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778F6D571ECDD64C00973C7E /* BAMCheckout.framework */; };
-		547B46E01F46F1FE0029781C /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCD51AC06202000A16C2 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		547B46E11F46F1FE0029781C /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		547B46E21F46F1FE0029781C /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC8DCDD1AC06202000A16C2 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		547B46E31F46F1FE0029781C /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 548D5D511F17C596001E7828 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		547B46E41F46F1FE0029781C /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 778F6D571ECDD64C00973C7E /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		547B46EC1F46F70B0029781C /* MainStoryboardObjC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547B46EB1F46F70B0029781C /* MainStoryboardObjC.storyboard */; };
 		547B46EF1F46F71B0029781C /* BAMCheckoutStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B46EE1F46F71B0029781C /* BAMCheckoutStartViewController.m */; };
 		547B46F31F46F73B0029781C /* CustomScanOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B46F11F46F73B0029781C /* CustomScanOverlayViewController.m */; };
@@ -33,8 +40,6 @@
 		547B47041F46F80E0029781C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547B47021F46F80E0029781C /* Images.xcassets */; };
 		547B47061F46FC880029781C /* MainStoryboardSwift.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547B47051F46FC880029781C /* MainStoryboardSwift.storyboard */; };
 		547B47081F46FFFD0029781C /* BAMCheckoutStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B47071F46FFFD0029781C /* BAMCheckoutStartViewController.swift */; };
-		548D5D521F17C596001E7828 /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548D5D511F17C596001E7828 /* Umoove.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		548D5D531F17C596001E7828 /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 548D5D511F17C596001E7828 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54CD99821F4708BC00E9CB14 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99811F4708BC00E9CB14 /* exportOptions.plist */; };
 		54CD99831F4708BC00E9CB14 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99811F4708BC00E9CB14 /* exportOptions.plist */; };
 		54CD99881F4AA49300E9CB14 /* NetverifyStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD99871F4AA49300E9CB14 /* NetverifyStartViewController.swift */; };
@@ -42,10 +47,7 @@
 		54CD998F1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD998E1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift */; };
 		54CD99921F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99911F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib */; };
 		54CD99941F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99931F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib */; };
-		54E0C54D1D4A5D9C001B3B5E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		54E0C54E1D4A5D9C001B3B5E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		778F6D581ECDD64C00973C7E /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778F6D571ECDD64C00973C7E /* BAMCheckout.framework */; };
-		778F6D591ECDD64C00973C7E /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 778F6D571ECDD64C00973C7E /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		77CCE6041FD93EE9000701C6 /* ObjcExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */; };
 		EE01EEF71924A3E200B7CC49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
 		EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */; };
 		EE01EF041924A3E300B7CC49 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EF031924A3E300B7CC49 /* StartViewController.m */; };
@@ -58,11 +60,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				541724E51D3E6E21007143A3 /* JumioCore.framework in Embed Frameworks */,
-				54E0C54E1D4A5D9C001B3B5E /* MicroBlink.framework in Embed Frameworks */,
-				541724E91D3E6E21007143A3 /* Netverify.framework in Embed Frameworks */,
-				548D5D531F17C596001E7828 /* Umoove.framework in Embed Frameworks */,
-				778F6D591ECDD64C00973C7E /* BAMCheckout.framework in Embed Frameworks */,
+				54042A891FEBDED400626D55 /* MicroBlink.framework in Embed Frameworks */,
+				54042A871FEBDED400626D55 /* JumioCore.framework in Embed Frameworks */,
+				54042A851FEBDED400626D55 /* BAMCheckout.framework in Embed Frameworks */,
+				54042A8D1FEBDED400626D55 /* Umoove.framework in Embed Frameworks */,
+				54042A8B1FEBDED400626D55 /* Netverify.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,11 +75,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				547B46E01F46F1FE0029781C /* JumioCore.framework in Embed Frameworks */,
-				547B46E11F46F1FE0029781C /* MicroBlink.framework in Embed Frameworks */,
-				547B46E21F46F1FE0029781C /* Netverify.framework in Embed Frameworks */,
-				547B46E31F46F1FE0029781C /* Umoove.framework in Embed Frameworks */,
-				547B46E41F46F1FE0029781C /* BAMCheckout.framework in Embed Frameworks */,
+				54042A931FEBDEF500626D55 /* MicroBlink.framework in Embed Frameworks */,
+				54042A911FEBDEF500626D55 /* JumioCore.framework in Embed Frameworks */,
+				54042A8F1FEBDEF500626D55 /* BAMCheckout.framework in Embed Frameworks */,
+				54042A971FEBDEF500626D55 /* Umoove.framework in Embed Frameworks */,
+				54042A951FEBDEF500626D55 /* Netverify.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,8 +87,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0FC8DCD51AC06202000A16C2 /* JumioCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioCore.framework; path = "../sdk-device-frameworks/JumioCore.framework"; sourceTree = SOURCE_ROOT; };
-		0FC8DCDD1AC06202000A16C2 /* Netverify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netverify.framework; path = "../sdk-device-frameworks/Netverify.framework"; sourceTree = SOURCE_ROOT; };
+		54042A751FEBDEC900626D55 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../frameworks/MicroBlink.framework; sourceTree = "<group>"; };
+		54042A761FEBDEC900626D55 /* JumioCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioCore.framework; path = ../frameworks/JumioCore.framework; sourceTree = "<group>"; };
+		54042A771FEBDEC900626D55 /* Umoove.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Umoove.framework; path = ../frameworks/Umoove.framework; sourceTree = "<group>"; };
+		54042A781FEBDECA00626D55 /* Netverify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netverify.framework; path = ../frameworks/Netverify.framework; sourceTree = "<group>"; };
+		54042A791FEBDECA00626D55 /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BAMCheckout.framework; path = ../frameworks/BAMCheckout.framework; sourceTree = "<group>"; };
 		547B46E81F46F1FE0029781C /* SampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547B46EB1F46F70B0029781C /* MainStoryboardObjC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboardObjC.storyboard; path = SampleObjC/MainStoryboardObjC.storyboard; sourceTree = SOURCE_ROOT; };
 		547B46ED1F46F71B0029781C /* BAMCheckoutStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAMCheckoutStartViewController.h; path = SampleObjC/BAMCheckoutStartViewController.h; sourceTree = SOURCE_ROOT; };
@@ -102,7 +107,6 @@
 		547B47021F46F80E0029781C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		547B47051F46FC880029781C /* MainStoryboardSwift.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboardSwift.storyboard; path = SampleSwift/MainStoryboardSwift.storyboard; sourceTree = SOURCE_ROOT; };
 		547B47071F46FFFD0029781C /* BAMCheckoutStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BAMCheckoutStartViewController.swift; path = SampleSwift/BAMCheckoutStartViewController.swift; sourceTree = SOURCE_ROOT; };
-		548D5D511F17C596001E7828 /* Umoove.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Umoove.framework; path = "../sdk-device-frameworks/Umoove.framework"; sourceTree = "<group>"; };
 		54CD99811F4708BC00E9CB14 /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = SOURCE_ROOT; };
 		54CD99841F4708CC00E9CB14 /* SampleSwift-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SampleSwift-Info.plist"; path = "SampleSwift/SampleSwift-Info.plist"; sourceTree = SOURCE_ROOT; };
 		54CD99861F4713A300E9CB14 /* Sample-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Sample-BridgingHeader.h"; path = "SampleSwift/Sample-BridgingHeader.h"; sourceTree = SOURCE_ROOT; };
@@ -111,8 +115,8 @@
 		54CD998E1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomScanOverlayViewController.swift; path = SampleSwift/CustomScanOverlayViewController.swift; sourceTree = SOURCE_ROOT; };
 		54CD99911F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomScanOverlayViewController.xib; path = SampleObjC/CustomScanOverlayViewController.xib; sourceTree = SOURCE_ROOT; };
 		54CD99931F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomScanOverlayViewControllerSwift.xib; path = SampleSwift/CustomScanOverlayViewControllerSwift.xib; sourceTree = SOURCE_ROOT; };
-		54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = "../sdk-device-frameworks/MicroBlink.framework"; sourceTree = SOURCE_ROOT; };
-		778F6D571ECDD64C00973C7E /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BAMCheckout.framework; path = "../sdk-device-frameworks/BAMCheckout.framework"; sourceTree = "<group>"; };
+		77CCE6021FD93EE8000701C6 /* ObjcExceptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjcExceptionHelper.h; path = SampleSwift/ObjcExceptionHelper.h; sourceTree = SOURCE_ROOT; };
+		77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjcExceptionHelper.m; path = SampleSwift/ObjcExceptionHelper.m; sourceTree = SOURCE_ROOT; };
 		EE01EEE71924A3E200B7CC49 /* SampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE01EEF61924A3E200B7CC49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		EE01EEF91924A3E300B7CC49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -126,11 +130,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				547B46D41F46F1FE0029781C /* MicroBlink.framework in Frameworks */,
-				547B46D51F46F1FE0029781C /* Netverify.framework in Frameworks */,
-				547B46D61F46F1FE0029781C /* JumioCore.framework in Frameworks */,
-				547B46D71F46F1FE0029781C /* Umoove.framework in Frameworks */,
-				547B46D81F46F1FE0029781C /* BAMCheckout.framework in Frameworks */,
+				54042A921FEBDEF500626D55 /* MicroBlink.framework in Frameworks */,
+				54042A901FEBDEF500626D55 /* JumioCore.framework in Frameworks */,
+				54042A8E1FEBDEF500626D55 /* BAMCheckout.framework in Frameworks */,
+				54042A961FEBDEF500626D55 /* Umoove.framework in Frameworks */,
+				54042A941FEBDEF500626D55 /* Netverify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,11 +142,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54E0C54D1D4A5D9C001B3B5E /* MicroBlink.framework in Frameworks */,
-				541724E81D3E6E21007143A3 /* Netverify.framework in Frameworks */,
-				541724E41D3E6E21007143A3 /* JumioCore.framework in Frameworks */,
-				548D5D521F17C596001E7828 /* Umoove.framework in Frameworks */,
-				778F6D581ECDD64C00973C7E /* BAMCheckout.framework in Frameworks */,
+				54042A881FEBDED400626D55 /* MicroBlink.framework in Frameworks */,
+				54042A8C1FEBDED400626D55 /* Umoove.framework in Frameworks */,
+				54042A861FEBDED400626D55 /* JumioCore.framework in Frameworks */,
+				54042A7A1FEBDECA00626D55 /* MicroBlink.framework in Frameworks */,
+				54042A841FEBDED400626D55 /* BAMCheckout.framework in Frameworks */,
+				54042A8A1FEBDED400626D55 /* Netverify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +230,7 @@
 		54CD99951F4B017600E9CB14 /* BAMCheckout */ = {
 			isa = PBXGroup;
 			children = (
+				77CCE5FE1FD938FC000701C6 /* Helpers */,
 				547B47071F46FFFD0029781C /* BAMCheckoutStartViewController.swift */,
 				54CD99981F4B019F00E9CB14 /* CustomOverlayViewController */,
 			);
@@ -254,6 +260,15 @@
 				54CD99931F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib */,
 			);
 			name = CustomOverlayViewController;
+			sourceTree = "<group>";
+		};
+		77CCE5FE1FD938FC000701C6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				77CCE6021FD93EE8000701C6 /* ObjcExceptionHelper.h */,
+				77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		EE01EEDE1924A3E200B7CC49 = {
@@ -311,11 +326,11 @@
 		EE8E78101926419400896C42 /* JumioMobileSDK */ = {
 			isa = PBXGroup;
 			children = (
-				0FC8DCD51AC06202000A16C2 /* JumioCore.framework */,
-				778F6D571ECDD64C00973C7E /* BAMCheckout.framework */,
-				0FC8DCDD1AC06202000A16C2 /* Netverify.framework */,
-				54E0C54B1D4A5D95001B3B5E /* MicroBlink.framework */,
-				548D5D511F17C596001E7828 /* Umoove.framework */,
+				54042A791FEBDECA00626D55 /* BAMCheckout.framework */,
+				54042A761FEBDEC900626D55 /* JumioCore.framework */,
+				54042A751FEBDEC900626D55 /* MicroBlink.framework */,
+				54042A781FEBDECA00626D55 /* Netverify.framework */,
+				54042A771FEBDEC900626D55 /* Umoove.framework */,
 			);
 			name = JumioMobileSDK;
 			sourceTree = "<group>";
@@ -331,6 +346,7 @@
 				547B46D31F46F1FE0029781C /* Frameworks */,
 				547B46D91F46F1FE0029781C /* Resources */,
 				547B46DF1F46F1FE0029781C /* Embed Frameworks */,
+				548F80C52003DAD20052FF27 /* Remove simulator architecture from Jumio frameworks */,
 			);
 			buildRules = (
 			);
@@ -349,6 +365,7 @@
 				EE01EEE41924A3E200B7CC49 /* Frameworks */,
 				EE01EEE51924A3E200B7CC49 /* Resources */,
 				541724EA1D3E6E22007143A3 /* Embed Frameworks */,
+				5403C6E61FFF73A6000818EB /* Remove simulator architecture from Jumio frameworks */,
 			);
 			buildRules = (
 			);
@@ -422,6 +439,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5403C6E61FFF73A6000818EB /* Remove simulator architecture from Jumio frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Remove simulator architecture from Jumio frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$CONFIGURATION\" == \"Release\" ]]; then\n  $PROJECT_DIR/remove-simulator-architecture.sh\nfi";
+		};
+		548F80C52003DAD20052FF27 /* Remove simulator architecture from Jumio frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Remove simulator architecture from Jumio frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$CONFIGURATION\" == \"Release\" ]]; then\n  $PROJECT_DIR/remove-simulator-architecture.sh\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		547B46CB1F46F1FE0029781C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -432,6 +480,7 @@
 				54CD998A1F4AB08500E9CB14 /* DocumentVerificationStartViewController.swift in Sources */,
 				547B46CD1F46F1FE0029781C /* AppDelegate.m in Sources */,
 				547B46D21F46F1FE0029781C /* main.m in Sources */,
+				77CCE6041FD93EE9000701C6 /* ObjcExceptionHelper.m in Sources */,
 				54CD99881F4AA49300E9CB14 /* NetverifyStartViewController.swift in Sources */,
 				547B47081F46FFFD0029781C /* BAMCheckoutStartViewController.swift in Sources */,
 			);
@@ -465,12 +514,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build";
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = JC7JKY534B;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../sdk-device-frameworks",
+					"$(PROJECT_DIR)/../frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
@@ -503,11 +553,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build";
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = JC7JKY534B;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../sdk-device-frameworks",
+					"$(PROJECT_DIR)/../frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
@@ -642,12 +693,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build";
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = JC7JKY534B;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../sdk-device-frameworks",
+					"$(PROJECT_DIR)/../frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleObjC/JumioMobileSDKSample-Prefix.pch";
@@ -676,11 +728,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build";
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = JC7JKY534B;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../sdk-device-frameworks",
+					"$(PROJECT_DIR)/../frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleObjC/JumioMobileSDKSample-Prefix.pch";

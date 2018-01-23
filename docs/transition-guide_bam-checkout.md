@@ -2,6 +2,17 @@
 
 # Transition guide for BAM Checkout
 
+## 2.10.0
+
+#### Changed handling of frameworks to use a single artifact instead of two
+The framework binaries are available with support for device and simulator architecture. Make sure to remove the simulator architecture from our frameworks for app submissions to the AppStore, as it would cause a rejection by Apple. Read more detailed information on this in our [Manual integration](/README.md#manual) section.
+
+#### Moved podspec file to Github
+The Jumio specific source in your Podfile is no longer needed. From now on, `JumioMobileSDK` is the only pod available. `JumioMobileSDK-FAT` is not offered anymore.
+
+#### Exception handling in Swift
+For initialization of BAMCheckoutViewController in Swift, you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the `BAMCheckoutViewController` instance will be nil and the SDK is not usable. See our [sample implementation](/sample/SampleSwift/BAMCheckoutStartViewController.swift) on how this is applied.
+
 ## 2.9.2
 No backward incompatible changes.
 

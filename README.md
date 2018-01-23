@@ -9,10 +9,21 @@
 
 # Release notes
 
-Applies to all products. SDK version: 2.9.2
+Applies to all products. SDK version: 2.10.0
+
+__This version contains a security fix. We advice to update to this version immediately, latest until May 1, 2018.__
+
+#### Changes
+* Added an additional network security layer
+* Changed handling of frameworks to use a single artifact instead of two
+* Moved podspec file to public Specs repository on Github
 
 #### Fixes
-* Fixed a critical capturing problem on iPhone X
+* Fixed a minor security issue
+* Various UI fixes for iPhone X
+* Miscellaneous bugfixes
+* Stability improvements
+
 
 # Basic Setup
 
@@ -26,39 +37,43 @@ The following architectures are supported in the SDK:
 - x86_64 for iOS simulator
 
 ## App thinning and size matters
-The iOS 9 feature app thinning (app slicing, bitcode and on-demand resources) is supported within the SDK. For app slicing, the image resources are moved to an xcassets collection. For Fastfill & Netverify, some resource files (e.g. images) are being loaded on demand.
+The iOS 9 feature app thinning (app slicing, bitcode and on-demand resources) is supported within the SDK. For app slicing, the image resources are placed within a xcassets collection. For Fastfill & Netverify, some resource files (e.g. images) are  loaded on demand.
+
+In case you experience a build error when building your app in Debug configuration and aim to run it on a device, we advise to temporarily disable the build setting "Enable Bitcode" in your Xcode project.
 
 ## Permissions
-The app’s Info.plist must contain an `NSCameraUsageDescription` key with a string value explaining to the user how the app uses this data. Its value can look like this: *“This will allow <your-app-name> to take photos of your credentials."*
+The app’s Info.plist must contain the `NSCameraUsageDescription` key with a string value explaining to the user how the app uses this data. Example: *“This will allow <your-app-name> to take photos of your credentials."*
 
 ## Integration
-Check the Xcode sample project to learn the most common use. Make sure to use the device only frameworks for app submissions to the AppStore.
+Check the Xcode sample project to learn the most common use. Make sure to use the device only frameworks for app submissions to the AppStore. Read more detailed information on this here: [Manual integration](/README.md#manual)
 
-### Cocoapods
+### via Cocoapods
 Jumio supports cocoapods as dependency management tool for easy integration of the SDK.
 
-Add our private repository as source to your Podfile and state the use_frameworks! command:
-```
-source 'http://mobile-sdk.jumio.com/distribution.git'
-use_frameworks!
-```
 
-Update your local clone of the specs repo to ensure you are using the latest podspec files:
+Update your local clone of the specs repo in Terminal to ensure that you are using the latest podspec files:
 ```
 pod repo update
 ```
 
-Choose the pod according to the product you use and suiting your configuration.
+Adapt your Podfile and add the pod according to the product(s) you use. Check the following example how a Podfile could look like:
 ```
-pod 'JumioMobileSDK' # If you use BAM Checkout along Netverify in your app. Frameworks supporting device architectures only.
+source 'https://github.com/CocoaPods/Specs.git'
 
-pod 'JumioMobileSDK/BAMCheckout' # Specify BAMCheckout as subspec to only use the BAM Checkout part of the Jumio Mobile SDK
-pod 'JumioMobileSDK/Netverify' # Specify Netverify as subspec to only use the Netverify part of the Jumio Mobile SDK
+use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK-FAT' # For development purposes, use the frameworks with device and simulator support (also supports subspecs)
+pod 'JumioMobileSDK', '~>2.10' # If you use BAM Checkout along Netverify in your app. Frameworks supporting device architectures only.
+
+pod 'JumioMobileSDK/Netverify', '~>2.10' # Specify Netverify as subspec to only use Netverify, Fastfill or Document Verification
+pod 'JumioMobileSDK/BAMCheckout', '~>2.10' # Specify BAMCheckout as subspec to only use BAM Checkout
 ```
 
-### Manual
+Install the pod to your project via Terminal:
+```
+pod install
+```
+
+### Manually
 The Jumio Mobile SDK consists of several dynamic frameworks. Add specific frameworks to your Xcode project, depending on which product you use.
 
 The following table shows which frameworks have to be added:
@@ -71,7 +86,16 @@ The following table shows which frameworks have to be added:
 | BAM Checkout credit card + ID scanning | x | x | x | x | x |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
-Two packages are available with frameworks for device only and frameworks with device and simulator support. Make sure to use the device only frameworks for app submissions to the AppStore, as using the other package will cause a rejection by Apple.
+
+The framework binaries are available with support for device and simulator architecture. Make sure to remove the simulator architecture from our frameworks for app submissions to the AppStore. If this step is not performed, your submission will be rejection by Apple. Add the following code snippet as run script build phase to your app project and ensure that it is executed after the frameworks are embedded. Please see the required setup in our sample project.
+
+__Note:__ The simulator architecture is automatically removed if using cocoapods via "[CP] Embed Pods Frameworks" build phase.
+```shell
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  $PROJECT_DIR/remove-simulator-architecture.sh
+fi
+```
+Code snippet source: https://stackoverflow.com/questions/30547283/submit-to-app-store-issues-unsupported-architecture-x86
 
 Add the following linker flags to your Xcode Build Settings:<br/>
 __Note:__ Added automatically if using CocoaPods.
@@ -85,10 +109,10 @@ Make sure that the following Xcode build settings in your app are set accordingl
 | Link Frameworks Automatically | YES |
 
 ## Localization
-All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language and add it to your app project. This way, when upgrading our SDK to a newer version, your localization file won't be overwritten. Make sure, that the content of your localization file is up to date after an SDK update.
+All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language, add it to your app project and mark it as Localizable. This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
 Note: If using CocoaPods, the original file is located under `/Pods/JumioMobileSDK`.
 
-With accessibility support, visually impaired users can now enable __VoiceOver__ or change the __font size__ on their device. VoiceOver uses existing localization values, just some new strings were added to the localization file.
+Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__ or increased __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customised.
 
 # Get started
 - [Integration Netverify & Fastfill](docs/integration_netverify-fastfill.md)
@@ -98,7 +122,7 @@ With accessibility support, visually impaired users can now enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.9.1 of the Jumio Mobile SDK is supported until 2018-03-01.
+The previous release version 2.9.2 of the Jumio Mobile SDK is supported until 2018-05-01.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 

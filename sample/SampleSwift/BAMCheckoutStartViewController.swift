@@ -8,7 +8,7 @@ import BAMCheckout
 
 class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewControllerDelegate {
     @IBOutlet weak var switchCvvRequired:UISwitch!
-    var bamCheckoutViewController:BAMCheckoutViewController!
+    var bamCheckoutViewController:BAMCheckoutViewController?
     
     func createBAMCheckoutController() -> Void {
         
@@ -80,10 +80,17 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         
         //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
         
-        self.bamCheckoutViewController = BAMCheckoutViewController.init(configuration: config)
+        do {
+            try ObjcExceptionHelper.catchException {
+                self.bamCheckoutViewController = BAMCheckoutViewController.init(configuration: config)
+            }
+        } catch {
+            let err = error as NSError
+            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as! String, cancelButtonTitle: "OK", completion: nil)
+        }
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
-            self.bamCheckoutViewController.modalPresentationStyle = UIModalPresentationStyle.formSheet;  // For iPad, present from sheet
+            self.bamCheckoutViewController?.modalPresentationStyle = UIModalPresentationStyle.formSheet;  // For iPad, present from sheet
         }
         
         //Localizing labels
@@ -162,10 +169,10 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //Create the BAMCheckoutViewController with custom overlay
         //self.createBAMCheckoutControllerCustom()
         
-        if (self.bamCheckoutViewController != nil) {
-            self.present(self.bamCheckoutViewController, animated: true, completion: nil)
+        if let bamCheckoutVC = self.bamCheckoutViewController {
+            self.present(bamCheckoutVC, animated: true, completion: nil)
         } else {
-            self.showAlert(withTitle: "BAMCheckout Mobile SDK", message: "BAMCheckoutViewController is nil")
+            print("BAMCheckoutViewController is nil")
         }
     }
     

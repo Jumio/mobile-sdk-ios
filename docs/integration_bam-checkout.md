@@ -15,20 +15,17 @@ BAM Checkout is a powerful, cutting-edge solution to extract data from your cust
 ## Release notes
 For technical changes, please read our [transition guide](transition-guide_bam-checkout.md).
 
-#### Fixes
-* Fixed a critical capturing problem on iPhone X
-
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for BAM Checkout.
 
 ## Initialization
-Log into your Jumio merchant backend, and you can find your merchant API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the `BAMCheckoutConfiguration` object, an exception will be thrown. Whenever a exception is thrown, the `BAMCheckoutViewController` instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `BAMCheckoutConfiguration` instance is passed to the initializer.
+Log into your Jumio Customer Portal and you can find your API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the `BAMCheckoutConfiguration` object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the `BAMCheckoutViewController` instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `BAMCheckoutConfiguration` instance is passed to the initializer.
 
 ```
 BAMCheckoutConfiguration *config = [BAMCheckoutConfiguration new];
 config.merchantApiToken = @"YOURAPITOKEN";
 config.merchantApiSecret = @"YOURAPISECRET";
-config.dataCenter = JumioDataCenterEU; // Change this parameter if your merchant account is in the EU data center. Default is US.
+config.dataCenter = JumioDataCenterEU; // Change this parameter if your account is in the EU data center. Default is US.
 config.delegate = self;
 
 BAMCheckoutViewController *bamCheckoutViewController;
@@ -72,14 +69,15 @@ config.cardHolderNameEditable = YES;
 
 ### Transaction identifiers
 Specify your reporting criteria to identify each scan attempt in your reports (max. 100 characters).
-Note: This is not used for offline scanning.
+
+__Note:__  This is not used for offline scanning.
 ```
 config.merchantReportingCriteria = @"YOURREPORTINGCRITERIA";
 
 ```
 
 ### Offline scanning
-In your Jumio merchant backend on the "Settings" page under "API credentials" you can find your Offline token.
+In your Jumio Customer Portal on the "Settings" page under "API credentials" you can find your Offline token.
 ```
 config.offlineToken = @"YOUROFFLINETOKEN";
 ```
@@ -93,7 +91,7 @@ config.vibrationEffectEnabled = YES;
 config.soundEffect = @"YOURSOUNDFILE.aif";
 ```
 
-Use cameraPosition to configure the default camera (front or back).
+Use `cameraPosition` to configure the default camera (front or back).
 ```
 config.cameraPosition = JumioCameraPositionFront;
 ```
@@ -148,7 +146,7 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 * Scan overlay: border color, text color
 
 ## Delegation
-Implement the delegate methods of the `BAMCheckoutViewControllerDelegate` protocol to be notified of scan attempts, successful scans and error situations. Dismiss the SDK view in your app in case or success or error.
+Implement the delegate methods of the `BAMCheckoutViewControllerDelegate` protocol to be notified of scan attempts, successful scans and error situations. Dismiss the `BAMCheckoutViewController` instance in your app in case of success or error.
 
 #### Scan attempt
 You receive a Jumio scan reference for each attempt, if the Internet connection is available. For offline scans the parameter scanReference will be nil.
@@ -168,11 +166,14 @@ Upon success, the parameter `cardInformation` will be returned. Call clear after
 ```
 
 #### Error
-This method is fired when the user presses the cancel button upon an error situation. The parameter _error_ contains an error code and a message, also the corresponding scan reference is available.
-Note: The error codes 200, 210, 220, 240, 250, 260 and 310 will be returned. Using the custom scan view, the error codes 260 and 310 will be returned.
+This method is fired when the user presses the cancel button during the workflow or in an error situation. The parameter `error` contains an error code, a message and a detailed error code, also the corresponding scan reference is available.
+
+__Note:__  The error codes 200, 210, 220, 240, 250, 260 and 310 will be returned. Using the custom scan view, the error codes 260 and 310 will be returned.
 ```
 - (void) bamCheckoutViewController: (BAMCheckoutViewController *) controller didCancelWithError: (NSError*) error scanReference:(NSString *)scanReference {
-	// YOURCODE
+	NSInteger errorCode = error.code;
+	NSString* errorMessage = error.localizedDescription;
+	NSInteger detailedErrorCode = [error.userInfo[@"detailedErrorCode"] integerValue];
 }
 ```
 
