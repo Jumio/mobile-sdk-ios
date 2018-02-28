@@ -2,6 +2,10 @@
 
 # Transition guide for Fastfill & Netverify
 
+## 2.10.1
+#### Changes in Localizable-Netverify.strings
+Added one value in regards to legal masking.
+
 ## 2.10.0
 
 #### Changed handling of frameworks to use a single artifact instead of two

@@ -14,7 +14,7 @@ Document Verification is a powerful solution to enable scanning various types (U
 - [Callback](#callback)
 
 ## Release notes
-For technical changes, please read our [transition guide](transition-guide_document_verification.md).
+For technical changes, please read our [transition guide](transition-guide_document_verification.md) SDK version: 2.10.1.
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Document Verification.

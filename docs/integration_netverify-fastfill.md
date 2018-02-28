@@ -14,17 +14,10 @@ Netverify SDK offers scanning and authentication of government issued IDs.
 - [Callback](#callback)
 
 ## Release notes
-For technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md).
-SDK version: 2.10.0
+For technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md)  SDK version: 2.10.1.
 
-#### Features
-* Extract name suffix from US/CAN Driving Licenses
-* Improved face capturing
-* Improved image quality check to reduce blurred images
-
-#### Fixes
-* Fixed data extraction for a few US/CAN Driving Licenses
-
+#### Changes
+* Adapted handling for legal masking in Netherlands
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Netverify.

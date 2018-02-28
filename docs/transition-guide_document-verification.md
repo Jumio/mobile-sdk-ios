@@ -2,6 +2,9 @@
 
 # Transition guide for Document Verification
 
+## 2.10.1
+No backward incompatible changes.
+
 ## 2.10.0
 
 #### Changed handling of frameworks to use a single artifact instead of two

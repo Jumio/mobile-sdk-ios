@@ -9,21 +9,12 @@
 
 # Release notes
 
-Applies to all products. SDK version: 2.10.0
-
-__This version contains a security fix. We advice to update to this version immediately, latest until May 1, 2018.__
+Applies to Netverify. Fastfill, Document Verification an BAM Checkout is unchanged. SDK version: 2.10.1
 
 #### Changes
-* Added an additional network security layer
-* Changed handling of frameworks to use a single artifact instead of two
-* Moved podspec file to public Specs repository on Github
+* Adapted handling for legal masking in Netherlands
 
-#### Fixes
-* Fixed a minor security issue
-* Various UI fixes for iPhone X
-* Miscellaneous bugfixes
-* Stability improvements
-
+__Version 2.10.0 and above contain a security fix. We advice to update immediately, latest until May 1, 2018.__
 
 # Basic Setup
 
@@ -122,7 +113,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.9.2 of the Jumio Mobile SDK is supported until 2018-05-01.
+The previous release version 2.10.0 of the Jumio Mobile SDK is supported until 2018-06-01.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 

@@ -42,6 +42,7 @@
 "netverify.scan-view.face.label.move-farther" = "Move back";
 "netverify.scan-view.face.label.description" = "Put your face in the frame to proceed.";
 "netverify.scan-help-view.headline.scan-passport" = "Scan Passport";
+"netverify.scan-help-view.headline.capture-passport" = "Capture Passport";
 "netverify.scan-help-view.headline.scan-visa" = "Scan Visa";
 "netverify.scan-help-view.headline.scan-identity-card-front" = "Scan Identity Card Front";
 "netverify.scan-help-view.headline.scan-identity-card-back" = "Scan Identity Card Back";
