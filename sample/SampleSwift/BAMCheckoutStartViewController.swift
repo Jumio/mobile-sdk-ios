@@ -1,7 +1,7 @@
 //
 //  BAMCheckoutStartViewController.swift
 //
-//  Copyright © 2017 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation All rights reserved.
 //
 
 import BAMCheckout

@@ -1,7 +1,7 @@
 //
 //  DocumentVerificationStartViewController.m
 //
-//  Copyright © 2017 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation All rights reserved.
 //
 
 #import "DocumentVerificationStartViewController.h"
@@ -109,10 +109,10 @@
 /**
  * Implement the following delegate method for successful scans and user cancellation notifications. Dismiss the SDK view in your app once you received the result.
  * @param documentVerificationViewController The DocumentVerificationViewController instance
- * @param error The returned Errors
+ * @param error The error describing the cause of the problematic situation
  **/
-- (void) documentVerificationViewController:(DocumentVerificationViewController*)documentVerificationViewController didFinishWithError:(NSError*)error {
-    NSLog(@"DocumentVerificationViewController cancelled with error: %@", error.localizedDescription);
+- (void) documentVerificationViewController:(DocumentVerificationViewController*)documentVerificationViewController didFinishWithError:(DocumentVerificationError*)error {
+    NSLog(@"DocumentVerificationViewController cancelled with error: %@", error.message);
     //Dismiss the SDK
     [self dismissViewControllerAnimated: YES completion: nil];
 }

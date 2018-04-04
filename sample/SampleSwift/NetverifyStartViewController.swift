@@ -1,7 +1,7 @@
 //
 //  NetverifyStartViewController.swift
 //
-//  Copyright © 2017 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation All rights reserved.
 //
 
 import Netverify
@@ -10,16 +10,50 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
     @IBOutlet weak var switchRequireVerification:UISwitch!
     @IBOutlet weak var switchRequireFaceMatch:UISwitch!
     var netverifyViewController:NetverifyViewController?
+    var customUIController:NetverifyUIController?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     func createNetverifyController() -> Void {
         //Setup the Configuration for Netverify
+        let config:NetverifyConfiguration = createNetverifyConfiguration()
+        //Set the delegate that implements NetverifyViewControllerDelegate
+        config.delegate = self
+        
+        //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
+        
+        do {
+            try ObjcExceptionHelper.catchException {
+                self.netverifyViewController = NetverifyViewController(configuration: config)
+            }
+        } catch {
+            let err = error as NSError
+            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as! String, cancelButtonTitle: "OK", completion: nil)
+        }
+        
+        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
+            self.netverifyViewController?.modalPresentationStyle = UIModalPresentationStyle.formSheet;  // For iPad, present from sheet
+        }
+    }
+    
+    func createNetverifyConfiguration() -> NetverifyConfiguration {
         let config:NetverifyConfiguration = NetverifyConfiguration()
         //Provide your API token
         config.merchantApiToken = "YOUR_NETVERIFY_APITOKEN"
         //Provide your API secret
         config.merchantApiSecret = "YOUR_NETVERIFY_APISECRET"
-        //Set the delegate that implements NetverifyViewControllerDelegate
-        config.delegate = self;
         
         //Set the dataCenter; default is JumioDataCenterUS
         //config.dataCenter = JumioDataCenterEU
@@ -72,21 +106,6 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //Only set this property to YES if you are asked by our Jumio support personal.
         //config.sendDebugInfoToJumio = true
         
-        //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
-        
-        do {
-            try ObjcExceptionHelper.catchException {
-                self.netverifyViewController = NetverifyViewController(configuration: config)
-            }
-        } catch {
-            let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as! String, cancelButtonTitle: "OK", completion: nil)
-        }
-        
-        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
-            self.netverifyViewController?.modalPresentationStyle = UIModalPresentationStyle.formSheet;  // For iPad, present from sheet
-        }
-        
         //Localizing labels
         //All label texts and button titles can be changed and localized using the Localizable-Netverify.strings file. Just adapt the values to your required language and use this file in your app.
         
@@ -106,7 +125,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //NetverifyBaseView.netverifyAppearance().disableBlur = true
         
         // - Custom general appearance - background color
-        //NetverifyBaseView.netverifyAppearance().backgroundColor = UIColor.gray
+        //NetverifyBaseView.netverifyAppearance().backgroundColor = UIColor.lightGray
         
         // - Custom general appearance - foreground color (text-elements and icons)
         //NetverifyBaseView.netverifyAppearance().foregroundColor = UIColor.red
@@ -155,6 +174,8 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         
         //You can get the current SDK version using the method below.
         //print("%@", self.netverifyViewController.sdkVersion())
+        
+        return config
     }
     
     @IBAction func startNetverify() -> Void {
@@ -167,19 +188,46 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         }
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let customUIViewController = segue.destination as? NetverifyCustomUIViewController else { return }
+        let customUIViewControllerDelegate = customUIViewController as NetverifyUIControllerDelegate
+        
+        let config  = self.createNetverifyConfiguration()
+        customUIViewController.requiresVerification = config.requireVerification
+        
+        //Set the delegate that implements NetverifyViewControllerDelegate
+        config.customUIDelegate = customUIViewControllerDelegate
+        
+        //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
+        do {
+            try ObjcExceptionHelper.catchException {
+                self.customUIController = NetverifyUIController(configuration: config)
+                
+                NetverifyScanOverlayView.netverifyAppearance().colorOverlayStandard = UIColor(red: 44.0/255.0, green: 152.0/255.0, blue: 240.0/255.0, alpha: 1.0)
+            }
+        } catch {
+            let err = error as NSError
+            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as! String, cancelButtonTitle: "OK", completion: nil)
+        }
+    }
+    
+    
     /**
      * Implement the following delegate method for SDK initialization.
-     * @param netverifyViewController The NetverifyViewController
+     * @param netverifyViewController The NetverifyViewController instance
+     * @param error The error describing the cause of the problematic situation, only set if initializing failed
      **/
-    func netverifyViewController(_ netverifyViewController: NetverifyViewController, didFinishInitializingWithError error: Error?) {
+    func netverifyViewController(_ netverifyViewController: NetverifyViewController, didFinishInitializingWithError error: NetverifyError?) {
         print("NetverifyViewController did finish initializing")
     }
     
     /**
      * Implement the following delegate method for successful scans.
      * Dismiss the SDK view in your app once you received the result.
+     * @param netverifyViewController The NetverifyViewController instance
      * @param documentData The NetverifyDocumentData of the scanned document
-     * @param scanReference The scanReference of the scan attempt
+     * @param scanReference The scanReference of the scan
      **/
     func netverifyViewController(_ netverifyViewController: NetverifyViewController, didFinishWith documentData: NetverifyDocumentData, scanReference: String) {
         print("NetverifyViewController finished successfully with scan reference: %@", scanReference);
@@ -222,19 +270,22 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         let gender:NetverifyGender = documentData.gender
         var genderStr:String;
         switch (gender) {
-        case NetverifyGenderUnknown:
-            genderStr = "Unknown"
-            break;
-        case NetverifyGenderF:
-            genderStr = "female"
-            break;
-        case NetverifyGenderM:
-            genderStr = "male"
-            break;
-        default:
-            genderStr = ""
-            break;
+            case NetverifyGenderUnknown:
+                genderStr = "Unknown"
+            
+            case NetverifyGenderF:
+                genderStr = "female"
+            
+            case NetverifyGenderM:
+                genderStr = "male"
+            
+            case NetverifyGenderX:
+                genderStr = "Unspecified"
+            
+            default:
+                genderStr = "Unknown"
         }
+       
         let originatingCountry:String? = documentData.originatingCountry
         
         //address
@@ -286,8 +337,14 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
             })
     }
     
-    func netverifyViewController(_ netverifyViewController: NetverifyViewController, didCancelWithError error: Error?, scanReference: String?) {
-        print("NetverifyViewController cancelled with error: \(error?.localizedDescription as String!), scanReference: \(String(describing: (scanReference != nil) ? scanReference as String! : "")))")
+    /**
+     * Implement the following delegate method for successful scans and user cancellation notifications. Dismiss the SDK view in your app once you received the result.
+     * @param netverifyViewController The NetverifyViewController
+     * @param error The error describing the cause of the problematic situation
+     * @param scanReference The scanReference of the scan attempt
+     **/
+    func netverifyViewController(_ netverifyViewController: NetverifyViewController, didCancelWithError error: NetverifyError?, scanReference: String?) {
+        print("NetverifyViewController cancelled with error: \(error?.message as String!), scanReference: \(String(describing: (scanReference != nil) ? scanReference as String! : "")))")
         
         //Dismiss the SDK
         self.dismiss(animated: true, completion: nil)

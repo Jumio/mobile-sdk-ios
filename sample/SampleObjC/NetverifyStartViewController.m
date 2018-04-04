@@ -1,7 +1,7 @@
 //
 //  NetverifyStartViewController.m
 //
-//  Copyright © 2017 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation All rights reserved.
 //
 
 #import "NetverifyStartViewController.h"
@@ -170,17 +170,18 @@
 
 /**
  * Implement the following delegate method for SDK initialization.
- * @param netverifyViewController The NetverifyViewController
+ * @param netverifyViewController The NetverifyViewController instance
  **/
-- (void) netverifyViewControllerDidFinishInitializing: (NetverifyViewController*) netverifyViewController {
-    NSLog(@"NetverifyViewController did finish initializing");
+- (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didFinishInitializingWithError:(NetverifyError * _Nullable)error {
+    NSLog(@"NetverifyViewController did finish initializing, error: %@", error.message);
 }
 
 /**
  * Implement the following delegate method for successful scans.
  * Dismiss the SDK view in your app once you received the result.
+ * @param netverifyViewController The NetverifyViewController instance
  * @param documentData The NetverifyDocumentData of the scanned document
- * @param scanReference The scanReference of the scan attempt
+ * @param scanReference The scanReference of the scan
  **/
 - (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didFinishWithDocumentData:(NetverifyDocumentData *)documentData scanReference:(NSString *)scanReference {
     NSLog(@"NetverifyViewController finished successfully with scan reference: %@", scanReference);
@@ -222,17 +223,19 @@
     NetverifyGender gender = documentData.gender;
     NSString *genderStr;
     switch (gender) {
-        case NetverifyGenderUnknown:
-            genderStr = @"Unknown";
-            break;
-        case NetverifyGenderF:
-            genderStr = @"female";
-            break;
-        case NetverifyGenderM:
-            genderStr = @"male";
-            break;
         default:
-            break;
+        case NetverifyGenderUnknown: {
+            genderStr = @"Unknown";
+        } break;
+        case NetverifyGenderF: {
+            genderStr = @"female";
+        } break;
+        case NetverifyGenderM: {
+            genderStr = @"male";
+        } break;
+        case NetverifyGenderX: {
+            genderStr = @"Unspecified";
+        } break;
     }
     NSString *originatingCountry = documentData.originatingCountry;
     
@@ -286,12 +289,12 @@
 
 /**
  * Implement the following delegate method for successful scans and user cancellation notifications. Dismiss the SDK view in your app once you received the result.
- * @param netverifyViewController The NetverifyViewController
- * @param error The returned Errors
+ * @param netverifyViewController The NetverifyViewController instance
+ * @param error The error describing the cause of the problematic situation
  * @param scanReference The scanReference of the scan attempt
  **/
-- (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didCancelWithError:(NSError *)error scanReference:(NSString *)scanReference {
-    NSLog(@"NetverifyViewController cancelled with error: %@, scanReference: %@", error.localizedDescription, scanReference);
+- (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didCancelWithError:(NetverifyError * _Nullable)error scanReference:(NSString * _Nullable)scanReference {
+    NSLog(@"NetverifyViewController cancelled with error: %@, scanReference: %@", error.message, scanReference);
     //Dismiss the SDK
     [self dismissViewControllerAnimated: YES completion: nil];
 }

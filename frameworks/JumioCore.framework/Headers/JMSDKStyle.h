@@ -1,7 +1,7 @@
 //
 //  NSWAppStyle.h
 //
-//  Copyright © 2016 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation. All rights reserved.
 //
 
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]

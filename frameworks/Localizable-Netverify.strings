@@ -1,6 +1,6 @@
 /*
   Localizable-Netverify.strings
-  Copyright © 2017 Jumio Corporation All rights reserved.
+  Copyright © 2018 Jumio Corporation. All rights reserved.
 */
 
 
@@ -31,6 +31,9 @@
 "netverify.scan-view.compliance-alertview.confirmation" = "OK";
 "netverify.scan-view.compliance-alertview.message.NLD" = "Please redact your BSN before capturing";
 "netverify.scan-view.compliance-alertview.message.KOR" = "Redact the second block of your Resident Registration Number before capturing";
+"netverify.scan-view.compliance-alertview.message.DEU.passport" = "Please redact the passport number before capturing";
+"netverify.scan-view.compliance-alertview.message.DEU.identity-card.plastic" = "Please redact the ID and access number before capturing";
+"netverify.scan-view.compliance-alertview.message.DEU.identity-card.paper" = "Please redact the ID number before capturing";
 "netverify.scan-view.accessibility-label.button.switch-to-front-camera" = "Switch to front camera";
 "netverify.scan-view.accessibility-label.button.switch-to-back-camera" = "Switch to back camera";
 "netverify.scan-view.accessibility-label.flash-button.activate" = "Activate flash";

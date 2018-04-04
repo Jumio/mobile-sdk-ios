@@ -1,7 +1,7 @@
 //
 //  JMCaptureSessionManager.h
 //
-//  Copyright © 2016 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation. All rights reserved.
 //
 
 #import <CoreMedia/CoreMedia.h>
@@ -130,7 +130,7 @@ __attribute__((visibility("default"))) @interface JMCaptureSessionManager : NSOb
 - (UIImage*) imageFromCurrentRawBGRABufferWithoutPadding;
 - (UIImage*) imageFromCurrentCroppedRGBBuffer;
 + (UIImage*) imageFromRGBBuffer: (uint8_t*) buffer size: (CGSize) size;
-- (UIImage*) imageFromRawBGRABuffer:(uint8_t*) buffer size: (CGSize) size;
+- (UIImage*) imageFromRawBGRABuffer:(uint8_t*) buffer size: (CGSize) size copy: (BOOL) copy;
 - (NSData*) dataFromRawBGRABuffer: (uint8_t*) buffer bufferSize: (CGSize) size inRect:(CGRect)rect;
 - (NSData*) dataFromRawBGRABufferInRect:(CGRect)rect;
 - (BOOL) convertRawBGRABuffer:(uint8_t *)srcBuffer bufferSize:(CGSize)size inRect:(CGRect)rect toMutableDataObject: (NSMutableData*) dstData;
@@ -160,5 +160,7 @@ __attribute__((visibility("default"))) @interface JMCaptureSessionManager : NSOb
 + (float)focusConfidenceFromData:(char *)data length:(int)length width:(int)width height:(int)height stride:(int)stride channels:(int)channels;
 
 - (BOOL) detectFaceOnSampleBuffer: (CMSampleBufferRef) sampleBuffer inRect: (CGRect) rect;
+
+- (void) cleanUp;
 
 @end

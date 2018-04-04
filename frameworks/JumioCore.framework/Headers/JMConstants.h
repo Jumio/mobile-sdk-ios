@@ -1,7 +1,7 @@
 //
 //  JMConstants.h
 //
-//  Copyright © 2016 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation. All rights reserved.
 //
 
 #ifndef JumioMobileSDK_JMConstants_h

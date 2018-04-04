@@ -1,7 +1,7 @@
 //
 //  NetverifyDocumentData.h
 //
-//  Copyright © 2016 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -18,7 +18,8 @@ typedef enum {
 typedef enum {
     NetverifyGenderUnknown,
     NetverifyGenderM,
-    NetverifyGenderF
+    NetverifyGenderF,
+    NetverifyGenderX
 } NetverifyGender;
 
 typedef enum {

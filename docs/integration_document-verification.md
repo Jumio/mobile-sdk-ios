@@ -14,7 +14,7 @@ Document Verification is a powerful solution to enable scanning various types (U
 - [Callback](#callback)
 
 ## Release notes
-For technical changes, please read our [transition guide](transition-guide_document_verification.md) SDK version: 2.10.1.
+For technical changes, please read our [transition guide](transition-guide_document-verification.md) SDK version: 2.11.0.
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Document Verification.
@@ -150,31 +150,32 @@ Implement the delegate methods of the _DocumentVerificationViewControllerDelegat
 ### Success
 Upon success, the scan reference is returned.
 ```
-- (void) documentVerificationViewController:(DocumentVerificationViewController*) documentVerificationViewController didFinishWithScanReference:(NSString*)scanReference  {
+- (void) documentVerificationViewController:(DocumentVerificationViewController*) documentVerificationViewController didFinishWithScanReference: (NSString*)scanReference  {
 	// YOURCODE
 }
 ```
 
 ### Error
-This method is fired when the user presses the cancel button during the workflow or in an error situation. The parameter `error` contains an error code, a message and a detailed error code, also the corresponding scan reference is available.
+This method is fired when the user presses the cancel button during the workflow or in an error situation. The parameter `error` contains an error code and a message.
 ```
-- (void) documentVerificationViewController:(DocumentVerificationViewController*) documentVerificationViewController didFinishWithError:(NSError*)error {
-	NSInteger errorCode = error.code;
-	NSString* errorMessage = error.localizedDescription;
-	NSInteger detailedErrorCode = [error.userInfo[@"detailedErrorCode"] integerValue];
+- (void) documentVerificationViewController:(DocumentVerificationViewController*) documentVerificationViewController didFinishWithError:(DocumentVerificationError*) error {
+	NSString* errorCode = error.code;
+	NSString* errorMessage = error.message;
 }
 ```
 
-**_Error codes_** that are available via the `code` property of the NSError object:
+**_Error codes_** that are available via the `code` property of the DocumentVerificationError object:
 
-|Code | Message | Description |
+| Code | Message | Description |
 | :-------------: |:----------|:-------------|
-| 100<br/>110<br/>130<br/>140<br/>150<br/>160 | We have encountered a network communication problem | Retry possible, user decided to cancel |
-| 210<br/>220 | Authentication failed | API credentials invalid, retry impossible |
-| 230 | No Internet connection available | Retry possible, user decided to cancel |
-| 250 | Cancelled by end-user | No error occurred |
-| 260 | The camera is currently not available | Camera cannot be initialized, retry impossible |
-| 280 | Certificate not valid anymore. Please update your application | End-to-end encryption key not valid anymore, retry impossible |
+| A10000 | We have encountered a network communication problem | Retry possible, user decided to cancel |
+| B10000 | Authentication failed | Secure connection could not be established, retry impossible |
+| C10401 | Authentication failed | API credentials invalid, retry impossible |
+| D10403 | Authentication failed | Wrong API credentials used, retry impossible |
+| E10000 | No Internet connection available | Retry possible, user decided to cancel |
+| G00000 | Cancelled by end-user | No error occurred |
+| H00000 | The camera is currently not available | Camera cannot be initialized, retry impossible |
+| I00000 | Certificate not valid anymore. Please update your application | End-to-end encryption key not valid anymore, retry impossible |
 
 ## Callback
 To get information about callbacks, Netverify Retrieval API, Netverify Delete API and Global Netverify settings and more, please read our [page with server related information](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md).

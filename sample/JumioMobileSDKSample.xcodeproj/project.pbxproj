@@ -18,13 +18,11 @@
 		54042A8B1FEBDED400626D55 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A8C1FEBDED400626D55 /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; };
 		54042A8D1FEBDED400626D55 /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		54042A8E1FEBDEF500626D55 /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; };
 		54042A8F1FEBDEF500626D55 /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A901FEBDEF500626D55 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; };
 		54042A911FEBDEF500626D55 /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A921FEBDEF500626D55 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; };
 		54042A931FEBDEF500626D55 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		54042A941FEBDEF500626D55 /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; };
 		54042A951FEBDEF500626D55 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A961FEBDEF500626D55 /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; };
 		54042A971FEBDEF500626D55 /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -47,7 +45,16 @@
 		54CD998F1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD998E1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift */; };
 		54CD99921F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99911F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib */; };
 		54CD99941F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CD99931F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib */; };
+		54D66D60206D54C6009640C2 /* CaptureInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D66D5A206D54C6009640C2 /* CaptureInfoView.swift */; };
+		54D66D61206D54C6009640C2 /* VerificationFinishedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D66D5B206D54C6009640C2 /* VerificationFinishedView.xib */; };
+		54D66D62206D54C6009640C2 /* CaptureInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D66D5C206D54C6009640C2 /* CaptureInfoView.xib */; };
+		54D66D63206D54C6009640C2 /* VerificationFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D66D5D206D54C6009640C2 /* VerificationFinishedView.swift */; };
+		54D66D64206D54C6009640C2 /* VerifyInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D66D5E206D54C6009640C2 /* VerifyInfoView.xib */; };
+		54D66D65206D54C6009640C2 /* VerifyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D66D5F206D54C6009640C2 /* VerifyInfoView.swift */; };
+		54D66D67206D54D0009640C2 /* NetverifyCustomUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D66D66206D54D0009640C2 /* NetverifyCustomUIViewController.swift */; };
 		77CCE6041FD93EE9000701C6 /* ObjcExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */; };
+		9694C9A4206156E9004CC4BA /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9694C9A3206156E9004CC4BA /* BAMCheckout.framework */; };
+		96FE3624206A5BBB0099626C /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; };
 		EE01EEF71924A3E200B7CC49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
 		EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */; };
 		EE01EF041924A3E300B7CC49 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EF031924A3E300B7CC49 /* StartViewController.m */; };
@@ -115,8 +122,16 @@
 		54CD998E1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomScanOverlayViewController.swift; path = SampleSwift/CustomScanOverlayViewController.swift; sourceTree = SOURCE_ROOT; };
 		54CD99911F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomScanOverlayViewController.xib; path = SampleObjC/CustomScanOverlayViewController.xib; sourceTree = SOURCE_ROOT; };
 		54CD99931F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomScanOverlayViewControllerSwift.xib; path = SampleSwift/CustomScanOverlayViewControllerSwift.xib; sourceTree = SOURCE_ROOT; };
+		54D66D5A206D54C6009640C2 /* CaptureInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureInfoView.swift; path = "SampleSwift/Netverify-CustomUI/CaptureInfoView.swift"; sourceTree = SOURCE_ROOT; };
+		54D66D5B206D54C6009640C2 /* VerificationFinishedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VerificationFinishedView.xib; path = "SampleSwift/Netverify-CustomUI/VerificationFinishedView.xib"; sourceTree = SOURCE_ROOT; };
+		54D66D5C206D54C6009640C2 /* CaptureInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CaptureInfoView.xib; path = "SampleSwift/Netverify-CustomUI/CaptureInfoView.xib"; sourceTree = SOURCE_ROOT; };
+		54D66D5D206D54C6009640C2 /* VerificationFinishedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerificationFinishedView.swift; path = "SampleSwift/Netverify-CustomUI/VerificationFinishedView.swift"; sourceTree = SOURCE_ROOT; };
+		54D66D5E206D54C6009640C2 /* VerifyInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VerifyInfoView.xib; path = "SampleSwift/Netverify-CustomUI/VerifyInfoView.xib"; sourceTree = SOURCE_ROOT; };
+		54D66D5F206D54C6009640C2 /* VerifyInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerifyInfoView.swift; path = "SampleSwift/Netverify-CustomUI/VerifyInfoView.swift"; sourceTree = SOURCE_ROOT; };
+		54D66D66206D54D0009640C2 /* NetverifyCustomUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetverifyCustomUIViewController.swift; path = SampleSwift/NetverifyCustomUIViewController.swift; sourceTree = SOURCE_ROOT; };
 		77CCE6021FD93EE8000701C6 /* ObjcExceptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjcExceptionHelper.h; path = SampleSwift/ObjcExceptionHelper.h; sourceTree = SOURCE_ROOT; };
 		77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjcExceptionHelper.m; path = SampleSwift/ObjcExceptionHelper.m; sourceTree = SOURCE_ROOT; };
+		9694C9A3206156E9004CC4BA /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BAMCheckout.framework; sourceTree = "<group>"; };
 		EE01EEE71924A3E200B7CC49 /* SampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE01EEF61924A3E200B7CC49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		EE01EEF91924A3E300B7CC49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -130,11 +145,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FE3624206A5BBB0099626C /* Netverify.framework in Frameworks */,
+				9694C9A4206156E9004CC4BA /* BAMCheckout.framework in Frameworks */,
 				54042A921FEBDEF500626D55 /* MicroBlink.framework in Frameworks */,
 				54042A901FEBDEF500626D55 /* JumioCore.framework in Frameworks */,
-				54042A8E1FEBDEF500626D55 /* BAMCheckout.framework in Frameworks */,
 				54042A961FEBDEF500626D55 /* Umoove.framework in Frameworks */,
-				54042A941FEBDEF500626D55 /* Netverify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +256,13 @@
 			isa = PBXGroup;
 			children = (
 				54CD99871F4AA49300E9CB14 /* NetverifyStartViewController.swift */,
+				54D66D66206D54D0009640C2 /* NetverifyCustomUIViewController.swift */,
+				54D66D5A206D54C6009640C2 /* CaptureInfoView.swift */,
+				54D66D5C206D54C6009640C2 /* CaptureInfoView.xib */,
+				54D66D5D206D54C6009640C2 /* VerificationFinishedView.swift */,
+				54D66D5B206D54C6009640C2 /* VerificationFinishedView.xib */,
+				54D66D5F206D54C6009640C2 /* VerifyInfoView.swift */,
+				54D66D5E206D54C6009640C2 /* VerifyInfoView.xib */,
 			);
 			name = Netverify;
 			sourceTree = "<group>";
@@ -297,6 +319,7 @@
 		EE01EEE91924A3E200B7CC49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9694C9A3206156E9004CC4BA /* BAMCheckout.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -419,11 +442,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D66D62206D54C6009640C2 /* CaptureInfoView.xib in Resources */,
 				547B47061F46FC880029781C /* MainStoryboardSwift.storyboard in Resources */,
+				54D66D61206D54C6009640C2 /* VerificationFinishedView.xib in Resources */,
 				54CD99921F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib in Resources */,
 				54CD99941F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib in Resources */,
 				54CD99831F4708BC00E9CB14 /* exportOptions.plist in Resources */,
 				547B47041F46F80E0029781C /* Images.xcassets in Resources */,
+				54D66D64206D54C6009640C2 /* VerifyInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,12 +503,16 @@
 			files = (
 				54CD998F1F4AF8CA00E9CB14 /* CustomScanOverlayViewController.swift in Sources */,
 				547B46CC1F46F1FE0029781C /* StartViewController.m in Sources */,
+				54D66D63206D54C6009640C2 /* VerificationFinishedView.swift in Sources */,
 				54CD998A1F4AB08500E9CB14 /* DocumentVerificationStartViewController.swift in Sources */,
 				547B46CD1F46F1FE0029781C /* AppDelegate.m in Sources */,
 				547B46D21F46F1FE0029781C /* main.m in Sources */,
 				77CCE6041FD93EE9000701C6 /* ObjcExceptionHelper.m in Sources */,
 				54CD99881F4AA49300E9CB14 /* NetverifyStartViewController.swift in Sources */,
+				54D66D67206D54D0009640C2 /* NetverifyCustomUIViewController.swift in Sources */,
 				547B47081F46FFFD0029781C /* BAMCheckoutStartViewController.swift in Sources */,
+				54D66D60206D54C6009640C2 /* CaptureInfoView.swift in Sources */,
+				54D66D65206D54C6009640C2 /* VerifyInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +551,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../frameworks",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
@@ -559,6 +590,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../frameworks",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";

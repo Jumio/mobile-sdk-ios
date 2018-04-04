@@ -2,6 +2,17 @@
 
 # Transition guide for Fastfill & Netverify
 
+## 2.11.0
+
+#### New error scheme
+Instead of `NSError` objects we now return `NetverifyError` in `netverifyViewController:didFinishInitializingWithError:` and `netverifyViewController:didCancelWithError:scanReference:`. 
+
+Please note, that `code` now is a NSString.
+Read more detailed information on this in [Retrieving information](/docs/integration_netverify-fastfill.md#retrieving-information)
+
+#### Changes in Localizable-Netverify.strings
+Added values in regards to legal masking.
+
 ## 2.10.1
 #### Changes in Localizable-Netverify.strings
 Added one value in regards to legal masking.

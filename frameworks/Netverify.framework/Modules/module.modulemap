@@ -92,3 +92,38 @@ module Netverify.DocumentVerificationViewController {
     header "DocumentVerificationViewController.h"
     export *
 }
+
+module Netverify.NetverifyCustomScanViewController {
+    header "NetverifyCustomScanViewController.h"
+    export *
+}
+
+module Netverify.NetverifyConfiguration {
+    header "NetverifyConfiguration.h"
+    export *
+}
+
+module Netverify.NetverifyProtocol {
+    header "NetverifyProtocol.h"
+    export *
+}
+
+module Netverify.NetverifyCountry {
+    header "NetverifyCountry.h"
+    export *
+}
+
+module Netverify.NetverifyDocument {
+    header "NetverifyDocument.h"
+    export *
+}
+
+module Netverify.NetverifyUIController {
+    header "NetverifyUIController.h"
+    export *
+}
+
+module Netverify.NetverifyError {
+    header "NetverifyError.h"
+    export *
+}

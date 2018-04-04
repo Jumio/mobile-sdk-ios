@@ -1,7 +1,7 @@
 //
 //  JumioCore.h
 //
-//  Copyright © 2016 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -16,7 +16,6 @@ FOUNDATION_EXPORT const unsigned char JumioCoreVersionString[];
 #import <JumioCore/JMConstants.h>
 #import <JumioCore/JMAutolayoutUtilities.h>
 #import <JumioCore/JMAlertView.h>
-#import <JumioCore/JMAlertViewController.h>
 #import <JumioCore/UIAlertController+JMPresenting.h>
 #import <JumioCore/JMAppearance.h>
 #import <JumioCore/JMBaseServerTask+Utilities.h>
@@ -34,9 +33,7 @@ FOUNDATION_EXPORT const unsigned char JumioCoreVersionString[];
 #import <JumioCore/JMRoiOverlay.h>
 #import <JumioCore/JMRoiSettings.h>
 #import <JumioCore/JMSDKStyle.h>
-#import <JumioCore/JMSeparatorView.h>
 #import <JumioCore/JMString.h>
-#import <JumioCore/JMTableView.h>
 #import <JumioCore/JMThemeableButton.h>
 #import <JumioCore/NSData+Base64.h>
 #import <JumioCore/JMSDK.h>
@@ -60,6 +57,6 @@ FOUNDATION_EXPORT const unsigned char JumioCoreVersionString[];
 #import <JumioCore/JMStateTransitionEvent.h>
 #import <JumioCore/JMNetworkState.h>
 //UIController
-#import <JumioCore/JMUIController.h>
+#import <JumioCore/JMStateMachineController.h>
 
 #import <JumioCore/JMServerTaskLogInfo.h>

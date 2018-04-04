@@ -1,7 +1,7 @@
 //
 //  DocumentVerificationStartViewController.swift
 //
-//  Copyright © 2017 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation All rights reserved.
 //
 
 import Netverify
@@ -108,10 +108,10 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
     /**
      * Implement the following delegate method for successful scans and user cancellation notifications. Dismiss the SDK view in your app once you received the result.
      * @param DocumentVerificationViewController The DocumentVerificationViewController instance
-     * @param error The returned Errors
+     * @param error The error describing the cause of the problematic situation
      **/
-    func documentVerificationViewController(_ documentVerificationViewController: DocumentVerificationViewController, didFinishWithError error: Error?) {
-        print("DocumentVerificationViewController cancelled with error: %@", error?.localizedDescription as String!);
+    func documentVerificationViewController(_ documentVerificationViewController: DocumentVerificationViewController, didFinishWithError error: DocumentVerificationError?) {
+        print("DocumentVerificationViewController cancelled with error: %@", error?.message as String!);
         
         //Dismiss the SDK
         self.dismiss(animated: true, completion: nil)

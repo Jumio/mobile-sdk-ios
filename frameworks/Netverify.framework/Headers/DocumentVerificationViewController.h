@@ -1,11 +1,13 @@
 //
 //  DocumentVerificationViewController.h
 //
-//  Copyright © 2016 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation. All rights reserved.
 //
 
 #import <JumioCore/JMNavigationController.h>
 #import <JumioCore/JMSDK.h>
+
+@class DocumentVerificationError;
 
 #pragma mark - DocumentVerificationConfiguration
 __attribute__((visibility("default"))) @protocol DocumentVerificationViewControllerDelegate;
@@ -40,7 +42,7 @@ __attribute__((visibility("default"))) @protocol DocumentVerificationViewControl
 
 @required
 - (void) documentVerificationViewController:(DocumentVerificationViewController* _Nonnull) documentVerificationViewController didFinishWithScanReference:(NSString* _Nullable)scanReference;
-- (void) documentVerificationViewController:(DocumentVerificationViewController* _Nonnull) documentVerificationViewController didFinishWithError:(NSError* _Nullable)error;
+- (void) documentVerificationViewController:(DocumentVerificationViewController* _Nonnull) documentVerificationViewController didFinishWithError:(DocumentVerificationError* _Nullable)error;
 
 @end
 

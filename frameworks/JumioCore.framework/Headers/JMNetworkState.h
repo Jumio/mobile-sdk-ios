@@ -1,7 +1,7 @@
 //
 //  JMNetworkState.h
 //
-//  Copyright © 2016 Jumio Corporation All rights reserved.
+//  Copyright © 2018 Jumio Corporation. All rights reserved.
 //
 
 #import "JMState.h"
