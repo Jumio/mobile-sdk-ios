@@ -26,6 +26,12 @@
 		54042A951FEBDEF500626D55 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A961FEBDEF500626D55 /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; };
 		54042A971FEBDEF500626D55 /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		545F7A5F20A1E1B2007EBCE7 /* Localizable-BAMCheckout.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5920A1E1B1007EBCE7 /* Localizable-BAMCheckout.strings */; };
+		545F7A6020A1E1B2007EBCE7 /* Localizable-BAMCheckout.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5920A1E1B1007EBCE7 /* Localizable-BAMCheckout.strings */; };
+		545F7A6120A1E1B2007EBCE7 /* Localizable-DocumentVerification.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5B20A1E1B1007EBCE7 /* Localizable-DocumentVerification.strings */; };
+		545F7A6220A1E1B2007EBCE7 /* Localizable-DocumentVerification.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5B20A1E1B1007EBCE7 /* Localizable-DocumentVerification.strings */; };
+		545F7A6320A1E1B2007EBCE7 /* Localizable-Netverify.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5D20A1E1B1007EBCE7 /* Localizable-Netverify.strings */; };
+		545F7A6420A1E1B2007EBCE7 /* Localizable-Netverify.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5D20A1E1B1007EBCE7 /* Localizable-Netverify.strings */; };
 		547B46CC1F46F1FE0029781C /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EF031924A3E300B7CC49 /* StartViewController.m */; };
 		547B46CD1F46F1FE0029781C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */; };
 		547B46D21F46F1FE0029781C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
@@ -99,6 +105,10 @@
 		54042A771FEBDEC900626D55 /* Umoove.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Umoove.framework; path = ../frameworks/Umoove.framework; sourceTree = "<group>"; };
 		54042A781FEBDECA00626D55 /* Netverify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netverify.framework; path = ../frameworks/Netverify.framework; sourceTree = "<group>"; };
 		54042A791FEBDECA00626D55 /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BAMCheckout.framework; path = ../frameworks/BAMCheckout.framework; sourceTree = "<group>"; };
+		545F7A5A20A1E1B1007EBCE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "../frameworks/en.lproj/Localizable-BAMCheckout.strings"; sourceTree = "<group>"; };
+		545F7A5C20A1E1B1007EBCE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "../frameworks/en.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
+		545F7A5E20A1E1B1007EBCE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "../frameworks/en.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
+		545F7A6520A1E1FC007EBCE7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "../frameworks/de.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
 		547B46E81F46F1FE0029781C /* SampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547B46EB1F46F70B0029781C /* MainStoryboardObjC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboardObjC.storyboard; path = SampleObjC/MainStoryboardObjC.storyboard; sourceTree = SOURCE_ROOT; };
 		547B46ED1F46F71B0029781C /* BAMCheckoutStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAMCheckoutStartViewController.h; path = SampleObjC/BAMCheckoutStartViewController.h; sourceTree = SOURCE_ROOT; };
@@ -114,6 +124,10 @@
 		547B47021F46F80E0029781C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		547B47051F46FC880029781C /* MainStoryboardSwift.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboardSwift.storyboard; path = SampleSwift/MainStoryboardSwift.storyboard; sourceTree = SOURCE_ROOT; };
 		547B47071F46FFFD0029781C /* BAMCheckoutStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BAMCheckoutStartViewController.swift; path = SampleSwift/BAMCheckoutStartViewController.swift; sourceTree = SOURCE_ROOT; };
+		549A038420C55A03005181A7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "../frameworks/fr.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
+		549A038520C55A0D005181A7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../frameworks/zh-Hans.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
+		549A038620C55A15005181A7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "../frameworks/es.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
+		549A038920C69583005181A7 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "../frameworks/nl.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
 		54CD99811F4708BC00E9CB14 /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = SOURCE_ROOT; };
 		54CD99841F4708CC00E9CB14 /* SampleSwift-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SampleSwift-Info.plist"; path = "SampleSwift/SampleSwift-Info.plist"; sourceTree = SOURCE_ROOT; };
 		54CD99861F4713A300E9CB14 /* Sample-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Sample-BridgingHeader.h"; path = "SampleSwift/Sample-BridgingHeader.h"; sourceTree = SOURCE_ROOT; };
@@ -188,8 +202,7 @@
 				54CD99971F4B018B00E9CB14 /* DocumentVerification */,
 				54CD998B1F4AB4A300E9CB14 /* Supporting Files */,
 			);
-			name = SampleSwift;
-			path = JumioMobileSDKSample;
+			path = SampleSwift;
 			sourceTree = "<group>";
 		};
 		54A749D11E5618870060CF63 /* BAMCheckout */ = {
@@ -230,7 +243,6 @@
 				EE01EF031924A3E300B7CC49 /* StartViewController.m */,
 			);
 			name = "General classes";
-			path = JumioMobileSDKSample;
 			sourceTree = "<group>";
 		};
 		54CD998B1F4AB4A300E9CB14 /* Supporting Files */ = {
@@ -297,6 +309,9 @@
 			isa = PBXGroup;
 			children = (
 				EE8E78101926419400896C42 /* JumioMobileSDK */,
+				545F7A5920A1E1B1007EBCE7 /* Localizable-BAMCheckout.strings */,
+				545F7A5B20A1E1B1007EBCE7 /* Localizable-DocumentVerification.strings */,
+				545F7A5D20A1E1B1007EBCE7 /* Localizable-Netverify.strings */,
 				54A749D41E56189F0060CF63 /* General classes */,
 				EE01EEF01924A3E200B7CC49 /* SampleObjC */,
 				547B46EA1F46F5050029781C /* SampleSwift */,
@@ -333,8 +348,7 @@
 				54A749D31E5618950060CF63 /* DocumentVerification */,
 				EE01EEF11924A3E200B7CC49 /* Supporting Files */,
 			);
-			name = SampleObjC;
-			path = JumioMobileSDKSample;
+			path = SampleObjC;
 			sourceTree = "<group>";
 		};
 		EE01EEF11924A3E200B7CC49 /* Supporting Files */ = {
@@ -425,6 +439,11 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				fr,
+				"zh-Hans",
+				es,
+				nl,
 			);
 			mainGroup = EE01EEDE1924A3E200B7CC49;
 			productRefGroup = EE01EEE81924A3E200B7CC49 /* Products */;
@@ -443,11 +462,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				54D66D62206D54C6009640C2 /* CaptureInfoView.xib in Resources */,
+				545F7A6020A1E1B2007EBCE7 /* Localizable-BAMCheckout.strings in Resources */,
 				547B47061F46FC880029781C /* MainStoryboardSwift.storyboard in Resources */,
 				54D66D61206D54C6009640C2 /* VerificationFinishedView.xib in Resources */,
 				54CD99921F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib in Resources */,
 				54CD99941F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib in Resources */,
+				545F7A6420A1E1B2007EBCE7 /* Localizable-Netverify.strings in Resources */,
 				54CD99831F4708BC00E9CB14 /* exportOptions.plist in Resources */,
+				545F7A6220A1E1B2007EBCE7 /* Localizable-DocumentVerification.strings in Resources */,
 				547B47041F46F80E0029781C /* Images.xcassets in Resources */,
 				54D66D64206D54C6009640C2 /* VerifyInfoView.xib in Resources */,
 			);
@@ -457,8 +479,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				545F7A5F20A1E1B2007EBCE7 /* Localizable-BAMCheckout.strings in Resources */,
 				547B47031F46F80E0029781C /* Images.xcassets in Resources */,
+				545F7A6120A1E1B2007EBCE7 /* Localizable-DocumentVerification.strings in Resources */,
 				54CD99821F4708BC00E9CB14 /* exportOptions.plist in Resources */,
+				545F7A6320A1E1B2007EBCE7 /* Localizable-Netverify.strings in Resources */,
 				547B46EC1F46F70B0029781C /* MainStoryboardObjC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +556,38 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		545F7A5920A1E1B1007EBCE7 /* Localizable-BAMCheckout.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				545F7A5A20A1E1B1007EBCE7 /* en */,
+			);
+			name = "Localizable-BAMCheckout.strings";
+			sourceTree = "<group>";
+		};
+		545F7A5B20A1E1B1007EBCE7 /* Localizable-DocumentVerification.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				545F7A5C20A1E1B1007EBCE7 /* en */,
+			);
+			name = "Localizable-DocumentVerification.strings";
+			sourceTree = "<group>";
+		};
+		545F7A5D20A1E1B1007EBCE7 /* Localizable-Netverify.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				545F7A5E20A1E1B1007EBCE7 /* en */,
+				545F7A6520A1E1FC007EBCE7 /* de */,
+				549A038420C55A03005181A7 /* fr */,
+				549A038520C55A0D005181A7 /* zh-Hans */,
+				549A038620C55A15005181A7 /* es */,
+				549A038920C69583005181A7 /* nl */,
+			);
+			name = "Localizable-Netverify.strings";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		547B46E61F46F1FE0029781C /* Debug */ = {
@@ -615,6 +672,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -670,6 +728,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

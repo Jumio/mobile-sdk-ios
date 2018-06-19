@@ -27,8 +27,6 @@ __attribute__((visibility("default"))) @interface JMEndpoint : NSObject <NSCopyi
 
 - (NSString *)nameForDataCenter:(JumioDataCenter)dataCenter;
 - (NSString*)URLForDataCenter:(JumioDataCenter)dataCenter;
-- (NSString*)publicKeyIdForDataCenter:(JumioDataCenter)dataCenter;
-- (NSString*)publicKeyForDataCenter:(JumioDataCenter)dataCenter;
 
 
 @end

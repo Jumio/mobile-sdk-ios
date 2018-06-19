@@ -15,7 +15,7 @@ Netverify SDK offers scanning and authentication of government issued IDs.
 - [Callback](#callback)
 
 ## Release notes
-For technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md)  SDK version: 2.11.0.
+For technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md)  SDK version: 2.12.0.
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Netverify.
@@ -100,13 +100,6 @@ login.
 config.customerId = @"CUSTOMERID";
 ```
 
-To send some additional information use the property `additionalInformation`.
-
-__Note:__ Must not contain sensitive data like PII (Personally Identifiable Information) or account
-login.
-```
-config.additionalInformation = @"ADDITONAL INFORMATION";
-```
 
 ### Analytics Service
 Use the following setting to explicitly send debug information to Jumio.
@@ -217,8 +210,7 @@ Class **_NetverifyDocumentData:_**
 | gender | NetverifyGender | | Gender M, F, or X |
 | originatingCountry | NSString | 3|Country of origin as [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code |
 | addressLine | NSString | 64 | Street name	|
-| city | NSString | 64 | City |
-| subdivision | NSString | 3 | Last three characters of [ISO 3166-2:US](http://en.wikipedia.org/wiki/ISO_3166-2:US) state code	|
+|subdivision|	NSString|	3|	Last three characters of [ISO 3166-2:US](https://en.wikipedia.org/wiki/ISO_3166-2:US) or [ISO 3166-2:CA](https://en.wikipedia.org/wiki/ISO_3166-2:CA) subdivision code	|
 | postCode | NSString | 15 | Postal code |
 | mrzData |  NetverifyMrzData | | MRZ data, see table below |
 | optionalData1 | NSString | 50 | Optional field of MRZ line 1 |
@@ -253,7 +245,7 @@ Class **_NetverifyMrzData_**
 | G00000 | Cancelled by end-user | No error occurred |
 | H00000 | The camera is currently not available | Camera cannot be initialized, retry impossible |
 | I00000 | Certificate not valid anymore. Please update your application | End-to-end encryption key not valid anymore, retry impossible |
-| J00000 | Transaction already finished | User did not complete SDK journey within token lifetime |
+| J00000 | Transaction already finished | User did not complete SDK journey within session lifetime |
 | Y00000 | The barcode of your document didn´t contain your address, turn your document and scan the front. | **Only Custom UI:** Scanned Barcode (e.g. US Driver License) does not contain address information. Show hint and/or call `retryAfterError` |
 | Z00000 | You recently scanned the front of your document. Please flip your document and scan the back. | **Only Custom UI:** Backside of the document was scanned but most likely the frontside of the document was detected. Show hint and/or call `retryAfterError` |
 
@@ -362,6 +354,8 @@ Make sure to also implement the `NetverifyCustomScanViewControllerDelegate` prot
 For some countries, end-users need to be informed about some legal constraints before scanning. In this case `netverifyCustomScanViewController:shouldDisplayLegalAdvice:completion:` is called. Make sure to display the message provided via this call.
 
 After a successful scan, it makes sense to present the captured image and ask to finally confirm that the image should be used. In this case `netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:text:confirmation:retake:` is called. Simply add this view as subview and it will draw itself accordingly. We suggest asking the user if the image is readable and properly aligned to prevent bad quality images. Continue with calling one of the two provided blocks.
+
+For manual image capturing: to notify the user that the image is blurry and therefore can't be taken implement `netverifyCustomScanViewController:shouldDisplayBlurHint:`
 
 ### Finalizing Scanning
 

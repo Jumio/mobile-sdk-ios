@@ -17,8 +17,6 @@
 // string comparison tolerance level
 #define kJMStringCompareToleranceLevel 0.2
 
-#define kJMImageQualityThresholdROI     0.12
-
 #define kJMBaseInfoViewDefaultPortraitHeight 51.0f
 
 #endif

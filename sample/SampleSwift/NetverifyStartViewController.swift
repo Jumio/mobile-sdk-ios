@@ -40,7 +40,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
             }
         } catch {
             let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as! String, cancelButtonTitle: "OK", completion: nil)
+            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
         }
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
@@ -95,9 +95,6 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         
         //Configure your desired status bar style
         //config.statusBarStyle = UIStatusBarStyle.lightContent
-        
-        //Additional information for this scan should not contain sensitive data like PII (Personally Identifiable Information) or account login
-        //config.additionalInformation = "YOURADDITIONALINFORMATION"
         
         //Use the following method to only support IDs where data can be extracted on mobile only
         //config.dataExtractionOnMobileOnly = true
@@ -208,7 +205,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
             }
         } catch {
             let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as! String, cancelButtonTitle: "OK", completion: nil)
+            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
         }
     }
     
@@ -333,7 +330,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         print(message)
         self.dismiss(animated: true, completion: {
             print(message)
-            self.showAlert(withTitle: "Netverify Mobile SDK", message: message as String!)
+            self.showAlert(withTitle: "Netverify Mobile SDK", message: message as String)
             })
     }
     
@@ -344,7 +341,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
      * @param scanReference The scanReference of the scan attempt
      **/
     func netverifyViewController(_ netverifyViewController: NetverifyViewController, didCancelWithError error: NetverifyError?, scanReference: String?) {
-        print("NetverifyViewController cancelled with error: \(error?.message as String!), scanReference: \(String(describing: (scanReference != nil) ? scanReference as String! : "")))")
+        print("NetverifyViewController cancelled with error: " + "\(error?.message ?? "")" + "scanReference: " + "\(scanReference ?? "")")
         
         //Dismiss the SDK
         self.dismiss(animated: true, completion: nil)

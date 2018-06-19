@@ -2,10 +2,18 @@
 
 # Transition guide for Fastfill & Netverify
 
+## 2.12.0
+
+#### Localizable Strings
+In addition to English, strings are now translated to Chinese (Simplified), Dutch, French, German and Spanish. Each .strings file can now be found in the specific *.lproj folders.
+
+#### Additional information property removed
+Property `additionalInformation` has been removed.
+
 ## 2.11.0
 
 #### New error scheme
-Instead of `NSError` objects we now return `NetverifyError` in `netverifyViewController:didFinishInitializingWithError:` and `netverifyViewController:didCancelWithError:scanReference:`. 
+Instead of `NSError` objects we now return `NetverifyError` in `netverifyViewController:didFinishInitializingWithError:` and `netverifyViewController:didCancelWithError:scanReference:`.
 
 Please note, that `code` now is a NSString.
 Read more detailed information on this in [Retrieving information](/docs/integration_netverify-fastfill.md#retrieving-information)

@@ -1,0 +1,97 @@
+/*
+ Localizable-Netverify.strings
+ Copyright © 2018 Jumio Corporation. All rights reserved.
+ */
+
+
+// scanOptionsView
+"netverify.scan-options.navigationItem.title" = "";
+"netverify.scan-options.cell.document-type.passport.title" = "Passeport";
+"netverify.scan-options.cell.document-type.visa.title" = "Visa";
+"netverify.scan-options.cell.document-type.identity-card.title" = "Carte d'identité";
+"netverify.scan-options.cell.document-type.driver-license.title" = "Permis de conduire";
+"netverify.scan-options.cell.document-variant.plastic.title" = "Carte plastique";
+"netverify.scan-options.cell.document-variant.paper.title" = "Autre format";
+"netverify.scan-options.hint" = "Sélectionnez le type de document que vous souhaitez numériser";
+"netverify.scan-options.issuing-country.text" = " a été sélectionné comme pays d'émission de vos documents. ";
+"netverify.scan-options.change-country.link" = "Modifier le pays";
+"netverify.country-selection.navigationItem.title" = "";
+"netverify.country-selection.hint" = "Sélectionnez le pays qui a délivré votre document";
+"netverify.country-selection.search.placeholder" = "Rechercher un pays";
+"netverify.scan-options.accessibility-label.close-button" = "Annuler la numérisation";
+
+// scanView
+"netverify.scan-view.navigationItem.title" = "Numérisation";
+"netverify.scan-view.use-front-card.overlay.title" = "UTILISEZ LE RECTO";
+"netverify.scan-view.use-back-card.overlay.title" = "UTILISEZ LE VERSO";
+"netverify.scan-view.compliance-alertview.confirmation" = "OK";
+"netverify.scan-view.compliance-alertview.message.NLD" = "Veuillez masquer votre BSN avant de détecter";
+"netverify.scan-view.compliance-alertview.message.KOR" = "Veuillez masquer la deuxième partie de votre numéro d'enregistrement de résident avant de détecter";
+"netverify.scan-view.compliance-alertview.message.DEU.passport" = "Veuillez masquer le numéro de passeport avant de détecter";
+"netverify.scan-view.compliance-alertview.message.DEU.identity-card.plastic" = "Veuillez masquer le numéro de la pièce d'identité et le numéro d'accès avant de détecter";
+"netverify.scan-view.compliance-alertview.message.DEU.identity-card.paper" = "Veuillez masquer le numéro de la pièce d'identité avant de détecter";
+"netverify.scan-view.accessibility-label.button.switch-to-front-camera" = "Basculez vers la caméra frontale";
+"netverify.scan-view.accessibility-label.button.switch-to-back-camera" = "Basculez vers la caméra arrière";
+"netverify.scan-view.accessibility-label.flash-button.activate" = "Activez le flash";
+"netverify.scan-view.accessibility-label.flash-button.deactivate" = "Désactivez le flash";
+"netverify.scan-view.accessibility-label.button.take-photo" = "Prendre une photo";
+"netverify.scan-view.image.blurry-please-refocus-hint" = "Veuillez recentrer";
+"netverify.scan-view.face.navigation-item.title" = "Prendre un selfie";
+"netverify.scan-view.face.label.follow-the-circle" = "Suivez le cercle du regard";
+"netverify.scan-view.face.label.move-closer" = "Rapprochez-vous";
+"netverify.scan-view.face.label.move-farther" = "Éloignez-vous";
+"netverify.scan-view.face.label.description" = "Positionnez votre visage dans le cadre pour poursuivre";
+"netverify.scan-help-view.headline.scan-passport" = "Numérisez un passeport";
+"netverify.scan-help-view.headline.capture-passport" = "Détectez un passeport";
+"netverify.scan-help-view.headline.scan-visa" = "Numérisez un visa";
+"netverify.scan-help-view.headline.scan-identity-card-front" = "Numérisez recto carte d'identité";
+"netverify.scan-help-view.headline.scan-identity-card-back" = "Numérisez verso carte d'identité";
+"netverify.scan-help-view.headline.capture-identity-card-inside" = "Détectez intérieurcarte d'identité";
+"netverify.scan-help-view.headline.capture-identity-card-outside" = "Détectez extérieur carte d'identité";
+"netverify.scan-help-view.headline.scan-driver-license-front" = "Numérisez recto permis de conduire";
+"netverify.scan-help-view.headline.scan-driver-license-back" = "Numérisez verso permis de conduire";
+"netverify.scan-help-view.headline.capture-driver-license-inside" = "Détectez intérieur permis de conduire";
+"netverify.scan-help-view.headline.capture-driver-license-outside" = "Détectez extérieur permis de conduire";
+"netverify.scan-help-view.steps" = "Étape %lu sur %lu";
+"netverify.scan-help-view.help-text-mrz.short" = "Alignez votre document avec la zone affichée en surbrillance jusqu'à ce qu'il soit détecté automatiquement";
+"netverify.scan-help-view.help-text-mrz.full" = "Placez votre document dans le cadre comme indiqué dans l'animation ci-dessus. La détection se fait automatiquement.\n\nVérifiez que toutes les données sont bien lisibles et évitez les reflets.";
+"netverify.scan-help-view.help-text-template-matcher.short" = "Placez votre document devant la caméra jusqu'à ce qu'il soit détecté automatiquement";
+"netverify.scan-help-view.help-text-template-matcher.full" = "Placez votre document devant la caméra comme indiqué dans l'animation ci-dessus. La détection se fait automatiquement.\n\nVérifiez que toutes les données sont bien lisibles et évitez les reflets.";
+"netverify.scan-help-view.help-text-line-finder.short" = "Placez votre document dans le cadre en alignant les quatre bords jusqu'à ce qu'il soit détecté automatiquement";
+"netverify.scan-help-view.help-text-line-finder.full" = "Placez votre document dans le cadre en alignant les quatre bords comme indiqué dans l'animation ci-dessus. La détection se fait automatiquement.\n\nVérifiez que toutes les données sont bien lisibles et évitez les reflets.";
+"netverify.scan-help-view.help-text-barcode.short" = "Placez le code-barres devant la caméra jusqu'à ce qu'il soit détecté automatiquement";
+"netverify.scan-help-view.help-text-barcode.full" = "Placez le code-barres devant la caméra comme indiqué dans l'image ci-dessus. La détection se fait automatiquement.\n\nVérifiez que toutes les données sont bien lisibles et évitez les reflets.";
+"netverify.scan-help-view.button.general-fallback.title" = "LA DÉTECTION NE FONCTIONNE PAS";
+"netverify.scan-help-view.button.barcode-fallback.title" = "CLIQUEZ SI PAS DE BARRE-CODE";
+"netverify.scan-view.liveness-help.navigation-item.title" = "Des problèmes?";
+"netverify.scan-help-view.liveness-help.glasses" = "Ne portez pas de lunettes, retirez-les si possible";
+"netverify.scan-help-view.liveness-help.headwear" = "Retirez tout couvre-chef";
+"netverify.scan-help-view.liveness-help.light-conditions" = "Utilisez un bon éclairage et évitez toute lumière forte en arrière-plan";
+"netverify.scan-help-view.liveness-help.button-continue.title" = "CONTINUER";
+"netverify.confirmation-view.headline" = "Vérifiez la lisibilité";
+"netverify.confirmation-view.label" = "Veuillez vérifier que toutes les données sur votre document soient bien lisibles, pas floues et sans reflet";
+"netverify.confirmation-view.button.submit" = "LISIBLE";
+"netverify.confirmation-view.button.retry" = "REPRENDRE";
+
+// actionView
+"netverify.error.network-problem.title" = "Nous avons rencontré un problème de communication avec le réseau";
+"netverify.error.authentication-failed.title" = "Échec de l'authentification";
+"netverify.error.invalid-key.title" = "Le certificat n'est plus valable. Veuillez mettre à jour votre application";
+"netverify.error.device-is-offline.title" = "Aucune connexion internet disponible";
+"netverify.error.cancelled-by-user.title" = "Annulé par l'utilisateur";
+"netverify.error.transaction-already-finished.title" = "La transaction est déjà terminée";
+"netverify.error.user-address-missing.title" = "Numériser le recto";
+"netverify.error.user-address-missing" = "Le code-barres de votre document ne contenait pas votre adresse, veuillez retourner votre document et numériser le recto";
+"netverify.error-view.address-missing.button.continue.title" = "APPUYER POUR CONTINUER";
+"netverify.error.face-on-backside.title" = "Numérisez le verso";
+"netverify.error.face-on-backside" = "Vous avez déjà numérisé le recto de votre document.\n\nVeuillez le retourner et numériser le verso.";
+"netverify.error-view.error.header.title" = "Erreur";
+"netverify.error-view.button.retry.title" = "RÉESSAYER";
+"netverify.error-view.button.cancel.title" = "ANNULER";
+"netverify.alert-view.camera-access-disabled.title" = "Accès à la caméra désactivé";
+"netverify.alert-view.camera-access-disabled.description" = "%@ a besoin d'avoir accès à votre caméra. Veuillez vérifier vos paramètres de confidentialité.";
+"netverify.alert-view.button.confirm.title" = "Confirmer";
+"netverify.submission-view.uploading.headline" = "Chargement de vos documents en cours";
+"netverify.submission-view.uploading.description" = "En fonction de votre connexion réseau, cela ne devrait prendre que quelques secondes";
+"netverify.submission-view.successful.headline" = "Chargement réussi";
+"netverify.submission-view.successful.description" = "";

@@ -51,14 +51,14 @@
     //Configure your desired status bar style
     //config.statusBarStyle = UIStatusBarStyleLightContent;
     
-    //Additional information for this scan should not contain sensitive data like PII (Personally Identifiable Information) or account login
-    //config.additionalInformation = @"YOURADDITIONALINFORMATION";
-    
     // Use a custom document code which can be configured in the settings tab of the Merchant UI
     //config.customDocumentCode = @"YOURCUSTOMDOCUMENTCODE";
     
     // Overrides the label for the document name (on Help Screen beside document icon)
     //config.documentName = @"DOCUMENTNAME";
+    
+    // Set the following property to enable/disable data extraction for documents.
+    // config.enableExtraction = YES;
     
     //Perform the following call as soon as your app’s view controller is initialized. Create the DocumentVerificationViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
     @try {

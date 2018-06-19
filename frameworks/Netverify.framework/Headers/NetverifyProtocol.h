@@ -47,7 +47,7 @@ __attribute__((visibility("default"))) @protocol NetverifyUIControllerDelegate <
 
  /**
  * Called when the SDK and all resources are loaded. Error will be null in case of success. Always before netverifyUIController:didDetermineAvailableCountries:suggestedCountry:
- * @param netverifyViewController the controller instance
+  * @param netverifyUIController the controller instance
  * @param error holds more detailed information about the error reason
  **/
 - (void) netverifyUIController: (NetverifyUIController* _Nonnull) netverifyUIController didFinishInitializingWithError:(NetverifyError* _Nullable)error;

@@ -26,8 +26,22 @@ typedef enum {
 
 @protocol NetverifyCustomScanViewControllerDelegate <NSObject>
 
+
+/**
+ * During the scanning of some ID cards, a legal advice need to be shown.
+ **/
 - (void) netverifyCustomScanViewController:(NetverifyCustomScanViewController * _Nonnull)customScanView shouldDisplayLegalAdvice:(NSString* _Nonnull) message completion:(void (^_Nonnull)(void))completion;
+
+/**
+ * For some scan views we advice to show a confirmationView after scanning. In this case this delegate method will be called providing the final image.
+ **/
 - (void) netverifyCustomScanViewController:(NetverifyCustomScanViewController * _Nonnull)customScanView shouldDisplayConfirmationWithImageView:(UIView * _Nonnull)view text:(NSString * _Nonnull)text confirmation:(void (^_Nullable)(void))confirmation retake:(void (^_Nullable)(void))retake;
+
+@optional
+/**
+ * Notify the user that the image is blurry and therefore can't be taken. (Manual image capturing only)
+ **/
+- (void) netverifyCustomScanViewController:(NetverifyCustomScanViewController * _Nonnull)customScanView shouldDisplayBlurHint:(NSString* _Nonnull) message;
 
 @end
 

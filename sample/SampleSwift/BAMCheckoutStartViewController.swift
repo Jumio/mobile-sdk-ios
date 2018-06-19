@@ -86,7 +86,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
             }
         } catch {
             let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as! String, cancelButtonTitle: "OK", completion: nil)
+            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
         }
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
@@ -211,8 +211,8 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //print("Additional field value: %@", zipCode);
         
         let message:NSMutableString = NSMutableString.init()
-        message.appendFormat("Request reference: %@\nCard number: %@\nGrouped: %@\n", scanReference, cardNumber as String!, cardNumberGrouped as String!)
-        if (expiryDate != nil) { message.appendFormat("Expiry date: %@\nExpiry date month: %@\nExpiry date year: %@\n", expiryDate as String!, expiryMonth!, expiryYear!) }
+        message.appendFormat("Request reference: %@\nCard number: %@\nGrouped: %@\n", scanReference, cardNumber as String, cardNumberGrouped as String)
+        if (expiryDate != nil) { message.appendFormat("Expiry date: %@\nExpiry date month: %@\nExpiry date year: %@\n", expiryDate as String? ?? "", expiryMonth!, expiryYear!) }
         if (cvv != nil) { message.appendFormat("CVV code: %@\n", cvv!) }
         if (cardHolderName != nil) { message.appendFormat("Card holder: %@\n", cardHolderName!) }
         if (sortCode != nil) {
@@ -227,7 +227,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //Dismiss the SDK
         self.dismiss(animated: true, completion: {
             print(message)
-            self.showAlert(withTitle: "BAMCheckout Mobile SDK", message: message as String!)
+            self.showAlert(withTitle: "BAMCheckout Mobile SDK", message: message as String)
             })
     }
     
@@ -237,7 +237,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
      * @param error The error codes 200, 210, 220, 240, 250, 260 and 310 will be returned. Using the custom scan view, the error codes 260 and 310 will be returned.
      **/
     func bamCheckoutViewController(_ controller: BAMCheckoutViewController, didCancelWithError error: Error?, scanReference: String?) {
-        print("BAMCheckoutViewController cancelled with error: \(error?.localizedDescription as String!), scanReference: \(String(describing: (scanReference != nil) ? scanReference as String! : ""))");
+        print("BAMCheckoutViewController cancelled with error: \(error?.localizedDescription ?? ""), scanReference: \(String(describing: (scanReference != nil) ? scanReference : ""))");
         
         //Dismiss the SDK
         self.dismiss(animated: true, completion: nil)

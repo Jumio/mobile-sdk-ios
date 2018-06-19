@@ -36,8 +36,6 @@ __attribute__((visibility("default"))) @interface NetverifyConfiguration : NSObj
 @property (nonatomic, strong, nullable) NSString *callbackUrl;                    // Callback URL (max. 255 characters) for the confirmation after the verification is completed.
 // This setting overrides your Jumio merchant settings.
 
-@property (nonatomic, strong, nullable) NSString *additionalInformation;          // Optional field (max. 100 characters) for filters in Merchantreports
-
 @property (nonatomic, assign) BOOL dataExtractionOnMobileOnly;          // Use the following method to only support IDs where data can be extracted on mobile only
 
 @property (nonatomic, assign) BOOL sendDebugInfoToJumio;                // Use the following method to explicitly send debug-info to Jumio. (default: NO)

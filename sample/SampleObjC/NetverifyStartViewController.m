@@ -66,9 +66,6 @@
     //Configure your desired status bar style
     //config.statusBarStyle = UIStatusBarStyleLightContent;
     
-    //Additional information for this scan should not contain sensitive data like PII (Personally Identifiable Information) or account login
-    //config.additionalInformation = @"YOURADDITIONALINFORMATION";
-    
     //Use the following method to only support IDs where data can be extracted on mobile only
     //config.dataExtractionOnMobileOnly = YES;
     

@@ -186,6 +186,13 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         customScanView.present(alert, animated: true, completion: nil)
     }
     
+    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayBlurHint message: String) {
+        print("netverifyUIController shouldDisplayBlurHint: \(message)")
+        let alert = UIAlertController(title: "Hint", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        customScanView.present(alert, animated: true, completion: nil)
+    }
+    
     func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayConfirmationWithImageView view: UIView, text: String, confirmation: (() -> Void)?, retake: (() -> Void)? = nil) {
         print("show confirmation view")
         

@@ -8,21 +8,18 @@
 
 
 # Release notes
-All changes apply to Netverify and Fastfill
-
-SDK version: 2.11.0
+SDK version: 2.12.0
 
 #### Changes
-* Added new Custom UI functionality
-* Added support for legal masking in Germany
-* Added support for new gender code X  (gender-unspecified) on MRZ documents
-* Updated error code schema 
+* Added support for 5 new default languages (Spanish, French, German, Chinese simple, Dutch) [Netverify/Fastfill, Document Verification]
+* Improved image quality checks to reduce the number of blurred images [Netverify/Fastfill, Document Verification]
+* Deprecated additionalInformation parameter [Netverify/Fastfill, Document Verification]
+* Added new parameter enableExtraction to activate data extraction of documents [Document Verification]
 
 #### Fixes
-* Fixed handling for British Columbia driving licenses
-* Various smaller bug fixes/improvements in all products
+* Fixed handling of certain US/CAN barcodes [Netverify/Fastfill]
+* Various smaller bug fixes/improvements [Netverify/Fastfill, Document Verification, BAM Checkout]
 
-__Version 2.10.0 and above contain a security fix. We advice to update immediately, latest until May 1, 2018.__
 
 # Basic Setup
 
@@ -61,10 +58,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>2.11' # If you use BAM Checkout along Netverify in your app. Frameworks supporting device architectures only.
+pod 'JumioMobileSDK', '~>2.12' # If you use BAM Checkout along Netverify in your app. Frameworks supporting device architectures only.
 
-pod 'JumioMobileSDK/Netverify', '~>2.11' # Specify Netverify as subspec to only use Netverify, Fastfill or Document Verification
-pod 'JumioMobileSDK/BAMCheckout', '~>2.11' # Specify BAMCheckout as subspec to only use BAM Checkout
+pod 'JumioMobileSDK/Netverify', '~>2.12' # Specify Netverify as subspec to only use Netverify, Fastfill or Document Verification
+pod 'JumioMobileSDK/BAMCheckout', '~>2.12' # Specify BAMCheckout as subspec to only use BAM Checkout
 ```
 
 Install the pod to your project via Terminal:
@@ -113,6 +110,16 @@ Make sure that the following Xcode build settings in your app are set accordingl
 All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language, add it to your app project and mark it as Localizable. This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
 Note: If using CocoaPods, the original file is located under `/Pods/JumioMobileSDK`.
 
+For our products Fastfill & Netverify we are providing translations for six individual languages for your convenience:
+* Chinese (Simplified)
+* Dutch
+* English
+* French
+* German
+* Spanish
+
+Please check out our sample project to see how to use the strings files in your app.
+
 Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__ or increased __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customised.
 
 # Get started
@@ -123,7 +130,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.10.1 of the Jumio Mobile SDK is supported until 2018-07-04.
+The previous release version 2.11.0 of the Jumio Mobile SDK is supported until 2018-09-19.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 

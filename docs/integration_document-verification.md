@@ -14,7 +14,7 @@ Document Verification is a powerful solution to enable scanning various types (U
 - [Callback](#callback)
 
 ## Release notes
-For technical changes, please read our [transition guide](transition-guide_document-verification.md) SDK version: 2.11.0.
+For technical changes, please read our [transition guide](transition-guide_document-verification.md) SDK version: 2.12.0.
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Document Verification.
@@ -106,16 +106,22 @@ Specify your reporting criteria to identify each scan attempt in your reports (m
 config.merchantReportingCriteria = @"YOURREPORTINGCRITERIA";
 ```
 
-To send some additional information use the property additionalInformation.
-```
-config.additionalInformation = @"ADDITONAL INFORMATION";
-```
 __Note:__ Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
 
 A callback URL can be specified for individual transactions, for constraints see chapter [Callback URL](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-url). This setting overrides your Jumio merchant settings.
 ```
 config.callbackUrl = @"YOURCALLBACKURL";
 ```
+
+### Data Extraction
+
+When data extraction should be used, set the following parameter that enables or disables extraction for each transaction. It is mandatory to be set to `true` if extraction is activated.
+
+```
+config.enableExtraction = true;
+```
+
+__Note:__ If you want to enable extraction for your account in general, please contact your Account Manager, or reach out to Jumio Support.
 
 ### Miscellaneous
 Use the following property to identify the scan in your reports (max. 100 characters) and set a customer identifier (max. 100 characters).
