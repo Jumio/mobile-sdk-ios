@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BAMCheckoutNegativeButton Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Class/BAMCheckoutNegativeButton" class="dashAnchor"></a>
+
+    <a title="BAMCheckoutNegativeButton Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          BAMCheckout Docs
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/Jumio/mobile-sdk-ios">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">BAMCheckout Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      BAMCheckoutNegativeButton Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../BAMCheckout Classes.html">BAMCheckout Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutCardInformation.html">BAMCheckoutCardInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutConfiguration.html">BAMCheckoutConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutViewController.html">BAMCheckoutViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutCustomScanOverlayViewController.html">BAMCheckoutCustomScanOverlayViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../BAMCheckout Appearance.html">BAMCheckout Appearance</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutBaseView.html">BAMCheckoutBaseView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutNegativeButton.html">BAMCheckoutNegativeButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutPositiveButton.html">BAMCheckoutPositiveButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutScanOverlay.html">BAMCheckoutScanOverlay</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutNavigationBarTitleImageView.html">BAMCheckoutNavigationBarTitleImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../BAMCheckout Protocols.html">BAMCheckout Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BAMCheckoutCustomScanOverlayViewControllerDelegate.html">BAMCheckoutCustomScanOverlayViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BAMCheckoutViewControllerDelegate.html">BAMCheckoutViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../BAMCheckout Type Definition.html">BAMCheckout Type Definition</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/BAMCheckoutCreditCardType.html">BAMCheckoutCreditCardType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../BAMCheckout Type Definition.html#/c:BAMCheckoutCardInformation.h@T@BAMCheckoutCreditCardTypes">BAMCheckoutCreditCardTypes</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>BAMCheckoutNegativeButton</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">BAMCheckoutNegativeButton</span> <span class="p">:</span> <span class="nc">UIButton</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>UIButton that implements BAMCheckoutAppearance protocol that is used within our confirmation or error views and invokes a negative action (e.g. cancel, retry).</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutNegativeButton(py)borderColor"></a>
+                    <a name="//apple_ref/objc/Property/borderColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutNegativeButton(py)borderColor">borderColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>UIColor that is used to draw the border.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">borderColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">borderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutNegativeButton.h#L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutNegativeButton(im)setBackgroundColor:forState:"></a>
+                    <a name="//apple_ref/objc/Method/-setBackgroundColor:forState:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutNegativeButton(im)setBackgroundColor:forState:">-setBackgroundColor:forState:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the background color for specific states.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setBackgroundColor</span><span class="p">:(</span><span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">backgroundColor</span>
+                  <span class="nf">forState</span><span class="p">:(</span><span class="n">UIControlState</span><span class="p">)</span><span class="nv">state</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setBackgroundColor</span><span class="p">(</span><span class="n">_</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">!</span><span class="p">,</span> <span class="k">for</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">UIControlState</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>backgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIColor that should be used</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>state</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the UIControlState for which the color should be drawn</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutNegativeButton.h#L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutNegativeButton(im)backgroundColorForState:"></a>
+                    <a name="//apple_ref/objc/Method/-backgroundColorForState:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutNegativeButton(im)backgroundColorForState:">-backgroundColorForState:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the background color for specific states.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nf">backgroundColorForState</span><span class="p">:(</span><span class="n">UIControlState</span><span class="p">)</span><span class="nv">state</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">backgroundColor</span><span class="p">(</span><span class="k">for</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">UIControlState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIColor</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>state</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the UIControlState for which the color should be drawn</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>UIColor that is to be used</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutNegativeButton.h#L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2018 Jumio Corp. <br />The source code and software available on this website (“Software”) is provided by Jumio Corp. or its affiliated group companies (“Jumio”) &quot;as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage. <br />In any case, your use of this Software is subject to the terms and conditions that apply to your contractual relationship with Jumio. As regards Jumio’s privacy practices, please see our privacy notice available here: <a href="https://www.jumio.com/legal-information/privacy-policy/">https://www.jumio.com/legal-information/privacy-policy/</a></p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

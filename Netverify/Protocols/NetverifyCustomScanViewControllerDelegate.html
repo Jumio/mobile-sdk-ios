@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NetverifyCustomScanViewControllerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Protocol/NetverifyCustomScanViewControllerDelegate" class="dashAnchor"></a>
+
+    <a title="NetverifyCustomScanViewControllerDelegate Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Netverify Docs
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/Jumio/mobile-sdk-ios">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Netverify Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      NetverifyCustomScanViewControllerDelegate Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../DocumentVerification Classes.html">DocumentVerification Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DocumentVerificationConfiguration.html">DocumentVerificationConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DocumentVerificationError.html">DocumentVerificationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DocumentVerificationViewController.html">DocumentVerificationViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../DocumentVerification Protocols.html">DocumentVerification Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DocumentVerificationViewControllerDelegate.html">DocumentVerificationViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Netverify Classes.html">Netverify Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ISOCountryConverter.html">ISOCountryConverter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyConfiguration.html">NetverifyConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyCountry.html">NetverifyCountry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyDocument.html">NetverifyDocument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyDocumentData.html">NetverifyDocumentData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyError.html">NetverifyError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyMrzData.html">NetverifyMrzData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyUIController.html">NetverifyUIController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyViewController.html">NetverifyViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Netverify &amp; DV Appearance.html">Netverify &amp; DV Appearance</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetverifyAppearance.html">NetverifyAppearance</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyBaseView.html">NetverifyBaseView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyDocumentSelectionButton.html">NetverifyDocumentSelectionButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyDocumentSelectionHeaderView.html">NetverifyDocumentSelectionHeaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyFallbackButton.html">NetverifyFallbackButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyNavigationBarTitleImageView.html">NetverifyNavigationBarTitleImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyNegativeButton.html">NetverifyNegativeButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyPositiveButton.html">NetverifyPositiveButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyScanOverlayView.html">NetverifyScanOverlayView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Netverify Protocols.html">Netverify Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetverifyCustomScanViewControllerDelegate.html">NetverifyCustomScanViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetverifyUIControllerDelegate.html">NetverifyUIControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetverifyViewControllerDelegate.html">NetverifyViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Netverify Type Definition.html">Netverify Type Definition</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/NetverifyDocumentType.html">NetverifyDocumentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/NetverifyDocumentVariant.html">NetverifyDocumentVariant</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/NetverifyExtractionMethod.html">NetverifyExtractionMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/NetverifyGender.html">NetverifyGender</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/NetverifyMRZFormat.html">NetverifyMRZFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/NetverifyScanMode.html">NetverifyScanMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/NetverifyScanSide.html">NetverifyScanSide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetverifyConfirmationImageView.html">NetverifyConfirmationImageView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>NetverifyCustomScanViewControllerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">NetverifyCustomScanViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>Protocol that has to be implemented when using a NetverifyCustomScanViewController</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayLegalAdvice:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-netverifyCustomScanViewController:shouldDisplayLegalAdvice:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayLegalAdvice:completion:">-netverifyCustomScanViewController:shouldDisplayLegalAdvice:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>During the scanning of some ID cards, a legal advice need to be shown.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">netverifyCustomScanViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">customScanView</span>
+                 <span class="nf">shouldDisplayLegalAdvice</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">message</span>
+                               <span class="nf">completion</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nonnull</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">netverifyCustomScanViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">customScanView</span><span class="p">:</span> <span class="kt"><a href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a></span><span class="p">,</span> <span class="n">shouldDisplayLegalAdvice</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customScanView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>instance of the current scanViewController</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>localized message that hast to be displayed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>block that should be called when user marks the message as read</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/NetverifyCustomScanViewController.h#L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:text:confirmation:retake:"></a>
+                    <a name="//apple_ref/objc/Method/-netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:text:confirmation:retake:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:text:confirmation:retake:">-netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:text:confirmation:retake:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>For some scan views we advice to show a confirmationView after scanning. In this case this delegate method will be called providing the final image.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">netverifyCustomScanViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">customScanView</span>
+    <span class="nf">shouldDisplayConfirmationWithImageView</span><span class="p">:</span>
+        <span class="p">(</span><span class="n"><a href="../Classes/NetverifyConfirmationImageView.html">NetverifyConfirmationImageView</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">view</span>
+                                      <span class="nf">text</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">text</span>
+                              <span class="nf">confirmation</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nullable</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">confirmation</span>
+                                    <span class="nf">retake</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nullable</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">retake</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">netverifyCustomScanViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">customScanView</span><span class="p">:</span> <span class="kt"><a href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a></span><span class="p">,</span> <span class="n">shouldDisplayConfirmationWith</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Classes/NetverifyConfirmationImageView.html">NetverifyConfirmationImageView</a></span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">confirmation</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?,</span> <span class="nv">retake</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customScanView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>instance of the current scanViewController</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>view</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>that draws the image</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>localized message that should be displayed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>confirmation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>block that should be called when user confirmed the image</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>retake</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>block that should be called when user hit retry</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/NetverifyCustomScanViewController.h#L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayNoUSAddressFoundHint:confirmation:"></a>
+                    <a name="//apple_ref/objc/Method/-netverifyCustomScanViewController:shouldDisplayNoUSAddressFoundHint:confirmation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayNoUSAddressFoundHint:confirmation:">-netverifyCustomScanViewController:shouldDisplayNoUSAddressFoundHint:confirmation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>No US Address has been found in the barcode. The scan preview will switch to frontside scanning if available. Check for the changed scan mode and help text. Will only be called on a Fastfill scan.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">netverifyCustomScanViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">customScanView</span>
+        <span class="nf">shouldDisplayNoUSAddressFoundHint</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">message</span>
+                             <span class="nf">confirmation</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nonnull</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">confirmation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">netverifyCustomScanViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">customScanView</span><span class="p">:</span> <span class="kt"><a href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a></span><span class="p">,</span> <span class="n">shouldDisplayNoUSAddressFoundHint</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">confirmation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customScanView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>instance of the current scanViewController</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>localized message that hast to be displayed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>confirmation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>block that should be called when user marks the message as read</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/NetverifyCustomScanViewController.h#L72">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayFlipDocumentHint:confirmation:"></a>
+                    <a name="//apple_ref/objc/Method/-netverifyCustomScanViewController:shouldDisplayFlipDocumentHint:confirmation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayFlipDocumentHint:confirmation:">-netverifyCustomScanViewController:shouldDisplayFlipDocumentHint:confirmation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Triggered when we detect that the user accidentally scanned the front side although backside is required.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">netverifyCustomScanViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">customScanView</span>
+            <span class="nf">shouldDisplayFlipDocumentHint</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">message</span>
+                             <span class="nf">confirmation</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nonnull</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">confirmation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">netverifyCustomScanViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">customScanView</span><span class="p">:</span> <span class="kt"><a href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a></span><span class="p">,</span> <span class="n">shouldDisplayFlipDocumentHint</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">confirmation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customScanView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>instance of the current scanViewController</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>localized message that hast to be displayed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>confirmation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>block that should be called when user marks the message as read</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/NetverifyCustomScanViewController.h#L80">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayBlurHint:"></a>
+                    <a name="//apple_ref/objc/Method/-netverifyCustomScanViewController:shouldDisplayBlurHint:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayBlurHint:">-netverifyCustomScanViewController:shouldDisplayBlurHint:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notify the user that the image is blurry and therefore can&rsquo;t be taken. (Manual image capturing only)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">netverifyCustomScanViewController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">customScanView</span>
+                    <span class="nf">shouldDisplayBlurHint</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">message</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">netverifyCustomScanViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">customScanView</span><span class="p">:</span> <span class="kt"><a href="../Classes/NetverifyCustomScanViewController.html">NetverifyCustomScanViewController</a></span><span class="p">,</span> <span class="n">shouldDisplayBlurHint</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>customScanView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>instance of the current scanViewController</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>localized message that should be displayed</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/NetverifyCustomScanViewController.h#L88">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2018 Jumio Corp. <br />The source code and software available on this website (“Software”) is provided by Jumio Corp. or its affiliated group companies (“Jumio”) &quot;as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage. <br />In any case, your use of this Software is subject to the terms and conditions that apply to your contractual relationship with Jumio. As regards Jumio’s privacy practices, please see our privacy notice available here: <a href="https://www.jumio.com/legal-information/privacy-policy/">https://www.jumio.com/legal-information/privacy-policy/</a></p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

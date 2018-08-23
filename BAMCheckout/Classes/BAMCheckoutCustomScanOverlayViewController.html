@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BAMCheckoutCustomScanOverlayViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Class/BAMCheckoutCustomScanOverlayViewController" class="dashAnchor"></a>
+
+    <a title="BAMCheckoutCustomScanOverlayViewController Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          BAMCheckout Docs
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/Jumio/mobile-sdk-ios">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">BAMCheckout Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      BAMCheckoutCustomScanOverlayViewController Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../BAMCheckout Classes.html">BAMCheckout Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutCardInformation.html">BAMCheckoutCardInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutConfiguration.html">BAMCheckoutConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutViewController.html">BAMCheckoutViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutCustomScanOverlayViewController.html">BAMCheckoutCustomScanOverlayViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../BAMCheckout Appearance.html">BAMCheckout Appearance</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutBaseView.html">BAMCheckoutBaseView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutNegativeButton.html">BAMCheckoutNegativeButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutPositiveButton.html">BAMCheckoutPositiveButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutScanOverlay.html">BAMCheckoutScanOverlay</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BAMCheckoutNavigationBarTitleImageView.html">BAMCheckoutNavigationBarTitleImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../BAMCheckout Protocols.html">BAMCheckout Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BAMCheckoutCustomScanOverlayViewControllerDelegate.html">BAMCheckoutCustomScanOverlayViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BAMCheckoutViewControllerDelegate.html">BAMCheckoutViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../BAMCheckout Type Definition.html">BAMCheckout Type Definition</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/BAMCheckoutCreditCardType.html">BAMCheckoutCreditCardType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../BAMCheckout Type Definition.html#/c:BAMCheckoutCardInformation.h@T@BAMCheckoutCreditCardTypes">BAMCheckoutCreditCardTypes</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>BAMCheckoutCustomScanOverlayViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">BAMCheckoutCustomScanOverlayViewController</span> <span class="p">:</span> <span class="nc">UIViewController</span></code></pre>
+
+                </div>
+              </div>
+            <p>Handles setup and presentation of the BAMCheckout Mobile SDK.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(py)delegate"></a>
+                    <a name="//apple_ref/objc/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(py)delegate">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The delegate that handles the callbacks sent from the ScanViewController</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/BAMCheckoutCustomScanOverlayViewControllerDelegate.html">BAMCheckoutCustomScanOverlayViewControllerDelegate</a></span><span class="o">&gt;</span>
+        <span class="n">delegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/BAMCheckoutCustomScanOverlayViewControllerDelegate.html">BAMCheckoutCustomScanOverlayViewControllerDelegate</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(py)verticalCardFrameOffset"></a>
+                    <a name="//apple_ref/objc/Property/verticalCardFrameOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(py)verticalCardFrameOffset">verticalCardFrameOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the vertical offset of the cardframe overlay from the center.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">verticalCardFrameOffset</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">verticalCardFrameOffset</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)hasFlash"></a>
+                    <a name="//apple_ref/objc/Method/-hasFlash" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)hasFlash">-hasFlash</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method can not be called if scanning is paused or stopped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">hasFlash</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hasFlash</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if a flash is available</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L48">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)hasMultipleCameras"></a>
+                    <a name="//apple_ref/objc/Method/-hasMultipleCameras" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)hasMultipleCameras">-hasMultipleCameras</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method can not be called if scanning is paused or stopped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">hasMultipleCameras</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hasMultipleCameras</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if there is AVCaptureDevicePositionFront and AVCaptureDevicePositionBack</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)isFlashOn"></a>
+                    <a name="//apple_ref/objc/Method/-isFlashOn" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)isFlashOn">-isFlashOn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method can not be called if scanning is paused or stopped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isFlashOn</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isFlashOn</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if the flash is currently on.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)currentCameraPosition"></a>
+                    <a name="//apple_ref/objc/Method/-currentCameraPosition" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)currentCameraPosition">-currentCameraPosition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method can not be called if scanning is paused or stopped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">currentCameraPosition</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">currentCameraPosition</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current camera position.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)toggleFlash"></a>
+                    <a name="//apple_ref/objc/Method/-toggleFlash" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)toggleFlash">-toggleFlash</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Toggles the built-in flash.
+ This method can not be called if scanning is paused or stopped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">toggleFlash</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">toggleFlash</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L72">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)switchCamera"></a>
+                    <a name="//apple_ref/objc/Method/-switchCamera" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)switchCamera">-switchCamera</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Switches between available cameraPositions.
+ This method can not be called if scanning is paused or stopped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">switchCamera</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">switchCamera</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L78">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)retryScan"></a>
+                    <a name="//apple_ref/objc/Method/-retryScan" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)retryScan">-retryScan</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Call this method if you want to restart the capturing process.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">retryScan</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">retryScan</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)stopScan"></a>
+                    <a name="//apple_ref/objc/Method/-stopScan" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)stopScan">-stopScan</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Call this method if you want to stop the capturing process.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopScan</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopScan</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L88">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)cardFrame"></a>
+                    <a name="//apple_ref/objc/Method/-cardFrame" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)BAMCheckoutCustomScanOverlayViewController(im)cardFrame">-cardFrame</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Call this method get the position of the card-frame on the screen.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">CGRect</span><span class="p">)</span><span class="n">cardFrame</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cardFrame</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">CGRect</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A CGRect of the screen where the cardFrame appears and which must not be overlapped by the overlaying UI.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutCustomScanOverlayViewController.h#L94">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2018 Jumio Corp. <br />The source code and software available on this website (“Software”) is provided by Jumio Corp. or its affiliated group companies (“Jumio”) &quot;as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage. <br />In any case, your use of this Software is subject to the terms and conditions that apply to your contractual relationship with Jumio. As regards Jumio’s privacy practices, please see our privacy notice available here: <a href="https://www.jumio.com/legal-information/privacy-policy/">https://www.jumio.com/legal-information/privacy-policy/</a></p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
