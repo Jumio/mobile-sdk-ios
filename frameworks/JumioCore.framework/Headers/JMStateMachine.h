@@ -13,8 +13,8 @@
 
 __attribute__((visibility("default"))) @interface JMStateMachine : NSObject
 
-@property (nonatomic, strong, readonly) JMBaseState*        initialState;
-@property (nonatomic, strong)           JMBaseState*        currentState;
+@property (nonatomic, weak, readonly) JMBaseState*        initialState;
+@property (nonatomic, weak)           JMBaseState*        currentState;
 @property (nonatomic, assign, readonly) BOOL                isActive;
 @property (nonatomic, strong, readonly) NSRecursiveLock*    fireEventLock;
 

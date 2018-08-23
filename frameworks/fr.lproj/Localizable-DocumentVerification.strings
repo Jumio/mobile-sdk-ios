@@ -1,0 +1,60 @@
+/*
+  Localizable-DocumentVerification.strings
+  Copyright © 2018 Jumio Corporation. All rights reserved.
+*/
+
+
+
+// scanView
+"dv.scan-view.navigationItem.title" = "Numérisation";
+"dv.scan-view.confirmation.text" = "Veuillez vérifier que toutes les données sur votre document soient bien lisibles, pas floues et sans reflet";
+"dv.scan-view.confirmation.button.retake" = "REPRENDRE";
+"dv.scan-view.confirmation.button.readable" = "LISIBLE";
+"dv.scan-view.help.document.headline" = "Capturer %@";
+"dv.scan-view.help.document-BS" = "Relevé bancaire";
+"dv.scan-view.help.document-CC" = "Carte bancaire";
+"dv.scan-view.help.document-IC" = "Carte d'assurance";
+"dv.scan-view.help.document-UB" = "Facture d'électricité";
+"dv.scan-view.help.document-CAAP" = "Demande d'avance de fonds";
+"dv.scan-view.help.document-CRC" = "Certificat de résolution d'entreprise";
+"dv.scan-view.help.document-CCS" = "Relevé de carte bancaire";
+"dv.scan-view.help.document-LAG" = "Bail";
+"dv.scan-view.help.document-LOAP" = "Demande de prêt";
+"dv.scan-view.help.document-MOAP" = "Demande d'hypothèque";
+"dv.scan-view.help.document-TR" = "Crédit d'impôt";
+"dv.scan-view.help.document-VT" = "Carte grise";
+"dv.scan-view.help.document-VC" = "Chèque annulé";
+"dv.scan-view.help.document-STUC" = "Carte d'étudiant";
+"dv.scan-view.help.document-HCC" = "Carte de santé";
+"dv.scan-view.help.document-CB" = "Taxe foncière";
+"dv.scan-view.help.document-SENC" = "Carte senior";
+"dv.scan-view.help.document-MEDC" = "Carte d'assurance maladie";
+"dv.scan-view.help.document-BC" = "Certificat de naissance";
+"dv.scan-view.help.document-USSS" = "Carte de sécurité sociale américaine";
+"dv.scan-view.help.document-WWCC" = "Contrôle pour travailler avec des enfants";
+"dv.scan-view.help.document-SS" = "Relevé de pension";
+"dv.scan-view.help.document-TAC" = "Carte d'association professionnelle";
+"dv.scan-view.help.document-SEL" = "Lettre d'inscription scolaire";
+"dv.scan-view.help.document-PB" = "Facture de téléphone";
+"dv.scan-view.help.document-SSC" = "Carte de sécurité sociale";
+"dv.scan-view.help.document-CUSTOM" = "Document";
+
+// submissionView
+"dv.submission-view.navigationItem.title" = "";
+"dv.submission-view.uploading.headline" = "Téléchargement de vos documents en cours. ";
+"dv.submission-view.uploading.description" = "En fonction de votre connexion réseau, cela ne devrait prendre que quelques secondes";
+"dv.submission-view.successful.headline" = "Téléchargement réalisé";
+"dv.submission-view.successful.description" = "";
+
+// errorView
+"dv.error-view.button.retry" = "RÉESSAYER";
+"dv.error-view.button.cancel" = "ANNULER";
+"dv.error-view.error.headline" = "Erreur";
+"dv.error-view.device-is-offline" = "Aucune connexion internet disponible";
+"dv.error-view.authentication-failed" = "Échec de l'authentification";
+"dv.error-view.invalid-key" = "Le certificat n'est plus valide. Veuillez contacter le vendeur de l'application.";
+"dv.error-view.network-problem" = "Nous avons rencontré un problème de communication avec le réseau";
+"dv.error-view.camera-access-disabled.button.title" = "Confirmer";
+"dv.error-view.camera-access-disabled.content" = "%@ a besoin d'avoir accès à votre caméra. Veuillez vérifier vos paramètres de confidentialité.";
+"dv.error-view.camera-access-disabled.title" = "Accès à la caméra désactivé";
+"dv.error-view.cancelled-by-user" = "Annulé par l'utilisateur";

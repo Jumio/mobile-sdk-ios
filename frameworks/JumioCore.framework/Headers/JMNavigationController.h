@@ -28,9 +28,7 @@ typedef enum : NSUInteger {
 @end
 
 
-__attribute__((visibility("default"))) @interface JMNavigationController : UINavigationController{
-    
-}
+__attribute__((visibility("default"))) @interface JMNavigationController : UINavigationController
 
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer* previewLayer;
 

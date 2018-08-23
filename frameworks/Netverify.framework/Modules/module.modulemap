@@ -127,3 +127,8 @@ module Netverify.NetverifyError {
     header "NetverifyError.h"
     export *
 }
+
+module Netverify.NetverifyConfirmationImageView {
+    header "NetverifyConfirmationImageView.h"
+    export *
+}

@@ -11,3 +11,4 @@ __attribute__((visibility("default"))) @interface JMAppearance : NSObject
 + (void) setGeneralAppearanceForClass:(id)containingClass;
 
 @end
+

@@ -6,48 +6,91 @@
 #import <UIKit/UIKit.h>
 
 @class NetverifyCustomScanViewController;
+@class NetverifyConfirmationImageView;
 
-typedef enum {
+/**
+ * Defines the scan mode that is used
+ **/
+typedef NS_ENUM(NSUInteger, NetverifyScanMode) {
+    /** Scan mode is not determined */
     NetverifyScanModeUndefined  = 0,
+    /** Scan mode is MRZ */
     NetverifyScanModeMRZ,
+    /** Scan mode is Barcode */
     NetverifyScanModeBarcode,
+    /** Scan mode is OCR */
     NetverifyScanModeOCR,
+    /** Scan mode is OCR with automatic ID detection */
     NetverifyScanModeOCR_Template,
+    /** Scan mode is Face */
     NetverifyScanModeFace,
+    /** Scan mode is mx^anual image picker */
     NetverifyScanModeManual
-} NetverifyScanMode;
+};
 
-typedef enum {
+/**
+ * Defines the part of the scan step
+ **/
+typedef NS_ENUM(NSUInteger, NetverifyScanSide) {
+    /** Front side of the document */
     NetverifyScanSideFront  = 0,
+    /** Back side of the document */
     NetverifyScanSideBack,
+    /** Selfie */
     NetverifyScanSideFace
-} NetverifyScanSide;
+};
 
-
+/**
+ * Protocol that has to be implemented when using a NetverifyCustomScanViewController
+ **/
 @protocol NetverifyCustomScanViewControllerDelegate <NSObject>
-
 
 /**
  * During the scanning of some ID cards, a legal advice need to be shown.
+ * @param customScanView instance of the current scanViewController
+ * @param message localized message that hast to be displayed
+ * @param completion block that should be called when user marks the message as read
  **/
 - (void) netverifyCustomScanViewController:(NetverifyCustomScanViewController * _Nonnull)customScanView shouldDisplayLegalAdvice:(NSString* _Nonnull) message completion:(void (^_Nonnull)(void))completion;
 
 /**
  * For some scan views we advice to show a confirmationView after scanning. In this case this delegate method will be called providing the final image.
+ * @param customScanView instance of the current scanViewController
+ * @param view that draws the image
+ * @param text localized message that should be displayed
+ * @param confirmation block that should be called when user confirmed the image
+ * @param retake block that should be called when user hit retry
  **/
-- (void) netverifyCustomScanViewController:(NetverifyCustomScanViewController * _Nonnull)customScanView shouldDisplayConfirmationWithImageView:(UIView * _Nonnull)view text:(NSString * _Nonnull)text confirmation:(void (^_Nullable)(void))confirmation retake:(void (^_Nullable)(void))retake;
+- (void) netverifyCustomScanViewController:(NetverifyCustomScanViewController * _Nonnull)customScanView shouldDisplayConfirmationWithImageView:(NetverifyConfirmationImageView * _Nonnull)view text:(NSString * _Nonnull)text confirmation:(void (^_Nullable)(void))confirmation retake:(void (^_Nullable)(void))retake;
+
+/**
+ * No US Address has been found in the barcode. The scan preview will switch to frontside scanning if available. Check for the changed scan mode and help text. Will only be called on a Fastfill scan.
+ * @param customScanView instance of the current scanViewController
+ * @param message localized message that hast to be displayed
+ * @param confirmation block that should be called when user marks the message as read
+ **/
+- (void) netverifyCustomScanViewController:(NetverifyCustomScanViewController* _Nonnull)customScanView shouldDisplayNoUSAddressFoundHint:(NSString* _Nonnull)message confirmation:(void (^_Nonnull)(void))confirmation;
+
+/**
+ * Triggered when we detect that the user accidentally scanned the front side although backside is required.
+ * @param customScanView instance of the current scanViewController
+ * @param message localized message that hast to be displayed
+ * @param confirmation block that should be called when user marks the message as read
+ **/
+- (void) netverifyCustomScanViewController:(NetverifyCustomScanViewController* _Nonnull)customScanView shouldDisplayFlipDocumentHint:(NSString* _Nonnull)message confirmation:(void (^_Nonnull)(void))confirmation;
 
 @optional
 /**
  * Notify the user that the image is blurry and therefore can't be taken. (Manual image capturing only)
+ * @param customScanView instance of the current scanViewController
+ * @param message localized message that should be displayed
  **/
 - (void) netverifyCustomScanViewController:(NetverifyCustomScanViewController * _Nonnull)customScanView shouldDisplayBlurHint:(NSString* _Nonnull) message;
 
 @end
 
 /**
- * @class NetverifyCustomScanViewController
- * @brief View Controller that handles scanning. It can display and handle different scanning methods.
+ * View Controller that handles scanning. It can display and handle different scanning methods.
  **/
 __attribute__((visibility("default"))) @interface NetverifyCustomScanViewController : UIViewController
 
@@ -169,5 +212,16 @@ __attribute__((visibility("default"))) @interface NetverifyCustomScanViewControl
  * @return the scanMode of the current scanViewController
  **/
 - (NetverifyScanMode) currentScanMode;
+
+/**
+ * Sets the vertical offset of the overlay (MRZ, OCR_Card) from the center.
+ **/
+@property (nonatomic, assign) CGFloat verticalRoiOffset;
+
+/**
+ * Call this method to get the position of the region of interest on the screen.
+ * @return A CGRect of the screen coordinates where the region of interest appears and which must not be overlapped by the overlaying UI.
+ **/
+- (CGRect) roiFrame;
 
 @end

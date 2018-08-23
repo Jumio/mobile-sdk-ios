@@ -41,13 +41,13 @@ class VerifyInfoView: UIView {
         retakeButton.addTarget(self, action: #selector(self.retakeHandling), for: UIControlEvents.touchUpInside)
     }
     
-    func confirmationHandling() {
+    @objc func confirmationHandling() {
         guard let _ = _confirmationAction else { return }
         
         _confirmationAction!()
     }
     
-    func retakeHandling() {
+    @objc func retakeHandling() {
         for action in _retakeActions {
             action()
         }

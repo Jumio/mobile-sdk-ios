@@ -53,7 +53,7 @@
 "netverify.scan-help-view.headline.capture-driver-license-inside" = "Capture Driver License Inside";
 "netverify.scan-help-view.headline.capture-driver-license-outside" = "Capture Driver License Outside";
 "netverify.scan-help-view.steps" = "Step %lu of %lu";
-"netverify.scan-help-view.help-text-mrz.short" = "Align your document with the highlighted area of the overlay until it is captured automatically";
+"netverify.scan-help-view.help-text-mrz.short" = "Place your document within the frame until it is captured automatically";
 "netverify.scan-help-view.help-text-mrz.full" = "Place your document within the frame as it is shown in the animation above. The capturing happens automatically.\n\nEnsure that all data is readable and avoid reflections.";
 "netverify.scan-help-view.help-text-template-matcher.short" = "Place your document in front of the camera until it is captured automatically";
 "netverify.scan-help-view.help-text-template-matcher.full" = "Place your document in front of the camera as it is shown in the animation above. The capturing happens automatically.\n\nEnsure that all data is readable and avoid reflections.";
@@ -83,8 +83,8 @@
 "netverify.error.user-address-missing.title" = "Scan front";
 "netverify.error.user-address-missing" = "The barcode of your document didn´t contain your address, turn your document and scan the front.";
 "netverify.error-view.address-missing.button.continue.title" = "TAP TO CONTINUE";
-"netverify.error.face-on-backside.title" = "Scan back";
-"netverify.error.face-on-backside" = "You recently scanned the front of your document.\nPlease flip your document and scan the back.";
+"netverify.error.flip-document.title" = "Scan back";
+"netverify.error.flip-document" = "You recently scanned the front of your document.\nPlease flip your document and scan the back.";
 "netverify.error-view.error.header.title" = "Error";
 "netverify.error-view.button.retry.title" = "RETRY";
 "netverify.error-view.button.cancel.title" = "CANCEL";

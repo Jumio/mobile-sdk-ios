@@ -12,7 +12,7 @@ __attribute__((visibility("default"))) @protocol JMNetworkStateImplementation <N
 @required
 - (void) willEnterStatePendingBlockImplementation;
 - (void) didEnterStateErrorBlock;
-- (void) didEnterStateSucessBlock;
+- (void) didEnterStateSuccessBlock;
 
 @end
 

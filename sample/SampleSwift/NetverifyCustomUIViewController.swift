@@ -6,10 +6,10 @@
 
 import Netverify
 
-class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NetverifyUIControllerDelegate, NetverifyCustomScanViewControllerDelegate {
-
+class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NetverifyUIControllerDelegate, NetverifyCustomScanViewControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var captureControlsView: UIView!
     @IBOutlet weak var mainTitleLabel: UILabel!
     
@@ -32,6 +32,16 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         // Show loading circle
         if countries.count == 0 {
             activityIndicator.startAnimating()
+        }
+        
+        self.navigationController?.delegate = self
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        if viewController != self {
+            self.netverifyUIController?.cancel()
+            self.netverifyUIController?.destroy()
+            self.netverifyUIController = nil
         }
     }
     
@@ -78,7 +88,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view(==\(captureInfoView.getContentHeight()))]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": captureInfoView]))
         netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": captureInfoView]))
     }
-
+    
     // MARK: NetverifyUIControllerDelegate
     func netverifyUIController(_ netverifyUIController: NetverifyUIController, didFinishInitializingWithError error: NetverifyError?) {
     }
@@ -112,6 +122,9 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         
         print("didDetermineNextScanViewController")
         
+        // Sets the vertical offset of the overlay (MRZ, OCR_Card) from the center.
+        // scanViewController.verticalRoiOffset = 120.0
+        
         scanViewController.customScanViewControllerDelegate = self
         
         self.navigationController?.present(scanViewController, animated: true) {
@@ -123,7 +136,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
             }
             
             // Add helper views for the camera capture
-            if scanViewController.currentScanMode() == NetverifyScanModeFace {
+            if scanViewController.currentScanMode() == NetverifyScanMode.face {
                 self.addFaceMacherHelpersViews(scanViewController)
             } else {
                 self.addCaptureHelperViews(scanViewController, isFallback: scanViewController.isFallbackAvailable())
@@ -168,8 +181,10 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         
         // Update verification finished view when the data from the captured document was captured
         verificationFinishedView!.setup(documentData: documentData, doneHandler: {() -> Void in
-            netverifyUIController.cancel()
             self.navigationController?.popViewController(animated: true)
+            
+            netverifyUIController.destroy()
+            self.netverifyUIController = nil
         })
     }
     
@@ -193,7 +208,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         customScanView.present(alert, animated: true, completion: nil)
     }
     
-    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayConfirmationWithImageView view: UIView, text: String, confirmation: (() -> Void)?, retake: (() -> Void)? = nil) {
+    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayConfirmationWith view: NetverifyConfirmationImageView, text: String, confirmation: (() -> Void)?, retake: (() -> Void)? = nil) {
         print("show confirmation view")
         
         // Document was captured and the user needs to verify if the captured image is valid
@@ -212,6 +227,30 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view":view]))
     }
     
+    /**
+     * No US Address has been found in the barcode. The scan preview will switch to frontside scanning if available. Check for the changed scan mode and help text. Will only be called on a Fastfill scan.
+     **/
+    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayNoUSAddressFoundHint message: String, confirmation: @escaping (() -> Void)) {
+        print("netverifyUIController shouldDisplayNoUSAddressFoundHint: \(message)")
+        let alert = UIAlertController(title: "Read This:", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "I READ THIS", style: .default, handler: {(_: UIAlertAction) in
+            confirmation()
+        }))
+        customScanView.present(alert, animated: true, completion: nil)
+    }
+    
+    /**
+     * Triggered when a face is found on the backside of an ID or Driver License. This indicates, that the user accidentally scanned the front side with the face image.
+     **/
+    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayFlipDocumentHint message: String, confirmation: @escaping (() -> Void)) {
+        print("netverifyUIController shouldDisplayFlipDocumentHint: \(message)")
+        let alert = UIAlertController(title: "Read This:", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "I READ THIS", style: .default, handler: {(_: UIAlertAction) in
+            confirmation()
+        }))
+        customScanView.present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countries.count
@@ -227,49 +266,49 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let country = countries[indexPath.row]
         let alert = UIAlertController(title: country.name, message: "Documents of \(country.name)", preferredStyle: .actionSheet)
-
+        
         let documents = country.documents
         for document in documents {
             var actionTitle = ""
-
+            
             // Determine docuemnt type
             switch document.type {
-                case NetverifyDocumentTypePassport:
-                    actionTitle = "Passport"
-                case NetverifyDocumentTypeIdentityCard:
-                    actionTitle = "Identity Card"
-                case NetverifyDocumentTypeVisa:
-                    actionTitle = "Visa"
-                case NetverifyDocumentTypeDriverLicense:
-                    actionTitle = "Driver License"
-                default:
-                    actionTitle = "Not recognised"
+            case .passport:
+                actionTitle = "Passport"
+            case .identityCard:
+                actionTitle = "Identity Card"
+            case .visa:
+                actionTitle = "Visa"
+            case .driverLicense:
+                actionTitle = "Driver License"
+            default:
+                actionTitle = "Not recognised"
             }
-
+            
             // Determine document variant
             if document.supportsPaperVariant() {
                 alert.addAction(UIAlertAction(title: "\(actionTitle) (Other format)", style: .default, handler: {(_: UIAlertAction!) in
                     self.currentDocumentType = document.type
-                    document.selectedVariant = NetverifyDocumentVariantPaper
+                    document.selectedVariant = NetverifyDocumentVariant.paper
                     self.netverifyUIController?.setup(with: document)
                     self.hideAndCleanupTableView()
                 }))
             }
-
+            
             if document.supportsPlasticVariant() {
                 alert.addAction(UIAlertAction(title: "\(actionTitle) (Plastic Card)", style: .default, handler: {(_: UIAlertAction!) in
                     self.currentDocumentType = document.type
-                    document.selectedVariant = NetverifyDocumentVariantPlastic
+                    document.selectedVariant = NetverifyDocumentVariant.plastic
                     self.netverifyUIController?.setup(with: document)
                     self.hideAndCleanupTableView()
                 }))
             }
-
+            
             tableView.deselectRow(at: indexPath, animated: true)
         }
-
+        
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-
+        
         self.present(alert, animated: true)
     }
     
@@ -283,6 +322,8 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         self.netverifyUIController?.cancel()
         self.hideAndCleanupTableView()
         self.navigationController?.popViewController(animated: true)
+        self.netverifyUIController?.destroy()
+        self.netverifyUIController = nil
     }
     
     @IBAction func toggleCamera_onTouchUp() {
@@ -330,8 +371,8 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         // Height constraint
         netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view(==44)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": cancelBtn]))
     }
-
-    func shutter_onTouchUp () {
+    
+    @objc func shutter_onTouchUp () {
         self.currentScanView?.takeImage()
     }
     
@@ -346,3 +387,4 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         self.tableView.reloadData()
     }
 }
+

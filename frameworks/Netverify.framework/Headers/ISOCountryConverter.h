@@ -7,8 +7,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- @class ISOCountryConverter
- @brief Convert ISO 3166-1 alpha-3 into alpha-2 country codes and vice versa.
+ * ISOCountryConverter should be used to convert ISO 3166-1 alpha-3 into alpha-2 country codes and vice versa.
  */
 __attribute__((visibility("default"))) @interface ISOCountryConverter : NSObject
 

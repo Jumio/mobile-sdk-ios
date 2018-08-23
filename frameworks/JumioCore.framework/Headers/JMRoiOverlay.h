@@ -37,6 +37,8 @@ __attribute__((visibility("default"))) @interface JMRoiOverlay : JMBaseView {
 @property (nonatomic, strong) JMRoiSettings * roiSettings;
 @property (nonatomic, assign, readonly) UIEdgeInsets contentInset;
 
+@property (nonatomic, assign) CGFloat yOffsetCache;
+
 - (instancetype)initWithRoiAspectRatio:(CGFloat)aspectRatio;
 - (void)setRoiAspectRatio:(CGFloat)aspectRatio;
 - (void)setContentInsets:(UIEdgeInsets)insets;
@@ -51,5 +53,7 @@ __attribute__((visibility("default"))) @interface JMRoiOverlay : JMBaseView {
 - (void)updateConstraintsFromLandscapeConstraints:(NSArray *)constraints;
 
 - (void)setRoiOffset:(CGPoint)offset;
+- (CGRect)roiBounds;
+- (CGFloat)normalizeOffset:(CGFloat)offset;
 
 @end

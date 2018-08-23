@@ -8,18 +8,26 @@
 
 
 # Release notes
-SDK version: 2.12.0
+SDK version: 2.13.0
+
+#### Announcement
+*This is the last version which supports iOS 9. With version 2.14.0 we are going to remove iOS 9 support, minimum version will be iOS 10*
 
 #### Changes
-* Added support for 5 new default languages (Spanish, French, German, Chinese simple, Dutch) [Netverify/Fastfill, Document Verification]
-* Improved image quality checks to reduce the number of blurred images [Netverify/Fastfill, Document Verification]
-* Deprecated additionalInformation parameter [Netverify/Fastfill, Document Verification]
-* Added new parameter enableExtraction to activate data extraction of documents [Document Verification]
+* Major memory improvements which reduce the memory consumption and increase overall SDK stability [Netverify/Fastfill]
+* Reduced SDK size by about 10% [Netverify/Fastfill]
+* Added support for 5 new languages (Spanish, French, German, Chinese simple, Dutch) [Document Verification]
+* Added method to detect jailbroken devices [Netverify/Fastfill, Document Verification, BAM Checkout]
+* New code documentation for all public classes [Netverify/Fastfill, Document Verification, BAM Checkout]
+* Added possibility to adjust the vertical alignment of the capture overlay [Netverify/Fastfill Custom UI]
+* Deprecated middleName parameter - middle names will now be merged into the firstName field to be consistent with all other aquisition channels [Netverify/Fastfill]
+* Updated BIN range list [BAM Checkout]
 
 #### Fixes
-* Fixed handling of certain US/CAN barcodes [Netverify/Fastfill]
+* Fixed various crashes in Umoove framework [Netverify]
+* Fixed a bug in the data parsing of  some older Ohio Driving Licenses [Netverify/Fastfill]
+* Fixed a network problem which could occur under rare circumstances [Document Verification]
 * Various smaller bug fixes/improvements [Netverify/Fastfill, Document Verification, BAM Checkout]
-
 
 # Basic Setup
 
@@ -33,7 +41,7 @@ The following architectures are supported in the SDK:
 - x86_64 for iOS simulator
 
 ## App thinning and size matters
-The iOS 9 feature app thinning (app slicing, bitcode and on-demand resources) is supported within the SDK. For app slicing, the image resources are placed within a xcassets collection. For Fastfill & Netverify, some resource files (e.g. images) are  loaded on demand.
+App thinning (app slicing, bitcode and on-demand resources) is supported within the SDK. For app slicing, the image resources are placed within a xcassets collection. For Fastfill & Netverify, some resource files (e.g. images) are loaded on demand.
 
 In case you experience a build error when building your app in Debug configuration and aim to run it on a device, we advise to temporarily disable the build setting "Enable Bitcode" in your Xcode project.
 
@@ -58,10 +66,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>2.12' # If you use BAM Checkout along Netverify in your app. Frameworks supporting device architectures only.
+pod 'JumioMobileSDK', '~>2.13' # If you use BAM Checkout along Netverify in your app. Frameworks supporting device architectures only.
 
-pod 'JumioMobileSDK/Netverify', '~>2.12' # Specify Netverify as subspec to only use Netverify, Fastfill or Document Verification
-pod 'JumioMobileSDK/BAMCheckout', '~>2.12' # Specify BAMCheckout as subspec to only use BAM Checkout
+pod 'JumioMobileSDK/Netverify', '~>2.13' # Specify Netverify as subspec to only use Netverify, Fastfill or Document Verification
+pod 'JumioMobileSDK/BAMCheckout', '~>2.13' # Specify BAMCheckout as subspec to only use BAM Checkout
 ```
 
 Install the pod to your project via Terminal:
@@ -76,10 +84,10 @@ The following table shows which frameworks have to be added:
 
 | Product | Size | JumioCore | BAMCheckout | Netverify | MicroBlink | UMoove |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Fastfill & Netverify | 17 MB | x |  | x | x | x |
+| Fastfill & Netverify | 15 MB | x |  | x | x | x |
 | Document Verification | 7.5 MB | x |  | x |  |  |
 | BAM Checkout credit card scanning | 7 MB | x | x |  |  |  |
-| BAM Checkout credit card<br/>+ ID scanning | 23 MB | x | x | x | x | x |
+| BAM Checkout credit card<br/>+ ID scanning | 21 MB | x | x | x | x | x |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project. For Document Verification, the frameworks `MicroBlink` and `UMoove` can be removed but this requires Bitcode to be disabled in your app.
 
@@ -110,7 +118,7 @@ Make sure that the following Xcode build settings in your app are set accordingl
 All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language, add it to your app project and mark it as Localizable. This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
 Note: If using CocoaPods, the original file is located under `/Pods/JumioMobileSDK`.
 
-For our products Fastfill & Netverify we are providing translations for six individual languages for your convenience:
+For our products Netverify/Fastfill and Document Verification we are providing translations for six individual languages for your convenience:
 * Chinese (Simplified)
 * Dutch
 * English
@@ -130,7 +138,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.11.0 of the Jumio Mobile SDK is supported until 2018-09-19.
+The previous release version 2.12.0 of the Jumio Mobile SDK is supported until 2018-11-23.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 
@@ -141,5 +149,8 @@ If you have any questions regarding our implementation guide please contact Jumi
 If you want to enable two-factor authentication for your Jumio merchant backend please contact us at https://support.jumio.com. Once enabled, users will be guided through the setup upon their first login to obtain a security code using the "Google Authenticator" app.
 
 ## Copyright
-
 &copy; Jumio Corp. 268 Lambert Avenue, Palo Alto, CA 94306
+
+The source code and software available on this website (“Software”) is provided by Jumio Corp. or its affiliated group companies (“Jumio”) "as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage.
+In any case, your use of this Software is subject to the terms and conditions that apply to your contractual relationship with Jumio. As regards Jumio’s privacy practices, please see our privacy notice available here: [Privacy Policy](https://www.jumio.com/legal-information/privacy-policy/).
+

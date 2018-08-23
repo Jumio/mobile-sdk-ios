@@ -2,6 +2,14 @@
 
 # Transition guide for Fastfill & Netverify
 
+## 2.13.0
+
+#### Enums
+All enums were replaced by NS_ENUM to have better Swift support. When using Swift this Version will break when using [`NetverifyDocumentType`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentType.html), [`NetverifyDocumentVariant`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentVariant.html), [`NetverifyExtractionMethod`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyExtractionMethod.html), [`NetverifyGender`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyGender.html), [`NetverifyMRZFormat`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyMRZFormat.html), [`NetverifyScanMode`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyScanMode.html) or [`NetverifyScanSide`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyScanSide.html).
+
+#### Changes in Localizable-Netverify.strings
+changed values in regards to error texts
+
 ## 2.12.0
 
 #### Localizable Strings
@@ -34,7 +42,7 @@ The framework binaries are available with support for device and simulator archi
 The Jumio specific source in your Podfile is no longer needed. From now on, `JumioMobileSDK` is the only pod available. `JumioMobileSDK-FAT` is not offered anymore.
 
 #### Exception handling in Swift
-For initialization of NetverifyViewController in Swift, you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the `NetverifyViewController` instance will be nil and the SDK is not usable. See our [sample implementation](/sample/SampleSwift/NetverifyStartViewController.swift) on how this is applied.
+For initialization of NetverifyViewController or NetverifyUIController in Swift, you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the `NetverifyViewController` or `NetverifyUIController` instance will be nil and the SDK is not usable. See our [sample implementation](/sample/SampleSwift/NetverifyStartViewController.swift) on how this is applied.
 
 #### Changes in Localizable-Netverify.strings
 Removed some unused values.

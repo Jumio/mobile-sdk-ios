@@ -7,8 +7,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- * @class NetverifyError
- * @brief Model class that describes an error situation with a code and a message. Please always include the whole code when filing an error related issue to our support team.  Please find more information in our Mobile SDK Github Guides.
+ * Model class that describes an error situation with a code and a message. Please always include the whole code when filing an error related issue to our support team.  Please find more information in our Mobile SDK Github Guides at https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_netverify-fastfill.md#error .
  **/
 __attribute__((visibility("default"))) @interface NetverifyError : NSObject
 

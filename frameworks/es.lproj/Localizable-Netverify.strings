@@ -83,8 +83,8 @@
 "netverify.error.user-address-missing.title" = "Escanear frontal";
 "netverify.error.user-address-missing" = "El código de barras de su documento no incluye su dirección. Déle la vuelta al documento y escanee el frontal";
 "netverify.error-view.address-missing.button.continue.title" = "PULSE PARA CONTINUAR";
-"netverify.error.face-on-backside.title" = "Escanear reverso";
-"netverify.error.face-on-backside" = "Acaba de escanear el frontal de su documento.\n\nDéle la vuelta al documento y escanee el reverso.";
+"netverify.error.flip-document.title" = "Escanear reverso";
+"netverify.error.flip-document" = "Acaba de escanear el frontal de su documento.\n\nDéle la vuelta al documento y escanee el reverso.";
 "netverify.error-view.error.header.title" = "Error";
 "netverify.error-view.button.cancel.title" = "CANCELAR";
 "netverify.error-view.button.retry.title" = "REINTENTAR";

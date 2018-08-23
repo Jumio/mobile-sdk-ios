@@ -14,12 +14,13 @@ __attribute__((visibility("default"))) @interface JMBaseState : NSObject <NSCopy
 @property (nonatomic, strong, readonly) NSString*       name;
 @property (nonatomic, weak)             JMStateMachine* stateMachine;
 
-@property (nonatomic, copy) void (^willEnterStateBlock)(JMStateTransition *);
-@property (nonatomic, copy) void (^didEnterStateBlock)(JMStateTransition *);
-@property (nonatomic, copy) void (^willExitStateBlock)(JMStateTransition *);
-@property (nonatomic, copy) void (^didExitStateBlock)(JMStateTransition *);
-
+@property (nonatomic, strong) void (^willEnterStateBlock)(JMStateTransition *);
+@property (nonatomic, strong) void (^didEnterStateBlock)(JMStateTransition *);
+@property (nonatomic, strong) void (^willExitStateBlock)(JMStateTransition *);
+@property (nonatomic, strong) void (^didExitStateBlock)(JMStateTransition *);
 
 - (instancetype)initWithName:(NSString*)name;
+
+- (void) cleanUp;
 
 @end

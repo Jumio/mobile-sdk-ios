@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54042A7A1FEBDECA00626D55 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; };
 		54042A841FEBDED400626D55 /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; };
 		54042A851FEBDED400626D55 /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A861FEBDED400626D55 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; };
@@ -143,6 +142,11 @@
 		54D66D5E206D54C6009640C2 /* VerifyInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VerifyInfoView.xib; path = "SampleSwift/Netverify-CustomUI/VerifyInfoView.xib"; sourceTree = SOURCE_ROOT; };
 		54D66D5F206D54C6009640C2 /* VerifyInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerifyInfoView.swift; path = "SampleSwift/Netverify-CustomUI/VerifyInfoView.swift"; sourceTree = SOURCE_ROOT; };
 		54D66D66206D54D0009640C2 /* NetverifyCustomUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetverifyCustomUIViewController.swift; path = SampleSwift/NetverifyCustomUIViewController.swift; sourceTree = SOURCE_ROOT; };
+		54F270E7210B0CF20070FE65 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "../frameworks/de.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
+		54F270E8210B0CF80070FE65 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "../frameworks/fr.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
+		54F270E9210B0CFB0070FE65 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../frameworks/zh-Hans.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
+		54F270EA210B0CFD0070FE65 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "../frameworks/es.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
+		54F270EB210B0CFF0070FE65 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "../frameworks/nl.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
 		77CCE6021FD93EE8000701C6 /* ObjcExceptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjcExceptionHelper.h; path = SampleSwift/ObjcExceptionHelper.h; sourceTree = SOURCE_ROOT; };
 		77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjcExceptionHelper.m; path = SampleSwift/ObjcExceptionHelper.m; sourceTree = SOURCE_ROOT; };
 		9694C9A3206156E9004CC4BA /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BAMCheckout.framework; sourceTree = "<group>"; };
@@ -174,7 +178,6 @@
 				54042A881FEBDED400626D55 /* MicroBlink.framework in Frameworks */,
 				54042A8C1FEBDED400626D55 /* Umoove.framework in Frameworks */,
 				54042A861FEBDED400626D55 /* JumioCore.framework in Frameworks */,
-				54042A7A1FEBDECA00626D55 /* MicroBlink.framework in Frameworks */,
 				54042A841FEBDED400626D55 /* BAMCheckout.framework in Frameworks */,
 				54042A8A1FEBDED400626D55 /* Netverify.framework in Frameworks */,
 			);
@@ -419,12 +422,12 @@
 		EE01EEDF1924A3E200B7CC49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Jumio Corporation";
 				TargetAttributes = {
 					547B46CA1F46F1FE0029781C = {
 						DevelopmentTeam = JC7JKY534B;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0940;
 					};
 					EE01EEE61924A3E200B7CC49 = {
 						DevelopmentTeam = JC7JKY534B;
@@ -570,6 +573,11 @@
 			isa = PBXVariantGroup;
 			children = (
 				545F7A5C20A1E1B1007EBCE7 /* en */,
+				54F270E7210B0CF20070FE65 /* de */,
+				54F270E8210B0CF80070FE65 /* fr */,
+				54F270E9210B0CFB0070FE65 /* zh-Hans */,
+				54F270EA210B0CFD0070FE65 /* es */,
+				54F270EB210B0CFF0070FE65 /* nl */,
 			);
 			name = "Localizable-DocumentVerification.strings";
 			sourceTree = "<group>";
@@ -617,14 +625,15 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.${PRODUCT_NAME:rfc1034identifier}";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jumio.SampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9d4a5243-fa56-4f7d-b0be-f64a81256e6d";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentEnterprise;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SampleSwift/Sample-BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -656,13 +665,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.${PRODUCT_NAME:rfc1034identifier}";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jumio.SampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionEnterprise;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SampleSwift/Sample-BridgingHeader.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -682,12 +692,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -738,12 +750,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

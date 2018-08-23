@@ -2,6 +2,12 @@
 
 # Transition guide for Document Verification
 
+## 2.13.0
+
+#### Changes in Localizable-DocumentVerification.strings
+- In addition to English, strings are now translated to Chinese (Simplified), Dutch, French, German and Spanish. Each .strings file can now be found in the specific *.lproj folders.
+- Minor adaptions in the english version for the help view headline in regards to the new languages supported for localisation.
+
 ## 2.12.0
 
 #### Additional information property removed

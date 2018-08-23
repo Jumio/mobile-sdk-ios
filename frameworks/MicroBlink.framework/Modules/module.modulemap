@@ -1,6 +1,6 @@
 framework module MicroBlink {
-  umbrella header "MicroBlink.h"
+    umbrella header "MicroBlink.h"
 
-  export *
-  module * { export * }
+    export *
+    module * { export * }
 }

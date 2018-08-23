@@ -11,8 +11,7 @@
 @class NetverifyDocument;
 
 /**
- * @class NetverifyUIController
- * @brief Main controller that defines the workflow of Fastfill and Netverify.
+ * Main controller that defines the workflow of Fastfill and Netverify.
  **/
 __attribute__((visibility("default"))) @interface NetverifyUIController : NSObject
 
@@ -52,5 +51,10 @@ __attribute__((visibility("default"))) @interface NetverifyUIController : NSObje
  * @return a sessionID if sendDebugInfoToJumio is set to YES.
  **/
 - (NSUUID* _Nullable) debugID;
+
+/**
+ * Call this method to destroy the NetverifyUIController instance, before you set it to nil;
+ */
+- (void) destroy;
 
 @end

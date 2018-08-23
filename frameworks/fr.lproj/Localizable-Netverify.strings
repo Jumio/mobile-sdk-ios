@@ -83,8 +83,8 @@
 "netverify.error.user-address-missing.title" = "Numériser le recto";
 "netverify.error.user-address-missing" = "Le code-barres de votre document ne contenait pas votre adresse, veuillez retourner votre document et numériser le recto";
 "netverify.error-view.address-missing.button.continue.title" = "APPUYER POUR CONTINUER";
-"netverify.error.face-on-backside.title" = "Numérisez le verso";
-"netverify.error.face-on-backside" = "Vous avez déjà numérisé le recto de votre document.\n\nVeuillez le retourner et numériser le verso.";
+"netverify.error.flip-document.title" = "Numérisez le verso";
+"netverify.error.flip-document" = "Vous avez déjà numérisé le recto de votre document.\n\nVeuillez le retourner et numériser le verso.";
 "netverify.error-view.error.header.title" = "Erreur";
 "netverify.error-view.button.retry.title" = "RÉESSAYER";
 "netverify.error-view.button.cancel.title" = "ANNULER";

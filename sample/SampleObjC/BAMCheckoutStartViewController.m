@@ -7,6 +7,7 @@
 #import "BAMCheckoutStartViewController.h"
 #import "CustomScanOverlayViewController.h"
 @import BAMCheckout;
+#import <JumioCore/JMDeviceInfo.h>
 
 @interface BAMCheckoutStartViewController () <BAMCheckoutViewControllerDelegate>
 @property (nonatomic, strong) BAMCheckoutViewController *bamCheckoutViewController;
@@ -15,6 +16,11 @@
 @implementation BAMCheckoutStartViewController
 
 - (void) createBAMCheckoutController{
+    
+    //prevent SDK to be initialized on Jailbroken devices
+    if ([JMDeviceInfo isJailbrokenDevice]) {
+        return;
+    }
     
     //Setup the Configuration for BAMCheckout
     BAMCheckoutConfiguration *config = [BAMCheckoutConfiguration new];

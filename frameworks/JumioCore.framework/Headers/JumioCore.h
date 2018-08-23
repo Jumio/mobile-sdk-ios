@@ -60,3 +60,6 @@ FOUNDATION_EXPORT const unsigned char JumioCoreVersionString[];
 #import <JumioCore/JMStateMachineController.h>
 
 #import <JumioCore/JMServerTaskLogInfo.h>
+
+#import <JumioCore/JMCaptureSessionMocker.h>
+#import <JumioCore/JMScanMockHelper.h>

@@ -11,6 +11,12 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
     var documentVerificationViewController:DocumentVerificationViewController?
     
     func createDocumentVerificationController() -> Void {
+        
+        //prevent SDK to be initialized on Jailbroken devices
+        if JMDeviceInfo.isJailbrokenDevice() {
+            return
+        }
+        
         //Setup the Configuration for DocumentVerification
         let config:DocumentVerificationConfiguration = DocumentVerificationConfiguration()
         //Provide your API token
@@ -76,7 +82,7 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         //The API from Netverify is re-used to apply visual customization for DocumentVerification. Please have a look at the above section where DocumentVerificationViewController is created and configured.
         
         //You can get the current SDK version using the method below.
-        //print("%@", self.documentVerificationViewController.sdkVersion())
+        print("\(self.documentVerificationViewController?.sdkVersion() ?? "")")
     }
     
     @IBAction func startDocumentVerification() -> Void {
@@ -85,7 +91,7 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         if let documentVC = self.documentVerificationViewController {
             self.present(documentVC, animated: true, completion: nil)
         } else {
-            print("DocumentVerificationViewController is nil")
+            showAlert(withTitle: "DocumentVerification Mobile SDK", message: "DocumentVerificationViewController is nil")
         }
     }
     
@@ -110,10 +116,8 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
      * @param DocumentVerificationViewController The DocumentVerificationViewController instance
      * @param error The error describing the cause of the problematic situation
      **/
-    func documentVerificationViewController(_ documentVerificationViewController: DocumentVerificationViewController, didFinishWithError error: DocumentVerificationError?) {
-        if let maybeError = error {
-            print("DocumentVerificationViewController cancelled with error: %@", maybeError.message)
-        }
+    func documentVerificationViewController(_ documentVerificationViewController: DocumentVerificationViewController, didFinishWithError error: DocumentVerificationError) {
+            print("DocumentVerificationViewController cancelled with error: %@", error.message)
         
         //Dismiss the SDK
         self.dismiss(animated: true, completion: nil)

@@ -10,6 +10,9 @@
 
 @class BAMCheckoutCustomScanOverlayViewController;
 
+/**
+ *  Protocol that has to be implemented when using BAMCheckoutCustomScanOverlayViewController
+ **/
 __attribute__((visibility("default"))) @protocol BAMCheckoutCustomScanOverlayViewControllerDelegate <NSObject>
 
 @required
@@ -23,7 +26,9 @@ __attribute__((visibility("default"))) @protocol BAMCheckoutCustomScanOverlayVie
 
 @end
 
-
+/**
+ * Handles setup and presentation of the BAMCheckout Mobile SDK.
+ */
 __attribute__((visibility("default"))) @interface BAMCheckoutCustomScanOverlayViewController : UIViewController
 
 /**

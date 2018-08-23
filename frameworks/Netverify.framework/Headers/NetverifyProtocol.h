@@ -13,6 +13,9 @@
 @class NetverifyCountry;
 @class NetverifyCustomScanViewController;
 
+/**
+ * Protocol that has to be implemented when using NetverifyViewController
+ **/
 __attribute__((visibility("default"))) @protocol NetverifyViewControllerDelegate <NSObject>
 @optional
 /**
@@ -42,6 +45,9 @@ __attribute__((visibility("default"))) @protocol NetverifyViewControllerDelegate
 @end
 
 
+/**
+ * Protocol that has to be implemented when using NetverifyUIControllerDelegate.
+ **/
 __attribute__((visibility("default"))) @protocol NetverifyUIControllerDelegate <NSObject>
 @required
 
@@ -75,7 +81,7 @@ __attribute__((visibility("default"))) @protocol NetverifyUIControllerDelegate <
 - (void) netverifyUIControllerDidCaptureAllParts: (NetverifyUIController* _Nonnull) netverifyUIController;
 
 /**
- * Called whenever an error (due to network, ressources, permissions, ...) occured. Please find more information about this in our gihub implementation guide.
+ * Called whenever an error (due to network, ressources, permissions, ...) occured. Please find more information about this in our gihub implementation guide at https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_netverify-fastfill.md#error .
  * @param netverifyUIController the controller instance
  * @param error holds more detailed information about the error reason
  * @param retryPossible defines if displaying a retry-button makes sense or if the error is final

@@ -10,7 +10,7 @@
 "dv.scan-view.confirmation.text" = "Make sure that all data on your document is fully visible, glare free and not blurred";
 "dv.scan-view.confirmation.button.retake" = "RETAKE";
 "dv.scan-view.confirmation.button.readable" = "READABLE";
-"dv.scan-view.help.document.headline.prefix" = "Capture";
+"dv.scan-view.help.document.headline" = "Capture %@";
 "dv.scan-view.help.document-BS" = "Bank statement";
 "dv.scan-view.help.document-CC" = "Credit card";
 "dv.scan-view.help.document-IC" = "Insurance card";

@@ -26,4 +26,5 @@
 #import <Netverify/NetverifyDocument.h>
 #import <Netverify/NetverifyProtocol.h>
 #import <Netverify/NetverifyUIController.h>
+#import <Netverify/NetverifyConfirmationImageView.h>
 

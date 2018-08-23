@@ -12,6 +12,11 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
     
     func createBAMCheckoutController() -> Void {
         
+        //prevent SDK to be initialized on Jailbroken devices
+        if JMDeviceInfo.isJailbrokenDevice() {
+            return
+        }
+        
         //Setup the Configuration for BAMCheckout
         let config:BAMCheckoutConfiguration = BAMCheckoutConfiguration()
         //Provide your API token
@@ -32,16 +37,15 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //config.merchantReportingCriteria = "YOURREPORTINGCRITERIA"
         
         //To restrict supported card types, pass a bitmask of BAMCheckoutCreditCardTypes to the property supportedCreditCardTypes.
-        //let cardTypes:BAMCheckoutCreditCardTypes = BAMCheckoutCreditCardTypes(BAMCheckoutCreditCardTypeAll.rawValue)
-        //let cardTypes:UInt32 = BAMCheckoutCreditCardTypeAmericanExpress.rawValue | BAMCheckoutCreditCardTypeChinaUnionPay.rawValue | BAMCheckoutCreditCardTypeDiners.rawValue | BAMCheckoutCreditCardTypeDiscover.rawValue | BAMCheckoutCreditCardTypeJCB.rawValue | BAMCheckoutCreditCardTypeMasterCard.rawValue | BAMCheckoutCreditCardTypeVisa.rawValue
-        //let combined = UInt(cardTypes)
-        //config.supportedCreditCardTypes = combined
+        //let cardTypes:BAMCheckoutCreditCardTypes = BAMCheckoutCreditCardTypes(BAMCheckoutCreditCardType.all.rawValue)
+        //let cardTypes:BAMCheckoutCreditCardTypes = BAMCheckoutCreditCardTypes(BAMCheckoutCreditCardType.americanExpress.rawValue | BAMCheckoutCreditCardType.chinaUnionPay.rawValue | BAMCheckoutCreditCardType.diners.rawValue | BAMCheckoutCreditCardType.discover.rawValue | BAMCheckoutCreditCardType.JCB.rawValue | BAMCheckoutCreditCardType.masterCard.rawValue | BAMCheckoutCreditCardType.visa.rawValue)
+        //config.supportedCreditCardTypes = cardTypes
         
         //Expiry recognition, card holder name and CVV entry are enabled by default and can be disabled.
         //You can enable the recognition of sort code and account number.
         //config.expiryRequired = false
         //config.cardHolderNameRequired = false
-        config.cvvRequired = self.switchCvvRequired.isOn;
+        config.cvvRequired = self.switchCvvRequired.isOn
         //config.sortCodeAndAccountNumberRequired = true
         
         //You can show the unmasked credit card number to the user during the workflow if cardNumberMaskingEnabled is disabled
@@ -69,11 +73,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //You can add custom fields to the "Additional Info" view (text input field or selection)
         //config.addCustomField("idZipCode", title: "Zip code", keyboardType: UIKeyboardType.numberPad, regularExpression: "[0-9]{5,}")
         
-        //NSArray* states = @[@"Alabama", @"Alaska", @"Arizona", @"Arkansas", @"California", @"Colorado", @"Connecticut", @"Delaware", @"Florida", @"Georgia", @"Hawaii", @"Idaho", @"Illinois", @"Indiana", @"Iowa", @"Kansas", @"Kentucky", @"Louisiana", @"Maine", @"Maryland", @"Massachusetts", @"Michigan", @"Minnesota", @"Mississippi", @"Missouri", @"Montana", @"Nebraska", @"Nevada", @"New Hampshire", @"New Jersey", @"New Mexico", @"New York", @"North Carolina", @"North Dakota", @"Ohio", @"Oklahoma", @"Oregon", @"Pennsylvania", @"Rhode Island", @"South Carolina", @"South Dakota", @"Tennessee", @"Texas", @"Utah", @"Vermont", @"Virginia", @"Washington", @"West Virginia", @"Wisconsin", @"Wyoming"];
-        //[config addCustomField: @"idState" title: @"State" values:states required:NO resetValueText:@"-- no value --"];
-        //or
-        //[config addCustomField: @"idState" title: @"State" values:states required:YES resetValueText:@"not shown"];
-        //let states:Array = Array(arrayLiteral: "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming")
+        //let states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", @"Maine", @"Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
         //config.addCustomField("idState", title: "State", values: states, required: false, resetValueText: "-- no value --")
         //or
         //config.addCustomField("idState", title: "State", values: states, required: true, resetValueText: "not shown")
@@ -115,7 +115,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         // - Navigation bar: tint color, title color, title image
         //UINavigationBar.bamCheckoutAppearance().tintColor = UIColor.yellow
         //UINavigationBar.bamCheckoutAppearance().barTintColor = UIColor.red
-        //UINavigationBar.bamCheckoutAppearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        //UINavigationBar.bamCheckoutAppearance().titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
         
         //BAMCheckoutNavigationBarTitleImageView.bamCheckoutAppearance().titleImage = UIImage.init(named: "<your-bamcheckout-navigation-bar-title-image>")
         
@@ -142,7 +142,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //BAMCheckoutScanOverlay.bamCheckoutAppearance().textColor = UIColor.blue
         
         //You can get the current SDK version using the method below.
-        //print("%@", self.bamCheckoutViewController.sdkVersion())
+        //print("\(self.bamCheckoutViewController?.sdkVersion() ?? "")")
     }
     
     /**
@@ -172,7 +172,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         if let bamCheckoutVC = self.bamCheckoutViewController {
             self.present(bamCheckoutVC, animated: true, completion: nil)
         } else {
-            print("BAMCheckoutViewController is nil")
+            showAlert(withTitle: "BAMCheckout Mobile SDK", message: "BAMCheckoutViewController is nil")
         }
     }
     

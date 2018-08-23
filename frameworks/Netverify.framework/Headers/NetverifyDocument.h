@@ -8,8 +8,7 @@
 #import "NetverifyDocumentData.h"
 
 /**
- * @class NetverifyDocument
- * @brief Holds the specific information about a document. 
+ * NSObject that holds the specific information about a document. 
  **/
 __attribute__((visibility("default"))) @interface NetverifyDocument : NSObject
 

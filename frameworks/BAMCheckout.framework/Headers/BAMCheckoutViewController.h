@@ -11,56 +11,152 @@
 
 @class BAMCheckoutViewController;
 
+/**
+ * Protocol that is used for all BAMCheckout UI Objects to be customized via UIAppearance
+ */
 __attribute__((visibility("default"))) @protocol BAMCheckoutAppearance <NSObject>
 
+/**
+ * @return the instance of the class for UIAppearance
+ **/
 + (instancetype _Nonnull)bamCheckoutAppearance;
 
 @end
 
+/**
+ * Protocol that has to be implemented when using BAMCheckoutViewController
+ **/
 __attribute__((visibility("default"))) @protocol BAMCheckoutViewControllerDelegate <NSObject>
 
+/**
+ * Called when the SDK canceled.
+ * @param controller the controller instance
+ * @param error NSObject holds more detailed information about the error reason
+ * @param scanReference the unique identifier of the scan session
+ **/
 - (void) bamCheckoutViewController: (BAMCheckoutViewController * _Nonnull) controller didCancelWithError:(NSError * _Nullable) error scanReference:(NSString * _Nullable) scanReference;
+/**
+ * Called when the SDK finished with success.
+ * @param controller the controller instance
+ * @param cardInformation data containing the extracted information
+ * @param scanReference the unique identifier of the scan session
+ **/
 - (void) bamCheckoutViewController:(BAMCheckoutViewController * _Nonnull) controller didFinishScanWithCardInformation: (BAMCheckoutCardInformation * _Nonnull)cardInformation scanReference:(NSString * _Nonnull) scanReference;
 
 @optional
+/**
+ * Called when the SDK is loaded and a scanReference is already present.
+ * @param controller the controller instance
+ * @param scanReference the unique identifier of the scan session
+ **/
 - (void) bamCheckoutViewController:(BAMCheckoutViewController * _Nonnull) controller didStartScanAttemptWithScanReference:(NSString * _Nonnull) scanReference;
 
 @end
 
 /**
- @class BAMCheckoutConfiguration
- @brief Handle configuration of the BAMCheckout Mobile SDK.
+ * Handle configuration of the BAMCheckout Mobile SDK.
  */
 __attribute__((visibility("default"))) @interface BAMCheckoutConfiguration : NSObject
 
+/**
+ * A delegate implementing the BAMCheckoutViewControllerDelegate protocol
+ **/
 @property (nonatomic, weak, nullable) id<BAMCheckoutViewControllerDelegate> delegate;
 
-@property (nonatomic, strong, nonnull) NSString* merchantApiToken;                   // The API token of your Jumio merchant account
-@property (nonatomic, strong, nonnull) NSString* merchantApiSecret;                  // The corresponding API secret
-@property (nonatomic, strong, nullable) NSString* merchantReportingCriteria;          // Identify the scan in your reports. Set it to nil if you don't use it. (Maximum characters: 100)
+/**
+ *  The API token of your Jumio merchant account
+ **/
+@property (nonatomic, strong, nonnull) NSString* merchantApiToken;
 
-@property (nonatomic, assign) JumioDataCenter dataCenter;                   // Specifiy the DataCenter that should be used
+/**
+ * The corresponding API secret
+ **/
+@property (nonatomic, strong, nonnull) NSString* merchantApiSecret;
 
-@property (nonatomic, strong, nullable) NSString* offlineToken;                       // Set this token to use the SDK offline
+/**
+ * Identify the scan in your reports. Set it to nil if you don't use it. (Maximum characters: 100)
+ **/
+@property (nonatomic, strong, nullable) NSString* merchantReportingCriteria;
 
-@property (nonatomic, strong, nullable) BAMCheckoutCustomScanOverlayViewController *customOverlay;  // Set the optional implementation of a custom overlay view controller
+/**
+ * Specifiy the DataCenter that should be used
+ **/
+@property (nonatomic, assign) JumioDataCenter dataCenter;
 
-@property (nonatomic, assign) BAMCheckoutCreditCardTypes supportedCreditCardTypes;  // Specify which card types your app supports by combining BAMCheckoutCreditCardType constants using the C bitwise OR operator
-@property (nonatomic, assign) BOOL expiryRequired;                          // Enable scanning of expiry date (default: YES)
-@property (nonatomic, assign) BOOL expiryEditable;                          // Set the expiry field editable (default: NO)
-@property (nonatomic, assign) BOOL cvvRequired;                             // Require cvv input by the user (default: YES)
-@property (nonatomic, assign) BOOL cardNumberMaskingEnabled;                // The card number is displayed masked on every view (default: YES)
+/**
+ * Set this token to use the SDK offline
+ **/
+@property (nonatomic, strong, nullable) NSString* offlineToken;
 
-@property (nonatomic, assign) BOOL cardHolderNameRequired;                  // Enable scanning of card holder name (default: YES)
-@property (nonatomic, assign) BOOL cardHolderNameEditable;                  // User may edit the scanned card holder name (default: NO)
-@property (nonatomic, assign) BOOL sortCodeAndAccountNumberRequired;        // Enable scanning of sort code and account number (default: NO)
+/**
+ * Set the optional implementation of a custom overlay view controller
+ **/
+@property (nonatomic, strong, nullable) BAMCheckoutCustomScanOverlayViewController *customOverlay;
 
-@property (nonatomic, assign) BOOL vibrationEffectEnabled;                  // The device will vibrate shortly if a card is detected.
-@property (nonatomic, strong, nullable) NSString* soundEffect;                        // Set the file name to a sound file to give a short audio feedback to the user when the card is detected.
-@property (nonatomic, assign) BOOL enableFlashOnScanStart;                  // Automatically enable flash when scan is started
-@property (nonatomic, assign) JumioCameraPosition cameraPosition;           // Set the default camera position
+/**
+ * Specify which card types your app supports by combining BAMCheckoutCreditCardType constants using the C bitwise OR operator
+ **/
+@property (nonatomic, assign) BAMCheckoutCreditCardTypes supportedCreditCardTypes;
 
-@property (nonatomic, assign) UIStatusBarStyle statusBarStyle;              // Configure the status bar style for the duration BAMCheckoutViewController is presented
+/**
+ * Enable scanning of expiry date (default: YES)
+ **/
+@property (nonatomic, assign) BOOL expiryRequired;
+
+/**
+ * Set the expiry field editable (default: NO)
+ **/
+@property (nonatomic, assign) BOOL expiryEditable;
+
+/**
+ * Require cvv input by the user (default: YES)
+ **/
+@property (nonatomic, assign) BOOL cvvRequired;
+
+/**
+ * The card number is displayed masked on every view (default: YES)
+ **/
+@property (nonatomic, assign) BOOL cardNumberMaskingEnabled;
+
+/**
+ * Enable scanning of card holder name (default: YES)
+ **/
+@property (nonatomic, assign) BOOL cardHolderNameRequired;
+
+/**
+ * User may edit the scanned card holder name (default: NO)
+ **/
+@property (nonatomic, assign) BOOL cardHolderNameEditable;
+
+/**
+ * Enable scanning of sort code and account number (default: NO)
+ **/
+@property (nonatomic, assign) BOOL sortCodeAndAccountNumberRequired;
+
+/**
+ * The device will vibrate shortly if a card is detected.
+ **/
+@property (nonatomic, assign) BOOL vibrationEffectEnabled;
+
+/**
+ * Set the file name to a sound file to give a short audio feedback to the user when the card is detected.
+ **/
+@property (nonatomic, strong, nullable) NSString* soundEffect;
+
+/**
+ * Automatically enable flash when scan is started
+ **/
+@property (nonatomic, assign) BOOL enableFlashOnScanStart;
+
+/**
+ * Set the default camera position
+ **/
+@property (nonatomic, assign) JumioCameraPosition cameraPosition;
+
+/**
+ * Configure the status bar style for the duration BAMCheckoutViewController is presented
+ **/
+@property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
 
 /** Custom fields the user is asked to fill in to finish a scan. Retrievable via the fieldId in BAMCheckoutCardInformation.
  @param fieldId Unique ID of your field
@@ -80,9 +176,8 @@ __attribute__((visibility("default"))) @interface BAMCheckoutConfiguration : NSO
 @end
 
 /**
- @class BAMCheckoutViewController
- @brief Handle setup and presentation of the BAMCheckout Mobile SDK.
- */
+ * Handle setup and presentation of the BAMCheckout Mobile SDK.
+ **/
 __attribute__((visibility("default"))) @interface BAMCheckoutViewController : JMNavigationController
 
 /** Create an instance of BAMCheckoutViewController.

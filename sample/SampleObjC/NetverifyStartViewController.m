@@ -6,6 +6,7 @@
 
 #import "NetverifyStartViewController.h"
 @import Netverify;
+#import <JumioCore/JMDeviceInfo.h>
 
 @interface NetverifyStartViewController () <NetverifyViewControllerDelegate>
 @property (nonatomic, strong) NetverifyViewController *netverifyViewController;
@@ -17,6 +18,11 @@
  * Present the NetverifyViewController
  */
 - (void) createNetverifyController{
+    
+    //prevent SDK to be initialized on Jailbroken devices
+    if ([JMDeviceInfo isJailbrokenDevice]) {
+        return;
+    }
     
     //Setup the Configuration for Netverify
     NetverifyConfiguration *config = [NetverifyConfiguration new];
@@ -215,7 +221,6 @@
     //person
     NSString *lastName = documentData.lastName;
     NSString *firstName = documentData.firstName;
-    NSString *middleName = documentData.middleName;
     NSDate *dateOfBirth = documentData.dob;
     NetverifyGender gender = documentData.gender;
     NSString *genderStr;
@@ -257,7 +262,6 @@
     if (optionalData2) [message appendFormat:@"\nOptional Data 2: %@", optionalData2];
     if (lastName) [message appendFormat:@"\nLast Name: %@", lastName];
     if (firstName) [message appendFormat:@"\nFirst Name: %@", firstName];
-    if (middleName) [message appendFormat:@"\nMiddle Name: %@", middleName];
     if (dateOfBirth) [message appendFormat:@"\ndob: %@", dateOfBirth];
     [message appendFormat:@"\nGender: %@", genderStr];
     if (originatingCountry) [message appendFormat:@"\nOriginating Country: %@", originatingCountry];
@@ -281,6 +285,10 @@
     [self dismissViewControllerAnimated: YES completion: ^{
         NSLog(@"%@",message);
         [self showAlertWithTitle:@"Netverify Mobile SDK" message:message];
+        
+        //destroy the instance to properly clean up the SDK
+        [self.netverifyViewController destroy];
+        self.netverifyViewController = nil;
     }];
 }
 
@@ -293,7 +301,11 @@
 - (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didCancelWithError:(NetverifyError * _Nullable)error scanReference:(NSString * _Nullable)scanReference {
     NSLog(@"NetverifyViewController cancelled with error: %@, scanReference: %@", error.message, scanReference);
     //Dismiss the SDK
-    [self dismissViewControllerAnimated: YES completion: nil];
+    [self dismissViewControllerAnimated: YES completion: ^{
+        //destroy the instance to properly clean up the SDK
+        [self.netverifyViewController destroy];
+        self.netverifyViewController = nil;
+    }];
 }
 
 @end

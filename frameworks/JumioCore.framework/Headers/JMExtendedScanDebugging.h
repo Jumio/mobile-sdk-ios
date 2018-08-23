@@ -19,6 +19,7 @@ __attribute__((visibility("default"))) @interface JMExtendedScanDebugging : NSOb
 @property (nonatomic, strong)                   NSString*   currentDirectory;
 @property (nonatomic, strong)                   NSString*   finalDirectory;
 @property (nonatomic, strong)                   NSString*   currentOcrFile;
+@property (nonatomic, assign)                   BOOL useCameraMocks;
 
 - (void)writeString:(NSString*)string atPath:(NSString*)filePath;
 - (void)writeData:(NSData*)data atPath:(NSString*)filePath;

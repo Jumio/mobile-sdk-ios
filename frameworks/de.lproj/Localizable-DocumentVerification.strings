@@ -1,0 +1,60 @@
+/*
+  Localizable-DocumentVerification.strings
+  Copyright © 2018 Jumio Corporation. All rights reserved.
+*/
+
+
+
+// scanView
+"dv.scan-view.navigationItem.title" = "Scannen";
+"dv.scan-view.confirmation.text" = "Stellen Sie sicher, dass alle Daten auf Ihrem Dokument komplett sichtbar und lesbar sind";
+"dv.scan-view.confirmation.button.retake" = "WIEDERHOLEN";
+"dv.scan-view.confirmation.button.readable" = "LESBAR";
+"dv.scan-view.help.document.headline" = "%@ erfassen";
+"dv.scan-view.help.document-BS" = "Kontoauszug";
+"dv.scan-view.help.document-CC" = "Kreditkarte";
+"dv.scan-view.help.document-IC" = "Versicherungskarte";
+"dv.scan-view.help.document-UB" = "Energierechnung";
+"dv.scan-view.help.document-CAAP" = "Antrag auf Barvorschuss";
+"dv.scan-view.help.document-CRC" = "Firmenbeschluss-Zertifikat";
+"dv.scan-view.help.document-CCS" = "Kreditkartenauszug";
+"dv.scan-view.help.document-LAG" = "Mietvertrag";
+"dv.scan-view.help.document-LOAP" = "Kreditantrag";
+"dv.scan-view.help.document-MOAP" = "Antrag auf Hypothek";
+"dv.scan-view.help.document-TR" = "Steuererklärung";
+"dv.scan-view.help.document-VT" = "Fahrzeugbrief";
+"dv.scan-view.help.document-VC" = "Entwerteter Scheck";
+"dv.scan-view.help.document-STUC" = "Studentenausweis";
+"dv.scan-view.help.document-HCC" = "Gesundheitskarte";
+"dv.scan-view.help.document-CB" = "Gemeindesteuerbescheid";
+"dv.scan-view.help.document-SENC" = "Rentenausweis";
+"dv.scan-view.help.document-MEDC" = "Medicare-Karte";
+"dv.scan-view.help.document-BC" = "Geburtsurkunde";
+"dv.scan-view.help.document-USSS" = "Sozialversicherungskarte USA";
+"dv.scan-view.help.document-WWCC" = "Zulassung zur Arbeit mit Kindern";
+"dv.scan-view.help.document-SS" = "Pensionserklärung";
+"dv.scan-view.help.document-TAC" = "Handelsverbandskarte";
+"dv.scan-view.help.document-SEL" = "Einschulungserklärung";
+"dv.scan-view.help.document-PB" = "Telefonrechnung";
+"dv.scan-view.help.document-SSC" = "Sozialversicherungskarte";
+"dv.scan-view.help.document-CUSTOM" = "Dokument";
+
+// submissionView
+"dv.submission-view.navigationItem.title" = "";
+"dv.submission-view.uploading.headline" = "Hochladen Ihrer Dokumente";
+"dv.submission-view.uploading.description" = "Dies sollte je nach Internetverbindung nur wenige Sekunden dauern";
+"dv.submission-view.successful.headline" = "Hochladen erfolgreich";
+"dv.submission-view.successful.description" = "";
+
+// errorView
+"dv.error-view.button.retry" = "WIEDERHOLEN";
+"dv.error-view.button.cancel" = "ABBRECHEN";
+"dv.error-view.error.headline" = "Fehler";
+"dv.error-view.device-is-offline" = "Keine Internetverbindung verfügbar";
+"dv.error-view.authentication-failed" = "Authentifizierung fehlgeschlagen";
+"dv.error-view.invalid-key" = "Zertifikat ist nicht mehr gültig. Bitte kontaktieren Sie den App-Anbieter";
+"dv.error-view.network-problem" = "Es ist ein Verbindungsproblem aufgetreten";
+"dv.error-view.camera-access-disabled.button.title" = "Bestätigen";
+"dv.error-view.camera-access-disabled.content" = "%@ benötigt Zugriff auf Ihre Kamera. Bitte überprüfen Sie Ihre Privatsphäre-Einstellungen.";
+"dv.error-view.camera-access-disabled.title" = "Kamerazugriff ist deaktiviert";
+"dv.error-view.cancelled-by-user" = "Beendet durch Benutzer";

@@ -83,8 +83,8 @@
 "netverify.error.user-address-missing.title" = "扫描正面";
 "netverify.error.user-address-missing" = "您的文件的条形码没有包含您的地址,请将您的文件翻转并扫描正面";
 "netverify.error-view.address-missing.button.continue.title" = "点击继续";
-"netverify.error.face-on-backside.title" = "扫描背面";
-"netverify.error.face-on-backside" = "您最近扫描了文件的正面。\n\n请翻转您的文件并扫描背面。";
+"netverify.error.flip-document.title" = "扫描背面";
+"netverify.error.flip-document" = "您最近扫描了文件的正面。\n\n请翻转您的文件并扫描背面。";
 "netverify.error-view.error.header.title" = "错误";
 "netverify.error-view.button.retry.title" = "重试";
 "netverify.error-view.button.cancel.title" = "取消";

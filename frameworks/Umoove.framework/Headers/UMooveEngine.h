@@ -13,14 +13,17 @@
  
  Legal Notices:
  
- Copyright © 2017, UMOOVE.
+ Copyright © 2018, UMOOVE.
  All Rights Reserved.
  The Umoove logo is a registered trademark of Umoove Company.
  Other brands and names are the property of their respective owners.
-
- Framework version 4.13.8
  
-\************************************************************************************************************************************************/
+ Umoove Framework version 4.14.5
+ (Includes OpenCV 3.4.2)
+ 
+ 
+ 
+ \************************************************************************************************************************************************/
 
 #import <Foundation/Foundation.h>
 #import <CoreMedia/CoreMedia.h>
@@ -53,7 +56,7 @@ typedef struct {
     
     int leftIrisPositionReliability;
     int rightIrisPositionReliability;
-
+    
     CGVector leftIrisMovementReliability;
     CGVector rightIrisMovementReliability;
     
@@ -62,7 +65,7 @@ typedef struct {
     
     CGVector leftIrisMovementCm;
     CGVector rightIrisMovementCm;
-
+    
     float eyeLineAngle;
     
     UMEyeMovementType eyeMovementType;
@@ -70,13 +73,19 @@ typedef struct {
     
     float oevrallQualityLeft;
     float oevrallQualityRight;
-
+    /* temp */
+    
+    // the iris position in the cameras frame coordinates, in order to draw the position in the devices coordinates, the values should be converted. For example if the video is displayed on the whole screen, in the devices position would be leftIrisPositionPx * deviceDimension / frameDimension. If the setHighResFrame is enabled then the frame will be the devices maximum size.
+    CGPoint leftIrisPositionPx;
+    CGPoint rightIrisPositionPx;
+    
+    // the irises radius in frame coordinates, conversion is similar to the iris position if needed. This value can be used to draw a circle bordering the users irises.
+    float irisRadiusPx;
     
 } UMEyeData;
 
 // Umoove Engine Protocol
 @protocol umooveDelegate <NSObject>
-
 
 /* core v4 */
 - (void) UMDataUpdate:(UMState)state :(UMHeadData)headData :(UMEyeData)eyeData;
@@ -90,11 +99,7 @@ typedef struct {
     
     // Umoove Engine Members
     id<umooveDelegate> umooveDelegate;
-    int directionsX;
-    int directionsY;
-    float cursorX, cursorY, absolutePositionX, absolutePositionY;
-    int joystickX, joystickY;
-    int gestureX, gestureY;
+    
     int state, alert;
     bool stateFlag, _gbraFormat, _externalFrames;
     
@@ -161,6 +166,7 @@ typedef struct {
 - (void) setNonStrictMode:(BOOL)isOn;
 
 // function when using for Unity using polling method
+
 //v4 unity
 - (int) getBlink;
 - (float) getHeadPositionPxX;

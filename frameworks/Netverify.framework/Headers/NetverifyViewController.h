@@ -10,15 +10,20 @@
 #import <JumioCore/JMSDK.h>
 #import <JumioCore/JMNavigationController.h>
 
+/**
+ * Protocol that is used for all Netverify UI Objects to be customized via UIAppearance
+ */
 __attribute__((visibility("default"))) @protocol NetverifyAppearance <NSObject>
 
+/**
+ * @return the instance of the class for UIAppearance
+ **/
 + (instancetype _Nonnull)netverifyAppearance;
 
 @end
 
 /**
- @class NetverifyViewController
- @brief Handle setup and presentation of the Netverify Mobile SDK.
+ * Handles setup and presentation of the Netverify Mobile SDK.
  */
 __attribute__((visibility("default"))) @interface NetverifyViewController : JMNavigationController
 
@@ -46,4 +51,8 @@ __attribute__((visibility("default"))) @interface NetverifyViewController : JMNa
  */
 - (NSUUID* _Nullable) debugID;
 
+/**
+ * Call this method to destroy the NetverifyViewController instance, before you set it to nil;
+ */
+- (void) destroy;
 @end

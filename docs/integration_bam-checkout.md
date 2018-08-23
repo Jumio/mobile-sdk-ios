@@ -12,14 +12,14 @@ BAM Checkout is a powerful, cutting-edge solution to extract data from your cust
 - [Customization](#customization)
 - [Delegation](#delegation)
 
-## Release notes
-For technical changes, please read our [transition guide](transition-guide_bam-checkout.md) SDK version: 2.12.0.
+## Transition guide
+For technical changes, please read our [transition guide](transition-guide_bam-checkout.md) SDK version: 2.13.0.
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for BAM Checkout.
 
 ## Initialization
-Log into your Jumio Customer Portal and you can find your API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the `BAMCheckoutConfiguration` object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the `BAMCheckoutViewController` instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `BAMCheckoutConfiguration` instance is passed to the initializer.
+Log into your Jumio Customer Portal and you can find your API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the [`BAMCheckoutConfiguration`](http://jumio.github.io/mobile-sdk-ios/BAMCheckout/Classes/BAMCheckoutConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the [`BAMCheckoutViewController`](http://jumio.github.io/mobile-sdk-ios/BAMCheckout/Classes/BAMCheckoutViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `BAMCheckoutConfiguration` instance is passed to the initializer.
 
 ```
 BAMCheckoutConfiguration *config = [BAMCheckoutConfiguration new];
@@ -46,11 +46,17 @@ Make sure initialization and presentation are timely within one minute. On iPads
 [self presentViewController: bamCheckoutViewController animated: YES completion: nil];
 ```
 
+### Jailbreak detection
+We advice to prevent our SDK to be run on jailbroken device. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
+```
+[JMDeviceInfo isJailbrokenDevice]
+```
+
 ## Configuration
 
 ### Card details
 
-BAM Checkout supports Visa, MasterCard, American Express, JCB, China UnionPay, Discover, Diners and Starbucks. To restrict supported card types, set a bitmask of `BAMCheckoutCreditCardTypes` to the property `supportedCreditCardTypes`.
+BAM Checkout supports Visa, MasterCard, American Express, JCB, China UnionPay, Discover and Diners. To restrict supported card types, set a bitmask of [`BAMCheckoutCreditCardTypes`](http://jumio.github.io/mobile-sdk-ios/BAMCheckout/BAMCheckout%20Type%20Definition.html#/c:BAMCheckoutCardInformation.h@T@BAMCheckoutCreditCardTypes) to the property `supportedCreditCardTypes`.
 ```
 BAMCheckoutCreditCardTypes cardTypes = BAMCheckoutCreditCardTypeAmericanExpress |
 BAMCheckoutCreditCardTypeMasterCard | BAMCheckoutCreditCardTypeVisa;
@@ -129,7 +135,7 @@ The BAM Checkout SDK gives the opportunity to use a completely customized scan v
 * Restart card scanning if retry possible upon error
 * Stop card scanning
 
-To get started, subclass `BAMCheckoutCustomScanOverlayViewController` and see the protocol `BAMCheckoutCustomScanOverlayViewControllerDelegate`. Once the native method `viewDidAppear` is called in your subclass, the actions and events are available.
+To get started, subclass [`BAMCheckoutCustomScanOverlayViewController`](http://jumio.github.io/mobile-sdk-ios/BAMCheckout/Classes/BAMCheckoutCustomScanOverlayViewController.html) and see the protocol [`BAMCheckoutCustomScanOverlayViewControllerDelegate`](http://jumio.github.io/mobile-sdk-ios/BAMCheckout/Protocols/BAMCheckoutCustomScanOverlayViewControllerDelegate.html). Once the native method `viewDidAppear` is called in your subclass, the actions and events are available.
 
 ```
 config.customOverlay = yourCustomScanOverlayViewController;
@@ -146,7 +152,7 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 * Scan overlay: border color, text color
 
 ## Delegation
-Implement the delegate methods of the `BAMCheckoutViewControllerDelegate` protocol to be notified of scan attempts, successful scans and error situations. Dismiss the `BAMCheckoutViewController` instance in your app in case of success or error.
+Implement the delegate methods of the [`BAMCheckoutViewControllerDelegate`](http://jumio.github.io/mobile-sdk-ios/BAMCheckout/Protocols/BAMCheckoutViewControllerDelegate.html) protocol to be notified of scan attempts, successful scans and error situations. Dismiss the `BAMCheckoutViewController` instance in your app in case of success or error.
 
 #### Scan attempt
 You receive a Jumio scan reference for each attempt, if the Internet connection is available. For offline scans the parameter scanReference will be nil.
@@ -181,7 +187,7 @@ Class **_BAMCheckoutCardInformation_**
 
 |Parameter | Type | Max. length | Description |
 |:---------------------------- 	|:-------------|:-----------------|:-------------|
-| cardType | BAMCheckoutCreditCardType |  |  BAMCheckoutCreditCardTypeAmericanExpress, BAMCheckoutCreditCardTypeChinaUnionPay, BAMCheckoutCreditCardTypeDiners, BAMCheckoutCreditCardTypeDiscover, BAMCheckoutCreditCardTypeJCB, BAMCheckoutCreditCardTypeMasterCard, BAMCheckoutCreditCardTypeVisa or BAMCheckoutCreditCardTypeStarbucks  |
+| cardType | BAMCheckoutCreditCardType |  |  BAMCheckoutCreditCardTypeAmericanExpress, BAMCheckoutCreditCardTypeChinaUnionPay, BAMCheckoutCreditCardTypeDiners, BAMCheckoutCreditCardTypeDiscover, BAMCheckoutCreditCardTypeJCB, BAMCheckoutCreditCardTypeMasterCard or BAMCheckoutCreditCardTypeVisa |
 | cardNumber | NSMutableString | 16 | Full credit card number |
 | cardNumberGrouped | NSMutableString | 19 | Grouped credit card number |
 | cardNumberMasked | NSMutableString | 19 | First 6 and last 4 digits of the grouped credit card number, other digits are masked with "X" |

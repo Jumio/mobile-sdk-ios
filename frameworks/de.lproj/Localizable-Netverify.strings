@@ -83,8 +83,8 @@
 "netverify.error.user-address-missing.title" = "Vorderseite scannen";
 "netverify.error.user-address-missing" = "Der Barcode auf Ihrem Dokument enthält nicht Ihre Adresse. Wenden Sie Ihr Dokument und scannen Sie die Vorderseite.";
 "netverify.error-view.address-missing.button.continue.title" = "ZUM FORTSETZEN TIPPEN";
-"netverify.error.face-on-backside.title" = "Rückseite scannen";
-"netverify.error.face-on-backside" = "Sie haben die Vorderseite Ihres Dokumentes gescannt.\n\nBitte wenden Sie Ihr Dokument und scannen Sie die Rückseite.";
+"netverify.error.flip-document.title" = "Rückseite scannen";
+"netverify.error.flip-document" = "Sie haben die Vorderseite Ihres Dokumentes gescannt.\n\nBitte wenden Sie Ihr Dokument und scannen Sie die Rückseite.";
 "netverify.error-view.error.header.title" = "Fehler";
 "netverify.error-view.button.retry.title" = "WIEDERHOLEN";
 "netverify.error-view.button.cancel.title" = "BEENDEN";

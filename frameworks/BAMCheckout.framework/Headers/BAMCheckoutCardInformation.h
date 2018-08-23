@@ -6,45 +6,103 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+/**
+ * Defines which creditcard was scanned
+ **/
+typedef NS_ENUM(NSUInteger, BAMCheckoutCreditCardType) {
+    /** All CreditCard Types */
     BAMCheckoutCreditCardTypeAll               = 0,
+    /** Visa Credit Card */
     BAMCheckoutCreditCardTypeVisa              = 1 << 0,
+    /** MasterCard Credit Card */
     BAMCheckoutCreditCardTypeMasterCard        = 1 << 1,
+    /** AmericanExpress Credit Card */
     BAMCheckoutCreditCardTypeAmericanExpress   = 1 << 2,
+    /** Diners Credit Card */
     BAMCheckoutCreditCardTypeDiners            = 1 << 3,
+    /** Discover Credit Card */
     BAMCheckoutCreditCardTypeDiscover          = 1 << 4,
+    /** JCB Credit Card */
     BAMCheckoutCreditCardTypeJCB               = 1 << 5,
-    BAMCheckoutCreditCardTypeChinaUnionPay     = 1 << 6,
-    BAMCheckoutCreditCardTypeStarbucks         = 1 << 7
-} BAMCheckoutCreditCardType;
+    /** ChinaUnionPay Credit Card */
+    BAMCheckoutCreditCardTypeChinaUnionPay     = 1 << 6
+};
 
-typedef NSUInteger BAMCheckoutCreditCardTypes;
-typedef NSUInteger BAMCheckoutUserInterfaceOrientations;
 
 /**
- @class BAMCheckoutCardInformation
- @brief Contains card details returned by a BAMCheckout Scan.
+ * Defines which credit cards are supported
+ **/
+typedef NSUInteger BAMCheckoutCreditCardTypes;
+
+/**
+ * Contains card details returned by a BAMCheckout Scan.
  */
 __attribute__((visibility("default"))) @interface BAMCheckoutCardInformation : NSObject {}
 
-@property (nonatomic, assign) BAMCheckoutCreditCardType cardType;      // The card type
+/**
+ * The card type
+ **/
+@property (nonatomic, assign) BAMCheckoutCreditCardType cardType;
 
-@property (nonatomic, strong, nonnull) NSMutableString *cardNumber;                 // The card number in the format 1234567812345678
-@property (nonatomic, strong, nonnull) NSMutableString *cardNumberGrouped;          // The card number in grouped style (e.g. 1234 5678 1234 5678)
-@property (nonatomic, strong, nonnull) NSMutableString *cardNumberMasked;           // The card number in masked style (e.g. 1234 56** **34 5678)
+/**
+ * The card number in the format 1234567812345678
+ **/
+@property (nonatomic, strong, nonnull) NSMutableString *cardNumber;
 
-@property (nonatomic, strong, nullable) NSMutableString *cardExpiryDate;             // The expiry date of the card in the format 'MM/yy' (e.g. '01/12')
-@property (nonatomic, strong, nullable) NSMutableString *cardExpiryMonth;            // The expiry month of the card in the format 'MM' (e.g. '01')
-@property (nonatomic, strong, nullable) NSMutableString *cardExpiryYear;             // The expiry year of the card in the format 'MM' (e.g. '12')
+/**
+ * The card number in grouped style (e.g. 1234 5678 1234 5678)
+ **/
+@property (nonatomic, strong, nonnull) NSMutableString *cardNumberGrouped;
 
-@property (nonatomic, strong, nullable) NSMutableString *cardCVV;                    // The CVV code of the card
+/**
+ * The card number in masked style (e.g. 1234 56** **34 5678)
+ **/
+@property (nonatomic, strong, nonnull) NSMutableString *cardNumberMasked;
 
-@property (nonatomic, strong, nullable) NSMutableString *cardHolderName;             // The name of the cardHolder
-@property (nonatomic, strong, nullable) NSMutableString *cardAccountNumber;          // The UK account number
-@property (nonatomic, strong, nullable) NSMutableString *cardSortCode;               // The UK sort code
+/**
+ *  The expiry date of the card in the format 'MM/yy' (e.g. '01/12')
+ **/
+@property (nonatomic, strong, nullable) NSMutableString *cardExpiryDate;
 
-@property (nonatomic, assign) BOOL cardSortCodeValid;                      // The card sort code is valid
-@property (nonatomic, assign) BOOL cardAccountNumberValid;                 // The card account number is valid
+/**
+ * The expiry month of the card in the format 'MM' (e.g. '01')
+ **/
+@property (nonatomic, strong, nullable) NSMutableString *cardExpiryMonth;
+
+/**
+ *  The expiry year of the card in the format 'MM' (e.g. '12')
+ **/
+@property (nonatomic, strong, nullable) NSMutableString *cardExpiryYear;
+
+/**
+ * The CVV code of the card
+ **/
+@property (nonatomic, strong, nullable) NSMutableString *cardCVV;
+
+/**
+ * The name of the cardHolder
+ **/
+@property (nonatomic, strong, nullable) NSMutableString *cardHolderName;
+
+/**
+ * The UK account number
+ **/
+@property (nonatomic, strong, nullable) NSMutableString *cardAccountNumber;
+
+/**
+ * The UK sort code
+ **/
+@property (nonatomic, strong, nullable) NSMutableString *cardSortCode;
+
+/**
+ * Gives information if the card sort code is valid
+ **/
+@property (nonatomic, assign) BOOL cardSortCodeValid;
+
+/**
+ * Gives information if the card account number is valid
+ **/
+@property (nonatomic, assign) BOOL cardAccountNumberValid;
 
 /**
  Retrieve the value of a custom field by its field identifier.

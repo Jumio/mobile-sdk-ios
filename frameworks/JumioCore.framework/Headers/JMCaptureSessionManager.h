@@ -36,6 +36,7 @@ __attribute__((visibility("default"))) @interface JMCaptureSessionManagerConfigu
 @property (nonatomic, assign) id<CameraProcessingDelegate> cameraProcessingDelegate;
 @property (nonatomic, assign) BOOL requiresFaceMetaData; //default: NO
 @property (nonatomic, assign) BOOL requiresBarcodeMetaData; //default: NO
+@property (nonatomic, assign) BOOL isMocked; //default: NO
 
 @end
 
@@ -162,5 +163,6 @@ __attribute__((visibility("default"))) @interface JMCaptureSessionManager : NSOb
 - (BOOL) detectFaceOnSampleBuffer: (CMSampleBufferRef) sampleBuffer inRect: (CGRect) rect;
 
 - (void) cleanUp;
+
 
 @end

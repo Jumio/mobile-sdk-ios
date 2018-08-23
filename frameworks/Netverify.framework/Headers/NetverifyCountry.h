@@ -9,8 +9,7 @@
 @class NetverifyDocument;
 
 /**
- * @class NetverifyCountry
- * @brief Object that holds the country information and the available NetverifyDocuments for this country. It will only contain the countries with at least one available document. If a country is preselected in NetverifyConfiguration only one NetverifyCountry will be returned via netverifyUIController:didDetermineAvailableCountries:suggestedCountry:.
+ * NSObject that holds the country information and the available NetverifyDocuments for this country. It will only contain the countries with at least one available document. If a country is preselected in NetverifyConfiguration only one NetverifyCountry will be returned via netverifyUIController:didDetermineAvailableCountries:suggestedCountry:.
  **/
 __attribute__((visibility("default"))) @interface NetverifyCountry : NSObject
 

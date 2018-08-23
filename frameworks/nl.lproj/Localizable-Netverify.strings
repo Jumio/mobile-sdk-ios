@@ -83,8 +83,8 @@
 "netverify.error.user-address-missing.title" = "Scan voorkant";
 "netverify.error.user-address-missing" = "De streepjescode van uw document bevat niet uw adres, draai uw document en scan de voorkant";
 "netverify.error-view.address-missing.button.continue.title" = "Klik om door te gaan";
-"netverify.error.face-on-backside.title" = "Scan achterkant";
-"netverify.error.face-on-backside" = "Uw hebt recentelijk de voorkant van uw document gescand.\n\n Draai alstublieft uw document om en scan de achterkant.";
+"netverify.error.flip-document.title" = "Scan achterkant";
+"netverify.error.flip-document" = "Uw hebt recentelijk de voorkant van uw document gescand.\n\n Draai alstublieft uw document om en scan de achterkant.";
 "netverify.error-view.error.header.title" = "Fout";
 "netverify.error-view.button.retry.title" = "PROBEER NOG EENS";
 "netverify.error-view.button.cancel.title" = "ANNULEER";

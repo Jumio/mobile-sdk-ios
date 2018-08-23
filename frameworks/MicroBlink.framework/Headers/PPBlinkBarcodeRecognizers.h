@@ -10,19 +10,18 @@
 #define PPBlinkBarcodeRecognizers_h
 
 // Pdf417
-#import "PPPdf417RecognizerSettings.h"
-#import "PPPdf417RecognizerResult.h"
+#import "MBPdf417Recognizer.h"
+#import "MBPdf417RecognizerResult.h"
 
-// USDL
-#import "PPUsdlRecognizerSettings.h"
-#import "PPUsdlRecognizerResult.h"
+// SimNumber
+#import "MBSimNumberRecognizer.h"
+#import "MBSimNumberRecognizerResult.h"
 
-// ZXing
-#import "PPZXingRecognizerSettings.h"
-#import "PPZXingRecognizerResult.h"
+// Barcode
+#import "MBBarcodeRecognizer.h"
+#import "MBBarcodeRecognizerResult.h"
 
-// BarDecoder
-#import "PPBarDecoderRecognizerSettings.h"
-#import "PPBarDecoderRecognizerResult.h"
+// Basic functionality
+//#import "PPRecognizerResult+Test.h"
 
 #endif /* PPBlinkBarcodeRecognizers_h */

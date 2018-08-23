@@ -80,10 +80,13 @@ __attribute__((visibility("default"))) @interface JMDeviceInfo : NSObject
 + (DeviceModel)deviceModel;
 + (NSString*)deviceModelString;
 + (NSString*)deviceModelDescription;
++ (BOOL) isIPHONE_X;
 
 + (unsigned int)cpuCores;
 
 + (JMNetworkStatus)deviceNetworkType;
+
++ (BOOL) isJailbrokenDevice;
 
 + (UIInterfaceOrientation)deviceInterfaceOrientation;
 + (UIDeviceOrientation)deviceOrientation;

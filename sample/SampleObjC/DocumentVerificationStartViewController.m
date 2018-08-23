@@ -6,6 +6,7 @@
 
 #import "DocumentVerificationStartViewController.h"
 @import Netverify;
+#import <JumioCore/JMDeviceInfo.h>
 
 @interface DocumentVerificationStartViewController () <DocumentVerificationViewControllerDelegate>
 @property (nonatomic, strong) DocumentVerificationViewController *documentVerificationViewController;
@@ -14,6 +15,12 @@
 @implementation DocumentVerificationStartViewController
 
 - (void) createDocumentVerificationController {
+    
+    //prevent SDK to be initialized on Jailbroken devices
+    if ([JMDeviceInfo isJailbrokenDevice]) {
+        return;
+    }
+    
     //Setup the Configuration for DocumentVerification
     DocumentVerificationConfiguration *config = [DocumentVerificationConfiguration new];
     //Provide your API token
@@ -77,7 +84,7 @@
     //The API from Netverify is re-used to apply visual customization for DocumentVerification. Please have a look at the above section where DocumentVerificationViewController is created and configured.
     
     //You can get the current SDK version using the method below.
-    //NSLog(@"%@", [self.DocumentVerificationViewController sdkVersion]);
+    //NSLog(@"%@", [self.documentVerificationViewController sdkVersion]);
 }
 
 - (IBAction) startDocumentVerification: (id) sender {

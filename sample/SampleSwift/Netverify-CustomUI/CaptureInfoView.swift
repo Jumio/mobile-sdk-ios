@@ -18,13 +18,13 @@ class CaptureInfoView: UIView {
     
     func setup(documentType: NetverifyDocumentType) {        
         switch documentType {
-            case NetverifyDocumentTypePassport:
+            case .passport:
                 documentTypeLabel.text = "Passport"
-            case NetverifyDocumentTypeIdentityCard:
+            case .identityCard:
                 documentTypeLabel.text = "ID"
-            case NetverifyDocumentTypeVisa:
+            case .visa:
                 documentTypeLabel.text = "Visa"
-            case NetverifyDocumentTypeDriverLicense:
+            case .driverLicense:
                 documentTypeLabel.text = "Driver Licence"
             default:
                 // TODO error handling
@@ -58,7 +58,7 @@ class CaptureInfoView: UIView {
         return height
     }
     
-    func fallbackHandling() {
+    @objc func fallbackHandling() {
         fallBackAction!()
     }
 }

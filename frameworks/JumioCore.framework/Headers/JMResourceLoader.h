@@ -23,4 +23,6 @@ __attribute__((visibility("default"))) @interface JMResourceLoader : NSObject
 
 + (UIImage*) imageResourceWithName: (NSString*) imageName;
 
+- (void) killYourself;
+
 @end

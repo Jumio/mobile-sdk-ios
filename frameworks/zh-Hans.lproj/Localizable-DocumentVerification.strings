@@ -1,0 +1,60 @@
+/*
+  Localizable-DocumentVerification.strings
+  Copyright © 2018 Jumio Corporation. All rights reserved.
+*/
+
+
+
+// scanView
+"dv.scan-view.navigationItem.title" = "扫描文件";
+"dv.scan-view.confirmation.text" = "确保您的文件上的所有数据完全可见,无眩光且不模糊";
+"dv.scan-view.confirmation.button.retake" = "重拍";
+"dv.scan-view.confirmation.button.readable" = "清晰可辨";
+"dv.scan-view.help.document.headline" = "拍摄 %@";
+"dv.scan-view.help.document-BS" = "银行对账单";
+"dv.scan-view.help.document-CC" = "信用卡";
+"dv.scan-view.help.document-IC" = "保险卡";
+"dv.scan-view.help.document-UB" = "水电费账单";
+"dv.scan-view.help.document-CAAP" = "现金预支申请";
+"dv.scan-view.help.document-CRC" = "公司决议证明";
+"dv.scan-view.help.document-CCS" = "信用卡账单";
+"dv.scan-view.help.document-LAG" = "租赁协议";
+"dv.scan-view.help.document-LOAP" = "贷款申请";
+"dv.scan-view.help.document-MOAP" = "抵押贷款申请";
+"dv.scan-view.help.document-TR" = "纳税申报单";
+"dv.scan-view.help.document-VT" = "车辆所有权凭证";
+"dv.scan-view.help.document-VC" = "作废支票";
+"dv.scan-view.help.document-STUC" = "学生证";
+"dv.scan-view.help.document-HCC" = "医疗保健卡";
+"dv.scan-view.help.document-CB" = "理事会账单";
+"dv.scan-view.help.document-SENC" = "老年卡";
+"dv.scan-view.help.document-MEDC" = "医保卡";
+"dv.scan-view.help.document-BC" = "出生证明";
+"dv.scan-view.help.document-USSS" = "美国社会保障卡";
+"dv.scan-view.help.document-WWCC" = "儿童工作证明";
+"dv.scan-view.help.document-SS" = "养老金结算单";
+"dv.scan-view.help.document-TAC" = "行业协会卡";
+"dv.scan-view.help.document-SEL" = "学校录取通知书";
+"dv.scan-view.help.document-PB" = "电话账单";
+"dv.scan-view.help.document-SSC" = "社会保障卡";
+"dv.scan-view.help.document-CUSTOM" = "文件";
+
+// submissionView
+"dv.submission-view.navigationItem.title" = "";
+"dv.submission-view.uploading.headline" = "正在上传您的文件";
+"dv.submission-view.uploading.description" = "这应该只需要几秒钟的时间,具体取决于您的网络连接";
+"dv.submission-view.successful.headline" = "上传成功";
+"dv.submission-view.successful.description" = "";
+
+// errorView
+"dv.error-view.button.retry" = "重试";
+"dv.error-view.button.cancel" = "取消";
+"dv.error-view.error.headline" = "错误";
+"dv.error-view.device-is-offline" = "没有可用的网络连接";
+"dv.error-view.authentication-failed" = "鉴权失败";
+"dv.error-view.invalid-key" = "证书不再有效。请联系应用程序供应商";
+"dv.error-view.network-problem" = "我们遇到了网络通信问题";
+"dv.error-view.camera-access-disabled.button.title" = "确认";
+"dv.error-view.camera-access-disabled.content" = "%@ 需要访问您的摄像头。请检查您的隐私设置。";
+"dv.error-view.camera-access-disabled.title" = "摄像头访问权限被禁用";
+"dv.error-view.cancelled-by-user" = "被最终用户取消";
