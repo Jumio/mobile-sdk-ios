@@ -15,7 +15,7 @@ Netverify SDK offers scanning and authentication of government issued IDs.
 - [Callback](#callback)
 
 ## Transition guide
-For technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md)  SDK version: 2.13.0.
+For breaking technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md)  SDK version: 2.13.0.
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Netverify.
@@ -201,6 +201,8 @@ After the SDK was dismissed and especially if you want to create a new instance 
 [self.netverifyViewController destroy];
 self.netverifyViewController = nil;
 ```
+**Important:** only call `destroy` after `netverifyUIController:didFinishWithDocumentData:canReference:` or `netverifyUIController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Setting `NetverifyViewController` to nil is essential to free memory as soon as possible.
+
 
 ### Retrieving information
 The following tables give information on the specification of all document data parameters and errors.
@@ -395,6 +397,8 @@ After the SDK was dismissed and especially if you want to create a new instance 
 [self.netverifyUIController destroy];
 self.netverifyUIController = nil;
 ```
+**Important:** only call `destroy` after `netverifyUIController:didFinishWithDocumentData:canReference:` or `netverifyUIController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Call `cancel` during the workflow, which will evoke `netverifyUIController:didCancelWithError:scanReference:`. Setting `NetverifyUIController` to nil is essential to free memory as soon as possible.
+
 
 ## Callback
 To get information about callbacks, Netverify Retrieval API, Netverify Delete API, Global Netverify settings, and more, please read our [page with server related information](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md).
