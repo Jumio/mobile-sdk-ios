@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -110,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EOc-Yw-E4f">
-                                <rect key="frame" x="0.0" y="172" width="375" height="433"/>
+                                <rect key="frame" x="0.0" y="171.5" width="375" height="433.5"/>
                                 <color key="backgroundColor" red="0.17287355660000001" green="0.59526425599999999" blue="0.94069093469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -169,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be guided through the process." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fK3-rN-rYO">
-                                <rect key="frame" x="16" y="143" width="343" height="21"/>
+                                <rect key="frame" x="16" y="143" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -375,19 +374,43 @@
                                     <action selector="startDocumentVerification" destination="Jad-cK-FTC" eventType="touchUpInside" id="Cex-Ks-cmD"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAc-eU-Sxr">
+                                <rect key="frame" x="292" y="396" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="0WB-QJ-TAP"/>
+                                    <constraint firstAttribute="width" constant="47" id="NG5-YA-qSa"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable extraction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6j-yP-U0H">
+                                <rect key="frame" x="36" y="401" width="213" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="uLd-rE-iis"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kAc-eU-Sxr" secondAttribute="trailing" constant="20" id="6sb-Si-UOb"/>
                             <constraint firstItem="XSz-ie-lnE" firstAttribute="centerY" secondItem="NCy-na-uBN" secondAttribute="centerY" id="Amn-Wz-UaE"/>
+                            <constraint firstItem="p6j-yP-U0H" firstAttribute="leading" secondItem="NCy-na-uBN" secondAttribute="leadingMargin" constant="20" id="As3-8g-qYV"/>
+                            <constraint firstItem="kAc-eU-Sxr" firstAttribute="top" secondItem="XSz-ie-lnE" secondAttribute="bottom" constant="44.5" id="E2B-la-UQf"/>
                             <constraint firstItem="XSz-ie-lnE" firstAttribute="leading" secondItem="NCy-na-uBN" secondAttribute="leadingMargin" constant="20" id="Zzf-Jf-pDJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XSz-ie-lnE" secondAttribute="trailing" constant="20" id="jAA-Ht-7Tj"/>
+                            <constraint firstItem="p6j-yP-U0H" firstAttribute="top" secondItem="XSz-ie-lnE" secondAttribute="bottom" constant="49.5" id="sx7-UH-6VW"/>
+                            <constraint firstItem="kAc-eU-Sxr" firstAttribute="leading" secondItem="p6j-yP-U0H" secondAttribute="trailing" constant="43" id="xMn-9D-m1j"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="DocumentVerification" image="NVicon" selectedImage="NVicon" id="6ST-d5-gL0"/>
+                    <connections>
+                        <outlet property="enableExtraction" destination="kAc-eU-Sxr" id="TJ1-hy-ufe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQr-Df-jfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="353" y="573"/>
+            <point key="canvasLocation" x="352.80000000000001" y="572.56371814092961"/>
         </scene>
     </scenes>
     <resources>

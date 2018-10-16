@@ -10,7 +10,7 @@
 /**
  * Document Type used for preselection and extraction
  **/
-typedef NS_ENUM(NSUInteger, NetverifyDocumentType) {
+typedef NS_OPTIONS(NSUInteger, NetverifyDocumentType) {
     /** All documents should be used */
     NetverifyDocumentTypeAll                = 0,
     /** Passport */

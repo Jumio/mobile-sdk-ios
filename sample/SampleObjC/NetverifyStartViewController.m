@@ -60,10 +60,10 @@
     //Callback URL (max. 255 characters) for the confirmation after the verification is completed. This setting overrides your Jumio merchant settings.
     //config.callbackUrl = @"https://www.example.com";
     
-    //Enable ID verification to receive a verification status and verified data positions (see Callback chapter). Note: Not possible for accounts configured as Fastfill only.
+    //Enable/disable ID verification to receive a verification status and verified data positions (see Callback chapter). Note: Not possible for accounts configured as Fastfill only.
     config.requireVerification = self.switchRequireVerification.isOn;
     
-    //You can enable face match during the ID verification for a specific transaction. This setting overrides your default Jumio merchant settings.
+    //You can enable/disable face match during the ID verification for a specific transaction. This setting overrides your default Jumio merchant settings.
     config.requireFaceMatch = self.switchRequireFaceMatch.isOn;
     
     //Set the default camera position

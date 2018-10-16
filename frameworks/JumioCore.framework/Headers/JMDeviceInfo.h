@@ -33,6 +33,9 @@ typedef enum
     IPHONE_8,
     IPHONE_8_PLUS,
     IPHONE_X,
+    IPHONE_XS,
+    IPHONE_XS_MAX,
+    IPHONE_XR,
     
     IPOD_TOUCH_1G,
     IPOD_TOUCH_2G,
@@ -91,5 +94,6 @@ __attribute__((visibility("default"))) @interface JMDeviceInfo : NSObject
 + (UIInterfaceOrientation)deviceInterfaceOrientation;
 + (UIDeviceOrientation)deviceOrientation;
 
++ (BOOL)hasNotch;
 
 @end

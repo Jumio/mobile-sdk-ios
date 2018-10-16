@@ -70,12 +70,12 @@ __attribute__((visibility("default"))) @interface NetverifyConfiguration : NSObj
 @property (nonatomic, assign) NetverifyDocumentVariant preselectedDocumentVariant;
 
 /**
- * Enable a face match check between a camera still image and the document front side (default: NO)
+ * Enable a face match check between a camera still image and the document front side (default: YES)
  **/
 @property (nonatomic, assign) BOOL requireFaceMatch;
 
 /**
- * Enable verification of a scanned identity (default: NO)
+ * Enable verification of a scanned identity (default: YES)
  **/
 @property (nonatomic, assign) BOOL requireVerification;
 

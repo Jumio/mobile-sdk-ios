@@ -4,6 +4,14 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 2.14.0
+
+#### Default Settings
+The default values for [`requireVerification`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireVerification) and [`requireFaceMatch`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireFaceMatch) were changed to `YES`. Please make sure that they are explicitly set to NO in case a scan in Fastfill mode should be performed. 
+
+#### Enums
+[`NetverifyDocumentType`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentType.html) was changed from NS_ENUM to NS_OPTIONS. 
+
 ## 2.13.0
 
 #### Enums
@@ -13,7 +21,7 @@ All enums were replaced by NS_ENUM to have better Swift support. When using Swif
 changed values in regards to error texts
 
 #### Cleanup of our SDK
-The method `destroy` was introduced to properly clean up our SDK. Call this method to destroy the NetverifyViewController instance, before you set it to nil. When re-initializing [`NetverifyViewController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyViewController.html) or [`NetverifyUIController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html) make sure you've called  `destroy` in advance otherwise an exception will be raised during initializing.
+The method `destroy` was introduced to properly clean up our SDK. Call this method to destroy the NetverifyViewController instance, before you set it to nil. When re-initializing [`NetverifyViewController`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyViewController.html) or [`NetverifyUIController`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html) make sure you've called  `destroy` in advance otherwise an exception will be raised during initializing.
 
 ## 2.12.0
 

@@ -2,6 +2,15 @@
 
 # Transition guide for Document Verification
 
+This section only covers the breaking technical changes that should be considered when updating from the previous version.
+
+## 2.14.0
+#### Removed document type USSS
+The document type for US social security card (USSS) was removed.
+
+#### Default Settings
+The default value for [`enableExtraction`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/DocumentVerificationConfiguration.html#/c:objc(cs)DocumentVerificationConfiguration(py)enableExtraction) was changed to `YES`. Please make sure that it is explicitly set to NO in case a scan without extraction should be performed. 
+
 ## 2.13.0
 
 #### Changes in Localizable-DocumentVerification.strings

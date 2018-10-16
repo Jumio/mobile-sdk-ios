@@ -10,7 +10,6 @@
 #import <UIKit/UIKit.h>
 #import <JumioCore/JMResourceLoader.h>
 #import <JumioCore/JMLogging.h>
-#import <JumioCore/NSData+Base64.h>
 #import <JumioCore/JMSDKStyle.h>
 #import "NVUtilities.h"
 #import <JumioCore/JMUtilities.h>

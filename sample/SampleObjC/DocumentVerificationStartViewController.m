@@ -37,7 +37,7 @@
     config.country = @"AUT";
     
     //One of the configured DocumentTypeCodes: BC, BS, CAAP, CB, CCS, CRC, HCC, IC, LAG, LOAP,
-    //MEDC, MOAP, PB, SEL, SENC, SS, STUC, TAC, TR, UB, SSC, USSS, VC, VT, WWCC, CUSTOM
+    //MEDC, MOAP, PB, SEL, SENC, SS, STUC, TAC, TR, UB, SSC, VC, VT, WWCC, CUSTOM
     config.type = @"BC";
     
     //The merchant scan reference allows you to identify the scan (max. 100 characters). Note: Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
@@ -64,8 +64,8 @@
     // Overrides the label for the document name (on Help Screen beside document icon)
     //config.documentName = @"DOCUMENTNAME";
     
-    // Set the following property to enable/disable data extraction for documents.
-    // config.enableExtraction = YES;
+    // Set the following property to enable/disable data extraction for documents. (default: YES) 
+     config.enableExtraction = self.enableExtraction.isOn;
     
     //Perform the following call as soon as your app’s view controller is initialized. Create the DocumentVerificationViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
     @try {

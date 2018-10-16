@@ -309,6 +309,11 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
+        if let presenter = alert.popoverPresentationController, let cell = self.tableView.cellForRow(at: indexPath) {
+            presenter.sourceView = cell.contentView
+            presenter.sourceRect = cell.contentView.bounds
+        }
+        
         self.present(alert, animated: true)
     }
     

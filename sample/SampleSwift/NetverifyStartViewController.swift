@@ -73,11 +73,13 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //You can specify issuing country (ISO 3166-1 alpha-3 country code) and/or ID types and/or document variant to skip their selection during the scanning process.
         //config.preselectedCountry = "AUT"
         
-        //config.preselectedDocumentTypes = NetverifyDocumentType(rawValue: NetverifyDocumentType.all.rawValue)!
-        
-        //let documentTypes = UInt(NetverifyDocumentType.driverLicense.rawValue | NetverifyDocumentType.identityCard.rawValue | NetverifyDocumentType.passport.rawValue | NetverifyDocumentType.visa.rawValue)
-        //config.preselectedDocumentTypes = NetverifyDocumentType(rawValue: documentTypes)!
-        
+        //var documentTypes: NetverifyDocumentType = []
+        //documentTypes.insert(.driverLicense)
+        //documentTypes.insert(.identityCard)
+        //documentTypes.insert(.passport)
+        //documentTypes.insert(.visa)
+
+        //config.preselectedDocumentTypes = documentTypes
         
         //When a selected country and ID type support more document variants (paper and plastic), you can specify the document variant in advance or let the user choose during the verification process.
         //config.preselectedDocumentVariant = .plastic

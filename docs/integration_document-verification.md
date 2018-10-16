@@ -14,7 +14,7 @@ Document Verification is a powerful solution to enable scanning various types (U
 - [Callback](#callback)
 
 ## Transition guide
-For technical changes, please read our [transition guide](transition-guide_document-verification.md) SDK version: 2.13.0.
+For breaking technical changes, please read our [transition guide](transition-guide_document-verification.md) SDK version: 2.13.0.
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Document Verification.
@@ -88,7 +88,6 @@ Possible types:
 *  TAC (Trade association card)
 *  SEL (School enrolment letter)
 *  PB (Phone bill)
-*  USSS (US social security card)
 *  SSC (Social security card)
 *  CUSTOM (Custom document type)
 
@@ -121,13 +120,13 @@ config.callbackUrl = @"YOURCALLBACKURL";
 
 ### Data Extraction
 
-When data extraction should be used, set the following parameter that enables or disables extraction for each transaction. It is mandatory to be set to `true` if extraction is activated.
+Data extraction is automatically enabled when it is activated for your account. Use the following setting to disable the extraction on a transaction level:
 
 ```
-config.enableExtraction = true;
+config.enableExtraction = false;
 ```
 
-__Note:__ If you want to enable extraction for your account in general, please contact your Account Manager, or reach out to Jumio Support.
+__Note:__ If you want to activate data extraction for your account in general, please contact your Account Manager, or reach out to Jumio Support.
 
 ### Miscellaneous
 Use the following property to identify the scan in your reports (max. 100 characters) and set a customer identifier (max. 100 characters).

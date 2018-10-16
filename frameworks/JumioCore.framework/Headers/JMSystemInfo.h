@@ -10,8 +10,6 @@ __attribute__((visibility("default"))) @interface JMSystemInfo : NSObject
 
 + (NSString*)systemVersionString;
 + (float)systemVersionNumber;
-+ (BOOL)isSystemVersionAtLeastOS9;
-+ (BOOL)isSystemVersionAtLeastOS10;
 + (BOOL)isSystemVersionAtLeastOS11;
 
 @end

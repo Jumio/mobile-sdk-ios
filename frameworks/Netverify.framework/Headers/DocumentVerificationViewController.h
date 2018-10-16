@@ -83,7 +83,7 @@ __attribute__((visibility("default"))) @interface DocumentVerificationConfigurat
 @property (nonatomic, strong, nullable) NSString* documentName;
 
 /**
- * Enable/disable data extraction for documents
+ * Enable/disable data extraction for documents (default: YES)
  **/
 @property (nonatomic, assign) BOOL enableExtraction;
 

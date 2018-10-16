@@ -58,22 +58,26 @@ We advice to prevent our SDK to be run on jailbroken device. Either use the meth
 ## Configuration
 
 ### ID verification
-The SDK defaults to Fastfill mode, which performs data extraction only. No ID verification occurs in the default mode.
+By default the Jumio SDK enables Netverify which performs a full ID verification in the default mode.
 
-Enable ID verification to receive a verification status and verified data positions (see [Callback for Netverify](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-for-netverify)). Ensure that your customer account is allowed to use this feature.
-A callback URL can be specified for individual transactions (for constraints see chapter [Callback URL](https://github.com/Jumio/implementation-guides/blob/master/netverify/portal-settings.md#callback-url)). This setting overrides any callback URL you have set in the Jumio Customer Portal.
+Use ID verification to receive a verification status and verified data positions (see [Callback for Netverify](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-for-netverify)). Ensure that your customer account is allowed to use this feature. A callback URL can be specified for individual transactions (for constraints see chapter [Callback URL](https://github.com/Jumio/implementation-guides/blob/master/netverify/portal-settings.md#callback-url)). This setting overrides any callback URL you have set in the Jumio Customer Portal.
 
 __Note:__ Not available for accounts configured as Fastfill only.
 ```
-config.requireVerification = YES;
 config.callbackUrl = @"YOURCALLBACKURL";
 ```
+Set the following setting to switch to Fastfill mode (which performs data extraction only):
+```
+config.requireVerification = NO;
+```
 
-You can enable Identity Verification if it is enabled for your account. Make sure to link the UMoove framework to your app project.
+Identity Verification is automatically enabled if it is activated for your account. Make sure to link the UMoove framework to your app project.
 
 __Note:__ Identity Verification requires portrait orientation in your app.
+
+Set the following setting to disable Identity Verification on a transaction level:
 ```
-config.requireFaceMatch = YES;
+config.requireFaceMatch = NO;
 ```
 
 ### Preselection
@@ -202,7 +206,6 @@ After the SDK was dismissed and especially if you want to create a new instance 
 self.netverifyViewController = nil;
 ```
 **Important:** only call `destroy` after `netverifyUIController:didFinishWithDocumentData:canReference:` or `netverifyUIController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Setting `NetverifyViewController` to nil is essential to free memory as soon as possible.
-
 
 ### Retrieving information
 The following tables give information on the specification of all document data parameters and errors.
@@ -397,6 +400,7 @@ After the SDK was dismissed and especially if you want to create a new instance 
 [self.netverifyUIController destroy];
 self.netverifyUIController = nil;
 ```
+
 **Important:** only call `destroy` after `netverifyUIController:didFinishWithDocumentData:canReference:` or `netverifyUIController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Call `cancel` during the workflow, which will evoke `netverifyUIController:didCancelWithError:scanReference:`. Setting `NetverifyUIController` to nil is essential to free memory as soon as possible.
 
 

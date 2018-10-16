@@ -2,6 +2,11 @@
 
 # Transition guide for BAM Checkout
 
+This section only covers the breaking technical changes that should be considered when updating from the previous version.
+
+## 2.14.0
+No backward incompatible changes.
+
 ## 2.13.0
 BAMCheckoutCreditCardTypeStarbucks removed.
 

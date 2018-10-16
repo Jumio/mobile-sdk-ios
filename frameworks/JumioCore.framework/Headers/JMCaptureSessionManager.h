@@ -75,8 +75,6 @@ __attribute__((visibility("default"))) @interface JMCaptureSessionManager : NSOb
 @property (weak, nonatomic, readonly) AVCaptureDevice *activeCameraDevice; // Either back or front
 
 @property (atomic, strong) NSDate *dateOfLastFocusAdjustment;
-@property (atomic, strong) NSDate *dateOfLastExposureAdjustment;
-@property (atomic, strong) NSDate *dateOfLastWhiteBalanceAdjustment;
 
 @property (nonatomic, assign) CGPoint focusPointOfInterest;
 @property (nonatomic, assign) CGFloat cropFactorY;
@@ -105,6 +103,8 @@ __attribute__((visibility("default"))) @interface JMCaptureSessionManager : NSOb
 - (void) enableVideoDataOutput;
 - (void) disableVideoDataOutput;
 - (void) addDefaultVideoInput;
+- (void) startCameraObservations;
+- (void) stopCameraObservations;
 
 - (void) setVideoOrientation: (AVCaptureVideoOrientation) videoOrientation includingPreviewLayer: (BOOL) considerPreviewLayer;
 - (CGSize) imageFrameSizeForCurrentCaptureSessionPresetWithVideoOrientation: (AVCaptureVideoOrientation) videoOrientation; // Returns raw image size of sample buffer for the current capture session configuration and configurable video orientation
@@ -164,5 +164,6 @@ __attribute__((visibility("default"))) @interface JMCaptureSessionManager : NSOb
 
 - (void) cleanUp;
 
++ (NSArray<AVCaptureDevice*>* _Nullable)allVideoCaptureDevices;
 
 @end

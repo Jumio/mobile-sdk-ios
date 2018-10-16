@@ -10,4 +10,6 @@
 
 - (IBAction) startDocumentVerification: (id) sender;
 
+@property (nonatomic, retain) IBOutlet UISwitch *enableExtraction;
+
 @end

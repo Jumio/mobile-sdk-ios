@@ -8,32 +8,25 @@
 
 
 # Release notes
-SDK version: 2.13.0
+SDK version: 2.14.0
 
-#### Announcement
-*This is the last version which supports iOS 9. With version 2.14.0 we are going to remove iOS 9 support, minimum version will be iOS 10*
+__We highly recommend to update to the new SDK version as soon as possible as all previous versions are not fully compatible with the new iPhones (XS and XS Max)!__
 
 #### Changes
-* Major memory improvements which reduce the memory consumption and increase overall SDK stability [Netverify/Fastfill]
-* Reduced SDK size by about 10% [Netverify/Fastfill]
-* Added support for 5 new languages (Spanish, French, German, Chinese simple, Dutch) [Document Verification]
-* Added method to detect jailbroken devices [Netverify/Fastfill, Document Verification, BAM Checkout]
-* New code documentation for all public classes [Netverify/Fastfill, Document Verification, BAM Checkout]
-* Added possibility to adjust the vertical alignment of the capture overlay [Netverify/Fastfill Custom UI]
-* Deprecated middleName parameter - middle names will now be merged into the firstName field to be consistent with all other aquisition channels [Netverify/Fastfill]
-* Updated BIN range list [BAM Checkout]
+* Added full support for iOS 12 and new iPhones [Netverify/Fastfill, Document Verification, BAM Checkout]
+* Changed default values to true for requireVerification, requireFaceMatch and enableExtraction [Netverify/Fastfill, Document Verification]
+* Deprecated US social security card document type [Document Verification]
+* Set minimum deployment target to iOS 10 [Netverify/Fastfill, Document Verification, BAM Checkout]
 
 #### Fixes
-* Fixed various crashes in Umoove framework [Netverify]
-* Fixed a bug in the data parsing of  some older Ohio Driving Licenses [Netverify/Fastfill]
-* Fixed a network problem which could occur under rare circumstances [Document Verification]
+* Fixed UI glitches which could lead to scanning problems on new iPhones XS and XS Max [Netverify/Fastfill, Document Verification, BAM Checkout]
 * Various smaller bug fixes/improvements [Netverify/Fastfill, Document Verification, BAM Checkout]
 
 # Basic Setup
 
 ## General Requirements
 The minimum requirements for the SDK are:
-- iOS 9.0 and higher
+- iOS 10.0 and higher
 - Internet connection
 
 The following architectures are supported in the SDK:
@@ -138,7 +131,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.12.0 of the Jumio Mobile SDK is supported until 2018-11-23.
+The previous release version 2.13.0 of the Jumio Mobile SDK is supported until 2019-01-16.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 
@@ -147,6 +140,11 @@ If you have any questions regarding our implementation guide please contact Jumi
 
 ## Two-factor Authentication
 If you want to enable two-factor authentication for your Jumio merchant backend please contact us at https://support.jumio.com. Once enabled, users will be guided through the setup upon their first login to obtain a security code using the "Google Authenticator" app.
+
+## Licenses
+The software contains third-party open source software. For more information, please see [licenses](https://github.com/Jumio/mobile-sdk-ios/tree/master/licenses). 
+
+This software is based in part on the work of the Independent JPEG Group.
 
 ## Copyright
 &copy; Jumio Corp. 268 Lambert Avenue, Palo Alto, CA 94306
