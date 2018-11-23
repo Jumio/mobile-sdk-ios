@@ -8,25 +8,22 @@
 
 
 # Release notes
-SDK version: 2.14.0
+SDK version: 2.14.2
 
-__We highly recommend to update to the new SDK version as soon as possible as all previous versions are not fully compatible with the new iPhones (XS and XS Max)!__
+__We highly recommend to update to the new SDK version as soon as possible as all SDK versions <2.14.0 are not fully compatible with the new iPhones (XS and XS Max)!__
 
 #### Changes
-* Added full support for iOS 12 and new iPhones [Netverify/Fastfill, Document Verification, BAM Checkout]
-* Changed default values to true for requireVerification, requireFaceMatch and enableExtraction [Netverify/Fastfill, Document Verification]
-* Deprecated US social security card document type [Document Verification]
-* Set minimum deployment target to iOS 10 [Netverify/Fastfill, Document Verification, BAM Checkout]
+* Added support for iOS 9 again [Netverify/Fastfill, Document Verification, BAM Checkout]
 
 #### Fixes
-* Fixed UI glitches which could lead to scanning problems on new iPhones XS and XS Max [Netverify/Fastfill, Document Verification, BAM Checkout]
+* Fixed an issue that US passport data was incorrectly extracted [Netverify/Fastfill]
 * Various smaller bug fixes/improvements [Netverify/Fastfill, Document Verification, BAM Checkout]
 
 # Basic Setup
 
 ## General Requirements
 The minimum requirements for the SDK are:
-- iOS 10.0 and higher
+- iOS 9.0 and higher
 - Internet connection
 
 The following architectures are supported in the SDK:
@@ -131,7 +128,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.13.0 of the Jumio Mobile SDK is supported until 2019-01-16.
+The previous release version 2.14.0 of the Jumio Mobile SDK is supported until 2019-02-22.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 

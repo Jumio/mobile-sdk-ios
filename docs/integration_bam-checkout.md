@@ -13,7 +13,7 @@ BAM Checkout is a powerful, cutting-edge solution to extract data from your cust
 - [Delegation](#delegation)
 
 ## Transition guide
-For breaking technical changes, please read our [transition guide](transition-guide_bam-checkout.md) SDK version: 2.13.0.
+For breaking technical changes, please read our [transition guide](transition-guide_bam-checkout.md).
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for BAM Checkout.

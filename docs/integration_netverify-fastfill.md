@@ -15,7 +15,7 @@ Netverify SDK offers scanning and authentication of government issued IDs.
 - [Callback](#callback)
 
 ## Transition guide
-For breaking technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md)  SDK version: 2.13.0.
+For breaking technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md).
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Netverify.

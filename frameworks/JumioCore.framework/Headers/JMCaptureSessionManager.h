@@ -164,6 +164,5 @@ __attribute__((visibility("default"))) @interface JMCaptureSessionManager : NSOb
 
 - (void) cleanUp;
 
-+ (NSArray<AVCaptureDevice*>* _Nullable)allVideoCaptureDevices;
 
 @end

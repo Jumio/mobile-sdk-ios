@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Q2L-Nu-gLx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LrE-4M-hhh" userLabel="View">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFO-CS-Kty">
-                                <rect key="frame" x="36" y="315.5" width="303" height="36"/>
+                                <rect key="frame" x="40" y="430" width="334" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start Netverify">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -32,10 +32,10 @@
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dC8-8e-xdg">
-                                <rect key="frame" x="290" y="368" width="51" height="31"/>
+                                <rect key="frame" x="325" y="482.66666666666669" width="51" height="31.000000000000057"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYx-Zn-Gtj">
-                                <rect key="frame" x="36" y="373" width="200" height="21"/>
+                                <rect key="frame" x="40" y="487.66666666666669" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="yfJ-MW-Pvw"/>
                                 </constraints>
@@ -44,10 +44,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A45-KA-VwT" userLabel="Switch Face match">
-                                <rect key="frame" x="290" y="418" width="51" height="31"/>
+                                <rect key="frame" x="325" y="532.66666666666663" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face match required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOq-pP-UqN">
-                                <rect key="frame" x="36" y="423" width="200" height="21"/>
+                                <rect key="frame" x="40" y="537.66666666666663" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="bwz-YN-kA8"/>
                                     <constraint firstAttribute="width" constant="200" id="fya-zX-r6N"/>
@@ -91,11 +91,11 @@
                         <viewControllerLayoutGuide type="bottom" id="N2l-ny-kf0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="74y-vc-d3H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RT5-py-oYZ">
-                                <rect key="frame" x="36" y="315.5" width="303" height="36"/>
+                                <rect key="frame" x="40" y="430" width="334" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start BAM Checkout">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,10 +105,10 @@
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m4L-Wv-Lal" userLabel="Switch CVV Required">
-                                <rect key="frame" x="290" y="368" width="51" height="31"/>
+                                <rect key="frame" x="325" y="482.66666666666669" width="51" height="31.000000000000057"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVV required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hw-Lt-AGG" userLabel="CVV required">
-                                <rect key="frame" x="36" y="373" width="200" height="21"/>
+                                <rect key="frame" x="40" y="487.66666666666669" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Eyg-aH-6Q3"/>
                                 </constraints>
@@ -165,11 +165,11 @@
                         <viewControllerLayoutGuide type="bottom" id="TZp-g5-zNM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NCy-na-uBN" userLabel="View">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSz-ie-lnE">
-                                <rect key="frame" x="36" y="315.5" width="303" height="36"/>
+                                <rect key="frame" x="40" y="430" width="334" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start Document Verification">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -178,23 +178,32 @@
                                     <action selector="startDocumentVerification:" destination="Jad-cK-FTC" eventType="touchUpInside" id="9t2-Vd-8Ig"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="asi-Gg-Ypx">
-                                <rect key="frame" x="290" y="400" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable extraction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muY-pc-U2s">
-                                <rect key="frame" x="36" y="405" width="182" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable extraction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muY-pc-U2s">
+                                <rect key="frame" x="40" y="500" width="265" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="30j-gN-3Bw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="asi-Gg-Ypx">
+                                <rect key="frame" x="325" y="495" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="B6c-Oa-5If"/>
+                                </constraints>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="asi-Gg-Ypx" secondAttribute="trailing" constant="20" id="1T0-2g-Ha4"/>
+                            <constraint firstItem="asi-Gg-Ypx" firstAttribute="top" secondItem="XSz-ie-lnE" secondAttribute="bottom" constant="29" id="4c3-pL-D8b"/>
+                            <constraint firstItem="muY-pc-U2s" firstAttribute="leading" secondItem="NCy-na-uBN" secondAttribute="leadingMargin" constant="20" id="4h6-bI-Y4p"/>
                             <constraint firstItem="XSz-ie-lnE" firstAttribute="centerY" secondItem="NCy-na-uBN" secondAttribute="centerY" id="Amn-Wz-UaE"/>
+                            <constraint firstItem="asi-Gg-Ypx" firstAttribute="leading" secondItem="muY-pc-U2s" secondAttribute="trailing" constant="20" id="EWn-dX-yti"/>
                             <constraint firstItem="XSz-ie-lnE" firstAttribute="leading" secondItem="NCy-na-uBN" secondAttribute="leadingMargin" constant="20" id="Zzf-Jf-pDJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XSz-ie-lnE" secondAttribute="trailing" constant="20" id="jAA-Ht-7Tj"/>
+                            <constraint firstItem="muY-pc-U2s" firstAttribute="top" secondItem="XSz-ie-lnE" secondAttribute="bottom" constant="34" id="usL-7g-VsY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="DocumentVerification" image="NVicon" selectedImage="NVicon" id="6ST-d5-gL0"/>
@@ -204,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQr-Df-jfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.80000000000001" y="572.56371814092961"/>
+            <point key="canvasLocation" x="352.17391304347831" y="572.54464285714278"/>
         </scene>
     </scenes>
     <resources>
