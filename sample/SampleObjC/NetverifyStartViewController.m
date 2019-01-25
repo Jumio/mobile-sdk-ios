@@ -1,12 +1,14 @@
 //
 //  NetverifyStartViewController.m
 //
-//  Copyright © 2018 Jumio Corporation All rights reserved.
+//  Copyright © 2019 Jumio Corporation All rights reserved.
 //
 
 #import "NetverifyStartViewController.h"
 @import Netverify;
 #import <JumioCore/JMDeviceInfo.h>
+
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 @interface NetverifyStartViewController () <NetverifyViewControllerDelegate>
 @property (nonatomic, strong) NetverifyViewController *netverifyViewController;
@@ -153,6 +155,15 @@
     //[[NetverifyScanOverlayView netverifyAppearance] setColorOverlayStandard: [UIColor blueColor]];
     //[[NetverifyScanOverlayView netverifyAppearance] setColorOverlayValid: [UIColor greenColor]];
     //[[NetverifyScanOverlayView netverifyAppearance] setColorOverlayInvalid: [UIColor redColor]];
+    
+    // Color for the face oval outline
+    //[[NetverifyScanOverlayView netverifyAppearance] setFaceOvalColor: RGBA(255,92,224,1)];
+    // Color for the progress bars
+    //[[NetverifyScanOverlayView netverifyAppearance] setFaceProgressColor: RGBA(255,92,224,1)];
+    // Color for the background of the feedback view
+    //[[NetverifyScanOverlayView netverifyAppearance] setFaceFeedbackBackgroundColor: RGBA(255,92,224,1)];
+    // Color for the text of the feedback view
+    //[[NetverifyScanOverlayView netverifyAppearance] setFaceFeedbackTextColor: RGBA(255,92,224,1)];
     
     //You can get the current SDK version using the method below.
     //NSLog(@"%@", [self.netverifyViewController sdkVersion]);

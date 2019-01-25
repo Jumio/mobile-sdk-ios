@@ -1,7 +1,7 @@
 //
 //  NetverifyStartViewController.swift
 //
-//  Copyright © 2018 Jumio Corporation All rights reserved.
+//  Copyright © 2019 Jumio Corporation All rights reserved.
 //
 
 import Netverify
@@ -178,6 +178,15 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //NetverifyScanOverlayView.netverifyAppearance().colorOverlayStandard = UIColor.blue
         //NetverifyScanOverlayView.netverifyAppearance().colorOverlayValid = UIColor.green
         //NetverifyScanOverlayView.netverifyAppearance().colorOverlayInvalid = UIColor.red
+        
+        // Color for the face oval outline
+        //NetverifyScanOverlayView.netverifyAppearance().faceOvalColor = UIColor(red: 46/255.0, green: 255/255.0, blue: 71/255.0, alpha: 0.69)
+        // Color for the progress bars
+        //NetverifyScanOverlayView.netverifyAppearance().faceProgressColor = UIColor(red: 46/255.0, green: 255/255.0, blue: 71/255.0, alpha: 0.69)
+        // Color for the background of the feedback view
+        //NetverifyScanOverlayView.netverifyAppearance().faceFeedbackBackgroundColor = UIColor(red: 46/255.0, green: 255/255.0, blue: 71/255.0, alpha: 0.69)
+        // Color for the text of the feedback view
+        //NetverifyScanOverlayView.netverifyAppearance().faceFeedbackTextColor = UIColor(red: 46/255.0, green: 255/255.0, blue: 71/255.0, alpha: 0.69)
 
         //You can get the current SDK version using the method below.
         //print("\(self.netverifyViewController?.sdkVersion() ?? "")")

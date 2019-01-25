@@ -15,16 +15,12 @@
 		54042A891FEBDED400626D55 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A8A1FEBDED400626D55 /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; };
 		54042A8B1FEBDED400626D55 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		54042A8C1FEBDED400626D55 /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; };
-		54042A8D1FEBDED400626D55 /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A8F1FEBDEF500626D55 /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A901FEBDEF500626D55 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; };
 		54042A911FEBDEF500626D55 /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A921FEBDEF500626D55 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; };
 		54042A931FEBDEF500626D55 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A951FEBDEF500626D55 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		54042A961FEBDEF500626D55 /* Umoove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; };
-		54042A971FEBDEF500626D55 /* Umoove.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A771FEBDEC900626D55 /* Umoove.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		545F7A5F20A1E1B2007EBCE7 /* Localizable-BAMCheckout.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5920A1E1B1007EBCE7 /* Localizable-BAMCheckout.strings */; };
 		545F7A6020A1E1B2007EBCE7 /* Localizable-BAMCheckout.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5920A1E1B1007EBCE7 /* Localizable-BAMCheckout.strings */; };
 		545F7A6120A1E1B2007EBCE7 /* Localizable-DocumentVerification.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5B20A1E1B1007EBCE7 /* Localizable-DocumentVerification.strings */; };
@@ -57,7 +53,15 @@
 		54D66D64206D54C6009640C2 /* VerifyInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D66D5E206D54C6009640C2 /* VerifyInfoView.xib */; };
 		54D66D65206D54C6009640C2 /* VerifyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D66D5F206D54C6009640C2 /* VerifyInfoView.swift */; };
 		54D66D67206D54D0009640C2 /* NetverifyCustomUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D66D66206D54D0009640C2 /* NetverifyCustomUIViewController.swift */; };
+		77BA608421E5FAAD0095300B /* ZoomAuthenticationHybrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */; };
+		77BA608721E5FABF0095300B /* ZoomAuthenticationHybrid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		77BA608A21E5FAD10095300B /* ZoomAuthenticationHybrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */; };
+		77BA608B21E5FAD10095300B /* ZoomAuthenticationHybrid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77CCE6041FD93EE9000701C6 /* ObjcExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */; };
+		77D0900821E76B8B001DE743 /* NetverifyFace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; };
+		77D0900B21E76B98001DE743 /* NetverifyFace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		77D0900C21E76BA3001DE743 /* NetverifyFace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; };
+		77D0900D21E76BA3001DE743 /* NetverifyFace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9694C9A4206156E9004CC4BA /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9694C9A3206156E9004CC4BA /* BAMCheckout.framework */; };
 		96FE3624206A5BBB0099626C /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; };
 		EE01EEF71924A3E200B7CC49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
@@ -73,9 +77,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				54042A891FEBDED400626D55 /* MicroBlink.framework in Embed Frameworks */,
+				77BA608721E5FABF0095300B /* ZoomAuthenticationHybrid.framework in Embed Frameworks */,
 				54042A871FEBDED400626D55 /* JumioCore.framework in Embed Frameworks */,
 				54042A851FEBDED400626D55 /* BAMCheckout.framework in Embed Frameworks */,
-				54042A8D1FEBDED400626D55 /* Umoove.framework in Embed Frameworks */,
+				77D0900B21E76B98001DE743 /* NetverifyFace.framework in Embed Frameworks */,
 				54042A8B1FEBDED400626D55 /* Netverify.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -88,9 +93,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				54042A931FEBDEF500626D55 /* MicroBlink.framework in Embed Frameworks */,
+				77BA608B21E5FAD10095300B /* ZoomAuthenticationHybrid.framework in Embed Frameworks */,
 				54042A911FEBDEF500626D55 /* JumioCore.framework in Embed Frameworks */,
 				54042A8F1FEBDEF500626D55 /* BAMCheckout.framework in Embed Frameworks */,
-				54042A971FEBDEF500626D55 /* Umoove.framework in Embed Frameworks */,
+				77D0900D21E76BA3001DE743 /* NetverifyFace.framework in Embed Frameworks */,
 				54042A951FEBDEF500626D55 /* Netverify.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -101,7 +107,6 @@
 /* Begin PBXFileReference section */
 		54042A751FEBDEC900626D55 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../frameworks/MicroBlink.framework; sourceTree = "<group>"; };
 		54042A761FEBDEC900626D55 /* JumioCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioCore.framework; path = ../frameworks/JumioCore.framework; sourceTree = "<group>"; };
-		54042A771FEBDEC900626D55 /* Umoove.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Umoove.framework; path = ../frameworks/Umoove.framework; sourceTree = "<group>"; };
 		54042A781FEBDECA00626D55 /* Netverify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netverify.framework; path = ../frameworks/Netverify.framework; sourceTree = "<group>"; };
 		54042A791FEBDECA00626D55 /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BAMCheckout.framework; path = ../frameworks/BAMCheckout.framework; sourceTree = "<group>"; };
 		545F7A5A20A1E1B1007EBCE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "../frameworks/en.lproj/Localizable-BAMCheckout.strings"; sourceTree = "<group>"; };
@@ -147,8 +152,10 @@
 		54F270E9210B0CFB0070FE65 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../frameworks/zh-Hans.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
 		54F270EA210B0CFD0070FE65 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "../frameworks/es.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
 		54F270EB210B0CFF0070FE65 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "../frameworks/nl.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
+		77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomAuthenticationHybrid.framework; path = ../frameworks/ZoomAuthenticationHybrid.framework; sourceTree = "<group>"; };
 		77CCE6021FD93EE8000701C6 /* ObjcExceptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjcExceptionHelper.h; path = SampleSwift/ObjcExceptionHelper.h; sourceTree = SOURCE_ROOT; };
 		77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjcExceptionHelper.m; path = SampleSwift/ObjcExceptionHelper.m; sourceTree = SOURCE_ROOT; };
+		77D0900721E76B8B001DE743 /* NetverifyFace.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetverifyFace.framework; path = ../frameworks/NetverifyFace.framework; sourceTree = "<group>"; };
 		9694C9A3206156E9004CC4BA /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BAMCheckout.framework; sourceTree = "<group>"; };
 		EE01EEE71924A3E200B7CC49 /* SampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE01EEF61924A3E200B7CC49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
@@ -163,11 +170,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D0900C21E76BA3001DE743 /* NetverifyFace.framework in Frameworks */,
 				96FE3624206A5BBB0099626C /* Netverify.framework in Frameworks */,
 				9694C9A4206156E9004CC4BA /* BAMCheckout.framework in Frameworks */,
 				54042A921FEBDEF500626D55 /* MicroBlink.framework in Frameworks */,
 				54042A901FEBDEF500626D55 /* JumioCore.framework in Frameworks */,
-				54042A961FEBDEF500626D55 /* Umoove.framework in Frameworks */,
+				77BA608A21E5FAD10095300B /* ZoomAuthenticationHybrid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,9 +184,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54042A881FEBDED400626D55 /* MicroBlink.framework in Frameworks */,
-				54042A8C1FEBDED400626D55 /* Umoove.framework in Frameworks */,
+				77BA608421E5FAAD0095300B /* ZoomAuthenticationHybrid.framework in Frameworks */,
 				54042A861FEBDED400626D55 /* JumioCore.framework in Frameworks */,
 				54042A841FEBDED400626D55 /* BAMCheckout.framework in Frameworks */,
+				77D0900821E76B8B001DE743 /* NetverifyFace.framework in Frameworks */,
 				54042A8A1FEBDED400626D55 /* Netverify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,11 +375,12 @@
 		EE8E78101926419400896C42 /* JumioMobileSDK */ = {
 			isa = PBXGroup;
 			children = (
+				77D0900721E76B8B001DE743 /* NetverifyFace.framework */,
+				77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */,
 				54042A791FEBDECA00626D55 /* BAMCheckout.framework */,
 				54042A761FEBDEC900626D55 /* JumioCore.framework */,
 				54042A751FEBDEC900626D55 /* MicroBlink.framework */,
 				54042A781FEBDECA00626D55 /* Netverify.framework */,
-				54042A771FEBDEC900626D55 /* Umoove.framework */,
 			);
 			name = JumioMobileSDK;
 			sourceTree = "<group>";
@@ -382,6 +392,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 547B46E51F46F1FE0029781C /* Build configuration list for PBXNativeTarget "SampleSwift" */;
 			buildPhases = (
+				544FDA8C21FA39190036ACED /* Checkout Jumio frameworks */,
 				547B46CB1F46F1FE0029781C /* Sources */,
 				547B46D31F46F1FE0029781C /* Frameworks */,
 				547B46D91F46F1FE0029781C /* Resources */,
@@ -401,6 +412,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE01EF1C1924A3E300B7CC49 /* Build configuration list for PBXNativeTarget "SampleObjC" */;
 			buildPhases = (
+				544FDA8D21FB0F640036ACED /* Checkout Jumio frameworks */,
 				EE01EEE31924A3E200B7CC49 /* Sources */,
 				EE01EEE41924A3E200B7CC49 /* Frameworks */,
 				EE01EEE51924A3E200B7CC49 /* Resources */,
@@ -506,7 +518,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$CONFIGURATION\" == \"Release\" ]]; then\n  $PROJECT_DIR/remove-simulator-architecture.sh\nfi";
+			shellScript = "if [[ \"$CONFIGURATION\" == \"Release\" ]]; then\n  $PROJECT_DIR/remove-simulator-architecture.sh\nfi\n";
+		};
+		544FDA8C21FA39190036ACED /* Checkout Jumio frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Checkout Jumio frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PROJECT_DIR/jumio-sdk-checkout.sh\n";
+		};
+		544FDA8D21FB0F640036ACED /* Checkout Jumio frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Checkout Jumio frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PROJECT_DIR/jumio-sdk-checkout.sh\n";
 		};
 		548F80C52003DAD20052FF27 /* Remove simulator architecture from Jumio frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -520,7 +568,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$CONFIGURATION\" == \"Release\" ]]; then\n  $PROJECT_DIR/remove-simulator-architecture.sh\nfi";
+			shellScript = "if [[ \"$CONFIGURATION\" == \"Release\" ]]; then\n  $PROJECT_DIR/remove-simulator-architecture.sh\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

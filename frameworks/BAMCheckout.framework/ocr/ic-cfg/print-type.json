@@ -1,6 +1,0 @@
-{
-  "indemb_selector": "recognizers/emb_nonemb_sel.pb",
-  "type_selector": "recognizers/type.pb",
-  "reg_zone": [0, 265, 856, 110],
-  "reg_font": [58, 36, 0.17]
-}

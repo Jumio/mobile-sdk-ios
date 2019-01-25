@@ -71,9 +71,9 @@ Set the following setting to switch to Fastfill mode (which performs data extrac
 config.requireVerification = NO;
 ```
 
-Identity Verification is automatically enabled if it is activated for your account. Make sure to link the UMoove framework to your app project.
+Identity Verification is automatically enabled if it is activated for your account. Make sure to link NetverifyFace.framework and ZoomAuthenticationHybrid.framework to your app project.
 
-__Note:__ Identity Verification requires portrait orientation in your app.
+__Note:__ The new 3D face liveness capturing technology is not optimised for iPads or when using our SDK in combination with Custom UI. When using Identity Verification the Selfie scanner will fallback to a simple face capturing functionality instead. Portrait orientation support is required in your app.
 
 Set the following setting to disable Identity Verification on a transaction level:
 ```
@@ -163,7 +163,8 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 - Fallback button (Detection not working): title color and background
 - Scan Options button: title color and background
 - Camera and flash toggle button: title color and background
-- Scan overlay: standard color, valid color and invalid color
+- Scan overlay - ID scanning: standard color, valid color and invalid color
+- Scan overlay - 3D face liveness: oval, progress and background + text color of feedback view
 
 ### Customization tool
 [Jumio Surface](https://jumio.github.io/surface-ios) is a web tool that allows you to apply and visualize, in real-time, all available customization options. It also provides an export feature to save your applied changes, so you can import them directly into your codebase.

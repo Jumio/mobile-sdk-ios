@@ -1,6 +1,0 @@
-framework module JumioCore {
-  umbrella header "JumioCore.h"
-
-  export *
-  module * { export * }
-}

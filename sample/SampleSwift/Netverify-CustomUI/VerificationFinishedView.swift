@@ -1,7 +1,7 @@
 //
 //  VerificationFinishedView.swift
 //
-//  Copyright © 2018 Jumio Corporation. All rights reserved.
+//  Copyright © 2019 Jumio Corporation. All rights reserved.
 //
 
 import UIKit

@@ -8,16 +8,15 @@
 
 
 # Release notes
-SDK version: 2.14.2
-
-__We highly recommend to update to the new SDK version as soon as possible as all SDK versions <2.14.0 are not fully compatible with the new iPhones (XS and XS Max)!__
+SDK version: 2.15.0
 
 #### Changes
-* Added support for iOS 9 again [Netverify/Fastfill, Document Verification, BAM Checkout]
+* New ISO 30107-3 Level 1 compliant 3D face liveness capturing technology [Netverify] *
 
 #### Fixes
-* Fixed an issue that US passport data was incorrectly extracted [Netverify/Fastfill]
 * Various smaller bug fixes/improvements [Netverify/Fastfill, Document Verification, BAM Checkout]
+
+<sub>(&ast;Workflow changes on server will be applied on January 31)<sub>
 
 # Basic Setup
 
@@ -56,10 +55,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>2.13' # If you use BAM Checkout along Netverify in your app. Frameworks supporting device architectures only.
+pod 'JumioMobileSDK', '~>2.15' # Use Netverify and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>2.13' # Specify Netverify as subspec to only use Netverify, Fastfill or Document Verification
-pod 'JumioMobileSDK/BAMCheckout', '~>2.13' # Specify BAMCheckout as subspec to only use BAM Checkout
+pod 'JumioMobileSDK/Netverify', '~>2.15' # Use full Netverify functionality
+pod 'JumioMobileSDK/Netverify-Light', '~>2.15' # For Fastfill or Document Verification, or Netverify without 3D face liveness capturing technology
+
+pod 'JumioMobileSDK/BAMCheckout', '~>2.15' # Use BAM Checkout only
 ```
 
 Install the pod to your project via Terminal:
@@ -68,18 +69,24 @@ pod install
 ```
 
 ### Manually
+
+Download our frameworks manually via [ios-jumio-mobile-sdk-2.15.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/2.15.0/ios-jumio-mobile-sdk-2.15.0.zip).
+
+__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
+
 The Jumio Mobile SDK consists of several dynamic frameworks. Add specific frameworks to your Xcode project, depending on which product you use.
 
 The following table shows which frameworks have to be added:
 
-| Product | Size | JumioCore | BAMCheckout | Netverify | MicroBlink | UMoove |
+| Product | Size | JumioCore | BAMCheckout | Netverify | MicroBlink | NetverifyFace & ZoomAuthenticationHybrid |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Fastfill & Netverify | 15 MB | x |  | x | x | x |
+| Netverify | 25 MB | x |  | x | x | x |
+| Fastfill | 10 MB | x |  | x | x |  |
 | Document Verification | 7.5 MB | x |  | x |  |  |
-| BAM Checkout credit card scanning | 7 MB | x | x |  |  |  |
-| BAM Checkout credit card<br/>+ ID scanning | 21 MB | x | x | x | x | x |
+| BAM Checkout credit card scanning | 6.5 MB | x | x |  |  |  |
+| BAM Checkout credit card<br/>+ ID scanning | 31 MB | x | x | x | x | x |
 
-In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project. For Document Verification, the frameworks `MicroBlink` and `UMoove` can be removed but this requires Bitcode to be disabled in your app.
+In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project. For Document Verification, the frameworks `MicroBlink`, `NetverifyFace` and `ZoomAuthenticationHybrid` can be removed.
 
 The size values in the table above depict the decompressed install size required on a device. It can be compared with the Estimated App Store files size. The size value can vary by a few percent, depending on the actual device used.
 
@@ -128,7 +135,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.14.0 of the Jumio Mobile SDK is supported until 2019-02-22.
+The previous release version 2.14.2 of the Jumio Mobile SDK is supported until 2019-04-23.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 
@@ -139,7 +146,7 @@ If you have any questions regarding our implementation guide please contact Jumi
 If you want to enable two-factor authentication for your Jumio merchant backend please contact us at https://support.jumio.com. Once enabled, users will be guided through the setup upon their first login to obtain a security code using the "Google Authenticator" app.
 
 ## Licenses
-The software contains third-party open source software. For more information, please see [licenses](https://github.com/Jumio/mobile-sdk-ios/tree/master/licenses). 
+The software contains third-party open source software. For more information, please see [licenses](https://github.com/Jumio/mobile-sdk-ios/tree/master/licenses).
 
 This software is based in part on the work of the Independent JPEG Group.
 
@@ -148,4 +155,3 @@ This software is based in part on the work of the Independent JPEG Group.
 
 The source code and software available on this website (“Software”) is provided by Jumio Corp. or its affiliated group companies (“Jumio”) "as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage.
 In any case, your use of this Software is subject to the terms and conditions that apply to your contractual relationship with Jumio. As regards Jumio’s privacy practices, please see our privacy notice available here: [Privacy Policy](https://www.jumio.com/legal-information/privacy-policy/).
-

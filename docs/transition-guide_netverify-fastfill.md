@@ -4,6 +4,18 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 2.15.0
+
+#### New frameworks NetverifyFace and ZoomAuthenticationHybrid
+When using Identity Verification, make sure to link NetverifyFace.framework and ZoomAuthenticationHybrid.framework to your app project. There is no new public API for you to consume, nor any implementation adaptions required.
+Please also make sure that the Umoove.framework from our previous releases is removed from your app.
+
+#### Additions in visual customization
+Enhanced customization options to colorize some UI elements on the 3D face liveness screen, see [`NetverifyScanOverlay`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyScanOverlayView.html) class for the new options.
+
+#### Localizable Strings
+Several additions and changes, mostly in regards to the new 3D face liveness capturing functionality.
+
 ## 2.14.0
 
 #### Default Settings
