@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AuthenticationControllerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Protocol/AuthenticationControllerDelegate" class="dashAnchor"></a>
+
+    <a title="AuthenticationControllerDelegate Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          NetverifyFace Docs
+        </a>
+        
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/Jumio/mobile-sdk-ios">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">NetverifyFace Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      AuthenticationControllerDelegate Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Authentication Classes.html">Authentication Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Authentication Classes.html#/c:objc(cs)AuthenticationScanViewController">AuthenticationScanViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticationError.html">AuthenticationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticationController.html">AuthenticationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticationConfiguration.html">AuthenticationConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Authentication &amp; Jumio Appearance.html">Authentication &amp; Jumio Appearance</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthenticationNavigationBarTitleImageView.html">AuthenticationNavigationBarTitleImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/JumioAppearance.html">JumioAppearance</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/JumioBaseView.html">JumioBaseView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/JumioScanOverlayView.html">JumioScanOverlayView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/JumioNegativeButton.html">JumioNegativeButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/JumioPositiveButton.html">JumioPositiveButton</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Authentication Protocols.html">Authentication Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AuthenticationControllerDelegate.html">AuthenticationControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Authentication Type Definition.html">Authentication Type Definition</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AuthenticationResult.html">AuthenticationResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>AuthenticationControllerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">AuthenticationControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>Protocol that has to be implemented when using AuthenticationController</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)AuthenticationControllerDelegate(im)authenticationController:didFinishInitializingScanViewController:"></a>
+                    <a name="//apple_ref/objc/Method/-authenticationController:didFinishInitializingScanViewController:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)AuthenticationControllerDelegate(im)authenticationController:didFinishInitializingScanViewController:">-authenticationController:didFinishInitializingScanViewController:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when the SDK and all resources are loaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">authenticationController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/AuthenticationController.html">AuthenticationController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">authenticationController</span>
+    <span class="nf">didFinishInitializingScanViewController</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">scanViewController</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticationController</span><span class="p">(</span><span class="n">_</span> <span class="nv">authenticationController</span><span class="p">:</span> <span class="kt"><a href="../Classes/AuthenticationController.html">AuthenticationController</a></span><span class="p">,</span> <span class="n">didFinishInitializingScanViewController</span> <span class="nv">scanViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>authenticationController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the controller instance</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scanViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIViewController object to present</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/NetverifyFace.framework/Headers/NetverifyFace/AuthenticationConfiguration.h#L38">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)AuthenticationControllerDelegate(im)authenticationController:didFinishWithAuthenticationResult:transactionReference:"></a>
+                    <a name="//apple_ref/objc/Method/-authenticationController:didFinishWithAuthenticationResult:transactionReference:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)AuthenticationControllerDelegate(im)authenticationController:didFinishWithAuthenticationResult:transactionReference:">-authenticationController:didFinishWithAuthenticationResult:transactionReference:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when the SDK finished with success.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">authenticationController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/AuthenticationController.html">AuthenticationController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">authenticationController</span>
+    <span class="nf">didFinishWithAuthenticationResult</span><span class="p">:(</span><span class="n"><a href="../Enums/AuthenticationResult.html">AuthenticationResult</a></span><span class="p">)</span><span class="nv">authenticationResult</span>
+                 <span class="nf">transactionReference</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">transactionReference</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticationController</span><span class="p">(</span><span class="n">_</span> <span class="nv">authenticationController</span><span class="p">:</span> <span class="kt"><a href="../Classes/AuthenticationController.html">AuthenticationController</a></span><span class="p">,</span> <span class="n">didFinishWith</span> <span class="nv">authenticationResult</span><span class="p">:</span> <span class="kt"><a href="../Enums/AuthenticationResult.html">AuthenticationResult</a></span><span class="p">,</span> <span class="nv">transactionReference</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>authenticationController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the controller instance</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>authenticationResult</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>data containing the extracted information</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transactionReference</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the unique identifier of the scan session</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/NetverifyFace.framework/Headers/NetverifyFace/AuthenticationConfiguration.h#L46">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)AuthenticationControllerDelegate(im)authenticationController:didFinishWithError:transactionReference:"></a>
+                    <a name="//apple_ref/objc/Method/-authenticationController:didFinishWithError:transactionReference:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)AuthenticationControllerDelegate(im)authenticationController:didFinishWithError:transactionReference:">-authenticationController:didFinishWithError:transactionReference:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when the SDK canceled.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">authenticationController</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/AuthenticationController.html">AuthenticationController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">authenticationController</span>
+              <span class="nf">didFinishWithError</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/AuthenticationError.html">AuthenticationError</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span>
+            <span class="nf">transactionReference</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">transactionReference</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticationController</span><span class="p">(</span><span class="n">_</span> <span class="nv">authenticationController</span><span class="p">:</span> <span class="kt"><a href="../Classes/AuthenticationController.html">AuthenticationController</a></span><span class="p">,</span> <span class="n">didFinishWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/AuthenticationError.html">AuthenticationError</a></span><span class="p">,</span> <span class="nv">transactionReference</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>authenticationController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the controller instance</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>holds more detailed information about the error reason</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transactionReference</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the unique identifier of the scan session</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/NetverifyFace.framework/Headers/NetverifyFace/AuthenticationConfiguration.h#L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2019 Jumio Corp. <br />The source code and software available on this website (“Software”) is provided by Jumio Corp. or its affiliated group companies (“Jumio”) &quot;as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage. <br />In any case, your use of this Software is subject to the terms and conditions that apply to your contractual relationship with Jumio. As regards Jumio’s privacy practices, please see our privacy notice available here: <a href="https://www.jumio.com/legal-information/privacy-policy/">https://www.jumio.com/legal-information/privacy-policy/</a></p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
