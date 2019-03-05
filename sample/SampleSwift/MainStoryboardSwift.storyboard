@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -88,13 +88,13 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="cED-qs-lcF"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="switchRequireFaceMatch" destination="A45-KA-VwT" id="gAD-rq-lOm"/>
-                        <outlet property="switchRequireVerification" destination="dC8-8e-xdg" id="ODy-MC-A58"/>
+                        <outlet property="switchEnableIdentityVerification" destination="A45-KA-VwT" id="gAD-rq-lOm"/>
+                        <outlet property="switchEnableVerification" destination="dC8-8e-xdg" id="ODy-MC-A58"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBD-9T-sLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="-180"/>
+            <point key="canvasLocation" x="-1916" y="573"/>
         </scene>
         <!--Netverify CustomUI View Controller-->
         <scene sceneID="E3u-rK-9nG">
@@ -251,7 +251,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2089" y="-180"/>
+            <point key="canvasLocation" x="-1916" y="1310"/>
         </scene>
         <!--Item-->
         <scene sceneID="bRP-p7-OLr">
@@ -276,7 +276,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAg-ZS-h3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="353" y="-180"/>
+            <point key="canvasLocation" x="-1916" y="-155"/>
         </scene>
         <!--BAM Checkout-->
         <scene sceneID="JmQ-qZ-Qrd">
@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c26-wS-aFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="353" y="-850"/>
+            <point key="canvasLocation" x="-207" y="-155"/>
         </scene>
         <!--Jumio Mobile SDK-->
         <scene sceneID="25f-SI-KHe">
@@ -344,13 +344,63 @@
                     </tabBar>
                     <connections>
                         <segue destination="5Ar-3t-3vz" kind="relationship" relationship="viewControllers" id="yjl-sD-Gbw"/>
+                        <segue destination="7SV-SY-kR0" kind="relationship" relationship="viewControllers" id="9SR-Wc-beo"/>
                         <segue destination="Jad-cK-FTC" kind="relationship" relationship="viewControllers" id="bw3-Km-UQm"/>
                         <segue destination="nZj-si-Cge" kind="relationship" relationship="viewControllers" id="Ayr-VF-gYD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BN1-Ab-Qrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-598" y="-188"/>
+            <point key="canvasLocation" x="-674" y="-1098"/>
+        </scene>
+        <!--Authentication-->
+        <scene sceneID="wzU-mK-Jaj">
+            <objects>
+                <viewController title="Authentication" id="7SV-SY-kR0" customClass="AuthenticationStartViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rV8-DM-kel"/>
+                        <viewControllerLayoutGuide type="bottom" id="9uI-HB-vbj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AlZ-5k-qVr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please perform a Netverify transaction first" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MKd-TR-5B2">
+                                <rect key="frame" x="20" y="350" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="transactionReference_onDone:" destination="7SV-SY-kR0" eventType="primaryActionTriggered" id="4gC-3b-BZ0"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMD-sL-4Cu">
+                                <rect key="frame" x="120" y="430" width="174" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Authentication"/>
+                                <connections>
+                                    <action selector="startAuthentication" destination="7SV-SY-kR0" eventType="touchUpInside" id="c6q-XB-yVL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MKd-TR-5B2" secondAttribute="trailing" constant="20" id="29l-qk-YlJ"/>
+                            <constraint firstItem="LMD-sL-4Cu" firstAttribute="centerY" secondItem="AlZ-5k-qVr" secondAttribute="centerY" id="CJo-ti-9Ap"/>
+                            <constraint firstItem="MKd-TR-5B2" firstAttribute="leading" secondItem="AlZ-5k-qVr" secondAttribute="leading" constant="20" id="aGJ-XI-Ojj"/>
+                            <constraint firstItem="LMD-sL-4Cu" firstAttribute="top" secondItem="MKd-TR-5B2" secondAttribute="bottom" constant="50" id="aMq-1m-m5E"/>
+                            <constraint firstItem="LMD-sL-4Cu" firstAttribute="centerX" secondItem="AlZ-5k-qVr" secondAttribute="centerX" id="qm9-pg-njK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Authentication" image="NVicon" selectedImage="NVicon" id="Xn4-AI-zg8"/>
+                    <connections>
+                        <outlet property="transactionReferenceTextField" destination="MKd-TR-5B2" id="Qp3-PQ-T0r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlm-CY-6UC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1026" y="-155"/>
         </scene>
         <!--DocumentVerification-->
         <scene sceneID="yhj-Zm-zSJ">
@@ -409,7 +459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQr-Df-jfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.80000000000001" y="572.56371814092961"/>
+            <point key="canvasLocation" x="565" y="-166"/>
         </scene>
     </scenes>
     <resources>

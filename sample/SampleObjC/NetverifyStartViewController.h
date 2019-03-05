@@ -8,8 +8,8 @@
 
 @interface NetverifyStartViewController : StartViewController
 
-@property (nonatomic, weak) IBOutlet UISwitch *switchRequireVerification;
-@property (nonatomic, weak) IBOutlet UISwitch *switchRequireFaceMatch;
+@property (nonatomic, weak) IBOutlet UISwitch *switchEnableVerification;
+@property (nonatomic, weak) IBOutlet UISwitch *switchEnableIdentityVerification;
 
 - (IBAction) startNetverify: (id) sender;
 

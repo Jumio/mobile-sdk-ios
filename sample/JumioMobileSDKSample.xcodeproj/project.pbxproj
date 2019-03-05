@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3078F8B52202044A003B2974 /* NetverifyBarcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F8B422020449003B2974 /* NetverifyBarcode.framework */; };
+		3078F8B62202044A003B2974 /* NetverifyBarcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F8B422020449003B2974 /* NetverifyBarcode.framework */; };
+		30CEB9A32208A88A00322964 /* NetverifyBarcode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F8B422020449003B2974 /* NetverifyBarcode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30CEB9AA2209C0FA00322964 /* NetverifyBarcode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F8B422020449003B2974 /* NetverifyBarcode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A841FEBDED400626D55 /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; };
 		54042A851FEBDED400626D55 /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A861FEBDED400626D55 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; };
@@ -62,11 +66,15 @@
 		77D0900B21E76B98001DE743 /* NetverifyFace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77D0900C21E76BA3001DE743 /* NetverifyFace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; };
 		77D0900D21E76BA3001DE743 /* NetverifyFace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		963F1355221C20FE00451ADA /* AuthenticationStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F1354221C20FE00451ADA /* AuthenticationStartViewController.swift */; };
+		9690B278221D649500F04D76 /* AuthenticationStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9690B277221D649500F04D76 /* AuthenticationStartViewController.m */; };
 		9694C9A4206156E9004CC4BA /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9694C9A3206156E9004CC4BA /* BAMCheckout.framework */; };
 		96FE3624206A5BBB0099626C /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; };
 		EE01EEF71924A3E200B7CC49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
 		EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */; };
 		EE01EF041924A3E300B7CC49 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EF031924A3E300B7CC49 /* StartViewController.m */; };
+		FA25DDEA221828E300881664 /* Localizable-Authentication.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA25DDE8221828E300881664 /* Localizable-Authentication.strings */; };
+		FA25DDEB221828E300881664 /* Localizable-Authentication.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA25DDE8221828E300881664 /* Localizable-Authentication.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,6 +85,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				54042A891FEBDED400626D55 /* MicroBlink.framework in Embed Frameworks */,
+				30CEB9A32208A88A00322964 /* NetverifyBarcode.framework in Embed Frameworks */,
 				77BA608721E5FABF0095300B /* ZoomAuthenticationHybrid.framework in Embed Frameworks */,
 				54042A871FEBDED400626D55 /* JumioCore.framework in Embed Frameworks */,
 				54042A851FEBDED400626D55 /* BAMCheckout.framework in Embed Frameworks */,
@@ -97,6 +106,7 @@
 				54042A911FEBDEF500626D55 /* JumioCore.framework in Embed Frameworks */,
 				54042A8F1FEBDEF500626D55 /* BAMCheckout.framework in Embed Frameworks */,
 				77D0900D21E76BA3001DE743 /* NetverifyFace.framework in Embed Frameworks */,
+				30CEB9AA2209C0FA00322964 /* NetverifyBarcode.framework in Embed Frameworks */,
 				54042A951FEBDEF500626D55 /* Netverify.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -105,6 +115,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3078F8B422020449003B2974 /* NetverifyBarcode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetverifyBarcode.framework; path = ../frameworks/NetverifyBarcode.framework; sourceTree = "<group>"; };
 		54042A751FEBDEC900626D55 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../frameworks/MicroBlink.framework; sourceTree = "<group>"; };
 		54042A761FEBDEC900626D55 /* JumioCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioCore.framework; path = ../frameworks/JumioCore.framework; sourceTree = "<group>"; };
 		54042A781FEBDECA00626D55 /* Netverify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netverify.framework; path = ../frameworks/Netverify.framework; sourceTree = "<group>"; };
@@ -156,6 +167,9 @@
 		77CCE6021FD93EE8000701C6 /* ObjcExceptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjcExceptionHelper.h; path = SampleSwift/ObjcExceptionHelper.h; sourceTree = SOURCE_ROOT; };
 		77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjcExceptionHelper.m; path = SampleSwift/ObjcExceptionHelper.m; sourceTree = SOURCE_ROOT; };
 		77D0900721E76B8B001DE743 /* NetverifyFace.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetverifyFace.framework; path = ../frameworks/NetverifyFace.framework; sourceTree = "<group>"; };
+		963F1354221C20FE00451ADA /* AuthenticationStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationStartViewController.swift; path = SampleSwift/AuthenticationStartViewController.swift; sourceTree = SOURCE_ROOT; };
+		9690B276221D649500F04D76 /* AuthenticationStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationStartViewController.h; sourceTree = "<group>"; };
+		9690B277221D649500F04D76 /* AuthenticationStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticationStartViewController.m; sourceTree = "<group>"; };
 		9694C9A3206156E9004CC4BA /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BAMCheckout.framework; sourceTree = "<group>"; };
 		EE01EEE71924A3E200B7CC49 /* SampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE01EEF61924A3E200B7CC49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
@@ -163,6 +177,12 @@
 		EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		EE01EF021924A3E300B7CC49 /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = SOURCE_ROOT; };
 		EE01EF031924A3E300B7CC49 /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = SOURCE_ROOT; };
+		FA25DDE9221828E300881664 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "../frameworks/en.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
+		FA25DDEC221828EB00881664 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = "../frameworks/de.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
+		FA25DDED221828F200881664 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "../frameworks/fr.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
+		FA25DDEE221828F400881664 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../frameworks/zh-Hans.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
+		FA25DDEF221828F500881664 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "../frameworks/es.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
+		FA25DDF0221828F600881664 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "../frameworks/nl.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77D0900C21E76BA3001DE743 /* NetverifyFace.framework in Frameworks */,
+				3078F8B62202044A003B2974 /* NetverifyBarcode.framework in Frameworks */,
 				96FE3624206A5BBB0099626C /* Netverify.framework in Frameworks */,
 				9694C9A4206156E9004CC4BA /* BAMCheckout.framework in Frameworks */,
 				54042A921FEBDEF500626D55 /* MicroBlink.framework in Frameworks */,
@@ -184,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54042A881FEBDED400626D55 /* MicroBlink.framework in Frameworks */,
+				3078F8B52202044A003B2974 /* NetverifyBarcode.framework in Frameworks */,
 				77BA608421E5FAAD0095300B /* ZoomAuthenticationHybrid.framework in Frameworks */,
 				54042A861FEBDED400626D55 /* JumioCore.framework in Frameworks */,
 				54042A841FEBDED400626D55 /* BAMCheckout.framework in Frameworks */,
@@ -211,6 +233,7 @@
 				547B47051F46FC880029781C /* MainStoryboardSwift.storyboard */,
 				54CD99951F4B017600E9CB14 /* BAMCheckout */,
 				54CD99961F4B018100E9CB14 /* Netverify */,
+				963F1353221C1FE600451ADA /* Authentication */,
 				54CD99971F4B018B00E9CB14 /* DocumentVerification */,
 				54CD998B1F4AB4A300E9CB14 /* Supporting Files */,
 			);
@@ -317,6 +340,23 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		963F1353221C1FE600451ADA /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				963F1354221C20FE00451ADA /* AuthenticationStartViewController.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		9690B275221D643700F04D76 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9690B276221D649500F04D76 /* AuthenticationStartViewController.h */,
+				9690B277221D649500F04D76 /* AuthenticationStartViewController.m */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
 		EE01EEDE1924A3E200B7CC49 = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +364,7 @@
 				545F7A5920A1E1B1007EBCE7 /* Localizable-BAMCheckout.strings */,
 				545F7A5B20A1E1B1007EBCE7 /* Localizable-DocumentVerification.strings */,
 				545F7A5D20A1E1B1007EBCE7 /* Localizable-Netverify.strings */,
+				FA25DDE8221828E300881664 /* Localizable-Authentication.strings */,
 				54A749D41E56189F0060CF63 /* General classes */,
 				EE01EEF01924A3E200B7CC49 /* SampleObjC */,
 				547B46EA1F46F5050029781C /* SampleSwift */,
@@ -357,6 +398,7 @@
 				547B46EB1F46F70B0029781C /* MainStoryboardObjC.storyboard */,
 				54A749D11E5618870060CF63 /* BAMCheckout */,
 				54A749D21E56188F0060CF63 /* Netverify */,
+				9690B275221D643700F04D76 /* Authentication */,
 				54A749D31E5618950060CF63 /* DocumentVerification */,
 				EE01EEF11924A3E200B7CC49 /* Supporting Files */,
 			);
@@ -375,6 +417,7 @@
 		EE8E78101926419400896C42 /* JumioMobileSDK */ = {
 			isa = PBXGroup;
 			children = (
+				3078F8B422020449003B2974 /* NetverifyBarcode.framework */,
 				77D0900721E76B8B001DE743 /* NetverifyFace.framework */,
 				77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */,
 				54042A791FEBDECA00626D55 /* BAMCheckout.framework */,
@@ -485,6 +528,7 @@
 				545F7A6420A1E1B2007EBCE7 /* Localizable-Netverify.strings in Resources */,
 				54CD99831F4708BC00E9CB14 /* exportOptions.plist in Resources */,
 				545F7A6220A1E1B2007EBCE7 /* Localizable-DocumentVerification.strings in Resources */,
+				FA25DDEB221828E300881664 /* Localizable-Authentication.strings in Resources */,
 				547B47041F46F80E0029781C /* Images.xcassets in Resources */,
 				54D66D64206D54C6009640C2 /* VerifyInfoView.xib in Resources */,
 			);
@@ -499,6 +543,7 @@
 				545F7A6120A1E1B2007EBCE7 /* Localizable-DocumentVerification.strings in Resources */,
 				54CD99821F4708BC00E9CB14 /* exportOptions.plist in Resources */,
 				545F7A6320A1E1B2007EBCE7 /* Localizable-Netverify.strings in Resources */,
+				FA25DDEA221828E300881664 /* Localizable-Authentication.strings in Resources */,
 				547B46EC1F46F70B0029781C /* MainStoryboardObjC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +632,7 @@
 				54CD99881F4AA49300E9CB14 /* NetverifyStartViewController.swift in Sources */,
 				54D66D67206D54D0009640C2 /* NetverifyCustomUIViewController.swift in Sources */,
 				547B47081F46FFFD0029781C /* BAMCheckoutStartViewController.swift in Sources */,
+				963F1355221C20FE00451ADA /* AuthenticationStartViewController.swift in Sources */,
 				54D66D60206D54C6009640C2 /* CaptureInfoView.swift in Sources */,
 				54D66D65206D54C6009640C2 /* VerifyInfoView.swift in Sources */,
 			);
@@ -599,6 +645,7 @@
 				EE01EF041924A3E300B7CC49 /* StartViewController.m in Sources */,
 				547B46EF1F46F71B0029781C /* BAMCheckoutStartViewController.m in Sources */,
 				547B46F31F46F73B0029781C /* CustomScanOverlayViewController.m in Sources */,
+				9690B278221D649500F04D76 /* AuthenticationStartViewController.m in Sources */,
 				547B46F71F46F7520029781C /* NetverifyStartViewController.m in Sources */,
 				EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */,
 				EE01EEF71924A3E200B7CC49 /* main.m in Sources */,
@@ -641,6 +688,19 @@
 				549A038920C69583005181A7 /* nl */,
 			);
 			name = "Localizable-Netverify.strings";
+			sourceTree = "<group>";
+		};
+		FA25DDE8221828E300881664 /* Localizable-Authentication.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA25DDE9221828E300881664 /* en */,
+				FA25DDEC221828EB00881664 /* de */,
+				FA25DDED221828F200881664 /* fr */,
+				FA25DDEE221828F400881664 /* zh-Hans */,
+				FA25DDEF221828F500881664 /* es */,
+				FA25DDF0221828F600881664 /* nl */,
+			);
+			name = "Localizable-Authentication.strings";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

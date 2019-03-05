@@ -168,9 +168,23 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
             alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: {(_: UIAlertAction!) in netverifyUIController.retryAfterError()}))
         }
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {(_: UIAlertAction!) in netverifyUIController.cancel()}))
-        if self.currentScanView != nil {
-            self.currentScanView?.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {(_: UIAlertAction!) in
+            netverifyUIController.cancel()
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        
+        if let scanVC = self.currentScanView {
+            if scanVC.isBeingDismissed {
+                if let verificationView = self.verificationFinishedView {
+                    verificationView.removeFromSuperview()
+                }
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                if let verificationView = self.verificationFinishedView {
+                    verificationView.removeFromSuperview()
+                }
+                scanVC.present(alert, animated: true, completion: nil)
+            }
         } else {
             self.present(alert, animated: true, completion: nil)
         }

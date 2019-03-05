@@ -26,8 +26,8 @@ Whenever an exception is thrown, the [`NetverifyViewController`](http://jumio.gi
 
 ```
 NetverifyConfiguration *config = [NetverifyConfiguration new];
-config.merchantApiToken = @"YOURAPITOKEN";
-config.merchantApiSecret = @"YOURAPISECRET";
+config.apiToken = @"YOURAPITOKEN";
+config.apiSecret = @"YOURAPISECRET";
 config.dataCenter = JumioDataCenterEU; // Change this parameter if your account is in the EU data center. Default is US.
 config.delegate = self;
 
@@ -68,7 +68,7 @@ config.callbackUrl = @"YOURCALLBACKURL";
 ```
 Set the following setting to switch to Fastfill mode (which performs data extraction only):
 ```
-config.requireVerification = NO;
+config.enableVerification = NO;
 ```
 
 Identity Verification is automatically enabled if it is activated for your account. Make sure to link NetverifyFace.framework and ZoomAuthenticationHybrid.framework to your app project.
@@ -77,7 +77,7 @@ __Note:__ The new 3D face liveness capturing technology is not optimised for iPa
 
 Set the following setting to disable Identity Verification on a transaction level:
 ```
-config.requireFaceMatch = NO;
+config.enableIdentityVerification = NO;
 ```
 
 ### Preselection
@@ -96,18 +96,18 @@ The merchant scan reference allows you to specify your own unique identifier for
 __Note:__ Must not contain sensitive data like PII (Personally Identifiable Information) or account
 login.
 ```
-config.merchantScanReference = @"YOURSCANREFERENCE";
+config.customerInternalReference = @"YOURSCANREFERENCE";
 ```
 Use the following property to identify the scan in your reports (max. 100 characters).
 ```
-config.merchantReportingCriteria = @"YOURREPORTINGCRITERIA";
+config.reportingCriteria = @"YOURREPORTINGCRITERIA";
 ```
 You can also set a unique identifier for each of your customers (max. 100 characters).
 
 __Note:__ Must not contain sensitive data like PII (Personally Identifiable Information) or account
 login.
 ```
-config.customerId = @"CUSTOMERID";
+config.userReference = @"CUSTOMERID";
 ```
 
 
@@ -139,7 +139,7 @@ An exception will be thrown at initialization time and the `NetverifyViewControl
 
 ### Miscellaneous
 
-When using Fastfill (requireVerification=NO), you can limit data extraction to be done on the device only by enabling `dataExtractionOnMobileOnly`.
+When using Fastfill (enableVerification=NO), you can limit data extraction to be done on the device only by enabling `dataExtractionOnMobileOnly`.
 ```
 config.dataExtractionOnMobileOnly = YES;
 ```
@@ -279,8 +279,8 @@ To use the custom UI with a plain scanning user interface, specify an instance o
 
 ```
 NetverifyConfiguration *config = [NetverifyConfiguration new];
-config.merchantApiToken = @"YOURAPITOKEN";
-config.merchantApiSecret = @"YOURAPISECRET";
+config.apiToken = @"YOURAPITOKEN";
+config.apiSecret = @"YOURAPISECRET";
 config.dataCenter = JumioDataCenterEU; // Change this parameter if your account is in the EU data center. Default is US.
 config.customUIDelegate = self;
 

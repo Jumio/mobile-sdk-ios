@@ -7,8 +7,8 @@
 import Netverify
 
 class NetverifyStartViewController: StartViewController, NetverifyViewControllerDelegate {
-    @IBOutlet weak var switchRequireVerification:UISwitch!
-    @IBOutlet weak var switchRequireFaceMatch:UISwitch!
+    @IBOutlet weak var switchEnableVerification:UISwitch!
+    @IBOutlet weak var switchEnableIdentityVerification:UISwitch!
     var netverifyViewController:NetverifyViewController?
     var customUIController:NetverifyUIController?
     
@@ -38,7 +38,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //Set the delegate that implements NetverifyViewControllerDelegate
         config.delegate = self
         
-        //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
+        //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required API token, API secret and a delegate object.
         
         do {
             try ObjcExceptionHelper.catchException {
@@ -57,9 +57,9 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
     func createNetverifyConfiguration() -> NetverifyConfiguration {
         let config:NetverifyConfiguration = NetverifyConfiguration()
         //Provide your API token
-        config.merchantApiToken = "YOUR_NETVERIFY_APITOKEN"
+        config.apiToken = "YOUR_NETVERIFY_APITOKEN"
         //Provide your API secret
-        config.merchantApiSecret = "YOUR_NETVERIFY_APISECRET"
+        config.apiSecret = "YOUR_NETVERIFY_APISECRET"
         
         //Set the dataCenter; default is JumioDataCenterUS
         //config.dataCenter = JumioDataCenterEU
@@ -84,21 +84,21 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //When a selected country and ID type support more document variants (paper and plastic), you can specify the document variant in advance or let the user choose during the verification process.
         //config.preselectedDocumentVariant = .plastic
         
-        //The merchant scan reference allows you to identify the scan (max. 100 characters). Note: Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
-        //config.merchantScanReference = "YOURSCANREFERENCE"
+        //The customer internal reference allows you to identify the scan (max. 100 characters). Note: Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
+        //config.customerInternalReference = "CUSTOMER_INTERNAL_REFERENCE"
         //Use the following property to identify the scan in your reports (max. 100 characters).
-        //config.merchantReportingCriteria = "YOURREPORTINGCRITERIA"
+        //config.reportingCriteria = "YOURREPORTINGCRITERIA"
         //You can also set a customer identifier (max. 100 characters). Note: The customer ID should not contain sensitive data like PII (Personally Identifiable Information) or account login.
-        //config.customerId = "CUSTOMERID"
+        //config.userReference = "USER_REFERENCE"
         
-        //Callback URL (max. 255 characters) for the confirmation after the verification is completed. This setting overrides your Jumio merchant settings.
+        //Callback URL (max. 255 characters) for the confirmation after the verification is completed. This setting overrides your Jumio account settings.
         //config.callbackUrl = "https://www.example.com"
         
         //Enable ID verification to receive a verification status and verified data positions (see Callback chapter). Note: Not possible for accounts configured as Fastfill only.
-        config.requireVerification = self.switchRequireVerification.isOn
+        config.enableVerification = self.switchEnableVerification.isOn
         
-        //You can enable face match during the ID verification for a specific transaction. This setting overrides your default Jumio merchant settings.
-        config.requireFaceMatch = self.switchRequireFaceMatch.isOn
+        //You can enable Identity Verification during the ID verification for a specific transaction. This setting overrides your default Jumio account settings.
+        config.enableIdentityVerification = self.switchEnableIdentityVerification.isOn
         
         //Set the default camera position
         //config.cameraPosition = JumioCameraPositionFront
@@ -122,74 +122,73 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         
         // - Navigation bar: tint color, title color, title image
         
-        //UINavigationBar.netverifyAppearance().tintColor = UIColor.yellow
-        //UINavigationBar.netverifyAppearance().barTintColor = UIColor.red
-        //UINavigationBar.netverifyAppearance().titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
+        //UINavigationBar.jumioAppearance().tintColor = UIColor.yellow
+        //UINavigationBar.jumioAppearance().barTintColor = UIColor.red
+        //UINavigationBar.jumioAppearance().titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
         
-        //NetverifyNavigationBarTitleImageView.netverifyAppearance().titleImage = UIImage.init(named: "<your-bamcheckout-navigation-bar-title-image>")
+        //NetverifyNavigationBarTitleImageView.jumioAppearance().titleImage = UIImage.init(named: "<your-navigation-bar-title-image>")
         
         // - Custom general appearance - deactivate blur
-        //NetverifyBaseView.netverifyAppearance().disableBlur = true
+        //NetverifyBaseView.jumioAppearance().disableBlur = true
         
         // - Custom general appearance - background color
-        //NetverifyBaseView.netverifyAppearance().backgroundColor = UIColor.lightGray
+        //NetverifyBaseView.jumioAppearance().backgroundColor = UIColor.lightGray
         
         // - Custom general appearance - foreground color (text-elements and icons)
-        //NetverifyBaseView.netverifyAppearance().foregroundColor = UIColor.red
+        //NetverifyBaseView.jumioAppearance().foregroundColor = UIColor.red
         
         // - Scan options Button/Header Background, Icon and Title Colors, custom class has to be imported
-        //NetverifyDocumentSelectionButton.netverifyAppearance().setBackgroundColor(UIColor.yellow, for: UIControlState.normal)
-        //NetverifyDocumentSelectionButton.netverifyAppearance().setBackgroundColor(UIColor.red, for: UIControlState.highlighted)
-        //NetverifyDocumentSelectionHeaderView.netverifyAppearance().backgroundColor = UIColor.brown
+        //NetverifyDocumentSelectionButton.jumioAppearance().setBackgroundColor(UIColor.yellow, for: UIControlState.normal)
+        //NetverifyDocumentSelectionButton.jumioAppearance().setBackgroundColor(UIColor.red, for: UIControlState.highlighted)
+        //NetverifyDocumentSelectionHeaderView.jumioAppearance().backgroundColor = UIColor.brown
 
-        //NetverifyDocumentSelectionButton.netverifyAppearance().setIconColor(UIColor.red, for: UIControlState.normal)
-        //NetverifyDocumentSelectionButton.netverifyAppearance().setIconColor(UIColor.yellow, for: UIControlState.highlighted)
-        //NetverifyDocumentSelectionHeaderView.netverifyAppearance().iconColor = UIColor.magenta
+        //NetverifyDocumentSelectionButton.jumioAppearance().setIconColor(UIColor.red, for: UIControlState.normal)
+        //NetverifyDocumentSelectionButton.jumioAppearance().setIconColor(UIColor.yellow, for: UIControlState.highlighted)
+        //NetverifyDocumentSelectionHeaderView.jumioAppearance().iconColor = UIColor.magenta
         
-        //NetverifyDocumentSelectionButton.netverifyAppearance().setTitleColor(UIColor.red, for: UIControlState.normal)
-        //NetverifyDocumentSelectionButton.netverifyAppearance().setTitleColor(UIColor.yellow, for: UIControlState.highlighted)
-        //NetverifyDocumentSelectionHeaderView.netverifyAppearance().titleColor = UIColor.magenta
+        //NetverifyDocumentSelectionButton.jumioAppearance().setTitleColor(UIColor.red, for: UIControlState.normal)
+        //NetverifyDocumentSelectionButton.jumioAppearance().setTitleColor(UIColor.yellow, for: UIControlState.highlighted)
+        //NetverifyDocumentSelectionHeaderView.jumioAppearance().titleColor = UIColor.magenta
         
         // - Custom general appearance - font
         //The font has to be loaded upfront within the mainBundle before initializing the SDK
-        //NetverifyBaseView.netverifyAppearance().customLightFontName = "<your-font-name-loaded-in-your-app>"
-        //NetverifyBaseView.netverifyAppearance().customRegularFontName = "<your-font-name-loaded-in-your-app>"
-        //NetverifyBaseView.netverifyAppearance().customMediumFontName = "<your-font-name-loaded-in-your-app>"
-        //NetverifyBaseView.netverifyAppearance().customBoldFontName = "<your-font-name-loaded-in-your-app>"
-        //NetverifyBaseView.netverifyAppearance().customItalicFontName = "<your-font-name-loaded-in-your-app>"
+        //NetverifyBaseView.jumioAppearance().customLightFontName = "<your-font-name-loaded-in-your-app>"
+        //NetverifyBaseView.jumioAppearance().customRegularFontName = "<your-font-name-loaded-in-your-app>"
+        //NetverifyBaseView.jumioAppearance().customMediumFontName = "<your-font-name-loaded-in-your-app>"
+        //NetverifyBaseView.jumioAppearance().customBoldFontName = "<your-font-name-loaded-in-your-app>"
+        //NetverifyBaseView.jumioAppearance().customItalicFontName = "<your-font-name-loaded-in-your-app>"
         
         // - Custom Positive Button Background Colors, custom class has to be imported (the same applies to NetverifyNegativeButton and NetverifyFallbackButton)
-        //The same applies to NetverifyNegativeButton and NetverifyFallbackButton
-        //NetverifyPositiveButton.netverifyAppearance().setBackgroundColor(UIColor.cyan, for: UIControlState.normal)
-        //NetverifyPositiveButton.netverifyAppearance().setBackgroundColor(UIColor.blue, for: UIControlState.highlighted)
+        //NetverifyPositiveButton.jumioAppearance().setBackgroundColor(UIColor.cyan, for: UIControlState.normal)
+        //NetverifyPositiveButton.jumioAppearance().setBackgroundColor(UIColor.blue, for: UIControlState.highlighted)
         
         //Custom Positive Button Background Image, custom class has to be imported
-        //NetverifyPositiveButton.netverifyAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.normal)
-        //NetverifyPositiveButton.netverifyAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.highlighted)
+        //NetverifyPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.normal)
+        //NetverifyPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.highlighted)
         
         //Custom Positive Button Title Colors, custom class has to be imported
-        //NetverifyPositiveButton.netverifyAppearance().setTitleColor(UIColor.gray, for: UIControlState.normal)
-        //NetverifyPositiveButton.netverifyAppearance().setTitleColor(UIColor.magenta, for: UIControlState.highlighted)
+        //NetverifyPositiveButton.jumioAppearance().setTitleColor(UIColor.gray, for: UIControlState.normal)
+        //NetverifyPositiveButton.jumioAppearance().setTitleColor(UIColor.magenta, for: UIControlState.highlighted)
         
         //Custom Positive Button Title Colors, custom class has to be imported
-        //NetverifyPositiveButton.netverifyAppearance().borderColor = UIColor.green
+        //NetverifyPositiveButton.jumioAppearance().borderColor = UIColor.green
         
         // - Custom Scan Overlay Colors, custom class has to be imported
-        //NetverifyScanOverlayView.netverifyAppearance().colorOverlayStandard = UIColor.blue
-        //NetverifyScanOverlayView.netverifyAppearance().colorOverlayValid = UIColor.green
-        //NetverifyScanOverlayView.netverifyAppearance().colorOverlayInvalid = UIColor.red
+        //NetverifyScanOverlayView.jumioAppearance().colorOverlayStandard = UIColor.blue
+        //NetverifyScanOverlayView.jumioAppearance().colorOverlayValid = UIColor.green
+        //NetverifyScanOverlayView.jumioAppearance().colorOverlayInvalid = UIColor.red
         
         // Color for the face oval outline
-        //NetverifyScanOverlayView.netverifyAppearance().faceOvalColor = UIColor(red: 46/255.0, green: 255/255.0, blue: 71/255.0, alpha: 0.69)
+        //NetverifyScanOverlayView.jumioAppearance().faceOvalColor = UIColor.orange
         // Color for the progress bars
-        //NetverifyScanOverlayView.netverifyAppearance().faceProgressColor = UIColor(red: 46/255.0, green: 255/255.0, blue: 71/255.0, alpha: 0.69)
+        //NetverifyScanOverlayView.jumioAppearance().faceProgressColor = UIColor.purple
         // Color for the background of the feedback view
-        //NetverifyScanOverlayView.netverifyAppearance().faceFeedbackBackgroundColor = UIColor(red: 46/255.0, green: 255/255.0, blue: 71/255.0, alpha: 0.69)
+        //NetverifyScanOverlayView.jumioAppearance().faceFeedbackBackgroundColor = UIColor.yellow
         // Color for the text of the feedback view
-        //NetverifyScanOverlayView.netverifyAppearance().faceFeedbackTextColor = UIColor(red: 46/255.0, green: 255/255.0, blue: 71/255.0, alpha: 0.69)
+        //NetverifyScanOverlayView.jumioAppearance().faceFeedbackTextColor = UIColor.brown
 
         //You can get the current SDK version using the method below.
-        //print("\(self.netverifyViewController?.sdkVersion() ?? "")")
+        //print("\(NetverifyViewController.sdkVersion())")
         
         return config
     }
@@ -210,17 +209,17 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         let customUIViewControllerDelegate = customUIViewController as NetverifyUIControllerDelegate
         
         let config  = self.createNetverifyConfiguration()
-        customUIViewController.requiresVerification = config.requireVerification
+        customUIViewController.requiresVerification = config.enableVerification
         
         //Set the delegate that implements NetverifyViewControllerDelegate
         config.customUIDelegate = customUIViewControllerDelegate
         
-        //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
+        //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required API token, API secret and a delegate object.
         do {
             try ObjcExceptionHelper.catchException {
                 self.customUIController = NetverifyUIController(configuration: config)
                 
-                NetverifyScanOverlayView.netverifyAppearance().colorOverlayStandard = UIColor(red: 44.0/255.0, green: 152.0/255.0, blue: 240.0/255.0, alpha: 1.0)
+                NetverifyScanOverlayView.jumioAppearance().colorOverlayStandard = UIColor(red: 44.0/255.0, green: 152.0/255.0, blue: 240.0/255.0, alpha: 1.0)
             }
         } catch {
             let err = error as NSError
@@ -246,7 +245,9 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
      * @param scanReference The scanReference of the scan
      **/
     func netverifyViewController(_ netverifyViewController: NetverifyViewController, didFinishWith documentData: NetverifyDocumentData, scanReference: String) {
-        print("NetverifyViewController finished successfully with scan reference: %@", scanReference);
+        print("NetverifyViewController finished successfully with scan reference: %@", scanReference)
+        // Share the scan reference for the Authentication SDK
+        UserDefaults.standard.set(scanReference, forKey: "enrollmentTransactionReference")
         
         let selectedCountry:String = documentData.selectedCountry
         let selectedDocumentType:NetverifyDocumentType = documentData.selectedDocumentType
@@ -350,7 +351,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
             self.showAlert(withTitle: "Netverify Mobile SDK", message: message as String)
             self.netverifyViewController?.destroy()
             self.netverifyViewController = nil
-            })
+        })
     }
     
     /**

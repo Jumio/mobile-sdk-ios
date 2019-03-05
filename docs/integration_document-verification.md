@@ -24,8 +24,8 @@ Log into your Jumio Customer Portal and you can find your API token and API secr
 
 ```
 DocumentVerificationViewController *config = [DocumentVerificationViewController new];
-config.merchantApiToken = @"YOURAPITOKEN";
-config.merchantApiSecret = @"YOURAPISECRET";
+config.apiToken = @"YOURAPITOKEN";
+config.apiSecret = @"YOURAPISECRET";
 config.dataCenter = JumioDataCenterEU; // Change this parameter if your account is in the EU data center. Default is US.
 config.delegate = self;
 
@@ -102,13 +102,13 @@ config.customDocumentCode = @"YOURCUSTOMDOCUMENTCODE";
 
 The country needs to be in format [ISO-3166-1 alpha 3](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) or XKX for Kosovo.
 ```
-config.country= @"USA";
+config.country = @"USA";
 ```
 
 ### Transaction identifiers
 Specify your reporting criteria to identify each scan attempt in your reports (max. 100 characters).
 ```
-config.merchantReportingCriteria = @"YOURREPORTINGCRITERIA";
+config.reportingCriteria = @"YOURREPORTINGCRITERIA";
 ```
 
 __Note:__ Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
@@ -131,8 +131,8 @@ __Note:__ If you want to activate data extraction for your account in general, p
 ### Miscellaneous
 Use the following property to identify the scan in your reports (max. 100 characters) and set a customer identifier (max. 100 characters).
 ```
-config.merchantScanReference = @"YOURSCANREFERENCE";
-config.customerId = @"CUSTOMERID";
+config.customerInternalReference = @"YOURSCANREFERENCE";
+config.userReference = @"CUSTOMERID";
 ```
 __Note:__ Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
 

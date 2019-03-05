@@ -20,9 +20,9 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //Setup the Configuration for BAMCheckout
         let config:BAMCheckoutConfiguration = BAMCheckoutConfiguration()
         //Provide your API token
-        config.merchantApiToken = "YOUR_BAMCHECKOUT_APITOKEN"
+        config.apiToken = "YOUR_BAMCHECKOUT_APITOKEN"
         //Provide your API secret
-        config.merchantApiSecret = "YOUR_BAMCHECKOUT_APISECRET"
+        config.apiSecret = "YOUR_BAMCHECKOUT_APISECRET"
         
         //Set the delegate that implements BAMCheckoutViewControllerDelegate
         config.delegate = self
@@ -34,7 +34,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //config.offlineToken = "YOUR_OFFLINE_TOKEN"
         
         //Use the following property to identify the scan in your reports (max. 100 characters).
-        //config.merchantReportingCriteria = "YOURREPORTINGCRITERIA"
+        //config.reportingCriteria = "YOURREPORTINGCRITERIA"
         
         //To restrict supported card types, pass a bitmask of BAMCheckoutCreditCardTypes to the property supportedCreditCardTypes.
         //let cardTypes:BAMCheckoutCreditCardTypes = BAMCheckoutCreditCardTypes(BAMCheckoutCreditCardType.all.rawValue)
@@ -78,7 +78,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //or
         //config.addCustomField("idState", title: "State", values: states, required: true, resetValueText: "not shown")
         
-        //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
+        //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required API token, API secret and a delegate object.
         
         do {
             try ObjcExceptionHelper.catchException {
@@ -102,60 +102,60 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         
         // - Customize buttons: title color, background color, background image selectors for BAMCheckoutPositiveButton, BAMCheckoutNegativeButton
         
-        //BAMCheckoutPositiveButton.bamCheckoutAppearance().setBackgroundColor(UIColor.cyan, for: UIControlState.normal)
-        //BAMCheckoutPositiveButton.bamCheckoutAppearance().setBackgroundColor(UIColor.blue, for: UIControlState.highlighted)
+        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundColor(UIColor.cyan, for: UIControlState.normal)
+        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundColor(UIColor.blue, for: UIControlState.highlighted)
         
-        //BAMCheckoutPositiveButton.bamCheckoutAppearance().setTitleColor(UIColor.gray, for: UIControlState.normal)
-        //BAMCheckoutPositiveButton.bamCheckoutAppearance().setTitleColor(UIColor.magenta, for: UIControlState.highlighted)
+        //BAMCheckoutPositiveButton.jumioAppearance().setTitleColor(UIColor.gray, for: UIControlState.normal)
+        //BAMCheckoutPositiveButton.jumioAppearance().setTitleColor(UIColor.magenta, for: UIControlState.highlighted)
         
         //If a backgroundImage is set, backgroundColor will have no effect
-        //BAMCheckoutPositiveButton.bamCheckoutAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.normal)
-        //BAMCheckoutPositiveButton.bamCheckoutAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.highlighted)
+        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.normal)
+        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.highlighted)
         
         // - Navigation bar: tint color, title color, title image
-        //UINavigationBar.bamCheckoutAppearance().tintColor = UIColor.yellow
-        //UINavigationBar.bamCheckoutAppearance().barTintColor = UIColor.red
-        //UINavigationBar.bamCheckoutAppearance().titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
+        //UINavigationBar.jumioAppearance().tintColor = UIColor.yellow
+        //UINavigationBar.jumioAppearance().barTintColor = UIColor.red
+        //UINavigationBar.jumioAppearance().titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
         
-        //BAMCheckoutNavigationBarTitleImageView.bamCheckoutAppearance().titleImage = UIImage.init(named: "<your-bamcheckout-navigation-bar-title-image>")
+        //BAMCheckoutNavigationBarTitleImageView.jumioAppearance().titleImage = UIImage.init(named: "<your-navigation-bar-title-image>")
         
         // - Custom general appearance - font
         //The font has to be loaded upfront within the mainBundle before initializing the SDK
-        //BAMCheckoutBaseView.bamCheckoutAppearance().customLightFontName = "<your-font-name-loaded-in-your-app>"
-        //BAMCheckoutBaseView.bamCheckoutAppearance().customRegularFontName = "<your-font-name-loaded-in-your-app>"
-        //BAMCheckoutBaseView.bamCheckoutAppearance().customMediumFontName = "<your-font-name-loaded-in-your-app>"
-        //BAMCheckoutBaseView.bamCheckoutAppearance().customBoldFontName = "<your-font-name-loaded-in-your-app>"
+        //BAMCheckoutBaseView.jumioAppearance().customLightFontName = "<your-font-name-loaded-in-your-app>"
+        //BAMCheckoutBaseView.jumioAppearance().customRegularFontName = "<your-font-name-loaded-in-your-app>"
+        //BAMCheckoutBaseView.jumioAppearance().customMediumFontName = "<your-font-name-loaded-in-your-app>"
+        //BAMCheckoutBaseView.jumioAppearance().customBoldFontName = "<your-font-name-loaded-in-your-app>"
         
         // - Custom general appearance - deactivate blur
-        //BAMCheckoutBaseView.bamCheckoutAppearance().disableBlur = true
+        //BAMCheckoutBaseView.jumioAppearance().disableBlur = true
         
         // - Custom general appearance - background color
-        //BAMCheckoutBaseView.bamCheckoutAppearance().backgroundColor = UIColor.gray
+        //BAMCheckoutBaseView.jumioAppearance().backgroundColor = UIColor.gray
         
         // - Custom general appearance - foreground color (text-elements and icons)
-        //BAMCheckoutBaseView.bamCheckoutAppearance().foregroundColor = UIColor.red
+        //BAMCheckoutBaseView.jumioAppearance().foregroundColor = UIColor.red
         
         // - Custom general appearance - ScanOverlay border color
-        //BAMCheckoutScanOverlay.bamCheckoutAppearance().borderColor = UIColor.green
+        //BAMCheckoutScanOverlay.jumioAppearance().borderColor = UIColor.green
         
         // - Custom general appearance - ScanOverlay text color
-        //BAMCheckoutScanOverlay.bamCheckoutAppearance().textColor = UIColor.blue
+        //BAMCheckoutScanOverlay.jumioAppearance().textColor = UIColor.blue
         
         //You can get the current SDK version using the method below.
-        //print("\(self.bamCheckoutViewController?.sdkVersion() ?? "")")
+        //print("\(BAMCheckoutViewController.sdkVersion())")
     }
     
     /**
      * Create the BAMCheckoutViewController with a custom ScanOverlay
      */
     func createBAMCheckoutControllerCustom() -> Void {
-        //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required merchant API token, merchant API secret, a delegate object and custom overlay.
+        //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required API token, API secret, a delegate object and custom overlay.
         //Use the following snippet instead to initialize the BAMCheckoutViewController with a custom OverlayViewController
         let customOverlay:CustomScanOverlayViewController = CustomScanOverlayViewController(nibName: "CustomScanOverlayViewControllerSwift", bundle: nil)
     
         let config:BAMCheckoutConfiguration = BAMCheckoutConfiguration()
-        config.merchantApiToken = "YOUR_BAMCHECKOUT_APITOKEN"
-        config.merchantApiSecret = "YOUR_BAMCHECKOUT_APISECRET"
+        config.apiToken = "YOUR_BAMCHECKOUT_APITOKEN"
+        config.apiSecret = "YOUR_BAMCHECKOUT_APISECRET"
         config.delegate = self
         config.customOverlay = customOverlay
     

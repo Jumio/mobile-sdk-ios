@@ -4,6 +4,18 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.0.0
+
+#### Changes to the public API
+`sdkVersion` is now a class property </br>
+`merchantApiToken` has been renamed to `apiToken`</br>
+`merchantApiSecret` has been renamed to `apiSecret`</br>
+`merchantReportingCriteria` has been renamed to 
+`reportingCriteria`</br>
+`customerId` has been renamed to `userReference`</br>
+`merchantScanReference` has been renamed to `customerInternalReference`</br>
+`sdkVersion` was changed from instance to class function
+
 ## 2.15.0
 No backward incompatible changes.
 

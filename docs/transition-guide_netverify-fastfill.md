@@ -4,6 +4,25 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.0.0
+
+#### Changes to the public API
+ `sdkVersion` is now a class property</br>
+ `merchantApiToken` has been renamed to `apiToken`</br>
+ `merchantApiSecret` has been renamed to `apiSecret`</br>
+ `merchantReportingCriteria` has been renamed to `reportingCriteria`</br>
+ `customerId` has been renamed to `userReference`</br>
+ `requireFaceMatch` has been renamed to `enableIdentityVerification`</br>
+ `requireVerification` has been renamed to `enableVerification`</br>
+ `merchantScanReference` has been renamed to `customerInternalReference`</br>
+ `sdkVersion` was changed from instance to class function
+ 
+#### New framework NetverifyBarcode
+ When using Barcode scanning for Fastfill or Netverify, make sure to link NetverifyBarcode.framework and MicroBlink.framework to your app project. There is no new public API for you to consume, nor any implementation adaptions required.
+ 
+#### Changes in Localizable-Netverify.strings
+ Added one value in regards to 3D face liveness.
+
 ## 2.15.0
 
 #### New frameworks NetverifyFace and ZoomAuthenticationHybrid
@@ -19,6 +38,7 @@ Several additions and changes, mostly in regards to the new 3D face liveness cap
 ## 2.14.0
 
 #### Default Settings
+
 The default values for [`requireVerification`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireVerification) and [`requireFaceMatch`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireFaceMatch) were changed to `YES`. Please make sure that they are explicitly set to NO in case a scan in Fastfill mode should be performed. 
 
 #### Enums

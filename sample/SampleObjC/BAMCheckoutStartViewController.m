@@ -6,8 +6,8 @@
 
 #import "BAMCheckoutStartViewController.h"
 #import "CustomScanOverlayViewController.h"
+@import JumioCore;
 @import BAMCheckout;
-#import <JumioCore/JMDeviceInfo.h>
 
 @interface BAMCheckoutStartViewController () <BAMCheckoutViewControllerDelegate>
 @property (nonatomic, strong) BAMCheckoutViewController *bamCheckoutViewController;
@@ -25,9 +25,9 @@
     //Setup the Configuration for BAMCheckout
     BAMCheckoutConfiguration *config = [BAMCheckoutConfiguration new];
     //Provide your API token
-    config.merchantApiToken = @"YOUR_BAMCHECKOUT_APITOKEN";
+    config.apiToken = @"YOUR_BAMCHECKOUT_APITOKEN";
     //Provide your API secret
-    config.merchantApiSecret = @"YOUR_BAMCHECKOUT_APISECRET";
+    config.apiSecret = @"YOUR_BAMCHECKOUT_APISECRET";
     
     //Set the delegate that implements BAMCheckoutViewControllerDelegate
     config.delegate = self;
@@ -39,7 +39,7 @@
     //config.offlineToken = @"YOUR_OFFLINE_TOKEN";
     
     //Use the following property to identify the scan in your reports (max. 100 characters).
-    //config.merchantReportingCriteria = @"YOURREPORTINGCRITERIA";
+    //config.reportingCriteria = @"YOURREPORTINGCRITERIA";
     
     //To restrict supported card types, pass a bitmask of BAMCheckoutCreditCardTypes to the property supportedCreditCardTypes.
     //BAMCheckoutCreditCardTypes cardTypes = BAMCheckoutCreditCardTypeAll;
@@ -83,7 +83,7 @@
     //or
     //[config addCustomField: @"idState" title: @"State" values:states required:YES resetValueText:@"not shown"];
     
-    //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
+    //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required API token, API secret and a delegate object.
     @try {
         self.bamCheckoutViewController = [[BAMCheckoutViewController alloc] initWithConfiguration:config];
     } @catch (NSException *exception) {
@@ -105,69 +105,69 @@
     
     // - Customize buttons: title color, background color, background image selectors for BAMCheckoutPositiveButton, BAMCheckoutNegativeButton
     
-    //[[BAMCheckoutPositiveButton bamCheckoutAppearance] setBackgroundColor:[UIColor cyanColor] forState:UIControlStateNormal];
-    //[[BAMCheckoutPositiveButton bamCheckoutAppearance] setBackgroundColor:[UIColor blueColor] forState:UIControlStateHighlighted];
+    //[[BAMCheckoutPositiveButton jumioAppearance] setBackgroundColor:[UIColor cyanColor] forState:UIControlStateNormal];
+    //[[BAMCheckoutPositiveButton jumioAppearance] setBackgroundColor:[UIColor blueColor] forState:UIControlStateHighlighted];
     
-    //[[BAMCheckoutPositiveButton bamCheckoutAppearance] setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    //[[BAMCheckoutPositiveButton bamCheckoutAppearance] setTitleColor:[UIColor magentaColor] forState:UIControlStateHighlighted];
+    //[[BAMCheckoutPositiveButton jumioAppearance] setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    //[[BAMCheckoutPositiveButton jumioAppearance] setTitleColor:[UIColor magentaColor] forState:UIControlStateHighlighted];
     
     //If a backgroundImage is set, backgroundColor will have no effect
-    //[[BAMCheckoutPositiveButton bamCheckoutAppearance] setBackgroundImage:[UIImage imageNamed:@"<your-custom-image>"] forState:UIControlStateNormal];
-    //[[BAMCheckoutPositiveButton bamCheckoutAppearance] setBackgroundImage:[UIImage imageNamed:@"<your-custom-image>"] forState:UIControlStateHighlighted];
+    //[[BAMCheckoutPositiveButton jumioAppearance] setBackgroundImage:[UIImage imageNamed:@"<your-custom-image>"] forState:UIControlStateNormal];
+    //[[BAMCheckoutPositiveButton jumioAppearance] setBackgroundImage:[UIImage imageNamed:@"<your-custom-image>"] forState:UIControlStateHighlighted];
     
     // - Navigation bar: tint color, title color, title image
     
-    //[[UINavigationBar bamCheckoutAppearance] setTintColor:[UIColor yellowColor]];
-    //[[UINavigationBar bamCheckoutAppearance] setBarTintColor:[UIColor redColor]];
-    //[[UINavigationBar bamCheckoutAppearance] setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    //[[UINavigationBar jumioAppearance] setTintColor:[UIColor yellowColor]];
+    //[[UINavigationBar jumioAppearance] setBarTintColor:[UIColor redColor]];
+    //[[UINavigationBar jumioAppearance] setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
     // - Navigation bar background color
     
-    //[[UINavigationBar bamCheckoutAppearance] setBarTintColor:[UIColor redColor]];
+    //[[UINavigationBar jumioAppearance] setBarTintColor:[UIColor redColor]];
     
-    //[[BAMCheckoutNavigationBarTitleImageView bamCheckoutAppearance] setTitleImage:[UIImage imageNamed:@"<your-bamcheckout-navigation-bar-title-image>"]];
+    //[[BAMCheckoutNavigationBarTitleImageView jumioAppearance] setTitleImage:[UIImage imageNamed:@"<your-navigation-bar-title-image>"]];
     
     //Custom general appearance - font
     //The font has to be loaded upfront within the mainBundle before initializing the SDK
-    //[[BAMCheckoutBaseView bamCheckoutAppearance] setCustomLightFontName: @"<your-font-name-loaded-in-your-app>"];
-    //[[BAMCheckoutBaseView bamCheckoutAppearance] setCustomRegularFontName: @"<your-font-name-loaded-in-your-app>"];
-    //[[BAMCheckoutBaseView bamCheckoutAppearance] setCustomMediumFontName: @"<your-font-name-loaded-in-your-app>"];
-    //[[BAMCheckoutBaseView bamCheckoutAppearance] setCustomBoldFontName: @"<your-font-name-loaded-in-your-app>"];
+    //[[BAMCheckoutBaseView jumioAppearance] setCustomLightFontName: @"<your-font-name-loaded-in-your-app>"];
+    //[[BAMCheckoutBaseView jumioAppearance] setCustomRegularFontName: @"<your-font-name-loaded-in-your-app>"];
+    //[[BAMCheckoutBaseView jumioAppearance] setCustomMediumFontName: @"<your-font-name-loaded-in-your-app>"];
+    //[[BAMCheckoutBaseView jumioAppearance] setCustomBoldFontName: @"<your-font-name-loaded-in-your-app>"];
     
     // - Custom general appearance - deactivate blur
-    //[[BAMCheckoutBaseView bamCheckoutAppearance] setDisableBlur:@(NO)];
+    //[[BAMCheckoutBaseView jumioAppearance] setDisableBlur:@(NO)];
     
     // - Custom general appearance - background color
-    //[[BAMCheckoutBaseView bamCheckoutAppearance] setBackgroundColor: [UIColor grayColor]];
+    //[[BAMCheckoutBaseView jumioAppearance] setBackgroundColor: [UIColor grayColor]];
     
     // - Custom general appearance - foreground color (text-elements and icons)
-    //[[BAMCheckoutBaseView bamCheckoutAppearance] setForegroundColor: [UIColor redColor]];
+    //[[BAMCheckoutBaseView jumioAppearance] setForegroundColor: [UIColor redColor]];
     
     // - Custom general appearance - ScanOverlay border color
-    //[[BAMCheckoutScanOverlay bamCheckoutAppearance] setBorderColor: [UIColor greenColor]];
+    //[[BAMCheckoutScanOverlay jumioAppearance] setBorderColor: [UIColor greenColor]];
     
     // - Custom general appearance - ScanOverlay text color
-    //[[BAMCheckoutScanOverlay bamCheckoutAppearance] setTextColor: [UIColor blueColor]];
+    //[[BAMCheckoutScanOverlay jumioAppearance] setTextColor: [UIColor blueColor]];
     
     //You can get the current SDK version using the method below.
-    //NSLog(@"%@", [self.bamCheckoutViewController sdkVersion]);
+    //NSLog(@"%@", [BAMCheckoutViewController sdkVersion]);
 }
 
 /**
  * Create the BAMCheckoutViewController with a custom ScanOverlay
  */
 - (void) createBAMCheckoutControllerCustom {
-    //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required merchant API token, merchant API secret, a delegate object and custom overlay.
+    //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required API token, API secret, a delegate object and custom overlay.
     //Use the following snippet instead to initialize the BAMCheckoutViewController with a custom OverlayViewController
     CustomScanOverlayViewController *customOverlay = [[CustomScanOverlayViewController alloc] initWithNibName:@"CustomScanOverlayViewController" bundle:nil];
     
     BAMCheckoutConfiguration *config = [BAMCheckoutConfiguration new];
     
-    config.merchantApiToken = @"YOUR_BAMCHECKOUT_APITOKEN";
-    config.merchantApiSecret = @"YOUR_BAMCHECKOUT_APISECRET";
+    config.apiToken = @"YOUR_BAMCHECKOUT_APITOKEN";
+    config.apiSecret = @"YOUR_BAMCHECKOUT_APISECRET";
     config.dataCenter = JumioDataCenterUS;
     config.delegate = self;
-    config.merchantReportingCriteria = @"YOURREPORTINGCRITERIA";
+    config.reportingCriteria = @"YOURREPORTINGCRITERIA";
     config.customOverlay = customOverlay;
     
     @try {

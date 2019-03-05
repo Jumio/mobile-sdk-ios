@@ -21,9 +21,9 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         //Setup the Configuration for DocumentVerification
         let config:DocumentVerificationConfiguration = DocumentVerificationConfiguration()
         //Provide your API token
-        config.merchantApiToken = "YOUR_DOCUMENTVERIFICATION_APITOKEN"
+        config.apiToken = "YOUR_DOCUMENTVERIFICATION_APITOKEN"
         //Provide your API secret
-        config.merchantApiSecret = "YOUR_DOCUMENTVERIFICATION_APISECRET"
+        config.apiSecret = "YOUR_DOCUMENTVERIFICATION_APISECRET"
         //Set the delegate that implements DocumentVerificationViewControllerDelegate
         config.delegate = self
         
@@ -37,16 +37,16 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         //MEDC, MOAP, PB, SEL, SENC, SS, STUC, TAC, TR, UB, SSC, VC, VT, WWCC, CUSTOM
         config.type = "BC"
         
-        //The merchant scan reference allows you to identify the scan (max. 100 characters). Note: Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
-        config.merchantScanReference = "YOURSCANREFERENCE"
+        //The customer internal reference allows you to identify the scan (max. 100 characters). Note: Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
+        config.customerInternalReference = "CUSTOMER_INTERNAL_REFERENCE"
         
         //You can also set a customer identifier (max. 100 characters). Note: The customer ID should not contain sensitive data like PII (Personally Identifiable Information) or account login.
-        config.customerId = "CUSTOMERID"
+        config.userReference = "USER_REFERENCE"
         
         //Use the following property to identify the scan in your reports (max. 100 characters).
-        //config.merchantReportingCriteria = "YOURREPORTINGCRITERIA"
+        //config.reportingCriteria = "YOURREPORTINGCRITERIA"
         
-        //Callback URL (max. 255 characters) for the confirmation after the verification is completed. This setting overrides your Jumio merchant settings.
+        //Callback URL (max. 255 characters) for the confirmation after the verification is completed. This setting overrides your Jumio account settings.
         //config.callbackUrl = "https://www.example.com"
         
         //Set the default camera position
@@ -55,7 +55,7 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         //Configure your desired status bar style
         //config.statusBarStyle = UIStatusBarStyle.lightContent
         
-        // Use a custom document code which can be configured in the settings tab of the Merchant UI
+        // Use a custom document code which can be configured in the settings tab of the Customer Portal
         //config.customDocumentCode = "YOURCUSTOMDOCUMENTCODE"
         
         // Overrides the label for the document name (on Help Screen beside document icon)
@@ -64,7 +64,7 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         // Set the following property to enable/disable data extraction for documents. (default: true)
         config.enableExtraction = enableExtraction.isOn
         
-        //Perform the following call as soon as your app’s view controller is initialized. Create the DocumentVerificationViewController instance by providing your Configuration with required merchant API token, merchant API secret and a delegate object.
+        //Perform the following call as soon as your app’s view controller is initialized. Create the DocumentVerificationViewController instance by providing your Configuration with required API token, API secret and a delegate object.
         
         do {
             try ObjcExceptionHelper.catchException {
@@ -83,7 +83,7 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         //The API from Netverify is re-used to apply visual customization for DocumentVerification. Please have a look at the above section where DocumentVerificationViewController is created and configured.
         
         //You can get the current SDK version using the method below.
-        print("\(self.documentVerificationViewController?.sdkVersion() ?? "")")
+        //print("\(DocumentVerificationViewController.sdkVersion())")
     }
     
     @IBAction func startDocumentVerification() -> Void {

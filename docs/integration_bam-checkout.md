@@ -23,8 +23,8 @@ Log into your Jumio Customer Portal and you can find your API token and API secr
 
 ```
 BAMCheckoutConfiguration *config = [BAMCheckoutConfiguration new];
-config.merchantApiToken = @"YOURAPITOKEN";
-config.merchantApiSecret = @"YOURAPISECRET";
+config.apiToken = @"YOURAPITOKEN";
+config.apiSecret = @"YOURAPISECRET";
 config.dataCenter = JumioDataCenterEU; // Change this parameter if your account is in the EU data center. Default is US.
 config.delegate = self;
 
@@ -78,7 +78,7 @@ Specify your reporting criteria to identify each scan attempt in your reports (m
 
 __Note:__  This is not used for offline scanning.
 ```
-config.merchantReportingCriteria = @"YOURREPORTINGCRITERIA";
+config.reportingCriteria = @"YOURREPORTINGCRITERIA";
 
 ```
 
