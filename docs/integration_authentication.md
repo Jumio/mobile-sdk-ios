@@ -18,8 +18,8 @@ For technical changes, please read our [transition guide](transition-guide_authe
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Authentication.
 
 ## Initialization
-When logged into the Jumio Customer Portal, you will find your API token and API secret on the **Settings** page under **API credentials**. We strongly recommend that you store your credentials outside your app. If the token and secret are not set in the [`AuthenticationConfiguration`](http://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/AuthenticationConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance.
-Whenever an exception is thrown, the [`AuthenticationController`](http://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/AuthenticationController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `AuthenticationConfiguration` instance is passed to the initializer.
+When logged into the Jumio Customer Portal, you will find your API token and API secret on the **Settings** page under **API credentials**. We strongly recommend that you store your credentials outside your app. If the token and secret are not set in the [`AuthenticationConfiguration`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance.
+Whenever an exception is thrown, the [`AuthenticationController`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `AuthenticationConfiguration` instance is passed to the initializer.
 
 ```
 AuthenticationConfiguration *config = [AuthenticationConfiguration new];
@@ -69,7 +69,7 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 [Jumio Surface](https://jumio.github.io/surface-ios) is a web tool that allows you to apply and visualize, in real-time, all available customization options. It also provides an export feature to save your applied changes, so you can import them directly into your codebase.
 
 ## Delegation
-Implement the delegate methods of the [`AuthenticationControllerDelegate`](http://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Protocols/AuthenticationControllerDelegate.html) protocol to be notified of successful initialization, successful scans, and error situations. Dismiss the `AuthenticationController` instance in your app in case of success or error.
+Implement the delegate methods of the [`AuthenticationControllerDelegate`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Protocols/AuthenticationControllerDelegate.html) protocol to be notified of successful initialization, successful scans, and error situations. Dismiss the `AuthenticationController` instance in your app in case of success or error.
 
 ### Initialization
 When this method is fired, the SDK has finished initializing and loading tasks and is ready to use. The UIViewController object should be used to modally present the authentication scan view controller.
@@ -97,7 +97,7 @@ This method is fired when the user presses the cancel button during the workflow
 ```
 
 ### Cleanup
-After the SDK is dismissed, and especially if you want to create a new instance of AuthenticationController, make sure to call [`destroy`](http://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/AuthenticationViewController.html#/c:objc(cs)AuthenticationViewController(im)destroy) to ensure proper cleanup of the SDK.
+After the SDK is dismissed, and especially if you want to create a new instance of AuthenticationController, make sure to call [`destroy`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationViewController.html#/c:objc(cs)AuthenticationViewController(im)destroy) to ensure proper cleanup of the SDK.
 ```
 [self.authenticationController destroy];
 self.authenticationController = nil;

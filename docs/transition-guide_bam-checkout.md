@@ -7,11 +7,14 @@ This section only covers the breaking technical changes that should be considere
 ## 3.0.0
 
 #### Changes to the public API
-`sdkVersion` is now a class property</br>
 `merchantApiToken` has been renamed to `apiToken`</br>
 `merchantApiSecret` has been renamed to `apiSecret`</br>
 `merchantReportingCriteria` has been renamed to `reportingCriteria`</br>
 `sdkVersion` was changed from instance to class function
+
+#### Changes to visual customization
+ The protocol `BAMCheckoutAppearance` has been replaced with `JumioAppearance`. </br>
+ Example: `[[UINavigationBar bamCheckoutAppearance] setTintColor:[UIColor yellowColor]]` has been changed to `[[UINavigationBar jumioAppearance] setTintColor:[UIColor yellowColor]]`.
 
 ## 2.15.0
 No backward incompatible changes.

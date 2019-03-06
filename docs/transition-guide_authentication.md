@@ -1,4 +1,4 @@
-![Fastfill & Netverify](images/netverify.png)
+![Fastfill & Netverify](images/authentication.png)
 
 # Transition guide for Authentication SDK
 

@@ -7,7 +7,6 @@ This section only covers the breaking technical changes that should be considere
 ## 3.0.0
 
 #### Changes to the public API
- `sdkVersion` is now a class property</br>
  `merchantApiToken` has been renamed to `apiToken`</br>
  `merchantApiSecret` has been renamed to `apiSecret`</br>
  `merchantReportingCriteria` has been renamed to `reportingCriteria`</br>
@@ -16,6 +15,10 @@ This section only covers the breaking technical changes that should be considere
  `requireVerification` has been renamed to `enableVerification`</br>
  `merchantScanReference` has been renamed to `customerInternalReference`</br>
  `sdkVersion` was changed from instance to class function
+
+#### Changes to visual customization
+ The protocol `NetverifyAppearance` has been replaced with `JumioAppearance`. </br>
+ Example: `[[UINavigationBar netverifyAppearance] setTintColor:[UIColor yellowColor]]` has been changed to `[[UINavigationBar jumioAppearance] setTintColor:[UIColor yellowColor]]`.
  
 #### New framework NetverifyBarcode
  When using Barcode scanning for Fastfill or Netverify, make sure to link NetverifyBarcode.framework and MicroBlink.framework to your app project. There is no new public API for you to consume, nor any implementation adaptions required.
