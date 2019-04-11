@@ -13,7 +13,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
     func createBAMCheckoutController() -> Void {
         
         //prevent SDK to be initialized on Jailbroken devices
-        if JMDeviceInfo.isJailbrokenDevice() {
+        if JumioDeviceInfo.isJailbrokenDevice() {
             return
         }
         
@@ -85,8 +85,8 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
                 self.bamCheckoutViewController = BAMCheckoutViewController.init(configuration: config)
             }
         } catch {
-            let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
+            let err = error as NSError            
+            self.showAlert(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "")
         }
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {

@@ -14,7 +14,7 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
     func createDocumentVerificationController() -> Void {
         
         //prevent SDK to be initialized on Jailbroken devices
-        if JMDeviceInfo.isJailbrokenDevice() {
+        if JumioDeviceInfo.isJailbrokenDevice() {
             return
         }
         
@@ -72,7 +72,7 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
             }
         } catch {
             let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
+            self.showAlert(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "")
         }
         
         //Localizing labels

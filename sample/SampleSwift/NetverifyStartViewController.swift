@@ -29,7 +29,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
     func createNetverifyController() -> Void {
         
         //prevent SDK to be initialized on Jailbroken devices
-        if JMDeviceInfo.isJailbrokenDevice() {
+        if JumioDeviceInfo.isJailbrokenDevice() {
             return
         }
         
@@ -46,7 +46,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
             }
         } catch {
             let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
+            self.showAlert(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "")
         }
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
@@ -177,6 +177,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //NetverifyScanOverlayView.jumioAppearance().colorOverlayStandard = UIColor.blue
         //NetverifyScanOverlayView.jumioAppearance().colorOverlayValid = UIColor.green
         //NetverifyScanOverlayView.jumioAppearance().colorOverlayInvalid = UIColor.red
+        //NetverifyScanOverlayView.jumioAppearance().scanBackgroundColor = UIColor.orange
         
         // Color for the face oval outline
         //NetverifyScanOverlayView.jumioAppearance().faceOvalColor = UIColor.orange
@@ -210,6 +211,9 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         
         let config  = self.createNetverifyConfiguration()
         customUIViewController.requiresVerification = config.enableVerification
+        NetverifyBaseView.jumioAppearance().disableBlur = true
+        NetverifyBaseView.jumioAppearance().foregroundColor = UIColor.white
+        NetverifyBaseView.jumioAppearance().backgroundColor = UIColor.init(red: 44/250.0, green: 152/250.0, blue: 240/250.0, alpha: 1.0)
         
         //Set the delegate that implements NetverifyViewControllerDelegate
         config.customUIDelegate = customUIViewControllerDelegate
@@ -223,7 +227,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
             }
         } catch {
             let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
+            self.showAlert(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "")
         }
     }
     
@@ -345,7 +349,6 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         }
         
         //Dismiss the SDK
-        print(message)
         self.dismiss(animated: true, completion: {
             print(message)
             self.showAlert(withTitle: "Netverify Mobile SDK", message: message as String)
@@ -361,7 +364,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
      * @param scanReference The scanReference of the scan attempt
      **/
     func netverifyViewController(_ netverifyViewController: NetverifyViewController, didCancelWithError error: NetverifyError?, scanReference: String?) {
-        print("NetverifyViewController cancelled with error: " + "\(error?.message ?? "")" + "scanReference: " + "\(scanReference ?? "")")
+        print("NetverifyViewController cancelled with error: \(error?.message ?? "") scanReference: \(scanReference ?? "")")
         
         //Dismiss the SDK
         self.dismiss(animated: true) {

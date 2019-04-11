@@ -199,6 +199,8 @@
                     <navigationItem key="navigationItem" id="Ovj-71-Bcr"/>
                     <connections>
                         <outlet property="activityIndicator" destination="PVU-Ht-GUK" id="pPN-bb-klW"/>
+                        <outlet property="captureControlToggleCamera" destination="YAu-6l-o4S" id="ytA-ig-von"/>
+                        <outlet property="captureControlToggleFlash" destination="1Lv-0s-Tm2" id="xWR-Gt-fht"/>
                         <outlet property="captureControlsView" destination="QDa-0C-wyr" id="RoA-03-Eu5"/>
                         <outlet property="mainTitleLabel" destination="171-zC-ky0" id="Fr8-TW-VHB"/>
                         <outlet property="tableView" destination="EOc-Yw-E4f" id="rl0-Pi-uHy"/>
@@ -251,7 +253,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-1916" y="1310"/>
+            <point key="canvasLocation" x="-1917" y="1341"/>
         </scene>
         <!--Item-->
         <scene sceneID="bRP-p7-OLr">
@@ -383,13 +385,23 @@
                                     <action selector="startAuthentication" destination="7SV-SY-kR0" eventType="touchUpInside" id="c6q-XB-yVL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHN-6w-D6S">
+                                <rect key="frame" x="140" y="486" width="134" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start CustomUI"/>
+                                <connections>
+                                    <action selector="startCustomUI" destination="7SV-SY-kR0" eventType="touchUpInside" id="wwt-L2-vTe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="MKd-TR-5B2" secondAttribute="trailing" constant="20" id="29l-qk-YlJ"/>
                             <constraint firstItem="LMD-sL-4Cu" firstAttribute="centerY" secondItem="AlZ-5k-qVr" secondAttribute="centerY" id="CJo-ti-9Ap"/>
+                            <constraint firstItem="zHN-6w-D6S" firstAttribute="centerX" secondItem="LMD-sL-4Cu" secondAttribute="centerX" id="WvZ-to-O4y"/>
                             <constraint firstItem="MKd-TR-5B2" firstAttribute="leading" secondItem="AlZ-5k-qVr" secondAttribute="leading" constant="20" id="aGJ-XI-Ojj"/>
                             <constraint firstItem="LMD-sL-4Cu" firstAttribute="top" secondItem="MKd-TR-5B2" secondAttribute="bottom" constant="50" id="aMq-1m-m5E"/>
+                            <constraint firstItem="zHN-6w-D6S" firstAttribute="top" secondItem="LMD-sL-4Cu" secondAttribute="bottom" constant="20" id="eFx-oO-awu"/>
                             <constraint firstItem="LMD-sL-4Cu" firstAttribute="centerX" secondItem="AlZ-5k-qVr" secondAttribute="centerX" id="qm9-pg-njK"/>
                         </constraints>
                     </view>

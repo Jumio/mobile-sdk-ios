@@ -18,7 +18,7 @@
 - (void) createBAMCheckoutController{
     
     //prevent SDK to be initialized on Jailbroken devices
-    if ([JMDeviceInfo isJailbrokenDevice]) {
+    if ([JumioDeviceInfo isJailbrokenDevice]) {
         return;
     }
     

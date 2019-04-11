@@ -9,10 +9,11 @@ Biometric-based Jumio Authentication establishes the digital identities of your 
 - [Configuration](#configuration)
 - [Customization](#customization)
 - [Delegation](#delegation)
+- [Custom UI](#custom-ui)
 - [Callback](#callback)
 
 ## Release notes
-For technical changes, please read our [transition guide](transition-guide_authentication.md) SDK version 3.0.0
+For technical changes, please read our [transition guide](transition-guide_authentication.md)
 
 ## Setup
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Authentication.
@@ -97,7 +98,7 @@ This method is fired when the user presses the cancel button during the workflow
 ```
 
 ### Cleanup
-After the SDK is dismissed, and especially if you want to create a new instance of AuthenticationController, make sure to call [`destroy`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationViewController.html#/c:objc(cs)AuthenticationViewController(im)destroy) to ensure proper cleanup of the SDK.
+After the SDK is dismissed, and especially if you want to create a new instance of AuthenticationController, make sure to call [`destroy`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationController.html#/c:objc(cs)AuthenticationController(im)destroy) to ensure proper cleanup of the SDK.
 ```
 [self.authenticationController destroy];
 self.authenticationController = nil;
@@ -131,6 +132,53 @@ The following tables give information on the specification of all transaction da
 | M00000 | The scan could not be processed | An error happened during the processing. The SDK needs to be started again |
 
 The first letter (A-M) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation. Please always include the whole code when opening an error related ticket with our support team.
+
+## Custom UI
+
+The Custom UI functionality of the Authentication SDK enables you to handle as much UI activity as possible by yourself, e.g. loading, help or error screens. Make use of it by implementing the [`AuthenticationScanViewControllerDelegate`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Protocols/AuthenticationScanViewControllerDelegate.html). Initialize the SDK by creating a [`AuthenticationController`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationController.html) by passing your customised `AuthenticationConfiguration` object to its constructor. Please note that in addition to the `delegate` property, `authenticationScanViewControllerDelegate` has to be set in the configuration object.
+
+```
+AuthenticationConfiguration *config = [AuthenticationConfiguration new];
+config.apiToken = @"YOURAPITOKEN";
+config.apiSecret = @"YOURAPISECRET";
+config.dataCenter = JumioDataCenterEU; // Change this parameter if your account is in the EU data center. Default is US.
+config.delegate = self;
+config.authenticationScanViewControllerDelegate = self;
+
+AuthenticationController *authenticationController;
+@try {
+	authenticationController = [[AuthenticationController alloc] initWithConfiguration:config];
+} @catch (NSException *exception) {
+	// HANDLE EXCEPTION
+}
+```
+
+### Start scanning
+
+After initialisation is finished, the SDK is ready for scanning and the following delegate method is called returning a [`AuthenticationScanViewController`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationScanViewController.html) instance to present. Use its `customOverlayLayer` property to add subviews on top.
+
+```
+- (void) authenticationController: (AuthenticationController*) authenticationController didFinishInitializingScanViewController:(AuthenticationScanViewController*)scanViewController {
+	[self presentViewController:scanViewController animated:YES completion:^{
+		//display your UI elements to the `scanViewController.customOverlayLayer` here, e.g. add a close button
+		
+	}];
+}
+```
+
+As soon as scanViewController is presented you can add your own UI elements to the `customOverlayLayer`. Make sure that you only add subviews to the `customOverlayLayer` view, and ensure that your UI elements don't overlap with the scanning UI to get the best user experience and a positive result.
+
+### Handle scanning workflow
+
+For handling of the scanning workflow, a few additional delegates are required to be implemented and handled. When the user has finished the scanning process and biometric data is being analysed, `authenticationScanViewControllerDidStartBiometricAnalysis:` is fired. We recommend to display a loading activity info to the user that should not last longer than a few seconds. When successful, scanning is being finalized (see paragraph below).
+
+In case of an unsuccessful result, that can also happen before biometric analysis is started, the delegate `authenticationScanViewController:shouldDisplayHelpWithText:animationView:` is called. A help text and animated view is provided based on the problematic situation the user was facing, that is important to be displayed in order to assist the user to finish the scanning workflow successfully. To let the user confirm the help information and retry in the workflow, simply call `retryScan` on the `authenticationScanViewController` parameter provided in the delegate.
+
+For error situations that are recoverable (e.g. network tasks), get informed via the delegate `authenticationScanViewController:didDetermineRecoverableError:`, display the error message to the user and call `retryAfterError` on the `authenticationScanViewController` on user confirmation.
+
+### Finalizing Scanning
+
+Final states are handled with the existing delegates for [Success](#success) and [Error](#error).
 
 ## Callback
 To get information about callbacks, please read our [page with server related information](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md).

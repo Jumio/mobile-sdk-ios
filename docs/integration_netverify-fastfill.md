@@ -52,7 +52,7 @@ Make sure initialization and presentation are timely within one minute. On iPads
 ### Jailbreak detection
 We advice to prevent our SDK to be run on jailbroken device. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
 ```
-[JMDeviceInfo isJailbrokenDevice]
+[JumioDeviceInfo isJailbrokenDevice]
 ```
 
 ## Configuration
@@ -163,7 +163,7 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 - Fallback button (Detection not working): title color and background
 - Scan Options button: title color and background
 - Camera and flash toggle button: title color and background
-- Scan overlay - ID scanning: standard color, valid color and invalid color
+- Scan overlay - ID scanning: standard color, valid color, invalid color and scan background color
 - Scan overlay - 3D face liveness: oval, progress and background + text color of feedback view
 
 ### Customization tool
@@ -184,7 +184,7 @@ When this method is fired, the SDK has finished initialization and loading tasks
 ```
 
 ### Success
-Upon success, the extracted document data is returned, including its scan reference. Call clear on the document data object after processing the card information to make sure no sensitive data remains in the device's memory.
+Upon success, the extracted document data is returned, including its scan reference.
 ```
 - (void) netverifyViewController: (NetverifyViewController*) netverifyViewController didFinishWithDocumentData: (NetverifyDocumentData*) documentData scanReference: (NSString*) scanReference  {
 	// YOURCODE
@@ -206,7 +206,7 @@ After the SDK was dismissed and especially if you want to create a new instance 
 [self.netverifyViewController destroy];
 self.netverifyViewController = nil;
 ```
-**Important:** only call `destroy` after `netverifyUIController:didFinishWithDocumentData:canReference:` or `netverifyUIController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Setting `NetverifyViewController` to nil is essential to free memory as soon as possible.
+**Important:** only call `destroy` after `netverifyViewController:didFinishWithDocumentData:scanReference:` or `netverifyViewController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Setting `NetverifyViewController` to nil is essential to free memory as soon as possible.
 
 ### Retrieving information
 The following tables give information on the specification of all document data parameters and errors.
@@ -275,7 +275,7 @@ The first letter (A-J) represents the error case. The remaining characters are r
 Netverify can also be implemented as a custom scan view. This means that only the scan view controllers (including the scan overlays) are provided by the SDK.
 The handling of the lifecycle, document selection, readability confirmation, error handling, and all other steps necessary to complete a scan have to be handled by the client application that implements the SDK.
 
-To use the custom UI with a plain scanning user interface, specify an instance of your class which implements the [`NetverifyUIControllerDelegate`](http://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyUIControllerDelegate.html). Initialize the SDK by creating a [`NetverifyUIController`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html) with the neccessary `NetverifyConfiguration`. Please note that instead of delegate property, customUIDelegate has to be set in the configuration object.
+To use the custom UI with a plain scanning user interface, specify an instance of your class which implements the [`NetverifyUIControllerDelegate`](http://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyUIControllerDelegate.html). Initialize the SDK by creating a [`NetverifyUIController`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html) by passing your customised `NetverifyConfiguration` object to its constructor. Please note that instead of the `delegate` property, `customUIDelegate` has to be set in the configuration object.
 
 ```
 NetverifyConfiguration *config = [NetverifyConfiguration new];
@@ -286,7 +286,7 @@ config.customUIDelegate = self;
 
 NetverifyUIController *netverifyUIController;
 @try {
-	NetverifyUIController = [[NetverifyUIController alloc] initWithConfiguration:config];
+	netverifyUIController = [[NetverifyUIController alloc] initWithConfiguration:config];
 } @catch (NSException *exception) {
 	// HANDLE EXCEPTION
 }
@@ -342,14 +342,14 @@ When displaying fullscreen help, the capturing process can be paused via `pauseS
 
 Each [`NetverifyCustomScanViewController`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyCustomScanViewController.html) returns a scan mode, which indicates what type of scanView is displayed.
 
-**NetverifyScanMode** values: `MRZ`, `Barcode`, `Face`, `Manual`, `OCR`, `OCR_Template`
+**NetverifyScanMode** values: `MRZ`, `Barcode`, `3DLiveness`, `FaceCapture`, `Manual`, `OCR`, `OCR_Template`
 
 Please note that when a _manual_ scan view is displayed, a shutter button also has to be displayed. Use `isImagePicker` to check if a button needs to be displayed, and call `takeImage` as target action when the shutter button is tapped.
 
 Use `hasFlash`, `isFlashOn`, `canToggleFlash`, and `toggleFlash` to handle the flash mode.
 Use `hasMultipleCameras`, `currentCameraPosition`, `canSwitchCamera`, and `switchCamera` to determine and change camera position.
 
-For scan mode `Face`, only front facing camera can be used.
+For scan mode `3DLiveness` and `FaceCapture`, only front facing camera can be used.
 
 #### End-user help
 
@@ -375,10 +375,17 @@ After a successful scan, it makes sense to present the captured image and ask to
 
 For manual image capturing: to notify the user that the image is blurry and therefore can't be taken implement `netverifyCustomScanViewController:shouldDisplayBlurHint:`
 
-For special case of US Driver license missing an address in the barcode, make sure to implement `- (void) netverifyCustomScanViewController:(NetverifyCustomScanViewController* _Nonnull)customScanView shouldDisplayNoUSAddressFoundHint:(NSString* _Nonnull)message confirmation:(void (^_Nonnull)(void))confirmation;`
+For special case of US Driver license missing an address in the barcode, make sure to implement `netverifyCustomScanViewController:shouldDisplayNoUSAddressFoundHint:confirmation:`
 
 
 Also, `netverifyCustomScanViewController:shouldDisplayFlipDocumentHint:confirmation:` gets triggered when we detect that the user accidentally scanned the front side although backside is required.
+
+##### 3D-Liveness
+
+For handling of the 3D-Liveness workflow, two additional delegates are required to be implemented and handled. When the user has finished the scanning process and biometric data is being analysed, `netverifyCustomScanViewControllerStartedBiometricAnalysis:` is fired. We recommend to display a loading activity info to the user that should not last longer than a few seconds. When successful, scanning is being finalized (see paragraph below).
+
+In case of an unsuccessful result, that can also happen before biometric analysis is started, the delegate `netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:` is called. A help text and animated view is provided based on the problematic situation the user was facing, that is important to be displayed in order to assist the user to finish 3D-Liveness successfully. To let the user confirm the help information and retry in the workflow, simply call `retryScan` on the `customScanView` parameter provided in the delegate.
+
 
 ### Finalizing Scanning
 
@@ -402,7 +409,7 @@ After the SDK was dismissed and especially if you want to create a new instance 
 self.netverifyUIController = nil;
 ```
 
-**Important:** only call `destroy` after `netverifyUIController:didFinishWithDocumentData:canReference:` or `netverifyUIController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Call `cancel` during the workflow, which will evoke `netverifyUIController:didCancelWithError:scanReference:`. Setting `NetverifyUIController` to nil is essential to free memory as soon as possible.
+**Important:** only call `destroy` after `netverifyUIController:didFinishWithDocumentData:scanReference:` or `netverifyUIController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Call `cancel` during the workflow, which will evoke `netverifyUIController:didCancelWithError:scanReference:`. Setting `NetverifyUIController` to nil is essential to free memory as soon as possible.
 
 
 ## Callback

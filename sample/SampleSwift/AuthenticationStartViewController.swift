@@ -7,9 +7,12 @@
 import UIKit
 import NetverifyFace
 
-class AuthenticationStartViewController: StartViewController, AuthenticationControllerDelegate {
-    
+class AuthenticationStartViewController: StartViewController, AuthenticationControllerDelegate, AuthenticationScanViewControllerDelegate {
+
     @IBOutlet weak var transactionReferenceTextField: UITextField!
+    var activityIndicatorView: UIActivityIndicatorView?
+    var activityIndicatorConstraints = [NSLayoutConstraint]()
+    
     var authenticationController: AuthenticationController?
     var authenticationScanViewController: UIViewController?
     
@@ -17,15 +20,19 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         self.createAuthenticationController()
     }
     
-    func createAuthenticationController () {
+    @IBAction func startCustomUI() {
+        self.createAuthenticationController(withCustomUI: true)
+    }
+    
+    func createAuthenticationController(withCustomUI:Bool = false) {
         
         //Prevent SDK to be initialized on Jailbroken devices
-        if JMDeviceInfo.isJailbrokenDevice() {
+        if JumioDeviceInfo.isJailbrokenDevice() {
             return
         }
         
         // Setup the Configuration for Authentication
-        let config: AuthenticationConfiguration = createAuthenticationConfiguration()
+        let config: AuthenticationConfiguration = createAuthenticationConfiguration(withCustomUI: withCustomUI)
         
         
         //Perform the following call as soon as your app’s view controller is initialized. Create the AuthenticationController instance by providing your Configuration with required API token, API secret and a delegate object.
@@ -35,11 +42,11 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
             }
         } catch {
             let err = error as NSError
-            UIAlertController.presentAlertView(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "", cancelButtonTitle: "OK", completion: nil)
+            self.showAlert(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "")
         }
     }
     
-    func createAuthenticationConfiguration() -> AuthenticationConfiguration {
+    func createAuthenticationConfiguration(withCustomUI:Bool) -> AuthenticationConfiguration {
         let config = AuthenticationConfiguration()
         
         //Provide your API token
@@ -56,6 +63,14 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         
         //Set the dataCenter; default is JumioDataCenterUS
         //config.dataCenter = JumioDataCenterEU
+        
+        if (withCustomUI) {
+            config.authenticationScanViewControllerDelegate = self
+            
+            JumioBaseView.jumioAppearance().disableBlur = true
+            JumioBaseView.jumioAppearance().foregroundColor = UIColor.white
+            JumioBaseView.jumioAppearance().backgroundColor = UIColor.init(red: 44/250.0, green: 152/250.0, blue: 240/250.0, alpha: 1.0)
+        }
         
         //You can also set a customer identifier (max. 100 characters). Note: The customer ID should not contain sensitive data like PII (Personally Identifiable Information) or account login.
         //config.userReference = "USER_REFERENCE"
@@ -132,7 +147,8 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
      * @param authenticationController the AuthenticationController instance
      * @param scanViewController UIViewController object to present
      **/
-    func authenticationController(_ authenticationController: AuthenticationController, didFinishInitializingScanViewController scanViewController: UIViewController) {
+    
+    func authenticationController(_ authenticationController: AuthenticationController, didFinishInitializingScanViewController scanViewController: AuthenticationScanViewController) {
         print("AuthenticationController did finish initializing")
         self.authenticationScanViewController = scanViewController
         self.present(self.authenticationScanViewController!, animated: true, completion: nil)
@@ -146,7 +162,8 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
      * @param transactionReference the unique identifier of the scan session
      **/
     func authenticationController(_ authenticationController: AuthenticationController, didFinishWith authenticationResult: AuthenticationResult, transactionReference: String) {
-        print("AuthenticationController finished successfully with transaction reference: %@", transactionReference)
+        print("AuthenticationController finished successfully with transaction reference: \(transactionReference)")
+        self.removeActivityIndicator()
         
         var message = ""
         switch authenticationResult {
@@ -157,8 +174,6 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
             message = "Authentication process failed"
             break
         }
-        
-        print(message)
         
         self.authenticationScanViewController!.dismiss(animated: true, completion: {
             print(message)
@@ -176,12 +191,13 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
      * @param transactionReference the unique identifier of the scan session
      **/
     func authenticationController(_ authenticationController: AuthenticationController, didFinishWithError error: AuthenticationError, transactionReference: String?) {
-        let message = "AuthenticationController finished with error: " + "\(error.message)" + "transactionReference: " + "\(transactionReference ?? "")"
+        let message = "AuthenticationController finished with error: \(error.message) transactionReference: \(transactionReference ?? "")"
         print(message)
+        self.removeActivityIndicator()
         
         //Dismiss the SDK
         let errorCompletion = {
-            self.showAlert(withTitle: "Authentication Mobile SDK", message: message as String)
+            self.showAlert(withTitle: "Authentication Mobile SDK", message: message)
             self.authenticationController?.destroy()
             self.authenticationController = nil
         }
@@ -191,6 +207,60 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         } else {
             errorCompletion()
         }
+    }
+    
+    //MARK: AuthenticationScanViewControllerDelegate implementation
+    func authenticationScanViewControllerDidStartBiometricAnalysis(_ authenticationScanViewController: AuthenticationScanViewController) {
+        self.activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        self.activityIndicatorView?.translatesAutoresizingMaskIntoConstraints = false
+        self.activityIndicatorView?.color = UIColor.darkGray
+        self.activityIndicatorView?.startAnimating()
+        
+        authenticationScanViewController.customOverlayLayer.addSubview(self.activityIndicatorView!)
+        
+        self.activityIndicatorConstraints.append(NSLayoutConstraint(item: self.activityIndicatorView!, attribute: .centerX, relatedBy: .equal, toItem: authenticationScanViewController.customOverlayLayer, attribute: .centerX, multiplier: 1.0, constant: 0.0))
+        self.activityIndicatorConstraints.append(NSLayoutConstraint(item: self.activityIndicatorView!, attribute: .centerY, relatedBy: .equal, toItem: authenticationScanViewController.customOverlayLayer, attribute: .centerY, multiplier: 1.0, constant: 0.0))
+        NSLayoutConstraint.activate(self.activityIndicatorConstraints)
+    }
+    
+    func authenticationScanViewController(_ authenticationScanViewController: AuthenticationScanViewController, shouldDisplayHelpWithText message: String, animationView: UIView) {
+        print("AuthenticationScanViewController shouldDisplayHelpWithText: \(message)")
+        self.removeActivityIndicator()
+        
+        guard let helpAnimationView = Bundle.main.loadNibNamed("HelpAnimationView", owner: self, options: nil)?.first as? HelpAnimationView else { return }
+        helpAnimationView.translatesAutoresizingMaskIntoConstraints = false
+        helpAnimationView.descriptionLabel.text = message
+        helpAnimationView.addContinueHandler(action: {
+            helpAnimationView.removeFromSuperview()
+            authenticationScanViewController.retryScan()
+        })
+        
+        helpAnimationView.animationView.addSubview(animationView)
+        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[animationView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
+        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[animationView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
+        
+        authenticationScanViewController.customOverlayLayer.addSubview(helpAnimationView)
+        authenticationScanViewController.customOverlayLayer.bringSubview(toFront: helpAnimationView)
+        authenticationScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[helpView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
+        authenticationScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[helpView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
+    }
+    
+    func authenticationScanViewController(_ authenticationScanViewController: AuthenticationScanViewController, didDetermineRecoverableError error: AuthenticationError) {
+        let message = "AuthenticationScanViewController didDetermineRecoverableError: \(error.message) (\(error.code))"
+        print(message)
+        
+        self.removeActivityIndicator()
+        
+        let alert = UIAlertController(title: "Authentication Mobile SDK", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: {(_: UIAlertAction!) in
+            authenticationScanViewController.retryAfterError()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_: UIAlertAction!) in
+            authenticationScanViewController.cancel()
+            authenticationScanViewController.dismiss(animated: true)
+        }))
+        
+        authenticationScanViewController.present(alert, animated: true, completion: nil)
     }
     
     // Helper methods
@@ -205,11 +275,28 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        
+        if let scanReference = transactionReferenceTextField.text {
+            UserDefaults.standard.set(scanReference, forKey: "enrollmentTransactionReference")
+        }
     }
     
     @IBAction func transactionReference_onDone(_ sender: Any) {
         self.view.endEditing(true)
+        
+        if let scanReference = transactionReferenceTextField.text {
+            UserDefaults.standard.set(scanReference, forKey: "enrollmentTransactionReference")
+        }
     }
     
-    
+    func removeActivityIndicator() {
+        guard self.activityIndicatorView != nil else { return}
+        
+        NSLayoutConstraint.deactivate(activityIndicatorConstraints)
+        self.activityIndicatorConstraints.removeAll()
+        
+        self.activityIndicatorView?.removeFromSuperview()
+        self.activityIndicatorView = nil
+        
+    }
 }

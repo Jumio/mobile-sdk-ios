@@ -8,17 +8,16 @@
 
 
 # Release notes
-SDK version: 3.0.0
+SDK version: 3.1.0
 
 #### Changes
-* Initial release of the [Jumio Authentication](https://www.jumio.com/authentication/) SDK [Authentication]
-* Optimized 3D liveness handling to increase user conversion [Netverify]
-* Improved MRZ reading accuracy [Netverify/Fastfill]
-* Moved barcode scanner into a separate framework to allow optional linking and to reduce app size [Netverify/Fastfill]
-* Renamed some public methods [Netverify/Fastfill, Document Verification, BAM Checkout]
+* Added customUI support for 3D Liveness and Authentication [Netverify, Authentication]
+* Optimized 3D liveness handling to reduce number of false rejects [Netverify]
+* Optimized memory consumption for 3D Liveness [Netverify]
+* Added option to customize the scanBackgroundColor [Netverify/Fastfill]
 
 #### Fixes
-* Various smaller bug fixes/improvements [Netverify/Fastfill, Document Verification, BAM Checkout]
+* Various smaller bug fixes/improvements [Netverify/Fastfill, Authentication, Document Verification, BAM Checkout]
 
 # Basic Setup
 
@@ -57,12 +56,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.0' # Use Netverify, Authentication, DocumentVerification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.1' # Use Netverify, Authentication, DocumentVerification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.0' # Use full Netverify and Authentication functionality
-pod 'JumioMobileSDK/Netverify-Light', '~>3.0' # For Fastfill or Document Verification, or Netverify without 3D face liveness capturing technology
+pod 'JumioMobileSDK/Netverify', '~>3.1' # Use full Netverify and Authentication functionality
+pod 'JumioMobileSDK/Netverify-Light', '~>3.1' # For Fastfill or Document Verification, or Netverify without 3D face liveness capturing technology
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.0' # Use BAM Checkout only
+pod 'JumioMobileSDK/BAMCheckout', '~>3.1' # Use BAM Checkout only
 ```
 
 Install the pod to your project via Terminal:
@@ -72,7 +71,7 @@ pod install
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.0.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.0.0/ios-jumio-mobile-sdk-3.0.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.1.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.1.0/ios-jumio-mobile-sdk-3.1.0.zip).
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -82,11 +81,11 @@ The following table shows which frameworks have to be added:
 
 | Product | Size | JumioCore | BAMCheckout | Netverify | NetverifyBarcode & MicroBlink | NetverifyFace & ZoomAuthenticationHybrid |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Netverify + Authentication | 26.3 MB | x |  | x | x | x |
-| Fastfill | 11.1 MB | x |  | x | x |  |
-| Document Verification | 7.9 MB | x |  | x |  |  |
-| BAM Checkout credit card scanning | 7.4 MB | x | x |  |  |  |
-| BAM Checkout credit card<br/>+ ID scanning | 31.9 MB | x | x | x | x | x |
+| Netverify + Authentication | 25.4 MB | x |  | x | x | x |
+| Fastfill | 10.8 MB | x |  | x | x |  |
+| Document Verification | 7.6 MB | x |  | x |  |  |
+| BAM Checkout credit card scanning | 7.1 MB | x | x |  |  |  |
+| BAM Checkout credit card<br/>+ ID scanning | 30.9 MB | x | x | x | x | x |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project. For Document Verification, the frameworks `NetverifyBarcode`, `MicroBlink`, `NetverifyFace` and `ZoomAuthenticationHybrid` can be removed.
 
@@ -138,7 +137,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 2.15.0 of the Jumio Mobile SDK is supported until 2019-06-05.
+The previous release version 3.0.0 of the Jumio Mobile SDK is supported until 2019-07-12.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 

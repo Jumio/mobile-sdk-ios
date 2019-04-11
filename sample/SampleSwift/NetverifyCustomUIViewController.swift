@@ -10,8 +10,13 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet var captureControlsView: UIView!
     @IBOutlet weak var mainTitleLabel: UILabel!
+    
+    // Capture Controls
+    @IBOutlet var captureControlsView: UIView!
+    @IBOutlet weak var captureControlToggleCamera: UIButton!
+    @IBOutlet weak var captureControlToggleFlash: UIButton!
+    
     
     // For custom scan view controller
     var isScanning: Bool = false
@@ -31,7 +36,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         
         // Show loading circle
         if countries.count == 0 {
-            activityIndicator.startAnimating()
+            self.activityIndicator.startAnimating()
         }
         
         self.navigationController?.delegate = self
@@ -67,13 +72,12 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     
     func addCaptureHelperViews(_ netverifyScanViewController: NetverifyCustomScanViewController, isFallback: Bool) {
         // Add capture controls view
-        captureControlsView.translatesAutoresizingMaskIntoConstraints = false
-        netverifyScanViewController.customOverlayLayer.addSubview(captureControlsView)
+        self.addCaptureControl(to: netverifyScanViewController)
         
-        // captureControlsView height constrains
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[view(==144)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": captureControlsView]))
-        // captureControlsView width constrains
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": captureControlsView]))
+        if netverifyScanViewController.currentScanMode() == .mode3DLiveness {
+            // Don't show captureInfoView when 3DLivenes is used
+            return
+        }
         
         // Add capture info view
         guard let captureInfoView = Bundle.main.loadNibNamed("CaptureInfoView", owner: self, options: nil)?.first as? CaptureInfoView else { return }
@@ -99,7 +103,8 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         self.netverifyUIController = netverifyUIController
         
         // Hide loading circle
-        activityIndicator.stopAnimating()
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.isHidden = true
         
         // Show table after data (countries) are fetched
         self.tableView.isHidden = false
@@ -136,7 +141,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
             }
             
             // Add helper views for the camera capture
-            if scanViewController.currentScanMode() == NetverifyScanMode.face {
+            if scanViewController.currentScanMode() == .modeFaceCapture || scanViewController.currentScanMode() == .mode3DLiveness {
                 self.addFaceMacherHelpersViews(scanViewController)
             } else {
                 self.addCaptureHelperViews(scanViewController, isFallback: scanViewController.isFallbackAvailable())
@@ -191,7 +196,9 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     }
     
     func netverifyUIController(_ netverifyUIController: NetverifyUIController, didFinishWith documentData: NetverifyDocumentData, scanReference: String) {
-        print("didFinishWithDocumentData")
+        print("NetverifyUIController finished successfully with scan reference: \(scanReference)")
+        // Share the scan reference for the Authentication SDK
+        UserDefaults.standard.set(scanReference, forKey: "enrollmentTransactionReference")
         
         // Update verification finished view when the data from the captured document was captured
         verificationFinishedView!.setup(documentData: documentData, doneHandler: {() -> Void in
@@ -263,6 +270,43 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
             confirmation()
         }))
         customScanView.present(alert, animated: true, completion: nil)
+    }
+    
+    func netverifyCustomScanViewControllerStartedBiometricAnalysis(_ customScanView: NetverifyCustomScanViewController) {
+        print("netverifyCustomScanViewControllerStartedBiometricAnalysis")
+
+        customScanView.customOverlayLayer.addSubview(self.activityIndicator);
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        
+        customScanView.customOverlayLayer.addConstraint(NSLayoutConstraint(item: self.activityIndicator!, attribute: .centerX, relatedBy: .equal, toItem: customScanView.customOverlayLayer, attribute: .centerX, multiplier: 1.0, constant: 0.0))
+        customScanView.customOverlayLayer.addConstraint(NSLayoutConstraint(item: self.activityIndicator!, attribute: .centerY, relatedBy: .equal, toItem: customScanView.customOverlayLayer, attribute: .centerY, multiplier: 1.0, constant: 0.0))
+    }
+    
+    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayHelpWithText message: String, animationView: UIView) {
+        
+        if (!self.activityIndicator.isHidden) {
+            self.activityIndicator.startAnimating()
+            self.activityIndicator.isHidden = true
+        }
+        
+        print("NetverifyCustomScanViewController shouldDisplayHelpWithText: \(message)")
+        guard let helpAnimationView = Bundle.main.loadNibNamed("HelpAnimationView", owner: self, options: nil)?.first as? HelpAnimationView else { return }
+        helpAnimationView.translatesAutoresizingMaskIntoConstraints = false
+        helpAnimationView.descriptionLabel.text = message
+        helpAnimationView.addContinueHandler(action: {
+            helpAnimationView.removeFromSuperview()
+            customScanView.retryScan()
+        })
+
+        helpAnimationView.animationView.addSubview(animationView)
+        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[animationView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
+        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[animationView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
+        
+        customScanView.customOverlayLayer.addSubview(helpAnimationView)
+        customScanView.customOverlayLayer.bringSubview(toFront: helpAnimationView)
+        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[helpView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
+        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[helpView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
     }
     
     // MARK: UITableViewDelegate
@@ -405,5 +449,18 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         self.countries = [NetverifyCountry]()
         self.tableView.reloadData()
     }
+    
+    func addCaptureControl(to customScanView: NetverifyCustomScanViewController) {
+        captureControlToggleCamera.isHidden = !customScanView.canSwitchCamera()
+        captureControlToggleFlash.isHidden = !customScanView.canToggleFlash()
+        
+        captureControlsView.translatesAutoresizingMaskIntoConstraints = false
+        customScanView.customOverlayLayer.addSubview(captureControlsView)
+        customScanView.customOverlayLayer.sendSubview(toBack: captureControlsView)
+        
+        // captureControlsView height constrains
+        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[view(==144)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": captureControlsView]))
+        // captureControlsView width constrains
+        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": captureControlsView]))
+    }
 }
-

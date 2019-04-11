@@ -20,7 +20,7 @@
 - (void) createNetverifyController{
     
     //prevent SDK to be initialized on Jailbroken devices
-    if ([JMDeviceInfo isJailbrokenDevice]) {
+    if ([JumioDeviceInfo isJailbrokenDevice]) {
         return;
     }
     
@@ -152,6 +152,7 @@
     //[[NetverifyScanOverlayView jumioAppearance] setColorOverlayStandard: [UIColor blueColor]];
     //[[NetverifyScanOverlayView jumioAppearance] setColorOverlayValid: [UIColor greenColor]];
     //[[NetverifyScanOverlayView jumioAppearance] setColorOverlayInvalid: [UIColor redColor]];
+    //[[NetverifyScanOverlayView jumioAppearance] setScanBackgroundColor: [UIColor orangeColor]];
     
     // Color for the face oval outline
     //[[NetverifyScanOverlayView jumioAppearance] setFaceOvalColor: [UIColor orangeColor]];

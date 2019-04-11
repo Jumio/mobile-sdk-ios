@@ -4,27 +4,47 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.1.0
+
+#### NavigationBar customization
+`UINavigationBar+NetverifyAppearance.h` was renamed to `UINavigationBar+JumioAppearance.h` and moved to JumioCore.framework</br>
+`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
+
+#### 3D-Liveness handling via Custom-UI
+Please see [3D-Liveness in Custom Scan View Delegate](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_netverify-fastfill.md#custom-scan-view-delegate) 
+`netverifyCustomScanViewControllerStartedBiometricAnalysis:`
+`netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:`
+
+`NetverifyScanModeFace` was changed to `NetverifyScanMode3DLiveness` for 3D-Liveness and `NetverifyScanModeFaceCapture` for alternative face capturing.
+
+#### Additions in visual customization
+Enhanced customization options `scanBackgroundColor` to colorize the background color during scanning, see [`NetverifyScanOverlay`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyScanOverlayView.html) class for the new option.
+
+#### Changes to device information
+`JMDeviceInfo` class has been renamed to `JumioDeviceInfo`
+
+
 ## 3.0.0
 
 #### Changes to the public API
- `merchantApiToken` has been renamed to `apiToken`</br>
- `merchantApiSecret` has been renamed to `apiSecret`</br>
- `merchantReportingCriteria` has been renamed to `reportingCriteria`</br>
- `customerId` has been renamed to `userReference`</br>
- `requireFaceMatch` has been renamed to `enableIdentityVerification`</br>
- `requireVerification` has been renamed to `enableVerification`</br>
- `merchantScanReference` has been renamed to `customerInternalReference`</br>
- `sdkVersion` was changed from instance to class function
+`merchantApiToken` has been renamed to `apiToken`</br>
+`merchantApiSecret` has been renamed to `apiSecret`</br>
+`merchantReportingCriteria` has been renamed to `reportingCriteria`</br>
+`customerId` has been renamed to `userReference`</br>
+`requireFaceMatch` has been renamed to `enableIdentityVerification`</br>
+`requireVerification` has been renamed to `enableVerification`</br>
+`merchantScanReference` has been renamed to `customerInternalReference`</br>
+`sdkVersion` was changed from instance to class function
 
 #### Changes to visual customization
- The protocol `NetverifyAppearance` has been replaced with `JumioAppearance`. </br>
+The protocol `NetverifyAppearance` has been replaced with `JumioAppearance`. </br>
  Example: `[[UINavigationBar netverifyAppearance] setTintColor:[UIColor yellowColor]]` has been changed to `[[UINavigationBar jumioAppearance] setTintColor:[UIColor yellowColor]]`.
  
 #### New framework NetverifyBarcode
- When using Barcode scanning for Fastfill or Netverify, make sure to link NetverifyBarcode.framework and MicroBlink.framework to your app project. There is no new public API for you to consume, nor any implementation adaptions required.
+When using Barcode scanning for Fastfill or Netverify, make sure to link NetverifyBarcode.framework and MicroBlink.framework to your app project. There is no new public API for you to consume, nor any implementation adaptions required.
  
 #### Changes in Localizable-Netverify.strings
- Added one value in regards to 3D face liveness.
+Added one value in regards to 3D face liveness.
 
 ## 2.15.0
 

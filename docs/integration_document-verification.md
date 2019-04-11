@@ -52,7 +52,7 @@ Make sure initialization and presentation are timely within one minute. On iPads
 ### Jailbreak detection
 We advice to prevent our SDK to be run on jailbroken device. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
 ```
-[JMDeviceInfo isJailbrokenDevice]
+[JumioDeviceInfo isJailbrokenDevice]
 ```
 
 ## Configuration

@@ -6,7 +6,7 @@
 
 #import "DocumentVerificationStartViewController.h"
 @import Netverify;
-#import <JumioCore/JMDeviceInfo.h>
+#import <JumioCore/JumioDeviceInfo.h>
 
 @interface DocumentVerificationStartViewController () <DocumentVerificationViewControllerDelegate>
 @property (nonatomic, strong) DocumentVerificationViewController *documentVerificationViewController;
@@ -17,7 +17,7 @@
 - (void) createDocumentVerificationController {
     
     //prevent SDK to be initialized on Jailbroken devices
-    if ([JMDeviceInfo isJailbrokenDevice]) {
+    if ([JumioDeviceInfo isJailbrokenDevice]) {
         return;
     }
     

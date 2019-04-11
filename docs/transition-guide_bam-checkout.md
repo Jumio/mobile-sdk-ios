@@ -4,6 +4,16 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.1.0
+
+#### NavigationBar customization
+`UINavigationBar+BAMCheckoutAppearance.h` was renamed to `UINavigationBar+JumioAppearance.h` and moved to JumioCore.framework</br>
+`BAMCheckoutNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](http://jumio.github.io/mobile-sdk-ios/BAMCheckout/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
+
+
+#### Changes to device information
+`JMDeviceInfo` class has been renamed to `JumioDeviceInfo`
+
 ## 3.0.0
 
 #### Changes to the public API
