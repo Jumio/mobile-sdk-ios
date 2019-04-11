@@ -54,7 +54,7 @@
             <a class="nav-group-name-link" href="../Authentication Classes.html">Authentication Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Authentication Classes.html#/c:objc(cs)AuthenticationScanViewController">AuthenticationScanViewController</a>
+                <a class="nav-group-task-link" href="../Classes/AuthenticationScanViewController.html">AuthenticationScanViewController</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/AuthenticationError.html">AuthenticationError</a>
@@ -68,11 +68,16 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Authentication &amp; Jumio Appearance.html">Authentication &amp; Jumio Appearance</a>
+            <a class="nav-group-name-link" href="../Jumio Classes.html">Jumio Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/AuthenticationNavigationBarTitleImageView.html">AuthenticationNavigationBarTitleImageView</a>
+                <a class="nav-group-task-link" href="../Classes/JumioDeviceInfo.html">JumioDeviceInfo</a>
               </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Jumio Appearance.html">Jumio Appearance</a>
+            <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/JumioAppearance.html">JumioAppearance</a>
               </li>
@@ -87,6 +92,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/JumioPositiveButton.html">JumioPositiveButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/JumioNavigationBarTitleImageView.html">JumioNavigationBarTitleImageView</a>
               </li>
             </ul>
           </li>
@@ -103,6 +111,14 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/AuthenticationResult.html">AuthenticationResult</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AuthenticationScanViewControllerDelegate.html">AuthenticationScanViewControllerDelegate</a>
               </li>
             </ul>
           </li>
@@ -151,12 +167,12 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">authenticationController</span><span class="p">:</span>
             <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/AuthenticationController.html">AuthenticationController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">authenticationController</span>
     <span class="nf">didFinishInitializingScanViewController</span><span class="p">:</span>
-        <span class="p">(</span><span class="n">nonnull</span> <span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">scanViewController</span><span class="p">;</span></code></pre>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/AuthenticationScanViewController.html">AuthenticationScanViewController</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">scanViewController</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticationController</span><span class="p">(</span><span class="n">_</span> <span class="nv">authenticationController</span><span class="p">:</span> <span class="kt"><a href="../Classes/AuthenticationController.html">AuthenticationController</a></span><span class="p">,</span> <span class="n">didFinishInitializingScanViewController</span> <span class="nv">scanViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticationController</span><span class="p">(</span><span class="n">_</span> <span class="nv">authenticationController</span><span class="p">:</span> <span class="kt"><a href="../Classes/AuthenticationController.html">AuthenticationController</a></span><span class="p">,</span> <span class="n">didFinishInitializingScanViewController</span> <span class="nv">scanViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/AuthenticationScanViewController.html">AuthenticationScanViewController</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -184,7 +200,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>UIViewController object to present</p>
+                                  <p>view controller to present</p>
                                 </div>
                               </td>
                             </tr>
@@ -192,7 +208,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/NetverifyFace.framework/Headers/NetverifyFace/AuthenticationConfiguration.h#L38">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/NetverifyFace.framework/Headers/NetverifyFace/AuthenticationConfiguration.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -273,7 +289,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/NetverifyFace.framework/Headers/NetverifyFace/AuthenticationConfiguration.h#L46">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/NetverifyFace.framework/Headers/NetverifyFace/AuthenticationConfiguration.h#L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -354,7 +370,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/NetverifyFace.framework/Headers/NetverifyFace/AuthenticationConfiguration.h#L54">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/NetverifyFace.framework/Headers/NetverifyFace/AuthenticationConfiguration.h#L55">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

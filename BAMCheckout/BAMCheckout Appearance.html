@@ -68,13 +68,18 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Jumio Classes.html">Jumio Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/JumioDeviceInfo.html">JumioDeviceInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="BAMCheckout Appearance.html">BAMCheckout Appearance</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/BAMCheckoutBaseView.html">BAMCheckoutBaseView</a>
+                <a class="nav-group-task-link" href="BAMCheckout Appearance.html#/c:objc(cs)BAMCheckoutBaseView">BAMCheckoutBaseView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/BAMCheckoutNegativeButton.html">BAMCheckoutNegativeButton</a>
@@ -85,8 +90,19 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/BAMCheckoutScanOverlay.html">BAMCheckoutScanOverlay</a>
               </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Jumio Appearance.html">Jumio Appearance</a>
+            <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/BAMCheckoutNavigationBarTitleImageView.html">BAMCheckoutNavigationBarTitleImageView</a>
+                <a class="nav-group-task-link" href="Protocols/JumioAppearance.html">JumioAppearance</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/JumioBaseView.html">JumioBaseView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/JumioNavigationBarTitleImageView.html">JumioNavigationBarTitleImageView</a>
               </li>
             </ul>
           </li>
@@ -130,46 +146,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)BAMCheckoutAppearance"></a>
-                    <a name="//apple_ref/objc/Protocol/BAMCheckoutAppearance" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)BAMCheckoutAppearance">BAMCheckoutAppearance</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Protocol that is used for all BAMCheckout UI Objects to be customized via UIAppearance</p>
-
-                        <a href="Protocols/BAMCheckoutAppearance.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">BAMCheckoutAppearance</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">BAMCheckoutAppearance</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutViewController.h#L17-L24">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)BAMCheckoutBaseView"></a>
                     <a name="//apple_ref/objc/Class/BAMCheckoutBaseView" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)BAMCheckoutBaseView">BAMCheckoutBaseView</a>
@@ -182,24 +158,23 @@
                       <div class="abstract">
                         <p>Base class which is used to set our SDK via UIAppearance pattern</p>
 
-                        <a href="Classes/BAMCheckoutBaseView.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code>
-<span class="k">@interface</span> <span class="nc">BAMCheckoutBaseView</span> <span class="p">:</span> <span class="nc">UIView</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span><span class="o">&gt;</span></code></pre>
+<span class="k">@interface</span> <span class="nc">BAMCheckoutBaseView</span> <span class="p">:</span> <span class="nc"><a href="Classes/JumioBaseView.html">JumioBaseView</a></span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BAMCheckoutBaseView</span> <span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BAMCheckoutBaseView</span> <span class="p">:</span> <span class="kt"><a href="Classes/JumioBaseView.html">JumioBaseView</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutBaseView.h#L13-L45">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckout/BAMCheckoutBaseView.h#L12-L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -221,7 +196,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>UIButton that implements BAMCheckoutAppearance protocol that is used within our confirmation or error views and invokes a negative action (e.g. cancel, retry).</p>
+                        <p>UIButton that implements JumioAppearance protocol that is used within our confirmation or error views and invokes a negative action (e.g. cancel, retry).</p>
 
                         <a href="Classes/BAMCheckoutNegativeButton.html" class="slightly-smaller">See more</a>
                       </div>
@@ -230,17 +205,17 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code>
-<span class="k">@interface</span> <span class="nc">BAMCheckoutNegativeButton</span> <span class="p">:</span> <span class="nc">UIButton</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span><span class="o">&gt;</span></code></pre>
+<span class="k">@interface</span> <span class="nc">BAMCheckoutNegativeButton</span> <span class="p">:</span> <span class="nc">UIButton</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/JumioAppearance.html">JumioAppearance</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BAMCheckoutNegativeButton</span> <span class="p">:</span> <span class="kt">UIButton</span><span class="p">,</span> <span class="kt"><a href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BAMCheckoutNegativeButton</span> <span class="p">:</span> <span class="kt">UIButton</span><span class="p">,</span> <span class="kt"><a href="Protocols/JumioAppearance.html">JumioAppearance</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutNegativeButton.h#L13-L33">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckout/BAMCheckoutNegativeButton.h#L13-L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -262,7 +237,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>UIButton that implements BAMCheckoutAppearance protocol that is used within our confirmation or error views and invokes a positive action (e.g. readable, OK).</p>
+                        <p>UIButton that implements JumioAppearance protocol that is used within our confirmation or error views and invokes a positive action (e.g. readable, OK).</p>
 
                         <a href="Classes/BAMCheckoutPositiveButton.html" class="slightly-smaller">See more</a>
                       </div>
@@ -271,17 +246,17 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code>
-<span class="k">@interface</span> <span class="nc">BAMCheckoutPositiveButton</span> <span class="p">:</span> <span class="nc">UIButton</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span><span class="o">&gt;</span></code></pre>
+<span class="k">@interface</span> <span class="nc">BAMCheckoutPositiveButton</span> <span class="p">:</span> <span class="nc">UIButton</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/JumioAppearance.html">JumioAppearance</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BAMCheckoutPositiveButton</span> <span class="p">:</span> <span class="kt">UIButton</span><span class="p">,</span> <span class="kt"><a href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BAMCheckoutPositiveButton</span> <span class="p">:</span> <span class="kt">UIButton</span><span class="p">,</span> <span class="kt"><a href="Protocols/JumioAppearance.html">JumioAppearance</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutPositiveButton.h#L13-L33">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckout/BAMCheckoutPositiveButton.h#L13-L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -303,7 +278,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>UIView that implements BAMCheckoutAppearance protocol that is used to tint our scan overlays.</p>
+                        <p>UIView that implements JumioAppearance protocol that is used to tint our scan overlays.</p>
 
                         <a href="Classes/BAMCheckoutScanOverlay.html" class="slightly-smaller">See more</a>
                       </div>
@@ -312,59 +287,17 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code>
-<span class="k">@interface</span> <span class="nc">BAMCheckoutScanOverlay</span> <span class="p">:</span> <span class="nc">UIView</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span><span class="o">&gt;</span></code></pre>
+<span class="k">@interface</span> <span class="nc">BAMCheckoutScanOverlay</span> <span class="p">:</span> <span class="nc">UIView</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/JumioAppearance.html">JumioAppearance</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BAMCheckoutScanOverlay</span> <span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BAMCheckoutScanOverlay</span> <span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="Protocols/JumioAppearance.html">JumioAppearance</a></span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutScanOverlay.h#L13-L25">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)BAMCheckoutNavigationBarTitleImageView"></a>
-                    <a name="//apple_ref/objc/Class/BAMCheckoutNavigationBarTitleImageView" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)BAMCheckoutNavigationBarTitleImageView">BAMCheckoutNavigationBarTitleImageView</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>UIView that implements BAMCheckoutAppearance protocol that is used to define the uiimage that is - when set - drawn instead of the NavigationBar title.</p>
-
-                        <a href="Classes/BAMCheckoutNavigationBarTitleImageView.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code>
-<span class="k">@interface</span> <span class="nc">BAMCheckoutNavigationBarTitleImageView</span>
-    <span class="p">:</span> <span class="nc">UIImageView</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">BAMCheckoutNavigationBarTitleImageView</span> <span class="p">:</span> <span class="kt">UIImageView</span><span class="p">,</span> <span class="kt"><a href="Protocols/BAMCheckoutAppearance.html">BAMCheckoutAppearance</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckoutNavigationBarTitleImageView.h#L13-L20">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/BAMCheckout.framework/Headers/BAMCheckout/BAMCheckoutScanOverlay.h#L13-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
