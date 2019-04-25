@@ -21,7 +21,7 @@ class HelpAnimationView: UIView {
         guard let maybeeAction = action else { return }
         
         self.continueHandler = maybeeAction
-        continueButton.addTarget(self, action: #selector(self.continueHandling), for: UIControlEvents.touchUpInside)
+        continueButton.addTarget(self, action: #selector(self.continueHandling), for: UIControl.Event.touchUpInside)
     }
     
     

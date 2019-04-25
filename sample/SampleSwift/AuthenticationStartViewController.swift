@@ -211,7 +211,7 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
     
     //MARK: AuthenticationScanViewControllerDelegate implementation
     func authenticationScanViewControllerDidStartBiometricAnalysis(_ authenticationScanViewController: AuthenticationScanViewController) {
-        self.activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        self.activityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
         self.activityIndicatorView?.translatesAutoresizingMaskIntoConstraints = false
         self.activityIndicatorView?.color = UIColor.darkGray
         self.activityIndicatorView?.startAnimating()
@@ -236,13 +236,13 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         })
         
         helpAnimationView.animationView.addSubview(animationView)
-        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[animationView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
-        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[animationView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
+        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[animationView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
+        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[animationView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
         
         authenticationScanViewController.customOverlayLayer.addSubview(helpAnimationView)
-        authenticationScanViewController.customOverlayLayer.bringSubview(toFront: helpAnimationView)
-        authenticationScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[helpView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
-        authenticationScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[helpView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
+        authenticationScanViewController.customOverlayLayer.bringSubviewToFront(helpAnimationView)
+        authenticationScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[helpView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
+        authenticationScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[helpView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
     }
     
     func authenticationScanViewController(_ authenticationScanViewController: AuthenticationScanViewController, didDetermineRecoverableError error: AuthenticationError) {

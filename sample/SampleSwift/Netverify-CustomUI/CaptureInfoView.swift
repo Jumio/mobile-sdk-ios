@@ -37,7 +37,7 @@ class CaptureInfoView: UIView {
         fallbackButton.isHidden = false
         
         fallBackAction = action
-        fallbackButton.addTarget(self, action: #selector(self.fallbackHandling), for: UIControlEvents.touchUpInside)
+        fallbackButton.addTarget(self, action: #selector(self.fallbackHandling), for: UIControl.Event.touchUpInside)
     }
     
     func setSteps(current: UInt, total: UInt) {

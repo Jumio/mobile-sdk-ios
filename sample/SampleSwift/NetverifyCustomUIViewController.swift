@@ -61,13 +61,13 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         netverifyScanViewController.customOverlayLayer.addSubview(shutterBtn)
         
         // center shutterBtn horizontally in self.currentScanView?.customOverlayLayer
-        netverifyScanViewController.customOverlayLayer.addConstraint(NSLayoutConstraint(item: shutterBtn, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: netverifyScanViewController.customOverlayLayer, attribute: NSLayoutAttribute.centerX, multiplier: 1.0, constant: 0.0))
+        netverifyScanViewController.customOverlayLayer.addConstraint(NSLayoutConstraint(item: shutterBtn, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: netverifyScanViewController.customOverlayLayer, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1.0, constant: 0.0))
         // align shutterBtn from the bottom
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view]-130-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": shutterBtn]))
+        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view]-130-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": shutterBtn]))
         // width constraint
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[view(==70)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": shutterBtn]))
+        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[view(==70)]", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": shutterBtn]))
         // height constraint
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view(==70)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": shutterBtn]))
+        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view(==70)]", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": shutterBtn]))
     }
     
     func addCaptureHelperViews(_ netverifyScanViewController: NetverifyCustomScanViewController, isFallback: Bool) {
@@ -89,8 +89,8 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         captureInfoView.translatesAutoresizingMaskIntoConstraints = false
         netverifyScanViewController.customOverlayLayer.addSubview(captureInfoView)
         
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view(==\(captureInfoView.getContentHeight()))]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": captureInfoView]))
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": captureInfoView]))
+        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view(==\(captureInfoView.getContentHeight()))]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": captureInfoView]))
+        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": captureInfoView]))
     }
     
     // MARK: NetverifyUIControllerDelegate
@@ -167,7 +167,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         print("didDetermineError: \(error.message ?? "")")
         
         // Handler when error occurs
-        let alert = UIAlertController(title: error.code, message: error.message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: error.code, message: error.message, preferredStyle: UIAlertController.Style.alert)
         
         if retryPossible {
             alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: {(_: UIAlertAction!) in netverifyUIController.retryAfterError()}))
@@ -217,14 +217,14 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayLegalAdvice message: String, completion: @escaping () -> Void) {
         
         // Show legal advice
-        let alert = UIAlertController(title: "Read This:", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Read This:", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "I READ THIS", style: .default, handler: {(_: UIAlertAction!) in completion()}))
         customScanView.present(alert, animated: true, completion: nil)
     }
     
     func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayBlurHint message: String) {
         print("netverifyUIController shouldDisplayBlurHint: \(message)")
-        let alert = UIAlertController(title: "Hint", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Hint", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         customScanView.present(alert, animated: true, completion: nil)
     }
@@ -244,8 +244,8 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         customScanView.customOverlayLayer.addSubview(verifyInfoView)
         self.verifyInfoView = verifyInfoView
         
-        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view":view]))
-        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view":view]))
+        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view":view]))
+        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view":view]))
     }
     
     /**
@@ -253,7 +253,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
      **/
     func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayNoUSAddressFoundHint message: String, confirmation: @escaping (() -> Void)) {
         print("netverifyUIController shouldDisplayNoUSAddressFoundHint: \(message)")
-        let alert = UIAlertController(title: "Read This:", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Read This:", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "I READ THIS", style: .default, handler: {(_: UIAlertAction) in
             confirmation()
         }))
@@ -265,7 +265,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
      **/
     func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayFlipDocumentHint message: String, confirmation: @escaping (() -> Void)) {
         print("netverifyUIController shouldDisplayFlipDocumentHint: \(message)")
-        let alert = UIAlertController(title: "Read This:", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Read This:", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "I READ THIS", style: .default, handler: {(_: UIAlertAction) in
             confirmation()
         }))
@@ -300,13 +300,13 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         })
 
         helpAnimationView.animationView.addSubview(animationView)
-        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[animationView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
-        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[animationView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
+        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[animationView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
+        helpAnimationView.animationView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[animationView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["animationView":animationView]))
         
         customScanView.customOverlayLayer.addSubview(helpAnimationView)
-        customScanView.customOverlayLayer.bringSubview(toFront: helpAnimationView)
-        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[helpView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
-        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[helpView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
+        customScanView.customOverlayLayer.bringSubviewToFront(helpAnimationView)
+        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[helpView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
+        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[helpView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
     }
     
     // MARK: UITableViewDelegate
@@ -426,13 +426,13 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         netverifyScanViewController.customOverlayLayer.addSubview(cancelBtn)
         
         // Align cancelBtn from the right
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[view]-30-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": cancelBtn]))
+        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[view]-30-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": cancelBtn]))
         // Align cancelBtn from the top
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-30-[view]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": cancelBtn]))
+        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-30-[view]", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": cancelBtn]))
         // Width constraint
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[view(==44)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": cancelBtn]))
+        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[view(==44)]", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": cancelBtn]))
         // Height constraint
-        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view(==44)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": cancelBtn]))
+        netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view(==44)]", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": cancelBtn]))
     }
     
     @objc func shutter_onTouchUp () {
@@ -456,11 +456,11 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         
         captureControlsView.translatesAutoresizingMaskIntoConstraints = false
         customScanView.customOverlayLayer.addSubview(captureControlsView)
-        customScanView.customOverlayLayer.sendSubview(toBack: captureControlsView)
+        customScanView.customOverlayLayer.sendSubviewToBack(captureControlsView)
         
         // captureControlsView height constrains
-        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[view(==144)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": captureControlsView]))
+        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[view(==144)]", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": captureControlsView!]))
         // captureControlsView width constrains
-        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["view": captureControlsView]))
+        customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": captureControlsView!]))
     }
 }

@@ -118,7 +118,7 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
      * @param error The error describing the cause of the problematic situation
      **/
     func documentVerificationViewController(_ documentVerificationViewController: DocumentVerificationViewController, didFinishWithError error: DocumentVerificationError) {
-            print("DocumentVerificationViewController cancelled with error: %@", error.message)
+        print("DocumentVerificationViewController cancelled with error: \(error.message ?? "")")
         
         //Dismiss the SDK
         self.dismiss(animated: true, completion: nil)

@@ -8,7 +8,7 @@
 
 
 # Release notes
-SDK version: 3.1.0
+SDK version: 3.1.1
 
 #### Changes
 * Added customUI support for 3D Liveness and Authentication [Netverify, Authentication]
@@ -17,6 +17,7 @@ SDK version: 3.1.0
 * Added option to customize the scanBackgroundColor [Netverify/Fastfill]
 
 #### Fixes
+* Fixed a problem in which an error was shown during barcode scanning [Fastfill offline]
 * Various smaller bug fixes/improvements [Netverify/Fastfill, Authentication, Document Verification, BAM Checkout]
 
 # Basic Setup
@@ -71,7 +72,7 @@ pod install
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.1.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.1.0/ios-jumio-mobile-sdk-3.1.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.1.1.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.1.1/ios-jumio-mobile-sdk-3.1.1.zip).
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -137,7 +138,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 3.0.0 of the Jumio Mobile SDK is supported until 2019-07-12.
+The previous release version 3.1.0 of the Jumio Mobile SDK is supported until 2019-07-24.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 

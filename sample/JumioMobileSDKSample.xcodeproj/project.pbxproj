@@ -488,7 +488,7 @@
 				TargetAttributes = {
 					547B46CA1F46F1FE0029781C = {
 						DevelopmentTeam = JC7JKY534B;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1020;
 					};
 					EE01EEE61924A3E200B7CC49 = {
 						DevelopmentTeam = JC7JKY534B;
@@ -498,7 +498,7 @@
 			};
 			buildConfigurationList = EE01EEE21924A3E200B7CC49 /* Build configuration list for PBXProject "JumioMobileSDKSample" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -748,8 +748,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentEnterprise;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SampleSwift/Sample-BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -787,8 +786,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionEnterprise;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SampleSwift/Sample-BridgingHeader.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};

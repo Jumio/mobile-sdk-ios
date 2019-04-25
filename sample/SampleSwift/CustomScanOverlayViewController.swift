@@ -46,14 +46,14 @@ class CustomScanOverlayViewController : BAMCheckoutCustomScanOverlayViewControll
         self.toggleFlash()
         
         let btnTitle:String = self.isFlashOn() ? "F+" : "F-"
-        self.flashButton.setTitle(btnTitle, for: UIControlState.normal)
+        self.flashButton.setTitle(btnTitle, for: UIControl.State.normal)
     }
     
     @IBAction func cameraBtnTapped() -> Void {
         self.switchCamera()
         
         let btnTitle:String = (self.currentCameraPosition() == JumioCameraPositionBack) ? "C^" : "Cv"
-        self.cameraButton.setTitle(btnTitle, for: UIControlState.normal)
+        self.cameraButton.setTitle(btnTitle, for: UIControl.State.normal)
         
         if (self.hasFlash()) {
             self.flashButton.isHidden = false
@@ -90,9 +90,9 @@ class CustomScanOverlayViewController : BAMCheckoutCustomScanOverlayViewControll
     
     func updateCaptureButton() -> Void {
         if (self.isScanning) {
-            self.startStopButton.setTitle(">", for: UIControlState.normal)
+            self.startStopButton.setTitle(">", for: UIControl.State.normal)
         } else {
-            self.startStopButton.setTitle("||", for: UIControlState.normal)
+            self.startStopButton.setTitle("||", for: UIControl.State.normal)
         }
     }
     
@@ -100,9 +100,9 @@ class CustomScanOverlayViewController : BAMCheckoutCustomScanOverlayViewControll
         
         let retryString = retryPossible ? "retry possible" : "no retry possible"
         
-        let alertController:UIAlertController = UIAlertController.init(title: String(describing: error), message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+        let alertController:UIAlertController = UIAlertController.init(title: String(describing: error), message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
         
-        alertController.addAction(UIAlertAction.init(title: retryString, style: UIAlertActionStyle.cancel, handler: { (action: UIAlertAction!) in
+        alertController.addAction(UIAlertAction.init(title: retryString, style: UIAlertAction.Style.cancel, handler: { (action: UIAlertAction!) in
             self.dismiss(animated: true, completion: nil)
         }))
         
