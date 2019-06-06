@@ -223,7 +223,7 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         NSLayoutConstraint.activate(self.activityIndicatorConstraints)
     }
     
-    func authenticationScanViewController(_ authenticationScanViewController: AuthenticationScanViewController, shouldDisplayHelpWithText message: String, animationView: UIView) {
+    func authenticationScanViewController(_ authenticationScanViewController: AuthenticationScanViewController, shouldDisplayHelpWithText message: String, animationView: UIView, for retryReason: JumioZoomRetryReason) {
         print("AuthenticationScanViewController shouldDisplayHelpWithText: \(message)")
         self.removeActivityIndicator()
         

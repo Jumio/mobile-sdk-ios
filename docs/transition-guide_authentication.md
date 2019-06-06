@@ -4,6 +4,11 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.2.0
+
+#### Custom-UI handling
+`authenticationScanViewController:shouldDisplayHelpWithText:animationView:` was extended to [`authenticationScanViewController:shouldDisplayHelpWithText:animationView:forReason:`](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/Protocols/AuthenticationScanViewControllerDelegate.html#/c:objc(pl)AuthenticationScanViewControllerDelegate(im)authenticationScanViewController:shouldDisplayHelpWithText:animationView:forReason:) to return the `JumioZoomRetryReason`
+
 ## 3.1.2
 No backward incompatible changes.
 

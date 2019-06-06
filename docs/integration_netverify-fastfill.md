@@ -39,11 +39,6 @@ NetverifyViewController *netverifyViewController;
 }
 ```
 
-It is possible to update parameters of the configuration when a scan is finished with an error and the user is required to perform another scan. This can only be used if the SDK is currently not presented.
-```
-[netverifyViewController updateConfiguration:config];
-```
-
 Make sure initialization and presentation are timely within one minute. On iPads, the presentation style `UIModalPresentationFormSheet` is default and mandatory.
 ```
 [self presentViewController: netverifyViewController animated: YES completion: nil];
@@ -96,20 +91,27 @@ The merchant scan reference allows you to specify your own unique identifier for
 __Note:__ Must not contain sensitive data like PII (Personally Identifiable Information) or account
 login.
 ```
-config.customerInternalReference = @"YOURSCANREFERENCE";
+config.customerInternalReference = @"YOUR_CUSTOMER_REFERENCE";
 ```
 Use the following property to identify the scan in your reports (max. 100 characters).
 ```
-config.reportingCriteria = @"YOURREPORTINGCRITERIA";
+config.reportingCriteria = @"YOUR_REPORTING_CRITERIA";
 ```
 You can also set a unique identifier for each of your customers (max. 100 characters).
 
 __Note:__ Must not contain sensitive data like PII (Personally Identifiable Information) or account
 login.
 ```
-config.userReference = @"CUSTOMERID";
+config.userReference = @"YOUR_USER_REFERENCE";
 ```
 
+### Jumio Screening
+
+Set watchlist screening on transaction level. Enable to override the default search, or disable watchlist screening for this transaction. When enabled, specify a search profile.
+```
+config.watchlistScreening = NetverifyWatchlistScreeningEnabled;
+config.watchlistSearchProfile = @"YOUR_SEARCH_PROFILE";
+```
 
 ### Analytics Service
 Use the following setting to explicitly send debug information to Jumio.
@@ -254,12 +256,12 @@ Class **_NetverifyMrzData_**
 
 | Code | Message  | Description |
 | :----------------------------: |:-------------|:-----------------|
-| A10000 | We have encountered a network communication problem | Retry possible, user decided to cancel |
-| B10000 | Authentication failed | Secure connection could not be established, retry impossible |
-| C10401 | Authentication failed | API credentials invalid, retry impossible |
-| D10403 | Authentication failed | Wrong API credentials used, retry impossible |
-| E20000 | No Internet connection available | Retry possible, user decided to cancel |
-| F00000 | Scanning not available this time, please contact the app vendor | Resources cannot be loaded, retry impossible |
+| A[x][yyyy]| We have encountered a network communication problem | Retry possible, user decided to cancel |
+| B[x][yyyy]| Authentication failed | Secure connection could not be established, retry impossible |
+| C[x]0401 | Authentication failed | API credentials invalid, retry impossible |
+| D[x]0403 | Authentication failed | Wrong API credentials used, retry impossible |
+| E[x]0000 | No Internet connection available | Retry possible, user decided to cancel |
+| F00000 | Scanning not available at this time, please contact the app vendor | Resources cannot be loaded, retry impossible |
 | G00000 | Cancelled by end-user | No error occurred |
 | H00000 | The camera is currently not available | Camera cannot be initialized, retry impossible |
 | I00000 | Certificate not valid anymore. Please update your application | End-to-end encryption key not valid anymore, retry impossible |
@@ -267,7 +269,7 @@ Class **_NetverifyMrzData_**
 | Y00000 | The barcode of your document didn´t contain your address, turn your document and scan the front. | **Only Custom UI:** Scanned Barcode (e.g. US Driver License) does not contain address information. Show hint and/or call `retryAfterError` |
 | Z00000 | You recently scanned the front of your document. Please flip your document and scan the back. | **Only Custom UI:** Backside of the document was scanned but most likely the frontside of the document was detected. Show hint and/or call `retryAfterError` |
 
-The first letter (A-J) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation. Please always include the whole code when filing an error related issue to our support team.
+The first letter (A-J) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]). Please always include the whole code when filing an error related issue to our support team.
 
 
 ## Custom UI
@@ -384,7 +386,7 @@ Also, `netverifyCustomScanViewController:shouldDisplayFlipDocumentHint:confirmat
 
 For handling of the 3D-Liveness workflow, two additional delegates are required to be implemented and handled. When the user has finished the scanning process and biometric data is being analysed, `netverifyCustomScanViewControllerStartedBiometricAnalysis:` is fired. We recommend to display a loading activity info to the user that should not last longer than a few seconds. When successful, scanning is being finalized (see paragraph below).
 
-In case of an unsuccessful result, that can also happen before biometric analysis is started, the delegate `netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:` is called. A help text and animated view is provided based on the problematic situation the user was facing, that is important to be displayed in order to assist the user to finish 3D-Liveness successfully. To let the user confirm the help information and retry in the workflow, simply call `retryScan` on the `customScanView` parameter provided in the delegate.
+In case of an unsuccessful result, that can also happen before biometric analysis is started, the delegate `netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:` is called. A help text and animated view is provided based on the problematic situation the user was facing, that is important to be displayed in order to assist the user to finish 3D-Liveness successfully. To let the user confirm the help information and retry in the workflow, simply call `retryScan` on the `customScanView` parameter provided in the delegate.
 
 
 ### Finalizing Scanning
@@ -398,9 +400,12 @@ When all necessary parts are captured `netverifyUIControllerDidCaptureAllParts:`
 Upon `netverifyUIController:didDetermineError:retryPossible:` every error that leaves the SDK in a pending state is forwarded.
 By calling `retryAfterError`, the process that leads to the error can be retried. With `cancel`, the whole SDK workflow is canceled. Please see how this is handled in the the sample implementation for more information.
 
-The delegate method `netverifyUIController:didFinishWithDocumentData:canReference:` for successful SDK workflows and `netverifyUIController:didCancelWithError:scanReference:` for aborted SDK workflows must be implemented to handle final result data.
+The delegate method `netverifyUIController:didFinishWithDocumentData:scanReference:` for successful SDK workflows and `netverifyUIController:didCancelWithError:scanReference:` for aborted SDK workflows must be implemented to handle final result data.
 
 Please find the section [Retrieving information](#retrieving-information) to see more about returning extracted data.
+
+#### Cancel during workflow
+Call `cancel` to abort the workflow, this will automatically evoke `netverifyUIController:didCancelWithError:scanReference:` to reach a final state of the SDK.
 
 #### Clean up
 After the SDK was dismissed and especially if you want to create a new instance of NetverifyUIController make sure to call [`destroy`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html#/c:objc(cs)NetverifyUIController(im)destroy) to ensure proper cleanup of the SDK.
@@ -409,7 +414,7 @@ After the SDK was dismissed and especially if you want to create a new instance 
 self.netverifyUIController = nil;
 ```
 
-**Important:** only call `destroy` after `netverifyUIController:didFinishWithDocumentData:scanReference:` or `netverifyUIController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Call `cancel` during the workflow, which will evoke `netverifyUIController:didCancelWithError:scanReference:`. Setting `NetverifyUIController` to nil is essential to free memory as soon as possible.
+**Important:** only call `destroy` after `netverifyUIController:didFinishWithDocumentData:scanReference:` or `netverifyUIController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Setting `NetverifyUIController` to nil is essential to free memory as soon as possible.
 
 
 ## Callback

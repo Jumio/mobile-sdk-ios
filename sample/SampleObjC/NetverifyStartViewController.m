@@ -57,6 +57,11 @@
     //You can also set a customer identifier (max. 100 characters). Note: The customer ID should not contain sensitive data like PII (Personally Identifiable Information) or account login.
     //config.userReference = @"USER_REFERENCE";
     
+    //Set watchlist screening on transaction level. Enable to override the default search, or disable watchlist screening for this transaction.
+    //config.watchlistScreening = NetverifyWatchlistScreeningEnabled;
+    //Search profile for watchlist screening. Optional.
+    //config.watchlistSearchProfile = @"YOUR_SEARCH_PROFILE";
+    
     //Callback URL (max. 255 characters) for the confirmation after the verification is completed. This setting overrides your Jumio account settings.
     //config.callbackUrl = @"https://www.example.com";
     
@@ -153,6 +158,7 @@
     //[[NetverifyScanOverlayView jumioAppearance] setColorOverlayValid: [UIColor greenColor]];
     //[[NetverifyScanOverlayView jumioAppearance] setColorOverlayInvalid: [UIColor redColor]];
     //[[NetverifyScanOverlayView jumioAppearance] setScanBackgroundColor: [UIColor orangeColor]];
+    //[[NetverifyScanOverlayView jumioAppearance] setColorOverlayFill: [UIColor greenColor]];
     
     // Color for the face oval outline
     //[[NetverifyScanOverlayView jumioAppearance] setFaceOvalColor: [UIColor orangeColor]];

@@ -118,11 +118,11 @@ The following tables give information on the specification of all transaction da
 
 | Code | Message  | Description |
 | :----------------------------: |:-------------|:-----------------|
-| A10000 | We have encountered a network communication problem | Retry possible, user decided to cancel |
-| B10000 | Authentication failed | Secure connection could not be established, retry impossible |
-| C10401 | Authentication failed | API credentials invalid, retry impossible |
-| D10403 | Authentication failed | Wrong API credentials used, retry impossible |
-| E20000 | No Internet connection available | Retry possible, user decided to cancel |
+| A[x][yyyy]| We have encountered a network communication problem | Retry possible, user decided to cancel |
+| B[x][yyyy]| Authentication failed | Secure connection could not be established, retry impossible |
+| C[x]0401 | Authentication failed | API credentials invalid, retry impossible |
+| D[x]0403 | Authentication failed | Wrong API credentials used, retry impossible |
+| E[x]0000 | No Internet connection available | Retry possible, user decided to cancel |
 | F00000 | Scanning not available at this time, please contact the app vendor | Resources cannot be loaded, retry impossible |
 | G00000 | Cancelled by end-user | No error occurred |
 | H00000 | The camera is currently not available | Camera cannot be initialized, retry impossible |
@@ -131,7 +131,7 @@ The following tables give information on the specification of all transaction da
 | L00000 | Enrollment transaction reference invalid | The provided enrollment transaction reference can not be used for an authentication |
 | M00000 | The scan could not be processed | An error happened during the processing. The SDK needs to be started again |
 
-The first letter (A-M) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation. Please always include the whole code when opening an error related ticket with our support team.
+The first letter (A-M) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]). Please always include the whole code when opening an error related ticket with our support team.
 
 ## Custom UI
 
@@ -161,7 +161,7 @@ After initialisation is finished, the SDK is ready for scanning and the followin
 - (void) authenticationController: (AuthenticationController*) authenticationController didFinishInitializingScanViewController:(AuthenticationScanViewController*)scanViewController {
 	[self presentViewController:scanViewController animated:YES completion:^{
 		//display your UI elements to the `scanViewController.customOverlayLayer` here, e.g. add a close button
-		
+
 	}];
 }
 ```
@@ -172,7 +172,7 @@ As soon as scanViewController is presented you can add your own UI elements to t
 
 For handling of the scanning workflow, a few additional delegates are required to be implemented and handled. When the user has finished the scanning process and biometric data is being analysed, `authenticationScanViewControllerDidStartBiometricAnalysis:` is fired. We recommend to display a loading activity info to the user that should not last longer than a few seconds. When successful, scanning is being finalized (see paragraph below).
 
-In case of an unsuccessful result, that can also happen before biometric analysis is started, the delegate `authenticationScanViewController:shouldDisplayHelpWithText:animationView:` is called. A help text and animated view is provided based on the problematic situation the user was facing, that is important to be displayed in order to assist the user to finish the scanning workflow successfully. To let the user confirm the help information and retry in the workflow, simply call `retryScan` on the `authenticationScanViewController` parameter provided in the delegate.
+In case of an unsuccessful result, that can also happen before biometric analysis is started, the delegate `authenticationScanViewController:shouldDisplayHelpWithText:animationView:forReason:` is called. A help text and animated view is provided based on the problematic situation the user was facing, that is important to be displayed in order to assist the user to finish the scanning workflow successfully. To let the user confirm the help information and retry in the workflow, simply call `retryScan` on the `authenticationScanViewController` parameter provided in the delegate.
 
 For error situations that are recoverable (e.g. network tasks), get informed via the delegate `authenticationScanViewController:didDetermineRecoverableError:`, display the error message to the user and call `retryAfterError` on the `authenticationScanViewController` on user confirmation.
 
@@ -181,6 +181,4 @@ For error situations that are recoverable (e.g. network tasks), get informed via
 Final states are handled with the existing delegates for [Success](#success) and [Error](#error).
 
 ## Callback
-To get information about callbacks, please read our [page with server related information](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md).
-
-__Note:__ Callbacks for Authentication will be available later in March 2019, please check availability with your Account Manager.
+To get information about callbacks, please read our [page with server related information](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-for-authentication).

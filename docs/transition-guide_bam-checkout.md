@@ -4,6 +4,11 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.2.0
+
+#### Changes to the public API
+`- (BOOL)updateConfiguration:(BAMCheckoutConfiguration*)configuration;` has been removed. 
+
 ## 3.1.2
 No backward incompatible changes.
 

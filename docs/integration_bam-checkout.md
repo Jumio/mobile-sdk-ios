@@ -36,11 +36,6 @@ BAMCheckoutViewController *bamCheckoutViewController;
 }
 ```
 
-It is possible to update parameters of the configuration in case a scan was finished with error and the user is required to perform another scan. This can only be used if the SDK is currently not presented.
-```
-[bamCheckoutViewController updateConfiguration:config];
-```
-
 Make sure initialization and presentation are timely within one minute. On iPads, the presentation style `UIModalPresentationFormSheet` is default and mandatory.
 ```
 [self presentViewController: bamCheckoutViewController animated: YES completion: nil];

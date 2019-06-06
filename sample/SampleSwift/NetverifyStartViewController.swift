@@ -87,9 +87,14 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //The customer internal reference allows you to identify the scan (max. 100 characters). Note: Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
         //config.customerInternalReference = "CUSTOMER_INTERNAL_REFERENCE"
         //Use the following property to identify the scan in your reports (max. 100 characters).
-        //config.reportingCriteria = "YOURREPORTINGCRITERIA"
+        //config.reportingCriteria = "YOUR_REPORTING_CRITERIA"
         //You can also set a customer identifier (max. 100 characters). Note: The customer ID should not contain sensitive data like PII (Personally Identifiable Information) or account login.
         //config.userReference = "USER_REFERENCE"
+        
+        //Set watchlist screening on transaction level. Enable to override the default search, or disable watchlist screening for this transaction.
+        //config.watchlistScreening = .enabled
+        //Search profile for watchlist screening. Optional.
+        //config.watchlistSearchProfile = "YOUR_SEARCH_PROFILE"
         
         //Callback URL (max. 255 characters) for the confirmation after the verification is completed. This setting overrides your Jumio account settings.
         //config.callbackUrl = "https://www.example.com"
@@ -178,6 +183,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //NetverifyScanOverlayView.jumioAppearance().colorOverlayValid = UIColor.green
         //NetverifyScanOverlayView.jumioAppearance().colorOverlayInvalid = UIColor.red
         //NetverifyScanOverlayView.jumioAppearance().scanBackgroundColor = UIColor.orange
+        //NetverifyScanOverlayView.jumioAppearance().colorOverlayFill = UIColor.green
         
         // Color for the face oval outline
         //NetverifyScanOverlayView.jumioAppearance().faceOvalColor = UIColor.orange

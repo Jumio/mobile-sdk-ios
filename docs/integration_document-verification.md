@@ -37,12 +37,6 @@ DocumentVerificationViewController *documentVerificationViewController;
 }
 ```
 
-It is possible to update parameters of the configuration in case a scan was finished with error and the user is required to perform another scan. This can only be used if the SDK is currently not presented.
-
-```
-[documentVerificationViewController updateConfiguration:config];
-```
-
 Make sure initialization and presentation are timely within one minute. On iPads, the presentation style _UIModalPresentationFormSheet_ is default and mandatory.
 
 ```
@@ -146,6 +140,11 @@ The style of the status bar can be specified.
 config.statusBarStyle = UIStatusBarStyleLightContent;
 ```
 
+Use setDocumentName to override the document label on Help screen.
+```
+config.documentName = @"YOURDOCNAME";
+```
+
 ## Customization
 
 The SDK can be customized to fit your application’s look and feel via the UIAppearance pattern. Check out our sample project on how to use it.
@@ -179,15 +178,18 @@ This method is fired when the user presses the cancel button during the workflow
 
 | Code | Message | Description |
 | :-------------: |:----------|:-------------|
-| A10000 | We have encountered a network communication problem | Retry possible, user decided to cancel |
-| B10000 | Authentication failed | Secure connection could not be established, retry impossible |
-| C10401 | Authentication failed | API credentials invalid, retry impossible |
-| D10403 | Authentication failed | Wrong API credentials used, retry impossible |
-| E10000 | No Internet connection available | Retry possible, user decided to cancel |
+| A[x][yyyy]| We have encountered a network communication problem | Retry possible, user decided to cancel |
+| B[x][yyyy]| Authentication failed | Secure connection could not be established, retry impossible |
+| C[x]0401 | Authentication failed | API credentials invalid, retry impossible |
+| D[x]0403 | Authentication failed | Wrong API credentials used, retry impossible |
+| E[x]0000 | No Internet connection available | Retry possible, user decided to cancel |
 | G00000 | Cancelled by end-user | No error occurred |
 | H00000 | The camera is currently not available | Camera cannot be initialized, retry impossible |
 | I00000 | Certificate not valid anymore. Please update your application | End-to-end encryption key not valid anymore, retry impossible |
 | K10400 | Unsupported document code defined. Please contact Jumio support | An unsupported document code has been set, retry impossible |
+
+The first letter (A-J) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]). Please always include the whole code when filing an error related issue to our support team.
+
 
 ## Callback
 To get information about callbacks, Netverify Retrieval API, Netverify Delete API and Global Netverify settings and more, please read our [page with server related information](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md).

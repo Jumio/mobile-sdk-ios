@@ -42,11 +42,10 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         self.navigationController?.delegate = self
     }
     
+    // Cancel if another view controller is shown on top of the netverifyCustomUIViewController
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         if viewController != self {
             self.netverifyUIController?.cancel()
-            self.netverifyUIController?.destroy()
-            self.netverifyUIController = nil
         }
     }
     
@@ -211,6 +210,22 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     
     func netverifyUIController(_ netverifyUIController: NetverifyUIController, didCancelWithError error: NetverifyError?, scanReference: String?) {
         print("didCancelWithError: \(error?.message ?? "")")
+        
+        let cancelCompletion = {
+            self.isScanning = false
+            self.hideAndCleanupTableView()
+            
+            netverifyUIController.destroy()
+            self.netverifyUIController = nil
+            
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        if self.currentScanView == nil {
+            cancelCompletion()
+        } else {
+            self.dismiss(animated: true, completion: cancelCompletion)
+        }
     }
     
     // MARK: NetverifyCustomScanViewControllerDelegate
@@ -283,7 +298,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         customScanView.customOverlayLayer.addConstraint(NSLayoutConstraint(item: self.activityIndicator!, attribute: .centerY, relatedBy: .equal, toItem: customScanView.customOverlayLayer, attribute: .centerY, multiplier: 1.0, constant: 0.0))
     }
     
-    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayHelpWithText message: String, animationView: UIView) {
+    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayHelpWithText message: String, animationView: UIView, for retryReason: JumioZoomRetryReason) {
         
         if (!self.activityIndicator.isHidden) {
             self.activityIndicator.startAnimating()
@@ -377,16 +392,8 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     
     // MARK: Button events
     @IBAction func cancelScann_onTouchUp() {
-        // Dismiss camera scan view
-        self.dismiss(animated: false, completion: nil)
-        self.isScanning = false
-        
         // Close controller
         self.netverifyUIController?.cancel()
-        self.hideAndCleanupTableView()
-        self.navigationController?.popViewController(animated: true)
-        self.netverifyUIController?.destroy()
-        self.netverifyUIController = nil
     }
     
     @IBAction func toggleCamera_onTouchUp() {

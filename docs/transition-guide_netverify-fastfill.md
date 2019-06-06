@@ -4,6 +4,17 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.2.0
+
+#### 3D-Liveness handling via Custom-UI
+`netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:` was extended to [`netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:) to return the `JumioZoomRetryReason`
+
+#### Additions to the public API for Jumio screening
+Added support for the Jumio screening feature, see new properties [`watchlistScreening`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistScreening) and [`watchlistSearchProfile`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistSearchProfile).
+
+#### Changes to the public API
+`- (BOOL)updateConfiguration:(NetverifyConfiguration*)configuration;` has been removed. 
+
 ## 3.1.2
 No backward incompatible changes.
 
