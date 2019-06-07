@@ -16,7 +16,6 @@ SDK version: 3.2.0
   * Improved face models to increase conversion rate
   * Better UX by accepting faces even if they are not perfectly aligned with the overlay
   * Better user guidance in error cases (bad lighting, bad angle)
-* Added ePassport support to Custom UI [Netverify]
 * Added additional customization options to scan overlay/view [Netverify/Fastfill]
 
 #### Fixes
