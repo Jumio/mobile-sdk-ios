@@ -255,7 +255,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
      * @param scanReference The scanReference of the scan
      **/
     func netverifyViewController(_ netverifyViewController: NetverifyViewController, didFinishWith documentData: NetverifyDocumentData, scanReference: String) {
-        print("NetverifyViewController finished successfully with scan reference: %@", scanReference)
+        print("NetverifyViewController finished successfully with scan reference: \(scanReference)")
         // Share the scan reference for the Authentication SDK
         UserDefaults.standard.set(scanReference, forKey: "enrollmentTransactionReference")
         

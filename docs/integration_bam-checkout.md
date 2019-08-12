@@ -1,4 +1,4 @@
-![BAM Checkout](images/bam_checkout.png)
+![BAM Checkout](images/bam_checkout.jpg)
 
 # BAM Checkout SDK for iOS
 BAM Checkout is a powerful, cutting-edge solution to extract data from your customer´s credit card and / or ID in your mobile application within seconds, including home address. It fits perfectly, and fully automates, every checkout flow to avoid manual input at all which leads to an increased conversion rate.

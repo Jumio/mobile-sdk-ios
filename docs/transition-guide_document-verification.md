@@ -1,8 +1,11 @@
-![Jumio](images/document_verification.png)
+![Jumio](images/document_verification.jpg)
 
 # Transition guide for Document Verification
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
+
+## 3.3.0
+No backward incompatible changes.
 
 ## 3.2.0
 No backward incompatible changes.

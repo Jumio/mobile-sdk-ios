@@ -1,8 +1,11 @@
-![Fastfill & Netverify](images/authentication.png)
+![Fastfill & Netverify](images/authentication.jpg)
 
 # Transition guide for Authentication SDK
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
+
+## 3.3.0
+No backward incompatible changes.
 
 ## 3.2.0
 

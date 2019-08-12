@@ -1,4 +1,4 @@
-![Document Verification](images/document_verification.png)
+![Document Verification](images/document_verification.jpg)
 
 # Document Verification SDK for iOS
 Document Verification is a powerful solution to enable scanning various types (Utility Bill, Bank statement and many others) of your customer's documents in your mobile application within seconds, also supporting data extraction on documents like Utility Bills and Bank Statements (see [Supported documents for data extraction](https://github.com/Jumio/implementation-guides/blob/master/netverify/document-verification.md#supported-documents))

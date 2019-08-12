@@ -1,4 +1,4 @@
-![Fastfill & Netverify](images/netverify.png)
+![Fastfill & Netverify](images/netverify.jpg)
 
 # Fastfill & Netverify SDK for iOS
 Netverify SDK offers scanning and authentication of government issued IDs.

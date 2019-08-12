@@ -1,8 +1,11 @@
-![BAM Checkout](images/bam_checkout.png)
+![BAM Checkout](images/bam_checkout.jpg)
 
 # Transition guide for BAM Checkout
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
+
+## 3.3.0
+No backward incompatible changes.
 
 ## 3.2.0
 

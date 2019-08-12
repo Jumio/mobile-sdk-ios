@@ -61,6 +61,9 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         //config.enrollmentTransactionReference = "ENROLLMENT_TRANSACTION_REFERENCE"
         config.enrollmentTransactionReference = transactionReferenceTextField.text!
         
+        //Instead an Authentication transaction can also be created via the facemap server to server API and set here
+        //config.authenticationTransactionReference = "AUTHENTICATION_TRANSACTION_REFERENCE"
+        
         //Set the dataCenter; default is JumioDataCenterUS
         //config.dataCenter = JumioDataCenterEU
         

@@ -1,25 +1,29 @@
-![Jumio](docs/images/jumio_feature_graphic.png)
+![Jumio](docs/images/jumio_feature_graphic.jpg)
 
 # Table of Content
 - [Release notes](#release-notes)
 - [Basic Setup](#basic-setup)
 - [Get started](#get-started)
 - [Support](#support)
+- [FAQ](docs/integration_faq.md)
 
 
 # Release notes
-SDK version: 3.2.0
+SDK version: 3.3.0
+
+#### Deprecation notice
+This is the last version which will be compatible with iOS 9. The minimum supported iOS version will be iOS 10 in the next SDK version 3.4.0.
 
 #### Changes
-* Added support for [Jumio screening](https://www.jumio.com/screening/)  [Netverify]
 * 3D Liveness improvements [Netverify, Authentication]
-  * Improved face models to increase conversion rate
-  * Better UX by accepting faces even if they are not perfectly aligned with the overlay
-  * Better user guidance in error cases (bad lighting, bad angle)
-* Added additional customization options to scan overlay/view [Netverify/Fastfill]
-
-#### Fixes
-* Fixed capture problem of Spanish resident permits [Netverify/Fastfill]
+  * Updated detection models to improve face capture experience
+  * Fixed a problem that liveness images were rotated by 90 degree in rare situations
+  * Fixed a problem that wrong Selfie was selected after retry
+* New Authentication features [Authentication]
+  * Added retry handling to allow up to 3 capture attempts per session
+  * Added support for storing the 3D facemap on customer premise functionality
+* Support of Portuguese and Italian language [Netverify/Fastfill, Authentication, Document Verification]
+* New technical FAQ section on GitHub
 * Various smaller bug fixes/improvements [Netverify/Fastfill, Authentication, Document Verification, BAM Checkout]
 
 # Basic Setup
@@ -59,12 +63,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.2' # Use Netverify, Authentication, DocumentVerification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.3' # Use Netverify, Authentication, DocumentVerification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.2' # Use full Netverify and Authentication functionality
-pod 'JumioMobileSDK/Netverify-Light', '~>3.2' # For Fastfill or Document Verification, or Netverify without 3D face liveness capturing technology
+pod 'JumioMobileSDK/Netverify', '~>3.3' # Use full Netverify and Authentication functionality
+pod 'JumioMobileSDK/Netverify-Light', '~>3.3' # For Fastfill or Document Verification, or Netverify without 3D face liveness capturing technology
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.2' # Use BAM Checkout only
+pod 'JumioMobileSDK/BAMCheckout', '~>3.3' # Use BAM Checkout only
 ```
 
 Install the pod to your project via Terminal:
@@ -74,25 +78,13 @@ pod install
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.2.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.2.0/ios-jumio-mobile-sdk-3.2.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.3.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.3.0/ios-jumio-mobile-sdk-3.3.0.zip).
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
 The Jumio Mobile SDK consists of several dynamic frameworks. Add specific frameworks to your Xcode project, depending on which product you use.
 
-The following table shows which frameworks have to be added:
-
-| Product | Size | JumioCore | BAMCheckout | Netverify | NetverifyBarcode & MicroBlink | NetverifyFace & ZoomAuthenticationHybrid |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Netverify + Authentication | 25.4 MB | x |  | x | x | x |
-| Fastfill | 10.8 MB | x |  | x | x |  |
-| Document Verification | 7.67 MB | x |  | x |  |  |
-| BAM Checkout credit card scanning | 7.12 MB | x | x |  |  |  |
-| BAM Checkout credit card<br/>+ ID scanning | 30.8 MB | x | x | x | x | x |
-
-In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project. For Document Verification, the frameworks `NetverifyBarcode`, `MicroBlink`, `NetverifyFace` and `ZoomAuthenticationHybrid` can be removed.
-
-The size values in the table above depict the decompressed install size required on a device. It can be compared with the Estimated App Store files size. The size value can vary by a few percent, depending on the actual device used. Testing conducted by Jumio using iPhone X.
+Please see [Strip unused frameworks](https://github.com/Jumio/Mobile-SDK-IOS_pilot/blob/master/docs/integration_faq.md#strip-unused-frameworks) for more information.
 
 The framework binaries are available with support for device and simulator architecture. Make sure to remove the simulator architecture from our frameworks for app submissions to the AppStore. If this step is not performed, your submission will be rejection by Apple. Add the following code snippet as run script build phase to your app project and ensure that it is executed after the frameworks are embedded. Please see the required setup in our sample project.
 
@@ -140,7 +132,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 3.1.2 of the Jumio Mobile SDK is supported until 2019-08-05.
+The previous release version 3.2.0 of the Jumio Mobile SDK is supported until 2019-11-07.
 
 In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
 

@@ -1,4 +1,4 @@
-![Jumio Authentication](images/authentication.png)
+![Jumio Authentication](images/authentication.jpg)
 
 # Authentication SDK for iOS
 Biometric-based Jumio Authentication establishes the digital identities of your users through the simple act of taking a selfie. Advanced 3D face map technology quickly and securely authenticates users and unlocks their digital identities.
@@ -38,11 +38,17 @@ AuthenticationController *authenticationController;
 ```
 
 ## Configuration
-In order to connect the Authentication transaction to a specific Netverify user identity the following parameter must be set.
+In order to connect the Authentication transaction to a specific Netverify user identity the parameter [`enrollmentTransactionReference`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationConfiguration.html#/c:objc(cs)AuthenticationConfiguration(py)enrollmentTransactionReference) must be set.
 ```
 config.enrollmentTransactionReference = @"ENROLLMENTTRANSACTIONREFERENCE";
 ```
-__Note:__ If the enrollment transaction reference is not eligible to be used (e.g. reference does not exist in the system, mandatory user data has been deleted) an error is returned when the SDK is initialized.
+
+In case an Authentication transaction has been created via the facemap server to server API [`authenticationTransactionReference`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationConfiguration.html#/c:objc(cs)AuthenticationConfiguration(py)authenticationTransactionReference) should be used. Therefore `enrollmentTransactionReference` should not be set.
+```
+config.authenticationTransactionReference = @"AUTHENTICATIONTRANSACTIONREFERENCE";
+```
+
+__Note:__ If the enrollment or authentication transaction reference is not eligible to be used (e.g. reference does not exist in the system, mandatory user data has been deleted) an error is returned when the SDK is initialized.
 
 
 In addition to the on-device result of the transaction, it is possible to define a callbackUrl (see [Callback for Authentication](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-for-netverify)). A callback URL can be specified for individual transactions (for constraints see chapter [Callback URL](https://github.com/Jumio/implementation-guides/blob/master/netverify/portal-settings.md#callback-url)). This setting overrides any callback URL you have set in the Jumio Customer Portal.

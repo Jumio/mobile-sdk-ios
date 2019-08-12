@@ -58,6 +58,9 @@
     //Use the following property to reference the Authentication transaction to a specific Netverify user identity
     //config.enrollmentTransactionReference = @"ENROLLMENT_TRANSACTION_REFERENCE";
     config.enrollmentTransactionReference = [self.transactionReferenceTextField text];
+    
+    //Instead an Authentication transaction can also be created via the facemap server to server API and set here
+    //config.authenticationTransactionReference = @"AUTHENTICATION_TRANSACTION_REFERENCE";
 
     //Set the dataCenter; default is JumioDataCenterUS
     //config.dataCenter = JumioDataCenterEU;
