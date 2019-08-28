@@ -9,7 +9,7 @@
 
 
 # Release notes
-SDK version: 3.3.0
+SDK version: 3.3.1
 
 #### Deprecation notice
 This is the last version which will be compatible with iOS 9. The minimum supported iOS version will be iOS 10 in the next SDK version 3.4.0.
@@ -24,6 +24,7 @@ This is the last version which will be compatible with iOS 9. The minimum suppor
   * Added support for storing the 3D facemap on customer premise functionality
 * Support of Portuguese and Italian language [Netverify/Fastfill, Authentication, Document Verification]
 * New technical FAQ section on GitHub
+* Fixed a problem that scanning was not working properly when custom ROI position was configured in Custom UI [Netverify/Fastfill, BAM Checkout]
 * Various smaller bug fixes/improvements [Netverify/Fastfill, Authentication, Document Verification, BAM Checkout]
 
 # Basic Setup
@@ -63,12 +64,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.3' # Use Netverify, Authentication, DocumentVerification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.3.1' # Use Netverify, Authentication, DocumentVerification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.3' # Use full Netverify and Authentication functionality
-pod 'JumioMobileSDK/Netverify-Light', '~>3.3' # For Fastfill or Document Verification, or Netverify without 3D face liveness capturing technology
+pod 'JumioMobileSDK/Netverify', '~>3.3.1' # Use full Netverify and Authentication functionality
+pod 'JumioMobileSDK/Netverify-Light', '~>3.3.1' # For Fastfill or Document Verification, or Netverify without 3D face liveness capturing technology
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.3' # Use BAM Checkout only
+pod 'JumioMobileSDK/BAMCheckout', '~>3.3.1' # Use BAM Checkout only
 ```
 
 Install the pod to your project via Terminal:
@@ -78,7 +79,7 @@ pod install
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.3.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.3.0/ios-jumio-mobile-sdk-3.3.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.3.1.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.3.1/ios-jumio-mobile-sdk-3.3.1.zip).
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -132,9 +133,10 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 3.2.0 of the Jumio Mobile SDK is supported until 2019-11-07.
+The previous release version 3.3.0 of the Jumio Mobile SDK is supported until 2019-11-28.
 
-In case the support period is expired, no bug fixes are provided anymore (typically fixed in the upcoming versions). The SDK will keep functioning (until further notice).
+In case the support period is expired, no bug fixes and technical support are provided anymore (bugs are typically fixed in the upcoming versions).
+Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.
 
 ## Contact
 If you have any questions regarding our implementation guide please contact Jumio Customer Service at support@jumio.com or https://support.jumio.com. The Jumio online helpdesk contains a wealth of information regarding our service including demo videos, product descriptions, FAQs and other things that may help to get you started with Jumio. Check it out at: https://support.jumio.com.
