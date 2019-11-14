@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DocumentVerificationError Class Reference</title>
+    <title>NetverifyConfirmationType Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/objc/Class/DocumentVerificationError" class="dashAnchor"></a>
+    <a name="//apple_ref/objc/Enum/NetverifyConfirmationType" class="dashAnchor"></a>
 
-    <a title="DocumentVerificationError Class Reference"></a>
+    <a title="NetverifyConfirmationType Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Netverify Reference</a>
       <img class="carat" src="../img/carat.png" />
-      DocumentVerificationError Class Reference
+      NetverifyConfirmationType Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -230,15 +230,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>DocumentVerificationError</h1>
+            <h1>NetverifyConfirmationType</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code>
-<span class="k">@interface</span> <span class="nc">DocumentVerificationError</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">NetverifyConfirmationType</span> <span class="p">{}</span></code></pre>
 
                 </div>
               </div>
-            <p>Model class that describes an error situation with a code and a message. Please always include the whole code when filing an error related issue to our support team.  Please find more information in our Mobile SDK Github Guides at <a href="https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_document-verification.md#error">https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_document-verification.md#error</a> .</p>
+            <p>The type of confirmation that should be displayed</p>
 
           </div>
         </section>
@@ -250,9 +249,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)DocumentVerificationError(py)code"></a>
-                    <a name="//apple_ref/objc/Property/code" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)DocumentVerificationError(py)code">code</a>
+                    <a name="/c:@E@NetverifyConfirmationType@NetverifyConfirmationTypeGeneric"></a>
+                    <a name="//apple_ref/objc/Case/NetverifyConfirmationTypeGeneric" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@NetverifyConfirmationType@NetverifyConfirmationTypeGeneric">NetverifyConfirmationTypeGeneric</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -260,24 +259,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A 6-digit alpha-numeric code. The first letter (A-Z) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation.</p>
+                        <p>Generic confirmation to check if everything is readable and glare free</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">code</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">NetverifyConfirmationTypeGeneric</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">generic</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/DocumentVerificationError.h#L18">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyConfiguration.h#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -285,9 +284,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)DocumentVerificationError(py)message"></a>
-                    <a name="//apple_ref/objc/Property/message" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)DocumentVerificationError(py)message">message</a>
+                    <a name="/c:@E@NetverifyConfirmationType@NetverifyConfirmationTypeCheckDocumentSide"></a>
+                    <a name="//apple_ref/objc/Case/NetverifyConfirmationTypeCheckDocumentSide" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@NetverifyConfirmationType@NetverifyConfirmationTypeCheckDocumentSide">NetverifyConfirmationTypeCheckDocumentSide</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -295,24 +294,129 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The human readable localized description. Localization can be adapted in our Localizable-Netverify.strings and it&rsquo;s translations.</p>
+                        <p>The user should confirm that the scanned side matches the requested one</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">message</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">NetverifyConfirmationTypeCheckDocumentSide</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">checkDocumentSide</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/DocumentVerificationError.h#L23">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyConfiguration.h#L50">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@NetverifyConfirmationType@NetverifyConfirmationTypeAnalyzing"></a>
+                    <a name="//apple_ref/objc/Case/NetverifyConfirmationTypeAnalyzing" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@NetverifyConfirmationType@NetverifyConfirmationTypeAnalyzing">NetverifyConfirmationTypeAnalyzing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Document is being analyzed, the user should not be able to confirm or retake</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">NetverifyConfirmationTypeAnalyzing</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">analyzing</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyConfiguration.h#L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@NetverifyConfirmationType@NetverifyConfirmationTypeAnalyzingResponsePass"></a>
+                    <a name="//apple_ref/objc/Case/NetverifyConfirmationTypeAnalyzingResponsePass" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@NetverifyConfirmationType@NetverifyConfirmationTypeAnalyzingResponsePass">NetverifyConfirmationTypeAnalyzingResponsePass</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Analysis passed document, the user should be able to confirm</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">NetverifyConfirmationTypeAnalyzingResponsePass</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">analyzingResponsePass</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyConfiguration.h#L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@NetverifyConfirmationType@NetverifyConfirmationTypeAnalyzingResponseReject"></a>
+                    <a name="//apple_ref/objc/Case/NetverifyConfirmationTypeAnalyzingResponseReject" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@NetverifyConfirmationType@NetverifyConfirmationTypeAnalyzingResponseReject">NetverifyConfirmationTypeAnalyzingResponseReject</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Analysis rejected document, the user should be able to retry</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">NetverifyConfirmationTypeAnalyzingResponseReject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">analyzingResponseReject</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyConfiguration.h#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
