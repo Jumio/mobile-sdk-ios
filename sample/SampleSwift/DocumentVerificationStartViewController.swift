@@ -20,9 +20,9 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         
         //Setup the Configuration for DocumentVerification
         let config:DocumentVerificationConfiguration = DocumentVerificationConfiguration()
-        //Provide your API token
+        //Provide your API token and your API secret
+        //Do not store your credentials hardcoded within the app. Make sure to store them server-side and load your credentials during runtime.
         config.apiToken = "YOUR_DOCUMENTVERIFICATION_APITOKEN"
-        //Provide your API secret
         config.apiSecret = "YOUR_DOCUMENTVERIFICATION_APISECRET"
         //Set the delegate that implements DocumentVerificationViewControllerDelegate
         config.delegate = self
@@ -118,6 +118,9 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
      * @param error The error describing the cause of the problematic situation
      **/
     func documentVerificationViewController(_ documentVerificationViewController: DocumentVerificationViewController, didFinishWithError error: DocumentVerificationError) {
+    
+        //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
+        
         print("DocumentVerificationViewController cancelled with error: \(error.message ?? "")")
         
         //Dismiss the SDK

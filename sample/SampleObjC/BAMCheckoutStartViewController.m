@@ -24,9 +24,9 @@
     
     //Setup the Configuration for BAMCheckout
     BAMCheckoutConfiguration *config = [BAMCheckoutConfiguration new];
-    //Provide your API token
+    //Provide your API token and your API secret
+    //Do not store your credentials hardcoded within the app. Make sure to store them server-side and load your credentials during runtime.
     config.apiToken = @"YOUR_BAMCHECKOUT_APITOKEN";
-    //Provide your API secret
     config.apiSecret = @"YOUR_BAMCHECKOUT_APISECRET";
     
     //Set the delegate that implements BAMCheckoutViewControllerDelegate
@@ -266,6 +266,9 @@
  * @param error The error codes 200, 210, 220, 240, 250, 260 and 310 will be returned. Using the custom scan view, the error codes 260 and 310 will be returned.
  **/
 - (void)bamCheckoutViewController:(BAMCheckoutViewController *)controller didCancelWithError:(NSError *)error scanReference:(NSString *)scanReference {
+    
+    //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
+    
     NSInteger code = error.code;
     NSString *message = error.localizedDescription;
     NSLog(@"Cancelled with error code: %ld, message: %@, scan reference: %@", (long)code, message, scanReference);

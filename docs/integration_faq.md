@@ -4,6 +4,7 @@
 
 ## Table of Content
 - [Improving user experience and reducing drop-off rate](#improving-user-experience-and-reducing-drop-off-rate)
+- [Managing errors](#managing-errors)
 - [Reducing the size of your app](#reducing-the-size-of-your-app)
 	- [Strip unused frameworks](#strip-unused-frameworks)
 	- [Bitcode](#bitcode)
@@ -26,7 +27,20 @@ Our SDK provides a variety of customization options to help customers achieve a 
  - Host application has an explanatory help screen that explains what will happen next and why this information is needed.
  - SDK is either customized to have a more embedded appearance or [CustomUI](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_netverify-fastfill.md#custom-ui) is used to create a completely seamless integration in the UX of our customers.
  - Also after the Jumio workflow that shows the displayed results and/or a message that the ID is currently verified, which might take some minutes.
-  
+ 
+### Managing errors
+Not every error that is returned from the SDK should be treated the same. The error codes listed for [Netverify](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_netverify-fastfill.md#error-codes) should be handled specifically.
+
+The following table highlights the most common error codes which are returned from the SDK and explains how to handle them appropriately in your application.
+
+|Code|Handling|
+|:--------------:|:--------------|
+|A[x][yyyy]| Caused by temporary network issues like a slow connection. Advice to check the signal and retry the SDK journey. |
+|E[x][yyyy]| Flight mode is activated or no connection available. The user should be asked to disable flight mode or to verify if the phone has proper signal. Advice to connect to wifi and retry the SDK journey afterwards. |
+|G[0][0000]| The user pressed back or X to exit the SDK while no error view was presented. Reasons for this could be manyfold. Often it might be due to the fact that the user  didn't have his identity document at hand. Give the user the option to retry. |
+|J[x][yyyy]| The SDK journey was not completed within the session max. lifetime (default 15 min). The user should be informed about the timeout and be directed to start a new Jumio SDK session. |
+
+
 ### Reducing the size of your app
 The Netverify SDK contains a wide range of different scanning methods. The SDK is able to capture identity documents and extract information on the device using enhanced machine learning and computer vision technologies. The current download size of the sample application containing the SDK is mentioned in the [setup guide](https://github.com/Jumio/mobile-sdk-ios#manually). If you want to reduce the size of the SDK within your application, there are several ways to achieve this.
 
@@ -37,12 +51,12 @@ The following table shows a range of different product configurations with the f
 
 | Product | Size | JumioCore | BAMCheckout | Netverify | NetverifyBarcode & MicroBlink | NetverifyFace & ZoomAuthenticationHybrid |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Netverify + Authentication | 25.4 MB | x |  | x | x | x |
-| Fastfill | 10.8 MB | x |  | x | x |  |
-| Fastfill without Barcode | 7.67 MB | x |  | x |  |  |
-| Document Verification | 7.67 MB | x |  | x |  |  |
-| BAM Checkout credit card scanning | 7.12 MB | x | x |  |  |  |
-| BAM Checkout credit card<br/>+ ID scanning | 30.8 MB | x | x | x | x | x |
+| Netverify + Authentication | 25.6 MB | x |  | x | x | x |
+| Fastfill | 11.1 MB | x |  | x | x |  |
+| Fastfill without Barcode | 7.92 MB | x |  | x |  |  |
+| Document Verification | 7.92 MB | x |  | x |  |  |
+| BAM Checkout credit card scanning | 7.41 MB | x | x |  |  |  |
+| BAM Checkout credit card<br/>+ ID scanning | 31 MB | x | x | x | x | x |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 

@@ -49,9 +49,9 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
     func createAuthenticationConfiguration(withCustomUI:Bool) -> AuthenticationConfiguration {
         let config = AuthenticationConfiguration()
         
-        //Provide your API token
+        //Provide your API token and your API secret
+        //Do not store your credentials hardcoded within the app. Make sure to store them server-side and load your credentials during runtime.
         config.apiToken = "YOUR_AUTHENTICATION_APITOKEN"
-        //Provide you API secret
         config.apiSecret = "YOUR_AUTHENTICATION_APISECRET"
         
         //Set the delegate that implements AuthenticationControllerDelegate
@@ -194,6 +194,9 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
      * @param transactionReference the unique identifier of the scan session
      **/
     func authenticationController(_ authenticationController: AuthenticationController, didFinishWithError error: AuthenticationError, transactionReference: String?) {
+        
+        //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
+        
         let message = "AuthenticationController finished with error: \(error.message) transactionReference: \(transactionReference ?? "")"
         print(message)
         self.removeActivityIndicator()

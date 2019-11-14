@@ -56,9 +56,9 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
     
     func createNetverifyConfiguration() -> NetverifyConfiguration {
         let config:NetverifyConfiguration = NetverifyConfiguration()
-        //Provide your API token
+        //Provide your API token and your API secret
+        //Do not store your credentials hardcoded within the app. Make sure to store them server-side and load your credentials during runtime.
         config.apiToken = "YOUR_NETVERIFY_APITOKEN"
-        //Provide your API secret
         config.apiSecret = "YOUR_NETVERIFY_APISECRET"
         
         //Set the dataCenter; default is JumioDataCenterUS
@@ -131,7 +131,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //UINavigationBar.jumioAppearance().barTintColor = UIColor.red
         //UINavigationBar.jumioAppearance().titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
         
-        //NetverifyNavigationBarTitleImageView.jumioAppearance().titleImage = UIImage.init(named: "<your-navigation-bar-title-image>")
+        //JumioNavigationBarTitleImageView.jumioAppearance().titleImage = UIImage.init(named: "<your-navigation-bar-title-image>")
         
         // - Custom general appearance - deactivate blur
         //NetverifyBaseView.jumioAppearance().disableBlur = true
@@ -370,6 +370,9 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
      * @param scanReference The scanReference of the scan attempt
      **/
     func netverifyViewController(_ netverifyViewController: NetverifyViewController, didCancelWithError error: NetverifyError?, scanReference: String?) {
+        
+        //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
+        
         print("NetverifyViewController cancelled with error: \(error?.message ?? "") scanReference: \(scanReference ?? "")")
         
         //Dismiss the SDK

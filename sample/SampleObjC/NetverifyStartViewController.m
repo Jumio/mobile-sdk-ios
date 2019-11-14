@@ -26,9 +26,9 @@
     
     //Setup the Configuration for Netverify
     NetverifyConfiguration *config = [NetverifyConfiguration new];
-    //Provide your API token
+    //Provide your API token and your API secret
+    //Do not store your credentials hardcoded within the app. Make sure to store them server-side and load your credentials during runtime.
     config.apiToken = @"YOUR_NETVERIFY_APITOKEN";
-    //Provide your API secret
     config.apiSecret = @"YOUR_NETVERIFY_APISECRET";
     //Set the delegate that implements NetverifyViewControllerDelegate
     config.delegate = self;
@@ -106,7 +106,7 @@
     //[[UINavigationBar jumioAppearance] setBarTintColor: [UIColor redColor]];
     //[[UINavigationBar jumioAppearance] setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     
-    //[[NetverifyNavigationBarTitleImageView jumioAppearance] setTitleImage: [UIImage imageNamed:@"<your-navigation-bar-title-image>"]];
+    //[[JumioNavigationBarTitleImageView jumioAppearance] setTitleImage: [UIImage imageNamed:@"<your-navigation-bar-title-image>"]];
     
     // - Custom general appearance - deactivate blur
     //[[NetverifyBaseView jumioAppearance] setDisableBlur:@YES];
@@ -316,6 +316,9 @@
  * @param scanReference The scanReference of the scan attempt
  **/
 - (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didCancelWithError:(NetverifyError * _Nullable)error scanReference:(NSString * _Nullable)scanReference {
+    
+    //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
+    
     NSLog(@"NetverifyViewController cancelled with error: %@, scanReference: %@", error.message, scanReference);
     //Dismiss the SDK
     [self dismissViewControllerAnimated: YES completion: ^{

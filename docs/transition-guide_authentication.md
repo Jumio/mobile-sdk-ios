@@ -4,6 +4,9 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.4.0
+No backward incompatible changes.
+
 ## 3.3.1
 No backward incompatible changes.
 
@@ -25,7 +28,7 @@ No backward incompatible changes.
 
 #### NavigationBar customization
 `UINavigationBar+AuthenticationAppearance.h` was renamed to `UINavigationBar+JumioAppearance.h` and moved to JumioCore.framework</br>
-`AuthenticationNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](http://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
+`AuthenticationNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
 
 #### Custom-UI handling
 Please see [Custom-UI for Authentication](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_authentication.md#custom-ui) 

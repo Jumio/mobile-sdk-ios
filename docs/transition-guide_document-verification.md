@@ -4,6 +4,9 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.4.0
+No backward incompatible changes.
+
 ## 3.3.1
 No backward incompatible changes.
 
@@ -23,7 +26,7 @@ No backward incompatible changes.
 
 #### NavigationBar customization
 `UINavigationBar+NetverifyAppearance.h` was renamed to `UINavigationBar+JumioAppearance.h` and moved to JumioCore.framework</br>
-`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
+`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
 
 #### Changes to device information
 `JMDeviceInfo` class has been renamed to `JumioDeviceInfo`
@@ -50,7 +53,7 @@ No backward incompatible changes.
 The document type for US social security card (USSS) was removed.
 
 #### Default Settings
-The default value for [`enableExtraction`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/DocumentVerificationConfiguration.html#/c:objc(cs)DocumentVerificationConfiguration(py)enableExtraction) was changed to `YES`. Please make sure that it is explicitly set to NO in case a scan without extraction should be performed. 
+The default value for [`enableExtraction`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/DocumentVerificationConfiguration.html#/c:objc(cs)DocumentVerificationConfiguration(py)enableExtraction) was changed to `YES`. Please make sure that it is explicitly set to NO in case a scan without extraction should be performed. 
 
 ## 2.13.0
 

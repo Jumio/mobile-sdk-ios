@@ -4,6 +4,15 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.4.0
+#### Custom UI callbacks
+*  ~~`netverifyCustomScanViewController:shouldDisplayFlipDocumentHint:confirmation:`~~ has been replaced with [`netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:type:text:confirmation:retake:`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:type:text:confirmation:retake:) 
+* to be able to distinguish between different scenarios when the confirmation view is presented we added [`NetverifyConfirmationType`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyConfirmationType.html)
+
+#### Localizable Strings
+Several additions and changes, mostly in regards to the new confirmation view.
+
+
 ## 3.3.1
 No backward incompatible changes.
 
@@ -16,7 +25,7 @@ No backward incompatible changes.
 `netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:` was extended to [`netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:) to return the `JumioZoomRetryReason`
 
 #### Additions to the public API for Jumio screening
-Added support for the Jumio screening feature, see new properties [`watchlistScreening`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistScreening) and [`watchlistSearchProfile`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistSearchProfile).
+Added support for the Jumio screening feature, see new properties [`watchlistScreening`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistScreening) and [`watchlistSearchProfile`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistSearchProfile).
 
 #### Changes to the public API
 `- (BOOL)updateConfiguration:(NetverifyConfiguration*)configuration;` has been removed. 
@@ -31,7 +40,7 @@ No backward incompatible changes.
 
 #### NavigationBar customization
 `UINavigationBar+NetverifyAppearance.h` was renamed to `UINavigationBar+JumioAppearance.h` and moved to JumioCore.framework</br>
-`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
+`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
 
 #### 3D-Liveness handling via Custom-UI
 Please see [3D-Liveness in Custom Scan View Delegate](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_netverify-fastfill.md#custom-scan-view-delegate) 
@@ -41,7 +50,7 @@ Please see [3D-Liveness in Custom Scan View Delegate](https://github.com/Jumio/m
 `NetverifyScanModeFace` was changed to `NetverifyScanMode3DLiveness` for 3D-Liveness and `NetverifyScanModeFaceCapture` for alternative face capturing.
 
 #### Additions in visual customization
-Enhanced customization options `scanBackgroundColor` to colorize the background color during scanning, see [`NetverifyScanOverlay`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyScanOverlayView.html) class for the new option.
+Enhanced customization options `scanBackgroundColor` to colorize the background color during scanning, see [`NetverifyScanOverlay`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyScanOverlayView.html) class for the new option.
 
 #### Changes to device information
 `JMDeviceInfo` class has been renamed to `JumioDeviceInfo`
@@ -76,7 +85,7 @@ When using Identity Verification, make sure to link NetverifyFace.framework and 
 Please also make sure that the Umoove.framework from our previous releases is removed from your app.
 
 #### Additions in visual customization
-Enhanced customization options to colorize some UI elements on the 3D face liveness screen, see [`NetverifyScanOverlay`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyScanOverlayView.html) class for the new options.
+Enhanced customization options to colorize some UI elements on the 3D face liveness screen, see [`NetverifyScanOverlay`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyScanOverlayView.html) class for the new options.
 
 #### Localizable Strings
 Several additions and changes, mostly in regards to the new 3D face liveness capturing functionality.
@@ -85,26 +94,26 @@ Several additions and changes, mostly in regards to the new 3D face liveness cap
 
 #### Default Settings
 
-The default values for [`requireVerification`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireVerification) and [`requireFaceMatch`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireFaceMatch) were changed to `YES`. Please make sure that they are explicitly set to NO in case a scan in Fastfill mode should be performed. 
+The default values for [`requireVerification`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireVerification) and [`requireFaceMatch`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireFaceMatch) were changed to `YES`. Please make sure that they are explicitly set to NO in case a scan in Fastfill mode should be performed. 
 
 #### Enums
-[`NetverifyDocumentType`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentType.html) was changed from NS_ENUM to NS_OPTIONS. 
+[`NetverifyDocumentType`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyDocumentType.html) was changed from NS_ENUM to NS_OPTIONS. 
 
 ## 2.13.0
 
 #### Enums
-All enums were replaced by NS_ENUM to have better Swift support. When using Swift this Version will break when using [`NetverifyDocumentType`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentType.html), [`NetverifyDocumentVariant`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentVariant.html), [`NetverifyExtractionMethod`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyExtractionMethod.html), [`NetverifyGender`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyGender.html), [`NetverifyMRZFormat`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyMRZFormat.html), [`NetverifyScanMode`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyScanMode.html) or [`NetverifyScanSide`](http://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyScanSide.html).
+All enums were replaced by NS_ENUM to have better Swift support. When using Swift this Version will break when using [`NetverifyDocumentType`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyDocumentType.html), [`NetverifyDocumentVariant`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyDocumentVariant.html), [`NetverifyExtractionMethod`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyExtractionMethod.html), [`NetverifyGender`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyGender.html), [`NetverifyMRZFormat`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyMRZFormat.html), [`NetverifyScanMode`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyScanMode.html) or [`NetverifyScanSide`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyScanSide.html).
 
 #### Changes in Localizable-Netverify.strings
 changed values in regards to error texts
 
 #### Cleanup of our SDK
-The method `destroy` was introduced to properly clean up our SDK. Call this method to destroy the NetverifyViewController instance, before you set it to nil. When re-initializing [`NetverifyViewController`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyViewController.html) or [`NetverifyUIController`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html) make sure you've called  `destroy` in advance otherwise an exception will be raised during initializing.
+The method `destroy` was introduced to properly clean up our SDK. Call this method to destroy the NetverifyViewController instance, before you set it to nil. When re-initializing [`NetverifyViewController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyViewController.html) or [`NetverifyUIController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyUIController.html) make sure you've called  `destroy` in advance otherwise an exception will be raised during initializing.
 
 ## 2.12.0
 
 #### Localizable Strings
-In addition to English, strings are now translated to Chinese (Simplified), Dutch, French, German and Spanish. Each .strings file can now be found in the specific *.lproj folders.
+In addition to English, strings are now translated to Chinese (Simplified), Dutch, French, German and Spanish. Each .strings file can now be found in the specific \*.lproj folders.
 
 #### Additional information property removed
 Property `additionalInformation` has been removed.

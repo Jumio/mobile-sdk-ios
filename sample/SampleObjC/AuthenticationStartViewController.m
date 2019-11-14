@@ -47,9 +47,9 @@
 - (AuthenticationConfiguration*) createAuthenticationConfiguration {
     AuthenticationConfiguration *config = [AuthenticationConfiguration new];
     
-    //Provide your API token
+    //Provide your API token and your API secret
+    //Do not store your credentials hardcoded within the app. Make sure to store them server-side and load your credentials during runtime.
     config.apiToken = @"YOUR_AUTHENTICATION_APITOKEN";
-    //Provide you API secret
     config.apiSecret = @"YOUR_AUTHENTICATION_APISECRET";
     
     //Set the delegate that implements AuthenticationControllerDelegate
@@ -194,6 +194,9 @@
     
     //Dismiss the SDK
     void (^errorCompletion)(void) = ^{
+        
+        //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
+        
         NSLog(@"%@", message);
         [self showAlertWithTitle:@"Authentication Mobile SDK" message:message];
         

@@ -20,7 +20,7 @@ For breaking technical changes, please read our [transition guide](transition-gu
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Document Verification.
 
 ## Initialization
-Log into your Jumio Customer Portal and you can find your API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the [`DocumentVerificationConfiguration`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/DocumentVerificationConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the [`DocumentVerificationViewController`](http://jumio.github.io/mobile-sdk-ios/Netverify/Classes/DocumentVerificationViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `DocumentVerificationConfiguration` instance is passed to the initializer.
+Log into your Jumio Customer Portal and you can find your API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the [`DocumentVerificationConfiguration`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/DocumentVerificationConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the [`DocumentVerificationViewController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/DocumentVerificationViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `DocumentVerificationConfiguration` instance is passed to the initializer.
 
 ```
 DocumentVerificationViewController *config = [DocumentVerificationViewController new];
@@ -94,7 +94,7 @@ config.customDocumentCode = @"YOURCUSTOMDOCUMENTCODE";
 
 ### Country
 
-The country needs to be in format [ISO-3166-1 alpha 3](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) or XKX for Kosovo.
+The country needs to be in format [ISO-3166-1 alpha 3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) or XKX for Kosovo.
 ```
 config.country = @"USA";
 ```
@@ -155,7 +155,7 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 * Camera and flash toggle button: title color and background
 
 ## Delegation
-Implement the delegate methods of the [`DocumentVerificationViewControllerDelegate`](http://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/DocumentVerificationViewControllerDelegate.html) protocol to be notified of successful initialisation, successful scans and error situations. Dismiss the SDK view in your app in case of success or error.
+Implement the delegate methods of the [`DocumentVerificationViewControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/DocumentVerificationViewControllerDelegate.html) protocol to be notified of successful initialisation, successful scans and error situations. Dismiss the SDK view in your app in case of success or error.
 
 ### Success
 Upon success, the scan reference is returned.

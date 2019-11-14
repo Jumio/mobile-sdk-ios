@@ -23,9 +23,9 @@
     
     //Setup the Configuration for DocumentVerification
     DocumentVerificationConfiguration *config = [DocumentVerificationConfiguration new];
-    //Provide your API token
+    //Provide your API token and your API secret
+    //Do not store your credentials hardcoded within the app. Make sure to store them server-side and load your credentials during runtime.
     config.apiToken = @"YOUR_DOCUMENTVERIFICATION_APITOKEN";
-    //Provide your API secret
     config.apiSecret = @"YOUR_DOCUMENTVERIFICATION_APISECRET";
     //Set the delegate that implements DocumentVerificationViewControllerDelegate
     config.delegate = self;
@@ -119,6 +119,9 @@
  * @param error The error describing the cause of the problematic situation
  **/
 - (void) documentVerificationViewController:(DocumentVerificationViewController*)documentVerificationViewController didFinishWithError:(DocumentVerificationError*)error {
+    
+    //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
+    
     NSLog(@"DocumentVerificationViewController cancelled with error: %@", error.message);
     //Dismiss the SDK
     [self dismissViewControllerAnimated: YES completion: nil];

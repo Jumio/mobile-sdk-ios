@@ -9,29 +9,24 @@
 
 
 # Release notes
-SDK version: 3.3.1
-
-#### Deprecation notice
-This is the last version which will be compatible with iOS 9. The minimum supported iOS version will be iOS 10 in the next SDK version 3.4.0.
+SDK version: 3.4.0
 
 #### Changes
-* 3D Liveness improvements [Netverify, Authentication]
-  * Updated detection models to improve face capture experience
-  * Fixed a problem that liveness images were rotated by 90 degree in rare situations
-  * Fixed a problem that wrong Selfie was selected after retry
-* New Authentication features [Authentication]
-  * Added retry handling to allow up to 3 capture attempts per session
-  * Added support for storing the 3D facemap on customer premise functionality
-* Support of Portuguese and Italian language [Netverify/Fastfill, Authentication, Document Verification]
-* New technical FAQ section on GitHub
-* Fixed a problem that scanning was not working properly when custom ROI position was configured in Custom UI [Netverify/Fastfill, BAM Checkout]
-* Various smaller bug fixes/improvements [Netverify/Fastfill, Authentication, Document Verification, BAM Checkout]
+* Support for Colombian ID barcode scanning [Netverify/Fastfill]
+* Improved image selection to reduce number of documents which are not fully visible [Netverify]
+* Advanced document checks on the back of IDs to increase user conversion [Netverify]
+* Full iOS 13 compatibility, solved dark mode UI glitches [Netverify/Fastfill, Authentication, Document Verification, BAM Checkout]
+* Deprecated iOS 9 support [Netverify/Fastfill, Authentication, Document Verification, BAM Checkout]
+
+#### Fixes
+* Fixed a problem in the callbackURL validation [Netverify, Authentication, Document Verification]
+* Various smaller bug fixes/improvements [Netverify/Fastfill, Authentication, Document Verification]
 
 # Basic Setup
 
 ## General Requirements
 The minimum requirements for the SDK are:
-- iOS 9.0 and higher
+- iOS 10.0 and higher
 - Internet connection
 
 The following architectures are supported in the SDK:
@@ -85,7 +80,7 @@ __Note:__ Our sample project on GitHub contains the sample implementation withou
 
 The Jumio Mobile SDK consists of several dynamic frameworks. Add specific frameworks to your Xcode project, depending on which product you use.
 
-Please see [Strip unused frameworks](https://github.com/Jumio/Mobile-SDK-IOS_pilot/blob/master/docs/integration_faq.md#strip-unused-frameworks) for more information.
+Please see [Strip unused frameworks](/docs/integration_faq.md#strip-unused-frameworks) for more information.
 
 The framework binaries are available with support for device and simulator architecture. Make sure to remove the simulator architecture from our frameworks for app submissions to the AppStore. If this step is not performed, your submission will be rejection by Apple. Add the following code snippet as run script build phase to your app project and ensure that it is executed after the frameworks are embedded. Please see the required setup in our sample project.
 
@@ -109,15 +104,17 @@ Make sure that the following Xcode build settings in your app are set accordingl
 | Link Frameworks Automatically | YES |
 
 ## Localization
-All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language, add it to your app project and mark it as Localizable. This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
+All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language, add it to your app or framework project and mark it as Localizable. This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
 Note: If using CocoaPods, the original file is located under `/Pods/JumioMobileSDK`.
 
-For our products Netverify/Fastfill and Document Verification we are providing translations for six individual languages for your convenience:
+For our products Netverify & Fastfill, Authentication & Document Verification we are providing eight individual languages for your convenience:
 * Chinese (Simplified)
 * Dutch
 * English
 * French
 * German
+* Italian
+* Portuguese
 * Spanish
 
 Please check out our sample project to see how to use the strings files in your app.
@@ -133,7 +130,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 3.3.0 of the Jumio Mobile SDK is supported until 2019-11-28.
+The previous release version 3.3.1 of the Jumio Mobile SDK is supported until 2020-02-15.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore (bugs are typically fixed in the upcoming versions).
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.

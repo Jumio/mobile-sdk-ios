@@ -209,6 +209,9 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     }
     
     func netverifyUIController(_ netverifyUIController: NetverifyUIController, didCancelWithError error: NetverifyError?, scanReference: String?) {
+        
+        //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
+        
         print("didCancelWithError: \(error?.message ?? "")")
         
         let cancelCompletion = {
@@ -244,8 +247,9 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         customScanView.present(alert, animated: true, completion: nil)
     }
     
-    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayConfirmationWith view: NetverifyConfirmationImageView, text: String, confirmation: (() -> Void)?, retake: (() -> Void)? = nil) {
+    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayConfirmationWith view: NetverifyConfirmationImageView, type: NetverifyConfirmationType, text: String, confirmation: (() -> Void)?, retake: (() -> Void)? = nil) {
         print("show confirmation view")
+        self.removeVerifyInfoView()
         
         // Document was captured and the user needs to verify if the captured image is valid
         guard let verifyInfoView = Bundle.main.loadNibNamed("VerifyInfoView", owner: self, options: nil)?.first as? VerifyInfoView else { return }
@@ -256,9 +260,25 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         verifyInfoView.addRetakeHandler(actions: [retake!, self.customRetakeHandler])
         
         verifyInfoView.frame = customScanView.customOverlayLayer.frame
+        
+        switch type {
+        case .analyzing:
+            // Document is being analyzed, the user should not be able to confirm or retake
+            verifyInfoView.confirmButton.isHidden = true
+            verifyInfoView.retakeButton.isHidden  = true
+        case .analyzingResponseReject:
+            // Analysis rejected document, the user should be able to retry
+            verifyInfoView.retakeButton.isHidden  = false
+            verifyInfoView.confirmButton.isHidden = true
+        default:
+            // In other cases the user should be able to confirm and retry
+            verifyInfoView.confirmButton.isHidden = false
+            verifyInfoView.retakeButton.isHidden  = false
+        }
+        
+        
         customScanView.customOverlayLayer.addSubview(verifyInfoView)
         self.verifyInfoView = verifyInfoView
-        
         customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view":view]))
         customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view":view]))
     }
@@ -275,17 +295,6 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         customScanView.present(alert, animated: true, completion: nil)
     }
     
-    /**
-     * Triggered when a face is found on the backside of an ID or Driver License. This indicates, that the user accidentally scanned the front side with the face image.
-     **/
-    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayFlipDocumentHint message: String, confirmation: @escaping (() -> Void)) {
-        print("netverifyUIController shouldDisplayFlipDocumentHint: \(message)")
-        let alert = UIAlertController(title: "Read This:", message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "I READ THIS", style: .default, handler: {(_: UIAlertAction) in
-            confirmation()
-        }))
-        customScanView.present(alert, animated: true, completion: nil)
-    }
     
     func netverifyCustomScanViewControllerStartedBiometricAnalysis(_ customScanView: NetverifyCustomScanViewController) {
         print("netverifyCustomScanViewControllerStartedBiometricAnalysis")
@@ -301,7 +310,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayHelpWithText message: String, animationView: UIView, for retryReason: JumioZoomRetryReason) {
         
         if (!self.activityIndicator.isHidden) {
-            self.activityIndicator.startAnimating()
+            self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
         }
         
@@ -448,7 +457,14 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     
     func customRetakeHandler() {
         self.currentScanView?.retryScan()
-        self.verifyInfoView!.isHidden = true
+        self.removeVerifyInfoView()
+    }
+    
+    func removeVerifyInfoView() {
+        if let verifyInfoView = self.verifyInfoView {
+            verifyInfoView.removeFromSuperview()
+            self.verifyInfoView = nil
+        }
     }
     
     func hideAndCleanupTableView () {

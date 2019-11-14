@@ -19,9 +19,9 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         
         //Setup the Configuration for BAMCheckout
         let config:BAMCheckoutConfiguration = BAMCheckoutConfiguration()
-        //Provide your API token
+        //Provide your API token and your API secret
+        //Do not store your credentials hardcoded within the app. Make sure to store them server-side and load your credentials during runtime.
         config.apiToken = "YOUR_BAMCHECKOUT_APITOKEN"
-        //Provide your API secret
         config.apiSecret = "YOUR_BAMCHECKOUT_APISECRET"
         
         //Set the delegate that implements BAMCheckoutViewControllerDelegate
@@ -237,6 +237,9 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
      * @param error The error codes 200, 210, 220, 240, 250, 260 and 310 will be returned. Using the custom scan view, the error codes 260 and 310 will be returned.
      **/
     func bamCheckoutViewController(_ controller: BAMCheckoutViewController, didCancelWithError error: Error?, scanReference: String?) {
+        
+        //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
+        
         print("BAMCheckoutViewController cancelled with error: \(error?.localizedDescription ?? ""), scanReference: \(String(describing: (scanReference != nil) ? scanReference : ""))");
         
         //Dismiss the SDK
