@@ -9,7 +9,7 @@
 
 
 # Release notes
-SDK version: 3.4.0
+### SDK version: 3.4.0
 
 #### Changes
 * Support for Colombian ID barcode scanning [Netverify/Fastfill]
@@ -21,6 +21,11 @@ SDK version: 3.4.0
 #### Fixes
 * Fixed a problem in the callbackURL validation [Netverify, Authentication, Document Verification]
 * Various smaller bug fixes/improvements [Netverify/Fastfill, Authentication, Document Verification]
+
+### SDK version: 3.4.1
+
+#### Fixes
+* Fixed a problem that localized strings were not loaded when initialized from another framework [Netverify/Authentication Custom UI]
 
 # Basic Setup
 
@@ -59,12 +64,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.3.1' # Use Netverify, Authentication, DocumentVerification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.4.1' # Use Netverify, Authentication, DocumentVerification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.3.1' # Use full Netverify and Authentication functionality
-pod 'JumioMobileSDK/Netverify-Light', '~>3.3.1' # For Fastfill or Document Verification, or Netverify without 3D face liveness capturing technology
+pod 'JumioMobileSDK/Netverify', '~>3.4.1' # Use full Netverify and Authentication functionality
+pod 'JumioMobileSDK/Netverify-Light', '~>3.4.1' # For Fastfill or Document Verification, or Netverify without 3D face liveness capturing technology
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.3.1' # Use BAM Checkout only
+pod 'JumioMobileSDK/BAMCheckout', '~>3.4.1' # Use BAM Checkout only
 ```
 
 Install the pod to your project via Terminal:
@@ -74,7 +79,7 @@ pod install
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.3.1.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.3.1/ios-jumio-mobile-sdk-3.3.1.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.4.1.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.4.1/ios-jumio-mobile-sdk-3.4.1.zip).
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -130,7 +135,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 3.3.1 of the Jumio Mobile SDK is supported until 2020-02-15.
+The previous release version 3.4.0 of the Jumio Mobile SDK is supported until 2020-02-18.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore (bugs are typically fixed in the upcoming versions).
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.

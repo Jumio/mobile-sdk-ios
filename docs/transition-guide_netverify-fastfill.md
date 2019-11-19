@@ -4,6 +4,9 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.4.1
+No backward incompatible changes.
+
 ## 3.4.0
 #### Custom UI callbacks
 *  ~~`netverifyCustomScanViewController:shouldDisplayFlipDocumentHint:confirmation:`~~ has been replaced with [`netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:type:text:confirmation:retake:`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:type:text:confirmation:retake:) 
