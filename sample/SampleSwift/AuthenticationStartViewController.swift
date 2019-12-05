@@ -15,6 +15,8 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
     
     var authenticationController: AuthenticationController?
     var authenticationScanViewController: UIViewController?
+    var userConsentAlert: UIAlertController?
+    var isUserConsentRequired = false
     
     @IBAction func startAuthentication() {
         self.createAuthenticationController()
@@ -153,8 +155,11 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
     
     func authenticationController(_ authenticationController: AuthenticationController, didFinishInitializingScanViewController scanViewController: AuthenticationScanViewController) {
         print("AuthenticationController did finish initializing")
+        // if userConsentrequired authenticationController need to be presneted after Accpetance
         self.authenticationScanViewController = scanViewController
-        self.present(self.authenticationScanViewController!, animated: true, completion: nil)
+        if !isUserConsentRequired {
+            self.present(self.authenticationScanViewController!, animated: true, completion: nil)
+        }
     }
     
     /**
@@ -269,6 +274,35 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         authenticationScanViewController.present(alert, animated: true, completion: nil)
     }
     
+    func authenticationScanViewController(_ authenticationScanViewController: AuthenticationScanViewController, shouldRequireUserConsentWith url: URL) {
+        // This delegate is invoked when the end-user’s consent to Jumio's privacy policy is legally required. Please call “userConsent(given:)" when the end-user has accepted.
+        
+        let alert = UIAlertController(title: "User Consent", message: "By clicking \"Accept\" you consent to Jumio collecting and disclosing your biometric data pursuant to its Privacy Policy", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Jumio's privacy policy", style: .default, handler: {(_: UIAlertAction) in
+            print("User Consent show")
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Accept", style: .default, handler: {(_: UIAlertAction) in
+            print("user consent accepted")
+            self.userConsentAlert = nil
+            authenticationScanViewController.userConsent(given: true)
+            self.present(authenticationScanViewController, animated: true, completion: nil)
+            self.isUserConsentRequired = false
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_: UIAlertAction) in
+            print("user consent declined")
+            self.userConsentAlert = nil
+            authenticationScanViewController.userConsent(given: false) //forces sdk cancel
+        }))
+        
+        self.userConsentAlert = alert
+        isUserConsentRequired = true
+        self.present(alert, animated: true)
+        
+    }
+    
     // Helper methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -276,8 +310,16 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         if let transactionReference =  UserDefaults.standard.object(forKey: "enrollmentTransactionReference") as? String {
             transactionReferenceTextField.text = transactionReference
         }
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
+    
+    @objc func applicationDidBecomeActive() {
+         DispatchQueue.main.async {
+            if let userConsentAlert = self.userConsentAlert ,  self.presentedViewController != userConsentAlert {
+                 self.present(userConsentAlert, animated: true, completion: nil)
+             }
+         }
+     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

@@ -4,6 +4,10 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.4.2
+* A new delegate `netverifyUIController:shouldRequireUserConsentWithURL:` was added to [`NetverifyUIControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyUIControllerDelegate.html)
+* A new method `userConsentGiven:` was added to [`NetverifyUIController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyUIController.html)
+
 ## 3.4.1
 No backward incompatible changes.
 

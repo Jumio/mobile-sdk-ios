@@ -4,6 +4,10 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.4.2
+* A new delegate `authenticationScanViewController:shouldRequireUserConsentWithURL:` was added to [`AuthenticationScanViewControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Protocols/AuthenticationScanViewControllerDelegate.html)
+* A new method `userConsentGiven:` was added to [`AuthenticationScanViewController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/AuthenticationScanViewController.html)
+
 ## 3.4.1
 No backward incompatible changes.
 

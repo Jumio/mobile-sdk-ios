@@ -174,6 +174,8 @@ After initialisation is finished, the SDK is ready for scanning and the followin
 
 As soon as scanViewController is presented you can add your own UI elements to the `customOverlayLayer`. Make sure that you only add subviews to the `customOverlayLayer` view, and ensure that your UI elements don't overlap with the scanning UI to get the best user experience and a positive result.
 
+`authenticationScanViewController:shouldRequireUserConsentWithURL:` in [`AuthenticationScanViewControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Protocols/AuthenticationScanViewControllerDelegate.html) is invoked when the end-user’s consent to Jumio’s privacy policy is legally required. [`userConsentGiven:`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/AuthenticationScanViewController.html#/c:objc(cs)AuthenticationScanViewController(im)userConsentGiven:) needs to be called after the end-user has accepted.
+
 ### Handle scanning workflow
 
 For handling of the scanning workflow, a few additional delegates are required to be implemented and handled. When the user has finished the scanning process and biometric data is being analysed, `authenticationScanViewControllerDidStartBiometricAnalysis:` is fired. We recommend to display a loading activity info to the user that should not last longer than a few seconds. When successful, scanning is being finalized (see paragraph below).

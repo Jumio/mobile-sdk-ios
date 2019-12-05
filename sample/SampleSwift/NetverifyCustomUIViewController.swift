@@ -29,6 +29,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     
     var countries = [NetverifyCountry]()
     var currentDocumentType: NetverifyDocumentType?
+    var userConsentAlert: UIAlertController?
     
     // MARK: View setup
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +41,16 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         }
         
         self.navigationController?.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
+    
+    @objc func applicationDidBecomeActive() {
+          DispatchQueue.main.async {
+             if let userConsentAlert = self.userConsentAlert ,  self.presentedViewController != userConsentAlert {
+                  self.present(userConsentAlert, animated: true, completion: nil)
+              }
+          }
+      }
     
     // Cancel if another view controller is shown on top of the netverifyCustomUIViewController
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
@@ -229,6 +239,32 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         } else {
             self.dismiss(animated: true, completion: cancelCompletion)
         }
+    }
+    
+    func netverifyUIController(_ netverifyUIController: NetverifyUIController, shouldRequireUserConsentWith url: URL) {
+        // This delegate is invoked when the end-user’s consent to Jumio's privacy policy is legally required. Please call “userConsent(given:)" when the end-user has accepted.
+        
+        let alert = UIAlertController(title: "User Consent", message: "By clicking \"Accept\" you consent to Jumio collecting and disclosing your biometric data pursuant to its Privacy Policy", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Jumio's privacy policy", style: .default, handler: {(_: UIAlertAction) in
+            print("User Consent show")
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Accept", style: .default, handler: {(_: UIAlertAction) in
+            print("user consent accepted")
+            self.userConsentAlert = nil
+            netverifyUIController.userConsent(given: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_: UIAlertAction) in
+            print("user consent declined")
+            self.userConsentAlert = nil
+            netverifyUIController.userConsent(given: false) //forces sdk cancel
+        }))
+        
+        self.userConsentAlert = alert
+
+        self.present(alert, animated: true)
     }
     
     // MARK: NetverifyCustomScanViewControllerDelegate

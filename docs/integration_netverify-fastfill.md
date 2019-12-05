@@ -317,6 +317,8 @@ After initializing, the SDK is set up and loads all necessary resources for scan
 @property (nonatomic, assign) NetverifyDocumentVariant selectedVariant; //This property has to be set before calling setupWithDocument:
 ```
 
+`netverifyUIController:shouldRequireUserConsentWithURL:` in [`NetverifyUIControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyUIControllerDelegate.html) is invoked when the end-user’s consent to Jumio’s privacy policy is legally required. [`userConsentGiven:`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyUIController.html#/c:objc(cs)NetverifyUIController(im)userConsentGiven:) needs to be called after the end-user has accepted.
+
 ### Start scanning
 
 Use this method to set up the NetverifyUIController correctly before any scan view can be displayed. Provide one NetverifyDocument via `setupWithDocument:` delegate method. Please note that when a paper-format document is used, selectedVariant has to be set in advance by calling the following method:
