@@ -34,6 +34,7 @@
     
     //Set the dataCenter; default is JumioDataCenterUS
     //config.dataCenter = JumioDataCenterEU;
+    //config.dataCenter = JumioDataCenterSG;
     
     //Use the following property to enable offline credit card scanning.
     //config.offlineToken = @"YOUR_OFFLINE_TOKEN";
@@ -83,19 +84,6 @@
     //or
     //[config addCustomField: @"idState" title: @"State" values:states required:YES resetValueText:@"not shown"];
     
-    //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required API token, API secret and a delegate object.
-    @try {
-        self.bamCheckoutViewController = [[BAMCheckoutViewController alloc] initWithConfiguration:config];
-    } @catch (NSException *exception) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:exception.name message:exception.reason preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
-         [self presentViewController:alertController animated:YES completion:nil];
-    }
-    
-    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-        self.bamCheckoutViewController.modalPresentationStyle = UIModalPresentationFormSheet;  // For iPad, present from sheet
-    }
-    
     //Localizing labels
     //All label texts and button titles can be changed and localized using the Localizable-BAMCheckout.strings file. Just adapt the values to your required language and add this file in your Xcode project.
     
@@ -125,7 +113,7 @@
     
     //[[UINavigationBar jumioAppearance] setBarTintColor:[UIColor redColor]];
     
-    //[[BAMCheckoutNavigationBarTitleImageView jumioAppearance] setTitleImage:[UIImage imageNamed:@"<your-navigation-bar-title-image>"]];
+    //[[JumioNavigationBarTitleImageView jumioAppearance] setTitleImage:[UIImage imageNamed:@"<your-navigation-bar-title-image>"]];
     
     //Custom general appearance - font
     //The font has to be loaded upfront within the mainBundle before initializing the SDK
@@ -151,6 +139,19 @@
     
     //You can get the current SDK version using the method below.
     //NSLog(@"%@", [BAMCheckoutViewController sdkVersion]);
+    
+    //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required API token, API secret and a delegate object.
+    @try {
+        self.bamCheckoutViewController = [[BAMCheckoutViewController alloc] initWithConfiguration:config];
+    } @catch (NSException *exception) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:exception.name message:exception.reason preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+         [self presentViewController:alertController animated:YES completion:nil];
+    }
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        self.bamCheckoutViewController.modalPresentationStyle = UIModalPresentationFormSheet;  // For iPad, present from sheet
+    }
 }
 
 /**

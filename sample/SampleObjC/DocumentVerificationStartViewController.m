@@ -5,8 +5,8 @@
 //
 
 #import "DocumentVerificationStartViewController.h"
-@import Netverify;
-#import <JumioCore/JumioDeviceInfo.h>
+@import JumioCore;
+@import DocumentVerification;
 
 @interface DocumentVerificationStartViewController () <DocumentVerificationViewControllerDelegate>
 @property (nonatomic, strong) DocumentVerificationViewController *documentVerificationViewController;
@@ -32,6 +32,7 @@
     
     //Set the dataCenter; default is JumioDataCenterUS
     //config.dataCenter = JumioDataCenterEU;
+    //config.dataCenter = JumioDataCenterSG;
     
     //Make sure to specify issuing country (ISO 3166-1 alpha-3 country code)
     config.country = @"AUT";
@@ -67,6 +68,58 @@
     // Set the following property to enable/disable data extraction for documents. (default: YES) 
      config.enableExtraction = self.enableExtraction.isOn;
     
+    //Localizing labels
+    //All label texts and button titles can be changed and localized using the Localizable-DocumentVerification.strings file. Just adapt the values to your required language and use this file in your app.
+    
+    //Customizing look and feel
+    //The SDK can be customized via UIAppearance to fit your application’s look and feel.
+    //Please note, that only the below listed UIAppearance selectors are supported and taken into consideration. Experimenting with other UIAppearance or not UIAppearance selectors may cause unexpected behaviour or crashes both in the SDK or in your application. This is best avoided.
+    
+    // - Navigation bar: tint color, title color, title image
+    //[[UINavigationBar jumioAppearance] setTintColor: [UIColor yellowColor]];
+    //[[UINavigationBar jumioAppearance] setBarTintColor: [UIColor redColor]];
+    //[[UINavigationBar jumioAppearance] setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    //[[JumioNavigationBarTitleImageView jumioAppearance] setTitleImage: [UIImage imageNamed:@"<your-navigation-bar-title-image>"]];
+    
+    // - Custom general appearance - deactivate blur
+    //[[DocumentVerificationBaseView jumioAppearance] setDisableBlur:@YES];
+    
+    // - Custom general appearance - enable dark mode
+    //[[DocumentVerificationBaseView jumioAppearance] setEnableDarkMode:@YES];
+    
+    // - Custom general appearance - background color
+    //[[DocumentVerificationBaseView jumioAppearance] setBackgroundColor: [UIColor grayColor]];
+    
+    // - Custom general appearance - foreground color (text-elements and icons)
+    //[[DocumentVerificationBaseView jumioAppearance] setForegroundColor: [UIColor redColor]];
+    
+    // - Custom general appearance - font
+    //The font has to be loaded upfront within the mainBundle before initializing the SDK
+    //[[DocumentVerificationBaseView jumioAppearance] setCustomLightFontName: @"<your-font-name-loaded-in-your-app>"];
+    //[[DocumentVerificationBaseView jumioAppearance] setCustomRegularFontName: @"<your-font-name-loaded-in-your-app>"];
+    //[[DocumentVerificationBaseView jumioAppearance] setCustomMediumFontName: @"<your-font-name-loaded-in-your-app>"];
+    //[[DocumentVerificationBaseView jumioAppearance] setCustomBoldFontName: @"<your-font-name-loaded-in-your-app>"];
+    //[[DocumentVerificationBaseView jumioAppearance] setCustomItalicFontName: @"<your-font-name-loaded-in-your-app>"];
+    
+    // - Custom Positive Button Background Colors, custom class has to be imported (the same applies to DocumentVerificationNegativeButton)
+    //[[DocumentVerificationPositiveButton jumioAppearance] setBackgroundColor:[UIColor cyanColor] forState:UIControlStateNormal];
+    //[[DocumentVerificationPositiveButton jumioAppearance] setBackgroundColor:[UIColor blueColor] forState:UIControlStateHighlighted];
+    
+    //Custom Positive Button Background Image, custom class has to be imported
+    //[[DocumentVerificationPositiveButton jumioAppearance] setBackgroundImage:[UIImage imageNamed:@"<your-custom-image>"] forState:UIControlStateNormal];
+    //[[DocumentVerificationPositiveButton jumioAppearance] setBackgroundImage:[UIImage imageNamed:@"<your-custom-image>"] forState:UIControlStateHighlighted];
+    
+    //Custom Positive Button Title Colors, custom class has to be imported
+    //[[DocumentVerificationPositiveButton jumioAppearance] setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    //[[DocumentVerificationPositiveButton jumioAppearance] setTitleColor:[UIColor magentaColor] forState:UIControlStateHighlighted];
+    
+    //Custom Positive Button Title Colors, custom class has to be imported
+    //[[DocumentVerificationPositiveButton jumioAppearance] setBorderColor: [UIColor greenColor]];
+    
+    //You can get the current SDK version using the method below.
+    //NSLog(@"%@", [DocumentVerificationViewController sdkVersion]);
+    
     //Perform the following call as soon as your app’s view controller is initialized. Create the DocumentVerificationViewController instance by providing your Configuration with required API token, API secret and a delegate object.
     @try {
         self.documentVerificationViewController = [[DocumentVerificationViewController alloc] initWithConfiguration:config];
@@ -75,16 +128,6 @@
         [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
         [self presentViewController:alertController animated:YES completion:nil];
     }
-    
-    //Localizing labels
-    //All label texts and button titles can be changed and localized using the Localizable-DocumentVerification.strings file. Just adapt the values to your required language and use this file in your app.
-    
-    //Customizing look and feel
-    //The SDK can be customized via UIAppearance to fit your application’s look and feel.
-    //The API from Netverify is re-used to apply visual customization for DocumentVerification. Please have a look at the above section where DocumentVerificationViewController is created and configured.
-    
-    //You can get the current SDK version using the method below.
-    //NSLog(@"%@", [DocumentVerificationViewController sdkVersion]);
 }
 
 - (IBAction) startDocumentVerification: (id) sender {

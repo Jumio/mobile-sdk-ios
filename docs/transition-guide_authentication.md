@@ -4,6 +4,14 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.5.0
+
+#### Error codes
+Error code D (Wrong API credentials used, retry impossible) has been removed
+
+#### Dark mode
+Added additional theme to support dark mode. Set [`enableDarkMode`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/JumioBaseView.html#/c:objc(cs)JumioBaseView(py)enableDarkMode) to `true` to change blur style and the standard foreground color. 
+
 ## 3.4.2
 * A new delegate `authenticationScanViewController:shouldRequireUserConsentWithURL:` was added to [`AuthenticationScanViewControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Protocols/AuthenticationScanViewControllerDelegate.html)
 * A new method `userConsentGiven:` was added to [`AuthenticationScanViewController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/AuthenticationScanViewController.html)

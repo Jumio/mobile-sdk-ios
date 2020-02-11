@@ -28,7 +28,7 @@ Whenever an exception is thrown, the [`NetverifyViewController`](https://jumio.g
 NetverifyConfiguration *config = [NetverifyConfiguration new];
 config.apiToken = @"YOURAPITOKEN";
 config.apiSecret = @"YOURAPISECRET";
-config.dataCenter = JumioDataCenterEU; // Change this parameter if your account is in the EU data center. Default is US.
+config.dataCenter = JumioDataCenterEU; // Set this parameter to match the data center where your account is registered.
 config.delegate = self;
 
 NetverifyViewController *netverifyViewController;
@@ -38,6 +38,8 @@ NetverifyViewController *netverifyViewController;
 	// HANDLE EXCEPTION
 }
 ```
+
+The default data center is JumioDataCenterUS. If your customer account is in the EU data center, use JumioDataCenterEU instead. Alternatively use JumioDataCenterSG for Singapore.
 
 Make sure initialization and presentation are timely within one minute. On iPads, the presentation style `UIModalPresentationFormSheet` is default and mandatory.
 ```
@@ -158,7 +160,7 @@ config.statusBarStyle = UIStatusBarStyleLightContent;
 
 ## Customization
 The SDK can be customized to fit your application’s look and feel via the UIAppearance pattern. Check out our sample project on how to use it.
-- General: disable blur, background color, foreground color, font
+- General: disable blur, blur style, background color, foreground color, font
 - Navigation bar: title image, title color, tint color and bar tint color
 - Positive button (Submit): title color and background
 - Negative button (Cancel): title color and background
@@ -167,6 +169,8 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 - Camera and flash toggle button: title color and background
 - Scan overlay - ID scanning: standard color, valid color, invalid color and scan background color
 - Scan overlay - 3D face liveness: oval, progress and background + text color of feedback view
+
+__Note:__ Customizations should be applied before the SDK is initialized.
 
 ### Customization tool
 [Jumio Surface](https://jumio.github.io/surface-ios) is a web tool that allows you to apply and visualize, in real-time, all available customization options. It also provides an export feature to save your applied changes, so you can import them directly into your codebase.
@@ -261,7 +265,6 @@ Class **_NetverifyMrzData_**
 | A[x][yyyy]| We have encountered a network communication problem | Retry possible, user decided to cancel |
 | B[x][yyyy]| Authentication failed | Secure connection could not be established, retry impossible |
 | C[x]0401 | Authentication failed | API credentials invalid, retry impossible |
-| D[x]0403 | Authentication failed | Wrong API credentials used, retry impossible |
 | E[x]0000 | No Internet connection available | Retry possible, user decided to cancel |
 | F00000 | Scanning not available at this time, please contact the app vendor | Resources cannot be loaded, retry impossible |
 | G00000 | Cancelled by end-user | No error occurred |

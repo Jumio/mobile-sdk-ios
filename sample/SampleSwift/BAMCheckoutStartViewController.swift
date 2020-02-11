@@ -29,6 +29,7 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         
         //Set the dataCenter; default is JumioDataCenterUS
         //config.dataCenter = JumioDataCenterEU
+        //config.dataCenter = JumioDataCenterSG
         
         //Use the following property to enable offline credit card scanning.
         //config.offlineToken = "YOUR_OFFLINE_TOKEN"
@@ -68,30 +69,15 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //config.cameraPosition = JumioCameraPositionFront
         
         //Configure your desired status bar style
-        //config.statusBarStyle = UIStatusBarStyle.lightContent
+        //config.statusBarStyle = .lightContent
         
         //You can add custom fields to the "Additional Info" view (text input field or selection)
-        //config.addCustomField("idZipCode", title: "Zip code", keyboardType: UIKeyboardType.numberPad, regularExpression: "[0-9]{5,}")
+        //config.addCustomField("idZipCode", title: "Zip code", keyboardType: .numberPad, regularExpression: "[0-9]{5,}")
         
-        //let states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", @"Maine", @"Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+        //let states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
         //config.addCustomField("idState", title: "State", values: states, required: false, resetValueText: "-- no value --")
         //or
         //config.addCustomField("idState", title: "State", values: states, required: true, resetValueText: "not shown")
-        
-        //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required API token, API secret and a delegate object.
-        
-        do {
-            try ObjcExceptionHelper.catchException {
-                self.bamCheckoutViewController = BAMCheckoutViewController.init(configuration: config)
-            }
-        } catch {
-            let err = error as NSError            
-            self.showAlert(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "")
-        }
-        
-        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
-            self.bamCheckoutViewController?.modalPresentationStyle = UIModalPresentationStyle.formSheet;  // For iPad, present from sheet
-        }
         
         //Localizing labels
         //All label texts and button titles can be changed and localized using the Localizable-BAMCheckout.strings file. Just adapt the values to your required language and add this file in your Xcode project.
@@ -102,22 +88,22 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         
         // - Customize buttons: title color, background color, background image selectors for BAMCheckoutPositiveButton, BAMCheckoutNegativeButton
         
-        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundColor(UIColor.cyan, for: UIControlState.normal)
-        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundColor(UIColor.blue, for: UIControlState.highlighted)
+        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundColor(.cyan, for: .normal)
+        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundColor(.blue, for: .highlighted)
         
-        //BAMCheckoutPositiveButton.jumioAppearance().setTitleColor(UIColor.gray, for: UIControlState.normal)
-        //BAMCheckoutPositiveButton.jumioAppearance().setTitleColor(UIColor.magenta, for: UIControlState.highlighted)
+        //BAMCheckoutPositiveButton.jumioAppearance().setTitleColor(.gray, for: .normal)
+        //BAMCheckoutPositiveButton.jumioAppearance().setTitleColor(.magenta, for: .highlighted)
         
         //If a backgroundImage is set, backgroundColor will have no effect
-        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.normal)
-        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.highlighted)
+        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: .normal)
+        //BAMCheckoutPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: .highlighted)
         
         // - Navigation bar: tint color, title color, title image
-        //UINavigationBar.jumioAppearance().tintColor = UIColor.yellow
-        //UINavigationBar.jumioAppearance().barTintColor = UIColor.red
-        //UINavigationBar.jumioAppearance().titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
+        //UINavigationBar.jumioAppearance().tintColor = .yellow
+        //UINavigationBar.jumioAppearance().barTintColor = .red
+        //UINavigationBar.jumioAppearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white] as [NSAttributedString.Key : Any]
         
-        //BAMCheckoutNavigationBarTitleImageView.jumioAppearance().titleImage = UIImage.init(named: "<your-navigation-bar-title-image>")
+        //JumioNavigationBarTitleImageView.jumioAppearance().titleImage = UIImage.init(named: "<your-navigation-bar-title-image>")
         
         // - Custom general appearance - font
         //The font has to be loaded upfront within the mainBundle before initializing the SDK
@@ -130,19 +116,33 @@ class BAMCheckoutStartViewController: StartViewController, BAMCheckoutViewContro
         //BAMCheckoutBaseView.jumioAppearance().disableBlur = true
         
         // - Custom general appearance - background color
-        //BAMCheckoutBaseView.jumioAppearance().backgroundColor = UIColor.gray
+        //BAMCheckoutBaseView.jumioAppearance().backgroundColor = .gray
         
         // - Custom general appearance - foreground color (text-elements and icons)
-        //BAMCheckoutBaseView.jumioAppearance().foregroundColor = UIColor.red
+        //BAMCheckoutBaseView.jumioAppearance().foregroundColor = .red
         
         // - Custom general appearance - ScanOverlay border color
-        //BAMCheckoutScanOverlay.jumioAppearance().borderColor = UIColor.green
+        //BAMCheckoutScanOverlay.jumioAppearance().borderColor = .green
         
         // - Custom general appearance - ScanOverlay text color
-        //BAMCheckoutScanOverlay.jumioAppearance().textColor = UIColor.blue
+        //BAMCheckoutScanOverlay.jumioAppearance().textColor = .blue
         
         //You can get the current SDK version using the method below.
         //print("\(BAMCheckoutViewController.sdkVersion())")
+        
+        //Perform the following call as soon as your app’s view controller is initialized. This creates the BAMCheckoutViewController instance by providing your Configuration with required API token, API secret and a delegate object.
+        do {
+            try ObjcExceptionHelper.catchException {
+                self.bamCheckoutViewController = BAMCheckoutViewController.init(configuration: config)
+            }
+        } catch {
+            let err = error as NSError
+            self.showAlert(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "")
+        }
+        
+        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
+            self.bamCheckoutViewController?.modalPresentationStyle = UIModalPresentationStyle.formSheet;  // For iPad, present from sheet
+        }
     }
     
     /**

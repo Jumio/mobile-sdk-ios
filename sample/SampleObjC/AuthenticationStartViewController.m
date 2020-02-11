@@ -64,6 +64,7 @@
 
     //Set the dataCenter; default is JumioDataCenterUS
     //config.dataCenter = JumioDataCenterEU;
+    //config.dataCenter = JumioDataCenterSG;
     
     //You can also set a customer identifier (max. 100 characters). Note: The customer ID should not contain sensitive data like PII (Personally Identifiable Information) or account login.
     //config.userReference = @"USER_REFERENCE";
@@ -90,6 +91,9 @@
     
     // - Custom general appearance - deactivate blur
     //[[JumioBaseView jumioAppearance] setDisableBlur:@YES];
+    
+    // - Custom general appearance - enable dark mode
+    //[[JumioBaseView jumioAppearance] setEnableDarkMode:@YES];
     
     // - Custom general appearance - background color
     //[[JumioBaseView jumioAppearance] setBackgroundColor: [UIColor grayColor]];

@@ -25,7 +25,7 @@ Log into your Jumio Customer Portal and you can find your API token and API secr
 BAMCheckoutConfiguration *config = [BAMCheckoutConfiguration new];
 config.apiToken = @"YOURAPITOKEN";
 config.apiSecret = @"YOURAPISECRET";
-config.dataCenter = JumioDataCenterEU; // Change this parameter if your account is in the EU data center. Default is US.
+config.dataCenter = JumioDataCenterEU; // Set this parameter to match the data center where your account is registered.
 config.delegate = self;
 
 BAMCheckoutViewController *bamCheckoutViewController;
@@ -35,6 +35,8 @@ BAMCheckoutViewController *bamCheckoutViewController;
 	// HANDLE EXCEPTION
 }
 ```
+
+The default data center is JumioDataCenterUS. If your customer account is in the EU data center, use JumioDataCenterEU instead. Alternatively use JumioDataCenterSG for Singapore.
 
 Make sure initialization and presentation are timely within one minute. On iPads, the presentation style `UIModalPresentationFormSheet` is default and mandatory.
 ```
@@ -145,6 +147,8 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 * Positive button (Submit): title color and background
 * Negative button (Cancel): title color and background
 * Scan overlay: border color, text color
+
+__Note:__ Customizations should be applied before the SDK is initialized.
 
 ## Delegation
 Implement the delegate methods of the [`BAMCheckoutViewControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/BAMCheckout/Protocols/BAMCheckoutViewControllerDelegate.html) protocol to be notified of scan attempts, successful scans and error situations. Dismiss the `BAMCheckoutViewController` instance in your app in case of success or error.

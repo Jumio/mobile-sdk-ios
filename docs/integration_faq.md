@@ -49,14 +49,14 @@ Depending on your specific needs, you may want to strip out unused functionality
 
 The following table shows a range of different product configurations with the frameworks that are required and the corresponding application size. These measurements are based on our sample application after being uploaded to the Appstore.
 
-| Product | Size | JumioCore | BAMCheckout | Netverify | NetverifyBarcode & MicroBlink | NetverifyFace & ZoomAuthenticationHybrid |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Netverify + Authentication | 25.6 MB | x |  | x | x | x |
-| Fastfill | 11.1 MB | x |  | x | x |  |
-| Fastfill without Barcode | 7.92 MB | x |  | x |  |  |
-| Document Verification | 7.92 MB | x |  | x |  |  |
-| BAM Checkout credit card scanning | 7.41 MB | x | x |  |  |  |
-| BAM Checkout credit card<br/>+ ID scanning | 31 MB | x | x | x | x | x |
+| Product | Size | JumioCore | Netverify | NetverifyBarcode & MicroBlink | NetverifyFace & ZoomAuthenticationHybrid | Document Verification | BAMCheckout  |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
+| Netverify + Authentication | 22.73 MB | x | x | x | x |  |  |
+| Fastfill | 9.85 MB | x | x | x |  |  |  |
+| Fastfill without Barcode | 6.84 MB | x | x |  |  |  |  |
+| Document Verification | 1.56 MB | x |  |  |  | x |  |
+| BAM Checkout credit card scanning | 6.36 MB | x |  |  |  |  | x |
+| All Products | 28.11 MB | x | x | x | x | x | x |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 

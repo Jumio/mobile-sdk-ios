@@ -4,8 +4,8 @@ ${PROJECT_DIR}/../frameworks/Netverify.framework
 ${PROJECT_DIR}/../frameworks/NetverifyFace.framework
 ${PROJECT_DIR}/../frameworks/NetverifyBarcode.framework
 ${PROJECT_DIR}/../frameworks/MicroBlink.framework
-${PROJECT_DIR}/../frameworks/ZoomAuthenticationHybrid.framework
-${PROJECT_DIR}/../frameworks/ZoomAuthenticationHybrid.framework/en.lproj/Zoom.strings
+${PROJECT_DIR}/../frameworks/DocumentVerification.framework
+${PROJECT_DIR}/../frameworks/ZoomAuthentication.framework
 ${PROJECT_DIR}/../frameworks/en.lproj/Localizable-Authentication.strings
 ${PROJECT_DIR}/../frameworks/en.lproj/Localizable-DocumentVerification.strings
 ${PROJECT_DIR}/../frameworks/en.lproj/Localizable-Netverify.strings

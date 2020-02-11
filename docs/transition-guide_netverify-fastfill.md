@@ -4,6 +4,23 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.5.0
+
+#### DocumentVerification separation
+Logic for DocumentVerification was split into a separate framework. Make sure that DocumentVerification.framework is linked in your project when updating to 3.5.0.
+
+#### Cocoapods
+* pod  `JumioMobileSDK/Netverify-Light` was replaced by `JumioMobileSDK/NetverifyBase`.
+
+#### Localizable Strings
+`netverify.confirmation-view.button.submit` was renamed to `netverify.confirmation-view.button.continue`
+
+#### Error codes
+Error code D (Wrong API credentials used, retry impossible) has been removed
+
+#### Dark mode
+Added additional theme to support dark mode. Set [`enableDarkMode`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/JumioBaseView.html#/c:objc(cs)JumioBaseView(py)enableDarkMode) to `true` to change blur style and the standard foreground color.
+
 ## 3.4.2
 * A new delegate `netverifyUIController:shouldRequireUserConsentWithURL:` was added to [`NetverifyUIControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyUIControllerDelegate.html)
 * A new method `userConsentGiven:` was added to [`NetverifyUIController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyUIController.html)

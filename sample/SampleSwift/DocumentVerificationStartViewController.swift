@@ -4,7 +4,7 @@
 //  Copyright © 2019 Jumio Corporation All rights reserved.
 //
 
-import Netverify
+import DocumentVerification
 
 class DocumentVerificationStartViewController: StartViewController, DocumentVerificationViewControllerDelegate {
 
@@ -29,6 +29,7 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         
         //Set the dataCenter; default is JumioDataCenterUS
         //config.dataCenter = JumioDataCenterEU
+        //config.dataCenter = JumioDataCenterSG
         
         //Make sure to specify issuing country (ISO 3166-1 alpha-3 country code)
         config.country = "AUT"
@@ -53,7 +54,7 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         //config.cameraPosition = JumioCameraPositionFront
         
         //Configure your desired status bar style
-        //config.statusBarStyle = UIStatusBarStyle.lightContent
+        //config.statusBarStyle = .lightContent
         
         // Use a custom document code which can be configured in the settings tab of the Customer Portal
         //config.customDocumentCode = "YOURCUSTOMDOCUMENTCODE"
@@ -64,8 +65,60 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         // Set the following property to enable/disable data extraction for documents. (default: true)
         config.enableExtraction = enableExtraction.isOn
         
-        //Perform the following call as soon as your app’s view controller is initialized. Create the DocumentVerificationViewController instance by providing your Configuration with required API token, API secret and a delegate object.
+        //Localizing labels
+        //All label texts and button titles can be changed and localized using the Localizable-DocumentVerification.strings file. Just adapt the values to your required language and use this file in your app.
         
+        //Customizing look and feel
+        //The SDK can be customized via UIAppearance to fit your application’s look and feel.
+        //Please note, that only the below listed UIAppearance selectors are supported and taken into consideration. Experimenting with other UIAppearance or not UIAppearance selectors may cause unexpected behaviour or crashes both in the SDK or in your application. This is best avoided.
+        
+        // - Navigation bar: tint color, title color, title image
+        
+        //UINavigationBar.jumioAppearance().tintColor = .yellow
+        //UINavigationBar.jumioAppearance().barTintColor = .red
+        //UINavigationBar.jumioAppearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white] as [NSAttributedString.Key : Any]
+        
+        //JumioNavigationBarTitleImageView.jumioAppearance().titleImage = UIImage.init(named: "<your-navigation-bar-title-image>")
+        
+        // - Custom general appearance - deactivate blur
+        //DocumentVerificationBaseView.jumioAppearance().disableBlur = true
+        
+        // - Custom general appearance - enable dark mode
+        //DocumentVerificationBaseView.jumioAppearance().enableDarkMode = true
+        
+        // - Custom general appearance - background color
+        //DocumentVerificationBaseView.jumioAppearance().backgroundColor = .lightGray
+        
+        // - Custom general appearance - foreground color (text-elements and icons)
+        //DocumentVerificationBaseView.jumioAppearance().foregroundColor = .red
+        
+        // - Custom general appearance - font
+        //The font has to be loaded upfront within the mainBundle before initializing the SDK
+        //DocumentVerificationBaseView.jumioAppearance().customLightFontName = "<your-font-name-loaded-in-your-app>"
+        //DocumentVerificationBaseView.jumioAppearance().customRegularFontName = "<your-font-name-loaded-in-your-app>"
+        //DocumentVerificationBaseView.jumioAppearance().customMediumFontName = "<your-font-name-loaded-in-your-app>"
+        //DocumentVerificationBaseView.jumioAppearance().customBoldFontName = "<your-font-name-loaded-in-your-app>"
+        //DocumentVerificationBaseView.jumioAppearance().customItalicFontName = "<your-font-name-loaded-in-your-app>"
+        
+        // - Custom Positive Button Background Colors, custom class has to be imported (the same applies to DocumentVerificationNegativeButton)
+        //DocumentVerificationPositiveButton.jumioAppearance().setBackgroundColor(.cyan, for: .normal)
+        //DocumentVerificationPositiveButton.jumioAppearance().setBackgroundColor(.blue, for: .highlighted)
+        
+        //Custom Positive Button Background Image, custom class has to be imported
+        //DocumentVerificationPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: .normal)
+        //DocumentVerificationPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: .highlighted)
+        
+        //Custom Positive Button Title Colors, custom class has to be imported
+        //DocumentVerificationPositiveButton.jumioAppearance().setTitleColor(.gray, for: .normal)
+        //DocumentVerificationPositiveButton.jumioAppearance().setTitleColor(.magenta, for: .highlighted)
+        
+        //Custom Positive Button Title Colors, custom class has to be imported
+        //DocumentVerificationPositiveButton.jumioAppearance().borderColor = .green
+        
+        //You can get the current SDK version using the method below.
+        //print("\(DocumentVerificationViewController.sdkVersion())")
+        
+        //Perform the following call as soon as your app’s view controller is initialized. Create the DocumentVerificationViewController instance by providing your Configuration with required API token, API secret and a delegate object.
         do {
             try ObjcExceptionHelper.catchException {
                 self.documentVerificationViewController = DocumentVerificationViewController.init(configuration: config)
@@ -74,16 +127,6 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
             let err = error as NSError
             self.showAlert(withTitle: err.localizedDescription, message: err.userInfo[NSLocalizedFailureReasonErrorKey] as? String ?? "")
         }
-        
-        //Localizing labels
-        //All label texts and button titles can be changed and localized using the Localizable-DocumentVerification.strings file. Just adapt the values to your required language and use this file in your app.
-        
-        //Customizing look and feel
-        //The SDK can be customized via UIAppearance to fit your application’s look and feel.
-        //The API from Netverify is re-used to apply visual customization for DocumentVerification. Please have a look at the above section where DocumentVerificationViewController is created and configured.
-        
-        //You can get the current SDK version using the method below.
-        //print("\(DocumentVerificationViewController.sdkVersion())")
     }
     
     @IBAction func startDocumentVerification() -> Void {

@@ -35,6 +35,7 @@
     
     //Set the dataCenter; default is JumioDataCenterUS
     //config.dataCenter = JumioDataCenterEU;
+    //config.dataCenter = JumioDataCenterSG;
     
     //Use the following property to enable offline scanning.
     //config.offlineToken = @"YOUR_OFFLINE_TOKEN";
@@ -84,16 +85,6 @@
     //Only set this property to YES if you are asked by our Jumio support personal.
     //config.sendDebugInfoToJumio = YES;
     
-    //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required API token, API secret and a delegate object.
-    @try {
-        self.netverifyViewController = [[NetverifyViewController alloc] initWithConfiguration:config];
-    } @catch (NSException *exception) {
-        
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:exception.name message:exception.reason preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
-    
     //Localizing labels
     //All label texts and button titles can be changed and localized using the Localizable-Netverify.strings file. Just adapt the values to your required language and use this file in your app.
     
@@ -110,6 +101,9 @@
     
     // - Custom general appearance - deactivate blur
     //[[NetverifyBaseView jumioAppearance] setDisableBlur:@YES];
+    
+    // - Custom general appearance - enable dark mode
+    //[[NetverifyBaseView jumioAppearance] setEnableDarkMode:@YES];
     
     // - Custom general appearance - background color
     //[[NetverifyBaseView jumioAppearance] setBackgroundColor: [UIColor grayColor]];
@@ -171,6 +165,16 @@
     
     //You can get the current SDK version using the method below.
     //NSLog(@"%@", [NetverifyViewController sdkVersion]);
+    
+    //Perform the following call as soon as your app’s view controller is initialized. Create the NetverifyViewController instance by providing your Configuration with required API token, API secret and a delegate object.
+    @try {
+        self.netverifyViewController = [[NetverifyViewController alloc] initWithConfiguration:config];
+    } @catch (NSException *exception) {
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:exception.name message:exception.reason preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 - (IBAction) startNetverify: (id) sender {

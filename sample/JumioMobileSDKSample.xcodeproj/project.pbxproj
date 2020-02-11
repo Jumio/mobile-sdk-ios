@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0504CF7123D5CFD90058C942 /* ZoomAuthentication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0504CF7023D5CFD90058C942 /* ZoomAuthentication.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0504CF7423D5D84C0058C942 /* ZoomAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0504CF7023D5CFD90058C942 /* ZoomAuthentication.framework */; };
+		0535EC1623CE553000C6DEB0 /* DocumentVerification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0535EC1523CE553000C6DEB0 /* DocumentVerification.framework */; };
+		0535EC1723CE553300C6DEB0 /* DocumentVerification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0535EC1523CE553000C6DEB0 /* DocumentVerification.framework */; };
+		0535EC1823CE57D300C6DEB0 /* DocumentVerification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0535EC1523CE553000C6DEB0 /* DocumentVerification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0535EC1923CE583D00C6DEB0 /* DocumentVerification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0535EC1523CE553000C6DEB0 /* DocumentVerification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3078F8B52202044A003B2974 /* NetverifyBarcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F8B422020449003B2974 /* NetverifyBarcode.framework */; };
 		3078F8B62202044A003B2974 /* NetverifyBarcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F8B422020449003B2974 /* NetverifyBarcode.framework */; };
 		30CEB9A32208A88A00322964 /* NetverifyBarcode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F8B422020449003B2974 /* NetverifyBarcode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -57,20 +63,20 @@
 		54D66D64206D54C6009640C2 /* VerifyInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D66D5E206D54C6009640C2 /* VerifyInfoView.xib */; };
 		54D66D65206D54C6009640C2 /* VerifyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D66D5F206D54C6009640C2 /* VerifyInfoView.swift */; };
 		54D66D67206D54D0009640C2 /* NetverifyCustomUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D66D66206D54D0009640C2 /* NetverifyCustomUIViewController.swift */; };
-		77BA608421E5FAAD0095300B /* ZoomAuthenticationHybrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */; };
-		77BA608721E5FABF0095300B /* ZoomAuthenticationHybrid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		77BA608A21E5FAD10095300B /* ZoomAuthenticationHybrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */; };
-		77BA608B21E5FAD10095300B /* ZoomAuthenticationHybrid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77CCE6041FD93EE9000701C6 /* ObjcExceptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */; };
 		77D0900821E76B8B001DE743 /* NetverifyFace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; };
 		77D0900B21E76B98001DE743 /* NetverifyFace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77D0900C21E76BA3001DE743 /* NetverifyFace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; };
 		77D0900D21E76BA3001DE743 /* NetverifyFace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77D0900721E76B8B001DE743 /* NetverifyFace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		963F1355221C20FE00451ADA /* AuthenticationStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F1354221C20FE00451ADA /* AuthenticationStartViewController.swift */; };
+		9640B31F23D1D507002874A3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9640B31E23D1D507002874A3 /* Launch Screen.storyboard */; };
+		9640B32123D1D900002874A3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9640B31E23D1D507002874A3 /* Launch Screen.storyboard */; };
 		96851BDC2240F847008D9DB4 /* HelpAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96851BDB2240F847008D9DB4 /* HelpAnimationView.swift */; };
 		96851BDE2240F870008D9DB4 /* HelpAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96851BDD2240F870008D9DB4 /* HelpAnimationView.xib */; };
 		9690B278221D649500F04D76 /* AuthenticationStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9690B277221D649500F04D76 /* AuthenticationStartViewController.m */; };
 		9694C9A4206156E9004CC4BA /* BAMCheckout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9694C9A3206156E9004CC4BA /* BAMCheckout.framework */; };
+		96A6309C23D6FA4C008CEE2B /* ZoomAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0504CF7023D5CFD90058C942 /* ZoomAuthentication.framework */; };
+		96A6309D23D6FA4C008CEE2B /* ZoomAuthentication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0504CF7023D5CFD90058C942 /* ZoomAuthentication.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		96FE3624206A5BBB0099626C /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; };
 		EE01EEF71924A3E200B7CC49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEF61924A3E200B7CC49 /* main.m */; };
 		EE01EEFB1924A3E300B7CC49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01EEFA1924A3E300B7CC49 /* AppDelegate.m */; };
@@ -86,11 +92,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0535EC1923CE583D00C6DEB0 /* DocumentVerification.framework in Embed Frameworks */,
 				54042A891FEBDED400626D55 /* MicroBlink.framework in Embed Frameworks */,
 				30CEB9A32208A88A00322964 /* NetverifyBarcode.framework in Embed Frameworks */,
-				77BA608721E5FABF0095300B /* ZoomAuthenticationHybrid.framework in Embed Frameworks */,
 				54042A871FEBDED400626D55 /* JumioCore.framework in Embed Frameworks */,
 				54042A851FEBDED400626D55 /* BAMCheckout.framework in Embed Frameworks */,
+				96A6309D23D6FA4C008CEE2B /* ZoomAuthentication.framework in Embed Frameworks */,
 				77D0900B21E76B98001DE743 /* NetverifyFace.framework in Embed Frameworks */,
 				54042A8B1FEBDED400626D55 /* Netverify.framework in Embed Frameworks */,
 			);
@@ -103,8 +110,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0535EC1823CE57D300C6DEB0 /* DocumentVerification.framework in Embed Frameworks */,
+				0504CF7123D5CFD90058C942 /* ZoomAuthentication.framework in Embed Frameworks */,
 				54042A931FEBDEF500626D55 /* MicroBlink.framework in Embed Frameworks */,
-				77BA608B21E5FAD10095300B /* ZoomAuthenticationHybrid.framework in Embed Frameworks */,
 				54042A911FEBDEF500626D55 /* JumioCore.framework in Embed Frameworks */,
 				54042A8F1FEBDEF500626D55 /* BAMCheckout.framework in Embed Frameworks */,
 				77D0900D21E76BA3001DE743 /* NetverifyFace.framework in Embed Frameworks */,
@@ -117,6 +125,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0504CF7023D5CFD90058C942 /* ZoomAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomAuthentication.framework; path = ../frameworks/ZoomAuthentication.framework; sourceTree = "<group>"; };
+		0535EC1523CE553000C6DEB0 /* DocumentVerification.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentVerification.framework; path = ../frameworks/DocumentVerification.framework; sourceTree = "<group>"; };
 		3078F8B422020449003B2974 /* NetverifyBarcode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetverifyBarcode.framework; path = ../frameworks/NetverifyBarcode.framework; sourceTree = "<group>"; };
 		54042A751FEBDEC900626D55 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../frameworks/MicroBlink.framework; sourceTree = "<group>"; };
 		54042A761FEBDEC900626D55 /* JumioCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioCore.framework; path = ../frameworks/JumioCore.framework; sourceTree = "<group>"; };
@@ -165,11 +175,11 @@
 		54F270E9210B0CFB0070FE65 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../frameworks/zh-Hans.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
 		54F270EA210B0CFD0070FE65 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "../frameworks/es.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
 		54F270EB210B0CFF0070FE65 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "../frameworks/nl.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
-		77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomAuthenticationHybrid.framework; path = ../frameworks/ZoomAuthenticationHybrid.framework; sourceTree = "<group>"; };
 		77CCE6021FD93EE8000701C6 /* ObjcExceptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjcExceptionHelper.h; path = SampleSwift/ObjcExceptionHelper.h; sourceTree = SOURCE_ROOT; };
 		77CCE6031FD93EE9000701C6 /* ObjcExceptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjcExceptionHelper.m; path = SampleSwift/ObjcExceptionHelper.m; sourceTree = SOURCE_ROOT; };
 		77D0900721E76B8B001DE743 /* NetverifyFace.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetverifyFace.framework; path = ../frameworks/NetverifyFace.framework; sourceTree = "<group>"; };
 		963F1354221C20FE00451ADA /* AuthenticationStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationStartViewController.swift; path = SampleSwift/AuthenticationStartViewController.swift; sourceTree = SOURCE_ROOT; };
+		9640B31E23D1D507002874A3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		96467C9522F47726004B2901 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = "../frameworks/it.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
 		96467C9622F47736004B2901 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = "../frameworks/it.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
 		96467C9722F47740004B2901 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = "../frameworks/pt.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
@@ -202,11 +212,12 @@
 			files = (
 				77D0900C21E76BA3001DE743 /* NetverifyFace.framework in Frameworks */,
 				3078F8B62202044A003B2974 /* NetverifyBarcode.framework in Frameworks */,
+				0504CF7423D5D84C0058C942 /* ZoomAuthentication.framework in Frameworks */,
 				96FE3624206A5BBB0099626C /* Netverify.framework in Frameworks */,
 				9694C9A4206156E9004CC4BA /* BAMCheckout.framework in Frameworks */,
+				0535EC1723CE553300C6DEB0 /* DocumentVerification.framework in Frameworks */,
 				54042A921FEBDEF500626D55 /* MicroBlink.framework in Frameworks */,
 				54042A901FEBDEF500626D55 /* JumioCore.framework in Frameworks */,
-				77BA608A21E5FAD10095300B /* ZoomAuthenticationHybrid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,9 +227,10 @@
 			files = (
 				54042A881FEBDED400626D55 /* MicroBlink.framework in Frameworks */,
 				3078F8B52202044A003B2974 /* NetverifyBarcode.framework in Frameworks */,
-				77BA608421E5FAAD0095300B /* ZoomAuthenticationHybrid.framework in Frameworks */,
 				54042A861FEBDED400626D55 /* JumioCore.framework in Frameworks */,
+				0535EC1623CE553000C6DEB0 /* DocumentVerification.framework in Frameworks */,
 				54042A841FEBDED400626D55 /* BAMCheckout.framework in Frameworks */,
+				96A6309C23D6FA4C008CEE2B /* ZoomAuthentication.framework in Frameworks */,
 				77D0900821E76B8B001DE743 /* NetverifyFace.framework in Frameworks */,
 				54042A8A1FEBDED400626D55 /* Netverify.framework in Frameworks */,
 			);
@@ -360,6 +372,16 @@
 			name = Authentication;
 			sourceTree = "<group>";
 		};
+		9640B32023D1D8D4002874A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9640B31E23D1D507002874A3 /* Launch Screen.storyboard */,
+				547B47021F46F80E0029781C /* Images.xcassets */,
+				54CD99811F4708BC00E9CB14 /* exportOptions.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		9690B275221D643700F04D76 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,8 +402,7 @@
 				54A749D41E56189F0060CF63 /* General classes */,
 				EE01EEF01924A3E200B7CC49 /* SampleObjC */,
 				547B46EA1F46F5050029781C /* SampleSwift */,
-				547B47021F46F80E0029781C /* Images.xcassets */,
-				54CD99811F4708BC00E9CB14 /* exportOptions.plist */,
+				9640B32023D1D8D4002874A3 /* Supporting Files */,
 				EE01EEE91924A3E200B7CC49 /* Frameworks */,
 				EE01EEE81924A3E200B7CC49 /* Products */,
 			);
@@ -429,9 +450,10 @@
 		EE8E78101926419400896C42 /* JumioMobileSDK */ = {
 			isa = PBXGroup;
 			children = (
+				0535EC1523CE553000C6DEB0 /* DocumentVerification.framework */,
+				0504CF7023D5CFD90058C942 /* ZoomAuthentication.framework */,
 				3078F8B422020449003B2974 /* NetverifyBarcode.framework */,
 				77D0900721E76B8B001DE743 /* NetverifyFace.framework */,
-				77BA608321E5FAAD0095300B /* ZoomAuthenticationHybrid.framework */,
 				54042A791FEBDECA00626D55 /* BAMCheckout.framework */,
 				54042A761FEBDEC900626D55 /* JumioCore.framework */,
 				54042A751FEBDEC900626D55 /* MicroBlink.framework */,
@@ -539,6 +561,7 @@
 				54D66D61206D54C6009640C2 /* VerificationFinishedView.xib in Resources */,
 				54CD99921F4AFE4600E9CB14 /* CustomScanOverlayViewController.xib in Resources */,
 				96851BDE2240F870008D9DB4 /* HelpAnimationView.xib in Resources */,
+				9640B31F23D1D507002874A3 /* Launch Screen.storyboard in Resources */,
 				54CD99941F4AFEA900E9CB14 /* CustomScanOverlayViewControllerSwift.xib in Resources */,
 				545F7A6420A1E1B2007EBCE7 /* Localizable-Netverify.strings in Resources */,
 				54CD99831F4708BC00E9CB14 /* exportOptions.plist in Resources */,
@@ -555,6 +578,7 @@
 			files = (
 				545F7A5F20A1E1B2007EBCE7 /* Localizable-BAMCheckout.strings in Resources */,
 				547B47031F46F80E0029781C /* Images.xcassets in Resources */,
+				9640B32123D1D900002874A3 /* Launch Screen.storyboard in Resources */,
 				545F7A6120A1E1B2007EBCE7 /* Localizable-DocumentVerification.strings in Resources */,
 				54CD99821F4708BC00E9CB14 /* exportOptions.plist in Resources */,
 				545F7A6320A1E1B2007EBCE7 /* Localizable-Netverify.strings in Resources */,
@@ -735,7 +759,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -778,7 +801,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -928,9 +950,7 @@
 		EE01EF1D1924A3E300B7CC49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
@@ -966,9 +986,7 @@
 		EE01EF1E1924A3E300B7CC49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";

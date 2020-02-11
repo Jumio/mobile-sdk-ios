@@ -26,7 +26,7 @@ Whenever an exception is thrown, the [`AuthenticationController`](https://jumio.
 AuthenticationConfiguration *config = [AuthenticationConfiguration new];
 config.apiToken = @"YOURAPITOKEN";
 config.apiSecret = @"YOURAPISECRET";
-config.dataCenter = JumioDataCenterEU; // Change this parameter if your account is in the EU data center. Default is US.
+config.dataCenter = JumioDataCenterEU; // Set this parameter to match the data center where your account is registered.
 config.delegate = self;
 
 AuthenticationController *authenticationController;
@@ -36,6 +36,8 @@ AuthenticationController *authenticationController;
 	// HANDLE EXCEPTION
 }
 ```
+
+The default data center is JumioDataCenterUS. If your customer account is in the EU data center, use JumioDataCenterEU instead. Alternatively use JumioDataCenterSG for Singapore.
 
 ## Configuration
 In order to connect the Authentication transaction to a specific Netverify user identity the parameter [`enrollmentTransactionReference`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/AuthenticationConfiguration.html#/c:objc(cs)AuthenticationConfiguration(py)enrollmentTransactionReference) must be set.
@@ -66,11 +68,13 @@ config.userReference = @"USERREFERENCE";
 
 ## Customization
 The SDK can be customized to fit your application’s look and feel via the UIAppearance pattern. Check out our sample project to find out how to use it.
-- General: disable blur, background color, font
+- General: disable blur, blur style, background color, foreground color, font
+- Navigation bar: title image, title color, tint color and bar tint color
 - Scan overlay: oval color, progress color, feedback text color, feedback background color
-- Navigationbar: title image, title color, tint color and bar tint color
 - Positive button (Submit): title color and background
-- Negative button (Cancel): title color and background
+- Negative button (Cancel): title color and background 
+
+__Note:__ Customizations should be applied before the SDK is initialized.
 
 ### Customization tool
 [Jumio Surface](https://jumio.github.io/surface-ios) is a web tool that allows you to apply and visualize, in real-time, all available customization options. It also provides an export feature to save your applied changes, so you can import them directly into your codebase.
@@ -127,7 +131,6 @@ The following tables give information on the specification of all transaction da
 | A[x][yyyy]| We have encountered a network communication problem | Retry possible, user decided to cancel |
 | B[x][yyyy]| Authentication failed | Secure connection could not be established, retry impossible |
 | C[x]0401 | Authentication failed | API credentials invalid, retry impossible |
-| D[x]0403 | Authentication failed | Wrong API credentials used, retry impossible |
 | E[x]0000 | No Internet connection available | Retry possible, user decided to cancel |
 | F00000 | Scanning not available at this time, please contact the app vendor | Resources cannot be loaded, retry impossible |
 | G00000 | Cancelled by end-user | No error occurred |

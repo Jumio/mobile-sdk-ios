@@ -4,6 +4,38 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.5.0
+
+#### DocumentVerification separation
+Logic for DocumentVerification was split into a separate framework. Make sure that DocumentVerification.framework is linked in your project when updating to 3.5.0.
+
+#### Cocoapods
+
+* New cocoapods subspec `JumioMobileSDK/DocumentVerification` was created.
+
+#### Changes to visual customization
+`DocumentVerificationBaseView` to be used instead of  `NetverifyBaseView`
+`DocumentVerificationNegativeButton` to be used instead of  `NetverifyPositiveButton`
+`DocumentVerificationPositiveButton` to be used instead of  `BAMCheckoutNegativeButton`
+
+
+#### Localizable Strings
+
+New Added Keys 
+
+`dv.scan-view.accessibility-label.button.switch-to-front-camera`
+`dv.scan-view.accessibility-label.button.switch-to-back-camera`
+`dv.scan-view.accessibility-label.flash-button.activate`
+`dv.scan-view.accessibility-label.flash-button.deactivate`
+`dv.scan-view.accessibility-label.button.take-photo`
+`dv.scan-options.accessibility-label.close-button`
+
+#### Error codes
+Error code D (Wrong API credentials used, retry impossible) has been removed
+
+#### Dark mode
+Added additional theme to support dark mode. Set [`enableDarkMode`](https://jumio.github.io/Mobile-SDK-IOS_pilot/DocumentVerification/Classes/JumioBaseView.html#/c:objc(cs)JumioBaseView(py)enableDarkMode) to `true` to change blur style and the standard foreground color.
+
 ## 3.4.2
 No backward incompatible changes.
 
@@ -32,7 +64,7 @@ No backward incompatible changes.
 
 #### NavigationBar customization
 `UINavigationBar+NetverifyAppearance.h` was renamed to `UINavigationBar+JumioAppearance.h` and moved to JumioCore.framework</br>
-`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
+`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/Mobile-SDK-IOS_pilot/DocumentVerification/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
 
 #### Changes to device information
 `JMDeviceInfo` class has been renamed to `JumioDeviceInfo`
@@ -59,7 +91,7 @@ No backward incompatible changes.
 The document type for US social security card (USSS) was removed.
 
 #### Default Settings
-The default value for [`enableExtraction`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/DocumentVerificationConfiguration.html#/c:objc(cs)DocumentVerificationConfiguration(py)enableExtraction) was changed to `YES`. Please make sure that it is explicitly set to NO in case a scan without extraction should be performed. 
+The default value for [`enableExtraction`](https://jumio.github.io/Mobile-SDK-IOS_pilot/DocumentVerification/Classes/DocumentVerificationConfiguration.html#/c:objc(cs)DocumentVerificationConfiguration(py)enableExtraction) was changed to `YES`. Please make sure that it is explicitly set to NO in case a scan without extraction should be performed. 
 
 ## 2.13.0
 

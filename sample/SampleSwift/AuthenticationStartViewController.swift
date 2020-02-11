@@ -68,12 +68,13 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         
         //Set the dataCenter; default is JumioDataCenterUS
         //config.dataCenter = JumioDataCenterEU
+        //config.dataCenter = JumioDataCenterSG
         
         if (withCustomUI) {
             config.authenticationScanViewControllerDelegate = self
             
             JumioBaseView.jumioAppearance().disableBlur = true
-            JumioBaseView.jumioAppearance().foregroundColor = UIColor.white
+            JumioBaseView.jumioAppearance().foregroundColor = .white
             JumioBaseView.jumioAppearance().backgroundColor = UIColor.init(red: 44/250.0, green: 152/250.0, blue: 240/250.0, alpha: 1.0)
         }
         
@@ -84,7 +85,7 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         //config.callbackUrl = "https://www.example.com"
         
         //Configure your desired status bar style
-        //config.statusBarStyle = UIStatusBarStyleLightContent
+        //config.statusBarStyle = .lightContent
         
         //Localizing labels
         //All label texts and button titles can be changed and localized using the Localizable-Authentication.strings file. Just adapt the values to your required language and use this file in your app.
@@ -94,44 +95,47 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         //Please note, that only the below listed UIAppearance selectors are supported and taken into consideration. Experimenting with other UIAppearance or not UIAppearance selectors may cause unexpected behaviour or crashes both in the SDK or in your application. This is best avoided.
         
         // - Navigation bar: tint color, title color, title image
-        //UINavigationBar.jumioAppearance().tintColor = UIColor.yellow
-        //UINavigationBar.jumioAppearance().barTintColor = UIColor.red
-        //UINavigationBar.jumioAppearance().titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
+        //UINavigationBar.jumioAppearance().tintColor = .yellow
+        //UINavigationBar.jumioAppearance().barTintColor = .red
+        //UINavigationBar.jumioAppearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white] as [NSAttributedString.Key : Any]
         
-        //AuthenticationNavigationBarTitleImageView.jumioAppearance().titleImage = UIImage.init(named: "<your-navigation-bar-title-image>")
+        //JumioNavigationBarTitleImageView.jumioAppearance().titleImage = UIImage.init(named: "<your-navigation-bar-title-image>")
         
         // - Custom general appearance - deactivate blur
         //JumioBaseView.jumioAppearance().disableBlur = true
         
+        // - Custom general appearance - enable dark mode
+        //JumioBaseView.jumioAppearance().enableDarkMode = true
+        
         // - Custom general appearance - background color
-        //JumioBaseView.jumioAppearance().backgroundColor = UIColor.lightGray
+        //JumioBaseView.jumioAppearance().backgroundColor = .lightGray
         
         // - Custom general appearance - foreground color (text-elements and icons)
-        //JumioBaseView.jumioAppearance().foregroundColor = UIColor.red
+        //JumioBaseView.jumioAppearance().foregroundColor = .red
         
         // - Custom Positive Button Background Colors, custom class has to be imported (the same applies to JumioNegativeButton)
-        //JumioPositiveButton.jumioAppearance().setBackgroundColor(UIColor.cyan, for: UIControlState.normal)
-        //JumioPositiveButton.jumioAppearance().setBackgroundColor(UIColor.blue, for: UIControlState.highlighted)
+        //JumioPositiveButton.jumioAppearance().setBackgroundColor(.cyan, for: .normal)
+        //JumioPositiveButton.jumioAppearance().setBackgroundColor(.blue, for: .highlighted)
         
         //Custom Positive Button Background Image, custom class has to be imported
-        //JumioPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.normal)
-        //JumioPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.highlighted)
+        //JumioPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: .normal)
+        //JumioPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: .highlighted)
         
         //Custom Positive Button Title Colors, custom class has to be imported
-        //JumioPositiveButton.jumioAppearance().setTitleColor(UIColor.gray, for: UIControlState.normal)
-        //JumioPositiveButton.jumioAppearance().setTitleColor(UIColor.magenta, for: UIControlState.highlighted)
+        //JumioPositiveButton.jumioAppearance().setTitleColor(.gray, for: .normal)
+        //JumioPositiveButton.jumioAppearance().setTitleColor(.magenta, for: .highlighted)
         
         //Custom Positive Button Title Colors, custom class has to be imported
-        //JumioPositiveButton.jumioAppearance().borderColor = UIColor.green
+        //JumioPositiveButton.jumioAppearance().borderColor = .green
         
         // Color for the face oval outline
-        //JumioScanOverlayView.jumioAppearance().faceOvalColor = UIColor.orange
+        //JumioScanOverlayView.jumioAppearance().faceOvalColor = .orange
         // Color for the progress bars
-        //JumioScanOverlayView.jumioAppearance().faceProgressColor = UIColor.purple
+        //JumioScanOverlayView.jumioAppearance().faceProgressColor = .purple
         // Color for the background of the feedback view
-        //JumioScanOverlayView.jumioAppearance().faceFeedbackBackgroundColor = UIColor.yellow
+        //JumioScanOverlayView.jumioAppearance().faceFeedbackBackgroundColor = .yellow
         // Color for the text of the feedback view
-        //JumioScanOverlayView.jumioAppearance().faceFeedbackTextColor = UIColor.brown
+        //JumioScanOverlayView.jumioAppearance().faceFeedbackTextColor = .brown
         
         // - Custom general appearance - font
         //The font has to be loaded upfront within the mainBundle before initializing the SDK
@@ -224,7 +228,7 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
     func authenticationScanViewControllerDidStartBiometricAnalysis(_ authenticationScanViewController: AuthenticationScanViewController) {
         self.activityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
         self.activityIndicatorView?.translatesAutoresizingMaskIntoConstraints = false
-        self.activityIndicatorView?.color = UIColor.darkGray
+        self.activityIndicatorView?.color = .darkGray
         self.activityIndicatorView?.startAnimating()
         
         authenticationScanViewController.customOverlayLayer.addSubview(self.activityIndicatorView!)

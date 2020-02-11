@@ -63,6 +63,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         
         //Set the dataCenter; default is JumioDataCenterUS
         //config.dataCenter = JumioDataCenterEU
+        //config.dataCenter = JumioDataCenterSG
         
         //Use the following property to enable offline scanning.
         //config.offlineToken = "YOUR_OFFLINE_TOKEN"
@@ -109,7 +110,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //config.cameraPosition = JumioCameraPositionFront
         
         //Configure your desired status bar style
-        //config.statusBarStyle = UIStatusBarStyle.lightContent
+        //config.statusBarStyle = .lightContent
         
         //Use the following method to only support IDs where data can be extracted on mobile only
         //config.dataExtractionOnMobileOnly = true
@@ -127,33 +128,36 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         
         // - Navigation bar: tint color, title color, title image
         
-        //UINavigationBar.jumioAppearance().tintColor = UIColor.yellow
-        //UINavigationBar.jumioAppearance().barTintColor = UIColor.red
-        //UINavigationBar.jumioAppearance().titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
+        //UINavigationBar.jumioAppearance().tintColor = .yellow
+        //UINavigationBar.jumioAppearance().barTintColor = .red
+        //UINavigationBar.jumioAppearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white] as [NSAttributedString.Key : Any]
         
         //JumioNavigationBarTitleImageView.jumioAppearance().titleImage = UIImage.init(named: "<your-navigation-bar-title-image>")
         
         // - Custom general appearance - deactivate blur
         //NetverifyBaseView.jumioAppearance().disableBlur = true
         
+        // - Custom general appearance - enable dark mode
+        //NetverifyBaseView.jumioAppearance().enableDarkMode = true
+        
         // - Custom general appearance - background color
-        //NetverifyBaseView.jumioAppearance().backgroundColor = UIColor.lightGray
+        //NetverifyBaseView.jumioAppearance().backgroundColor = .lightGray
         
         // - Custom general appearance - foreground color (text-elements and icons)
-        //NetverifyBaseView.jumioAppearance().foregroundColor = UIColor.red
+        //NetverifyBaseView.jumioAppearance().foregroundColor = .red
         
         // - Scan options Button/Header Background, Icon and Title Colors, custom class has to be imported
-        //NetverifyDocumentSelectionButton.jumioAppearance().setBackgroundColor(UIColor.yellow, for: UIControlState.normal)
-        //NetverifyDocumentSelectionButton.jumioAppearance().setBackgroundColor(UIColor.red, for: UIControlState.highlighted)
-        //NetverifyDocumentSelectionHeaderView.jumioAppearance().backgroundColor = UIColor.brown
+        //NetverifyDocumentSelectionButton.jumioAppearance().setBackgroundColor(.yellow, for: .normal)
+        //NetverifyDocumentSelectionButton.jumioAppearance().setBackgroundColor(.red, for: .highlighted)
+        //NetverifyDocumentSelectionHeaderView.jumioAppearance().backgroundColor = .brown
 
-        //NetverifyDocumentSelectionButton.jumioAppearance().setIconColor(UIColor.red, for: UIControlState.normal)
-        //NetverifyDocumentSelectionButton.jumioAppearance().setIconColor(UIColor.yellow, for: UIControlState.highlighted)
-        //NetverifyDocumentSelectionHeaderView.jumioAppearance().iconColor = UIColor.magenta
+        //NetverifyDocumentSelectionButton.jumioAppearance().setIconColor(.red, for: .normal)
+        //NetverifyDocumentSelectionButton.jumioAppearance().setIconColor(.yellow, for: .highlighted)
+        //NetverifyDocumentSelectionHeaderView.jumioAppearance().iconColor = .magenta
         
-        //NetverifyDocumentSelectionButton.jumioAppearance().setTitleColor(UIColor.red, for: UIControlState.normal)
-        //NetverifyDocumentSelectionButton.jumioAppearance().setTitleColor(UIColor.yellow, for: UIControlState.highlighted)
-        //NetverifyDocumentSelectionHeaderView.jumioAppearance().titleColor = UIColor.magenta
+        //NetverifyDocumentSelectionButton.jumioAppearance().setTitleColor(.red, for: .normal)
+        //NetverifyDocumentSelectionButton.jumioAppearance().setTitleColor(.yellow, for: .highlighted)
+        //NetverifyDocumentSelectionHeaderView.jumioAppearance().titleColor = .magenta
         
         // - Custom general appearance - font
         //The font has to be loaded upfront within the mainBundle before initializing the SDK
@@ -164,35 +168,35 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //NetverifyBaseView.jumioAppearance().customItalicFontName = "<your-font-name-loaded-in-your-app>"
         
         // - Custom Positive Button Background Colors, custom class has to be imported (the same applies to NetverifyNegativeButton and NetverifyFallbackButton)
-        //NetverifyPositiveButton.jumioAppearance().setBackgroundColor(UIColor.cyan, for: UIControlState.normal)
-        //NetverifyPositiveButton.jumioAppearance().setBackgroundColor(UIColor.blue, for: UIControlState.highlighted)
+        //NetverifyPositiveButton.jumioAppearance().setBackgroundColor(.cyan, for: .normal)
+        //NetverifyPositiveButton.jumioAppearance().setBackgroundColor(.blue, for: .highlighted)
         
         //Custom Positive Button Background Image, custom class has to be imported
-        //NetverifyPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.normal)
-        //NetverifyPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: UIControlState.highlighted)
+        //NetverifyPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: .normal)
+        //NetverifyPositiveButton.jumioAppearance().setBackgroundImage(UIImage.init(named: "<your-custom-image>"), for: .highlighted)
         
         //Custom Positive Button Title Colors, custom class has to be imported
-        //NetverifyPositiveButton.jumioAppearance().setTitleColor(UIColor.gray, for: UIControlState.normal)
-        //NetverifyPositiveButton.jumioAppearance().setTitleColor(UIColor.magenta, for: UIControlState.highlighted)
+        //NetverifyPositiveButton.jumioAppearance().setTitleColor(.gray, for: .normal)
+        //NetverifyPositiveButton.jumioAppearance().setTitleColor(.magenta, for: .highlighted)
         
         //Custom Positive Button Title Colors, custom class has to be imported
-        //NetverifyPositiveButton.jumioAppearance().borderColor = UIColor.green
+        //NetverifyPositiveButton.jumioAppearance().borderColor = .green
         
         // - Custom Scan Overlay Colors, custom class has to be imported
-        //NetverifyScanOverlayView.jumioAppearance().colorOverlayStandard = UIColor.blue
-        //NetverifyScanOverlayView.jumioAppearance().colorOverlayValid = UIColor.green
-        //NetverifyScanOverlayView.jumioAppearance().colorOverlayInvalid = UIColor.red
-        //NetverifyScanOverlayView.jumioAppearance().scanBackgroundColor = UIColor.orange
-        //NetverifyScanOverlayView.jumioAppearance().colorOverlayFill = UIColor.green
+        //NetverifyScanOverlayView.jumioAppearance().colorOverlayStandard = .blue
+        //NetverifyScanOverlayView.jumioAppearance().colorOverlayValid = .green
+        //NetverifyScanOverlayView.jumioAppearance().colorOverlayInvalid = .red
+        //NetverifyScanOverlayView.jumioAppearance().scanBackgroundColor = .orange
+        //NetverifyScanOverlayView.jumioAppearance().colorOverlayFill = .green
         
         // Color for the face oval outline
-        //NetverifyScanOverlayView.jumioAppearance().faceOvalColor = UIColor.orange
+        //NetverifyScanOverlayView.jumioAppearance().faceOvalColor = .orange
         // Color for the progress bars
-        //NetverifyScanOverlayView.jumioAppearance().faceProgressColor = UIColor.purple
+        //NetverifyScanOverlayView.jumioAppearance().faceProgressColor = .purple
         // Color for the background of the feedback view
-        //NetverifyScanOverlayView.jumioAppearance().faceFeedbackBackgroundColor = UIColor.yellow
+        //NetverifyScanOverlayView.jumioAppearance().faceFeedbackBackgroundColor = .yellow
         // Color for the text of the feedback view
-        //NetverifyScanOverlayView.jumioAppearance().faceFeedbackTextColor = UIColor.brown
+        //NetverifyScanOverlayView.jumioAppearance().faceFeedbackTextColor = .brown
 
         //You can get the current SDK version using the method below.
         //print("\(NetverifyViewController.sdkVersion())")
@@ -218,7 +222,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         let config  = self.createNetverifyConfiguration()
         customUIViewController.requiresVerification = config.enableVerification
         NetverifyBaseView.jumioAppearance().disableBlur = true
-        NetverifyBaseView.jumioAppearance().foregroundColor = UIColor.white
+        NetverifyBaseView.jumioAppearance().foregroundColor = .white
         NetverifyBaseView.jumioAppearance().backgroundColor = UIColor.init(red: 44/250.0, green: 152/250.0, blue: 240/250.0, alpha: 1.0)
         
         //Set the delegate that implements NetverifyViewControllerDelegate
