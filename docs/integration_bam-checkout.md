@@ -19,7 +19,7 @@ For breaking technical changes, please read our [transition guide](transition-gu
 The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for BAM Checkout.
 
 ## Initialization
-Log into your Jumio Customer Portal and you can find your API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the [`BAMCheckoutConfiguration`](https://jumio.github.io/Mobile-SDK-IOS_pilot/BAMCheckout/Classes/BAMCheckoutConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the [`BAMCheckoutViewController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/BAMCheckout/Classes/BAMCheckoutViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `BAMCheckoutConfiguration` instance is passed to the initializer.
+Log into your Jumio Customer Portal and you can find your API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the [`BAMCheckoutConfiguration`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Classes/BAMCheckoutConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the [`BAMCheckoutViewController`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Classes/BAMCheckoutViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `BAMCheckoutConfiguration` instance is passed to the initializer.
 
 ```
 BAMCheckoutConfiguration *config = [BAMCheckoutConfiguration new];
@@ -53,7 +53,7 @@ We advice to prevent our SDK to be run on jailbroken device. Either use the meth
 
 ### Card details
 
-BAM Checkout supports Visa, MasterCard, American Express, JCB, China UnionPay, Discover and Diners. To restrict supported card types, set a bitmask of [`BAMCheckoutCreditCardTypes`](https://jumio.github.io/Mobile-SDK-IOS_pilot/BAMCheckout/BAMCheckout%20Type%20Definition.html#/c:BAMCheckoutCardInformation.h@T@BAMCheckoutCreditCardTypes) to the property `supportedCreditCardTypes`.
+BAM Checkout supports Visa, MasterCard, American Express, JCB, China UnionPay, Discover and Diners. To restrict supported card types, set a bitmask of [`BAMCheckoutCreditCardTypes`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/BAMCheckout%20Type%20Definition.html#/c:BAMCheckoutCardInformation.h@T@BAMCheckoutCreditCardTypes) to the property `supportedCreditCardTypes`.
 ```
 BAMCheckoutCreditCardTypes cardTypes = BAMCheckoutCreditCardTypeAmericanExpress |
 BAMCheckoutCreditCardTypeMasterCard | BAMCheckoutCreditCardTypeVisa;
@@ -132,7 +132,7 @@ The BAM Checkout SDK gives the opportunity to use a completely customized scan v
 * Restart card scanning if retry possible upon error
 * Stop card scanning
 
-To get started, subclass [`BAMCheckoutCustomScanOverlayViewController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/BAMCheckout/Classes/BAMCheckoutCustomScanOverlayViewController.html) and see the protocol [`BAMCheckoutCustomScanOverlayViewControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/BAMCheckout/Protocols/BAMCheckoutCustomScanOverlayViewControllerDelegate.html). Once the native method `viewDidAppear` is called in your subclass, the actions and events are available.
+To get started, subclass [`BAMCheckoutCustomScanOverlayViewController`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Classes/BAMCheckoutCustomScanOverlayViewController.html) and see the protocol [`BAMCheckoutCustomScanOverlayViewControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Protocols/BAMCheckoutCustomScanOverlayViewControllerDelegate.html). Once the native method `viewDidAppear` is called in your subclass, the actions and events are available.
 
 ```
 config.customOverlay = yourCustomScanOverlayViewController;
@@ -151,7 +151,7 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 __Note:__ Customizations should be applied before the SDK is initialized.
 
 ## Delegation
-Implement the delegate methods of the [`BAMCheckoutViewControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/BAMCheckout/Protocols/BAMCheckoutViewControllerDelegate.html) protocol to be notified of scan attempts, successful scans and error situations. Dismiss the `BAMCheckoutViewController` instance in your app in case of success or error.
+Implement the delegate methods of the [`BAMCheckoutViewControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Protocols/BAMCheckoutViewControllerDelegate.html) protocol to be notified of scan attempts, successful scans and error situations. Dismiss the `BAMCheckoutViewController` instance in your app in case of success or error.
 
 #### Scan attempt
 You receive a Jumio scan reference for each attempt, if the Internet connection is available. For offline scans the parameter scanReference will be nil.

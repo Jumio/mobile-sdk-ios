@@ -19,11 +19,11 @@ Logic for DocumentVerification was split into a separate framework. Make sure th
 Error code D (Wrong API credentials used, retry impossible) has been removed
 
 #### Dark mode
-Added additional theme to support dark mode. Set [`enableDarkMode`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/JumioBaseView.html#/c:objc(cs)JumioBaseView(py)enableDarkMode) to `true` to change blur style and the standard foreground color.
+Added additional theme to support dark mode. Set [`enableDarkMode`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/JumioBaseView.html#/c:objc(cs)JumioBaseView(py)enableDarkMode) to `true` to change blur style and the standard foreground color.
 
 ## 3.4.2
-* A new delegate `netverifyUIController:shouldRequireUserConsentWithURL:` was added to [`NetverifyUIControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyUIControllerDelegate.html)
-* A new method `userConsentGiven:` was added to [`NetverifyUIController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyUIController.html)
+* A new delegate `netverifyUIController:shouldRequireUserConsentWithURL:` was added to [`NetverifyUIControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyUIControllerDelegate.html)
+* A new method `userConsentGiven:` was added to [`NetverifyUIController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html)
 
 ## 3.4.1
 No backward incompatible changes.
@@ -46,10 +46,10 @@ No backward incompatible changes.
 ## 3.2.0
 
 #### 3D-Liveness handling via Custom-UI
-`netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:` was extended to [`netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:) to return the `JumioZoomRetryReason`
+`netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:` was extended to [`netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:) to return the `JumioZoomRetryReason`
 
 #### Additions to the public API for Jumio screening
-Added support for the Jumio screening feature, see new properties [`watchlistScreening`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistScreening) and [`watchlistSearchProfile`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistSearchProfile).
+Added support for the Jumio screening feature, see new properties [`watchlistScreening`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistScreening) and [`watchlistSearchProfile`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistSearchProfile).
 
 #### Changes to the public API
 `- (BOOL)updateConfiguration:(NetverifyConfiguration*)configuration;` has been removed. 
@@ -64,7 +64,7 @@ No backward incompatible changes.
 
 #### NavigationBar customization
 `UINavigationBar+NetverifyAppearance.h` was renamed to `UINavigationBar+JumioAppearance.h` and moved to JumioCore.framework</br>
-`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
+`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
 
 #### 3D-Liveness handling via Custom-UI
 Please see [3D-Liveness in Custom Scan View Delegate](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_netverify-fastfill.md#custom-scan-view-delegate) 
@@ -74,7 +74,7 @@ Please see [3D-Liveness in Custom Scan View Delegate](https://github.com/Jumio/m
 `NetverifyScanModeFace` was changed to `NetverifyScanMode3DLiveness` for 3D-Liveness and `NetverifyScanModeFaceCapture` for alternative face capturing.
 
 #### Additions in visual customization
-Enhanced customization options `scanBackgroundColor` to colorize the background color during scanning, see [`NetverifyScanOverlay`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyScanOverlayView.html) class for the new option.
+Enhanced customization options `scanBackgroundColor` to colorize the background color during scanning, see [`NetverifyScanOverlay`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyScanOverlayView.html) class for the new option.
 
 #### Changes to device information
 `JMDeviceInfo` class has been renamed to `JumioDeviceInfo`
@@ -109,7 +109,7 @@ When using Identity Verification, make sure to link NetverifyFace.framework and 
 Please also make sure that the Umoove.framework from our previous releases is removed from your app.
 
 #### Additions in visual customization
-Enhanced customization options to colorize some UI elements on the 3D face liveness screen, see [`NetverifyScanOverlay`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyScanOverlayView.html) class for the new options.
+Enhanced customization options to colorize some UI elements on the 3D face liveness screen, see [`NetverifyScanOverlay`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyScanOverlayView.html) class for the new options.
 
 #### Localizable Strings
 Several additions and changes, mostly in regards to the new 3D face liveness capturing functionality.
@@ -118,21 +118,21 @@ Several additions and changes, mostly in regards to the new 3D face liveness cap
 
 #### Default Settings
 
-The default values for [`requireVerification`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireVerification) and [`requireFaceMatch`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireFaceMatch) were changed to `YES`. Please make sure that they are explicitly set to NO in case a scan in Fastfill mode should be performed. 
+The default values for [`requireVerification`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireVerification) and [`requireFaceMatch`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireFaceMatch) were changed to `YES`. Please make sure that they are explicitly set to NO in case a scan in Fastfill mode should be performed. 
 
 #### Enums
-[`NetverifyDocumentType`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyDocumentType.html) was changed from NS_ENUM to NS_OPTIONS. 
+[`NetverifyDocumentType`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentType.html) was changed from NS_ENUM to NS_OPTIONS. 
 
 ## 2.13.0
 
 #### Enums
-All enums were replaced by NS_ENUM to have better Swift support. When using Swift this Version will break when using [`NetverifyDocumentType`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyDocumentType.html), [`NetverifyDocumentVariant`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyDocumentVariant.html), [`NetverifyExtractionMethod`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyExtractionMethod.html), [`NetverifyGender`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyGender.html), [`NetverifyMRZFormat`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyMRZFormat.html), [`NetverifyScanMode`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyScanMode.html) or [`NetverifyScanSide`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Enums/NetverifyScanSide.html).
+All enums were replaced by NS_ENUM to have better Swift support. When using Swift this Version will break when using [`NetverifyDocumentType`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentType.html), [`NetverifyDocumentVariant`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentVariant.html), [`NetverifyExtractionMethod`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyExtractionMethod.html), [`NetverifyGender`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyGender.html), [`NetverifyMRZFormat`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyMRZFormat.html), [`NetverifyScanMode`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyScanMode.html) or [`NetverifyScanSide`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyScanSide.html).
 
 #### Changes in Localizable-Netverify.strings
 changed values in regards to error texts
 
 #### Cleanup of our SDK
-The method `destroy` was introduced to properly clean up our SDK. Call this method to destroy the NetverifyViewController instance, before you set it to nil. When re-initializing [`NetverifyViewController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyViewController.html) or [`NetverifyUIController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyUIController.html) make sure you've called  `destroy` in advance otherwise an exception will be raised during initializing.
+The method `destroy` was introduced to properly clean up our SDK. Call this method to destroy the NetverifyViewController instance, before you set it to nil. When re-initializing [`NetverifyViewController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyViewController.html) or [`NetverifyUIController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html) make sure you've called  `destroy` in advance otherwise an exception will be raised during initializing.
 
 ## 2.12.0
 

@@ -78,7 +78,7 @@ pod install
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.4.2.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.4.2/ios-jumio-mobile-sdk-3.4.2.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.5.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.5.0/ios-jumio-mobile-sdk-3.5.0.zip).
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 

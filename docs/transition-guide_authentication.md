@@ -10,11 +10,11 @@ This section only covers the breaking technical changes that should be considere
 Error code D (Wrong API credentials used, retry impossible) has been removed
 
 #### Dark mode
-Added additional theme to support dark mode. Set [`enableDarkMode`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/JumioBaseView.html#/c:objc(cs)JumioBaseView(py)enableDarkMode) to `true` to change blur style and the standard foreground color. 
+Added additional theme to support dark mode. Set [`enableDarkMode`](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/JumioBaseView.html#/c:objc(cs)JumioBaseView(py)enableDarkMode) to `true` to change blur style and the standard foreground color. 
 
 ## 3.4.2
-* A new delegate `authenticationScanViewController:shouldRequireUserConsentWithURL:` was added to [`AuthenticationScanViewControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Protocols/AuthenticationScanViewControllerDelegate.html)
-* A new method `userConsentGiven:` was added to [`AuthenticationScanViewController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/AuthenticationScanViewController.html)
+* A new delegate `authenticationScanViewController:shouldRequireUserConsentWithURL:` was added to [`AuthenticationScanViewControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/Protocols/AuthenticationScanViewControllerDelegate.html)
+* A new method `userConsentGiven:` was added to [`AuthenticationScanViewController`](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationScanViewController.html)
 
 ## 3.4.1
 No backward incompatible changes.
@@ -43,7 +43,7 @@ No backward incompatible changes.
 
 #### NavigationBar customization
 `UINavigationBar+AuthenticationAppearance.h` was renamed to `UINavigationBar+JumioAppearance.h` and moved to JumioCore.framework</br>
-`AuthenticationNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/Mobile-SDK-IOS_pilot/NetverifyFace/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
+`AuthenticationNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
 
 #### Custom-UI handling
 Please see [Custom-UI for Authentication](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_authentication.md#custom-ui) 

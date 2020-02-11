@@ -37,7 +37,7 @@ No backward incompatible changes.
 
 #### NavigationBar customization
 `UINavigationBar+BAMCheckoutAppearance.h` was renamed to `UINavigationBar+JumioAppearance.h` and moved to JumioCore.framework</br>
-`BAMCheckoutNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/Mobile-SDK-IOS_pilot/BAMCheckout/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
+`BAMCheckoutNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
 
 
 #### Changes to device information
@@ -65,7 +65,7 @@ No backward incompatible changes.
 BAMCheckoutCreditCardTypeStarbucks removed.
 
 #### Enums
-All enums were replaced by NS_ENUM macros to have better Swift support. When using Swift this Version will break when using [`BAMCheckoutCreditCardType`](https://jumio.github.io/Mobile-SDK-IOS_pilot/BAMCheckout/Enums/BAMCheckoutCreditCardType.html) or [`BAMCheckoutCreditCardTypes`](https://jumio.github.io/Mobile-SDK-IOS_pilot/BAMCheckout/Enums/BAMCheckoutCreditCardTypes.html).
+All enums were replaced by NS_ENUM macros to have better Swift support. When using Swift this Version will break when using [`BAMCheckoutCreditCardType`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Enums/BAMCheckoutCreditCardType.html) or [`BAMCheckoutCreditCardTypes`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Enums/BAMCheckoutCreditCardTypes.html).
 
 ## 2.12.0
 No backward incompatible changes.

@@ -34,7 +34,7 @@ New Added Keys
 Error code D (Wrong API credentials used, retry impossible) has been removed
 
 #### Dark mode
-Added additional theme to support dark mode. Set [`enableDarkMode`](https://jumio.github.io/Mobile-SDK-IOS_pilot/DocumentVerification/Classes/JumioBaseView.html#/c:objc(cs)JumioBaseView(py)enableDarkMode) to `true` to change blur style and the standard foreground color.
+Added additional theme to support dark mode. Set [`enableDarkMode`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Classes/JumioBaseView.html#/c:objc(cs)JumioBaseView(py)enableDarkMode) to `true` to change blur style and the standard foreground color.
 
 ## 3.4.2
 No backward incompatible changes.
@@ -64,7 +64,7 @@ No backward incompatible changes.
 
 #### NavigationBar customization
 `UINavigationBar+NetverifyAppearance.h` was renamed to `UINavigationBar+JumioAppearance.h` and moved to JumioCore.framework</br>
-`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/Mobile-SDK-IOS_pilot/DocumentVerification/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
+`NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
 
 #### Changes to device information
 `JMDeviceInfo` class has been renamed to `JumioDeviceInfo`
@@ -91,7 +91,7 @@ No backward incompatible changes.
 The document type for US social security card (USSS) was removed.
 
 #### Default Settings
-The default value for [`enableExtraction`](https://jumio.github.io/Mobile-SDK-IOS_pilot/DocumentVerification/Classes/DocumentVerificationConfiguration.html#/c:objc(cs)DocumentVerificationConfiguration(py)enableExtraction) was changed to `YES`. Please make sure that it is explicitly set to NO in case a scan without extraction should be performed. 
+The default value for [`enableExtraction`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Classes/DocumentVerificationConfiguration.html#/c:objc(cs)DocumentVerificationConfiguration(py)enableExtraction) was changed to `YES`. Please make sure that it is explicitly set to NO in case a scan without extraction should be performed. 
 
 ## 2.13.0
 
