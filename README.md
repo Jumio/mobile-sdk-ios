@@ -88,7 +88,7 @@ Jumio supports Carthage as dependency management tool for easy integration of th
 Adapt you Cartfile and add the JumioMobileSDK dependency. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/blob/master/Carthage/JumioMobileSDK.json" == 3.6.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.6.0
 ```
 
 Update you Carthage dependencies via Terminal:
