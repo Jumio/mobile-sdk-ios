@@ -127,6 +127,21 @@
 /* Begin PBXFileReference section */
 		0504CF7023D5CFD90058C942 /* ZoomAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomAuthentication.framework; path = ../frameworks/ZoomAuthentication.framework; sourceTree = "<group>"; };
 		0535EC1523CE553000C6DEB0 /* DocumentVerification.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocumentVerification.framework; path = ../frameworks/DocumentVerification.framework; sourceTree = "<group>"; };
+		056F1971244DC8A200C7FFCF /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = "../frameworks/el.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
+		056F1972244DC8E300C7FFCF /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = "../frameworks/el.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
+		056F1973244DC8EB00C7FFCF /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = "../frameworks/el.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
+		056F1974244DC91D00C7FFCF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = "../frameworks/hu.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
+		056F1975244DC92400C7FFCF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = "../frameworks/hu.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
+		056F1976244DC92800C7FFCF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = "../frameworks/hu.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
+		056F1977244DC93800C7FFCF /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = "../frameworks/pl.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
+		056F1978244DC93800C7FFCF /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = "../frameworks/pl.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
+		056F1979244DC93800C7FFCF /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = "../frameworks/pl.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
+		056F197A244DC9C300C7FFCF /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = "../frameworks/cs.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
+		056F197B244DC9CC00C7FFCF /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = "../frameworks/cs.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
+		056F197C244DC9D100C7FFCF /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = "../frameworks/cs.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
+		056F197D244DC9F800C7FFCF /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = "../frameworks/ro.lproj/Localizable-Authentication.strings"; sourceTree = "<group>"; };
+		056F197E244DCA0200C7FFCF /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = "../frameworks/ro.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
+		056F197F244DCA0700C7FFCF /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = "../frameworks/ro.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
 		3078F8B422020449003B2974 /* NetverifyBarcode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetverifyBarcode.framework; path = ../frameworks/NetverifyBarcode.framework; sourceTree = "<group>"; };
 		54042A751FEBDEC900626D55 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../frameworks/MicroBlink.framework; sourceTree = "<group>"; };
 		54042A761FEBDEC900626D55 /* JumioCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioCore.framework; path = ../frameworks/JumioCore.framework; sourceTree = "<group>"; };
@@ -538,6 +553,11 @@
 				nl,
 				it,
 				pt,
+				el,
+				hu,
+				pl,
+				cs,
+				ro,
 			);
 			mainGroup = EE01EEDE1924A3E200B7CC49;
 			productRefGroup = EE01EEE81924A3E200B7CC49 /* Products */;
@@ -717,6 +737,11 @@
 				54F270EB210B0CFF0070FE65 /* nl */,
 				96467C9922F47797004B2901 /* it */,
 				96467C9A22F477A1004B2901 /* pt */,
+				056F1973244DC8EB00C7FFCF /* el */,
+				056F1976244DC92800C7FFCF /* hu */,
+				056F1977244DC93800C7FFCF /* pl */,
+				056F197C244DC9D100C7FFCF /* cs */,
+				056F197F244DCA0700C7FFCF /* ro */,
 			);
 			name = "Localizable-DocumentVerification.strings";
 			sourceTree = "<group>";
@@ -732,6 +757,11 @@
 				549A038920C69583005181A7 /* nl */,
 				96467C9522F47726004B2901 /* it */,
 				96467C9822F47748004B2901 /* pt */,
+				056F1972244DC8E300C7FFCF /* el */,
+				056F1975244DC92400C7FFCF /* hu */,
+				056F1978244DC93800C7FFCF /* pl */,
+				056F197A244DC9C300C7FFCF /* cs */,
+				056F197E244DCA0200C7FFCF /* ro */,
 			);
 			name = "Localizable-Netverify.strings";
 			sourceTree = "<group>";
@@ -747,6 +777,11 @@
 				FA25DDF0221828F600881664 /* nl */,
 				96467C9622F47736004B2901 /* it */,
 				96467C9722F47740004B2901 /* pt */,
+				056F1971244DC8A200C7FFCF /* el */,
+				056F1974244DC91D00C7FFCF /* hu */,
+				056F1979244DC93800C7FFCF /* pl */,
+				056F197B244DC9CC00C7FFCF /* cs */,
+				056F197D244DC9F800C7FFCF /* ro */,
 			);
 			name = "Localizable-Authentication.strings";
 			sourceTree = "<group>";

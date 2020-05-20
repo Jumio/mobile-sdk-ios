@@ -39,6 +39,12 @@ AuthenticationController *authenticationController;
 
 The default data center is JumioDataCenterUS. If your customer account is in the EU data center, use JumioDataCenterEU instead. Alternatively use JumioDataCenterSG for Singapore.
 
+### Jailbreak detection
+We advice to prevent our SDK to be run on jailbroken devices. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
+```
+[JumioDeviceInfo isJailbrokenDevice]
+```
+
 ## Configuration
 In order to connect the Authentication transaction to a specific Netverify user identity the parameter [`enrollmentTransactionReference`](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationConfiguration.html#/c:objc(cs)AuthenticationConfiguration(py)enrollmentTransactionReference) must be set.
 ```

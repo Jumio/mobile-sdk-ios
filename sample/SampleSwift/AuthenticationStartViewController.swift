@@ -1,7 +1,7 @@
 //
 //  AuthenticationStartViewController.swift
 //
-//  Copyright © 2019 Jumio Corporation. All rights reserved.
+//  Copyright © 2020 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -217,8 +217,8 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
             self.authenticationController = nil
         }
         
-        if let maybeAuthenticationScanViewController = self.authenticationScanViewController {
-            maybeAuthenticationScanViewController.dismiss(animated: true, completion: errorCompletion)
+        if let authenticationScanViewController = self.authenticationScanViewController {
+            authenticationScanViewController.dismiss(animated: true, completion: errorCompletion)
         } else {
             errorCompletion()
         }
@@ -272,7 +272,6 @@ class AuthenticationStartViewController: StartViewController, AuthenticationCont
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_: UIAlertAction!) in
             authenticationScanViewController.cancel()
-            authenticationScanViewController.dismiss(animated: true)
         }))
         
         authenticationScanViewController.present(alert, animated: true, completion: nil)

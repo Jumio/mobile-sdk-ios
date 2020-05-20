@@ -1,7 +1,7 @@
 //
 //  HelpAnimationView.swift
 //
-//  Copyright © 2019 Jumio Corporation. All rights reserved.
+//  Copyright © 2020 Jumio Corporation. All rights reserved.
 //
 
 import UIKit

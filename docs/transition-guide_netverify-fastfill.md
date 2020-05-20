@@ -4,6 +4,20 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.6.0
+
+#### Custom UI callbacks
+`netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:` is called for each scanner that has a help animation.
+
+#### Localization keys 
+The following keys are no more uppercased 
+
+ `netverify.scan-help-view.liveness-help.button-continue.title`, 
+ `netverify.confirmation-view.button.continue`, 
+ `netverify.confirmation-view.button.retry`, 
+ `netverify.error-view.button.cancel.title` and 
+ `netverify.error-view.button.retry.title` 
+ 
 ## 3.5.0
 
 #### DocumentVerification separation

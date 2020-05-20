@@ -1,7 +1,7 @@
 //
 //  DocumentVerificationStartViewController.m
 //
-//  Copyright © 2019 Jumio Corporation All rights reserved.
+//  Copyright © 2020 Jumio Corporation All rights reserved.
 //
 
 #import "DocumentVerificationStartViewController.h"
@@ -153,6 +153,7 @@
     //Dismiss the SDK
     [self dismissViewControllerAnimated: YES completion: ^{
         [self showAlertWithTitle:@"DocumentVerification SDK" message:message];
+        self.documentVerificationViewController = nil;
     }];
 }
 
@@ -167,7 +168,9 @@
     
     NSLog(@"DocumentVerificationViewController cancelled with error: %@", error.message);
     //Dismiss the SDK
-    [self dismissViewControllerAnimated: YES completion: nil];
+    [self dismissViewControllerAnimated: YES completion: ^{
+        self.documentVerificationViewController = nil;
+    }];
 }
 
 @end

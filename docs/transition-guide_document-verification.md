@@ -4,6 +4,17 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.6.0
+
+#### Localization keys 
+The following keys are no more uppercased 
+
+ `dv.scan-view.confirmation.button.readable`, 
+ `dv.scan-view.confirmation.button.retake`, 
+ `dv.error-view.button.retry` and 
+ `dv.error-view.button.cancel` 
+ 
+
 ## 3.5.0
 
 #### DocumentVerification separation

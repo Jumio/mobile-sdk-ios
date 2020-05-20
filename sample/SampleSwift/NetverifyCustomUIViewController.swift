@@ -1,7 +1,7 @@
 //
 //  NetverifyCustomUIViewController.swift
 //
-//  Copyright © 2019 Jumio Corporation. All rights reserved.
+//  Copyright © 2020 Jumio Corporation. All rights reserved.
 //
 
 import Netverify
@@ -90,7 +90,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         
         // Add capture info view
         guard let captureInfoView = Bundle.main.loadNibNamed("CaptureInfoView", owner: self, options: nil)?.first as? CaptureInfoView else { return }
-        captureInfoView.setup(documentType: currentDocumentType!)
+        captureInfoView.setup(documentType: currentDocumentType)
         captureInfoView.descriptionLabel.text = netverifyScanViewController.localizedShortHelpText()
         captureInfoView.setSteps(current: netverifyScanViewController.currentStep(), total: netverifyScanViewController.totalSteps())
         if isFallback { captureInfoView.addFallbackHandler(action: netverifyScanViewController.switchToFallback) }
@@ -104,12 +104,11 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     
     // MARK: NetverifyUIControllerDelegate
     func netverifyUIController(_ netverifyUIController: NetverifyUIController, didFinishInitializingWithError error: NetverifyError?) {
+        self.netverifyUIController = netverifyUIController
     }
     
     func netverifyUIController(_ netverifyUIController: NetverifyUIController, didDetermineAvailableCountries countries: [Any], suggestedCountry country: NetverifyCountry?) {
         print("available countries determined")
-        
-        self.netverifyUIController = netverifyUIController
         
         // Hide loading circle
         self.activityIndicator.stopAnimating()
@@ -141,22 +140,22 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         
         scanViewController.customScanViewControllerDelegate = self
         
-        self.navigationController?.present(scanViewController, animated: true) {
-            self.isScanning = true
-            self.currentScanView = scanViewController
-            // Add the shutter button if document detection is not enabled
-            if scanViewController.isImagePicker() {
-                self.addShutterButton(scanViewController)
-            }
-            
-            // Add helper views for the camera capture
-            if scanViewController.currentScanMode() == .modeFaceCapture || scanViewController.currentScanMode() == .mode3DLiveness {
-                self.addFaceMacherHelpersViews(scanViewController)
-            } else {
-                self.addCaptureHelperViews(scanViewController, isFallback: scanViewController.isFallbackAvailable())
-            }
-            print("custom scan VC has been presented")
+        self.isScanning = true
+        self.currentScanView = scanViewController
+        // Add the shutter button if document detection is not enabled
+        if scanViewController.isImagePicker() {
+            self.addShutterButton(scanViewController)
         }
+        
+        // Add helper views for the camera capture
+        if scanViewController.currentScanMode() == .modeFaceCapture || scanViewController.currentScanMode() == .mode3DLiveness {
+            self.addFaceMacherHelpersViews(scanViewController)
+        } else {
+            self.addCaptureHelperViews(scanViewController, isFallback: scanViewController.isFallbackAvailable())
+        }
+
+        
+        self.navigationController?.present(scanViewController, animated: true)
     }
     
     func netverifyUIControllerDidCaptureAllParts(_ netverifyUIController: NetverifyUIController) {

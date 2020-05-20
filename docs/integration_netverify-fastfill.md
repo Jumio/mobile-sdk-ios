@@ -47,7 +47,7 @@ Make sure initialization and presentation are timely within one minute. On iPads
 ```
 
 ### Jailbreak detection
-We advice to prevent our SDK to be run on jailbroken device. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
+We advice to prevent our SDK to be run on jailbroken devices. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
 ```
 [JumioDeviceInfo isJailbrokenDevice]
 ```
@@ -282,6 +282,10 @@ The first letter (A-J) represents the error case. The remaining characters are r
 Netverify can also be implemented as a custom scan view. This means that only the scan view controllers (including the scan overlays) are provided by the SDK.
 The handling of the lifecycle, document selection, readability confirmation, error handling, and all other steps necessary to complete a scan have to be handled by the client application that implements the SDK.
 
+The following sequence diagram outlines the components, callbacks and user flow for a basic Netverify scan:
+
+![Custom UI Happy Path Diagram](images/custom_ui_happy_path_diagram.png)
+
 To use the custom UI with a plain scanning user interface, specify an instance of your class which implements the [`NetverifyUIControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyUIControllerDelegate.html). Initialize the SDK by creating a [`NetverifyUIController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html) by passing your customised `NetverifyConfiguration` object to its constructor. Please note that instead of the `delegate` property, `customUIDelegate` has to be set in the configuration object.
 
 ```
@@ -377,6 +381,8 @@ Please see the sample implementation in our sample project.
 #### Custom Scan View Delegate
 
 Make sure to also implement the [`NetverifyCustomScanViewControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html) protocol and set the `customScanViewControllerDelegate` to the received scanViewController before presenting.
+
+When the scanner has a help animation, the delegate `netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:` is called. A help text and animated view is provided, relevant to the scanner type, that can be shown to assist the user.
 
 For some countries, end-users need to be informed about some legal constraints before scanning. In this case `netverifyCustomScanViewController:shouldDisplayLegalAdvice:completion:` is called. Make sure to display the message provided via this call.
 

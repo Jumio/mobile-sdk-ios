@@ -1,5 +1,12 @@
 ![Jumio](docs/images/jumio_feature_graphic.jpg)
 
+![Version](https://img.shields.io/github/v/release/Jumio/Mobile-SDK-IOS?style=flat)
+![License](https://img.shields.io/cocoapods/l/JumioMobileSDK.svg?style=flat)
+![Platform](https://img.shields.io/cocoapods/p/JumioMobileSDK.svg?style=flat)
+[![Pod Version](https://img.shields.io/cocoapods/v/JumioMobileSDK.svg?style=flat)](https://cocoapods.org/pods/JumioMobileSDK)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift 3.0-5.x](http://img.shields.io/badge/Swift-3.x,%204.x%20&%205.x-orange.svg?style=flat)](https://swift.org/)
+
 # Table of Content
 - [Release notes](#release-notes)
 - [Basic Setup](#basic-setup)
@@ -9,17 +16,17 @@
 
 
 # Release notes
-### SDK version: 3.5.0
+### SDK version: 3.6.0
 
 #### Changes
-* New Singapore datacenter compatibility [Netverify/Fastfill, Authentication, Document Verification, BAM Checkout]
-* Improved 3D Liveness detection and accuracy [Netverify, Authentication]
-* Support Dark Mode theme [Netverify/Fastfill, Authentication, Document Verification]
-* Moved Document Verification functionality into a separate framework [Document Verification]
-* Advanced document checks on the back of IDs to increase user conversion - for paper documents [Netverify]
+* Support for 5 new languages (Czech, Greek, Hungarian, Polish, Romanian) [Netverify/Fastfill, Authentication, Document Verification]
+* Added support for right-to-left languages [Netverify/Fastfill, Authentication, Document Verification]
+* Provide access to document guidance animation [Netverify Custom UI]
+* Added Carthage as an additional dependency manager [Netverify/Fastfill, Authentication, Document Verification, BAM Checkout]
+* Adjusted handling of document types which don’t support plastic documents [Netverify]
 
 #### Fixes
-* Fixed problems with Belgium ID card backside scanning [Netverify/Fastfill]
+* Improved accessibility handling [Netverify/Fastfill, Authentication, Document Verification]
 * Various smaller bug fixes/improvements [Netverify/Fastfill, Authentication, Document Verification]
 
 # Basic Setup
@@ -45,7 +52,7 @@ The app’s Info.plist must contain the `NSCameraUsageDescription` key with a st
 Check the Xcode sample project to learn the most common use. Make sure to use the device only frameworks for app submissions to the AppStore. Read more detailed information on this here: [Manual integration](/README.md#manually)
 
 ### via Cocoapods
-Jumio supports cocoapods as dependency management tool for easy integration of the SDK.
+Jumio supports CocoaPods as dependency management tool for easy integration of the SDK.
 
 
 Update your local clone of the specs repo in Terminal to ensure that you are using the latest podspec files:
@@ -59,26 +66,39 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.5.0' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.6.0' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.5.0' # Use full Netverify and Authentication functionality
-pod 'JumioMobileSDK/NetverifyBase', '~>3.5.0' # For Fastfill, Netverify basic functionality
-pod 'JumioMobileSDK/NetverifyBarcode', '~>3.5.0' # For Fastfill, Netverify functionality with barcode extraction
-pod 'JumioMobileSDK/NetverifyFace', '~>3.5.0' # For Fastfill, Netverify functionality with identity verification, Authentication
+pod 'JumioMobileSDK/Netverify', '~>3.6.0' # Use full Netverify and Authentication functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.6.0' # For Fastfill, Netverify basic functionality
+pod 'JumioMobileSDK/NetverifyBarcode', '~>3.6.0' # For Fastfill, Netverify functionality with barcode extraction
+pod 'JumioMobileSDK/NetverifyFace', '~>3.6.0' # For Fastfill, Netverify functionality with identity verification, Authentication
 
-pod 'JumioMobileSDK/DocumentVerification', '~>3.5.0' # Use Document Verification functionality
+pod 'JumioMobileSDK/DocumentVerification', '~>3.6.0' # Use Document Verification functionality
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.5.0' # Use BAM Checkout functionality
+pod 'JumioMobileSDK/BAMCheckout', '~>3.6.0' # Use BAM Checkout functionality
 ```
 
 Install the pod to your project via Terminal:
 ```
 pod install
 ```
+### via Carthage
+Jumio supports Carthage as dependency management tool for easy integration of the SDK.
+
+Adapt you Cartfile and add the JumioMobileSDK dependency. Check the following example how a Cartfile could look like:
+
+```
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/blob/master/Carthage/JumioMobileSDK.json" == 3.6.0
+```
+
+Update you Carthage dependencies via Terminal:
+```
+carthage update
+```
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.5.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.5.0/ios-jumio-mobile-sdk-3.5.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.6.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.6.0/ios-jumio-mobile-sdk-3.6.0.zip).
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -111,14 +131,19 @@ Make sure that the following Xcode build settings in your app are set accordingl
 All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language, add it to your app or framework project and mark it as Localizable. This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
 Note: If using CocoaPods, the original file is located under `/Pods/JumioMobileSDK`.
 
-For our products Netverify & Fastfill, Authentication & Document Verification we are providing eight individual languages for your convenience:
+For our products Netverify & Fastfill, Authentication & Document Verification we support following languages for your convenience:
 * Chinese (Simplified)
+* Czech
 * Dutch
 * English
 * French
 * German
+* Greek
+* Hungarian
 * Italian
+* Polish
 * Portuguese
+* Romanian
 * Spanish
 
 Please check out our sample project to see how to use the strings files in your app.
@@ -134,7 +159,7 @@ Our SDK supports Accessibility. Visually impaired users can enable __VoiceOver__
 # Support
 
 ## Previous version
-The previous release version 3.4.2 of the Jumio Mobile SDK is supported until 2020-05-12.
+The previous release version 3.5.0 of the Jumio Mobile SDK is supported until 2020-08-04.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore (bugs are typically fixed in the upcoming versions).
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.
@@ -151,7 +176,7 @@ The software contains third-party open source software. For more information, pl
 This software is based in part on the work of the Independent JPEG Group.
 
 ## Copyright
-&copy; Jumio Corp. 268 Lambert Avenue, Palo Alto, CA 94306
+&copy; Jumio Corporation, 395 Page Mill Road, Suite 150, Palo Alto, CA 94306
 
 The source code and software available on this website (“Software”) is provided by Jumio Corp. or its affiliated group companies (“Jumio”) "as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage.
 In any case, your use of this Software is subject to the terms and conditions that apply to your contractual relationship with Jumio. As regards Jumio’s privacy practices, please see our privacy notice available here: [Privacy Policy](https://www.jumio.com/legal-information/privacy-policy/).

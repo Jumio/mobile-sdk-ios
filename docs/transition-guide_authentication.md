@@ -4,6 +4,15 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.6.0
+
+#### Localization keys 
+The following keys are no more uppercased 
+
+ `auth.scan-help-view.liveness-help.button-continue.title`, 
+ `auth.error-view.button.retry.title` and 
+ `auth.error-view.button.cancel.title` 
+ 
 ## 3.5.0
 
 #### Error codes

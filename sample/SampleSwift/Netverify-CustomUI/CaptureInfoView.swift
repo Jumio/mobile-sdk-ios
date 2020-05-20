@@ -1,7 +1,7 @@
 //
 //  CaptureInfoView.swift
 //
-//  Copyright © 2019 Jumio Corporation. All rights reserved.
+//  Copyright © 2020 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -16,7 +16,9 @@ class CaptureInfoView: UIView {
     
     private var fallBackAction: (() -> Void)?
     
-    func setup(documentType: NetverifyDocumentType) {        
+    func setup(documentType: NetverifyDocumentType?) {
+        guard let documentType = documentType else { return }
+        
         switch documentType {
             case .passport:
                 documentTypeLabel.text = "Passport"

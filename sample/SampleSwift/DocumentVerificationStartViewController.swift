@@ -1,9 +1,10 @@
 //
 //  DocumentVerificationStartViewController.swift
 //
-//  Copyright © 2019 Jumio Corporation All rights reserved.
+//  Copyright © 2020 Jumio Corporation All rights reserved.
 //
 
+import JumioCore
 import DocumentVerification
 
 class DocumentVerificationStartViewController: StartViewController, DocumentVerificationViewControllerDelegate {
@@ -150,9 +151,10 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         print(message)
         
         //Dismiss the SDK
-        self.dismiss(animated: true, completion: {
+        self.dismiss(animated: true) {
             self.showAlert(withTitle: "DocumentVerification Mobile SDK", message: message)
-        })
+            self.documentVerificationViewController = nil
+        }
     }
     
     /**
@@ -167,6 +169,8 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         print("DocumentVerificationViewController cancelled with error: \(error.message ?? "")")
         
         //Dismiss the SDK
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+            self.documentVerificationViewController = nil
+        }
     }
 }
