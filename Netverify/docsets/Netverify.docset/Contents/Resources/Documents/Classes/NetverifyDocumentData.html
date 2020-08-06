@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          Netverify 3.6.0 Docs
+          Netverify 3.7.0 Docs
         </a>
         
       </p>
@@ -896,6 +896,41 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)NetverifyDocumentData(py)placeOfBirth"></a>
+                    <a name="//apple_ref/objc/Property/placeOfBirth" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NetverifyDocumentData(py)placeOfBirth">placeOfBirth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Place of birth extracted from the document. Only available after NFC scan.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">placeOfBirth</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">placeOfBirth</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyDocumentData.h#L180">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)NetverifyDocumentData(py)extractionMethod"></a>
                     <a name="//apple_ref/objc/Property/extractionMethod" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)NetverifyDocumentData(py)extractionMethod">extractionMethod</a>
@@ -924,7 +959,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyDocumentData.h#L180">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyDocumentData.h#L185">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -959,7 +994,115 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyDocumentData.h#L186">Show on GitHub</a>
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyDocumentData.h#L191">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NetverifyDocumentData(py)frontImage"></a>
+                    <a name="//apple_ref/objc/Property/frontImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NetverifyDocumentData(py)frontImage">frontImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the raw image data within an UIImage for front in case this feature is enabled serverside.
+  Please contact your Jumio Account Manger or <a href="mailto:support@jumio.com">support@jumio.com</a> in case you want to receive the images here.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">frontImage</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">frontImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyDocumentData.h#L197">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NetverifyDocumentData(py)backImage"></a>
+                    <a name="//apple_ref/objc/Property/backImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NetverifyDocumentData(py)backImage">backImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the raw image data within an UIImage for back in case this feature is enabled serverside.
+  Please contact your Jumio Account Manger or <a href="mailto:support@jumio.com">support@jumio.com</a> in case you want to receive the images here.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">backImage</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">backImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyDocumentData.h#L203">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NetverifyDocumentData(py)faceImage"></a>
+                    <a name="//apple_ref/objc/Property/faceImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NetverifyDocumentData(py)faceImage">faceImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the raw image data within an UIImage for face in case this feature is enabled serverside.
+  Please contact your Jumio Account Manger or <a href="mailto:support@jumio.com">support@jumio.com</a> in case you want to receive the images here.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">faceImage</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">faceImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Jumio/mobile-sdk-ios/tree/master/frameworks/Netverify.framework/Headers/Netverify/NetverifyDocumentData.h#L209">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
