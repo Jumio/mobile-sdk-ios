@@ -10,146 +10,174 @@ Document Verification is a powerful solution to enable scanning various types (U
 - [Initialization](#initialization)
 - [Configuration](#configuration)
 - [Customization](#customization)
-- [Delegation](#delegation)
+- [SDK Workflow](#delegation)
 - [Callback](#callback)
 
 ## Transition guide
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.0
+
 For breaking technical changes, please read our [transition guide](transition-guide_document-verification.md).
 
 ## Setup
-The [basic setup](../README.md#basic-setup) is required before continuing with the following setup for Document Verification.
+The [basic setup](../README.md#basics) is required before continuing with the following setup for Document Verification.
 
 ## Initialization
-Log into your Jumio Customer Portal and you can find your API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the [`DocumentVerificationConfiguration`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Classes/DocumentVerificationConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the [`DocumentVerificationViewController`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Classes/DocumentVerificationViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `DocumentVerificationConfiguration` instance is passed to the initializer.
+Log into your Jumio customer portal. You can find your customer API token and API secret on the __Settings__ page under __API credentials__ tab.
 
-```
-DocumentVerificationViewController *config = [DocumentVerificationViewController new];
-config.apiToken = @"YOURAPITOKEN";
-config.apiSecret = @"YOURAPISECRET";
-config.dataCenter = JumioDataCenterEU; // Set this parameter to match the data center where your account is registered.
-config.delegate = self;
-
-DocumentVerificationViewController *documentVerificationViewController;
-@try {
-	documentVerificationViewController = [[DocumentVerificationViewController alloc] initWithConfiguration:config];
-} @catch (NSException *exception) {
-	// HANDLE EXCEPTION
-}
+If the token and secret are not set in the [`DocumentVerificationConfiguration`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Classes/DocumentVerificationConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the [`DocumentVerificationViewController`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Classes/DocumentVerificationViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `DocumentVerificationConfiguration` instance is passed to the initializer.
+```swift
+let config:DocumentVerificationConfiguration = DocumentVerificationConfiguration()
+config.merchantApiToken = "YOUR_DOCUMENTVERIFICATION_APITOKEN"
+config.merchantApiSecret = "YOUR_DOCUMENTVERIFICATION_APISECRET"
+config.dataCenter = JumioDataCenterUS
+config.delegate = self
 ```
 
-The default data center is JumioDataCenterUS. If your customer account is in the EU data center, use JumioDataCenterEU instead. Alternatively use JumioDataCenterSG for Singapore.
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L20-L30)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L24-L34)
 
-Make sure initialization and presentation are timely within one minute. On iPads, the presentation style _UIModalPresentationFormSheet_ is default and mandatory.
+The default data center is `JumioDataCenterUS`. If your customer account is in the EU data center, use `JumioDataCenterEU` instead. Alternatively, use `JumioDataCenterSG` for Singapore.
 
-```
-[self presentViewController: documentVerificationViewController animated: YES completion: nil];
-```
+__Note:__ We strongly recommend storing all credentials outside of your app!
+
+Make sure initialization and presentation are timely within one minute. On iPads, the presentation style `UIModalPresentationFormSheet` is default and mandatory.
+```swift
+ self.present(documentVC, animated: true, completion: nil)
+ ```
+
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L91-L95)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L71-L77)
 
 ### Jailbreak detection
 We advice to prevent our SDK to be run on jailbroken devices. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
+```swift
+JMDeviceInfo.isJailbrokenDevice()
 ```
-[JumioDeviceInfo isJailbrokenDevice]
-```
+
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L15-L18)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L19-L22)
 
 ## Configuration
 
 ### Document type
 Set the parameter `type` in the `DocumentVerificationConfiguration` object to pass the document type.
+```swift
+config.type = "BC"
 ```
-config.type = @"BC";
-```
+
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L35-L37)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L39-L41)
 
 Possible types:
 
+*  BC (Birth certificate)
 *  BS (Bank statement)
-*  IC (Insurance card)
-*  UB (Utility bill, front side)
 *  CAAP (Cash advance application)
-*  CRC (Corporate resolution certificate)
+*  CB (Council bill)
+*  CC (Credit card)
 *  CCS (Credit card statement)
+*  CRC (Corporate resolution certificate)
+*  HCC (Health care card)
+*  IC (Insurance card)
 *  LAG (Lease agreement)
 *  LOAP (Loan application)
-*  MOAP (Mortgage application)
-*  TR (Tax return)
-*  VT (Vehicle title)
-*  VC (Voided check)
-*  STUC (Student card)
-*  HCC (Health care card)
-*  CB (Council bill)
-*  SENC (Seniors card)
 *  MEDC (Medicare card)
-*  BC (Birth certificate)
-*  WWCC (Working with children check)
-*  SS (Superannuation statement)
-*  TAC (Trade association card)
-*  SEL (School enrolment letter)
+*  MOAP (Mortgage application)
 *  PB (Phone bill)
+*  SEL (School enrolment letter)
+*  SENC (Seniors card)
+*  SS (Superannuation statement)
 *  SSC (Social security card)
+*  STUC (Student card)
+*  TAC (Trade association card)
+*  TR (Tax return)
+*  UB (Utility bill)
+*  VC (Voided check)
+*  VT (Vehicle title)
+*  WWCC (Working with children check)
 *  CUSTOM (Custom document type)
 
 #### Custom Document Type
-Use the following method to pass your custom document code. Maintain your custom document code within your Jumio Customer Portal under "Settings" - "Document Verifications" -
-"Custom".
-```
-config.customDocumentCode = @"YOURCUSTOMDOCUMENTCODE";
+Use the following method to pass your custom document code. Maintain your custom document code within your Jumio customer portal under the tab __Settings__ --> __Document Verification__ --> __Custom__.
+```swift
+config.customDocumentCode = "YOURCUSTOMDOCUMENTCODE"
 ```
 
-### Country
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L57-L58)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L61-L62)
 
-The country needs to be in format [ISO-3166-1 alpha 3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) or XKX for Kosovo.
+### Country selection
+You can specify issuing country  using [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country codes. In the example down below the United States ("USA") have been preselected. Use "XKX" for Kosovo.
+```swift
+config.country = "AUT"
 ```
-config.country = @"USA";
-```
+
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L32-L33)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L36-L37)
 
 ### Transaction identifiers
 Specify your reporting criteria to identify each scan attempt in your reports (max. 100 characters).
-```
-config.reportingCriteria = @"YOURREPORTINGCRITERIA";
+```swift
+config.merchantReportingCriteria = "YOURREPORTINGCRITERIA"
 ```
 
-__Note:__ Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
+Use the following property to identify the scan in your reports (max. 100 characters) and set a customer identifier (max. 100 characters).
+```swift
+ config.merchantScanReference = "YOURSCANREFERENCE"
+ config.userReference = "CUSTOMERID"
+```
 
-A callback URL can be specified for individual transactions, for constraints see chapter [Callback URL](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-url). This setting overrides your Jumio merchant settings.
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L39-L49)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L43-L53)
+
+__Note:__ Transaction identifiers must not contain sensitive data like PII (Personally Identifiable Information) or account login.
+
+### Callback
+A callback URL can be specified for individual transactions, for constraints see chapter [Callback URL](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-url). This setting overrides your Jumio customer settings.
+```swift
+config.callbackUrl = "YOURCALLBACKURL"
 ```
-config.callbackUrl = @"YOURCALLBACKURL";
-```
+__Note:__ The callback URL must not contain sensitive data like PII (Personally Identifiable Information) or account login.
+
 
 ### Data Extraction
-
 Data extraction is automatically enabled when it is activated for your account. Use the following setting to disable the extraction on a transaction level:
-
+```swift
+config.enableExtraction = true
 ```
-config.enableExtraction = false;
-```
 
-__Note:__ If you want to activate data extraction for your account in general, please contact your Account Manager, or reach out to Jumio Support.
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L63-L64)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L67-L68)
 
-### Miscellaneous
-Use the following property to identify the scan in your reports (max. 100 characters) and set a customer identifier (max. 100 characters).
-```
-config.customerInternalReference = @"YOURSCANREFERENCE";
-config.userReference = @"CUSTOMERID";
-```
-__Note:__ Must not contain sensitive data like PII (Personally Identifiable Information) or account login.
+__Note:__ If you would like to enable extraction for your account in general, please contact your Account Manager, or reach out to Jumio Support at support@jumio.com or [online](https://support.jumio.com).
 
+### Camera handling
 Use cameraPosition to configure the default camera (front or back).
-```
-config.cameraPosition = JumioCameraPositionFront;
+```swift
+config.cameraPosition = JumioCameraPositionFront
 ```
 
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L51-L52)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L55-L56)
+
+### Misc
 The style of the status bar can be specified.
-```
-config.statusBarStyle = UIStatusBarStyleLightContent;
+```swift
+config.statusBarStyle = UIStatusBarStyle.lightContent
 ```
 
 Use setDocumentName to override the document label on Help screen.
+```swift
+config.documentName = "YOURDOCUMENTNAME"
 ```
-config.documentName = @"YOURDOCNAME";
-```
+
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L54-L61)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L58-L65)
 
 ## Customization
 
-The SDK can be customized to fit your application’s look and feel via the UIAppearance pattern. Check out our sample project on how to use it.
+### Customize look and feel
+Customizable aspects include:
 - General: disable blur, blur style, background color, foreground color, font
 - Navigation bar: title image, title color, tint color and bar tint color
 - Positive button (Submit): title color and background
@@ -158,27 +186,29 @@ The SDK can be customized to fit your application’s look and feel via the UIAp
 
 __Note:__ Customizations should be applied before the SDK is initialized.
 
-## Delegation
-Implement the delegate methods of the [`DocumentVerificationViewControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Protocols/DocumentVerificationViewControllerDelegate.html) protocol to be notified of successful initialisation, successful scans and error situations. Dismiss the SDK view in your app in case of success or error.
+## SDK Workflow
+Implement the delegate methods of the [`DocumentVerificationViewControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Protocols/DocumentVerificationViewControllerDelegate.html) protocol to be notified of successfully initializing, successful scans and error situations. Dismiss the SDK view in your app in case of success or error.
 
 ### Success
 Upon success, the scan reference is returned.
+```swift
+func documentVerificationViewController(_ documentVerificationViewController: DocumentVerificationViewController, didFinishWithScanReference scanReference: String?) {}
 ```
-- (void) documentVerificationViewController:(DocumentVerificationViewController*) documentVerificationViewController didFinishWithScanReference: (NSString*)scanReference  {
-	// YOURCODE
-}
-```
+
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L104-L112)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L106-L114)
 
 ### Error
 This method is fired when the user presses the cancel button during the workflow or in an error situation. The parameter `error` contains an error code and a message.
-```
-- (void) documentVerificationViewController:(DocumentVerificationViewController*) documentVerificationViewController didFinishWithError:(DocumentVerificationError*) error {
-	NSString* errorCode = error.code;
-	NSString* errorMessage = error.message;
-}
+```swift
+func documentVerificationViewController(_ documentVerificationViewController: DocumentVerificationViewController, didFinishWithError error: DocumentVerificationError) {}
 ```
 
-**_Error codes_** that are available via the `code` property of the DocumentVerificationError object:
+[__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L119-L124)
+[__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L121-125)
+
+#### Error codes
+List of all **_error codes_** that are available via the `code` property of the DocumentVerificationError object. The first letter (A-K) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]).
 
 | Code | Message | Description |
 | :-------------: |:----------|:-------------|
@@ -191,8 +221,7 @@ This method is fired when the user presses the cancel button during the workflow
 | I00000 | Certificate not valid anymore. Please update your application | End-to-end encryption key not valid anymore, retry impossible |
 | K10400 | Unsupported document code defined. Please contact Jumio support | An unsupported document code has been set, retry impossible |
 
-The first letter (A-J) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]). Please always include the whole code when filing an error related issue to our support team.
-
+__Note:__ Please always include the whole code when filing an error related issue to our support team.
 
 ## Callback
-To get information about callbacks, Netverify Retrieval API, Netverify Delete API and Global Netverify settings and more, please read our [page with server related information](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md).
+To get information about callbacks, __Netverify Retrieval API,__ __Netverify Delete API,__ Global ID Verification settings, and more, please refer to our [page with server related information](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md).

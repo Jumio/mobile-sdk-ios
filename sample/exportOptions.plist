@@ -6,8 +6,8 @@
 	<string>enterprise</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.jumio.JumioMobileSDKSample</key>
-		<string>JumioDistributionEnterprise</string>
+		<key>com.jumio.sample-swift</key>
+		<string>JumioDistributionSampleSwift</string>
 	</dict>
 	<key>teamID</key>
 	<string>JC7JKY534B</string>

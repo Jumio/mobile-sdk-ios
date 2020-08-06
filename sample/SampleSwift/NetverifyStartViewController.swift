@@ -317,6 +317,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         }
        
         let originatingCountry:String? = documentData.originatingCountry
+        let placeOfBirth:String? = documentData.placeOfBirth
         
         //address
         let street:String? = documentData.addressLine
@@ -342,6 +343,7 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         if (dateOfBirth != nil) { message.appendFormat("\ndob: %@", dateOfBirth! as CVarArg) }
         message.appendFormat("\nGender: %@", genderStr)
         if (originatingCountry != nil) { message.appendFormat("\nOriginating Country: %@", originatingCountry!) }
+        if (placeOfBirth != nil) { message.appendFormat("\nPlace of birth: %@", placeOfBirth!) }
         if (street != nil) { message.appendFormat("\nStreet: %@", street!) }
         if (city != nil) { message.appendFormat("\nCity: %@", city!) }
         if (state != nil) { message.appendFormat("\nState: %@", state!) }

@@ -4,6 +4,11 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.7.0
+
+#### Localization files
+Localization files have been moved from the main directory to `/Localizations`. If you are using manual integration or Carthage you will find the localization files under `JumioMobileSDK-3.7.0/Localizations`, in case you are using Cocoapods you can copy them from `/Pods/JumioMobileSDK-3.7.0/Localizations`
+
 ## 3.6.0
 
 #### Localization keys 

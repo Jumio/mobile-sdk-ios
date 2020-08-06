@@ -35,8 +35,8 @@ class DocumentVerificationStartViewController: StartViewController, DocumentVeri
         //Make sure to specify issuing country (ISO 3166-1 alpha-3 country code)
         config.country = "AUT"
         
-        //One of the configured DocumentTypeCodes: BC, BS, CAAP, CB, CCS, CRC, HCC, IC, LAG, LOAP,
-        //MEDC, MOAP, PB, SEL, SENC, SS, STUC, TAC, TR, UB, SSC, VC, VT, WWCC, CUSTOM
+        //One of the configured DocumentTypeCodes: BC, BS, CAAP, CB, CC, CCS, CRC, HCC, IC, LAG, LOAP,
+        //MEDC, MOAP, PB, SEL, SENC, SS, SSC, STUC, TAC, TR, UB, VC, VT, WWCC, CUSTOM
         config.type = "BC"
         
         //The customer internal reference allows you to identify the scan (max. 100 characters). Note: Must not contain sensitive data like PII (Personally Identifiable Information) or account login.

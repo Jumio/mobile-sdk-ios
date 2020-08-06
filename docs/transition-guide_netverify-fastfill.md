@@ -1,23 +1,28 @@
-![Fastfill & Netverify](images/netverify.jpg)
+![ID Verification and Fastfill](images/netverify.jpg)
 
-# Transition guide for Fastfill & Netverify
+# Transition guide for ID Verification and Fastfill
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
+
+## 3.7.0
+
+#### Localization files
+Localization files have been moved from the main directory to `/Localizations`. If you are using manual integration or Carthage you will find the localization files under `JumioMobileSDK-3.7.0/Localizations`, in case you are using Cocoapods you can copy them from `/Pods/JumioMobileSDK-3.7.0/Localizations`
 
 ## 3.6.0
 
 #### Custom UI callbacks
 `netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:` is called for each scanner that has a help animation.
 
-#### Localization keys 
-The following keys are no more uppercased 
+#### Localization keys
+The following keys are no more uppercased
 
- `netverify.scan-help-view.liveness-help.button-continue.title`, 
- `netverify.confirmation-view.button.continue`, 
- `netverify.confirmation-view.button.retry`, 
- `netverify.error-view.button.cancel.title` and 
- `netverify.error-view.button.retry.title` 
- 
+ `netverify.scan-help-view.liveness-help.button-continue.title`,
+ `netverify.confirmation-view.button.continue`,
+ `netverify.confirmation-view.button.retry`,
+ `netverify.error-view.button.cancel.title` and
+ `netverify.error-view.button.retry.title`
+
 ## 3.5.0
 
 #### DocumentVerification separation
@@ -44,7 +49,7 @@ No backward incompatible changes.
 
 ## 3.4.0
 #### Custom UI callbacks
-*  ~~`netverifyCustomScanViewController:shouldDisplayFlipDocumentHint:confirmation:`~~ has been replaced with [`netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:type:text:confirmation:retake:`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:type:text:confirmation:retake:) 
+*  ~~`netverifyCustomScanViewController:shouldDisplayFlipDocumentHint:confirmation:`~~ has been replaced with [`netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:type:text:confirmation:retake:`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html#/c:objc(pl)NetverifyCustomScanViewControllerDelegate(im)netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:type:text:confirmation:retake:)
 * to be able to distinguish between different scenarios when the confirmation view is presented we added [`NetverifyConfirmationType`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyConfirmationType.html)
 
 #### Localizable Strings
@@ -66,7 +71,7 @@ No backward incompatible changes.
 Added support for the Jumio screening feature, see new properties [`watchlistScreening`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistScreening) and [`watchlistSearchProfile`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)watchlistSearchProfile).
 
 #### Changes to the public API
-`- (BOOL)updateConfiguration:(NetverifyConfiguration*)configuration;` has been removed. 
+`- (BOOL)updateConfiguration:(NetverifyConfiguration*)configuration;` has been removed.
 
 ## 3.1.2
 No backward incompatible changes.
@@ -81,7 +86,7 @@ No backward incompatible changes.
 `NetverifyNavigationBarTitleImageView` was renamed to [`JumioNavigationBarTitleImageView`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/JumioNavigationBarTitleImageView.html) and moved to JumioCore.framework
 
 #### 3D-Liveness handling via Custom-UI
-Please see [3D-Liveness in Custom Scan View Delegate](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_netverify-fastfill.md#custom-scan-view-delegate) 
+Please see [3D-Liveness in Custom Scan View Delegate](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_netverify-fastfill.md#custom-scan-view-delegate)
 `netverifyCustomScanViewControllerStartedBiometricAnalysis:`
 `netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:`
 
@@ -109,10 +114,10 @@ Enhanced customization options `scanBackgroundColor` to colorize the background 
 #### Changes to visual customization
 The protocol `NetverifyAppearance` has been replaced with `JumioAppearance`. </br>
  Example: `[[UINavigationBar netverifyAppearance] setTintColor:[UIColor yellowColor]]` has been changed to `[[UINavigationBar jumioAppearance] setTintColor:[UIColor yellowColor]]`.
- 
+
 #### New framework NetverifyBarcode
 When using Barcode scanning for Fastfill or Netverify, make sure to link NetverifyBarcode.framework and MicroBlink.framework to your app project. There is no new public API for you to consume, nor any implementation adaptions required.
- 
+
 #### Changes in Localizable-Netverify.strings
 Added one value in regards to 3D face liveness.
 
@@ -132,10 +137,10 @@ Several additions and changes, mostly in regards to the new 3D face liveness cap
 
 #### Default Settings
 
-The default values for [`requireVerification`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireVerification) and [`requireFaceMatch`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireFaceMatch) were changed to `YES`. Please make sure that they are explicitly set to NO in case a scan in Fastfill mode should be performed. 
+The default values for [`requireVerification`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireVerification) and [`requireFaceMatch`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html#/c:objc(cs)NetverifyConfiguration(py)requireFaceMatch) were changed to `YES`. Please make sure that they are explicitly set to NO in case a scan in Fastfill mode should be performed.
 
 #### Enums
-[`NetverifyDocumentType`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentType.html) was changed from NS_ENUM to NS_OPTIONS. 
+[`NetverifyDocumentType`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyDocumentType.html) was changed from NS_ENUM to NS_OPTIONS.
 
 ## 2.13.0
 

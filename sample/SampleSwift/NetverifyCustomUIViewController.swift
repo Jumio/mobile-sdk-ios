@@ -79,6 +79,15 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         netverifyScanViewController.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[view(==70)]", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["view": shutterBtn]))
     }
     
+    func addVerificationFinishedView()  {
+        guard let verificationFinishedView = Bundle.main.loadNibNamed("VerificationFinishedView", owner: self, options: nil)?.first as? VerificationFinishedView else { return }
+        self.verificationFinishedView = verificationFinishedView
+        verificationFinishedView.frame = self.view.frame
+        
+        self.currentScanView?.dismiss(animated: false, completion: nil)
+        self.view.addSubview(verificationFinishedView)
+    }
+    
     func addCaptureHelperViews(_ netverifyScanViewController: NetverifyCustomScanViewController, isFallback: Bool) {
         // Add capture controls view
         self.addCaptureControl(to: netverifyScanViewController)
@@ -163,12 +172,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         // Add the verification finished view when document is captured and the process of data extraction has started
-        guard let verificationFinishedView = Bundle.main.loadNibNamed("VerificationFinishedView", owner: self, options: nil)?.first as? VerificationFinishedView else { return }
-        self.verificationFinishedView = verificationFinishedView
-        verificationFinishedView.frame = self.view.frame
-        
-        self.currentScanView?.dismiss(animated: false, completion: nil)
-        self.view.addSubview(verificationFinishedView)
+        self.addVerificationFinishedView()
     }
     
     func netverifyUIController(_ netverifyUIController: NetverifyUIController, didDetermineError error: NetverifyError, retryPossible: Bool) {
@@ -196,7 +200,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
                 if let verificationView = self.verificationFinishedView {
                     verificationView.removeFromSuperview()
                 }
-                scanVC.present(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
             }
         } else {
             self.present(alert, animated: true, completion: nil)
@@ -209,6 +213,9 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         UserDefaults.standard.set(scanReference, forKey: "enrollmentTransactionReference")
         
         // Update verification finished view when the data from the captured document was captured
+        if self.verificationFinishedView == nil {
+            self.addVerificationFinishedView()
+        }
         verificationFinishedView!.setup(documentData: documentData, doneHandler: {() -> Void in
             self.navigationController?.popViewController(animated: true)
             
