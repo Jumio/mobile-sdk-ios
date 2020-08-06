@@ -25,8 +25,8 @@ The [basic setup](../README.md#basics) is required before continuing with the fo
 ## Initialization
 Log into your Jumio customer portal. You can find your customer API token and API secret on the __Settings__ page under __API credentials__ tab.
 
-If the token and secret are not set in the [`NetverifyConfiguration`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance.
-Whenever an exception is thrown, the [`NetverifyViewController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `NetverifyConfiguration` instance is passed to the initializer.
+If the token and secret are not set in the [`NetverifyConfiguration`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance.
+Whenever an exception is thrown, the [`NetverifyViewController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `NetverifyConfiguration` instance is passed to the initializer.
 ```swift
 let config:NetverifyConfiguration = NetverifyConfiguration()
 config.merchantApiToken = "YOUR_NETVERIFY_APITOKEN"
@@ -224,7 +224,7 @@ Customizable aspects include:
 __Note:__ Customizations should be applied before the SDK is initialized.
 
 ## SDK Workflow
-Implement the delegate methods of the [`NetverifyViewControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyViewControllerDelegate.html) protocol to be notified of successful initialization, successful scans, and error situations. Dismiss the `NetverifyViewController` instance in your app in case of success or error.
+Implement the delegate methods of the [`NetverifyViewControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyViewControllerDelegate.html) protocol to be notified of successful initialization, successful scans, and error situations. Dismiss the `NetverifyViewController` instance in your app in case of success or error.
 
 ### Initialization
 When this method is fired, the SDK has finished initialization and loading tasks, and is ready to use. The error object is only set when an error has occurred (e.g. wrong credentials are set or a network error occurred).
@@ -259,7 +259,7 @@ func netverifyViewController(_ netverifyViewController: NetverifyViewController,
 [__Objective C__](../sample/SampleObjC/NetverifyStartViewController.m#L301-L309)
 
 ### Cleanup
-After the SDK was dismissed and especially if you want to create a new instance of NetverifyViewController make sure to call [`destroy`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyViewController.html#/c:objc(cs)NetverifyViewController(im)destroy) to ensure proper cleanup of the SDK.
+After the SDK was dismissed and especially if you want to create a new instance of NetverifyViewController make sure to call [`destroy`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyViewController.html#/c:objc(cs)NetverifyViewController(im)destroy) to ensure proper cleanup of the SDK.
 ```swift
 self.dismiss(animated: true) {
     self.netverifyViewController?.destroy()
@@ -342,7 +342,7 @@ The following sequence diagram outlines the components, callbacks and user flow 
 
 ![Custom UI Happy Path Diagram](images/custom_ui_happy_path_diagram.png)
 
-To use the custom UI with a plain scanning user interface, specify an instance of your class which implements the [`NetverifyUIControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyUIControllerDelegate.html). Initialize the SDK by creating a [`NetverifyUIController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyUIController.html) by passing your customised `NetverifyConfiguration` object to its constructor.
+To use the custom UI with a plain scanning user interface, specify an instance of your class which implements the [`NetverifyUIControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyUIControllerDelegate.html). Initialize the SDK by creating a [`NetverifyUIController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html) by passing your customised `NetverifyConfiguration` object to its constructor.
 
 __Note:__ Instead of the `delegate` property, `customUIDelegate` has to be set in the configuration object.
 
@@ -359,7 +359,7 @@ guard let customUIViewController = segue.destination as? NetverifyCustomUIViewCo
 
 [__Swift__](../sample/SampleSwift/NetverifyStartViewController.swift#L197-L218)
 
-After initializing, the SDK is set up and loads all necessary resources for scanning. As soon as setup is complete and the required information is loaded, the following delegate method is called and returns the available countries and documentTypes. Only the [`NetverifyCountry`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyCountry.html)-Objects and [`NetverifyDocument`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyDocument.html)-Objects which validate with the settings used in the `NetverifyConfiguration` will be returned here. This method is only called when there is more than one option available to select.
+After initializing, the SDK is set up and loads all necessary resources for scanning. As soon as setup is complete and the required information is loaded, the following delegate method is called and returns the available countries and documentTypes. Only the [`NetverifyCountry`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyCountry.html)-Objects and [`NetverifyDocument`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyDocument.html)-Objects which validate with the settings used in the `NetverifyConfiguration` will be returned here. This method is only called when there is more than one option available to select.
 
 ```swift
  func netverifyUIController(_ netverifyUIController: NetverifyUIController, didDetermineAvailableCountries countries: [Any], suggestedCountry country: NetverifyCountry?) {}
@@ -367,13 +367,13 @@ After initializing, the SDK is set up and loads all necessary resources for scan
 
 [__Swift__](../sample/SampleSwift/NetverifyCustomUIViewController.swift#L96-L115)
 
-[`NetverifyCountry`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyCountry.html) contains the following information:
+[`NetverifyCountry`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyCountry.html) contains the following information:
 ```swift
 var code: String { get } //The ISO 3166-1 Alpha 3 code
 var name: String { get } //The localized country name according to the locale of the device
 var documents: [NetverifyDocument] { get } //List of pre-filtered NetverifyDocuments available of this country.
 ```
-[`NetverifyDocument`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyDocument.html) contains the following information:
+[`NetverifyDocument`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyDocument.html) contains the following information:
 ```swift
 var countryCode: String! { get } //The ISO 3166-1 Alpha 3 code
 var type: NetverifyDocumentType { get } //The type of the document
@@ -383,7 +383,7 @@ func supportsPlasticVariant() -> Bool //Returns true if this document can scan a
 func hasMultipleVariants() -> Bool //Returns true if this document has more than one variant
 ```
 
-`netverifyUIController:shouldRequireUserConsentWithURL:` in [`NetverifyUIControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyUIControllerDelegate.html) is invoked when the end-user’s consent to Jumio’s privacy policy is legally required. [`userConsentGiven:`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyUIController.html#/c:objc(cs)NetverifyUIController(im)userConsentGiven:) needs to be called after the end-user has accepted.
+`netverifyUIController:shouldRequireUserConsentWithURL:` in [`NetverifyUIControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyUIControllerDelegate.html) is invoked when the end-user’s consent to Jumio’s privacy policy is legally required. [`userConsentGiven:`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html#/c:objc(cs)NetverifyUIController(im)userConsentGiven:) needs to be called after the end-user has accepted.
 
 ### Start scanning
 Use this method to set up the NetverifyUIController correctly before any scan view can be displayed. Provide one NetverifyDocument via `setupWithDocument:` delegate method. Please note that when a paper-format document is used, selectedVariant has to be set in advance by calling the following method:
@@ -411,7 +411,7 @@ As soon as netverifyScanViewController is presented you can add your own UI elem
 ### Handling camera session
 When displaying fullscreen help, the capturing process can be paused with the method `pauseScan` and restarted with `retryScan`. Please note that only the detection is paused. The camera preview continues to display the current camera feed.
 
-Each [`NetverifyCustomScanViewController`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyCustomScanViewController.html) returns a scan mode, which indicates what type of scanView is displayed.
+Each [`NetverifyCustomScanViewController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyCustomScanViewController.html) returns a scan mode, which indicates what type of scanView is displayed.
 
 **NetverifyScanMode** values: `MRZ`, `Barcode`, `3DLiveness`, `FaceCapture`, `Manual`, `OCR`, `OCR_Template`
 
@@ -435,13 +435,13 @@ Therefore we suggest displaying a button in case `isFallbackAvailable` is true. 
 Please see the sample implementation in our [sample project.](../sample)
 
 ### Custom Scan View Delegate
-Make sure to also implement the [`NetverifyCustomScanViewControllerDelegate`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html) protocol and set the `customScanViewControllerDelegate` to the received scanViewController before presenting.
+Make sure to also implement the [`NetverifyCustomScanViewControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyCustomScanViewControllerDelegate.html) protocol and set the `customScanViewControllerDelegate` to the received scanViewController before presenting.
 
 When the scanner has a help animation, the delegate `netverifyCustomScanViewController:shouldDisplayHelpWithText:animationView:forReason:` is called. A help text and animated view is provided, relevant to the scanner type, that can be shown to assist the user.
 
 For some countries, end-users need to be informed about some legal constraints before scanning. In this case `netverifyCustomScanViewController:shouldDisplayLegalAdvice:completion:` is called. Make sure to display the message provided via this call.
 
-After a successful scan, it makes sense to present the captured image and ask to finally confirm that the image should be used. In this case `netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:type:text:confirmation:retake:` is called. Simply add this view as subview and it will draw itself accordingly. We suggest asking the user if the image is readable and properly aligned to prevent bad quality images. Continue with calling one of the two provided blocks. Calling `imageSize` on [`NetverifyConfirmationImageView`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyConfirmationImageView.html) will return the size of the displayed image.
+After a successful scan, it makes sense to present the captured image and ask to finally confirm that the image should be used. In this case `netverifyCustomScanViewController:shouldDisplayConfirmationWithImageView:type:text:confirmation:retake:` is called. Simply add this view as subview and it will draw itself accordingly. We suggest asking the user if the image is readable and properly aligned to prevent bad quality images. Continue with calling one of the two provided blocks. Calling `imageSize` on [`NetverifyConfirmationImageView`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyConfirmationImageView.html) will return the size of the displayed image.
 
 [`NetverifyConfirmationType`](https://jumio.github.io/mobile-sdk-ios/Netverify/Enums/NetverifyConfirmationType.html) defines the reason for the confirmation to be displayed to the enduser.
 * `NetverifyConfirmationTypeGeneric` Generic confirmation to check if everything is readable and glare free
@@ -484,7 +484,7 @@ Please refer to the section [Retrieving information](#retrieving-information) to
 Call `cancel` to abort the workflow, this will automatically evoke `netverifyUIController:didCancelWithError:scanReference:` to reach a final state of the SDK.
 
 #### Clean up
-After handling the reuslt and the SDK was dismissed, especially if you want to create a new instance of NetverifyUIController make sure to call [`destroy`](https://jumio.github.io/Mobile-SDK-IOS_pilot/Netverify/Classes/NetverifyUIController.html#/c:objc(cs)NetverifyUIController(im)destroy) to ensure proper cleanup of the SDK.
+After handling the reuslt and the SDK was dismissed, especially if you want to create a new instance of NetverifyUIController make sure to call [`destroy`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html#/c:objc(cs)NetverifyUIController(im)destroy) to ensure proper cleanup of the SDK.
 ```swift
 self.netverifyUIController?.destroy()
 self.netverifyUIController = nil
