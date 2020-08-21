@@ -17,10 +17,22 @@ Jumio’s ID Verification allows businesses to establish the genuine identity of
 ## Release notes
 Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.0
 
-For breaking technical changes, please read our [transition guide](transition-guide_netverify-fastfill.md).
+For breaking technical changes, please read our [transition guide](transition-guide_id-verification-fastfill.md).
 
 ## Setup
 The [basic setup](../README.md#basics) is required before continuing with the following setup for ID Verification.
+
+### NFC Setup 
+To make our SDK capable to read NFC chips you will need to set the following settings.
+
+Add the Near Field Communication Tag Reading capability to your project, App ID and provisioning profiles in [Apple Developer portal](https://developer.apple.com).
+Add `NFCReaderUsageDescription` to your info.plist file with a proper description of why you are using this feature. You will also need to add the following key and value to your plist file to be able to read NFC chips from passports. 
+```
+<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+<array>
+    <string>A0000002471001</string>
+</array>
+```
 
 ## Initialization
 Log into your Jumio customer portal. You can find your customer API token and API secret on the __Settings__ page under __API credentials__ tab.
@@ -54,20 +66,9 @@ We advice to prevent our SDK to be run on jailbroken devices. Either use the met
 ```swift
 JMDeviceInfo.isJailbrokenDevice()
 ```
+
 [__Swift__](../sample/SampleSwift/NetverifyStartViewController.swift#L31-L34)
 [__Objective C__](../sample/SampleObjC/NetverifyStartViewController.m#L22-L25)
-
-```swift
-self.present(netverifyVC, animated: true, completion: nil)
-```
-[__Swift__](../sample/SampleSwift/NetverifyStartViewController.swift#L180-L193)
-[__Objective C__](../sample/SampleObjC/NetverifyStartViewController.m#L164-L170)
-
-### Jailbreak detection
-We advice to prevent our SDK to be run on jailbroken devices. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
-```swift
-JMDeviceInfo.isJailbrokenDevice()
-```
 
 ## Configuration
 
