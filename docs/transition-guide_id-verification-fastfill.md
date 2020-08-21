@@ -1,10 +1,22 @@
-![ID Verification and Fastfill](images/netverify.jpg)
+![ID Verification and Fastfill](images/id-verification-fastfill.jpg)
 
 # Transition guide for ID Verification and Fastfill
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
 ## 3.7.0
+
+#### NFC Setup 
+To make our SDK capable to read NFC chips you will need to set the following settings.
+
+Add the Near Field Communication Tag Reading capability to your project, App ID and provisioning profiles in [Apple Developer portal](https://developer.apple.com).
+Add `NFCReaderUsageDescription` to your info.plist file with a proper description of why you are using this feature. You will also need to add the following key and value to your plist file to be able to read NFC chips from passports. 
+```
+<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+<array>
+    <string>A0000002471001</string>
+</array>
+```
 
 #### Localization files
 Localization files have been moved from the main directory to `/Localizations`. If you are using manual integration or Carthage you will find the localization files under `JumioMobileSDK-3.7.0/Localizations`, in case you are using Cocoapods you can copy them from `/Pods/JumioMobileSDK-3.7.0/Localizations`
