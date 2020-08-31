@@ -15,7 +15,7 @@ BAM Checkout is a powerful, cutting-edge solution to extract data from your cust
 - [Card retrieval API](#card-retrieval-api)
 
 ## Release notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.0
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.1
 
 For breaking technical changes, please read our [transition guide](transition-guide_bam-checkout.md).
 

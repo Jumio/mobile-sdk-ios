@@ -124,17 +124,17 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.7.0' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.7.1' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.7.0' # Use full Netverify and Authentication functionality
-pod 'JumioMobileSDK/NetverifyBase', '~>3.7.0' # For Fastfill, Netverify basic functionality
-pod 'JumioMobileSDK/NetverifyNFC', '~>3.7.0' # For Fastfill, Netverify functionality with NFC extraction
-pod 'JumioMobileSDK/NetverifyBarcode', '~>3.7.0' # For Fastfill, Netverify functionality with barcode extraction
-pod 'JumioMobileSDK/NetverifyFace', '~>3.7.0' # For Fastfill, Netverify functionality with identity verification, Authentication
+pod 'JumioMobileSDK/Netverify', '~>3.7.1' # Use full Netverify and Authentication functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.7.1' # For Fastfill, Netverify basic functionality
+pod 'JumioMobileSDK/NetverifyNFC', '~>3.7.1' # For Fastfill, Netverify functionality with NFC extraction
+pod 'JumioMobileSDK/NetverifyBarcode', '~>3.7.1' # For Fastfill, Netverify functionality with barcode extraction
+pod 'JumioMobileSDK/NetverifyFace', '~>3.7.1' # For Fastfill, Netverify functionality with identity verification, Authentication
 
-pod 'JumioMobileSDK/DocumentVerification', '~>3.7.0' # Use Document Verification functionality
+pod 'JumioMobileSDK/DocumentVerification', '~>3.7.1' # Use Document Verification functionality
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.7.0' # Use BAM Checkout functionality
+pod 'JumioMobileSDK/BAMCheckout', '~>3.7.1' # Use BAM Checkout functionality
 ```
 
 Install the pod to your project via Terminal:
@@ -147,7 +147,7 @@ Jumio supports Carthage as dependency management tool for easy integration of th
 Adapt you Cartfile and add the JumioMobileSDK dependency. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.7.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.7.1
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -162,7 +162,7 @@ In case you experience a build error when building your app in Debug configurati
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.7.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.7.0/ios-jumio-mobile-sdk-3.7.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.7.1.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.7.1/ios-jumio-mobile-sdk-3.7.1.zip).
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -210,7 +210,7 @@ Please refer to our [Change Log](docs/changelog.md) for more information about o
 # Support
 
 ## Previous Version
-The previous release version 3.6.0 of the Jumio Mobile SDK is supported until 2020-11-06.
+The previous release version 3.7.0 of the Jumio Mobile SDK is supported until 2020-11-30.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.

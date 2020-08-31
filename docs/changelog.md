@@ -8,6 +8,15 @@
 # Change Log
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
 
+## SDK Version: __3.7.1__
+__This is a mandatory update for all customers who use Identity Verification (Selfie capture). We strongly encourage you to update your SDK immediately__
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed a critical problem in the license update of the face component [ID Verification, Authentication]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed problem in reading the issuing date correctly from AUS passports [ID Verification]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed problem that front of ID was missing for processing in certain edge cases [ID Verification]
+
 ## SDK Version: __3.7.0__
 ![Changes](https://img.shields.io/badge/Change-blue) New NFC reading functionality of Passports [ID Verification]
 

@@ -14,7 +14,7 @@ Document Verification is a powerful solution to enable scanning various types (U
 - [Callback](#callback)
 
 ## Transition guide
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.0
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.1
 
 For breaking technical changes, please read our [transition guide](transition-guide_document-verification.md).
 

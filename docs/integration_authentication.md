@@ -14,7 +14,7 @@ Biometric-based Jumio Authentication establishes the digital identities of your 
 - [Callback](#callback)
 
 ## Release notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.0
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.1
 
 For breaking technical changes, please read our [transition guide](transition-guide_authentication.md)
 
