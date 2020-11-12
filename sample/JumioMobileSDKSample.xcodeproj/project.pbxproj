@@ -1016,7 +1016,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SampleSwift/Sample-BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1057,7 +1057,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SampleSwift/Sample-BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "$(ARCHS_STANDARD)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

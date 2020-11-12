@@ -8,6 +8,18 @@
 # Change Log
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
 
+## SDK Version: __3.7.2__
+![Improvement](https://img.shields.io/badge/Improvement-green) New error code is returned in case an ad blocker or a firewall is detected [ID Verification/Fastfill, Authentication, Document Verification]
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Added option to test custom UI on Simulator and change position after NetverifyCustomScanViewController is displayed [ID Verification Custom UI]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed a rare problem in which Identity Verification (Face capture) was skipped [ID Verification]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed a problem in which the close button disappeared on iOS 14 [ID Verification/Fastfill]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Added a fix to bypass a [CoreNFC bug in XCode 12](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes) that caused the SDK to crash in Simulator
+
+
 ## SDK Version: __3.7.1__
 ![Fixes](https://img.shields.io/badge/Fix-success) Fixed problem in reading the issuing date correctly from AUS passports [ID Verification]
 
@@ -23,7 +35,6 @@ All notable changes, such as SDK releases, updates and fixes, are documented in 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Possibility to retrieve the captured images directly in the SDK [ID Verification/Fastfill]
 
 ![Fixes](https://img.shields.io/badge/Fix-success) Various smaller bug fixes/improvements [ID Verification/Fastfill, Authentication, Document Verification]
-
 
 ## SDK version: __3.6.0__
 ![Changes](https://img.shields.io/badge/Change-blue) Added support for right-to-left languages [Netverify/Fastfill, Authentication, Document Verification]

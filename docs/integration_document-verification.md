@@ -3,9 +3,8 @@
 # Document Verification SDK for iOS
 Document Verification is a powerful solution to enable scanning various types (Utility Bill, Bank statement and many others) of your customer's documents in your mobile application within seconds, also supporting data extraction on documents like Utility Bills and Bank Statements (see [Supported documents for data extraction](https://github.com/Jumio/implementation-guides/blob/master/netverify/document-verification.md#supported-documents))
 
-## Table of Content
-
-- [Release notes](#release-notes)
+## Table of Contents
+- [Release Notes](#release-notes)
 - [Setup](#setup)
 - [Initialization](#initialization)
 - [Configuration](#configuration)
@@ -13,8 +12,8 @@ Document Verification is a powerful solution to enable scanning various types (U
 - [SDK Workflow](#delegation)
 - [Callback](#callback)
 
-## Transition guide
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.1
+## Transition Guide
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.2
 
 For breaking technical changes, please read our [transition guide](transition-guide_document-verification.md).
 
@@ -27,8 +26,8 @@ Log into your Jumio customer portal. You can find your customer API token and AP
 If the token and secret are not set in the [`DocumentVerificationConfiguration`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Classes/DocumentVerificationConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the [`DocumentVerificationViewController`](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/Classes/DocumentVerificationViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `DocumentVerificationConfiguration` instance is passed to the initializer.
 ```swift
 let config:DocumentVerificationConfiguration = DocumentVerificationConfiguration()
-config.merchantApiToken = "YOUR_DOCUMENTVERIFICATION_APITOKEN"
-config.merchantApiSecret = "YOUR_DOCUMENTVERIFICATION_APISECRET"
+config.apiToken = "YOUR_DOCUMENTVERIFICATION_APITOKEN"
+config.apiSecret = "YOUR_DOCUMENTVERIFICATION_APISECRET"
 config.dataCenter = JumioDataCenterUS
 config.delegate = self
 ```
@@ -48,7 +47,7 @@ Make sure initialization and presentation are timely within one minute. On iPads
 [__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L91-L95)
 [__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L71-L77)
 
-### Jailbreak detection
+### Jailbreak Detection
 We advice to prevent our SDK to be run on jailbroken devices. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
 ```swift
 JMDeviceInfo.isJailbrokenDevice()
@@ -106,7 +105,7 @@ config.customDocumentCode = "YOURCUSTOMDOCUMENTCODE"
 [__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L57-L58)
 [__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L61-L62)
 
-### Country selection
+### Country Selection
 You can specify issuing country  using [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country codes. In the example down below the United States ("USA") have been preselected. Use "XKX" for Kosovo.
 ```swift
 config.country = "AUT"
@@ -115,15 +114,15 @@ config.country = "AUT"
 [__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L32-L33)
 [__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L36-L37)
 
-### Transaction identifiers
+### Transaction Identifiers
 Specify your reporting criteria to identify each scan attempt in your reports (max. 100 characters).
 ```swift
-config.merchantReportingCriteria = "YOURREPORTINGCRITERIA"
+config.reportingCriteria = "YOURREPORTINGCRITERIA"
 ```
 
 Use the following property to identify the scan in your reports (max. 100 characters) and set a customer identifier (max. 100 characters).
 ```swift
- config.merchantScanReference = "YOURSCANREFERENCE"
+ config.customerInternalReference = "YOURSCANREFERENCE"
  config.userReference = "CUSTOMERID"
 ```
 
@@ -151,7 +150,7 @@ config.enableExtraction = true
 
 __Note:__ If you would like to enable extraction for your account in general, please contact your Account Manager, or reach out to Jumio Support at support@jumio.com or [online](https://support.jumio.com).
 
-### Camera handling
+### Camera Handling
 Use cameraPosition to configure the default camera (front or back).
 ```swift
 config.cameraPosition = JumioCameraPositionFront
@@ -176,7 +175,7 @@ config.documentName = "YOURDOCUMENTNAME"
 
 ## Customization
 
-### Customize look and feel
+### Customize Look and Feel
 Customizable aspects include:
 - General: disable blur, blur style, background color, foreground color, font
 - Navigation bar: title image, title color, tint color and bar tint color
@@ -207,7 +206,7 @@ func documentVerificationViewController(_ documentVerificationViewController: Do
 [__Swift__](../sample/SampleSwift/DocumentVerificationStartViewController.swift#L119-L124)
 [__Objective C__](../sample/SampleObjC/DocumentVerificationStartViewController.m#L121-125)
 
-#### Error codes
+#### Error Codes
 List of all **_error codes_** that are available via the `code` property of the DocumentVerificationError object. The first letter (A-K) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]).
 
 | Code | Message | Description |

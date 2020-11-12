@@ -7,7 +7,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift 3.0-5.x](http://img.shields.io/badge/Swift-3.x,%204.x%20&%205.x-orange.svg?style=flat)](https://swift.org/)
 
-# Table of Content
+# Table of Contents
 - [Overview](#overview)
 - [Get Started](#get-started)
     - [ID Verification & Fastfill SDK](docs/integration_id-verification-fastfill.md)
@@ -21,6 +21,7 @@
     - [Integration](#integration)
     - [App Thinning and Size Matters](#app-thinning-and-size-matters)
     - [Language Localization](#language-localization)
+- [Security](#security)
 - [Release Notes](#release-notes)
 - [Support](#support)
 - [FAQ](docs/integration_faq.md)
@@ -34,10 +35,10 @@ Onboard new users and easily verify their digital identities, by making sure the
 
 Using the Jumio SDK will allow you to create the best possible solution for your individual needs, providing you with a range of different services to choose from.
 
-# Get started
+# Get Started
 Please note that [basic setup](#basics) is required before continuing with the integration of any of the following services.
 
-## Jumio ID Verification and Fastfill
+## Jumio ID Verification & Fastfill
 ID Verification (formerly known as Netverify) is a secure and easy solution that allows you to establish the genuine identity of your users in your mobile application, by verifying their passports, government-issued IDs and VISA in real-time. Very user-friendly and highly customizable, it makes onboarding new customers quick and simple.
 
 - [Integration ID Verification & Fastfill SDK](docs/integration_id-verification-fastfill.md)
@@ -112,7 +113,6 @@ Check the [Xcode sample project](sample) to learn the most common use. Make sure
 ### Via Cocoapods
 Jumio supports CocoaPods as dependency management tool for easy integration of the SDK.
 
-
 Update your local clone of the specs repo in Terminal to ensure that you are using the latest podspec files:
 ```
 pod repo update
@@ -124,17 +124,17 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.7.1' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.7.2' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.7.1' # Use full Netverify and Authentication functionality
-pod 'JumioMobileSDK/NetverifyBase', '~>3.7.1' # For Fastfill, Netverify basic functionality
-pod 'JumioMobileSDK/NetverifyNFC', '~>3.7.1' # For Fastfill, Netverify functionality with NFC extraction
-pod 'JumioMobileSDK/NetverifyBarcode', '~>3.7.1' # For Fastfill, Netverify functionality with barcode extraction
-pod 'JumioMobileSDK/NetverifyFace', '~>3.7.1' # For Fastfill, Netverify functionality with identity verification, Authentication
+pod 'JumioMobileSDK/Netverify', '~>3.7.2' # Use full Netverify and Authentication functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.7.2' # For Fastfill, Netverify basic functionality
+pod 'JumioMobileSDK/NetverifyNFC', '~>3.7.2' # For Fastfill, Netverify functionality with NFC extraction
+pod 'JumioMobileSDK/NetverifyBarcode', '~>3.7.2' # For Fastfill, Netverify functionality with barcode extraction
+pod 'JumioMobileSDK/NetverifyFace', '~>3.7.2' # For Fastfill, Netverify functionality with identity verification, Authentication
 
-pod 'JumioMobileSDK/DocumentVerification', '~>3.7.1' # Use Document Verification functionality
+pod 'JumioMobileSDK/DocumentVerification', '~>3.7.2' # Use Document Verification functionality
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.7.1' # Use BAM Checkout functionality
+pod 'JumioMobileSDK/BAMCheckout', '~>3.7.2' # Use BAM Checkout functionality
 ```
 
 Install the pod to your project via Terminal:
@@ -147,7 +147,7 @@ Jumio supports Carthage as dependency management tool for easy integration of th
 Adapt you Cartfile and add the JumioMobileSDK dependency. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.7.1
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.7.2
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -162,7 +162,7 @@ In case you experience a build error when building your app in Debug configurati
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.7.1.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.7.1/ios-jumio-mobile-sdk-3.7.1.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.7.2.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.7.2/ios-jumio-mobile-sdk-3.7.2.zip).
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -170,7 +170,7 @@ The Jumio Mobile SDK consists of several dynamic frameworks. Depending on which 
 
 Please see [Strip unused frameworks](docs/integration_faq.md#strip-unused-frameworks) for more information.
 
-The framework binaries are available with support for device and simulator architecture. Make sure to remove the simulator architecture from our frameworks for app submissions to the AppStore. If this step is not performed, your submission will be rejection by Apple. Add the following code snippet as run script build phase to your app project and ensure that it is executed after the frameworks are embedded. Please see the required setup in our sample project.
+The framework binaries are available with support for device and simulator architecture. Make sure to remove the simulator architecture from our frameworks for app submissions to the AppStore. If this step is not performed, your submission will be rejected by Apple. Add the following code snippet as run script build phase to your app project and ensure that it is executed after the frameworks are embedded. Please see the required setup in our sample project.
 
 __Note:__ The simulator architecture is automatically removed if using cocoapods via "[CP] Embed Pods Frameworks" build phase.
 ```shell
@@ -192,7 +192,6 @@ Make sure that the following Xcode build settings in your app are set accordingl
 | Link Frameworks Automatically | YES |
 
 ## Language Localization
-
 Our SDK supports localization for different languages. All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language, add it to your app or framework project and mark it as Localizable. This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
 __Note:__ If using CocoaPods, the original file is located under `/Pods/JumioMobileSDK/Localizations`.
 
@@ -204,13 +203,16 @@ Please check out our [sample project](sample) to see how to use the strings file
 
 Our SDK supports accessibility features. Visually impaired users can enable __VoiceOver__ or increase __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customised.
 
+# Security
+All SDK related traffic is sent over HTTPS using TLS and public key pinning, and additionally, the information itself within the transmission is also encrypted utilizing __Application Layer Encryption__ (ALE). ALE is Jumio custom-designed security protocol which utilizes RSA-OAEP and AES-256 to ensure that the data cannot be read or manipulated even if the traffic was captured.
+
 # Release Notes
 Please refer to our [Change Log](docs/changelog.md) for more information about our current SDK version and further details.
 
 # Support
 
 ## Previous Version
-The previous release version 3.7.0 of the Jumio Mobile SDK is supported until 2020-11-30.
+The previous release version 3.7.1 of the Jumio Mobile SDK is supported until 2020-02-18.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.
@@ -224,7 +226,7 @@ The software contains third-party open source software. For more information, pl
 This software is based in part on the work of the Independent JPEG Group.
 
 ## Contact
-If you have any questions regarding our implementation guide please contact Jumio Customer Service at support@jumio.com. The Jumio online helpdesk contains a wealth of information regarding our service including demo videos, product descriptions, FAQs and other things that may help to get you started with Jumio. [Check it out at here.](https://support.jumio.com.)
+If you have any questions regarding our implementation guide please contact Jumio Customer Service at support@jumio.com. The Jumio online helpdesk contains a wealth of information regarding our service including demo videos, product descriptions, FAQs and other things that may help to get you started with Jumio. [Check it out at here.](https://support.jumio.com).
 
 ## Copyright
 &copy; Jumio Corporation, 395 Page Mill Road, Suite 150, Palo Alto, CA 94306

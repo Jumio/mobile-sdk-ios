@@ -3,8 +3,7 @@
 # BAM Checkout SDK for iOS
 BAM Checkout is a powerful, cutting-edge solution to extract data from your customer´s credit card and / or ID in your mobile application within seconds, including home address. It fits perfectly, and fully automates, every checkout flow to avoid manual input at all which leads to an increased conversion rate.
 
-## Table of Content
-
+## Table of Contents
 - [Release notes](#release-notes)
 - [Setup](#setup)
 - [Initialization](#initialization)
@@ -14,8 +13,8 @@ BAM Checkout is a powerful, cutting-edge solution to extract data from your cust
 - [SDK Workflow](#sdk-workflow)
 - [Card retrieval API](#card-retrieval-api)
 
-## Release notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.1
+## Release Notes
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.2
 
 For breaking technical changes, please read our [transition guide](transition-guide_bam-checkout.md).
 
@@ -26,8 +25,8 @@ The [basic setup](../README.md#basics) is required before continuing with the fo
 Log into your Jumio Customer Portal and you can find your API token and API secret on the "Settings" page under "API credentials". We strongly recommend to store credentials outside your app. In case the token and secret are not set in the [`BAMCheckoutConfiguration`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Classes/BAMCheckoutConfiguration.html) object, an exception will be thrown. Please note that in Swift you need to catch the underlying exception and translate it into a `NSError` instance. Whenever an exception is thrown, the [`BAMCheckoutViewController`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Classes/BAMCheckoutViewController.html) instance will be nil and the SDK is not usable. Make sure that all necessary configuration is set before the `BAMCheckoutConfiguration` instance is passed to the initializer.
 ```swift
 let config:BAMCheckoutConfiguration = BAMCheckoutConfiguration()
-config.merchantApiToken = "YOUR_BAMCHECKOUT_APITOKEN"
-config.merchantApiSecret = "YOUR_BAMCHECKOUT_APISECRET"
+config.apiToken = "YOUR_BAMCHECKOUT_APITOKEN"
+config.apiSecret = "YOUR_BAMCHECKOUT_APISECRET"
 config.dataCenter = JumioDataCenterUS
 config.delegate = self;
 ```
@@ -45,7 +44,7 @@ Make sure initialization and presentation are timely within one minute. On iPads
 [__Swift__](../sample/SampleSwift/BAMCheckoutStartViewController.swift#L172-L176)
 [__Objective C__](../sample/SampleObjC/BAMCheckoutStartViewController.m#L173-L179)
 
-### Jailbreak detection
+### Jailbreak Detection
 We advice to prevent our SDK to be run on jailbroken devices. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
 ```swift
 JMDeviceInfo.isJailbrokenDevice()
@@ -80,11 +79,11 @@ config.cardHolderNameEditable = true
 [__Swift__](../sample/SampleSwift/BAMCheckoutStartViewController.swift#L44-L79)
 [__Objective C__](../sample/SampleObjC/BAMCheckoutStartViewController.m#L49-L84)
 
-### Transaction identifiers
+### Transaction Identifiers
 Specify your reporting criteria to identify each scan attempt in your reports (max. 100 characters).
 
 ```swift
-config.merchantReportingCriteria = "YOURREPORTINGCRITERIA"
+config.reportingCriteria = "YOURREPORTINGCRITERIA"
 ```
 
 [__Swift__](../sample/SampleSwift/BAMCheckoutStartViewController.swift#L36-L37)
@@ -92,7 +91,7 @@ config.merchantReportingCriteria = "YOURREPORTINGCRITERIA"
 
 __Note:__ Transaction identifiers must not contain sensitive data like PII (Personally Identifiable Information) or account login.
 
-### Offline scanning
+### Offline Scanning
 If you want to use the SDK in offline mode, please contact Jumio Support at support@jumio.com or https://support.jumio.com. Once this feature is enabled for your account, you can find your offline token in your Jumio customer portal on the __Settings__ page in the __API credentials__ tab.
 ```swift
 config.offlineToken = "YOUROFFLINETOKEN"
@@ -138,7 +137,7 @@ config.statusBarStyle = UIStatusBarStyle.lightContent
 [__Swift__](../sample/SampleSwift/BAMCheckoutStartViewController.swift#L60-L79)
 [__Objective C__](../sample/SampleObjC/BAMCheckoutStartViewController.m#L65-L84)
 
-### Custom scan view
+### Custom Scan View
 The BAM Checkout SDK gives the opportunity to use a completely customized scan view, that is created by you and just uses a protocol to control the scanning process as well as get informed about certain events. The following actions and events are offered.
 * Get location and dimension of card frame
 * Check if front and back camera available
@@ -163,7 +162,7 @@ For more detailed information about how to use the custom scan view, please chec
 
 ## Customization
 
-### Customize look and feel
+### Customize Look and Feel
 The SDK can be customized to fit your application’s look and feel via the UIAppearance pattern. Check out our [sample project]((https://github.com/Jumio/mobile-sdk-ios/tree/master/sample) on how to use it.
 * General: disable blur, background color, foreground color, font
 * Navigation bar: title image, title color, tint color and bar tint color
@@ -176,7 +175,7 @@ __Note:__ Customizations should be applied before the SDK is initialized.
 ## SDK Workflow
 Implement the delegate methods of the [`BAMCheckoutViewControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/Protocols/BAMCheckoutViewControllerDelegate.html) protocol to be notified of scan attempts, successful scans and error situations. Dismiss the `BAMCheckoutViewController` instance in your app in case of success or error.
 
-### Scan attempt
+### Scan Attempt
 You receive a Jumio scan reference for each attempt, if the Internet connection is available. For offline scans the parameter scanReference will be nil.
 ```swift
 func bamCheckoutViewController(_ controller: BAMCheckoutViewController, didStartScanAttemptWithScanReference scanReference: String) {}
@@ -229,7 +228,7 @@ __Note:__ The error codes are described [here](#error-codes)
 | clear | | | Clear card information |
 | getCustomField | NSString | NSString | Get entered value for added custom field |
 
-### Error codes
+### Error Codes
 List of all **_error codes_** that are available via the `code` property of the NSError object.
 
 | Code | Message | Description |
@@ -245,5 +244,5 @@ List of all **_error codes_** that are available via the `code` property of the 
 
 __Note:__ Please always include the whole code when filing an error related issue to our support team.
 
-## Card retrieval API
+## Card Retrieval API
 You can implement RESTful HTTP GET APIs to retrieve credit card image and data for a specific scan. Please refer to our [implementation guide](http://www.jumio.com/implementation-guides/credit-card-retrieval-api/) for more information.

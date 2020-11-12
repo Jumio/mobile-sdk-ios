@@ -3,9 +3,8 @@
 # ID Verification & Fastfill SDK for iOS
 Jumio’s ID Verification allows businesses to establish the genuine identity of their users by verifying government-issued IDs in real-time. ID Verification is used by financial service organizations and leading brands to create trust for safe onboarding, money transfers, and user authentication.
 
-## Table of Content
-
-- [Release notes](#release-notes)
+## Table of Contents
+- [Release Notes](#release-notes)
 - [Setup](#setup)
 - [Initialization](#initialization)
 - [Configuration](#configuration)
@@ -14,19 +13,19 @@ Jumio’s ID Verification allows businesses to establish the genuine identity of
 - [Custom UI](#custom-ui)
 - [Callback](#callback)
 
-## Release notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.1
+## Release Notes
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.2
 
 For breaking technical changes, please read our [transition guide](transition-guide_id-verification-fastfill.md).
 
 ## Setup
 The [basic setup](../README.md#basics) is required before continuing with the following setup for ID Verification.
 
-### NFC Setup 
+### NFC Setup
 To make our SDK capable to read NFC chips you will need to set the following settings.
 
 Add the Near Field Communication Tag Reading capability to your project, App ID and provisioning profiles in [Apple Developer portal](https://developer.apple.com).
-Add `NFCReaderUsageDescription` to your info.plist file with a proper description of why you are using this feature. You will also need to add the following key and value to your plist file to be able to read NFC chips from passports. 
+Add `NFCReaderUsageDescription` to your info.plist file with a proper description of why you are using this feature. You will also need to add the following key and value to your plist file to be able to read NFC chips from passports.
 ```
 <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
 <array>
@@ -46,7 +45,7 @@ config.apiSecret = "YOUR_NETVERIFY_APISECRET"
 config.dataCenter = JumioDataCenterUS
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L57-L184) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L57-L184) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L27-L90)
 
 The default data center is JumioDataCenterUS. If your customer account is in the EU data center, use `JumioDataCenterEU` instead. Alternatively, use `JumioDataCenterSG` for Singapore.
@@ -58,16 +57,16 @@ Make sure initialization and presentation are timely within one minute. On iPads
 self.present(netverifyVC, animated: true, completion: nil)
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L207-L215) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L207-L215) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L180-L189)
 
-### Jailbreak detection
+### Jailbreak Detection
 We advice to prevent our SDK to be run on jailbroken devices. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
 ```swift
 JumioDeviceInfo.isJailbrokenDevice()
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L31-L34) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L31-L34) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L22-L25)
 
 ## Configuration
@@ -81,7 +80,7 @@ config.callbackUrl = "YOURCALLBACKURL"
 __Note:__ Not available for accounts configured as Fastfill only.
 
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L100-L101) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L100-L101) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L66-L67)
 
 __Note:__ The callback URL must not contain sensitive data like PII (Personally Identifiable Information) or account login.
@@ -91,7 +90,7 @@ Set the following setting to switch to Fastfill mode (which performs data extrac
 config.enableVerification = self.switchRequireVerification.isOn
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L103-L104) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L103-L104) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L69-L70)
 
 Identity Verification is automatically enabled if it is activated for your account. Make sure to link NetverifyFace.framework and ZoomAuthenticationHybrid.framework to your app project. Set the following setting to disable Identity Verification on a transaction level:
@@ -99,7 +98,7 @@ Identity Verification is automatically enabled if it is activated for your accou
 config.enableIdentityVerification = self.switchRequireFaceMatch.isOn
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L106-L107) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L106-L107) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L72-L73)
 
 ### Preselection
@@ -115,20 +114,20 @@ config.preselectedDocumentTypes = NetverifyDocumentType(rawValue: documentTypes)
 config.preselectedDocumentVariant = .plastic
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L71-L86) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L71-L86) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L43-L52)
 
 __Note:__ Fastfill does not support paper IDs, except German ID cards.
 
-### Transaction identifiers
+### Transaction Identifiers
 The customer internal reference allows you to specify your own unique identifier for the scan (max. 100 characters).
 ```swift
-config.merchantScanReference = "YOUR_SCAN_REFERENCE"
+config.customerInternalReference = "YOUR_SCAN_REFERENCE"
 ```
 
 Use the following property to identify the scan in your reports (max. 100 characters).
 ```swift
-config.merchantReportingCriteria = "YOUR_REPORTING_CRITERIA"
+config.reportingCriteria = "YOUR_REPORTING_CRITERIA"
 ```
 
 You can also set a unique identifier for each user (max. 100 characters).
@@ -136,25 +135,25 @@ You can also set a unique identifier for each user (max. 100 characters).
 config.customerId = "YOUR_CUSTOMER_ID"
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L88-L98) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L88-L98) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L54-L59)
 
 __Note:__ Transaction identifiers must not contain sensitive data like PII (Personally Identifiable Information) or account login.
 
-### Jumio watchlist screening
+### Jumio Watchlist Screening
 You can set a watchlist screening on transaction level. Enable to override the default search, or disable the watchlist screening for this transaction. When enabled, you need to specify a search profile.
 ```swift
 config.watchlistScreening = NetverifyWatchlistScreeningEnabled
 config.watchlistSearchProfile = "YOUR_SEARCH_PROFILE"
 ```
 
-### Analytics service
+### Analytics Service
 Use the following setting to explicitly send debug information to Jumio.
 ```swift
 config.sendDebugInfoToJumio = true
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L118-L120) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L118-L120) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L84-L86)
 
 __Note:__ Only set this property to true if you are asked by Jumio Support.
@@ -167,7 +166,7 @@ If you want to use the SDK in offline mode, please contact Jumio Support at supp
 config.offlineToken = "YOUR_OFFLINE_TOKEN"
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L68-L69) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L68-L69) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L40-L41)
 
 An exception will be thrown at initialization time and the `NetverifyViewController` instance will be nil if:
@@ -182,7 +181,7 @@ When using Fastfill (enableVerification=NO), data extraction can be limited to b
 config.dataExtractionOnMobileOnly = true
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L115-L116) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L115-L116) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L81-L82)
 
 Use `cameraPosition` to set the default camera (front or back).
@@ -190,7 +189,7 @@ Use `cameraPosition` to set the default camera (front or back).
 config.cameraPosition = JumioCameraPositionFront
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L109-L110) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L109-L110) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L75-L76)
 
 The style of the status bar can be specified.
@@ -198,12 +197,12 @@ The style of the status bar can be specified.
 config.statusBarStyle = .lightContent
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L112-L113) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L112-L113) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L78-L79)
 
 ## Customization
 
-### Customization tool
+### Customization Tool
 [Jumio Surface](https://jumio.github.io/surface-ios) is a web tool that allows you to apply and visualize, in real-time, all available customization options. It also provides an export feature to save your applied changes, so you can import them directly into your codebase.
 
 [![Jumio Surface](images/surface_tool.png)](https://jumio.github.io/surface-ios)
@@ -212,7 +211,7 @@ Use the tab __Customize SDK__ to check out all the screens and adapt the look & 
 
 The __Objective-C Code__ or __Swift Code__ tab to visualizes all the colors that can be customized. As visualized in the code there, the SDK can be customized to fit your application's look and feel via the UIAppearance pattern. Just add the automatically generated code from the Surface tool to your XCode project. Check out our [sample project](../sample/SampleSwift/NetverifyCustomUIViewController.swift) on how to use it.
 
-### Customize look and feel
+### Customize Look and Feel
 Customizable aspects include:
 - General: disable blur, blur style, background color, foreground color, font
 - Navigation bar: title image, title color, tint color and bar tint color
@@ -235,7 +234,7 @@ When this method is fired, the SDK has finished initialization and loading tasks
 func netverifyViewController(_ netverifyViewController: NetverifyViewController, didFinishInitializingWithError error: NetverifyError?) {}
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L245-L252) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L245-L252) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L193-L199)
 
 ### Success
@@ -246,7 +245,7 @@ func netverifyViewController(_ netverifyViewController: NetverifyViewController,
 }
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L254-L370) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L254-L370) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L201-L313)
 
 ### Error
@@ -270,7 +269,7 @@ self.dismiss(animated: true) {
 }
 ```
 
-[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L363-L369) || 
+[__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L363-L369) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L304-L312)
 
 __Note:__ Only call `destroy` after `netverifyViewController:didFinishWithDocumentData:scanReference:` or `netverifyViewController:didCancelWithError:scanReference:` was called to ensure that Netverify SDK is in a final state. Setting `NetverifyViewController` to nil is essential to free memory as soon as possible.
@@ -318,7 +317,7 @@ The following tables give information on the specification of all document data 
 | personalNumberValid | BOOL | | True if personal number check digit is valid or not available, otherwise false |
 | compositeValid | BOOL | | True if composite check digit is valid, otherwise false |
 
-#### Error codes
+#### Error Codes
 List of all **_error codes_** that are available via the `code` property of the NetverifyError object. The first letter (A-Z) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]).
 
 | Code | Message  | Description |
@@ -372,7 +371,7 @@ After initializing, the SDK is set up and loads all necessary resources for scan
  func netverifyUIController(_ netverifyUIController: NetverifyUIController, didDetermineAvailableCountries countries: [Any], suggestedCountry country: NetverifyCountry?) {}
 ```
 
-[__Swift__](../sample/SampleSwift/NetverifyCustomUIViewController.swift#L119-L137)
+[__Swift sample__](../sample/SampleSwift/NetverifyCustomUIViewController.swift#L119-L137)
 
 [`NetverifyCountry`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyCountry.html) contains the following information:
 ```swift
@@ -392,7 +391,7 @@ func hasMultipleVariants() -> Bool {} //Returns true if this document has more t
 
 `netverifyUIController:shouldRequireUserConsentWithURL:` in [`NetverifyUIControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/Netverify/Protocols/NetverifyUIControllerDelegate.html) is invoked when the end-user’s consent to Jumio’s privacy policy is legally required. [`userConsentGiven:`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html#/c:objc(cs)NetverifyUIController(im)userConsentGiven:) needs to be called after the end-user has accepted.
 
-### Start scanning
+### Start Scanning
 Use this method to set up the NetverifyUIController correctly before any scan view can be displayed. Provide one NetverifyDocument via `setup(with: document):` delegate method. Please note that when a paper-format document is used, selectedVariant has to be set in advance by calling the following method:
 ```swift
 self.currentDocumentType = document.type
@@ -402,7 +401,7 @@ self.netverifyUIController?.setup(with: document)
 
 [__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L413-L420)
 
-### NetverifyCustomScanViewController presentation
+### NetverifyCustomScanViewController Presentation
 After `setupWithDocument:` is called on NetverifyUIController, the necessary scan view controllers are determined. While the order of the scan view controllers (Front, Back, Face) is predefined, only the required ones will be returned in this method. The `NetverifyCustomScanViewController` instance is to be presented and dismissed by the client application. Modal presentation style should be used.
 ```swift
 scanViewController.customScanViewControllerDelegate = self
@@ -417,7 +416,7 @@ self.navigationController?.present(scanViewController, animated: true)
 
 As soon as netverifyScanViewController is presented you can add your own UI elements to the `customOverlayLayer`. Make sure that you only add subviews to the `customOverlayLayer` view, which is drawn fullscreen over the cameraPreview and overlays necessary for scanning (e.g. passport MRZ Overlay). Please use `overlayFrame` which returns a CGRect and indicates at what area the preview must be visible.
 
-### Handling camera session
+### Handling Camera Session
 When displaying fullscreen help, the capturing process can be paused with the method `pauseScan` and restarted with `retryScan`. Please note that only the detection is paused. The camera preview continues to display the current camera feed.
 
 Each [`NetverifyCustomScanViewController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyCustomScanViewController.html) returns a scan mode, which indicates what type of scanView is displayed.
@@ -431,7 +430,7 @@ Use `hasMultipleCameras`, `currentCameraPosition`, `canSwitchCamera`, and `switc
 
 For scan mode `3DLiveness` and `FaceCapture`, only front facing camera can be used.
 
-### End-user help
+### End-user Help
 The `NetverifyCustomScanViewController` can also be used to receive the suggested help texts.
 Variations of these help texts can be received via `localizedShortHelpText` and `localizedLongHelpText`.
 `currentStep` returns the running number of scan view controllers, and in combination with `totalSteps`, can be used to display the progress in the workflow.
@@ -475,7 +474,7 @@ When all necessary parts are captured `netverifyUIControllerDidCaptureAllParts:`
 
 ### Retrieving information in Custom UI
 
-#### Result and Error handling
+#### Result and Error Handling
 Upon `netverifyUIController:didDetermineError:retryPossible:` every error that leaves the SDK in a pending state is forwarded.
 By calling `retryAfterError`, the process that leads to the error can be retried. With `cancel`, the whole SDK workflow is canceled. Please see how this is handled in the the [sample implementation](../sample) for more information.
 
@@ -489,11 +488,11 @@ __Note__: Error codes are listed [here](#error-codes).
 
 Please refer to the section [Retrieving information](#retrieving-information) to see more about returning extracted data.
 
-#### Cancel during workflow
+#### Cancel During Workflow
 Call `cancel` to abort the workflow, this will automatically evoke `netverifyUIController:didCancelWithError:scanReference:` to reach a final state of the SDK.
 
 #### Clean up
-After handling the reuslt and the SDK was dismissed, especially if you want to create a new instance of NetverifyUIController make sure to call [`destroy`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html#/c:objc(cs)NetverifyUIController(im)destroy) to ensure proper cleanup of the SDK.
+After handling the result and the SDK was dismissed, especially if you want to create a new instance of NetverifyUIController make sure to call [`destroy`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyUIController.html#/c:objc(cs)NetverifyUIController(im)destroy) to ensure proper cleanup of the SDK.
 ```swift
 self.netverifyUIController?.destroy()
 self.netverifyUIController = nil

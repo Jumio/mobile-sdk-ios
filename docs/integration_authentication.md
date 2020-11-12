@@ -3,8 +3,8 @@
 # Authentication SDK for iOS
 Biometric-based Jumio Authentication establishes the digital identities of your users through the simple act of taking a selfie. Advanced 3D face map technology quickly and securely authenticates users and unlocks their digital identities.
 
-## Table of Content
-- [Release note](#release-notes)
+## Table of Contents
+- [Release Notes](#release-notes)
 - [Setup](#setup)
 - [Initialization](#initialization)
 - [Configuration](#configuration)
@@ -13,8 +13,8 @@ Biometric-based Jumio Authentication establishes the digital identities of your 
 - [Custom UI](#custom-ui)
 - [Callback](#callback)
 
-## Release notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.1
+## Release Notes
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.2
 
 For breaking technical changes, please read our [transition guide](transition-guide_authentication.md)
 
@@ -41,15 +41,15 @@ AuthenticationController *authenticationController;
 
 The default data center is `JumioDataCenterUS`. If your customer account is in the EU data center, use `JumioDataCenterEU` instead. Alternatively, use `JumioDataCenterSG` for Singapore.
 
-### Jailbreak detection
+### Jailbreak Detection
 We advice to prevent our SDK to be run on jailbroken devices. Either use the method below or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices:
 ```objectivec
 [JumioDeviceInfo isJailbrokenDevice]
 ```
 
 ## Configuration
-### Transaction reference
 
+### Transaction Reference
 In order to connect the Authentication transaction to a specific ID Verification transaction the parameter [`enrollmentTransactionReference`](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationConfiguration.html#/c:objc(cs)AuthenticationConfiguration(py)enrollmentTransactionReference) must be set.
 ```objectivec
 config.enrollmentTransactionReference = @"ENROLLMENTTRANSACTIONREFERENCE";
@@ -61,7 +61,7 @@ config.authenticationTransactionReference = @"AUTHENTICATIONTRANSACTIONREFERENCE
 
 __Note:__ If the enrollment or authentication transaction reference is not eligible to be used (e.g. reference does not exist in the system, mandatory user data has been deleted) an error is returned when the SDK is initialized.
 
-### Transaction identifiers
+### Transaction Identifiers
 
 In order to connect the Authentication transaction to a specific user identity a user reference (max. 100 characters) must be set.
 
@@ -81,7 +81,7 @@ config.callbackUrl = @"YOURCALLBACKURL";
 __Note:__ The callback URL must not contain sensitive data like PII (Personally Identifiable Information) or account login.
 
 
-### Analytics service
+### Analytics Service
 Use the following setting to explicitly send debug information to Jumio.
 ```objectivec
 config.sendDebugInfoToJumio = YES;
@@ -95,7 +95,7 @@ NSUUID *debugSessionID = self.netverifyViewController.debugID;
 
 ## Customization
 
-### Customize look and feel
+### Customize Look and Feel
 Customizable aspects include:
 - General: disable blur, blur style, background color, foreground color, font
 - Navigation bar: title image, title color, tint color and bar tint color
@@ -141,15 +141,15 @@ self.authenticationController = nil;
 ```
 __Note:__ Only call `destroy` after `authenticationController:didFinishWithAuthenticationResult:transactionReference:` or `authenticationController:didFinishWithError:transactionReference:` was called to ensure that Authentication SDK is in a final state. Setting `AuthenticationController` to nil is essential to free memory as soon as possible.
 
-### Retrieving information
+### Retrieving Information
 The following tables give information on the specification of all transaction data parameters and errors.
 
-#### Authentication result
+#### Authentication Result
 | Parameter | Type | Max. length | Description  |
 |:-------------------|:----------- 	|:-------------|:-----------------|
 | authenticationResult | AuthenticationResult | | SUCCESS, FAILED |
 
-#### Error codes
+#### Error Codes
 List of all **_error codes_** that are available via the `code` property of the AuthenticationError object. The first letter (A-M) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]).
 
 | Code | Message  | Description |
@@ -189,7 +189,7 @@ AuthenticationController *authenticationController;
 }
 ```
 
-### Start scanning
+### Start Scanning
 After initialisation is finished, the SDK is ready for scanning and the following delegate method is called returning a [`AuthenticationScanViewController`](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationScanViewController.html) instance to present. Use its `customOverlayLayer` property to add subviews on top.
 
 ```objectivec
@@ -205,7 +205,7 @@ As soon as scanViewController is presented you can add your own UI elements to t
 
 The method `authenticationScanViewController:shouldRequireUserConsentWithURL:` in [`AuthenticationScanViewControllerDelegate`](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/Protocols/AuthenticationScanViewControllerDelegate.html) is invoked when the end-user’s consent to Jumio’s privacy policy is legally required. [`userConsentGiven:`](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/Classes/AuthenticationScanViewController.html#/c:objc(cs)AuthenticationScanViewController(im)userConsentGiven:) needs to be called after the end-user has accepted.
 
-### Handle scanning workflow
+### Handle Scanning Workflow
 For handling of the scanning workflow, a few additional delegates need to be implemented and handled. When the user has finished the scanning process and biometric data is being analysed, `authenticationScanViewControllerDidStartBiometricAnalysis:` is fired. We recommend to display a loading activity info to the user that should not last longer than a few seconds. When successful, scanning is being finalized (see paragraph below).
 
 In case of an unsuccessful result, the delegate `authenticationScanViewController:shouldDisplayHelpWithText:animationView:forReason:` is called. A help text and animated view is provided based on the problem the user was facing. It is important to display the help animation and text in order to assist the user in finishing the scanning workflow successfully. To let the user confirm the information and retry in the workflow, simply call `retryScan` on the `authenticationScanViewController` parameter provided in the delegate.
