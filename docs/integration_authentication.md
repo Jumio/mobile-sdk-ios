@@ -15,7 +15,7 @@ Biometric-based Jumio Authentication establishes the digital identities of your 
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.2
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.8.0
 
 For breaking technical changes, please read our [transition guide](transition-guide_authentication.md)
 
