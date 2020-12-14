@@ -209,8 +209,6 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
     
     func netverifyUIController(_ netverifyUIController: NetverifyUIController, didFinishWith documentData: NetverifyDocumentData, scanReference: String) {
         print("NetverifyUIController finished successfully with scan reference: \(scanReference)")
-        // Share the scan reference for the Authentication SDK
-        UserDefaults.standard.set(scanReference, forKey: "enrollmentTransactionReference")
         
         // Update verification finished view when the data from the captured document was captured
         if self.verificationFinishedView == nil {
@@ -349,7 +347,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         customScanView.customOverlayLayer.addConstraint(NSLayoutConstraint(item: self.activityIndicator!, attribute: .centerY, relatedBy: .equal, toItem: customScanView.customOverlayLayer, attribute: .centerY, multiplier: 1.0, constant: 0.0))
     }
     
-    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayHelpWithText message: String, animationView: UIView, for retryReason: JumioZoomRetryReason) {
+    func netverifyCustomScanViewController(_ customScanView: NetverifyCustomScanViewController, shouldDisplayHelpWithText message: String, animationView: UIView, for retryReason: JumioFaceRetryReason) {
         
         if (!self.activityIndicator.isHidden) {
             self.activityIndicator.stopAnimating()
@@ -373,6 +371,20 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         customScanView.customOverlayLayer.bringSubviewToFront(helpAnimationView)
         customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[helpView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
         customScanView.customOverlayLayer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[helpView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: ["helpView":helpAnimationView]))
+    }
+    
+    func netverifyCustomScanViewControllerWillPrepareIProovController(_ customScanView: NetverifyCustomScanViewController) {
+        customScanView.customOverlayLayer.addSubview(self.activityIndicator);
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        
+        customScanView.customOverlayLayer.addConstraint(NSLayoutConstraint(item: self.activityIndicator!, attribute: .centerX, relatedBy: .equal, toItem: customScanView.customOverlayLayer, attribute: .centerX, multiplier: 1.0, constant: 0.0))
+        customScanView.customOverlayLayer.addConstraint(NSLayoutConstraint(item: self.activityIndicator!, attribute: .centerY, relatedBy: .equal, toItem: customScanView.customOverlayLayer, attribute: .centerY, multiplier: 1.0, constant: 0.0))
+    }
+    
+    func netverifyCustomScanViewControllerWillPresentIProovController(_ customScanView: NetverifyCustomScanViewController) {
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.isHidden = true
     }
     
     // MARK: UITableViewDelegate

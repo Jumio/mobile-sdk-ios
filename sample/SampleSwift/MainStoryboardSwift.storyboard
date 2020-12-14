@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -118,7 +116,7 @@
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nvCustomUICell" textLabel="ucQ-WP-sEa" style="IBUITableViewCellStyleDefault" id="Msw-L5-Esf">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Msw-L5-Esf" id="GcQ-xS-Y1J">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -346,7 +344,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="5Ar-3t-3vz" kind="relationship" relationship="viewControllers" id="yjl-sD-Gbw"/>
-                        <segue destination="7SV-SY-kR0" kind="relationship" relationship="viewControllers" id="9SR-Wc-beo"/>
                         <segue destination="Jad-cK-FTC" kind="relationship" relationship="viewControllers" id="bw3-Km-UQm"/>
                         <segue destination="nZj-si-Cge" kind="relationship" relationship="viewControllers" id="Ayr-VF-gYD"/>
                     </connections>
@@ -354,65 +351,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BN1-Ab-Qrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-674" y="-1098"/>
-        </scene>
-        <!--Authentication-->
-        <scene sceneID="wzU-mK-Jaj">
-            <objects>
-                <viewController title="Authentication" id="7SV-SY-kR0" customClass="AuthenticationStartViewController" customModule="SampleSwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rV8-DM-kel"/>
-                        <viewControllerLayoutGuide type="bottom" id="9uI-HB-vbj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AlZ-5k-qVr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please perform a Netverify transaction first" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MKd-TR-5B2">
-                                <rect key="frame" x="20" y="350" width="374" height="30"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="transactionReference_onDone:" destination="7SV-SY-kR0" eventType="primaryActionTriggered" id="4gC-3b-BZ0"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMD-sL-4Cu">
-                                <rect key="frame" x="120" y="430" width="174" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start Authentication"/>
-                                <connections>
-                                    <action selector="startAuthentication" destination="7SV-SY-kR0" eventType="touchUpInside" id="c6q-XB-yVL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHN-6w-D6S">
-                                <rect key="frame" x="140" y="486" width="134" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start CustomUI"/>
-                                <connections>
-                                    <action selector="startCustomUI" destination="7SV-SY-kR0" eventType="touchUpInside" id="wwt-L2-vTe"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="MKd-TR-5B2" secondAttribute="trailing" constant="20" id="29l-qk-YlJ"/>
-                            <constraint firstItem="LMD-sL-4Cu" firstAttribute="centerY" secondItem="AlZ-5k-qVr" secondAttribute="centerY" id="CJo-ti-9Ap"/>
-                            <constraint firstItem="zHN-6w-D6S" firstAttribute="centerX" secondItem="LMD-sL-4Cu" secondAttribute="centerX" id="WvZ-to-O4y"/>
-                            <constraint firstItem="MKd-TR-5B2" firstAttribute="leading" secondItem="AlZ-5k-qVr" secondAttribute="leading" constant="20" id="aGJ-XI-Ojj"/>
-                            <constraint firstItem="LMD-sL-4Cu" firstAttribute="top" secondItem="MKd-TR-5B2" secondAttribute="bottom" constant="50" id="aMq-1m-m5E"/>
-                            <constraint firstItem="zHN-6w-D6S" firstAttribute="top" secondItem="LMD-sL-4Cu" secondAttribute="bottom" constant="20" id="eFx-oO-awu"/>
-                            <constraint firstItem="LMD-sL-4Cu" firstAttribute="centerX" secondItem="AlZ-5k-qVr" secondAttribute="centerX" id="qm9-pg-njK"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Authentication" image="NVicon" selectedImage="NVicon" id="Xn4-AI-zg8"/>
-                    <connections>
-                        <outlet property="transactionReferenceTextField" destination="MKd-TR-5B2" id="Qp3-PQ-T0r"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jlm-CY-6UC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1026" y="-155"/>
         </scene>
         <!--DocumentVerification-->
         <scene sceneID="yhj-Zm-zSJ">

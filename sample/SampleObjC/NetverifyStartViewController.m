@@ -207,7 +207,6 @@
  **/
 - (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didFinishWithDocumentData:(NetverifyDocumentData *)documentData scanReference:(NSString *)scanReference {
     NSLog(@"NetverifyViewController finished successfully with scan reference: %@", scanReference);
-    [[NSUserDefaults standardUserDefaults] setObject:scanReference forKey:@"enrollmentTransactionReference"];
     
     NSString *selectedCountry = documentData.selectedCountry;
     NetverifyDocumentType selectedDocumentType = documentData.selectedDocumentType;

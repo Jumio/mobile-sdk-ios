@@ -260,10 +260,8 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
      **/
     func netverifyViewController(_ netverifyViewController: NetverifyViewController, didFinishWith documentData: NetverifyDocumentData, scanReference: String) {
         print("NetverifyViewController finished successfully with scan reference: \(scanReference)")
-        // Share the scan reference for the Authentication SDK
-        UserDefaults.standard.set(scanReference, forKey: "enrollmentTransactionReference")
         
-        let selectedCountry:String = documentData.selectedCountry
+        let selectedCountry:String = documentData.selectedCountry ?? ""
         let selectedDocumentType:NetverifyDocumentType = documentData.selectedDocumentType
         var documentTypeStr:String
         switch (selectedDocumentType) {

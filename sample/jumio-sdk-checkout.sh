@@ -1,5 +1,5 @@
 #!/bin/bash
-JUMIO_SDK_VERSION=3.7.2
+JUMIO_SDK_VERSION=3.8.0
 DOWNLOAD_PATH=https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/${JUMIO_SDK_VERSION}/ios-jumio-mobile-sdk-${JUMIO_SDK_VERSION}.zip
 CHECKOUT_DIR="${PROJECT_DIR}/JUMIO_DOWNLOAD"
 FRAMEWORKS_DIR="${PROJECT_DIR}/../frameworks"

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
-    <device id="retina6_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KgN-VJ-uIM">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,55 +80,6 @@
             </objects>
             <point key="canvasLocation" x="-1630" y="563"/>
         </scene>
-        <!--Authentication-->
-        <scene sceneID="RCl-Se-Ami">
-            <objects>
-                <viewController title="Authentication" id="aQ0-uI-g7k" customClass="AuthenticationStartViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TbL-6M-wXd"/>
-                        <viewControllerLayoutGuide type="bottom" id="6OP-2O-5Cv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GAV-Nd-gvx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAg-F6-boK">
-                                <rect key="frame" x="120" y="430" width="174" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start Authentication"/>
-                                <connections>
-                                    <action selector="startAuthentication" destination="aQ0-uI-g7k" eventType="touchUpInside" id="2K4-ET-XAY"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please perform a Netverify transaction first" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6GG-k3-H4g">
-                                <rect key="frame" x="20" y="350" width="374" height="30"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="transactionRefernece_onDone" destination="aQ0-uI-g7k" eventType="primaryActionTriggered" id="Yw2-jc-CGf"/>
-                                </connections>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <constraints>
-                            <constraint firstItem="eAg-F6-boK" firstAttribute="centerY" secondItem="GAV-Nd-gvx" secondAttribute="centerY" id="MkM-4V-6xr"/>
-                            <constraint firstItem="6GG-k3-H4g" firstAttribute="leading" secondItem="GAV-Nd-gvx" secondAttribute="leading" constant="20" id="QMd-X0-qBl"/>
-                            <constraint firstAttribute="trailing" secondItem="6GG-k3-H4g" secondAttribute="trailing" constant="20" id="glT-0u-vQN"/>
-                            <constraint firstItem="eAg-F6-boK" firstAttribute="top" secondItem="6GG-k3-H4g" secondAttribute="bottom" constant="50" id="sdw-Xg-buG"/>
-                            <constraint firstItem="eAg-F6-boK" firstAttribute="centerX" secondItem="GAV-Nd-gvx" secondAttribute="centerX" id="vs0-KT-urb"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Authentication" image="NVicon" selectedImage="NVicon" id="gzQ-Hy-ftY"/>
-                    <connections>
-                        <outlet property="transactionReferenceTextField" destination="6GG-k3-H4g" id="2Nf-PH-YaQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HxZ-mf-t4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-697.10144927536237" y="562.5"/>
-        </scene>
         <!--BAM Checkout-->
         <scene sceneID="JmQ-qZ-Qrd">
             <objects>
@@ -197,7 +146,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="wPR-i1-qVN" kind="relationship" relationship="viewControllers" id="OF5-oW-afD"/>
-                        <segue destination="aQ0-uI-g7k" kind="relationship" relationship="viewControllers" id="ez9-UV-Tbd"/>
                         <segue destination="Jad-cK-FTC" kind="relationship" relationship="viewControllers" id="bw3-Km-UQm"/>
                         <segue destination="nZj-si-Cge" kind="relationship" relationship="viewControllers" id="Ayr-VF-gYD"/>
                     </connections>

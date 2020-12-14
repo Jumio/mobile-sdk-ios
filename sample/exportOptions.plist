@@ -11,5 +11,7 @@
 	</dict>
 	<key>teamID</key>
 	<string>JC7JKY534B</string>
+    <key>compileBitcode</key>
+    <false/>
 </dict>
 </plist>
