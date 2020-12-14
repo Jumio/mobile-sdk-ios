@@ -24,7 +24,9 @@
 - [Security](#security)
 - [Release Notes](#release-notes)
 - [Support](#support)
+- [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Netverify/)
 - [FAQ](docs/integration_faq.md)
+- [Known Issues](docs/known_issues.md)
 
 # Overview
 The Jumio Software Development Kit (SDK) provides you with a set of tools and UIs (default or custom) to develop an iOS application perfectly fitted to your specific needs.
@@ -92,6 +94,12 @@ __Note:__ We strongly recommend storing all credentials outside of your app! We 
 
 Once you start up the sample application, you'll be given the option of trying out ID Verification. Select a different service from the action bar at the bottom to try out another service. Your application will also need camera permission, which will be prompted for automatically once you try to start any of services.
 
+### Tutorial List
+* [Getting started (Video):](https://share.vidyard.com/watch/1EDj4nkj3ZsZRxWVHbrpDH) How to clone the repository and configure your Jumio credentials
+* [Introduction (Video):](https://share.vidyard.com/watch/YHkdgbcXAZ1Leht9CH5Z7r) How to initialize the SDK, run the sample on your iOS device, and test the identity verification user journey
+* [Configuring behavior (Video):](https://share.vidyard.com/watch/3UPJyHrbXnuyY91aNpKEKW) How to configure the behavior of the app using SDK parameters
+* [Customizing appearance (Video):](https://share.vidyard.com/watch/3e7zjQ64gVpQ8Tw6KKQGMj) How to customize the look and feel of your application using the Jumio Surface tool
+
 # Basics
 
 ## General Requirements
@@ -110,50 +118,82 @@ The app’s Info.plist must contain the `NSCameraUsageDescription` key with a st
 ## Integration
 Check the [Xcode sample project](sample) to learn the most common use. Make sure to use the device only frameworks for app submissions to the AppStore. Read more detailed information on this here: [Manual integration](/README.md#manually)
 
+### Tutorial
+[Integration into existing project (Video):](https://share.vidyard.com/watch/dd7sb8AZueTn89iZLpZLFp) How to add Jumio Mobile SDK-functionalities to an existing Xcode project
+
 ### Via Cocoapods
 Jumio supports CocoaPods as dependency management tool for easy integration of the SDK.
 
-Update your local clone of the specs repo in Terminal to ensure that you are using the latest podspec files:
+If you are not yet using Cocoapods in your project, first run:
+```
+sudo gem install cocoapods
+pod init
+```
+Then update your local clone of the specs repo in Terminal to ensure that you are using the latest podspec files using:
 ```
 pod repo update
 ```
-
 Adapt your Podfile and add the pod according to the product(s) you use. Check the following example how a Podfile could look like:
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.7.2' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.8.0' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.7.2' # Use full Netverify and Authentication functionality
-pod 'JumioMobileSDK/NetverifyBase', '~>3.7.2' # For Fastfill, Netverify basic functionality
-pod 'JumioMobileSDK/NetverifyNFC', '~>3.7.2' # For Fastfill, Netverify functionality with NFC extraction
-pod 'JumioMobileSDK/NetverifyBarcode', '~>3.7.2' # For Fastfill, Netverify functionality with barcode extraction
-pod 'JumioMobileSDK/NetverifyFace', '~>3.7.2' # For Fastfill, Netverify functionality with identity verification, Authentication
+pod 'JumioMobileSDK/Netverify', '~>3.8.0' # Use full Netverify and Authentication functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.8.0' # For Fastfill, Netverify basic functionality
+pod 'JumioMobileSDK/NetverifyNFC', '~>3.8.0' # For Fastfill, Netverify functionality with NFC extraction
+pod 'JumioMobileSDK/NetverifyBarcode', '~>3.8.0' # For Fastfill, Netverify functionality with barcode extraction
+pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.8.0' # For Fastfill, Netverify functionality with identity verification, Authentication
+pod 'JumioMobileSDK/NetverifyFace+Zoom', '~>3.8.0' # For Fastfill, Netverify functionality with identity verification, Authentication
 
-pod 'JumioMobileSDK/DocumentVerification', '~>3.7.2' # Use Document Verification functionality
+pod 'JumioMobileSDK/DocumentVerification', '~>3.8.0' # Use Document Verification functionality
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.7.2' # Use BAM Checkout functionality
+pod 'JumioMobileSDK/BAMCheckout', '~>3.8.0' # Use BAM Checkout functionality
 ```
-
-Install the pod to your project via Terminal:
+#### iProov
+iProov is distributed as an XCFramework, therefore **you are required to use Cocoapods 1.9.0 or newer**. If you are using iProov, you will also need to add the line to the target section of your podfile:
+```
+pod 'iProov'
+```
+Next, add the following lines to the bottom of your podfile:
+```
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if ['iProov', 'Socket.IO-Client-Swift', 'Starscream'].include? target.name
+      target.build_configurations.each do |config|
+          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+      end
+    end
+  end
+end
+```
+Install the pods to your project via Terminal:
 ```
 pod install
 ```
+
+#### Tutorial
+[Integration with Cocoapods (Video):](https://share.vidyard.com/watch/otiA1BopzBJRjTqZr1JAck) How to add the Jumio Mobile SDK to an existing Xcode project using Cocoapods
+
 ### Via Carthage
 Jumio supports Carthage as dependency management tool for easy integration of the SDK.
 
 Adapt you Cartfile and add the JumioMobileSDK dependency. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.7.2
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.8.0
 ```
 
 Update you Carthage dependencies via Terminal:
 ```
 carthage update
 ```
+
+#### Tutorial
+[Integration with Carthage (Video):](https://share.vidyard.com/watch/UykBvrRYpDwx2Rmuqpii3r) How to add the Jumio Mobile SDK to an existing Xcode project using Carthage
+
 
 ## App Thinning and Size Matters
 App thinning (app slicing, bitcode and on-demand resources) is supported within the SDK. For app slicing, the image resources are placed within a xcassets collection. For ID Verification and Fastfill, some resource files (e.g. images) are loaded on demand.
@@ -162,7 +202,7 @@ In case you experience a build error when building your app in Debug configurati
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.7.2.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.7.2/ios-jumio-mobile-sdk-3.7.2.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.8.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.8.0/ios-jumio-mobile-sdk-3.8.0.zip).
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -212,7 +252,7 @@ Please refer to our [Change Log](docs/changelog.md) for more information about o
 # Support
 
 ## Previous Version
-The previous release version 3.7.1 of the Jumio Mobile SDK is supported until 2020-02-18.
+The previous release version 3.7.2 of the Jumio Mobile SDK is supported until 2021-03-15.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.
@@ -226,7 +266,7 @@ The software contains third-party open source software. For more information, pl
 This software is based in part on the work of the Independent JPEG Group.
 
 ## Contact
-If you have any questions regarding our implementation guide please contact Jumio Customer Service at support@jumio.com. The Jumio online helpdesk contains a wealth of information regarding our service including demo videos, product descriptions, FAQs and other things that may help to get you started with Jumio. [Check it out at here.](https://support.jumio.com).
+If you have any questions regarding our implementation guide please contact Jumio Customer Service at support@jumio.com. The Jumio online helpdesk contains a wealth of information regarding our service including demo videos, product descriptions, FAQs and other things that may help to get you started with Jumio. [Check it out at here](https://support.jumio.com).
 
 ## Copyright
 &copy; Jumio Corporation, 395 Page Mill Road, Suite 150, Palo Alto, CA 94306

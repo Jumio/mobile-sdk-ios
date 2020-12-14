@@ -12,6 +12,7 @@ BAM Checkout is a powerful, cutting-edge solution to extract data from your cust
 - [Customization](#customization)
 - [SDK Workflow](#sdk-workflow)
 - [Card retrieval API](#card-retrieval-api)
+- [Code Documentation](https://jumio.github.io/mobile-sdk-ios/BAMCheckout/)
 
 ## Release Notes
 Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.2

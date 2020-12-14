@@ -12,6 +12,7 @@ Jumio’s ID Verification allows businesses to establish the genuine identity of
 - [SDK Workflow](#sdk-workflow)
 - [Custom UI](#custom-ui)
 - [Callback](#callback)
+- [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Netverify/)
 
 ## Release Notes
 Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.2
@@ -71,6 +72,9 @@ JumioDeviceInfo.isJailbrokenDevice()
 
 ## Configuration
 
+### Tutorial
+[Configuring behavior (Video):](https://share.vidyard.com/watch/3UPJyHrbXnuyY91aNpKEKW) How to configure the behavior of the app using SDK parameters
+
 ### ID verification
 Use ID verification to receive a verification status and verified data positions (see [Callback for ID Verification](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-for-netverify)). Ensure that your customer account is allowed to use this feature. A callback URL can be specified for individual transactions (for constraints see chapter [Callback URL](https://github.com/Jumio/implementation-guides/blob/master/netverify/portal-settings.md#callback-url)). This setting overrides any callback URL you have set in the Jumio Customer Portal.
 ```swift
@@ -93,7 +97,17 @@ config.enableVerification = self.switchRequireVerification.isOn
 [__Swift sample__](../sample/SampleSwift/NetverifyStartViewController.swift#L103-L104) ||
 [__Objective C sample__](../sample/SampleObjC/NetverifyStartViewController.m#L69-L70)
 
-Identity Verification is automatically enabled if it is activated for your account. Make sure to link NetverifyFace.framework and ZoomAuthenticationHybrid.framework to your app project. Set the following setting to disable Identity Verification on a transaction level:
+Identity Verification is automatically enabled if it is activated for your account. Make sure to link the following frameworks to your app project:
+* `JumioIProov.framework`
+* `iProov.framework`
+* `Starscream.framework` (iProov dependency)
+* `SocketIO.framework` (iProov dependency)
+
+Alternatively, to use Zoom instead of iProov, make sure to link:
+* `NetverifyFace.framework`
+* `ZoomAuthentication.framework`
+
+Set the following setting to disable Identity Verification on a transaction level:
 ```swift
 config.enableIdentityVerification = self.switchRequireFaceMatch.isOn
 ```
@@ -210,6 +224,9 @@ config.statusBarStyle = .lightContent
 Use the tab __Customize SDK__ to check out all the screens and adapt the look & feel of the SDK to your needs.
 
 The __Objective-C Code__ or __Swift Code__ tab to visualizes all the colors that can be customized. As visualized in the code there, the SDK can be customized to fit your application's look and feel via the UIAppearance pattern. Just add the automatically generated code from the Surface tool to your XCode project. Check out our [sample project](../sample/SampleSwift/NetverifyCustomUIViewController.swift) on how to use it.
+
+### Tutorial
+[Customizing appearance (Video):](https://share.vidyard.com/watch/3e7zjQ64gVpQ8Tw6KKQGMj) How to customize the look and feel of your application using the Jumio Surface tool
 
 ### Customize Look and Feel
 Customizable aspects include:
@@ -331,6 +348,7 @@ List of all **_error codes_** that are available via the `code` property of the 
 | H00000 | The camera is currently not available | Camera cannot be initialized, retry impossible |
 | I00000 | Certificate not valid anymore. Please update your application | End-to-end encryption key not valid anymore, retry impossible |
 | J00000 | Transaction already finished | User did not complete SDK journey within session lifetime |
+| N00000 | Scanning not available at this time, please contact the app vendor | Required images are missing to finalize the acquisition |
 | Y00000 | The barcode of your document didn´t contain your address, turn your document and scan the front. | __Only Custom UI:__ Scanned Barcode (e.g. US Driver License) does not contain address information. Show hint and/or call `retryAfterError` |
 | Z00000 | You recently scanned the front of your document. Please flip your document and scan the back. | __Only Custom UI:__ Backside of the document was scanned but most likely the frontside of the document was detected. Show hint and/or call `retryAfterError` |
 

@@ -2,7 +2,7 @@
 
 # Glossary
 
-## Commonly used Abbreviations
+## Commonly Used Abbrevations
 
 ### BAM
 Boron Aluminium Magnesium: BAM Checkout is Jumio’s mobile credit card scanning software, named after the chemical compound with the least sliding friction
@@ -56,4 +56,4 @@ Personal(ly) Identifiable Information: All of our products deal with highly sens
 Passport
 
 ### 3D-Liveness
-Liveness check via ZoOm: The 3D-liveness check makes sure that a face scan performed was not of a picture, but of an actual, living person who also matches the picture on the previously scanned document
+Liveness check: The 3D-liveness check makes sure that a face scan performed was not of a picture, but of an actual, living person who also matches the picture on the previously scanned document

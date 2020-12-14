@@ -8,6 +8,11 @@
 # Change Log
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
 
+## SDK Version: __3.8.0__
+![Changes](https://img.shields.io/badge/Change-blue) Added iProov as an additional liveness vendor to the [Jumio KYX platform](https://www.jumio.com/kyx/) [Identity Verification]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed minor breaking constraints on scan view [ID Verification]
+
 ## SDK Version: __3.7.2__
 ![Improvement](https://img.shields.io/badge/Improvement-green) New error code is returned in case an ad blocker or a firewall is detected [ID Verification/Fastfill, Authentication, Document Verification]
 

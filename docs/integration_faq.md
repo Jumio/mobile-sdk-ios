@@ -56,15 +56,16 @@ Depending on your specific needs, you may want to strip out unused functionality
 
 The following table shows a range of different product configurations with the frameworks that are required and the corresponding application size. These measurements reflect the extra size that Jumio components add to your app download size and are based on our [sample application](../sample) after being uploaded to the [Appstore](https://apps.apple.com/us/app/jumio-showcase/id639531180).
 
-| Product | Size | JumioCore | Netverify | NetverifyBarcode & MicroBlink | NetverifyFace & ZoomAuthentication | Document Verification | BAMCheckout  | JumioNFC |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ID Verification + Authentication | 23.15 MB | x | x | x | x |  |  |  |
-| ID Verification + NFC | 12.89 MB | x | x | x |  |  |  | x |
-| Fastfill | 10.25 MB | x | x | x |  |  |  |  |
-| Fastfill without Barcode | 7.24 MB | x | x |  |  |  |  |  |
-| Document Verification | 1.58 MB | x |  |  |  | x |  |  |
-| BAM Checkout credit card scanning | 6.36 MB | x |  |  |  |  | x |  |
-| All Products | 31.18 MB | x | x | x | x | x | x | x |
+| Product | Size | JumioCore | Netverify | NetverifyBarcode & MicroBlink | JumioIProov & iProov | NetverifyFace & ZoomAuthentication | Document Verification | BAMCheckout  | JumioNFC |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ID + Authentication (Zoom) | 23.33 MB | x | x | x |  | x |  |  |  |
+| ID + Liveness (iProov) | 12.23 MB | x | x | x | x |  |  |  |  |
+| ID + NFC | 13.02 MB | x | x | x |  |  |  |  | x |
+| Fastfill | 10.39 MB | x | x | x |  |  |  |  |  |
+| Fastfill without Barcode | 7.38 MB | x | x |  |  |  |  |  |  |
+| Document Verification | 1.62 MB | x |  |  |  |  | x |  |  |
+| BAM Checkout credit card scanning | 6.39 MB | x |  |  |  |  |  | x |  |
+| All Products | 33.21 MB | x | x | x | x | x | x | x | x |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 
@@ -86,10 +87,10 @@ In case of a __successful result__ you can grant the user access to your service
 * An imposter is trying to spoof the liveness check
 * User does not want to show their face at all, but is still trying to complete the onboarding
 * User does not look straight into the camera
-* User does not finish the first or second step of Zoom
+* User does not finish the first or second step of face scan
 * User has bad lighting conditions (too dark, too bright, reflections on face, not enough contrast, …)
 * User is covering (parts) of their face with a scarf, hat or something similar
-* A different person is using Zoom in the second step than in the first one
+* A different person is scanning their face in the second step than in the first one
 * User is not able to align his face with the oval presented during scanning
 
 In case an Authentication fail is returned, we recommend to allow the user between 3-5 Authentication attempts to prove their identity, before you lock the user from performing the action. This approach makes the most sense, as you don't want to lock out possible valid users who might not have completed the face capture task successfully for a legitimate reason. Don't worry about offering a potential fraudster more attempts to gain access to your system - our bullet proof liveness check does not allow them to get a successful result.

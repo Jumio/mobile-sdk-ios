@@ -4,8 +4,43 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.8.0
+#### Localization Keys
+The following keys have been added:
+* `"IProov_IntroFlash"`
+* `"IProov_IntroLa"`
+* `"IProov_PromptLivenessAlignFace"`
+* `"IProov_PromptLivenessNoTarget"`
+* `"IProov_PromptLivenessScanCompleted"`
+* `"IProov_PromptTooClose"`
+* `"IProov_PromptTooFar"`
+
+#### Custom UI Changes
+Added two new methods to Netverify Custom UI:
+
+* `(void) netverifyCustomScanViewControllerWillPrepareIProovController:(NetverifyCustomScanViewController * _Nonnull)customScanView;`
+
+* `(void) netverifyCustomScanViewControllerWillPresentIProovController:(NetverifyCustomScanViewController * _Nonnull)customScanView;`
+
+* Enum ~~`JumioZoomRetryReason`~~ is replaced by `JumioFaceRetryReason`
+
+#### Cocoapods
+* pod ~~`NetverifyFace`~~ is replaced by `NetverifyFace+iProov`
+
+* pod `NetverifyFace+Zoom`is added
+
+#### Frameworks
+* `JumioIProov.framework` is added
+* `IProov.framework` is added
+* iProov dependencies `[SocketIO, Starscream]` are added
+
+#### Property Changes
+Property `selectedCountry` in `NetverifyDocumentData` class is now nullable (optional).
+
 ## 3.7.2
-No backward incompatible changes.
+#### Error Code Change
+Error code N ("Required images are missing to finalize the acquisition") has been added.
+Read more detailed information on this in chapter [Error codes](/docs/integration_id-verification-fastfill.md#error-codes)
 
 ## 3.7.1
 No backward incompatible changes.
