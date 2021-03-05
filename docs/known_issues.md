@@ -1,6 +1,7 @@
 # Known Issues
 
 ## Table of Contents
+- [App Crashes After 3.8.0 Update](#app-crashes-after-3.8.0-update)
 - [CoreNFC Issues with Xcode 12](#corenfc-issues-with-xcode-12)
 - [Custom Theme Issues](#custom-theme-issues)
   - [Language Localization Issues](#language-localization-issues)
@@ -8,6 +9,31 @@
     - [Language Changes at Runtime](#language-changes-at-runtime)
 - [User Was Not Asked for Face Capturing](#user-was-not-asked-for-face-capturing)
 - [Country Missing from the Country List](#country-missing-from-the-country-list)
+
+## App Crashes After 3.8.0 Update
+
+After updating to 3.8.0 the app crashes without warning or the following error message is displayed: 
+
+_dyld: Symbol not found: _$s8SocketIO0A11ClientEventO10disconnectyA2CmFWC_  
+_Referenced from: /Users/.../Frameworks/iProov.framework/iProov  
+  Expected in: /Users/b.../Frameworks/SocketIO.framework/SocketIO
+ in /Users/.../Frameworks/iProov.framework/iProov_
+
+When using iProov, please make sure the following is included in your `podfile`:
+
+* pod `iProov`
+
+```
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if ['iProov', 'Socket.IO-Client-Swift', 'Starscream'].include? target.name
+      target.build_configurations.each do |config|
+          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+      end
+    end
+   end
+end
+```
 
 ## CoreNFC Issues with Xcode 12 and Xcode 12.1
 
@@ -44,7 +70,7 @@ Runtime language changes _within_ the SDK or separate language support (meaning 
 
 ## User Was Not Asked for Face Capturing
 
-If there is an issue with the user journey skipping over the face capturing and not asking the user to take a selfie, please make sure the parameter `config.enableIdentityVerification` is set to `true`. If it is set to `false` the 3D-Liveness step won't be performed. 
+If there is an issue with the user journey skipping over the face capturing and not asking the user to take a selfie, please make sure the parameter `config.enableIdentityVerification` is set to `true`. If it is set to `false` the 3D-Liveness step won't be performed.
 
 ## Country Missing from the Country List
 

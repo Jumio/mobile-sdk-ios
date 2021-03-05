@@ -58,14 +58,14 @@ The following table shows a range of different product configurations with the f
 
 | Product | Size | JumioCore | Netverify | NetverifyBarcode & MicroBlink | JumioIProov & iProov | NetverifyFace & ZoomAuthentication | Document Verification | BAMCheckout  | JumioNFC |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ID + Authentication (Zoom) | 23.33 MB | x | x | x |  | x |  |  |  |
-| ID + Liveness (iProov) | 12.23 MB | x | x | x | x |  |  |  |  |
-| ID + NFC | 13.02 MB | x | x | x |  |  |  |  | x |
-| Fastfill | 10.39 MB | x | x | x |  |  |  |  |  |
-| Fastfill without Barcode | 7.38 MB | x | x |  |  |  |  |  |  |
-| Document Verification | 1.62 MB | x |  |  |  |  | x |  |  |
-| BAM Checkout credit card scanning | 6.39 MB | x |  |  |  |  |  | x |  |
-| All Products | 33.21 MB | x | x | x | x | x | x | x | x |
+| ID + Authentication (Zoom) | 23.55 MB | x | x | x |  | x |  |  |  |
+| ID + Liveness (iProov) | 13.32 MB | x | x | x | x |  |  |  |  |
+| ID + NFC | 13.29 MB | x | x | x |  |  |  |  | x |
+| Fastfill | 10.65 MB | x | x | x |  |  |  |  |  |
+| Fastfill without Barcode | 7.33 MB | x | x |  |  |  |  |  |  |
+| Document Verification | 1.60 MB | x |  |  |  |  | x |  |  |
+| BAM Checkout credit card scanning | 6.37 MB | x |  |  |  |  |  | x |  |
+| All Products | 34.25 MB | x | x | x | x | x | x | x | x |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 

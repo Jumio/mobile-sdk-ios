@@ -8,10 +8,33 @@
 # Change Log
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
 
-## SDK Version: __3.8.0__
-![Changes](https://img.shields.io/badge/Change-blue) Added iProov as an additional liveness vendor to the [Jumio KYX platform](https://www.jumio.com/kyx/) [Identity Verification]
+## SDK Version: __3.9.0__
+![Improvement](https://img.shields.io/badge/Improvement-green) Improved retry guidance for Identity Verification [Identity Verification]
 
+![Improvement](https://img.shields.io/badge/Improvement-green) Improved customization options for Identity Verification [Identity Verification]
+
+![Improvement](https://img.shields.io/badge/Improvement-green) MicroBlink pdf417 version update to 7.3.0 [ID Verification/Fastfill]
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Added more granular differentiations for `ScanMode` in CustomUI [Identity Verification]
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Improved handling of extracted data reading from barcodes [ID Verification/Fastfill]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed rare issue of help animation overlapping with view header on smaller screen sizes [Identity Verification]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed missing close button on initial document selection screen [ID Verification/Fastfill]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed app crashing after back button click on barcode backside scan view in some scenarios [ID Verification/Fastfill]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed app crashing on face scan start after barcode scanning in some scenarios when using Zoom in certain cases [ID Verification/Fastfill, Identity Verification]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed rare occurrence of app being stuck on processing after app is put in the background during iProov face scan [Identity Verification]
+
+![Changes](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 8.2.0, which includes image quality improvements that reduces false rejects [Identity Verification]
+
+## SDK Version: __3.8.0__
 ![Fixes](https://img.shields.io/badge/Fix-success) Fixed minor breaking constraints on scan view [ID Verification]
+
+![Changes](https://img.shields.io/badge/Change-blue) Added iProov as an additional liveness vendor to the [Jumio KYX platform](https://www.jumio.com/kyx/) [Identity Verification]
 
 ## SDK Version: __3.7.2__
 ![Improvement](https://img.shields.io/badge/Improvement-green) New error code is returned in case an ad blocker or a firewall is detected [ID Verification/Fastfill, Authentication, Document Verification]

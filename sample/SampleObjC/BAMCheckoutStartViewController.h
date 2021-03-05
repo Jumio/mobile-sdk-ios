@@ -1,7 +1,7 @@
 //
 //  BAMCheckoutStartViewController.h
 //
-//  Copyright © 2020 Jumio Corporation All rights reserved.
+//  Copyright © 2021 Jumio Corporation All rights reserved.
 //
 
 #import "StartViewController.h"

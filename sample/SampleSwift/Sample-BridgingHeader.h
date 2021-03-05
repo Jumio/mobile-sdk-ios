@@ -1,7 +1,7 @@
 //
 //  Sample-BridgingHeader.h
 //
-//  Copyright © 2020 Jumio Corporation. All rights reserved.
+//  Copyright © 2021 Jumio Corporation. All rights reserved.
 //
 
 #ifndef Sample_BridgingHeader_h

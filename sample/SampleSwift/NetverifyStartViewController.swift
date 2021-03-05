@@ -1,7 +1,7 @@
 //
 //  NetverifyStartViewController.swift
 //
-//  Copyright © 2020 Jumio Corporation All rights reserved.
+//  Copyright © 2021 Jumio Corporation All rights reserved.
 //
 
 import Netverify
@@ -189,6 +189,10 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
         //NetverifyScanOverlayView.jumioAppearance().scanBackgroundColor = .orange
         //NetverifyScanOverlayView.jumioAppearance().colorOverlayFill = .green
         
+        // - Custom iProov Scan Colors, custom class has to be imported
+        //NetverifyIProovScanView.jumioAppearance().iProovLivenessTintColor = .green
+        //NetverifyIProovScanView.jumioAppearance().iProovLineColor = .red
+        
         // Color for the face oval outline
         //NetverifyScanOverlayView.jumioAppearance().faceOvalColor = .orange
         // Color for the progress bars
@@ -257,8 +261,10 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
      * @param netverifyViewController The NetverifyViewController instance
      * @param documentData The NetverifyDocumentData of the scanned document
      * @param scanReference The scanReference of the scan
+     * @param accountId Account Id, if available
+     * @param authenticationResult Bool identifies if Authentication passed successfully
      **/
-    func netverifyViewController(_ netverifyViewController: NetverifyViewController, didFinishWith documentData: NetverifyDocumentData, scanReference: String) {
+    func netverifyViewController(_ netverifyViewController: NetverifyViewController, didFinishWith documentData: NetverifyDocumentData, scanReference: String, accountId: String?, authenticationResult: Bool) {
         print("NetverifyViewController finished successfully with scan reference: \(scanReference)")
         
         let selectedCountry:String = documentData.selectedCountry ?? ""
@@ -372,8 +378,9 @@ class NetverifyStartViewController: StartViewController, NetverifyViewController
      * @param netverifyViewController The NetverifyViewController
      * @param error The error describing the cause of the problematic situation
      * @param scanReference The scanReference of the scan attempt
+     * @param accountId Account Id, if available
      **/
-    func netverifyViewController(_ netverifyViewController: NetverifyViewController, didCancelWithError error: NetverifyError?, scanReference: String?) {
+    func netverifyViewController(_ netverifyViewController: NetverifyViewController, didCancelWithError error: NetverifyError?, scanReference: String?, accountId: String?) {
         
         //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
         

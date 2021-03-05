@@ -4,6 +4,27 @@
 
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
+## 3.9.0
+#### Frameworks
+`MicroBlink.framework` has been renamed to be `Microblink.framework`
+
+#### Changes to the Public API
+Two new parameters added to the follwing methods:
+
+`accountId` has been added to the following methods to return Account Id if available
+`authenticationResult` has been added to `didFinishWithDocumentData` methods to return Authentication's result in case it was lunched for Authentication product.
+
+* `(void) netverifyViewController:(NetverifyViewController* _Nonnull)netverifyViewController didFinishWithDocumentData:(NetverifyDocumentData * _Nonnull)documentData scanReference:(NSString* _Nonnull)scanReference accountId:(NSString* _Nullable)accountId authenticationResult:(BOOL)authenticationResult;`
+* `(void) netverifyViewController:(NetverifyViewController* _Nonnull)netverifyViewController didCancelWithError:(NetverifyError* _Nullable)error scanReference: (NSString* _Nullable)scanReference accountId:(NSString* _Nullable)accountId;`
+
+* `(void) netverifyUIController:(NetverifyUIController* _Nonnull)netverifyUIController didFinishWithDocumentData:(NetverifyDocumentData * _Nonnull)documentData scanReference:(NSString* _Nonnull)scanReference accountId:(NSString* _Nullable)accountId authenticationResult:(BOOL)authenticationResult;`
+* `(void) netverifyUIController:(NetverifyUIController* _Nonnull)netverifyUIController didCancelWithError:(NetverifyError* _Nullable)error scanReference:(NSString* _Nullable)scanReference accountId:(NSString* _Nullable)accountId;`
+
+####  Custom UI changes
+* Enum `JumioFaceRetryReasonIProovGPA` was added as an indicator that the returned help view is for `iProovGPA`
+* Enum `JumioFaceRetryReasonIProovGeneric` is used as an indicator that the returned help view is for `iProovLA`
+* Enum `NetverifyScanMode` was changed by replacing `NetverifyScanMode3DLiveness` with `NetverifyScanModeFaceZoom` and `NetverifyScanModeFaceIProov`
+
 ## 3.8.0
 #### Localization Keys
 The following keys have been added:
@@ -27,7 +48,20 @@ Added two new methods to Netverify Custom UI:
 #### Cocoapods
 * pod ~~`NetverifyFace`~~ is replaced by `NetverifyFace+iProov`
 
-* pod `NetverifyFace+Zoom`is added
+* pod `NetverifyFace+Zoom` is added
+
+* install hook is added to the `podfile`:
+```
+post_install do |installer|
+   installer.pods_project.targets.each do |target|
+     if ['iProov', 'Socket.IO-Client-Swift', 'Starscream'].include? target.name
+       target.build_configurations.each do |config|
+           config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+       end
+     end
+    end
+end
+```
 
 #### Frameworks
 * `JumioIProov.framework` is added

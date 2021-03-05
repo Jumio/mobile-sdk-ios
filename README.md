@@ -73,18 +73,18 @@ When the cloning is done, once again just choose the __JumioMobileSDKSample.xcod
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
-The iOS sample application contains the packages `SampleObjc`and `SampleSwift`. Both of those packages contain the exact same thing, using Objective C and Swift respectively. In each of them, you will find:
-`MainStoryboardSwift` / `MainStoryboardObjC`
-`BAMCheckout`
-`Netverify`
-`Authentication`
-`DocumentVerification`
+The iOS sample application contains the packages `SampleObjc` and `SampleSwift`. Both of those packages contain the exact same thing, using Objective C and Swift respectively. In each of them, you will find:
+`MainStoryboardSwift` / `MainStoryboardObjC`  
+`BAMCheckout`  
+`Netverify`  
+`Authentication`  
+`DocumentVerification`  
 
 Each of these folders contains at least one corresponding ViewController-class. In each class, the most important methods for this service is shown and quickly outlined.
 
 At the top of each ViewController-class you’ll find the following parameters:
 
-`config.apiToken`
+`config.apiToken`  
 `config.apiSecret`
 
 If you haven’t done so yet, log into your Jumio customer portals. You can find your customer API token and API secret on the __Settings__ page under the __API credentials__ tab. Add your individual key and token instead of the placeholders.
@@ -96,7 +96,7 @@ Once you start up the sample application, you'll be given the option of trying o
 
 ### Tutorial List
 * [Getting started (Video):](https://share.vidyard.com/watch/1EDj4nkj3ZsZRxWVHbrpDH) How to clone the repository and configure your Jumio credentials
-* [Introduction (Video):](https://share.vidyard.com/watch/YHkdgbcXAZ1Leht9CH5Z7r) How to initialize the SDK, run the sample on your iOS device, and test the identity verification user journey
+* [Introduction (Video):](https://share.vidyard.com/watch/YHkdgbcXAZ1Leht9CH5Z7r) How to initialize the SDK, run the sample on your iOS device, and test the Identity Verification user journey
 * [Configuring behavior (Video):](https://share.vidyard.com/watch/3UPJyHrbXnuyY91aNpKEKW) How to configure the behavior of the app using SDK parameters
 * [Customizing appearance (Video):](https://share.vidyard.com/watch/3e7zjQ64gVpQ8Tw6KKQGMj) How to customize the look and feel of your application using the Jumio Surface tool
 
@@ -122,7 +122,7 @@ Check the [Xcode sample project](sample) to learn the most common use. Make sure
 [Integration into existing project (Video):](https://share.vidyard.com/watch/dd7sb8AZueTn89iZLpZLFp) How to add Jumio Mobile SDK-functionalities to an existing Xcode project
 
 ### Via Cocoapods
-Jumio supports CocoaPods as dependency management tool for easy integration of the SDK.
+Jumio supports CocoaPods as dependency management tool for easy integration of the SDK. You are required to use **Cocoapods 1.9.0** or newer.
 
 If you are not yet using Cocoapods in your project, first run:
 ```
@@ -133,32 +133,43 @@ Then update your local clone of the specs repo in Terminal to ensure that you ar
 ```
 pod repo update
 ```
-Adapt your Podfile and add the pod according to the product(s) you use. Check the following example how a Podfile could look like:
+Adapt your Podfile and add the pods according to the product(s) you use. Check the following example how a Podfile could look like:
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.8.0' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.9.0' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.8.0' # Use full Netverify and Authentication functionality
-pod 'JumioMobileSDK/NetverifyBase', '~>3.8.0' # For Fastfill, Netverify basic functionality
-pod 'JumioMobileSDK/NetverifyNFC', '~>3.8.0' # For Fastfill, Netverify functionality with NFC extraction
-pod 'JumioMobileSDK/NetverifyBarcode', '~>3.8.0' # For Fastfill, Netverify functionality with barcode extraction
-pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.8.0' # For Fastfill, Netverify functionality with identity verification, Authentication
-pod 'JumioMobileSDK/NetverifyFace+Zoom', '~>3.8.0' # For Fastfill, Netverify functionality with identity verification, Authentication
+pod 'JumioMobileSDK/Netverify', '~>3.9.0' # Use full Netverify and Authentication functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.9.0' # For Fastfill, Netverify basic functionality
+pod 'JumioMobileSDK/NetverifyNFC', '~>3.9.0' # For Fastfill, Netverify functionality with NFC extraction
+pod 'JumioMobileSDK/NetverifyBarcode', '~>3.9.0' # For Fastfill, Netverify functionality with barcode extraction
+pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.0' # For Fastfill, Netverify functionality with Identity Verification, Authentication
+pod 'JumioMobileSDK/NetverifyFace+Zoom', '~>3.9.0' # For Fastfill, Netverify functionality with Identity Verification, Authentication
 
-pod 'JumioMobileSDK/DocumentVerification', '~>3.8.0' # Use Document Verification functionality
+pod 'JumioMobileSDK/DocumentVerification', '~>3.9.0' # Use Document Verification functionality
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.8.0' # Use BAM Checkout functionality
+pod 'JumioMobileSDK/BAMCheckout', '~>3.9.0' # Use BAM Checkout functionality
 ```
-#### iProov
-iProov is distributed as an XCFramework, therefore **you are required to use Cocoapods 1.9.0 or newer**. If you are using iProov, you will also need to add the line to the target section of your podfile:
+
+#### Certified Liveness Vendor
+Jumio offers the choice between two Certified Liveness vendors to detect liveness:
+
+* iProov
+* ZoOm
+
+The SDK can only use one vendor at a time. Switching vendors during runtime is not possible. If both frameworks are linked in the same project, Jumio SDK will use iProov.
+
+__Using iProov (Cocoapods):__
 ```
-pod 'iProov'
-```
-Next, add the following lines to the bottom of your podfile:
-```
+// any of the necessary subpods, for example:
+pod 'JumioMobileSDK/NetverifyBase', '~>3.9.0' # For Fastfill, Netverify basic functionality
+
+// mandatory for iProov
+pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.0' # For Fastfill, Netverify functionality with Identity Verification, Authentication
+
+// mandatory for iProov
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     if ['iProov', 'Socket.IO-Client-Swift', 'Starscream'].include? target.name
@@ -169,6 +180,16 @@ post_install do |installer|
   end
 end
 ```
+
+__Using ZoOm (Cocoapods):__
+```
+// any of the necessary subpods, for example:
+pod 'JumioMobileSDK/NetverifyBarcode', '~>3.9.0' # For Fastfill, Netverify basic functionality
+
+// mandatory for ZoOm
+pod 'JumioMobileSDK/NetverifyFace+Zoom', '~>3.9.0' # For Fastfill, Netverify functionality with Identity Verification, Authentication
+```
+
 Install the pods to your project via Terminal:
 ```
 pod install
@@ -183,7 +204,7 @@ Jumio supports Carthage as dependency management tool for easy integration of th
 Adapt you Cartfile and add the JumioMobileSDK dependency. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.8.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.9.0
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -202,7 +223,17 @@ In case you experience a build error when building your app in Debug configurati
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.8.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.8.0/ios-jumio-mobile-sdk-3.8.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.9.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.9.0/ios-jumio-mobile-sdk-3.9.0.zip).
+
+__Using iProov (manually):__
+* JumioIProov.framework
+* iProov.framework
+* Starscream.framework (iProov dependency)
+* SocketIO.framework (iProov dependency)
+
+__Using ZoOm (manually):__
+* NetverifyFace.framework
+* ZoomAuthentication.framework
 
 __Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -212,7 +243,7 @@ Please see [Strip unused frameworks](docs/integration_faq.md#strip-unused-framew
 
 The framework binaries are available with support for device and simulator architecture. Make sure to remove the simulator architecture from our frameworks for app submissions to the AppStore. If this step is not performed, your submission will be rejected by Apple. Add the following code snippet as run script build phase to your app project and ensure that it is executed after the frameworks are embedded. Please see the required setup in our sample project.
 
-__Note:__ The simulator architecture is automatically removed if using cocoapods via "[CP] Embed Pods Frameworks" build phase.
+__Note:__ The simulator architecture is automatically removed if using Cocoapods via "[CP] Embed Pods Frameworks" build phase.
 ```shell
 if [[ "$CONFIGURATION" == "Release" ]]; then
   $PROJECT_DIR/remove-simulator-architecture.sh
@@ -220,7 +251,7 @@ fi
 ```
 Code snippet source: https://stackoverflow.com/questions/30547283/submit-to-app-store-issues-unsupported-architecture-x86
 
-Add the following linker flags to your Xcode Build Settings:<br/>
+Add the following linker flags to your Xcode Build Settings:  
 __Note:__ Added automatically if using CocoaPods.
 - "-lc++"
 - "-ObjC" (recommended) or -all_load
@@ -241,7 +272,7 @@ _Afrikaans, Arabic, Bulgarian, Chinese(Simplified), Chinese(Traditional), Croati
 
 Please check out our [sample project](sample) to see how to use the strings files in your app.
 
-Our SDK supports accessibility features. Visually impaired users can enable __VoiceOver__ or increase __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customised.
+Our SDK supports accessibility features. Visually impaired users can enable __VoiceOver__ or increase __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customized.
 
 # Security
 All SDK related traffic is sent over HTTPS using TLS and public key pinning, and additionally, the information itself within the transmission is also encrypted utilizing __Application Layer Encryption__ (ALE). ALE is Jumio custom-designed security protocol which utilizes RSA-OAEP and AES-256 to ensure that the data cannot be read or manipulated even if the traffic was captured.
@@ -252,7 +283,7 @@ Please refer to our [Change Log](docs/changelog.md) for more information about o
 # Support
 
 ## Previous Version
-The previous release version 3.7.2 of the Jumio Mobile SDK is supported until 2021-03-15.
+The previous release version 3.8.0 of the Jumio Mobile SDK is supported until 2021-06-05.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.

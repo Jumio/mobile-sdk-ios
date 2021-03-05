@@ -15,7 +15,7 @@ Jumio’s ID Verification allows businesses to establish the genuine identity of
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Netverify/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.8.0
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.7.2
 
 For breaking technical changes, please read our [transition guide](transition-guide_id-verification-fastfill.md).
 
@@ -439,14 +439,14 @@ When displaying fullscreen help, the capturing process can be paused with the me
 
 Each [`NetverifyCustomScanViewController`](https://jumio.github.io/mobile-sdk-ios/Netverify/Classes/NetverifyCustomScanViewController.html) returns a scan mode, which indicates what type of scanView is displayed.
 
-**NetverifyScanMode** values: `MRZ`, `Barcode`, `3DLiveness`, `FaceCapture`, `Manual`, `OCR`, `OCR_Template`
+**NetverifyScanMode** values: `MRZ`, `Barcode`, `FaceZoom`, `FaceIProov`, `FaceCapture`, `Manual`, `OCR`, `OCR_Template`
 
 Please note that when a _manual_ scan view is displayed, a shutter button also has to be displayed. Use `isImagePicker` to check if a button needs to be displayed, and call `takeImage` as target action when the shutter button is tapped.
 
 Use `hasFlash`, `isFlashOn`, `canToggleFlash`, and `toggleFlash` to handle the flash mode.
 Use `hasMultipleCameras`, `currentCameraPosition`, `canSwitchCamera`, and `switchCamera` to determine and change camera position.
 
-For scan mode `3DLiveness` and `FaceCapture`, only front facing camera can be used.
+For scan mode `FaceZoom`, `FaceIProov` and `FaceCapture`, only front facing camera can be used.
 
 ### End-user Help
 The `NetverifyCustomScanViewController` can also be used to receive the suggested help texts.

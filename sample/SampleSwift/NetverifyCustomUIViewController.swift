@@ -1,7 +1,7 @@
 //
 //  NetverifyCustomUIViewController.swift
 //
-//  Copyright © 2020 Jumio Corporation. All rights reserved.
+//  Copyright © 2021 Jumio Corporation. All rights reserved.
 //
 
 import Netverify
@@ -92,7 +92,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         // Add capture controls view
         self.addCaptureControl(to: netverifyScanViewController)
         
-        if netverifyScanViewController.currentScanMode() == .mode3DLiveness {
+        if netverifyScanViewController.currentScanMode() == .faceZoom || netverifyScanViewController.currentScanMode() == .faceIProov {
             // Don't show captureInfoView when 3DLivenes is used
             return
         }
@@ -157,7 +157,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         }
         
         // Add helper views for the camera capture
-        if scanViewController.currentScanMode() == .modeFaceCapture || scanViewController.currentScanMode() == .mode3DLiveness {
+        if scanViewController.currentScanMode() == .faceCapture || scanViewController.currentScanMode() == .faceZoom, scanViewController.currentScanMode() == .faceIProov {
             self.addFaceMacherHelpersViews(scanViewController)
         } else {
             self.addCaptureHelperViews(scanViewController, isFallback: scanViewController.isFallbackAvailable())
@@ -207,7 +207,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         }
     }
     
-    func netverifyUIController(_ netverifyUIController: NetverifyUIController, didFinishWith documentData: NetverifyDocumentData, scanReference: String) {
+    func netverifyUIController(_ netverifyUIController: NetverifyUIController, didFinishWith documentData: NetverifyDocumentData, scanReference: String, accountId: String?, authenticationResult: Bool) {
         print("NetverifyUIController finished successfully with scan reference: \(scanReference)")
         
         // Update verification finished view when the data from the captured document was captured
@@ -222,7 +222,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         })
     }
     
-    func netverifyUIController(_ netverifyUIController: NetverifyUIController, didCancelWithError error: NetverifyError?, scanReference: String?) {
+    func netverifyUIController(_ netverifyUIController: NetverifyUIController, didCancelWithError error: NetverifyError?, scanReference: String?, accountId: String?) {
         
         //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
         

@@ -3,7 +3,7 @@ ${PROJECT_DIR}/../frameworks/BAMCheckout.framework
 ${PROJECT_DIR}/../frameworks/Netverify.framework
 ${PROJECT_DIR}/../frameworks/NetverifyFace.framework
 ${PROJECT_DIR}/../frameworks/NetverifyBarcode.framework
-${PROJECT_DIR}/../frameworks/MicroBlink.framework
+${PROJECT_DIR}/../frameworks/Microblink.framework
 ${PROJECT_DIR}/../frameworks/DocumentVerification.framework
 ${PROJECT_DIR}/../frameworks/JumioIProov.framework
 ${PROJECT_DIR}/../frameworks/JumioNFC.framework

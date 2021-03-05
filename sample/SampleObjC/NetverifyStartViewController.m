@@ -1,7 +1,7 @@
 //
 //  NetverifyStartViewController.m
 //
-//  Copyright © 2020 Jumio Corporation All rights reserved.
+//  Copyright © 2021 Jumio Corporation All rights reserved.
 //
 
 #import "NetverifyStartViewController.h"
@@ -154,6 +154,10 @@
     //[[NetverifyScanOverlayView jumioAppearance] setScanBackgroundColor: [UIColor orangeColor]];
     //[[NetverifyScanOverlayView jumioAppearance] setColorOverlayFill: [UIColor greenColor]];
     
+    // - Custom iProov Scan Colors, custom class has to be imported
+    //[[NetverifyIProovScanView jumioAppearance] setIProovLivenessTintColor: [UIColor greenColor]];
+    //[[NetverifyIProovScanView jumioAppearance] setIProovLineColor: [UIColor redColor]];
+    
     // Color for the face oval outline
     //[[NetverifyScanOverlayView jumioAppearance] setFaceOvalColor: [UIColor orangeColor]];
     // Color for the progress bars
@@ -204,8 +208,10 @@
  * @param netverifyViewController The NetverifyViewController instance
  * @param documentData The NetverifyDocumentData of the scanned document
  * @param scanReference The scanReference of the scan
+ * @param accountId Account Id, if available
+ * @param authenticationResult Bool identifies if Authentication passed successfully
  **/
-- (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didFinishWithDocumentData:(NetverifyDocumentData *)documentData scanReference:(NSString *)scanReference {
+- (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didFinishWithDocumentData:(NetverifyDocumentData *)documentData scanReference:(NSString *)scanReference accountId:(NSString*)accountId authenticationResult:(BOOL)authenticationResult {
     NSLog(@"NetverifyViewController finished successfully with scan reference: %@", scanReference);
     
     NSString *selectedCountry = documentData.selectedCountry;
@@ -317,8 +323,9 @@
  * @param netverifyViewController The NetverifyViewController instance
  * @param error The error describing the cause of the problematic situation
  * @param scanReference The scanReference of the scan attempt
+ * @param accountId Account Id, if available
  **/
-- (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didCancelWithError:(NetverifyError * _Nullable)error scanReference:(NSString * _Nullable)scanReference {
+- (void) netverifyViewController:(NetverifyViewController *)netverifyViewController didCancelWithError:(NetverifyError * _Nullable)error scanReference:(NSString * _Nullable)scanReference accountId:(NSString* _Nullable)accountId {
     
     //handle the error cases as highlighted in our documentation: https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_faq.md#managing-errors
     

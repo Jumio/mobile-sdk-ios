@@ -39,15 +39,15 @@
 		54042A851FEBDED400626D55 /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A861FEBDED400626D55 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; };
 		54042A871FEBDED400626D55 /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		54042A881FEBDED400626D55 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; };
-		54042A891FEBDED400626D55 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A881FEBDED400626D55 /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* Microblink.framework */; };
+		54042A891FEBDED400626D55 /* Microblink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* Microblink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A8A1FEBDED400626D55 /* Netverify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; };
 		54042A8B1FEBDED400626D55 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A8F1FEBDEF500626D55 /* BAMCheckout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A791FEBDECA00626D55 /* BAMCheckout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A901FEBDEF500626D55 /* JumioCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; };
 		54042A911FEBDEF500626D55 /* JumioCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A761FEBDEC900626D55 /* JumioCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		54042A921FEBDEF500626D55 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; };
-		54042A931FEBDEF500626D55 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54042A921FEBDEF500626D55 /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* Microblink.framework */; };
+		54042A931FEBDEF500626D55 /* Microblink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A751FEBDEC900626D55 /* Microblink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54042A951FEBDEF500626D55 /* Netverify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54042A781FEBDECA00626D55 /* Netverify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		545F7A5F20A1E1B2007EBCE7 /* Localizable-BAMCheckout.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5920A1E1B1007EBCE7 /* Localizable-BAMCheckout.strings */; };
 		545F7A6020A1E1B2007EBCE7 /* Localizable-BAMCheckout.strings in Resources */ = {isa = PBXBuildFile; fileRef = 545F7A5920A1E1B1007EBCE7 /* Localizable-BAMCheckout.strings */; };
@@ -102,7 +102,7 @@
 			files = (
 				05640D0724911A78006DB048 /* JumioNFC.framework in Embed Frameworks */,
 				0535EC1923CE583D00C6DEB0 /* DocumentVerification.framework in Embed Frameworks */,
-				54042A891FEBDED400626D55 /* MicroBlink.framework in Embed Frameworks */,
+				54042A891FEBDED400626D55 /* Microblink.framework in Embed Frameworks */,
 				05CD5AB42577C19300A436F4 /* SocketIO.framework in Embed Frameworks */,
 				30CEB9A32208A88A00322964 /* NetverifyBarcode.framework in Embed Frameworks */,
 				54042A871FEBDED400626D55 /* JumioCore.framework in Embed Frameworks */,
@@ -124,7 +124,7 @@
 				05640D0624911A70006DB048 /* JumioNFC.framework in Embed Frameworks */,
 				0535EC1823CE57D300C6DEB0 /* DocumentVerification.framework in Embed Frameworks */,
 				05CD5ABC2577C19B00A436F4 /* SocketIO.framework in Embed Frameworks */,
-				54042A931FEBDEF500626D55 /* MicroBlink.framework in Embed Frameworks */,
+				54042A931FEBDEF500626D55 /* Microblink.framework in Embed Frameworks */,
 				54042A911FEBDEF500626D55 /* JumioCore.framework in Embed Frameworks */,
 				05CD5AB82577C19800A436F4 /* iProov.framework in Embed Frameworks */,
 				54042A8F1FEBDEF500626D55 /* BAMCheckout.framework in Embed Frameworks */,
@@ -208,7 +208,7 @@
 		05DC3B3924AC87A800B8DB87 /* zu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zu; path = "../frameworks/Localizations/zu.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
 		05DC3B3B24AC87BF00B8DB87 /* zu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zu; path = "../frameworks/Localizations/zu.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
 		3078F8B422020449003B2974 /* NetverifyBarcode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetverifyBarcode.framework; path = ../frameworks/NetverifyBarcode.framework; sourceTree = "<group>"; };
-		54042A751FEBDEC900626D55 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../frameworks/MicroBlink.framework; sourceTree = "<group>"; };
+		54042A751FEBDEC900626D55 /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = ../frameworks/Microblink.framework; sourceTree = "<group>"; };
 		54042A761FEBDEC900626D55 /* JumioCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioCore.framework; path = ../frameworks/JumioCore.framework; sourceTree = "<group>"; };
 		54042A781FEBDECA00626D55 /* Netverify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Netverify.framework; path = ../frameworks/Netverify.framework; sourceTree = "<group>"; };
 		54042A791FEBDECA00626D55 /* BAMCheckout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BAMCheckout.framework; path = ../frameworks/BAMCheckout.framework; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 				05CD5ABB2577C19B00A436F4 /* SocketIO.framework in Frameworks */,
 				05640D0524911862006DB048 /* JumioNFC.framework in Frameworks */,
 				05CD5AB72577C19800A436F4 /* iProov.framework in Frameworks */,
-				54042A921FEBDEF500626D55 /* MicroBlink.framework in Frameworks */,
+				54042A921FEBDEF500626D55 /* Microblink.framework in Frameworks */,
 				54042A901FEBDEF500626D55 /* JumioCore.framework in Frameworks */,
 				05CD5ABD2577C19C00A436F4 /* Starscream.framework in Frameworks */,
 			);
@@ -296,7 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54042A881FEBDED400626D55 /* MicroBlink.framework in Frameworks */,
+				54042A881FEBDED400626D55 /* Microblink.framework in Frameworks */,
 				3078F8B52202044A003B2974 /* NetverifyBarcode.framework in Frameworks */,
 				54042A861FEBDED400626D55 /* JumioCore.framework in Frameworks */,
 				0535EC1623CE553000C6DEB0 /* DocumentVerification.framework in Frameworks */,
@@ -515,7 +515,7 @@
 				3078F8B422020449003B2974 /* NetverifyBarcode.framework */,
 				54042A791FEBDECA00626D55 /* BAMCheckout.framework */,
 				54042A761FEBDEC900626D55 /* JumioCore.framework */,
-				54042A751FEBDEC900626D55 /* MicroBlink.framework */,
+				54042A751FEBDEC900626D55 /* Microblink.framework */,
 				54042A781FEBDECA00626D55 /* Netverify.framework */,
 			);
 			name = JumioMobileSDK;
@@ -922,6 +922,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SampleSwift/Sample-BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				VALIDATE_WORKSPACE = NO;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -963,6 +964,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SampleSwift/Sample-BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
+				VALIDATE_WORKSPACE = NO;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1022,6 +1024,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
@@ -1075,6 +1078,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = NO;
 				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
