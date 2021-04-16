@@ -29,7 +29,7 @@ All notable changes, such as SDK releases, updates and fixes, are documented in 
 
 ![Fixes](https://img.shields.io/badge/Fix-success) Fixed rare occurrence of app being stuck on processing after app is put in the background during iProov face scan [Identity Verification]
 
-![Changes](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 8.2.0, which includes image quality improvements that reduces false rejects [Identity Verification]
+![Changes](https://img.shields.io/badge/Change-blue) iProov SDK version update to 8.2.0, which includes image quality improvements that reduces false rejects [Identity Verification]
 
 ## SDK Version: __3.8.0__
 ![Fixes](https://img.shields.io/badge/Fix-success) Fixed minor breaking constraints on scan view [ID Verification]
