@@ -92,7 +92,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         // Add capture controls view
         self.addCaptureControl(to: netverifyScanViewController)
         
-        if netverifyScanViewController.currentScanMode() == .faceZoom || netverifyScanViewController.currentScanMode() == .faceIProov {
+        if netverifyScanViewController.currentScanMode() == .faceIProov {
             // Don't show captureInfoView when 3DLivenes is used
             return
         }
@@ -157,7 +157,7 @@ class NetverifyCustomUIViewController: UIViewController, UITableViewDataSource, 
         }
         
         // Add helper views for the camera capture
-        if scanViewController.currentScanMode() == .faceCapture || scanViewController.currentScanMode() == .faceZoom, scanViewController.currentScanMode() == .faceIProov {
+        if scanViewController.currentScanMode() == .faceCapture || scanViewController.currentScanMode() == .faceIProov {
             self.addFaceMacherHelpersViews(scanViewController)
         } else {
             self.addCaptureHelperViews(scanViewController, isFallback: scanViewController.isFallbackAvailable())

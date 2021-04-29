@@ -8,6 +8,9 @@
 # Change Log
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
 
+## SDK Version: __3.9.1__
+![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 8.3.1, which improves performance and offers additional customization options [Identity Verification]
+
 ## SDK Version: __3.9.0__
 ![Improvement](https://img.shields.io/badge/Improvement-green) Improved retry guidance for Identity Verification [Identity Verification]
 

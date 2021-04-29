@@ -10,6 +10,7 @@
 	- [Bitcode](#bitcode)
 - [Jumio Authentication Workflow Integration](#jumio-authentication-workflow-integration)
 - [Language Localization](#language-localization)
+	- [iProov String Keys](#iproov-string-keys)
 - [Glossary of Commonly Used Abbreviations ](#glossary)
 - [Jumio Support](#jumio-support)
 
@@ -56,16 +57,15 @@ Depending on your specific needs, you may want to strip out unused functionality
 
 The following table shows a range of different product configurations with the frameworks that are required and the corresponding application size. These measurements reflect the extra size that Jumio components add to your app download size and are based on our [sample application](../sample) after being uploaded to the [Appstore](https://apps.apple.com/us/app/jumio-showcase/id639531180).
 
-| Product | Size | JumioCore | Netverify | NetverifyBarcode & MicroBlink | JumioIProov & iProov | NetverifyFace & ZoomAuthentication | Document Verification | BAMCheckout  | JumioNFC |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ID + Authentication (Zoom) | 23.55 MB | x | x | x |  | x |  |  |  |
-| ID + Liveness (iProov) | 13.32 MB | x | x | x | x |  |  |  |  |
-| ID + NFC | 13.29 MB | x | x | x |  |  |  |  | x |
-| Fastfill | 10.65 MB | x | x | x |  |  |  |  |  |
-| Fastfill without Barcode | 7.33 MB | x | x |  |  |  |  |  |  |
-| Document Verification | 1.60 MB | x |  |  |  |  | x |  |  |
-| BAM Checkout credit card scanning | 6.37 MB | x |  |  |  |  |  | x |  |
-| All Products | 34.25 MB | x | x | x | x | x | x | x | x |
+| Product | Size | JumioCore | Netverify | NetverifyBarcode & MicroBlink | JumioIProov & iProov | Document Verification | BAMCheckout  | JumioNFC |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ID + Liveness (iProov) | 11.61 MB | x | x | x | x |  |  |  |
+| ID + NFC | 12.22 MB | x | x | x |  |  |  | x |
+| Fastfill | 9.73 MB | x | x | x |  |  |  |  |
+| Fastfill without Barcode | 7.26 MB | x | x |  |  |  |  |  |
+| Document Verification | 1.52 MB | x |  |  |  | x |  |  |
+| BAM Checkout credit card scanning | 6.29 MB | x |  |  |  |  | x |  |
+| All Products | 19.50 MB | x | x | x | x | x | x | x |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 
@@ -98,13 +98,27 @@ In case an Authentication fail is returned, we recommend to allow the user betwe
 ## Language Localization
 Our SDK supports localization for different languages and cultures. All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language, add it to your app or framework project and mark it as Localizable.
 
-This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
+This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update. If you're having issues with Localization, please refer to our [Known Issues](known_issues.md#language-localization-issues)
 
 __Note:__ If using CocoaPods, the original file is located under `/Pods/JumioMobileSDK`.
 
 Currently, the following languages are automatically supported for your convenience: [supported languages](../README.md#language-localization)
 
 Runtime language changes *within* the SDK or separate language support (meaning the SDK language differs from the overall device languages) is not possible.
+
+### iProov String Keys
+Please note that as of 3.8.0. the following keys have been added to the SDK:
+
+* `"IProov_IntroFlash"`
+* `"IProov_IntroLa"`
+* `"IProov_PromptLivenessAlignFace"`
+* `"IProov_PromptLivenessNoTarget"`
+* `"IProov_PromptLivenessScanCompleted"`
+* `"IProov_PromptTooClose"`
+* `"IProov_PromptTooFar"`
+
+Make sure your `podfile` is up to date and that new pod versions are installed properly so your `Localizable` files include new strings. If string keys are showing during your workflow instead of actual strings, this most likely hasn't been the case.   
+For more information, please refer to our [Changelog](changelog.md) and [Transition Guide](transition-guide_id-verification-fastfill.md#3.8.0).
 
 ### Accessibility
 Our SDK supports accessibility features. Visually impaired users can enable __VoiceOver__ or increase __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customized.

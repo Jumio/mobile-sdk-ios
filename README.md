@@ -139,37 +139,30 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.9.0' # Use Netverify, Authentication, Document Verification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.9.1' # Use ID Verification, Authentication, Document Verification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.9.0' # Use full Netverify and Authentication functionality
-pod 'JumioMobileSDK/NetverifyBase', '~>3.9.0' # For Fastfill, Netverify basic functionality
-pod 'JumioMobileSDK/NetverifyNFC', '~>3.9.0' # For Fastfill, Netverify functionality with NFC extraction
-pod 'JumioMobileSDK/NetverifyBarcode', '~>3.9.0' # For Fastfill, Netverify functionality with barcode extraction
-pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.0' # For Fastfill, Netverify functionality with Identity Verification, Authentication
-pod 'JumioMobileSDK/NetverifyFace+Zoom', '~>3.9.0' # For Fastfill, Netverify functionality with Identity Verification, Authentication
+pod 'JumioMobileSDK/Netverify', '~>3.9.1' # Use full ID Verification and Authentication functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.9.1' # For Fastfill, ID Verification basic functionality
+pod 'JumioMobileSDK/NetverifyNFC', '~>3.9.1' # For Fastfill, ID Verification functionality with NFC extraction
+pod 'JumioMobileSDK/NetverifyBarcode', '~>3.9.1' # For Fastfill, ID Verification functionality with barcode extraction
+pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.1' # For Fastfill, ID Verification functionality with Identity Verification, Authentication
 
-pod 'JumioMobileSDK/DocumentVerification', '~>3.9.0' # Use Document Verification functionality
+pod 'JumioMobileSDK/DocumentVerification', '~>3.9.1' # Use Document Verification functionality
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.9.0' # Use BAM Checkout functionality
+pod 'JumioMobileSDK/BAMCheckout', '~>3.9.1' # Use BAM Checkout functionality
 ```
 
 #### Certified Liveness Vendor
-Jumio offers the choice between two Certified Liveness vendors to detect liveness:
+Jumio uses Certified Liveness technology to determine liveness.
 
-* iProov
-* ZoOm
-
-The SDK can only use one vendor at a time. Switching vendors during runtime is not possible. If both frameworks are linked in the same project, Jumio SDK will use iProov.
-
-__Using iProov (Cocoapods):__
 ```
 // any of the necessary subpods, for example:
-pod 'JumioMobileSDK/NetverifyBase', '~>3.9.0' # For Fastfill, Netverify basic functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.9.1' # For Fastfill, ID Verification basic functionality
 
-// mandatory for iProov
-pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.0' # For Fastfill, Netverify functionality with Identity Verification, Authentication
+// mandatory for Identity Verification
+pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.1' # For Fastfill, ID Verification functionality with Identity Verification, Authentication
 
-// mandatory for iProov
+// mandatory for Identity Verification
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     if ['iProov', 'Socket.IO-Client-Swift', 'Starscream'].include? target.name
@@ -181,19 +174,12 @@ post_install do |installer|
 end
 ```
 
-__Using ZoOm (Cocoapods):__
-```
-// any of the necessary subpods, for example:
-pod 'JumioMobileSDK/NetverifyBarcode', '~>3.9.0' # For Fastfill, Netverify basic functionality
-
-// mandatory for ZoOm
-pod 'JumioMobileSDK/NetverifyFace+Zoom', '~>3.9.0' # For Fastfill, Netverify functionality with Identity Verification, Authentication
-```
-
 Install the pods to your project via Terminal:
 ```
 pod install
 ```
+
+__Note:__ In case your application uses ZoOm as a liveness technology, please contact [Jumio support](https://support.jumio.com) or your account manager directly.
 
 #### Tutorial
 [Integration with Cocoapods (Video):](https://share.vidyard.com/watch/otiA1BopzBJRjTqZr1JAck) How to add the Jumio Mobile SDK to an existing Xcode project using Cocoapods
@@ -204,7 +190,7 @@ Jumio supports Carthage as dependency management tool for easy integration of th
 Adapt you Cartfile and add the JumioMobileSDK dependency. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.9.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.9.1
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -223,7 +209,7 @@ In case you experience a build error when building your app in Debug configurati
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.9.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.9.0/ios-jumio-mobile-sdk-3.9.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.9.1.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.9.1/ios-jumio-mobile-sdk-3.9.1.zip).
 
 __Using iProov (manually):__
 * JumioIProov.framework
@@ -231,11 +217,7 @@ __Using iProov (manually):__
 * Starscream.framework (iProov dependency)
 * SocketIO.framework (iProov dependency)
 
-__Using ZoOm (manually):__
-* NetverifyFace.framework
-* ZoomAuthentication.framework
-
-__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
+__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time. In case your application uses ZoOm as a liveness vendor, please contact [Jumio support](https://support.jumio.com) or your account manager directly.
 
 The Jumio Mobile SDK consists of several dynamic frameworks. Depending on which product you use, you'll have to add the right frameworks to your project.
 
@@ -244,6 +226,7 @@ Please see [Strip unused frameworks](docs/integration_faq.md#strip-unused-framew
 The framework binaries are available with support for device and simulator architecture. Make sure to remove the simulator architecture from our frameworks for app submissions to the AppStore. If this step is not performed, your submission will be rejected by Apple. Add the following code snippet as run script build phase to your app project and ensure that it is executed after the frameworks are embedded. Please see the required setup in our sample project.
 
 __Note:__ The simulator architecture is automatically removed if using Cocoapods via "[CP] Embed Pods Frameworks" build phase.
+
 ```shell
 if [[ "$CONFIGURATION" == "Release" ]]; then
   $PROJECT_DIR/remove-simulator-architecture.sh
@@ -283,7 +266,7 @@ Please refer to our [Change Log](docs/changelog.md) for more information about o
 # Support
 
 ## Previous Version
-The previous release version 3.8.0 of the Jumio Mobile SDK is supported until 2021-06-05.
+The previous release version 3.9.0 of the Jumio Mobile SDK is supported until 2021-09-10.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.

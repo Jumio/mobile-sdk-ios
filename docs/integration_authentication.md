@@ -3,6 +3,11 @@
 # Authentication SDK for iOS
 Biometric-based Jumio Authentication establishes the digital identities of your users through the simple act of taking a selfie. Advanced 3D face map technology quickly and securely authenticates users and unlocks their digital identities.
 
+At the beginning of July 2021, we will be releasing the next generation Jumio Authentication product using our new liveness solution. The new solution requires fewer steps in the user journey and achieves higher accuracy, leading to better conversion rates.
+
+__Please note:__ Until then, Authentication will be available with __SDK version 3.9.0__, but not with any of the subsequent versions, until the next generation is released.
+
+
 ## Table of Contents
 - [Release Notes](#release-notes)
 - [Setup](#setup)
@@ -15,9 +20,7 @@ Biometric-based Jumio Authentication establishes the digital identities of your 
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.9.0
-
-For breaking technical changes, please read our [transition guide](transition-guide_authentication.md)
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __3.9.0__
 
 ## Setup
 The [basic setup](../README.md#basics) is required before continuing with the following setup for Authentication.
