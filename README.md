@@ -139,17 +139,17 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.9.1' # Use ID Verification, Authentication, Document Verification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.9.2' # Use ID Verification, Authentication, Document Verification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.9.1' # Use full ID Verification and Authentication functionality
-pod 'JumioMobileSDK/NetverifyBase', '~>3.9.1' # For Fastfill, ID Verification basic functionality
-pod 'JumioMobileSDK/NetverifyNFC', '~>3.9.1' # For Fastfill, ID Verification functionality with NFC extraction
-pod 'JumioMobileSDK/NetverifyBarcode', '~>3.9.1' # For Fastfill, ID Verification functionality with barcode extraction
-pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.1' # For Fastfill, ID Verification functionality with Identity Verification, Authentication
+pod 'JumioMobileSDK/Netverify', '~>3.9.2' # Use full ID Verification and Authentication functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.9.2' # For Fastfill, ID Verification basic functionality
+pod 'JumioMobileSDK/NetverifyNFC', '~>3.9.2' # For Fastfill, ID Verification functionality with NFC extraction
+pod 'JumioMobileSDK/NetverifyBarcode', '~>3.9.2' # For Fastfill, ID Verification functionality with barcode extraction
+pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.2' # For Fastfill, ID Verification functionality with Identity Verification, Authentication
 
-pod 'JumioMobileSDK/DocumentVerification', '~>3.9.1' # Use Document Verification functionality
+pod 'JumioMobileSDK/DocumentVerification', '~>3.9.2' # Use Document Verification functionality
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.9.1' # Use BAM Checkout functionality
+pod 'JumioMobileSDK/BAMCheckout', '~>3.9.2' # Use BAM Checkout functionality
 ```
 
 #### Certified Liveness Vendor
@@ -157,10 +157,10 @@ Jumio uses Certified Liveness technology to determine liveness.
 
 ```
 // any of the necessary subpods, for example:
-pod 'JumioMobileSDK/NetverifyBase', '~>3.9.1' # For Fastfill, ID Verification basic functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.9.2' # For Fastfill, ID Verification basic functionality
 
 // mandatory for Identity Verification
-pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.1' # For Fastfill, ID Verification functionality with Identity Verification, Authentication
+pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.2' # For Fastfill, ID Verification functionality with Identity Verification, Authentication
 
 // mandatory for Identity Verification
 post_install do |installer|
@@ -190,7 +190,7 @@ Jumio supports Carthage as dependency management tool for easy integration of th
 Adapt you Cartfile and add the JumioMobileSDK dependency. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.9.1
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.9.2
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -209,7 +209,7 @@ In case you experience a build error when building your app in Debug configurati
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.9.1.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.9.1/ios-jumio-mobile-sdk-3.9.1.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.9.2.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.9.2/ios-jumio-mobile-sdk-3.9.2.zip).
 
 __Using iProov (manually):__
 * JumioIProov.framework
@@ -266,7 +266,7 @@ Please refer to our [Change Log](docs/changelog.md) for more information about o
 # Support
 
 ## Previous Version
-The previous release version 3.9.0 of the Jumio Mobile SDK is supported until 2021-09-10.
+The previous release version 3.9.1 of the Jumio Mobile SDK is supported until 2021-09-10.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.
