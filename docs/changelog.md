@@ -8,8 +8,11 @@
 # Change Log
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
 
+## SDK Version: __3.9.3__
+![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 9.0.0, which improves performance, reliability and security against spoof attacks. [Identity Verification]
+
 ## SDK Version: __3.9.2__
-![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 8.4.0 , which improves performance and accuracy [Identity Verification]
+![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 8.4.0, which improves performance and accuracy [Identity Verification]
 
 ![Fixes](https://img.shields.io/badge/Fix-success) Fixed issue to avoid duplicate invocation of shouldDisplayHelpWithText: in CustomUI [Identity Verification]
 

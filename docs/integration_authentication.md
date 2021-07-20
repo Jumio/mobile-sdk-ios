@@ -5,7 +5,7 @@ Biometric-based Jumio Authentication establishes the digital identities of your 
 
 At the beginning of July 2021, we will be releasing the next generation Jumio Authentication product using our new liveness solution. The new solution requires fewer steps in the user journey and achieves higher accuracy, leading to better conversion rates.
 
-__Please note:__ Until then, Authentication will be available with __SDK version 3.9.0__, but not with any of the subsequent versions, until the next generation is released.
+⚠️ __Please note:__ Until then, Authentication will be available with __SDK version 3.9.0__, but not with any of the subsequent versions, until the next generation is released.
 
 
 ## Table of Contents
