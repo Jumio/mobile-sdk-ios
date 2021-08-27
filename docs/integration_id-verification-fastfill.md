@@ -15,7 +15,7 @@ Jumio’s ID Verification allows businesses to establish the genuine identity of
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Netverify/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.9.3
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.9.4
 
 For breaking technical changes, please read our [transition guide](transition-guide_id-verification-fastfill.md).
 

@@ -8,6 +8,9 @@
 # Change Log
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
 
+## SDK Version: __3.9.4__
+![Fixes](https://img.shields.io/badge/Fix-success) iProov SDK version update to 9.0.1, which fixes an issue introduced in SDK 3.9.3 when building with XCode versions prior to XCode 12.5. [Identity Verification]
+
 ## SDK Version: __3.9.3__
 ![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 9.0.0, which improves performance, reliability and security against spoof attacks. [Identity Verification]
 

@@ -20,7 +20,7 @@ At the beginning of July 2021, we will be releasing the next generation Jumio Au
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/NetverifyFace/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __3.9.0__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __3.9.4__
 
 ## Setup
 The [basic setup](../README.md#basics) is required before continuing with the following setup for Authentication.
