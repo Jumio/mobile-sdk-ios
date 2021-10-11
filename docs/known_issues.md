@@ -1,6 +1,7 @@
 # Known Issues
 
 ## Table of Contents
+- [SDK Version Not Compatible after Xcode 13 Update](#sdk-version-not-compatible-after-xcode-13-update)
 - [App Crashes After 3.8.0 Update](#app-crashes-after-3.8.0-update)
 - [CoreNFC Issues with Xcode 12](#corenfc-issues-with-xcode-12)
 - [Custom Theme Issues](#custom-theme-issues)
@@ -9,6 +10,28 @@
     - [Language Changes at Runtime](#language-changes-at-runtime)
 - [User Was Not Asked for Face Capturing](#user-was-not-asked-for-face-capturing)
 - [Country Missing from the Country List](#country-missing-from-the-country-list)
+
+
+## SDK Version Not Compatible after Xcode 13 Update
+
+After updating to and archiving / exporting an app with Xcode 13, Jumio SDK cannot be initialized and throws the following exception, despite the fact that SDK version and all framework versions appear to be correct:
+
+```
+SDKVersionNotCompatibleException: JumioFRAMEWORK is expected to be of version X.X.X
+```
+
+This is due to Xcode 13 introducing a new option has to their __App Store Distribution Options__:
+
+__"Manage Version and Build Number"__
+
+If checked, this option changes the version and build number of all content of your app to the overall application version, including third-party frameworks. __This option is enabled by default.__ Please make sure to disable this option when archiving / exporting your application to the App Store. Otherwise, the Jumio SDK version check, which ensures all bundled frameworks are up to date, will fail.
+
+Alternatively, it is also possible to set the key `manageAppVersionAndBuildNumber` in the __exportOptions.plist__ to `false`:
+```
+<key>manageAppVersionAndBuildNumber</key>
+<false/>
+```
+
 
 ## App Crashes After 3.8.0 Update
 
