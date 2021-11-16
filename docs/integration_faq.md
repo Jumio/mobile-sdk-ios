@@ -20,7 +20,7 @@ Scanning an ID with sensitive personal data printed on it naturally creates a hi
 
 One pattern that is recognizable throughout all of our customers’ SDK implementations: the more seamless the SDK integration, and the better job is done of setting user expectations prior to the SDK journey, the lower the drop-off rate becomes.
 
-Our SDK provides a variety of [customization options](integration_id-verification-fastfill.md#customization) to help customers achieve a seamless integration. For customers using the standard SDK workflow, our [Surface tool](https://jumio.github.io/surface-ios/) provides an easy-to-use WYSIWYG interface to see simple customization options that can be incorporated with minimal effort and generate the code necessary to implement them. For customers who want to have more granular control over look and feel, our SDK offers the [CustomUI](integration_id-verification-fastfill.md#custom-ui) option, which allows you to customize the entire user interface.
+Our SDK provides a variety of [customization options](integration_guide.md#customization) to help customers achieve a seamless integration. For customers using the standard SDK workflow, our [Surface tool](https://jumio.github.io/surface-ios/) provides an easy-to-use WYSIWYG interface to see simple customization options that can be incorporated with minimal effort and generate the code necessary to implement them. For customers who want to have more granular control over look and feel, our SDK offers the [CustomUI](integration_guide.md#custom-ui) option, which allows you to customize the entire user interface.
 
 ### Example of a Non-Ideal SDK Integration:
 ![Onboarding bad case](images/onboardingBadCase.jpg)
@@ -29,15 +29,15 @@ Our SDK provides a variety of [customization options](integration_id-verificatio
 ### Suggested Improvements with Additional Customization:
 ![Onboarding good case](images/onboardingGoodCase.jpg)
  - Host application has an explanatory help screen that explains what will happen next and why this information is needed.
- - SDK is either customized to have a more embedded appearance or [CustomUI](integration_id-verification-fastfill.md#custom-ui) is used to create a completely seamless integration in the UX of our customers.
+ - SDK is either customized to have a more embedded appearance or [CustomUI](integration_guide.md#custom-ui) is used to create a completely seamless integration in the UX of our customers.
  - Also after the Jumio workflow that shows the displayed results and/or a message that the ID is currently verified, which might take some minutes.
 
 ## Managing Errors
-Not every error that is returned from the SDK should be treated the same. The error codes listed for [ID Verification](integration_id-verification-fastfill.md#error-codes) should be handled specifically.
+Not every error that is returned from the SDK should be treated the same. The error codes listed for [ID Verification](integration_guide.md#error-codes) should be handled specifically.
 
 The following table highlights the most common error codes which are returned from the SDK and explains how to handle them appropriately in your application.
 
-|Code | Cause | Recommended Handling |
+| Code   | Cause    | Recommended Handling         |
 | :----: | :------- | :--------------------------- |
 | A[x][yyyy] | Caused by temporary network issues like a slow connection. | Advise to check the signal and retry the SDK journey. |
 | E[x][yyyy] | Flight mode is activated or no connection available. | The user should be asked to disable flight mode or to verify if the phone has proper signal. Advise to connect to WIFI and retry the SDK journey afterwards. |
@@ -57,15 +57,18 @@ Depending on your specific needs, you may want to strip out unused functionality
 
 The following table shows a range of different product configurations with the frameworks that are required and the corresponding application size. These measurements reflect the extra size that Jumio components add to your app download size and are based on our [sample application](../sample) after being uploaded to the [Appstore](https://apps.apple.com/us/app/jumio-showcase/id639531180).
 
-| Product | Size | JumioCore | Netverify | NetverifyBarcode & MicroBlink | JumioIProov & iProov | Document Verification | BAMCheckout  | JumioNFC |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ID + Liveness (iProov) | 11.59 MB | x | x | x | x |  |  |  |
-| ID + NFC | 13.29 MB | x | x | x |  |  |  | x |
-| Fastfill | 10.65 MB | x | x | x |  |  |  |  |
-| Fastfill without Barcode | 7.33 MB | x | x |  |  |  |  |  |
-| Document Verification | 1.60 MB | x |  |  |  | x |  |  |
-| BAM Checkout credit card scanning | 6.37 MB | x |  |  |  |  | x |  |
-| All Products | 19.49 MB | x | x | x | x | x | x | x |
+| Product Configuration      | Size   | Modules |
+| :------------------------- | :----: | :-----: |
+| Slim                       | 2.73 MB | base              |   
+| Slim + Liveness            | 3.67 MB | base, iproov      |
+| Linefinder                 | 3.41 MB | base, linefinder  |
+| Linefinder + Liveness      | 4.34 MB | base, linefinder, iproov      |
+| MRZ                        | 5.25 MB | base, mrz, linefinder         |
+| MRZ + Liveness             | 6.18 MB | base, mrz, linefinder, iproov |
+| Barcode                    | 4.38 MB | base, barcode, linefinder     |
+| Barcode + Liveness         | 5.31 MB | base, barcode, linefinder, iproov  |
+| All                        | 6.22 MB | base, mrz, barcode, linefinder     |
+| All + Liveness             | 7.16 MB | base, mrz, barcode, linefinder, iproov    |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 
@@ -96,7 +99,7 @@ In case of a __successful result__ you can grant the user access to your service
 In case an Authentication fail is returned, we recommend to allow the user between 3-5 Authentication attempts to prove their identity, before you lock the user from performing the action. This approach makes the most sense, as you don't want to lock out possible valid users who might not have completed the face capture task successfully for a legitimate reason. Don't worry about offering a potential fraudster more attempts to gain access to your system - our bullet proof liveness check does not allow them to get a successful result.
 
 ## Language Localization
-Our SDK supports localization for different languages and cultures. All label texts and button titles can be changed and localized using the `Localizable-<YOUR_PRODUCT>.strings` file. Just adapt the values to your required language, add it to your app or framework project and mark it as Localizable.
+Our SDK supports localization for different languages and cultures. All label texts and button titles can be changed and localized using the `Localizable-Jumio.strings` file. Just adapt the values to your required language, add it to your app or framework project and mark it as Localizable.
 
 This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update. If you're having issues with Localization, please refer to our [Known Issues](known_issues.md#language-localization-issues)
 
@@ -106,54 +109,30 @@ Currently, the following languages are automatically supported for your convenie
 
 Runtime language changes *within* the SDK or separate language support (meaning the SDK language differs from the overall device languages) is not possible.
 
-### iProov String Keys
-Please note that as of 3.8.0. the following keys have been added to the SDK:
-
-* `"IProov_IntroFlash"`
-* `"IProov_IntroLa"`
-* `"IProov_PromptLivenessAlignFace"`
-* `"IProov_PromptLivenessNoTarget"`
-* `"IProov_PromptLivenessScanCompleted"`
-* `"IProov_PromptTooClose"`
-* `"IProov_PromptTooFar"`
-
-Make sure your `podfile` is up to date and that new pod versions are installed properly so your `Localizable` files include new strings. If string keys are showing during your workflow instead of actual strings, this most likely hasn't been the case.   
-For more information, please refer to our [Changelog](changelog.md) and [Transition Guide](transition-guide_id-verification-fastfill.md#3.8.0).
-
 ### Accessibility
 Our SDK supports accessibility features. Visually impaired users can enable __VoiceOver__ or increase __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customized.
 
 ### Overview of Scanning Methods
 
-#### Linefinder:
-Uses edge detection, fallback option in default UI.
+#### Linefinder
+Scanning using edge detection.
 
 ![Linefinder Empty](images/capturing_methods/linefinder_scanning_01.png)  ![Linefinder Document](images/capturing_methods/linefinder_scanning_02.png)
 
-#### MRZ:
-Used for passports, some identity cards and some visas.
+#### MRZ
+Data extraction from passports, some identity cards and some visas.
 
 ![MRZ Empty](images/capturing_methods/mrz_scanning_01.png)  ![MRZ Document](images/capturing_methods/mrz_scanning_02.png)
 
-#### Barcode:
-Used for PDF417 barcode, for example US and CAN driver licenses.
+#### Barcode
+PDF417 barcode data extraction, for example from US and Canadian driver licenses.
 
 ![Barcode Empty](images/capturing_methods/barcode_scanning_01.png)  ![Barcode Document](images/capturing_methods/barcode_scanning_02.png)
 
-#### Manual Capture:
-Manual scanning (taking a picture) with shutterbutton.
+#### Manual Capture
+Manual scanning (taking a picture) using the shutterbutton, fallback option in case user is having trouble.
 
-![Manual Capture Empty](images/capturing_methods/manual_capturing.png)
-
-#### NFC:
-Used for extraction from eMRTD documents, for example passports.
-
-![NFC Start](images/capturing_methods/nfc_scanning_01.png)  ![NFC Scanning](images/capturing_methods/nfc_scanning_02.png)
-
-#### OCR Template:
-Used for automatic scanning of some driver licenses.
-
-![OCR Empty](images/capturing_methods/ocr_template_scanning_01.png)  ![OCR Document](images/capturing_methods/ocr_template_scanning_02.png)
+![Manual Capture Empty](images/capturing_methods/manual_capturing_01.png)  ![Manual Capture Document](images/capturing_methods/manual_capturing_02.png)
 
 ## Glossary
 A [quick guide to commonly used abbreviations](integration_glossary.md) throughout the documentation which may not be all that familiar.

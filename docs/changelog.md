@@ -8,6 +8,15 @@
 # Change Log
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
 
+## SDK Version: __4.0.0__
+![Changes](https://img.shields.io/badge/Change-blue) Configuration of SDK parameters (callback URL, transaction identifiers, ...) now already happens in API call that requests SDK authorization token [ID Verification, Identity Verification]
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Improved security through switch to one-time authorization token to initialize the SDK instead of relying on API token and secret [ID Verification, Identity Verification]
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Custom UI restructure to align Android and iOS as closely as possible, which reduces overall complexity and integration effort [ID Verification, Identity Verification]
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Manual capture now available as a fallback option for all other capture methods [ID Verification]
+
 ## SDK Version: __3.9.4__
 ![Fixes](https://img.shields.io/badge/Fix-success) iProov SDK version update to 9.0.1, which fixes an issue introduced in SDK 3.9.3 when building with XCode versions prior to XCode 12.5. [Identity Verification]
 
@@ -93,8 +102,8 @@ All notable changes, such as SDK releases, updates and fixes, are documented in 
 
 ![Fixes](https://img.shields.io/badge/Fix-success) Various smaller bug fixes/improvements [Netverify/Fastfill, Authentication, Document Verification]
 
-## SDK Version: __3.5.0__
-The previous release version 3.5.0 of the Jumio Mobile SDK is supported until 2020-08-04.
+## SDK Version: __4.0.0__
+The previous release version 3.9.4 of the Jumio Mobile SDK is supported until 2021-10-04.
 
 # Support
 In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
