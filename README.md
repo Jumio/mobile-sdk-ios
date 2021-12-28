@@ -9,8 +9,9 @@
 
 # Table of Contents
 - [Overview](#overview)
+- [Get Started](#get-started)
   - [ID Verification SDK](docs/integration_guide.md)
-  - [Authentication SDK](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.0/docs/integration_authentication.md)
+  - [Authentication SDK](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.4/docs/integration_authentication.md)
   - [Document Verification SDK](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.4/docs/integration_document-verification.md)
 - [Quickstart](#quickstart)
 - [Basics](#basics)
@@ -36,7 +37,8 @@ Onboard new users and easily verify their digital identities, by making sure the
 
 Using the Jumio SDK will allow you to create the best possible solution for your individual needs, providing you with a range of different services to choose from.
 
-ℹ️&nbsp;&nbsp; Please note that [basic setup](#basics) is required before continuing with the integration of any of the following services.
+# Get Started
+Please note that [basic setup](#basics) is required before continuing with the integration of any of the following services.
 
 ## Jumio ID Verification
 ID Verification (formerly known as Netverify) is a secure and easy solution that allows you to establish the genuine identity of your users in your mobile application, by verifying their passports, government-issued IDs and VISA in real-time. Very user-friendly and highly customizable, it makes onboarding new customers quick and simple.
@@ -46,7 +48,7 @@ ID Verification (formerly known as Netverify) is a secure and easy solution that
 ## Jumio Authentication
 Authentication is a cutting-edge biometric-based service that establishes digital identities of your users, simply by taking a selfie. Advanced 3D face mapping-technology quickly and securely authenticates users and their digital identities.
 
-- [Integration Authentication SDK (3.9.4, deprecated)](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.0/docs/integration_authentication.md)
+- [Integration Authentication SDK (3.9.4, deprecated)](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.4/docs/integration_authentication.md)
 - [Transition Guide Authentication SDK (3.9.4, deprecated)](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.0/docs/transition-guide_authentication.md)
 
 ## Jumio Document Verification
@@ -276,7 +278,7 @@ Make sure that the following Xcode build settings in your app are set accordingl
 ## Language Localization
 Our SDK supports localization for different languages. All label texts and button titles can be changed and localized using the `Localizable-Jumio.strings` file. Just adapt the values to your required language, add it to your app or framework project and mark it as Localizable. This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
 
-ℹ️&nbsp;&nbsp;__Note:__ If using CocoaPods, the original file is located under `/Pods/JumioMobileSDK/Localizations`.
+ℹ️&nbsp;&nbsp;__Note:__ If using CocoaPods, the original file is located under `/Pods/Jumio/Localizations`.
 
 Jumio SDK products support following languages for your convenience:
 

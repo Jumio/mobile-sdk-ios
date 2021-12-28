@@ -72,8 +72,8 @@ self.present(netverifyVC, animated: true, completion: nil)
 ## Configuration
 Every Jumio SDK instance is initialized using a specific `sdk.token`. This token contains information about the workflow, credentials, transaction identifiers and other parameters. Configuration of this token allows you to provide your own internal tracking information for the user and their transaction, specify what user information is captured and by which method, as well as preset options to enhance the user journey. Values configured within the `sdk.token` during your API request will override any corresponding settings configured in the Customer Portal.
 
-### Worfklow Selection
-Use ID verification callback to receive a verification status and verified data positions (see [Callback for ID Verification](https://github.com/Jumio/implementation-guides/blob/master/netverify/callback.md#callback-for-netverify)). Make sure that your customer account is enabled to use this feature. A callback URL can be specified for individual transactions (for URL constraints see chapter [Callback URL](https://github.com/Jumio/implementation-guides/blob/master/netverify/portal-settings.md#callback-url)). This setting overrides any callback URL you have set in the Jumio Customer Portal. Your callback URL must not contain sensitive data like PII (Personally Identifiable Information) or account login. Set your callback URL using the `callbackUrl` parameter.
+### Workflow Selection
+Use ID verification callback to receive a verification status and verified data positions (see [API v3 Callback section](https://github.com/Jumio/implementation-guides/blob/master/api-guide/api_guide.md#callback)). Make sure that your customer account is enabled to use this feature. A callback URL can be specified for individual transactions (for URL constraints see chapter [Callback URL](https://github.com/Jumio/implementation-guides/blob/master/api-guide/api_guide.md#jumio-callback-ip-addresses)). This setting overrides any callback URL you have set in the Jumio Customer Portal. Your callback URL must not contain sensitive data like PII (Personally Identifiable Information) or account login. Set your callback URL using the `callbackUrl` parameter.
 
 Use the correct [workflow definition key](https://github.com/Jumio/implementation-guides/blob/master/api-guide/api_guide.md#workflow-definition-keys) in order to request a specific workflow. Set your key using the `workflowDefinition.key` parameter. For example: Use [workflow 2 "ID Verification"](https://github.com/Jumio/implementation-guides/blob/master/api-guide/workflow_descriptions.md#workflow-2-id-verification) to verify an ID document and extract data from that document. Use [workflow 3 "ID and Identity Verification"](https://github.com/Jumio/implementation-guides/blob/master/api-guide/workflow_descriptions.md#workflow-3-id-and-identity-verification) to verify a photo ID document and extract data from that document, as well as compare the user's face with the photo on the ID and perform a liveness check to ensure the person is physically present.
 
@@ -209,7 +209,7 @@ The following tables give information on the specification of all data parameter
 | mrzLine2           | String     | 50           | MRZ line 2	|
 | mrzLine3           | String     |	50           | MRZ line 3	|
 | rawBarcodeData     | String     |	50           | Extracted barcode data	|
-| extractionMethod   | JumioScanMode  |          | Extraction method used during scanning (mrz, barce, manual, lineFinder) |
+| extractionMethod   | JumioScanMode  |          | Extraction method used during scanning (linefinder, manual, face_iproov, face_manual, barcode, mrz) |
 | imageData          | JumioImageData |         | Wrapper class for accessing image data of all scan sides from an ID verification session. This feature has to be enabled by your account manager. |
 
 #### Class ___JumioFaceResult___

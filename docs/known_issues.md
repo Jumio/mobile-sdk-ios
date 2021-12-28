@@ -2,8 +2,8 @@
 
 ## Table of Contents
 - [SDK Version Not Compatible after Xcode 13 Update](#sdk-version-not-compatible-after-xcode-13-update)
-- [App Crashes after 3.8.0 Update](#app-crashes-after-3.8.0-update)
-- [CoreNFC Issues with Xcode 12](#corenfc-issues-with-xcode-12)
+- [App Crash: Symbol not found for iProov, SocketIO or Starscream](#app-crash-symbol-not-found-for-iproov- socketio-or-starscream)
+- [CoreNFC Issues with Xcode 12 and Xcode 12.1](#corenfc-issues-with-xcode-12and-xcode-12.1)
 - [Custom Theme Issues](#custom-theme-issues)
   - [Language Localization Issues](#language-localization-issues)
     - [Localizable.strings File](#localizable.strings-file)
@@ -32,17 +32,15 @@ Alternatively, it is also possible to set the key `manageAppVersionAndBuildNumbe
 <false/>
 ```
 
-## App Crashes after 3.8.0 Update
-After updating to 3.8.0 the app crashes without warning or the following error message is displayed:
+## App Crash: Symbol not found for iProov, SocketIO or Starscream
+After updating to SDK 3.8.0 and above, the app crashes without warning or the following error message is displayed:
 
 _dyld: Symbol not found: _$s8SocketIO0A11ClientEventO10disconnectyA2CmFWC_  
 _Referenced from: /Users/.../Frameworks/iProov.framework/iProov  
   Expected in: /Users/b.../Frameworks/SocketIO.framework/SocketIO
  in /Users/.../Frameworks/iProov.framework/iProov_
 
-When using iProov, please make sure the following is included in your `podfile`:
-
-* pod `iProov`
+When using iProov, please make sure the following post install hook is included in your `podfile`:
 
 ```
 post_install do |installer|
@@ -75,7 +73,7 @@ Please make sure `ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES` is set to `Yes` in the 
 ### Language Localization Issues
 Please make sure to select your project in the project and targets list in the __Project Navigator,__ navigate to the __Info__ tab. In the __Localizations__ section, make sure that _"Use Base Internationalization"_ is checked. Otherwise, the system will fall back on the default localization.
 
-To select a different language use the “+” button in the __Localizations__ section. This will let you choose a new language you want to support from a dropdown list. Please refer to the [full list of languages supported by Jumio](../docs/README.md#language-localization) for more details. Adding a new language from the list will generate files under a new language project folder named `[new language].lproj` For example, if Japanese support is added, a folder named `ja.lproj` will be created.
+To select a different language use the “+” button in the __Localizations__ section. This will let you choose a new language you want to support from a dropdown list. Please refer to the [full list of languages supported by Jumio](../README.md#language-localization) for more details. Adding a new language from the list will generate files under a new language project folder named `[new language].lproj` For example, if Japanese support is added, a folder named `ja.lproj` will be created.
 
 #### Localizable.strings File
 The `Localizable-Jumio.strings` file makes it possible to easily add translations as key-value pairs. Adapt the values to your required language as needed and add it to your app or framework project. Again, please make sure to mark the project as _Localizable._ After SDK updates, make sure to check whether the content of this localization file is up to date, as individual strings may have changed.
@@ -94,6 +92,6 @@ Countries with documents that need barcode functionality (e.g. US and Canadian d
 `MicroBlink.framework`  
 `NetverifyBarcode.framework`
 
-Frameworks and instructions on how to integrate them [can be found here.](../docs/README.md#integration)
+Frameworks and instructions on how to integrate them [can be found here.](../README.md#integration)
 
 ℹ️&nbsp;&nbsp;__Note:__ Version numbers may vary.
