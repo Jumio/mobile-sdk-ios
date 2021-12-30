@@ -24,7 +24,7 @@
 - [Security](#security)
 - [Release Notes](#release-notes)
 - [Support](#support)
-- [Code Documentation](https://jumio.github.io/mobile-sdk-ios)
+- [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
 - [FAQ](docs/integration_faq.md)
 - [Known Issues](docs/known_issues.md)
 

@@ -12,7 +12,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 - [SDK Workflow](#sdk-workflow)
 - [Custom UI](#custom-ui)
 - [Callback](#callback)
-- [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Netverify/)
+- [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
 
 ## Release Notes
 Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.0.0__

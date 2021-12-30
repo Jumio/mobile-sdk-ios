@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [SDK Version Not Compatible after Xcode 13 Update](#sdk-version-not-compatible-after-xcode-13-update)
-- [App Crash: Symbol not found for iProov, SocketIO or Starscream](#app-crash-symbol-not-found-for-iproov- socketio-or-starscream)
+- [App Crash: Symbol not found for iProov, SocketIO or Starscream](#app-crash-symbol-not-found-for-iproov-socketio-or-starscream)
 - [CoreNFC Issues with Xcode 12 and Xcode 12.1](#corenfc-issues-with-xcode-12and-xcode-12.1)
 - [Custom Theme Issues](#custom-theme-issues)
   - [Language Localization Issues](#language-localization-issues)
