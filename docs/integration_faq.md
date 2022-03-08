@@ -59,16 +59,18 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 2.73 MB | base              |   
-| Slim + Liveness            | 3.67 MB | base, iproov      |
-| Linefinder                 | 3.41 MB | base, linefinder  |
-| Linefinder + Liveness      | 4.34 MB | base, linefinder, iproov      |
-| MRZ                        | 5.25 MB | base, mrz, linefinder         |
-| MRZ + Liveness             | 6.18 MB | base, mrz, linefinder, iproov |
-| Barcode                    | 4.38 MB | base, barcode, linefinder     |
-| Barcode + Liveness         | 5.31 MB | base, barcode, linefinder, iproov  |
-| All                        | 6.22 MB | base, mrz, barcode, linefinder     |
-| All + Liveness             | 7.16 MB | base, mrz, barcode, linefinder, iproov    |
+| Slim                       | 2.66 MB | base              |   
+| Slim + Liveness            | 3.42 MB | base, iproov      |
+| Linefinder                 | 3.67 MB | base, linefinder  |
+| Linefinder + Liveness      | 4.42 MB | base, linefinder, iproov      |
+| MRZ                        | 5.61 MB | base, mrz, linefinder         |
+| MRZ + Liveness             | 6.37 MB | base, mrz, linefinder, iproov |
+| NFC                        | 6.60 MB | base, mrz, nfc, linefinder         |
+| NFC + Liveness             | 7.35 MB | base, mrz, nfc, linefinder, iproov |
+| Barcode                    | 4.65 MB | base, barcode, linefinder          |
+| Barcode + Liveness         | 5.39 MB | base, barcode, linefinder, iproov  |
+| All                        | 7.58 MB | base, mrz, nfc, barcode, linefinder     |
+| All + Liveness             | 8.32 MB | base, mrz, nfc, barcode, linefinder, iproov    |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 

@@ -10,12 +10,14 @@
 		05CDA84D273E53B600A49B81 /* Jumio.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA84C273E53B600A49B81 /* Jumio.xcframework */; };
 		05CDA84E273E53B600A49B81 /* Jumio.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA84C273E53B600A49B81 /* Jumio.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77640FF1273BD7F400917566 /* Localizable-Jumio.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77640FEF273BD7F400917566 /* Localizable-Jumio.strings */; };
+		77F977AA27AA762E00F213AF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F977A927AA762E00F213AF /* HelpViewController.swift */; };
 		967A1E6926988857005A1233 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A1E6826988857005A1233 /* AppDelegate.swift */; };
 		967A1E6B26988857005A1233 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A1E6A26988857005A1233 /* SceneDelegate.swift */; };
 		967A1E6D26988857005A1233 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A1E6C26988857005A1233 /* ViewController.swift */; };
 		967A1E7026988857005A1233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967A1E6E26988857005A1233 /* Main.storyboard */; };
 		967A1E7226988858005A1233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967A1E7126988858005A1233 /* Assets.xcassets */; };
 		967A1E7526988858005A1233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967A1E7326988858005A1233 /* LaunchScreen.storyboard */; };
+		96EECB0127C62FFB003D8B52 /* RetryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EECB0027C62FFB003D8B52 /* RetryViewController.swift */; };
 		96FF9C7D269C334F00E93BAA /* DefaultUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FF9C7C269C334F00E93BAA /* DefaultUI.swift */; };
 		F336C8CB26C16351001D910F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336C8CA26C16351001D910F /* LoadingViewController.swift */; };
 		F336C8CD26C1648A001D910F /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336C8CC26C1648A001D910F /* ConfirmationViewController.swift */; };
@@ -97,6 +99,8 @@
 		77641014273BD92300917566 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Frameworks/Localization/zh-Hans.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		77641015273BD92A00917566 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "Frameworks/Localization/zh-Hant.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		77641016273BD93100917566 /* zu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zu; path = "Frameworks/Localization/zu.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
+		77F977A927AA762E00F213AF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		77F977AB27AA836400F213AF /* SampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleApp.entitlements; sourceTree = "<group>"; };
 		967A1E6626988857005A1233 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		967A1E6826988857005A1233 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		967A1E6A26988857005A1233 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		967A1E7126988858005A1233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		967A1E7426988858005A1233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		967A1E7626988858005A1233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96EECB0027C62FFB003D8B52 /* RetryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryViewController.swift; sourceTree = "<group>"; };
 		96FF9C7C269C334F00E93BAA /* DefaultUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUI.swift; sourceTree = "<group>"; };
 		F336C8CA26C16351001D910F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		F336C8CC26C1648A001D910F /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +148,7 @@
 		967A1E6726988857005A1233 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				77F977AB27AA836400F213AF /* SampleApp.entitlements */,
 				967A1E6826988857005A1233 /* AppDelegate.swift */,
 				967A1E6A26988857005A1233 /* SceneDelegate.swift */,
 				967A1E6C26988857005A1233 /* ViewController.swift */,
@@ -233,6 +239,8 @@
 				F3772A0626C105730010AE21 /* ScanViewController.swift */,
 				F336C8CC26C1648A001D910F /* ConfirmationViewController.swift */,
 				F336C8CE26C18216001D910F /* ErrorViewController.swift */,
+				77F977A927AA762E00F213AF /* HelpViewController.swift */,
+				96EECB0027C62FFB003D8B52 /* RetryViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -267,6 +275,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "Jumio Corporation";
 				TargetAttributes = {
 					967A1E6526988857005A1233 = {
 						CreatedOnToolsVersion = 12.5;
@@ -373,12 +382,14 @@
 				96FF9C7D269C334F00E93BAA /* DefaultUI.swift in Sources */,
 				F336C8D126C1A389001D910F /* ResultViewController.swift in Sources */,
 				F37729F326C0255D0010AE21 /* CustomUINavigationController.swift in Sources */,
+				96EECB0127C62FFB003D8B52 /* RetryViewController.swift in Sources */,
 				967A1E6926988857005A1233 /* AppDelegate.swift in Sources */,
 				F3772A0226C02E0D0010AE21 /* ControllerHandling.swift in Sources */,
 				F3772A0526C105580010AE21 /* SelectionViewController.swift in Sources */,
 				F336C8CF26C18216001D910F /* ErrorViewController.swift in Sources */,
 				F37729FD26C027860010AE21 /* CustomButton.swift in Sources */,
 				F3772A0026C02DA00010AE21 /* StartViewController.swift in Sources */,
+				77F977AA27AA762E00F213AF /* HelpViewController.swift in Sources */,
 				F37729F826C025970010AE21 /* ScanPartHandling.swift in Sources */,
 				967A1E6B26988857005A1233 /* SceneDelegate.swift in Sources */,
 				F37729FA26C025A00010AE21 /* CredentialHandling.swift in Sources */,
@@ -459,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SampleApp/SampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build";
@@ -470,10 +482,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.0.0-SNAPSHOT";
+				MARKETING_VERSION = 4.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentEnterprise;
+				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentSampleSwift;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,7 +496,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = SampleApp/SampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/Build";
 				DEVELOPMENT_TEAM = JC7JKY534B;
@@ -495,10 +508,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.0.0-SNAPSHOT";
+				MARKETING_VERSION = 4.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentEnterprise;
+				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -15,11 +15,13 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.0.0</string>
+	<string>4.1.0</string>
 	<key>CFBundleVersion</key>
-	<string>4.0.0</string>
+	<string>4.1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NFCReaderUsageDescription</key>
+	<string>This will allow $(PRODUCT_NAME) to identify you with the NFC chip in your passport.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This will allow ${PRODUCT_NAME} to take photos of your credentials.</string>
 	<key>UIApplicationSceneManifest</key>
@@ -61,6 +63,10 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>A0000002471001</string>
 	</array>
 </dict>
 </plist>

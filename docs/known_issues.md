@@ -1,6 +1,8 @@
 # Known Issues
 
 ## Table of Contents
+- [App Crash at Launch Using Simulator](#app-crash-at-launch-using-simulator)
+- [Cropped TableView in Document Selection for iOS 15](#cropped-tableview-in-document-selection-for-ios-15)
 - [SDK Version Not Compatible after Xcode 13 Update](#sdk-version-not-compatible-after-xcode-13-update)
 - [App Crash: Symbol not found for iProov, SocketIO or Starscream](#app-crash-symbol-not-found-for-iproov-socketio-or-starscream)
 - [CoreNFC Issues with Xcode 12 and Xcode 12.1](#corenfc-issues-with-xcode-12and-xcode-12.1)
@@ -10,6 +12,18 @@
     - [Language Changes at Runtime](#language-changes-at-runtime)
 - [User Was Not Asked for Face Capturing](#user-was-not-asked-for-face-capturing)
 - [Country Missing from the Country List](#country-missing-from-the-country-list)
+
+## App Crash at Launch Using Simulator
+The app works fine for actual devices, but crashes at launch on simulator due to the following or similar error:
+
+_dyld: Library not loaded: /System/Library/Frameworks/Combine.framework/Combine_
+_Referenced from: /Users/.../mobile-sdk-ios-master/sample/Build/Jumio.framework/Jumio_
+_Reason: image not found_
+
+Please note that as of SDK version 4.0.0, due to SDK obfuscation the simulator is required to use the latest iOS version.
+
+## Cropped TableView in Document Selection for iOS 15
+For SDK 3.9.2 and below, document type selection appears to be cut off at the top when using defaultUI with iOS 15 and above. This bug occurs when customization attribute `disableBlur` is set to `true`.
 
 ## SDK Version Not Compatible after Xcode 13 Update
 After updating to and archiving / exporting an app with Xcode 13, Jumio SDK cannot be initialized and throws the following exception, despite the fact that SDK version and all framework versions appear to be correct:

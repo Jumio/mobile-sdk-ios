@@ -2,7 +2,7 @@
 //  CustomUINavigationController.swift
 //  SampleApp-UIKit
 //
-//  Created by Christian Henzl on 08.08.21.
+//  Copyright © 2022 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -58,6 +58,12 @@ class CustomUINavigationController: UINavigationController {
     }
     
     func nextScanPartOrFinishCredential() {
+        // check if addon for this scan part is available
+        if credentialHandling?.checkAndStartAddon() ?? false {
+            // Addon is available. Don't finish the credential.
+            return
+        }
+        
         // check if credential can be finished (means all scan parts got finished)
         if credentialHandling?.isComplete ?? false {
             // yes: finish credential
@@ -114,6 +120,8 @@ extension CustomUINavigationController {
         case scan
         case loading
         case selection
+        case help
+        case retry
     }
 }
 
@@ -160,6 +168,15 @@ extension CustomUINavigationController {
     func retry(error: Jumio.Error) {
         controllerHandling?.retry(error: error)
     }
+    
+    func retry(reason: Jumio.Retry.Reason) {
+        scanPartHandling?.retry(reason: reason)
+    }
+    
+    func cancelScanPart() {
+        scanPartHandling?.cancel()
+        scanPartFinished()
+    }
 }
 
 // MARK: - ScanPart forwarding
@@ -171,6 +188,7 @@ extension CustomUINavigationController {
         case .front: return "Front"
         case .back: return "Back"
         case .face: return "Face"
+        case .nfc: return "NFC"
         default: return "unknown"
         }
     }
@@ -181,6 +199,7 @@ extension CustomUINavigationController {
         case .lineFinder: return "LineFinder"
         case .barcode: return "Barcode"
         case .mrz: return "MRZ"
+        case .nfc: return "NFC"
         case .faceManual: return "Face manual"
         case .faceIProov: return "Face iProov"
         default: return "unknown"
@@ -200,13 +219,7 @@ extension CustomUINavigationController {
     }
     
     func startNextScanPart() {
-        var previousScanSide: Jumio.Scan.Side?
-        if scanPartHandling != nil {
-            previousScanSide = scanPartHandling?.scanSide
-            scanPartHandling?.clean()
-            scanPartHandling = nil
-        }
-        credentialHandling?.startNextScanPart(previousScanSide: previousScanSide)
+        credentialHandling?.startNextScanPart(previousScanSide: scanPartHandling?.scanSide)
     }
     
     func fallback() {
@@ -254,6 +267,7 @@ extension CustomUINavigationController: CredentialHandling.Delegate {
     }
     
     func credential(initialized scanPartHandling: ScanPartHandling) {
+        self.scanPartHandling?.clean()
         self.scanPartHandling = scanPartHandling
         scanPartHandling.delegate = self
     }
@@ -263,6 +277,12 @@ extension CustomUINavigationController: CredentialHandling.Delegate {
 extension CustomUINavigationController: ScanPartHandling.Delegate {
     func scanPartShowLoadingView() {
         pushLoadingViewController(with: .loading)
+    }
+    
+    func scanPartShowHelpView() {
+        guard let helpViewController = instantiate(viewController: .help) as? HelpViewController else { return }
+        helpViewController.helpView = scanPartHandling?.helpView()
+        pushViewController(helpViewController, animated: true)
     }
     
     func scanPartShowScanView() {
@@ -286,6 +306,12 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
     
     func scanPartShowRejectView() {
         showConfirmationViewController(with: .reject)
+    }
+    
+    func scanPartShowRetryView(with reason: Jumio.Retry.Reason) {
+        guard let retryViewController = instantiate(viewController: .retry) as? RetryViewController else { return }
+        retryViewController.reason = reason
+        pushViewController(retryViewController, animated: true)
     }
     
     func scanPartDidFallback() {

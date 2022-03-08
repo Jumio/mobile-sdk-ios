@@ -2,7 +2,7 @@
 //  ControllerHandling.swift
 //  SampleApp-UIKit
 //
-//  Created by Christian Henzl on 08.08.21.
+//  Copyright © 2022 Jumio Corporation. All rights reserved.
 //
 
 import Jumio
@@ -40,7 +40,8 @@ class ControllerHandling {
         // all need to be finished in order to be able to finish a workflow
         var index = credentialInformations?.firstIndex { $0.id == previousInfo?.id } ?? 0
         index += previousInfo != nil ? 1 : 0
-        guard let info = credentialInformations?[index] else { return }
+        guard credentialInformations?.count ?? 0 > index,
+              let info = credentialInformations?[index] else { return }
         let credentialHandling = CredentialHandling()
         delegate?.controller(initialized: credentialHandling)
         // same as on SDK -> Controller, let credential handling actually start

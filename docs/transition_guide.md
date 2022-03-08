@@ -6,11 +6,32 @@ This section only covers the breaking technical changes that should be considere
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
-## 4.0.0
-
-#### Frameworks
+## 4.1.0
 
 #### Cocoapods
+* Two new pods added, containing NFC scan functionality:
+  * `pod 'Jumio/NFC'`
+  * `pod 'Jumio/NFCLiveness'`
+
+#### Instant Feedback Reject Reasons
+Added Instant Feedback functionality to give more granular user feedback with new reject reasons:
+* blackWhiteCopy
+* colorPhotocopy
+* digitalCopy
+* notReadable
+* noDoc
+* missingBack
+* missingFront
+* blurry
+* missingPartDoc
+* damagedDocument
+* hiddenPartDoc
+* glare
+
+## 4.0.0
+
+#### Cocoapods
+Please refer to the [Integration section](integration_guide.md#integration) of our guides for a detailed description of all Cocoapods and framework changes.
 
 #### Default UI Updates
 As of SDK version 4.0.0, a lot of SDK parameters that previously could be set in the actual code are now contained within and provided by the `sdk.token`. These parameters have to be configured beforehand, during the API call that requests the token.

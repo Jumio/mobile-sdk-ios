@@ -1,3 +1,4 @@
+
 ![ID Verification](images/id-verification.jpg)
 
 # Integration Guide for iOS SDK
@@ -11,11 +12,12 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 - [Customization](#customization)
 - [SDK Workflow](#sdk-workflow)
 - [Custom UI](#custom-ui)
+  - [Instant Feedback](#instant-feedback)
 - [Callback](#callback)
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.0.0__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.1.0__
 
 For breaking technical changes, please read our [Transition Guide](transition_guide.md).
 
@@ -23,8 +25,6 @@ For breaking technical changes, please read our [Transition Guide](transition_gu
 The [basic setup](../README.md#basics) is required before continuing with the following setup for the Jumio SDK.
 
 ### NFC Setup
-##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that NFC functionality is not yet available for SDK 4.0.0, but will be supported in upcoming releases.  
-
 To make our SDK capable of reading NFC chips you will need to set the following settings:
 
 Add the Near Field Communication Tag Reading capability to your project, App ID and provisioning profiles in [Apple Developer portal](https://developer.apple.com).
@@ -47,6 +47,12 @@ Jumio.SDK.isJailbroken
 ```
 
 ⚠️&nbsp;&nbsp;__Note:__ Please be aware that the JumioSDK jailbreak check uses various mechanisms for detection, but doesn't guarantee to detect 100% of all jailbroken devices.
+
+### Build Settings
+For security reasons, you should set the following build settings:
+To generate a position independent executable, the build settings "Generate Position-Dependent Executable" and "Generate Position-Dependent Code" should both be set to "No".
+For Objective-C projects, you should enable stack canaries by adding "-fstack-protector-all" to "Other C Flags".
+For Objective-C projects, you should set "Objective-C Automatic Reference Counting" to "Yes".
 
 ## Initialization
 Your OAuth2 credentials are constructed using your previous API token as the Client ID and your previous API secret as the Client secret. You can view and manage your Client ID and secret in the Customer Portal under:
@@ -148,7 +154,7 @@ scanView.cameraFacing = .front
 ## Customization
 
 ### Customization Tool
-##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that the Surface Tool is not yet supported for SDK 4.0.0, but will be available soon.  
+##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that the Surface Tool is not yet supported for SDK 4.1.0, but will be available soon.  
 [Jumio Surface](https://jumio.github.io/surface-ios) is a web tool that allows you to apply and visualize, in real-time, all available customization options for the Jumio SDK, as well as an export feature to import the applied changes straight into your codebase.
 
 [![Jumio Surface](images/surface_tool.png)](https://jumio.github.io/surface-ios)
@@ -185,7 +191,7 @@ func jumio(sdk: Jumio.SDK, finished result: Jumio.Result) {
 ### Retrieving information
 The following tables give information on the specification of all data parameters and errors.
 
-#### Class ___JumioIDResult___
+#### Class ___Jumio.IDResult___
 | Parameter          | Type  	    | Max. length  | Description      |
 |:-------------------|:-----------|:-------------|:-----------------|
 | issuingCountry     | String     |	3            | Country of issue as [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code |
@@ -209,15 +215,33 @@ The following tables give information on the specification of all data parameter
 | mrzLine2           | String     | 50           | MRZ line 2	|
 | mrzLine3           | String     |	50           | MRZ line 3	|
 | rawBarcodeData     | String     |	50           | Extracted barcode data	|
-| extractionMethod   | JumioScanMode  |          | Extraction method used during scanning (linefinder, manual, face_iproov, face_manual, barcode, mrz) |
-| imageData          | JumioImageData |         | Wrapper class for accessing image data of all scan sides from an ID verification session. This feature has to be enabled by your account manager. |
+| extractionMethod   | Jumio.Scan.Mode  |          | Extraction method used during scanning (linefinder, manual, face_iproov, face_manual, barcode, mrz) |
+| imageData          | Jumio.ImageData |          | Wrapper class for accessing image data of all scan sides from an ID verification session. This feature has to be enabled by your account manager. |
 
-#### Class ___JumioFaceResult___
+#### Class ___Jumio.FaceResult___
 |Parameter  |Type 	  | Max. length | Description      |
 |:----------|:--------|:------------|:-----------------|
 | passed    |	Boolean |	          	|
-| extractionMethod | JumioScanMode  | | Extraction method used during scanning (faceManual, faceIProov) |
-| imageData | JumioImageData | | Wrapper class for accessing image data of all scan sides from an ID verification session. This feature has to be enabled by your account manager. |
+| extractionMethod | Jumio.Scan.Mode  | | Extraction method used during scanning (faceManual, faceIProov) |
+| imageData | Jumio.ImageData | | Wrapper class for accessing image data of all scan sides from an ID verification session. This feature has to be enabled by your account manager. |
+
+#### Class ___Jumio.RejectReason___
+List of all possible reject reasons returned if Instant Feedback is used:   
+
+| Code          | Message  | Description      |
+|:--------------|:---------|:-----------------|
+| 102  | blackWhiteCopy    | Document appears to be a black and white photocopy |  
+| 103  | colorPhotocopy    | Document appears to be a colored photocopy |
+| 104  | digitalCopy       | Document appears to be a digital copy |
+| 200  | notReadable       | Document is not readable |
+| 201  | noDoc             | No document could be detected |
+| 206  | missingBack       | Backside of the document is missing |
+| 214  | missingFront      | Frontside of the document is missing |
+| 2001 | blurry            | Document image is unusable because it is blurry |
+| 2003 | missingPartDoc    | Part of the document is missing |
+| 2005 | damagedDocument   | Document appears to be damaged |
+| 2004 | hiddenPartDoc     | Part of the document is hidden |
+| 2006 | glare             | Document image is unusable because of glare |
 
 #### Error Codes
 List of all **_error codes_** that are available via the `code` and `message` property of the `Jumio.Error` object. The first letter (A-Z) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]).
@@ -254,7 +278,7 @@ Custom UI enables you to create and use a custom scan view with a plain scanning
 ```
 sdk = Jumio.SDK()
 sdk?.token = "YOUR_SDK_TOKEN"
-sdk?.dataCenter = "US"
+sdk?.dataCenter = jumioDataCenter
 ```
 
 * `JumioDataCenter` values: `US`, `EU`, `SG`
@@ -415,6 +439,8 @@ func jumio(controller: Jumio.Controller, finished result: Jumio.Result) {
     }
 ```
 
+⚠️&nbsp;&nbsp;__Note:__ We recommend to hide any sensitive data, which you display to the user, when the app goes to the background. This includes the results you receive from us.
+
 The delegate method `(controller: Jumio.Controller, error: Jumio.Error)` has to be implemented to handle data after an unsuccessful scan. Check the parameter `error.isRetryable` to see if the failed scan attempt can be retried. If an error is not retryable, the only possibility is to cancel the controller. This will result in a finished call with a `Jumio.Result` instance containing this error.
 
 ```
@@ -448,6 +474,9 @@ func jumio(controller: Jumio.Controller, logicalError: Jumio.LogicalError) {
         delegate?.display(logicalErrorMessage: logicalErrorMessage)
     }
 ```
+
+#### Instant Feedback
+The use of Instant Feedback provides immediate end user feedback by performing a usability check on any image the user took and prompting them to provide a new image immediately if this image is not usable, for example because it is too blurry. Please refer to the [JumioRejectReason table](#class-jumiorejectreason) for a list of all reject possibilities.
 
 # Security
 All SDK related traffic is sent over HTTPS using TLS and public key pinning. Additionally, the information itself within the transmission is also encrypted utilizing __Application Layer Encryption__ (ALE). ALE is a Jumio custom-designed security protocol that utilizes RSA-OAEP and AES-256 to ensure that the data cannot be read or manipulated even if the traffic was captured.

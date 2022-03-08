@@ -2,18 +2,21 @@
 //  ScanPartHandling.swift
 //  SampleApp-UIKit
 //
-//  Created by Christian Henzl on 08.08.21.
+//  Copyright © 2022 Jumio Corporation. All rights reserved.
 //
 
 import Jumio
+import UIKit
 
 protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartShowLoadingView()
+    func scanPartShowHelpView()
     func scanPartShowScanView()
     func scanPartShowImageTaken()
     func scanPartShowProcessing()
     func scanPartShowConfirmationView()
     func scanPartShowRejectView()
+    func scanPartShowRetryView(with reason: Jumio.Retry.Reason)
     func scanPartDidFallback()
     func scanPartShowLegalHint(with message: String)
     func scanPartFinished()
@@ -36,8 +39,22 @@ class ScanPartHandling {
         scanPart?.start()
     }
     
+    func start(addon: Jumio.Scan.Part) {
+        scanPart = addon
+        scanPart?.start()
+        
+        if scanPart?.scanMode == .nfc {
+            // For the addon nfc there is no scan step .scanView. Therefore, a view should be shown immediately.
+            delegate?.scanPartShowHelpView()
+        }
+    }
+    
     func fallback() {
         scanPart?.fallback()
+    }
+    
+    func cancel() {
+        scanPart?.cancel()
     }
     
     func attach(scanView: Jumio.Scan.View) {
@@ -53,6 +70,15 @@ class ScanPartHandling {
     func attach(rejectView: Jumio.Reject.View) {
         guard let scanPart = scanPart else { return }
         rejectView.attach(scanPart: scanPart)
+    }
+    
+    func retry(reason: Jumio.Retry.Reason) {
+        scanPart?.retry(reason: reason)
+    }
+    
+    func helpView() -> UIView? {
+        // This returns a help view for the current scan part. This is available for NFC and iProov.
+        return scanPart?.getHelpAnimation()
     }
     
     func clean() {
@@ -86,15 +112,20 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
         // RejectView: you will need to attach a Jumio.Confirmation.View to this Jumio.Scan.Part
         case .rejectView:
             delegate?.scanPartShowRejectView()
+            guard let reason = data as? Jumio.RejectReason else { return }
+            print("reject reason", reason.rawValue)
         // Retry: something went wrong and needs to be retried. Jumio.Retry.Reason contains more information
         case .retry:
             guard let reason = data as? Jumio.Retry.Reason else { return }
+            delegate?.scanPartShowRetryView(with: reason)
             print("retry reason", reason.code, reason.message)
-            self.scanPart?.retry(reason: reason)
         // CanFinish: Jumio.Scan.Part is finished and waits for .finish()
         case .canFinish:
             self.scanPart?.finish()
             delegate?.scanPartFinished()
+        // AddonScanPart: Jumio.Scan.Part contains an additional Addon, which can be executed. Show necessary UI for this.
+        case .addonScanPart:
+            print("Addon is available")
         @unknown default:
             print("got unknown scan step", step)
         }

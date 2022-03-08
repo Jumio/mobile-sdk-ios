@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SampleApp-UIKit
 //
-//  Created by Ormir Gjurgjej on 09.07.21.
+//  Copyright © 2022 Jumio Corporation. All rights reserved.
 //
 
 import UIKit

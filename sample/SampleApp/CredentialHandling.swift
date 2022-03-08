@@ -2,7 +2,7 @@
 //  CredentialHandling.swift
 //  SampleApp-UIKit
 //
-//  Created by Christian Henzl on 08.08.21.
+//  Copyright © 2022 Jumio Corporation. All rights reserved.
 //
 
 import Jumio
@@ -61,11 +61,27 @@ class CredentialHandling {
         // all need to be finished in order to be able to finish a credential
         var index = scanSides?.firstIndex { $0 == previousScanSide } ?? 0
         index += previousScanSide != nil ? 1 : 0
-        guard let scanSide = scanSides?[index] else { return }
+        guard scanSides?.count ?? 0 > index,
+              let scanSide = scanSides?[index] else { return }
         let scanPartHandling = ScanPartHandling()
         delegate?.credential(initialized: scanPartHandling)
         // same as previously let the next object actually start itself
         scanPartHandling.start(scanSide: scanSide, of: credential)
+    }
+    
+    func checkAndStartAddon() -> Bool {
+        let scanPartHandling = ScanPartHandling()
+        // Addons (for example for nfc) can be created, when the previous scan part is finished.
+        // For initialization you need a Jumio.Scan.Part.Delegate
+        if let addon = credential?.getAddonScanPart(scanPartDelegate: scanPartHandling) {
+            // Addon is available and created. Now you can start it.
+            delegate?.credential(initialized: scanPartHandling)
+            scanPartHandling.start(addon: addon)
+            return true
+        }
+        
+        // Addon is not available. Move on with the next scan part or credential.
+        return false
     }
     
     func cancel() {

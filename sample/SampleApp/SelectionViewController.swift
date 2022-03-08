@@ -1,8 +1,7 @@
 //
 //  SelectionViewController.swift
-//  SampleApp
 //
-//  Created by Christian Henzl on 09.08.21.
+//  Copyright © 2022 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
