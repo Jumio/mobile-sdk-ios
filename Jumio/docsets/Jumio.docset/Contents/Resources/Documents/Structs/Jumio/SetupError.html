@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Scan Structure Reference</title>
+    <title>SetupError Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Struct/Scan" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Enum/SetupError" class="dashAnchor"></a>
 
-    <a title="Scan Structure Reference"></a>
+    <a title="SetupError Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../../index.html">Jumio Reference</a>
       <img class="carat" src="../../img/carat.png" alt=""/>
-      Scan Structure Reference
+      SetupError Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -161,15 +161,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Scan</h1>
+            <h1>SetupError</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Scan</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SetupError</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt"><a href="../../Structs/Jumio/Error.html">Error</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Namespace for scan related enums and classes</p>
+            <p>Setup errors occur when you request views or view controllers from the SDK, which are not available</p>
 
           </div>
         </section>
@@ -181,9 +181,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5JumioAAV4ScanV4ModeO"></a>
-                    <a name="//apple_ref/swift/Enum/Mode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV4ScanV4ModeO">Mode</a>
+                    <a name="/s:5JumioAAV10SetupErrorO34requestedViewControllerForCustomUIyA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/requestedViewControllerForCustomUI" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5JumioAAV10SetupErrorO34requestedViewControllerForCustomUIyA2DmF">requestedViewControllerForCustomUI</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -191,15 +191,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Support scan modes</p>
+                        <p>Requested a viewcontroller although custom ui was selected</p>
 
-                        <a href="../../Structs/Jumio/Scan/Mode.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Mode</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">requestedViewControllerForCustomUI</span></code></pre>
 
                         </div>
                       </div>
@@ -209,9 +208,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5JumioAAV4ScanV4SideO"></a>
-                    <a name="//apple_ref/swift/Enum/Side" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV4ScanV4SideO">Side</a>
+                    <a name="/s:5JumioAAV10SetupErrorO34standardViewControllerNotAvailableyA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/standardViewControllerNotAvailable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5JumioAAV10SetupErrorO34standardViewControllerNotAvailableyA2DmF">standardViewControllerNotAvailable</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -219,126 +218,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Supported scan sides</p>
-
-                        <a href="../../Structs/Jumio/Scan/Side.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Side</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5JumioAAV4ScanV6UpdateO"></a>
-                    <a name="//apple_ref/swift/Enum/Update" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV4ScanV6UpdateO">Update</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>Jumio.Scan.Update</code> are optional hints that occur during scanning</p>
-
-                        <a href="../../Structs/Jumio/Scan/Update.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Update</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5JumioAAV4ScanV4StepO"></a>
-                    <a name="//apple_ref/swift/Enum/Step" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV4ScanV4StepO">Step</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>Jumio.Scan.Step</code> are steps that occur during scanning</p>
-
-                        <a href="../../Structs/Jumio/Scan/Step.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Step</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5JumioAAV4ScanV4PartC"></a>
-                    <a name="//apple_ref/swift/Class/Part" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV4ScanV4PartC">Part</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Handles scanning and processing of a <code><a href="../../Structs/Jumio/Scan/Side.html">Jumio.Scan.Side</a></code></p>
-
-                        <a href="../../Structs/Jumio/Scan/Part.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Part</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5JumioAAV4ScanV4Viewa"></a>
-                    <a name="//apple_ref/swift/Alias/View" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV4ScanV4Viewa">View</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Typealias for <code><a href="../../Classes/JumioScanView.html">JumioScanView</a></code></p>
+                        <p>No viewcontroller is available.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">View</span> <span class="o">=</span> <span class="kt"><a href="../../Classes/JumioScanView.html">JumioScanView</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">standardViewControllerNotAvailable</span></code></pre>
 
                         </div>
                       </div>
