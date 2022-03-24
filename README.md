@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/github/v/release/Jumio/Mobile-SDK-IOS?style=flat)
 ![License](https://img.shields.io/cocoapods/l/JumioMobileSDK.svg?style=flat)
 ![Platform](https://img.shields.io/cocoapods/p/JumioMobileSDK.svg?style=flat)
-[![Pod Version](https://img.shields.io/cocoapods/v/JumioMobileSDK.svg?style=flat)](https://cocoapods.org/pods/JumioMobileSDK)
+[![Pod Version](https://img.shields.io/cocoapods/v/Jumio.svg?style=flat)](https://cocoapods.org/pods/Jumio)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift 3.0-5.x](http://img.shields.io/badge/Swift-3.x,%204.x%20&%205.x-orange.svg?style=flat)](https://swift.org/)
 
