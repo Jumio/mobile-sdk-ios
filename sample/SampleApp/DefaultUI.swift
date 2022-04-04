@@ -37,6 +37,9 @@ class DefaultUI {
         jumio?.dataCenter = dataCenter
         
         jumio?.startDefaultUI()
+        // Uncomment the following lines if you want to check customization options inside the SDK
+        // let customTheme = customizeSDKColors()
+        // jumio?.customize(theme: customTheme)
     }
     
     func clean() {

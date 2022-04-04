@@ -6,6 +6,16 @@ This section only covers the breaking technical changes that should be considere
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.1.1
+
+#### Customization
+Added Customization functionality to enable customizing Jumio Theme. `Jumio.Theme` is a class that can be used to create a custom theme and override colors for Jumio views.
+
+For more details on Customization, please refer to [Customization](docs/integration_guide.md#customization) in our guides.
+
+#### ObjC support 
+Added DefaultUI support for Objective-C based projects. Now `JumioSDK` class can be reached and initiated form Objective-C code with it's own configuration and delegate `JumioDefaultUIDelegate`.
+
 ## 4.1.0
 
 #### Cocoapods

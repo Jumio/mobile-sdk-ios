@@ -17,7 +17,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.1.0__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.1.1__
 
 For breaking technical changes, please read our [Transition Guide](transition_guide.md).
 
@@ -153,15 +153,11 @@ scanView.cameraFacing = .front
 
 ## Customization
 
-### Customization Tool
-##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that the Surface Tool is not yet supported for SDK 4.1.0, but will be available soon.  
-[Jumio Surface](https://jumio.github.io/surface-ios) is a web tool that allows you to apply and visualize, in real-time, all available customization options for the Jumio SDK, as well as an export feature to import the applied changes straight into your codebase.
+You can customize Jumio SDK UI. By using `Jumio.Theme` class you can create your own theme and set it to your Jumio instance. You can use ['our sample app'](sample/SampleApp/DefaultUI+Customization.swift) as guide to create your theme.
 
-[![Jumio Surface](images/surface_tool.png)](https://jumio.github.io/surface-ios)
-
-Use the tab __Customize SDK__ to check out all the screens and adapt the look & feel of the SDK to your needs.
-
-The __Objective-C Code__ or __Swift Code__ tab to visualizes all the colors that can be customized. As visualized in the code there, the SDK can be customized to fit your application's look and feel via the UIAppearance pattern. Just add the automatically generated code from the Surface tool to your XCode project.
+### Dark Mode
+`Jumio.Theme` attributes can also be customized for dark mode. For each `Jumio.Theme.Value` you can initiate with either `light` or `light and dark`. If both `light and dark` colors have been specified, they will be applied to the modes respectively.
+Dark mode will be applied when darkmode is enabled in system settings.
 
 ## SDK Workflow
 Implement the delegate methods of the [`DefaultUIDelegate`]() protocol to be notified of successful initialization, successful scans, and errors. Dismiss the `Jumio.ViewController` instance in your app in case of success or error.
@@ -228,20 +224,20 @@ The following tables give information on the specification of all data parameter
 #### Class ___Jumio.RejectReason___
 List of all possible reject reasons returned if Instant Feedback is used:   
 
-| Code          | Message  | Description      | Already Active |
-|:--------------|:---------|:-----------------|:--------------:|
-| 102  | blackWhiteCopy    | Document appears to be a black and white photocopy | x |
-| 103  | colorPhotocopy    | Document appears to be a colored photocopy | |
-| 104  | digitalCopy       | Document appears to be a digital copy | |
-| 200  | notReadable       | Document is not readable | |
-| 201  | noDoc             | No document could be detected | x |
-| 206  | missingBack       | Backside of the document is missing | x |
-| 214  | missingFront      | Frontside of the document is missing | x |
-| 2001 | blurry            | Document image is unusable because it is blurry | x |
-| 2003 | missingPartDoc    | Part of the document is missing | x |
-| 2005 | damagedDocument   | Document appears to be damaged | |
-| 2004 | hiddenPartDoc     | Part of the document is hidden | |
-| 2006 | glare             | Document image is unusable because of glare | x |
+| Code          | Message  | Description      |
+|:--------------|:---------|:-----------------|
+| 102  | blackWhiteCopy    | Document appears to be a black and white photocopy |  
+| 103  | colorPhotocopy    | Document appears to be a colored photocopy |
+| 104  | digitalCopy       | Document appears to be a digital copy |
+| 200  | notReadable       | Document is not readable |
+| 201  | noDoc             | No document could be detected |
+| 206  | missingBack       | Backside of the document is missing |
+| 214  | missingFront      | Frontside of the document is missing |
+| 2001 | blurry            | Document image is unusable because it is blurry |
+| 2003 | missingPartDoc    | Part of the document is missing |
+| 2005 | damagedDocument   | Document appears to be damaged |
+| 2004 | hiddenPartDoc     | Part of the document is hidden |
+| 2006 | glare             | Document image is unusable because of glare |
 
 #### Error Codes
 List of all **_error codes_** that are available via the `code` and `message` property of the `Jumio.Error` object. The first letter (A-Z) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]).

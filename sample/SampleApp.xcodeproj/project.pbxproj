@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05CDA84D273E53B600A49B81 /* Jumio.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA84C273E53B600A49B81 /* Jumio.xcframework */; };
 		05CDA84E273E53B600A49B81 /* Jumio.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDA84C273E53B600A49B81 /* Jumio.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05E2139127E23B14006E36A1 /* DefaultUI+Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E2139027E23B14006E36A1 /* DefaultUI+Customization.swift */; };
 		77640FF1273BD7F400917566 /* Localizable-Jumio.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77640FEF273BD7F400917566 /* Localizable-Jumio.strings */; };
 		77F977AA27AA762E00F213AF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F977A927AA762E00F213AF /* HelpViewController.swift */; };
 		967A1E6926988857005A1233 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A1E6826988857005A1233 /* AppDelegate.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		05CDA84C273E53B600A49B81 /* Jumio.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Jumio.xcframework; path = "Frameworks/Jumio+Liveness/Jumio.xcframework"; sourceTree = "<group>"; };
+		05E2139027E23B14006E36A1 /* DefaultUI+Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultUI+Customization.swift"; sourceTree = "<group>"; };
 		77640FF0273BD7F400917566 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = "Frameworks/Localization/af.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		77640FF2273BD80400917566 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = "Frameworks/Localization/ar.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		77640FF3273BD83800917566 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = "Frameworks/Localization/bg.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				96FF9C7C269C334F00E93BAA /* DefaultUI.swift */,
+				05E2139027E23B14006E36A1 /* DefaultUI+Customization.swift */,
 			);
 			name = DefaultUI;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				F37729FA26C025A00010AE21 /* CredentialHandling.swift in Sources */,
 				F336C8CB26C16351001D910F /* LoadingViewController.swift in Sources */,
 				F3772A0726C105730010AE21 /* ScanViewController.swift in Sources */,
+				05E2139127E23B14006E36A1 /* DefaultUI+Customization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +486,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.1.0;
+				MARKETING_VERSION = "4.1.1";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentSampleSwift;
@@ -508,7 +512,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.1.0;
+				MARKETING_VERSION = "4.1.1";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;

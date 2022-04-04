@@ -162,7 +162,7 @@ The app’s Info.plist must contain the `NSCameraUsageDescription` key with a st
 ## Integration
 The [SDK Setup Tool](https://jumio.github.io/mobile-configuration-tool/out/) is a web tool that helps determine available product combinations and corresponding dependencies for the Jumio SDK, as well as an export feature to easily import the applied changes straight into your codebase.
 
-[![Jumio Setup](images/setup_tool.png)](https://jumio.github.io/mobile-configuration-tool/out/)
+[![Jumio Setup](docs/images/setup_tool.png)](https://jumio.github.io/mobile-configuration-tool/out/)
 
 Additionally, check out the [Xcode sample project](sample) to learn the most common use. Make sure to use the device only-frameworks for app submissions to the AppStore. Read more detailed information on this here: [Manual integration](/README.md#manually)
 
@@ -185,21 +185,21 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 use_frameworks! # Required for proper framework handling
 
-pod 'Jumio/Slim', '~>4.1.0' # Use JumioSDK with manual capturing
-pod 'Jumio/LineFinder', '~>4.1.0' # Use JumioSDK with manual capturing and linefinder functionality
-pod 'Jumio/MRZ', '~>4.1.0' # Use JumioSDK with manual capturing and MRZ functionality
-pod 'Jumio/Barcode', '~>4.1.0' # Use JumioSDK with manual capturing and barcode functionality
-pod 'Jumio/NFC', '~>4.1.0' # Use JumioSDK with manual capturing, linefinder, MRZ and NFC functionality functionality
+pod 'Jumio/Slim', '~>4.1.1' # Use JumioSDK with manual capturing
+pod 'Jumio/LineFinder', '~>4.1.1' # Use JumioSDK with manual capturing and linefinder functionality
+pod 'Jumio/MRZ', '~>4.1.1' # Use JumioSDK with manual capturing and MRZ functionality
+pod 'Jumio/Barcode', '~>4.1.1' # Use JumioSDK with manual capturing and barcode functionality
+pod 'Jumio/NFC', '~>4.1.1' # Use JumioSDK with manual capturing, linefinder, MRZ and NFC functionality functionality
 
-pod 'Jumio/Jumio', '~>4.1.0' # Use JumioSDK with all available scanning methods
+pod 'Jumio/Jumio', '~>4.1.1' # Use JumioSDK with all available scanning methods
 
-pod 'Jumio/SlimLiveness', '~>4.1.0' # Use JumioSDK with manual capturing and liveness functionality
-pod 'Jumio/LineFinderLiveness', '~>4.1.0' # Use JumioSDK with manual capturing, linefinder and liveness functionality
-pod 'Jumio/MRZLiveness', '~>4.1.0' # Use JumioSDK with manual capturing, MRZ and liveness functionality
-pod 'Jumio/BarcodeLiveness', '~>4.1.0' # Use JumioSDK with manual capturing, barcode and liveness functionality
-pod 'Jumio/NFCLiveness', '~>4.1.0' # Use JumioSDK with manual capturing, linefinder, MRZ, NFC and liveness functionality functionality
+pod 'Jumio/SlimLiveness', '~>4.1.1' # Use JumioSDK with manual capturing and liveness functionality
+pod 'Jumio/LineFinderLiveness', '~>4.1.1' # Use JumioSDK with manual capturing, linefinder and liveness functionality
+pod 'Jumio/MRZLiveness', '~>4.1.1' # Use JumioSDK with manual capturing, MRZ and liveness functionality
+pod 'Jumio/BarcodeLiveness', '~>4.1.1' # Use JumioSDK with manual capturing, barcode and liveness functionality
+pod 'Jumio/NFCLiveness', '~>4.1.1' # Use JumioSDK with manual capturing, linefinder, MRZ, NFC and liveness functionality functionality
 
-pod 'Jumio/Liveness', '~>4.1.0' # Use JumioSDK with all available scanning methods and liveness functionality
+pod 'Jumio/Liveness', '~>4.1.1' # Use JumioSDK with all available scanning methods and liveness functionality
 ```
 
 #### Certified Liveness Vendor
@@ -228,7 +228,7 @@ pod install
 
 ### Via Carthage
 
-##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.1.0, but will be available for upcoming releases.  
+##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.1.1, but will be available for upcoming releases.  
 
 Jumio supports Carthage as dependency management tool for easy integration of the SDK.
 
@@ -249,7 +249,7 @@ App thinning (app slicing, bitcode and on-demand resources) is supported within 
 In case you experience a build error when building your app in Debug configuration and aim to run it on a device, we advise to temporarily disable the build setting "Enable Bitcode" in your Xcode project.
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.1.0.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/4.1.0/ios-jumio-mobile-sdk-4.1.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.1.1.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/4.1.1/ios-jumio-mobile-sdk-4.1.1.zip).
 
 __Using iProov (manually):__
 * iProov.xcframework
@@ -306,7 +306,7 @@ Please refer to our [Change Log](docs/changelog.md) for more information about o
 # Support
 
 ## Previous Version
-The previous release version 3.9.4 of the Jumio Mobile SDK is supported until 2022-06-01.
+The previous major release version 4.1.0 of the Jumio Mobile SDK is supported until 2022-06-07.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.

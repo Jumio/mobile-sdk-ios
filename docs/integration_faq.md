@@ -59,18 +59,18 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 2.66 MB | base              |   
-| Slim + Liveness            | 3.42 MB | base, iproov      |
-| Linefinder                 | 3.67 MB | base, linefinder  |
-| Linefinder + Liveness      | 4.42 MB | base, linefinder, iproov      |
-| MRZ                        | 5.61 MB | base, mrz, linefinder         |
-| MRZ + Liveness             | 6.37 MB | base, mrz, linefinder, iproov |
-| NFC                        | 6.60 MB | base, mrz, nfc, linefinder         |
-| NFC + Liveness             | 7.35 MB | base, mrz, nfc, linefinder, iproov |
-| Barcode                    | 4.65 MB | base, barcode, linefinder          |
-| Barcode + Liveness         | 5.39 MB | base, barcode, linefinder, iproov  |
-| All                        | 7.58 MB | base, mrz, nfc, barcode, linefinder     |
-| All + Liveness             | 8.32 MB | base, mrz, nfc, barcode, linefinder, iproov    |
+| Slim                       | 2.79 MB | base              |   
+| Slim + Liveness            | 3.58 MB | base, iproov      |
+| Linefinder                 | 3.81 MB | base, linefinder  |
+| Linefinder + Liveness      | 4.59 MB | base, linefinder, iproov      |
+| MRZ                        | 5.75 MB | base, mrz, linefinder         |
+| MRZ + Liveness             | 6.54 MB | base, mrz, linefinder, iproov |
+| NFC                        | 6.75 MB | base, mrz, nfc, linefinder         |
+| NFC + Liveness             | 7.53 MB | base, mrz, nfc, linefinder, iproov |
+| Barcode                    | 4.78 MB | base, barcode, linefinder          |
+| Barcode + Liveness         | 5.57 MB | base, barcode, linefinder, iproov  |
+| All                        | 7.72 MB | base, mrz, nfc, barcode, linefinder     |
+| All + Liveness             | 8.50 MB | base, mrz, nfc, barcode, linefinder, iproov    |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 

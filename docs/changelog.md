@@ -9,9 +9,18 @@
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
 
 ## Support Period
-The previous release version 4.0.0 of the Jumio Mobile SDK is supported until 2022-06-07.
+The previous release version 4.1.0 of the Jumio Mobile SDK is supported until 2022-06-07.
 
 When the support period has expired, bug fixes and technical support will no longer be provided. Current bugs are typically fixed in the upcoming versions. __Older SDK versions will keep functioning with our server until further notice,__ but we highly recommend that you always update to the latest version to benefit from SDK improvements and bug fixes.
+
+## SDK Version: __4.1.1__
+![Improvement](https://img.shields.io/badge/Improvement-green) Improved customization options [ID Verification, Identity Verification]
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Support for ObjectiveC for DefaultUI [ID Verification, Identity Verification]
+
+![Changes](https://img.shields.io/badge/Change-blue) iProov SDK version update to 9.3.2 [Identity Verification]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Bug fixes: UI bugs
 
 ## SDK Version: __4.1.0__
 ![Improvement](https://img.shields.io/badge/Improvement-green) Improved, granular user feedback for improved user experience and workflow through addition of Instant Feedback [ID Verification, Identity Verification]
