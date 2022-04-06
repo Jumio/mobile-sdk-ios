@@ -153,7 +153,7 @@ scanView.cameraFacing = .front
 
 ## Customization
 
-You can customize Jumio SDK UI. By using `Jumio.Theme` class you can create your own theme and set it to your Jumio instance. You can use ['our sample app'](sample/SampleApp/DefaultUI+Customization.swift) as guide to create your theme.
+You can customize Jumio SDK UI. By using `Jumio.Theme` class you can create your own theme and set it to your Jumio instance. You can use [our sample app](../sample/SampleApp/DefaultUI+Customization.swift) as guide to create your theme.
 
 ### Dark Mode
 `Jumio.Theme` attributes can also be customized for dark mode. For each `Jumio.Theme.Value` you can initiate with either `light` or `light and dark`. If both `light and dark` colors have been specified, they will be applied to the modes respectively.

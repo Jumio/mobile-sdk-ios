@@ -11,7 +11,7 @@ __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the cha
 #### Customization
 Added Customization functionality to enable customizing Jumio Theme. `Jumio.Theme` is a class that can be used to create a custom theme and override colors for Jumio views.
 
-For more details on Customization, please refer to [Customization](docs/integration_guide.md#customization) in our guides.
+For more details on Customization, please refer to [Customization](integration_guide.md#customization) in our guides.
 
 #### ObjC support 
 Added DefaultUI support for Objective-C based projects. Now `JumioSDK` class can be reached and initiated form Objective-C code with it's own configuration and delegate `JumioDefaultUIDelegate`.
