@@ -17,7 +17,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.1.1__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.1.2__
 
 For breaking technical changes, please read our [Transition Guide](transition_guide.md).
 
@@ -153,7 +153,7 @@ scanView.cameraFacing = .front
 
 ## Customization
 
-You can customize Jumio SDK UI. By using `Jumio.Theme` class you can create your own theme and set it to your Jumio instance. You can use [our sample app](../sample/SampleApp/DefaultUI+Customization.swift) as guide to create your theme.
+You can customize Jumio SDK UI. By using `Jumio.Theme` class you can create your own theme and set it to your Jumio instance. You can use ['our sample app'](../sample/SampleApp/DefaultUI+Customization.swift) as guide to create your theme.
 
 ### Dark Mode
 `Jumio.Theme` attributes can also be customized for dark mode. For each `Jumio.Theme.Value` you can initiate with either `light` or `light and dark`. If both `light and dark` colors have been specified, they will be applied to the modes respectively.
@@ -380,7 +380,7 @@ During the scanning process, use the `scanPart` delegate method to check on the 
 
 `Jumio.Scan.Step` covers lifecycle events which require action from the customer to continue the process.
 
-* `Jumio.Scan.Step` values: `prepare`, `started`, `scanView`, `imageTaken`, `processing`, `confirmationView`, `retry`, `canFinish`, `rejectView`
+* `Jumio.Scan.Step` values: `prepare`, `started`, `scanView`, `imageTaken`, `processing`, `confirmationView`, `retry`, `canFinish`, `rejectView`, `addonScanPart`
 
 `prepare` is only sent if a scan part requires upfront preparation and the customer should be notified (e.g. by displaying a loading screen). `started` is always sent when a scan part is started. If a loading view was triggered before, it can now be dismissed,
 
@@ -419,7 +419,7 @@ func onScanStep(_ step: Internal.Scan.Step, data: Any?) {
 }
 ```
 
-As soon as the scan part has been confirmed and all processing has been completed `canFinish` is triggered. `scanPart.finish()` can now be called. During the finish routine the SDK checks if there is an add-on functionality for this part available, e.g. possible NFC scanning after an MRZ scan part.
+As soon as the scan part has been confirmed and all processing has been completed `canFinish` is triggered. `scanPart.finish()` can now be called. During the finish routine the SDK checks if there is an add-on functionality for this part available, e.g. possible NFC scanning after an MRZ scan part. If an add-on is available, the `addonScanPart` step is triggered.
 
 `Jumio.Scan.Update` covers scan information that is relevant and might need to be displayed during the scanning process.
 

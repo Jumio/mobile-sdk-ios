@@ -185,21 +185,21 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 use_frameworks! # Required for proper framework handling
 
-pod 'Jumio/Slim', '~>4.1.1' # Use JumioSDK with manual capturing
-pod 'Jumio/LineFinder', '~>4.1.1' # Use JumioSDK with manual capturing and linefinder functionality
-pod 'Jumio/MRZ', '~>4.1.1' # Use JumioSDK with manual capturing and MRZ functionality
-pod 'Jumio/Barcode', '~>4.1.1' # Use JumioSDK with manual capturing and barcode functionality
-pod 'Jumio/NFC', '~>4.1.1' # Use JumioSDK with manual capturing, linefinder, MRZ and NFC functionality functionality
+pod 'Jumio/Slim', '~>4.1.2' # Use JumioSDK with manual capturing
+pod 'Jumio/LineFinder', '~>4.1.2' # Use JumioSDK with manual capturing and linefinder functionality
+pod 'Jumio/MRZ', '~>4.1.2' # Use JumioSDK with manual capturing and MRZ functionality
+pod 'Jumio/Barcode', '~>4.1.2' # Use JumioSDK with manual capturing and barcode functionality
+pod 'Jumio/NFC', '~>4.1.2' # Use JumioSDK with manual capturing, linefinder, MRZ and NFC functionality functionality
 
-pod 'Jumio/Jumio', '~>4.1.1' # Use JumioSDK with all available scanning methods
+pod 'Jumio/Jumio', '~>4.1.2' # Use JumioSDK with all available scanning methods
 
-pod 'Jumio/SlimLiveness', '~>4.1.1' # Use JumioSDK with manual capturing and liveness functionality
-pod 'Jumio/LineFinderLiveness', '~>4.1.1' # Use JumioSDK with manual capturing, linefinder and liveness functionality
-pod 'Jumio/MRZLiveness', '~>4.1.1' # Use JumioSDK with manual capturing, MRZ and liveness functionality
-pod 'Jumio/BarcodeLiveness', '~>4.1.1' # Use JumioSDK with manual capturing, barcode and liveness functionality
-pod 'Jumio/NFCLiveness', '~>4.1.1' # Use JumioSDK with manual capturing, linefinder, MRZ, NFC and liveness functionality functionality
+pod 'Jumio/SlimLiveness', '~>4.1.2' # Use JumioSDK with manual capturing and liveness functionality
+pod 'Jumio/LineFinderLiveness', '~>4.1.2' # Use JumioSDK with manual capturing, linefinder and liveness functionality
+pod 'Jumio/MRZLiveness', '~>4.1.2' # Use JumioSDK with manual capturing, MRZ and liveness functionality
+pod 'Jumio/BarcodeLiveness', '~>4.1.2' # Use JumioSDK with manual capturing, barcode and liveness functionality
+pod 'Jumio/NFCLiveness', '~>4.1.2' # Use JumioSDK with manual capturing, linefinder, MRZ, NFC and liveness functionality functionality
 
-pod 'Jumio/Liveness', '~>4.1.1' # Use JumioSDK with all available scanning methods and liveness functionality
+pod 'Jumio/Liveness', '~>4.1.2' # Use JumioSDK with all available scanning methods and liveness functionality
 ```
 
 #### Certified Liveness Vendor
@@ -228,7 +228,7 @@ pod install
 
 ### Via Carthage
 
-##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.1.1, but will be available for upcoming releases.  
+##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.1.2, but will be available for upcoming releases.  
 
 Jumio supports Carthage as dependency management tool for easy integration of the SDK.
 
@@ -249,7 +249,7 @@ App thinning (app slicing, bitcode and on-demand resources) is supported within 
 In case you experience a build error when building your app in Debug configuration and aim to run it on a device, we advise to temporarily disable the build setting "Enable Bitcode" in your Xcode project.
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.1.1.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/4.1.1/ios-jumio-mobile-sdk-4.1.1.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.1.2.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/4.1.2/ios-jumio-mobile-sdk-4.1.2.zip).
 
 __Using iProov (manually):__
 * iProov.xcframework

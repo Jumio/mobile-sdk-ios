@@ -1,8 +1,6 @@
 //
 //  DefaultUI+Customization.swift
-//  SampleApp
 //
-//  Created by Hazem Mohammed on 16.03.22.
 //  Copyright © 2022 Jumio Corporation. All rights reserved.
 //
 

@@ -65,10 +65,10 @@ The following table shows a range of different product configurations with the f
 | Linefinder + Liveness      | 4.59 MB | base, linefinder, iproov      |
 | MRZ                        | 5.75 MB | base, mrz, linefinder         |
 | MRZ + Liveness             | 6.54 MB | base, mrz, linefinder, iproov |
-| NFC                        | 6.75 MB | base, mrz, nfc, linefinder         |
+| NFC                        | 6.74 MB | base, mrz, nfc, linefinder         |
 | NFC + Liveness             | 7.53 MB | base, mrz, nfc, linefinder, iproov |
 | Barcode                    | 4.78 MB | base, barcode, linefinder          |
-| Barcode + Liveness         | 5.57 MB | base, barcode, linefinder, iproov  |
+| Barcode + Liveness         | 5.56 MB | base, barcode, linefinder, iproov  |
 | All                        | 7.72 MB | base, mrz, nfc, barcode, linefinder     |
 | All + Liveness             | 8.50 MB | base, mrz, nfc, barcode, linefinder, iproov    |
 
