@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbx-dq-bYk" customClass="CustomButton" customModule="SampleApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="430" width="374" height="50"/>
+                                <rect key="frame" x="20" y="345" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tXK-tf-MHe"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIJ-sj-OoC" customClass="CustomButton" customModule="SampleApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="360" width="374" height="50"/>
+                                <rect key="frame" x="20" y="275" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eDq-Fc-giW"/>
                                 </constraints>
@@ -38,18 +38,18 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert your token here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13k-zc-Mdm">
-                                <rect key="frame" x="20" y="195" width="374" height="34"/>
+                                <rect key="frame" x="20" y="120" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Token" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmS-Yj-L0p">
-                                <rect key="frame" x="20" y="164" width="374" height="21"/>
+                                <rect key="frame" x="20" y="89" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-0N-bLl">
-                                <rect key="frame" x="141.5" y="279" width="131" height="32"/>
+                                <rect key="frame" x="141.5" y="199" width="131" height="32"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -60,7 +60,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hbx-dq-bYk" firstAttribute="top" secondItem="wIJ-sj-OoC" secondAttribute="bottom" constant="20" id="2gK-ZM-85V"/>
-                            <constraint firstItem="wgb-0N-bLl" firstAttribute="top" secondItem="13k-zc-Mdm" secondAttribute="bottom" constant="50" id="7iN-e8-IeI"/>
+                            <constraint firstItem="wgb-0N-bLl" firstAttribute="top" secondItem="13k-zc-Mdm" secondAttribute="bottom" constant="45" id="7iN-e8-IeI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wIJ-sj-OoC" secondAttribute="trailing" constant="20" id="9fW-1v-WMf"/>
                             <constraint firstItem="hbx-dq-bYk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CyW-o2-Qfr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hbx-dq-bYk" secondAttribute="trailing" constant="20" id="HXK-zR-RVi"/>
@@ -68,10 +68,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WmS-Yj-L0p" secondAttribute="trailing" constant="20" id="R4P-P8-19Y"/>
                             <constraint firstItem="wIJ-sj-OoC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vsh-Tk-3O3"/>
                             <constraint firstItem="WmS-Yj-L0p" firstAttribute="leading" secondItem="13k-zc-Mdm" secondAttribute="leading" id="Zyo-EF-uym"/>
-                            <constraint firstItem="wIJ-sj-OoC" firstAttribute="top" secondItem="wgb-0N-bLl" secondAttribute="bottom" constant="50" id="bj1-mh-MLv"/>
+                            <constraint firstItem="wIJ-sj-OoC" firstAttribute="top" secondItem="wgb-0N-bLl" secondAttribute="bottom" constant="45" id="bj1-mh-MLv"/>
                             <constraint firstItem="wgb-0N-bLl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cYi-PR-wYl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="13k-zc-Mdm" secondAttribute="trailing" constant="20" id="cre-eE-iAi"/>
-                            <constraint firstItem="WmS-Yj-L0p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="ohJ-e3-0LZ"/>
+                            <constraint firstItem="WmS-Yj-L0p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="ohJ-e3-0LZ"/>
                             <constraint firstItem="13k-zc-Mdm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wbQ-ng-fVa"/>
                         </constraints>
                     </view>
@@ -97,11 +97,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tz0-SE-zfz">
-                                <rect key="frame" x="20" y="111" width="374" height="607"/>
+                                <rect key="frame" x="20" y="155" width="374" height="597"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sty-iA-96G" customClass="CustomButton" customModule="SampleApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="738" width="374" height="50"/>
+                                <rect key="frame" x="20" y="772" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MZb-A3-x5H"/>
                                 </constraints>
@@ -111,7 +111,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for scanning!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFL-1T-bG1">
-                                <rect key="frame" x="20" y="50" width="374" height="41"/>
+                                <rect key="frame" x="20" y="94" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

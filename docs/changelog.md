@@ -11,11 +11,22 @@
 
 # Change Log
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
+For detailed technical changes please refer to our [Transition Guide](transition_guide.md).
 
 ## Support Period
-The previous release version 4.1.1 of the Jumio Mobile SDK is supported until 2022-06-07.
+Current SDK version: __4.2.0__
+The previous release version 4.1.2 of the Jumio Mobile SDK is supported until 2022-08-27.
 
 When the support period has expired, bug fixes and technical support will no longer be provided. Current bugs are typically fixed in the upcoming versions. __Older SDK versions will keep functioning with our server until further notice,__ but we highly recommend that you always update to the latest version to benefit from SDK improvements and bug fixes.
+
+## SDK Version: __4.2.0__
+![Improvement] Support for device fingerprint capability [ID Verification, Identity Verification]
+
+![Improvement] Improved NFC image extraction, it's now possible to extract selfie for similarity check [ID Verification]
+
+![Improvement] Improved liveness customization: Centered Floating prompt for better user guidance during face scanning [Identity Verification]
+
+![Fix] Bug fixes: UI bugs, internal crashes, security patches
 
 ## SDK Version: __4.1.2__
 ![Fix] Fixed NFC library handling

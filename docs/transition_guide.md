@@ -1,10 +1,18 @@
-![ID Verification](images/id-verification.jpg)
+![ID Verification](images/jumio_feature_graphic.jpg)
 
 # Transition Guide for iOS SDK
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
+
+## 4.2.0
+
+#### Changes to the Public API
+
+* `Jumio.Theme.Value(light: UIColor?, dark: UIColor?)` has been replaced by `Jumio.Theme.Value(light: UIColor, dark: UIColor)`.
+* `Jumio.Theme.Value(_: UIColor)` has been added. This initializer should be used to provide one color for both light and dark mode.
+* `Jumio.Scan.Side` has been renamed to `Jumio.Credential.Part`.
 
 ## 4.1.2
 No backward incompatible changes.
@@ -42,6 +50,9 @@ Added Instant Feedback functionality to give more granular user feedback with ne
 * glare
 
 ## 4.0.0
+
+#### Authentication
+ℹ️&nbsp;&nbsp;__As of version 4.0.0 and onward, the SDK can only be used in combination with Jumio KYX or Jumio API v3. API v2 as well as using API token and secret to authenticate against the SDK will no longer be compatible.__
 
 #### Cocoapods
 Please refer to the [Integration section](integration_guide.md#integration) of our guides for a detailed description of all Cocoapods and framework changes.

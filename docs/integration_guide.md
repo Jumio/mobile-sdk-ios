@@ -1,5 +1,5 @@
 
-![ID Verification](images/id-verification.jpg)
+![ID Verification](images/jumio_feature_graphic.jpg)
 
 # Integration Guide for iOS SDK
 Jumio’s products allow businesses to establish the genuine identity of their users by verifying government-issued IDs in real-time. ID Verification, Identity Verification and other services are used by financial service organizations and other leading brands to create trust for safe onboarding, money transfers, and user authentication.
@@ -17,12 +17,15 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.1.2__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.2.0__
 
 For breaking technical changes, please read our [Transition Guide](transition_guide.md).
 
 ## Setup
-The [basic setup](../README.md#basics) is required before continuing with the following setup for the Jumio SDK.
+The [basic setup](../README.md#basics) is required before continuing with the following setup for the Jumio SDK. If you are updating your SDK to a newer version, please also refer to:
+
+:arrow_right:&nbsp;&nbsp;[Changelog](docs/changelog.md)    
+:arrow_right:&nbsp;&nbsp;[Transition Guide](docs/transition_guide.md)
 
 ### NFC Setup
 To make our SDK capable of reading NFC chips you will need to set the following settings:
@@ -145,18 +148,19 @@ For more details, please refer to our [API Guide](https://github.com/Jumio/imple
 }'
 ```
 
-### Miscellaneous
+### Camera Handling
 Use `cameraFacing` attribute of `Jumio.Scan.View` to configure the default camera and set it to `front` or `back`.
 ```
 scanView.cameraFacing = .front
 ```
+Use boolean `hasFlash` of `Jumio.Scan.View` to see if flash is available for the current device camera. Use boolean `flash` to toggle the camera flash.
 
 ## Customization
 
 You can customize Jumio SDK UI. By using `Jumio.Theme` class you can create your own theme and set it to your Jumio instance. You can use ['our sample app'](../sample/SampleApp/DefaultUI+Customization.swift) as guide to create your theme.
 
 ### Dark Mode
-`Jumio.Theme` attributes can also be customized for dark mode. For each `Jumio.Theme.Value` you can initiate with either `light` or `light and dark`. If both `light and dark` colors have been specified, they will be applied to the modes respectively.
+`Jumio.Theme` attributes can also be customized for dark mode. For each `Jumio.Theme.Value` you can initiate with either only one color or with `light and dark`. If `light and dark` colors have been specified, they will be applied to the modes respectively.
 Dark mode will be applied when darkmode is enabled in system settings.
 
 ## SDK Workflow
@@ -224,20 +228,20 @@ The following tables give information on the specification of all data parameter
 #### Class ___Jumio.RejectReason___
 List of all possible reject reasons returned if Instant Feedback is used:   
 
-| Code          | Message  | Description      |
-|:--------------|:---------|:-----------------|
-| 102  | blackWhiteCopy    | Document appears to be a black and white photocopy |  
-| 103  | colorPhotocopy    | Document appears to be a colored photocopy |
-| 104  | digitalCopy       | Document appears to be a digital copy |
-| 200  | notReadable       | Document is not readable |
-| 201  | noDoc             | No document could be detected |
-| 206  | missingBack       | Backside of the document is missing |
-| 214  | missingFront      | Frontside of the document is missing |
-| 2001 | blurry            | Document image is unusable because it is blurry |
-| 2003 | missingPartDoc    | Part of the document is missing |
-| 2005 | damagedDocument   | Document appears to be damaged |
-| 2004 | hiddenPartDoc     | Part of the document is hidden |
-| 2006 | glare             | Document image is unusable because of glare |
+| Code          | Message  | Description      | Check enabled server-side (2022-05-12) |
+|:--------------|:---------|:-----------------|:--------------:|
+| 102  | BLACK_WHITE_COPY | Document appears to be a black and white photocopy | x |
+| 103  | COLOR_PHOTOCOPY  | Document appears to be a colored photocopy | |
+| 104  | DIGITAL_COPY     | Document appears to be a digital copy | x |
+| 200  | NOT_READABLE     | Document is not readable | |
+| 201  | NO_DOC           | No document could be detected | x |
+| 206  | MISSING_BACK     | Backside of the document is missing | x |
+| 214  | MISSING_FRONT    | Frontside of the document is missing | x |
+| 2001 | BLURRY           | Document image is unusable because it is blurry | x |
+| 2003 | MISSING_PART_DOC | Part of the document is missing | x |
+| 2005 | DAMAGED_DOCUMENT | Document appears to be damaged | |
+| 2004 | HIDDEN_PART_DOC  | Part of the document is hidden | |
+| 2006 | GLARE            | Document image is unusable because of glare | x |
 
 #### Error Codes
 List of all **_error codes_** that are available via the `code` and `message` property of the `Jumio.Error` object. The first letter (A-Z) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([x][yyyy]).

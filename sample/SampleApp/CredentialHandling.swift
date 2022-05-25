@@ -26,7 +26,7 @@ class CredentialHandling {
     
     fileprivate(set) var info: Jumio.Credential.Info?
     fileprivate var credential: Jumio.Credential?
-    fileprivate var scanSides: [Jumio.Scan.Side]?
+    fileprivate var credentialParts: [Jumio.Credential.Part]?
     
     // MARK: - Functions
     func start(info: Jumio.Credential.Info, with controller: Jumio.Controller?) {
@@ -39,8 +39,8 @@ class CredentialHandling {
         if !isConfigured {
             delegate?.credentialNeedsConfiguration(for: countries)
         } else {
-            // if it is already configured, you can directly check which scan sides needs to be scanned
-            scanSides = credential?.scanSides
+            // if it is already configured, you can directly check which credential parts needs to be scanned
+            credentialParts = credential?.parts
             // and actually start scanning
             startNextScanPart()
         }
@@ -50,23 +50,23 @@ class CredentialHandling {
         guard let idCredential = credential as? Jumio.IDCredential,
               idCredential.isSupportedConfiguration(country: country, document: document) else { return }
         idCredential.setConfiguration(country: country, document: document)
-        // after setting a valid configuration, scan sides are available as they might differ based on set configuration
-        scanSides = idCredential.scanSides
+        // after setting a valid configuration, credential parts are available as they might differ based on set configuration
+        credentialParts = idCredential.parts
         startNextScanPart()
     }
     
-    func startNextScanPart(previousScanSide: Jumio.Scan.Side? = nil) {
+    func startNextScanPart(previousCredentialPart: Jumio.Credential.Part? = nil) {
         // same as on controller level with credential information
-        // following 3 lines are to work through all scan sides
+        // following 3 lines are to work through all credential parts
         // all need to be finished in order to be able to finish a credential
-        var index = scanSides?.firstIndex { $0 == previousScanSide } ?? 0
-        index += previousScanSide != nil ? 1 : 0
-        guard scanSides?.count ?? 0 > index,
-              let scanSide = scanSides?[index] else { return }
+        var index = credentialParts?.firstIndex { $0 == previousCredentialPart } ?? 0
+        index += previousCredentialPart != nil ? 1 : 0
+        guard credentialParts?.count ?? 0 > index,
+              let credentialPart = credentialParts?[index] else { return }
         let scanPartHandling = ScanPartHandling()
         delegate?.credential(initialized: scanPartHandling)
         // same as previously let the next object actually start itself
-        scanPartHandling.start(scanSide: scanSide, of: credential)
+        scanPartHandling.start(credentialPart: credentialPart, of: credential)
     }
     
     func checkAndStartAddon() -> Bool {
@@ -95,6 +95,6 @@ class CredentialHandling {
     func clean() {
         credential = nil
         info = nil
-        scanSides = nil
+        credentialParts = nil
     }
 }

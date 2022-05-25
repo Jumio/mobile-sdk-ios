@@ -32,7 +32,7 @@ class ScanViewController: UIViewController {
     
     // MARK: - Functions
     func updateView() {
-        informationLabel.text = "\(customUI?.scanSide ?? "") \(customUI?.scanMode ?? "")"
+        informationLabel.text = "\(customUI?.credentialPart ?? "") \(customUI?.scanMode ?? "")"
         containerShutterView.isHidden = !scanView.isShutterEnabled
         fallbackButton.isHidden = !(customUI?.hasFallback ?? true)
     }

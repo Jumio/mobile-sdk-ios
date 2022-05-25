@@ -29,13 +29,13 @@ class ScanPartHandling {
     var hasFallback: Bool? { scanPart?.hasFallback }
     var scanMode: Jumio.Scan.Mode? { scanPart?.scanMode }
     
-    fileprivate(set) var scanSide: Jumio.Scan.Side?
+    fileprivate(set) var credentialPart: Jumio.Credential.Part?
     fileprivate var scanPart: Jumio.Scan.Part?
     
-    func start(scanSide: Jumio.Scan.Side, of credential: Jumio.Credential?) {
-        self.scanSide = scanSide
-        // to initialize a scan part, you will need the credential, a scan side and Jumio.Scan.Part.Delegate
-        scanPart = credential?.initScanPart(scanSide, scanPartDelegate: self)
+    func start(credentialPart: Jumio.Credential.Part, of credential: Jumio.Credential?) {
+        self.credentialPart = credentialPart
+        // to initialize a scan part, you will need the credential, a credential part and Jumio.Scan.Part.Delegate
+        scanPart = credential?.initScanPart(credentialPart, scanPartDelegate: self)
         scanPart?.start()
     }
     
@@ -83,7 +83,7 @@ class ScanPartHandling {
     
     func clean() {
         scanPart = nil
-        scanSide = nil
+        credentialPart = nil
     }
 }
 
@@ -140,6 +140,9 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
         case .legalHint:
             guard let message = data as? String else { return }
             delegate?.scanPartShowLegalHint(with: message)
+        // NFC Updates: You can show updates in the UI in the background, when NFC progresses
+        case .nfcExtractionStarted, .nfcExtractionProgress, .nfcExtractionFinished:
+            break
         @unknown default:
             print("got unknown scan update", update)
         }

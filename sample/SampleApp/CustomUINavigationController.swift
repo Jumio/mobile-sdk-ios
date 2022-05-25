@@ -182,13 +182,14 @@ extension CustomUINavigationController {
 // MARK: - ScanPart forwarding
 extension CustomUINavigationController {
     var hasFallback: Bool { scanPartHandling?.hasFallback ?? false }
-    var scanSide: String {
-        guard let scanSide = scanPartHandling?.scanSide else { return "" }
-        switch scanSide {
+    var credentialPart: String {
+        guard let credentialPart = scanPartHandling?.credentialPart else { return "" }
+        switch credentialPart {
         case .front: return "Front"
         case .back: return "Back"
         case .face: return "Face"
         case .nfc: return "NFC"
+        case .deviceRisk: return "Device Risk"
         default: return "unknown"
         }
     }
@@ -219,7 +220,7 @@ extension CustomUINavigationController {
     }
     
     func startNextScanPart() {
-        credentialHandling?.startNextScanPart(previousScanSide: scanPartHandling?.scanSide)
+        credentialHandling?.startNextScanPart(previousCredentialPart: scanPartHandling?.credentialPart)
     }
     
     func fallback() {

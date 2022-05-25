@@ -16,15 +16,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var defaultUIButton: CustomButton!
     
     // MARK: - Private properties
-    fileprivate lazy var defaultUI = DefaultUI()
-    var jumioViewController: Jumio.ViewController?
+    fileprivate var defaultUI: DefaultUI?
+    fileprivate var jumioViewController: Jumio.ViewController?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tokenTextField.delegate = self
-        
+        tokenTextField.clearButtonMode = .whileEditing
+
         dataCenterSegmentControl.tintColor = .systemBlue
         dataCenterSegmentControl.removeAllSegments()
         for segment in Segment.all() {
@@ -62,10 +63,12 @@ class ViewController: UIViewController {
     @IBAction func startJumio() {
         guard let token = tokenTextField.text,
               let segment = Segment.from(index: dataCenterSegmentControl.selectedSegmentIndex) else { return }
-        defaultUI.delegate = self
-        defaultUI.start(with: token, dataCenter: segment.dataCenter)
         
-        guard let jumioVC = defaultUI.viewController else { return }
+        defaultUI = DefaultUI()
+        defaultUI?.delegate = self
+        defaultUI?.start(with: token, dataCenter: segment.dataCenter)
+        
+        guard let jumioVC = defaultUI?.viewController else { return }
         jumioViewController = jumioVC
         jumioVC.modalPresentationStyle = .fullScreen
         present(jumioVC, animated: true)
@@ -83,8 +86,9 @@ extension ViewController: UITextFieldDelegate {
 extension ViewController: DefaultUI.Delegate {
     func defaultUIDidFinish(with result: Jumio.Result) {
         jumioViewController?.dismiss(animated: true, completion: { [weak self] in
-            self?.defaultUI.clean()
             self?.jumioViewController = nil
+            self?.defaultUI?.clean()
+            self?.defaultUI = nil
             self?.performSegue(withIdentifier: Segue.result.rawValue, sender: result)
         })
     }

@@ -52,6 +52,8 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
             return "Face"
         case .document:
             return "Document"
+        case .data:
+            return "Device Risk"
         @unknown default:
             return nil
         }
@@ -65,7 +67,7 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
             return 2
         case .face:
             return 1
-        case .document:
+        case .document, .data:
             return 0
         @unknown default:
             return 0

@@ -10,9 +10,7 @@
 # Table of Contents
 - [Overview](#overview)
 - [Get Started](#get-started)
-  - [ID Verification SDK](docs/integration_guide.md)
-  - [Authentication SDK](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.4/docs/integration_authentication.md)
-  - [Document Verification SDK](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.4/docs/integration_document-verification.md)
+  - [Jumio SDK Integration](docs/integration_guide.md)
 - [Quickstart](#quickstart)
 - [Basics](#basics)
   - [General Requirements](#general-requirements)
@@ -33,29 +31,31 @@ The Jumio Software Development Kit (SDK) provides you with a set of tools and UI
 
 Onboard new users and easily verify their digital identities, by making sure the IDs provided by them are valid and authentic. Extract data from ID documents completely automatically and within seconds. Confirm users really are who they say they are by having them take a quick selfie and match it to their respective documents. Jumio uses cutting-edge biometric technology such as 3D face mapping to make sure there is an actual, real-life person in front of the screen.
 
-![Menu Screen](docs/images/images_overview/intro_screen.png)  ![Scan Screen](docs/images/images_overview/menu_screen.png)  ![Confirm Screen](docs/images/images_overview/confirm_screen.png)
+![SDK Overview](docs/images/images_overview/images_overview.png)
 
 Using the Jumio SDK will allow you to create the best possible solution for your individual needs, providing you with a range of different services to choose from.
+
+-----
 
 # Get Started
 Please note that [basic setup](#basics) is required before continuing with the integration of any of the following services.
 
-## Jumio ID Verification
-ID Verification (formerly known as Netverify) is a secure and easy solution that allows you to establish the genuine identity of your users in your mobile application, by verifying their passports, government-issued IDs and VISA in real-time. Very user-friendly and highly customizable, it makes onboarding new customers quick and simple.
+## Jumio SDK Integration
+Jumio KYX platform and related services are a secure and easy solution that allows you to establish the genuine identity of your users in your mobile application, by verifying their passports, government-issued IDs and actual liveness in real-time. Very user-friendly and highly customizable, it makes onboarding new customers quick and simple.
 
-- [Integration ID Verification SDK](docs/integration_guide.md)
+:arrow_right:&nbsp;&nbsp;[SDK INTEGRATION GUIDE](docs/integration_guide.md)    
+:arrow_right:&nbsp;&nbsp;[Changelog](docs/changelog.md)    
+:arrow_right:&nbsp;&nbsp;[Transition Guide](docs/transition_guide.md)    
 
-## Jumio Authentication
-Authentication is a cutting-edge biometric-based service that establishes digital identities of your users, simply by taking a selfie. Advanced 3D face mapping-technology quickly and securely authenticates users and their digital identities.
+#### Previous SDK Versions
+If you need information on older SDK versions, please refer to:    
+- [3.9.4](https://github.com/Jumio/mobile-sdk-ios/tree/v3.9.4)
+- [3.9.3](https://github.com/Jumio/mobile-sdk-ios/tree/v3.9.3)
+- [3.9.2](https://github.com/Jumio/mobile-sdk-ios/tree/v3.9.2)
+- [3.9.1](https://github.com/Jumio/mobile-sdk-ios/tree/v3.9.1)
+- [3.9.0](https://github.com/Jumio/mobile-sdk-ios/tree/v3.9.0)
 
-- [Integration Authentication SDK (3.9.4, deprecated)](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.4/docs/integration_authentication.md)
-- [Transition Guide Authentication SDK (3.9.4, deprecated)](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.0/docs/transition-guide_authentication.md)
-
-## Jumio Document Verification
-Document Verification is a powerful solution that allows users to scan various types of documents quickly and easily in your mobile application. Data extraction is already supported for various document types, such as bank statements.
-
-- [Integration Document Verification SDK (3.9.4, deprecated)](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.4/docs/integration_document-verification.md)
-- [Transition Guide Document Verification SDK (3.9.4, deprecated)](https://github.com/Jumio/mobile-sdk-ios/blob/v3.9.4/docs/transition-guide_document-verification.md)
+-----
 
 # Quickstart
  This section provides a quick overview on how to get started with the [iOS sample application](sample) that can be found here on Github. You will require a __commercial Jumio License__ to successfully run any of our examples; for details, contact sales@jumio.com. You will also need a current Xcode version to open and try out the sample project.
@@ -83,24 +83,29 @@ In each class, the most important methods for this service is shown and quickly 
 
 Once you start up the sample application, you'll be given the option of trying out the Jumio SDK. Select a service from the action bar at the bottom to try out different services. Your application will also need camera permission, which will be prompted for automatically once you try to start any of services.
 
+-----
+
 # Basics
 
 ## General Requirements
 The minimum requirements for the SDK are:
 - iOS 11.0 and higher
 - Internet connection
+- Jumio KYX or Jumio API v3
 
-ℹ️&nbsp;&nbsp;__Note:__ Please note that as of version 4.0.0, due to SDK obfuscation the simulator is required to use the latest iOS version.
+ℹ️&nbsp;&nbsp;__Note:__ Please be aware that as of version 4.0.0, due to SDK obfuscation the simulator is required to use the latest iOS version.
 
 The following architectures are supported in the SDK:
 - ARMv7
 - ARM64
 - x86_64 works on iOS emulator only
 
-ℹ️&nbsp;&nbsp;__Note:__ Please note that currently, Apple machines using M1 will be able to build Jumio SDK for an actual device. Running on simulator is not possible.  
+ℹ️&nbsp;&nbsp;__Note:__ Please note that currently, Apple machines using M1 will be able to build Jumio SDK for an actual device. Running on simulator is not possible.
 
 ## Authentication and Encryption
-Before starting a session in our SDK, an SDK token has to be obtained. Please refer to out [API Guide](https://github.com/Jumio/implementation-guides/blob/master/api-guide/api_guide.md) for further details. To authenticate against the API calls, an OAuth2 access token needs to be retrieved from the Customer Portal.
+ℹ️&nbsp;&nbsp;__As of version 4.0.0 and onward, the SDK can only be used in combination with Jumio KYX or Jumio API v3. API v2 as well as using API token and secret to authenticate against the SDK will no longer be compatible.__
+
+Before starting a session in our SDK, an SDK token has to be obtained. Refer to out [API Guide](https://github.com/Jumio/implementation-guides/blob/master/api-guide/api_guide.md) for further details. To authenticate against the API calls, an OAuth2 access token needs to be retrieved from the Customer Portal.
 
 Within the response of the [Account Creation](https://github.com/Jumio/implementation-guides/blob/master/api-guide/api_guide.md#account-creation) or [Account Update](https://github.com/Jumio/implementation-guides/blob/master/api-guide/api_guide.md#account-update) API, an SDK token is returned, which needs to be applied to initiate the mobile SDK.
 
@@ -179,27 +184,30 @@ Then update your local clone of the specs repo in Terminal to ensure that you ar
 pod repo update
 ```
 Adapt your Podfile and add the pods according to the product(s) you want use. Check the following example how a Podfile could look like, with a list of all available Jumio pods:
+
+⚠️⚠️&nbsp;&nbsp;__Note:__ Please do not include everything! Make sure to __only__ use pods that provide to the services you need!
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '11.0'
 use_frameworks! # Required for proper framework handling
 
-pod 'Jumio/Slim', '~>4.1.2' # Use JumioSDK with manual capturing
-pod 'Jumio/LineFinder', '~>4.1.2' # Use JumioSDK with manual capturing and linefinder functionality
-pod 'Jumio/MRZ', '~>4.1.2' # Use JumioSDK with manual capturing and MRZ functionality
-pod 'Jumio/Barcode', '~>4.1.2' # Use JumioSDK with manual capturing and barcode functionality
-pod 'Jumio/NFC', '~>4.1.2' # Use JumioSDK with manual capturing, linefinder, MRZ and NFC functionality functionality
+pod 'Jumio/Slim', '~>4.2.0' # Use JumioSDK with manual capturing
+pod 'Jumio/LineFinder', '~>4.2.0' # Use JumioSDK with manual capturing and linefinder functionality
+pod 'Jumio/MRZ', '~>4.2.0' # Use JumioSDK with manual capturing and MRZ functionality
+pod 'Jumio/Barcode', '~>4.2.0' # Use JumioSDK with manual capturing and barcode functionality
+pod 'Jumio/NFC', '~>4.2.0' # Use JumioSDK with manual capturing, linefinder, MRZ and NFC functionality
+pod 'Jumio/DeviceRisk', '~>4.2.0' # Use JumioSDK in combination with device fingerprinting functionality
 
-pod 'Jumio/Jumio', '~>4.1.2' # Use JumioSDK with all available scanning methods
+pod 'Jumio/Jumio', '~>4.2.0' # Use JumioSDK with all available scanning methods
 
-pod 'Jumio/SlimLiveness', '~>4.1.2' # Use JumioSDK with manual capturing and liveness functionality
-pod 'Jumio/LineFinderLiveness', '~>4.1.2' # Use JumioSDK with manual capturing, linefinder and liveness functionality
-pod 'Jumio/MRZLiveness', '~>4.1.2' # Use JumioSDK with manual capturing, MRZ and liveness functionality
-pod 'Jumio/BarcodeLiveness', '~>4.1.2' # Use JumioSDK with manual capturing, barcode and liveness functionality
-pod 'Jumio/NFCLiveness', '~>4.1.2' # Use JumioSDK with manual capturing, linefinder, MRZ, NFC and liveness functionality functionality
+pod 'Jumio/SlimLiveness', '~>4.2.0' # Use JumioSDK with manual capturing and liveness functionality
+pod 'Jumio/LineFinderLiveness', '~>4.2.0' # Use JumioSDK with manual capturing, linefinder and liveness functionality
+pod 'Jumio/MRZLiveness', '~>4.2.0' # Use JumioSDK with manual capturing, MRZ and liveness functionality
+pod 'Jumio/BarcodeLiveness', '~>4.2.0' # Use JumioSDK with manual capturing, barcode and liveness functionality
+pod 'Jumio/NFCLiveness', '~>4.2.0' # Use JumioSDK with manual capturing, linefinder, MRZ, NFC and liveness functionality functionality
 
-pod 'Jumio/Liveness', '~>4.1.2' # Use JumioSDK with all available scanning methods and liveness functionality
+pod 'Jumio/Liveness', '~>4.2.0' # Use JumioSDK with all available scanning methods and liveness functionality
 ```
 
 #### Certified Liveness Vendor
@@ -228,7 +236,7 @@ pod install
 
 ### Via Carthage
 
-##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.1.2, but will be available for upcoming releases.  
+##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.2.0, but will be available for upcoming releases.  
 
 Jumio supports Carthage as dependency management tool for easy integration of the SDK.
 
@@ -249,7 +257,7 @@ App thinning (app slicing, bitcode and on-demand resources) is supported within 
 In case you experience a build error when building your app in Debug configuration and aim to run it on a device, we advise to temporarily disable the build setting "Enable Bitcode" in your Xcode project.
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.1.2.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/4.1.2/ios-jumio-mobile-sdk-4.1.2.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.2.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.2.0/ios-jumio-mobile-sdk-4.2.0.zip).
 
 __Using iProov (manually):__
 * iProov.xcframework
@@ -297,8 +305,12 @@ Please check out our [sample project](sample) to see how to use the strings file
 
 Our SDK supports accessibility features. Visually impaired users can enable __VoiceOver__ or increase __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customized.
 
+----
+
 # Security
 All SDK related traffic is sent over HTTPS using TLS and public key pinning, and additionally, the information itself within the transmission is also encrypted utilizing __Application Layer Encryption__ (ALE). ALE is Jumio custom-designed security protocol which utilizes RSA-OAEP and AES-256 to ensure that the data cannot be read or manipulated even if the traffic was captured.
+
+----
 
 # Release Notes
 Please refer to our [Change Log](docs/changelog.md) for more information about our current SDK version and further details.
@@ -306,7 +318,7 @@ Please refer to our [Change Log](docs/changelog.md) for more information about o
 # Support
 
 ## Previous Version
-The previous major release version 4.1.0 of the Jumio Mobile SDK is supported until 2022-06-07.
+The previous major release version 4.1.2 of the Jumio Mobile SDK is supported until 2022-08-27.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.
