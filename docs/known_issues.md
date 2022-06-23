@@ -23,7 +23,14 @@ _Reason: image not found_
 Please note that as of SDK version 4.0.0, due to SDK obfuscation the simulator is required to use the latest iOS version.
 
 ## Cropped TableView in Document Selection for iOS 15
-For SDK 3.9.2 and below, document type selection appears to be cut off at the top when using defaultUI with iOS 15 and above. This bug occurs when customization attribute `disableBlur` is set to `true`.
+For SDK 3.9.4 and below, document type selection appears to be cut off at the top with defaultUI using iOS 15 and above, when compiled with certain Xcode versions.
+
+This bug can be resolved by setting `sectionHeaderTopPadding` attribute of `NetverifyViewController` instance to an appropriate distance for devices using iOS 15, for example:
+```
+if #available(iOS 15.0, *) {
+    UITableView.appearance(whenContainedInInstancesOf: [NetverifyViewController.self]).sectionHeaderTopPadding = 24
+}
+```
 
 ## SDK Version Not Compatible after Xcode 13 Update
 After updating to and archiving / exporting an app with Xcode 13, Jumio SDK cannot be initialized and throws the following exception, despite the fact that SDK version and all framework versions appear to be correct:
