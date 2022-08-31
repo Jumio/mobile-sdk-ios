@@ -1,9 +1,10 @@
 # Known Issues
 
 ## Table of Contents
+- [Datadog Cocoapods Restriction](#datadog-cocoapods-restriction)
 - [App Crash at Launch Using Simulator](#app-crash-at-launch-using-simulator)
 - [Cropped TableView in Document Selection for iOS 15](#cropped-tableview-in-document-selection-for-ios-15)
-- [SDK Version Not Compatible after Xcode 13 Update](#sdk-version-not-compatible-after-xcode-13-update)
+- [SDK Runs Fine on Debug Build, Fails on Release Build](#sdk-runs-fine-on-debug-build-fails-on-release-build)
 - [App Crash: Symbol not found for iProov, SocketIO or Starscream](#app-crash-symbol-not-found-for-iproov-socketio-or-starscream)
 - [CoreNFC Issues with Xcode 12 and Xcode 12.1](#corenfc-issues-with-xcode-12and-xcode-12.1)
 - [Custom Theme Issues](#custom-theme-issues)
@@ -12,6 +13,9 @@
     - [Language Changes at Runtime](#language-changes-at-runtime)
 - [User Was Not Asked for Face Capturing](#user-was-not-asked-for-face-capturing)
 - [Country Missing from the Country List](#country-missing-from-the-country-list)
+
+## Datadog Cocoapods Restriction
+The Jumio SDK currently supports the data analysis provider Datadog only with the dependency manager Cocoapods. If you need to integrate Datadog without Cocoapods, reach out to the support team.
 
 ## App Crash at Launch Using Simulator
 The app works fine for actual devices, but crashes at launch on simulator due to the following or similar error:
@@ -32,8 +36,8 @@ if #available(iOS 15.0, *) {
 }
 ```
 
-## SDK Version Not Compatible after Xcode 13 Update
-After updating to and archiving / exporting an app with Xcode 13, Jumio SDK cannot be initialized and throws the following exception, despite the fact that SDK version and all framework versions appear to be correct:
+## SDK Runs Fine on Debug Build, Fails on Release Build
+For Xcode 13 and above, application might build and run fine for debug builds, but crash on release builds. This might also occur with Testflight. When archiving / exporting an app with Xcode 13, Jumio SDK cannot be initialized and might throws the following exception, despite the fact that SDK version and all framework versions appear to be correct:
 
 ```
 SDKVersionNotCompatibleException: JumioFRAMEWORK is expected to be of version X.X.X

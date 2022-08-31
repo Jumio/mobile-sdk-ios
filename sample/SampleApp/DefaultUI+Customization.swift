@@ -25,7 +25,14 @@ extension DefaultUI {
         customTheme.iProov.animationForeground = Jumio.Theme.Value(.brown)
         customTheme.iProov.animationBackground = Jumio.Theme.Value(.yellow)
         customTheme.iProov.floatingPromptEnabled = false
-        
+        customTheme.iProov.floatingPromptRoundedCorners = false
+        customTheme.iProov.genuinePresenceAssuranceReadyFloatingPromptBackgroundColor = Jumio.Theme.Value(.cyan)
+        customTheme.iProov.genuinePresenceAssuranceNotReadyFloatingPromptBackgroundColor = Jumio.Theme.Value(.yellow)
+        customTheme.iProov.genuinePresenceAssuranceReadyOverlayStrokeColor = Jumio.Theme.Value(.brown)
+        customTheme.iProov.genuinePresenceAssuranceNotReadyOverlayStrokeColor = Jumio.Theme.Value(.red)
+        customTheme.iProov.livenessAssuranceFloatingPromptBackgroundColor = Jumio.Theme.Value(.cyan)
+        customTheme.iProov.livenessAssuranceOverlayStrokeColor = Jumio.Theme.Value(.yellow)
+                
         // Primary & Secondry Buttons
         customTheme.primaryButton.background = Jumio.Theme.Value(light: .red, dark: .purple)
         customTheme.primaryButton.backgroundPressed = Jumio.Theme.Value(light: .yellow, dark: .cyan)

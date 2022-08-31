@@ -6,6 +6,24 @@ This section only covers the breaking technical changes that should be considere
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.3.0
+
+#### Changes to the Public API
+* `Jumio.Scan.Update.fallback` has now an additional `Jumio.Scan.Update.FallbackReason`:
+  * `userAction`: Initiated by the user through the call of `Jumio.Scan.ScanPart.fallback()`.
+  * `lowPerformance`: Initiated due to low performance on the current `Jumio.Scan.Mode`.
+
+* Document Verification is now supported. Please check the [Integration Guide](https://github.com/Jumio/mobile-sdk-android/blob/master/docs/integration_guide.md#jumio-document-credential) for more information.
+
+#### Cocoapods
+* One new pod added, containing data analysis functionality:
+  * `pod 'Jumio/Datadog'`
+  * `pod 'Jumio/DocFinder'`
+  * `pod 'Jumio/All'` replaces ~~`pod 'Jumio/Jumio'`~~ as default subspec of `pod 'Jumio'`
+
+#### Simulator Slice
+* Minimum iOS version for simulator slice was increased to 15.0
+
 ## 4.2.0
 
 #### Changes to the Public API

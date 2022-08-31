@@ -12,6 +12,7 @@ protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartShowLoadingView()
     func scanPartShowHelpView()
     func scanPartShowScanView()
+    func scanPartAttachFile()
     func scanPartShowImageTaken()
     func scanPartShowProcessing()
     func scanPartShowConfirmationView()
@@ -19,6 +20,7 @@ protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartShowRetryView(with reason: Jumio.Retry.Reason)
     func scanPartDidFallback()
     func scanPartShowLegalHint(with message: String)
+    func scanPartShowExtractionState(with extractionState: Jumio.Scan.Update.ExtractionState)
     func scanPartFinished()
 }
 
@@ -62,6 +64,11 @@ class ScanPartHandling {
         scanView.attach(scanPart: scanPart)
     }
     
+    func attach(fileAttacher: Jumio.FileAttacher) {
+        guard let scanPart = scanPart else { return }
+        fileAttacher.attach(scanPart: scanPart)
+    }
+    
     func attach(confirmationView: Jumio.Confirmation.View) {
         guard let scanPart = scanPart else { return }
         confirmationView.attach(scanPart: scanPart)
@@ -100,6 +107,8 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
         // ScanView: you will need to attach a Jumio.Scan.View to this Jumio.Scan.Part
         case .scanView:
             delegate?.scanPartShowScanView()
+        case .attachFile:
+            delegate?.scanPartAttachFile()
         // ImageTaken: an image has been taken / captured
         case .imageTaken:
             delegate?.scanPartShowImageTaken()
@@ -134,7 +143,9 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
     func jumio(scanPart: Jumio.Scan.Part, updates update: Jumio.Scan.Update, data: Any?) {
         switch update {
         // Fallback: is being called after Jumio.Scan.Part.fallback() has been executed
-        case .fallback:
+        case .fallback(let fallbackReason):
+            // Fallback Reason, you can notify the user that fallback is triggered. It could be that user select fallback themselves or Jumio has to fallback due to low performance.
+            print(fallbackReason)
             delegate?.scanPartDidFallback()
         // LegalHint: legal hint should be shown to the user. data contains a String with a message, which can be shown to the user
         case .legalHint:
@@ -143,6 +154,9 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
         // NFC Updates: You can show updates in the UI in the background, when NFC progresses
         case .nfcExtractionStarted, .nfcExtractionProgress, .nfcExtractionFinished:
             break
+        // ExtractionState: extraction state updates should be shown to the user to guide him through capturing process
+        case .extractionState(let extractionState):
+            delegate?.scanPartShowExtractionState(with: extractionState)
         @unknown default:
             print("got unknown scan update", update)
         }

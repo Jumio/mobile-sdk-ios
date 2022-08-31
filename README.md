@@ -19,6 +19,8 @@
   - [Integration](#integration)
   - [App Thinning and Size Matters](#app-thinning-and-size-matters)
   - [Language Localization](#language-localization)
+- [Document Verification](#document-verification)
+- [Analytics with Datadog](#analytics-with-datadog)
 - [Security](#security)
 - [Release Notes](#release-notes)
 - [Support](#support)
@@ -96,7 +98,6 @@ The minimum requirements for the SDK are:
 ℹ️&nbsp;&nbsp;__Note:__ Please be aware that as of version 4.0.0, due to SDK obfuscation the simulator is required to use the latest iOS version.
 
 The following architectures are supported in the SDK:
-- ARMv7
 - ARM64
 - x86_64 works on iOS emulator only
 
@@ -105,9 +106,9 @@ The following architectures are supported in the SDK:
 ## Authentication and Encryption
 ℹ️&nbsp;&nbsp;__As of version 4.0.0 and onward, the SDK can only be used in combination with Jumio KYX or Jumio API v3. API v2 as well as using API token and secret to authenticate against the SDK will no longer be compatible.__
 
-Before starting a session in our SDK, an SDK token has to be obtained. Refer to out [API Guide](https://github.com/Jumio/implementation-guides/blob/master/api-guide/api_guide.md) for further details. To authenticate against the API calls, an OAuth2 access token needs to be retrieved from the Customer Portal.
+Before starting a session in our SDK, an SDK token has to be obtained. Refer to out [API Guide](https://jumio.github.io/kyx/integration-guide.html) for further details. To authenticate against the API calls, an OAuth2 access token needs to be retrieved from the Customer Portal.
 
-Within the response of the [Account Creation](https://github.com/Jumio/implementation-guides/blob/master/api-guide/api_guide.md#account-creation) or [Account Update](https://github.com/Jumio/implementation-guides/blob/master/api-guide/api_guide.md#account-update) API, an SDK token is returned, which needs to be applied to initiate the mobile SDK.
+Within the response of the [Account Creation](https://jumio.github.io/kyx/integration-guide.html#account-creation) or [Account Update](https://jumio.github.io/kyx/integration-guide.html#account-update) API, an SDK token is returned, which needs to be applied to initiate the mobile SDK.
 
 ### Basic Authentication (Deprecated)
 Previously, Basic Auth credentials were constructed using your API token as the User ID and your API secret as the password. You still can manage API token and secret in the Customer Portal under:
@@ -169,128 +170,12 @@ The [SDK Setup Tool](https://jumio.github.io/mobile-configuration-tool/out/) is 
 
 [![Jumio Setup](docs/images/setup_tool.png)](https://jumio.github.io/mobile-configuration-tool/out/)
 
-Additionally, check out the [Xcode sample project](sample) to learn the most common use. Make sure to use the device only-frameworks for app submissions to the AppStore. Read more detailed information on this here: [Manual integration](/README.md#manually)
-
-### Via Cocoapods
-Jumio supports CocoaPods as dependency management tool for easy integration of the SDK. You are required to use **Cocoapods 1.11.0** or newer.
-
-If you are not yet using Cocoapods in your project, first run:
-```
-sudo gem install cocoapods
-pod init
-```
-Then update your local clone of the specs repo in Terminal to ensure that you are using the latest podspec files using:
-```
-pod repo update
-```
-Adapt your Podfile and add the pods according to the product(s) you want use. Check the following example how a Podfile could look like, with a list of all available Jumio pods:
-
-⚠️⚠️&nbsp;&nbsp;__Note:__ Please do not include everything! Make sure to __only__ use pods that provide to the services you need!
-```
-source 'https://github.com/CocoaPods/Specs.git'
-
-platform :ios, '11.0'
-use_frameworks! # Required for proper framework handling
-
-pod 'Jumio/Slim', '~>4.2.0' # Use JumioSDK with manual capturing
-pod 'Jumio/LineFinder', '~>4.2.0' # Use JumioSDK with manual capturing and linefinder functionality
-pod 'Jumio/MRZ', '~>4.2.0' # Use JumioSDK with manual capturing and MRZ functionality
-pod 'Jumio/Barcode', '~>4.2.0' # Use JumioSDK with manual capturing and barcode functionality
-pod 'Jumio/NFC', '~>4.2.0' # Use JumioSDK with manual capturing, linefinder, MRZ and NFC functionality
-pod 'Jumio/DeviceRisk', '~>4.2.0' # Use JumioSDK in combination with device fingerprinting functionality
-
-pod 'Jumio/Jumio', '~>4.2.0' # Use JumioSDK with all available scanning methods
-
-pod 'Jumio/SlimLiveness', '~>4.2.0' # Use JumioSDK with manual capturing and liveness functionality
-pod 'Jumio/LineFinderLiveness', '~>4.2.0' # Use JumioSDK with manual capturing, linefinder and liveness functionality
-pod 'Jumio/MRZLiveness', '~>4.2.0' # Use JumioSDK with manual capturing, MRZ and liveness functionality
-pod 'Jumio/BarcodeLiveness', '~>4.2.0' # Use JumioSDK with manual capturing, barcode and liveness functionality
-pod 'Jumio/NFCLiveness', '~>4.2.0' # Use JumioSDK with manual capturing, linefinder, MRZ, NFC and liveness functionality functionality
-
-pod 'Jumio/Liveness', '~>4.2.0' # Use JumioSDK with all available scanning methods and liveness functionality
-```
-
-#### Certified Liveness Vendor
-Jumio uses Certified Liveness technology to determine liveness.
-Please make sure to add the following post-install hook to your Podfile if you are using Jumio's liveness provider iProov:
-
-```
-pod 'Jumio/xxxLiveness'
-
-# mandatory for all functionalities that include liveness (iProov)
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    if ['iProov', 'Socket.IO-Client-Swift', 'Starscream'].include? target.name
-      target.build_configurations.each do |config|
-          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-      end
-    end
-  end
-end
-```
-
-Install the pods to your project via Terminal:
-```
-pod install
-```
-
-### Via Carthage
-
-##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.2.0, but will be available for upcoming releases.  
-
-Jumio supports Carthage as dependency management tool for easy integration of the SDK.
-
-Adapt you Cartfile and add the JumioMobileSDK dependency. Check the following example how a Cartfile could look like:
-
-```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.9.4
-```
-
-Update you Carthage dependencies via Terminal:
-```
-carthage update
-```
+Additionally, check out the [Xcode sample project](sample) to learn the most common use. Make sure to use the device only-frameworks for app submissions to the AppStore. Read more detailed information on this here: [Manual integration](docs/integration_guide.md#manually)
 
 ## App Thinning and Size Matters
 App thinning (app slicing, bitcode and on-demand resources) is supported within the SDK. For app slicing, the image resources are placed within a xcassets collection. For ID Verification, some resource files (e.g. images) are loaded on demand.
 
 In case you experience a build error when building your app in Debug configuration and aim to run it on a device, we advise to temporarily disable the build setting "Enable Bitcode" in your Xcode project.
-
-### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.2.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.2.0/ios-jumio-mobile-sdk-4.2.0.zip).
-
-__Using iProov (manually):__
-* iProov.xcframework
-* Starscream.framework (iProov dependency)
-* SocketIO.framework (iProov dependency)
-
-ℹ️&nbsp;&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time. In case your application uses ZoOm as a liveness vendor, please contact [Jumio support](https://support.jumio.com) or your account manager directly.
-
-The Jumio Mobile SDK consists of several dynamic frameworks. Depending on which product you use, you'll have to add the right frameworks to your project.
-
-Please see [Strip unused frameworks](docs/integration_faq.md#strip-unused-frameworks) for more information.
-
-The framework binaries are available with support for device and simulator architecture. Make sure to remove the simulator architecture from our frameworks for app submissions to the AppStore. If this step is not performed, your submission will be rejected by Apple. Add the following code snippet as run script build phase to your app project and ensure that it is executed after the frameworks are embedded. Please see the required setup in our sample project.
-
-ℹ️&nbsp;&nbsp;__Note:__ The simulator architecture is automatically removed if using Cocoapods via "[CP] Embed Pods Frameworks" build phase.
-
-```shell
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  $PROJECT_DIR/remove-simulator-architecture.sh
-fi
-```
-Code snippet source: https://stackoverflow.com/questions/30547283/submit-to-app-store-issues-unsupported-architecture-x86
-
-Add the following linker flags to your Xcode Build Settings:  
-ℹ️&nbsp;&nbsp;__Note:__ Added automatically if using CocoaPods.
-- "-lc++"
-- "-ObjC" (recommended) or -all_load
-
-Make sure that the following Xcode build settings in your app are set accordingly:
-
-| Setting | Value |
-| :--- | :---: |
-| Link Frameworks Automatically | YES |
 
 ## Language Localization
 Our SDK supports localization for different languages. All label texts and button titles can be changed and localized using the `Localizable-Jumio.strings` file. Just adapt the values to your required language, add it to your app or framework project and mark it as Localizable. This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
@@ -305,6 +190,75 @@ Please check out our [sample project](sample) to see how to use the strings file
 
 Our SDK supports accessibility features. Visually impaired users can enable __VoiceOver__ or increase __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customized.
 
+# Document Verification
+As of iOS SDK 4.3.0, Document Verification functionality is available.
+This functionality allows users to submit a number of different document types (e.g. a utility bill or bank statement) in digital form and verify the validity and authenticity of this document.
+
+Documents can be submitted using one of two ways: Taking a photo of the document or uploading a PDF file.
+For more details, please refer to our [integration guide](docs/integration_guide.md#jumio-document-credential).
+
+### Supported Documents:
+* BC (Birth certificate)
+* BS (Bank statement)
+* CAAP (Cash advance application)
+* CB (Council bill)
+* CRC (Corporate resolution certificate)
+* HCC (Health care card)
+* IC (Insurance card)
+* LAG (Lease agreement)
+* LOAP (Loan application)
+* MEDC (Medicare card)
+* MOAP (Mortgage application)
+* PB (Phone bill)
+* SEL (School enrollment letter)
+* SENC (Seniors card)
+* SS (Superannuation statement)
+* SSC (Social security card)
+* STUC (Student card)
+* TAC (Trade association card)
+* TR (Tax return)
+* UB (Utility bill)
+* VC (Voided check)
+* VT (Vehicle title)
+* WWCC (Working with children check)
+
+ℹ️&nbsp;&nbsp;__Note:__ To enable the use of this feature, please contact [Jumio support](#support).
+
+# Analytics With Datadog
+Analytic feedback and diagnostics enable us to continually improve our SDK and its performance, as well as investigate potential issues. With the Jumio SDK, we use [Datadog](https://github.com/DataDog/dd-sdk-ios) as an optional tool to collect diagnostic information. Data collected includes specific SDK information like version numbers, started and finished SDK instances and scan workflows, thrown exceptions and error information, as well as other mobile events. Please note that gathering analytics data requires user consent due to legal regulations such as GDPR. The consent is granted when our MLA is accepted.
+
+To benefit from Datadog, include the following pod in your Podfile (for more details, see [Cocoapods Section](docs/integration_guide.md#via-cocoapods):
+
+```
+pod 'Jumio/Datadog', '~>4.3.0'
+```
+
+In this case, it is also necessary to include the following post-install hook in your Podfile:
+
+```
+# mandatory for all functionalities that include liveness (iProov)
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if ['DatadogSDK'].include? target.name
+      target.build_configurations.each do |config|
+          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+      end
+    end
+  end
+end
+```
+
+Alternatively, add Datadog manually by including the following framework in your project (for more details, see [Manual Section](docs/integration_guide.md#manually)):
+
+```
+JumioDatadog.xcframework
+Datadog.xcframework
+```
+
+To grant or revoke user consent, please use `Jumio.SDK.giveDataDogConsent(enabled: Bool)` method.
+
+⚠️&nbsp;&nbsp;__Note:__ The use of the Datadog module is only possible if Datadog SDK is not already included in your application.
+
 ----
 
 # Security
@@ -318,7 +272,7 @@ Please refer to our [Change Log](docs/changelog.md) for more information about o
 # Support
 
 ## Previous Version
-The previous major release version 4.1.2 of the Jumio Mobile SDK is supported until 2022-08-27.
+The previous major release version 4.2.0 of the Jumio Mobile SDK is supported until 2022-11-30.
 
 In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
 Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.

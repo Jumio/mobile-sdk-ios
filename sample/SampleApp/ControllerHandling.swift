@@ -86,7 +86,7 @@ extension ControllerHandling: Jumio.Controller.Delegate {
             case .face:
                 return "\u{2022} capture your face"
             case .document:
-                return "\u{2022} document is not yet supported"
+                return "\u{2022} capture your document"
             case .data:
                 return "\u{2022} device risk "
             @unknown default:

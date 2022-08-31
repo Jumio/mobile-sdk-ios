@@ -9,6 +9,7 @@ import Jumio
 
 protocol CredentialHandlingDelegate: AnyObject {
     func credentialNeedsConfiguration(for countries: [String: [Jumio.Document]])
+    func credentialNeedsConfiguration(for acquireModes: [Jumio.Acquire.Mode])
     func credential(initialized scanPartHandling: ScanPartHandling)
 }
 
@@ -37,7 +38,7 @@ class CredentialHandling {
         // check if a credentials needs further configuration
         // for example ID credentials without preselection will need a selection of country + document
         if !isConfigured {
-            delegate?.credentialNeedsConfiguration(for: countries)
+            configure(credential: credential)
         } else {
             // if it is already configured, you can directly check which credential parts needs to be scanned
             credentialParts = credential?.parts
@@ -50,9 +51,14 @@ class CredentialHandling {
         guard let idCredential = credential as? Jumio.IDCredential,
               idCredential.isSupportedConfiguration(country: country, document: document) else { return }
         idCredential.setConfiguration(country: country, document: document)
-        // after setting a valid configuration, credential parts are available as they might differ based on set configuration
-        credentialParts = idCredential.parts
-        startNextScanPart()
+        configurationFinished()
+    }
+    
+    func select(acquireMode: Jumio.Acquire.Mode) {
+        guard let documentCredential = credential as? Jumio.DocumentCredential,
+              documentCredential.isSupportedConfiguration(acquireMode: acquireMode) else { return }
+        documentCredential.setConfiguration(acquireMode: acquireMode)
+        configurationFinished()
     }
     
     func startNextScanPart(previousCredentialPart: Jumio.Credential.Part? = nil) {
@@ -97,4 +103,21 @@ class CredentialHandling {
         info = nil
         credentialParts = nil
     }
+    
+    private func configure(credential: Jumio.Credential?) {
+        if (credential as? Jumio.IDCredential) != nil {
+            // for id credentials, the country and document type needs to be selected
+            delegate?.credentialNeedsConfiguration(for: countries)
+        } else if let credential = credential as? Jumio.DocumentCredential {
+            // for document credentials, the acquire mode (either camera or file) needs to be selected
+            delegate?.credentialNeedsConfiguration(for: credential.acquireModes)
+        }
+    }
+    
+    private func configurationFinished() {
+        // after setting a valid configuration, credential parts are available as they might differ based on set configuration
+        credentialParts = credential?.parts
+        startNextScanPart()
+    }
+    
 }

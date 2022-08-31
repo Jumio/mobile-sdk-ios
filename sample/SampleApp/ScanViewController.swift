@@ -17,6 +17,7 @@ class ScanViewController: UIViewController {
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var containerImageTakenView: UIView!
     @IBOutlet weak var processingLabel: UILabel!
+    @IBOutlet weak var extractionStateLabel: UILabel!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class ScanViewController: UIViewController {
         informationLabel.text = "\(customUI?.credentialPart ?? "") \(customUI?.scanMode ?? "")"
         containerShutterView.isHidden = !scanView.isShutterEnabled
         fallbackButton.isHidden = !(customUI?.hasFallback ?? true)
+        extractionStateLabel.isHidden = true
     }
     
     func presentLegalHint(with message: String) {
@@ -49,6 +51,11 @@ class ScanViewController: UIViewController {
     
     func showProcessing() {
         processingLabel.isHidden = false
+    }
+    
+    func updateExtractionState(message: String) {
+        extractionStateLabel.isHidden = false
+        extractionStateLabel.text = message
     }
     
     // MARK: - IBActions

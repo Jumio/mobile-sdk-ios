@@ -118,8 +118,10 @@ extension CustomUINavigationController {
         case error
         case confirmation
         case scan
+        case file
         case loading
         case selection
+        case acquireMode
         case help
         case retry
     }
@@ -153,6 +155,10 @@ extension CustomUINavigationController {
     
     func select(country: String, document: Jumio.Document) {
         credentialHandling?.select(country: country, document: document)
+    }
+    
+    func select(acquireMode: Jumio.Acquire.Mode) {
+        credentialHandling?.select(acquireMode: acquireMode)
     }
     
     func startNextCredential() {
@@ -203,12 +209,17 @@ extension CustomUINavigationController {
         case .nfc: return "NFC"
         case .faceManual: return "Face manual"
         case .faceIProov: return "Face iProov"
+        case .docFinder: return "Doc Finder"
         default: return "unknown"
         }
     }
     
     func attach(scanView: Jumio.Scan.View) {
         scanPartHandling?.attach(scanView: scanView)
+    }
+    
+    func attach(fileAttacher: Jumio.FileAttacher) {
+        scanPartHandling?.attach(fileAttacher: fileAttacher)
     }
     
     func attach(confirmationView: Jumio.Confirmation.View) {
@@ -267,6 +278,12 @@ extension CustomUINavigationController: CredentialHandling.Delegate {
         pushViewController(selectionViewController, animated: true)
     }
     
+    func credentialNeedsConfiguration(for acquireModes: [Jumio.Acquire.Mode]) {
+        guard let selectionViewController = instantiate(viewController: .acquireMode) as? AcquireModeViewController else { return }
+        selectionViewController.modes = acquireModes
+        pushViewController(selectionViewController, animated: true)
+    }
+    
     func credential(initialized scanPartHandling: ScanPartHandling) {
         self.scanPartHandling?.clean()
         self.scanPartHandling = scanPartHandling
@@ -289,6 +306,16 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
     func scanPartShowScanView() {
         guard let scanViewController = instantiate(viewController: .scan) as? ScanViewController else { return }
         pushViewController(scanViewController, animated: true)
+    }
+    
+    func scanPartAttachFile() {
+        guard
+            (topViewController as? FileViewController) == nil,
+            let fileViewController = instantiate(viewController: .file) as? FileViewController
+        else {
+            return
+        }
+        pushViewController(fileViewController, animated: true)
     }
     
     func scanPartShowImageTaken() {
@@ -323,6 +350,20 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
     func scanPartShowLegalHint(with message: String) {
         guard let scanViewController = topViewController as? ScanViewController else { return }
         scanViewController.presentLegalHint(with: message)
+    }
+    
+    func scanPartShowExtractionState(with extractionState: Jumio.Scan.Update.ExtractionState) {
+        guard let scanViewController = topViewController as? ScanViewController else { return }
+        var message = ""
+        switch extractionState {
+        case .centerId: message = "CENTER_ID"
+        case .tooClose: message = "TOO_CLOSE"
+        case .moveCloser: message = "MOVE_CLOSER"
+        case .holdStraight: message = "HOLD_STRAIGHT"
+        case .holdStill: message = "HOLD_STILL"
+        @unknown default: assertionFailure("unknown extraction state")
+        }
+        scanViewController.updateExtractionState(message: message)
     }
     
     func scanPartFinished() {

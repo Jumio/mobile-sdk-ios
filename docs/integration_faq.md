@@ -10,7 +10,6 @@
 	- [Bitcode](#bitcode)
 - [Jumio Authentication Workflow Integration](#jumio-authentication-workflow-integration)
 - [Language Localization](#language-localization)
-	- [iProov String Keys](#iproov-string-keys)
 - [Glossary of Commonly Used Abbreviations ](#glossary)
 - [Jumio Support](#jumio-support)
 
@@ -59,19 +58,21 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 2.58 MB | base              |   
-| Slim + Liveness            | 3.36 MB | base, iproov      |
-| Linefinder                 | 3.12 MB | base, linefinder  |
-| Linefinder + Liveness      | 3.89 MB | base, linefinder, iproov      |
-| MRZ                        | 4.58 MB | base, mrz, linefinder         |
-| MRZ + Liveness             | 5.35 MB | base, mrz, linefinder, iproov |
-| NFC                        | 5.78 MB | base, mrz, nfc, linefinder         |
-| NFC + Liveness             | 6.55 MB | base, mrz, nfc, linefinder, iproov |
-| Barcode                    | 4.09 MB | base, barcode, linefinder          |
-| Barcode + Liveness         | 4.86 MB | base, barcode, linefinder, iproov  |
-| All                        | 6.75 MB | base, mrz, nfc, barcode, linefinder     |
-| All + Liveness             | 7.52 MB | base, mrz, nfc, barcode, linefinder, iproov    |
-| All + Liveness + DeviceRisk| 7.86 MB | base, mrz, nfc, barcode, linefinder, iproov, DeviceRisk    |
+| Slim                       | 2.83 MB | base              |
+| Slim + Liveness            | 3.62 MB | base, iproov      |
+| Linefinder                 | 3.37 MB | base, linefinder  |
+| Linefinder + Liveness      | 4.15 MB | base, linefinder, iproov      |
+| MRZ                        | 4.83 MB | base, mrz, linefinder         |
+| MRZ + Liveness             | 5.61 MB | base, mrz, linefinder, iproov |
+| NFC                        | 5.97 MB | base, mrz, nfc, linefinder         |
+| NFC + Liveness             | 6.75 MB | base, mrz, nfc, linefinder, iproov |
+| Barcode                    | 4.34 MB | base, barcode, linefinder          |
+| Barcode + Liveness         | 5.13 MB | base, barcode, linefinder, iproov  |
+| All                        | 6.94 MB | base, mrz, nfc, barcode, linefinder     |
+| All + Liveness             | 7.73 MB | base, mrz, nfc, barcode, linefinder, iproov    |
+| All + Liveness + DeviceRisk| 8.07 MB | base, mrz, nfc, barcode, linefinder, iproov, devicerisk    |
+| All + Liveness + DocFinder | 9.33 MB | base, mrz, nfc, barcode, linefinder, iproov, docfinder     |
+| All + Liveness + Datadog   | 8.48 MB | base, mrz, nfc, barcode, linefinder, iproov, datadog       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 
@@ -115,7 +116,12 @@ Runtime language changes *within* the SDK or separate language support (meaning 
 ### Accessibility
 Our SDK supports accessibility features. Visually impaired users can enable __VoiceOver__ or increase __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customized.
 
-### Overview of Scanning Methods
+### Overview of thods
+
+#### Autocapture
+Combines all previously existing scanning methods into one automatic, seamless experience.
+
+![Autocapture Success](images/capturing_methods/autocapture_01.png)  ![Autocapture Scanning](images/capturing_methods/autocapture_02.png)
 
 #### Linefinder
 Scanning using edge detection.
