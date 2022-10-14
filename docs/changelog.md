@@ -14,10 +14,8 @@ All notable changes, such as SDK releases, updates and fixes, are documented in 
 For detailed technical changes please refer to our [Transition Guide](transition_guide.md).
 
 ## Support Period
-Current SDK version: __4.3.0__
-The previous release version 4.2.0 of the Jumio Mobile SDK is supported until 2022-11-30.
-
-When the support period has expired, bug fixes and technical support will no longer be provided. Current bugs are typically fixed in the upcoming versions. __Older SDK versions will keep functioning with our server until further notice,__ but we highly recommend that you always update to the latest version to benefit from SDK improvements and bug fixes.
+Current SDK version: __4.2.0__
+Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
 
 ## SDK Version: __4.3.0__
 ![Improvement] Alignment of previously existing scanning method and improved user experience through addition of Autocapture module [ID Verification]
