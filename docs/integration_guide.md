@@ -20,7 +20,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.3.0__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.3.1__
 
 For breaking technical changes, please read our [Transition Guide](transition_guide.md).
 
@@ -83,26 +83,26 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 use_frameworks! # Required for proper framework handling
 
-pod 'Jumio/Slim', '~>4.3.0' # Manual Capture functionality
-pod 'Jumio/LineFinder', '~>4.3.0' # Manual Capture and Linefinder functionality
-pod 'Jumio/MRZ', '~>4.3.0' # Manual Capture and MRZ functionality
-pod 'Jumio/Barcode', '~>4.3.0' # Manual Capture and Barcode functionality
-pod 'Jumio/NFC', '~>4.3.0' # Manual Capture, Linefinder, MRZ and NFC functionality
+pod 'Jumio/Slim', '~>4.3.1' # Manual Capture functionality
+pod 'Jumio/LineFinder', '~>4.3.1' # Manual Capture and Linefinder functionality
+pod 'Jumio/MRZ', '~>4.3.1' # Manual Capture and MRZ functionality
+pod 'Jumio/Barcode', '~>4.3.1' # Manual Capture and Barcode functionality
+pod 'Jumio/NFC', '~>4.3.1' # Manual Capture, Linefinder, MRZ and NFC functionality
 
-pod 'Jumio/Jumio', '~>4.3.0' # Use JumioSDK with all available scanning methods
+pod 'Jumio/Jumio', '~>4.3.1' # Use JumioSDK with all available scanning methods
 
-pod 'Jumio/SlimLiveness', '~>4.3.0' # Manual Capture and Liveness functionality
-pod 'Jumio/LineFinderLiveness', '~>4.3.0' # Manual Capture, Linefinder and Liveness functionality
-pod 'Jumio/MRZLiveness', '~>4.3.0' # Manual Capture, MRZ and Liveness functionality
-pod 'Jumio/BarcodeLiveness', '~>4.3.0' # Manual Capture, Barcode and Liveness functionality
-pod 'Jumio/NFCLiveness', '~>4.3.0' # Manual Capture, Linefinder, MRZ, NFC and Liveness functionality
+pod 'Jumio/SlimLiveness', '~>4.3.1' # Manual Capture and Liveness functionality
+pod 'Jumio/LineFinderLiveness', '~>4.3.1' # Manual Capture, Linefinder and Liveness functionality
+pod 'Jumio/MRZLiveness', '~>4.3.1' # Manual Capture, MRZ and Liveness functionality
+pod 'Jumio/BarcodeLiveness', '~>4.3.1' # Manual Capture, Barcode and Liveness functionality
+pod 'Jumio/NFCLiveness', '~>4.3.1' # Manual Capture, Linefinder, MRZ, NFC and Liveness functionality
 
-pod 'Jumio/Liveness', '~>4.3.0' # All available scanning methods and Liveness functionality
+pod 'Jumio/Liveness', '~>4.3.1' # All available scanning methods and Liveness functionality
 
-pod 'Jumio/DocFinder', '~>4.3.0' # Autocapture functionality
+pod 'Jumio/DocFinder', '~>4.3.1' # Autocapture functionality
 
-pod 'Jumio/DeviceRisk', '~>4.3.0' # Device fingerprinting functionality (optional)
-pod 'Jumio/Datadog', '~>4.3.0' # Analytics functionality (optional)
+pod 'Jumio/DeviceRisk', '~>4.3.1' # Device fingerprinting functionality (optional)
+pod 'Jumio/Datadog', '~>4.3.1' # Analytics functionality (optional)
 ```
 
 #### Certified Face Liveness
@@ -148,7 +148,7 @@ end
 
 ### Via Carthage
 
-##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.3.0, but will be available for upcoming releases.  
+##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.3.1, but will be available for upcoming releases.  
 
 Jumio supports Carthage as dependency management tool for easy integration of the SDK.
 
@@ -164,7 +164,7 @@ carthage update
 ```
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.3.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.3.0/ios-jumio-mobile-sdk-4.3.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.3.1.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.3.1/ios-jumio-mobile-sdk-4.3.1.zip).
 
 __Using iProov (manually):__
 * iProov.xcframework
@@ -551,7 +551,7 @@ attacher.set(url: "path/to/your/file")
 The following sequence diagram outlines an overview of ScanPart handling details:
 ![ScanPart Happy Path Diagram](images/happy_paths/scanpart_happy_path_diagram.png)
 
-Start the scanning process by initializing the scan part. Provide a `Jumio.Scan.Side` from the list below:
+Start the scanning process by initializing the scan part. Provide a `Jumio.Credential.Part` from the list below:
 
 * [`Jumio.Scan.Mode`][jumioScanMode] values: `manual`, `faceManual`, `lineFinder`, `barcode`, `mrz`, `faceIProov`, `deviceRisk`
 

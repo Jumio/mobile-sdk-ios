@@ -14,8 +14,11 @@ All notable changes, such as SDK releases, updates and fixes, are documented in 
 For detailed technical changes please refer to our [Transition Guide](transition_guide.md).
 
 ## Support Period
-Current SDK version: __4.2.0__    
+Current SDK version: __4.3.1__     
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: __4.3.1__
+![Fix] Fixed camera focus issue with iPhone 14 Pro
 
 ## SDK Version: __4.3.0__
 ![Improvement] Alignment of previously existing scanning method and improved user experience through addition of Autocapture module [ID Verification]
