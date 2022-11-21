@@ -28,6 +28,13 @@
 - [FAQ](docs/integration_faq.md)
 - [Known Issues](docs/known_issues.md)
 
+# Support
+
+__This version is out of support and will be end of life on 2023-12-31.__
+
+In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
+Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the [latest version](https://github.com/Jumio/Mobile-SDK-IOS/tree/master) to benefit from SDK improvements and bug fixes.
+
 # Overview
 The Jumio Software Development Kit (SDK) provides you with a set of tools and UIs (default or custom) to develop an iOS application perfectly fitted to your specific needs.
 
@@ -139,17 +146,17 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks! # Required for proper framework handling
 
-pod 'JumioMobileSDK', '~>3.9.4' # Use ID Verification, Authentication, Document Verification and BAM Checkout together in your app
+pod 'JumioMobileSDK', '~>3.9.6' # Use ID Verification, Authentication, Document Verification and BAM Checkout together in your app
 
-pod 'JumioMobileSDK/Netverify', '~>3.9.4' # Use full ID Verification and Authentication functionality
-pod 'JumioMobileSDK/NetverifyBase', '~>3.9.4' # For Fastfill, ID Verification basic functionality
-pod 'JumioMobileSDK/NetverifyNFC', '~>3.9.4' # For Fastfill, ID Verification functionality with NFC extraction
-pod 'JumioMobileSDK/NetverifyBarcode', '~>3.9.4' # For Fastfill, ID Verification functionality with barcode extraction
-pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.4' # For Fastfill, ID Verification functionality with Identity Verification, Authentication
+pod 'JumioMobileSDK/Netverify', '~>3.9.6' # Use full ID Verification and Authentication functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.9.6' # For Fastfill, ID Verification basic functionality
+pod 'JumioMobileSDK/NetverifyNFC', '~>3.9.6' # For Fastfill, ID Verification functionality with NFC extraction
+pod 'JumioMobileSDK/NetverifyBarcode', '~>3.9.6' # For Fastfill, ID Verification functionality with barcode extraction
+pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.6' # For Fastfill, ID Verification functionality with Identity Verification, Authentication
 
-pod 'JumioMobileSDK/DocumentVerification', '~>3.9.4' # Use Document Verification functionality
+pod 'JumioMobileSDK/DocumentVerification', '~>3.9.6' # Use Document Verification functionality
 
-pod 'JumioMobileSDK/BAMCheckout', '~>3.9.4' # Use BAM Checkout functionality
+pod 'JumioMobileSDK/BAMCheckout', '~>3.9.6' # Use BAM Checkout functionality
 ```
 
 #### Certified Liveness Vendor
@@ -157,10 +164,10 @@ Jumio uses Certified Liveness technology to determine liveness.
 
 ```
 // any of the necessary subpods, for example:
-pod 'JumioMobileSDK/NetverifyBase', '~>3.9.4' # For Fastfill, ID Verification basic functionality
+pod 'JumioMobileSDK/NetverifyBase', '~>3.9.6' # For Fastfill, ID Verification basic functionality
 
 // mandatory for Identity Verification
-pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.4' # For Fastfill, ID Verification functionality with Identity Verification, Authentication
+pod 'JumioMobileSDK/NetverifyFace+iProov', '~>3.9.6' # For Fastfill, ID Verification functionality with Identity Verification, Authentication
 
 // mandatory for Identity Verification
 post_install do |installer|
@@ -190,7 +197,7 @@ Jumio supports Carthage as dependency management tool for easy integration of th
 Adapt you Cartfile and add the JumioMobileSDK dependency. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.9.4
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioMobileSDK.json" == 3.9.6
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -209,7 +216,7 @@ In case you experience a build error when building your app in Debug configurati
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-3.9.4.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.9.4/ios-jumio-mobile-sdk-3.9.4.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-3.9.6.zip](https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.9.6/ios-jumio-mobile-sdk-3.9.6.zip).
 
 __Using iProov (manually):__
 * JumioIProov.framework
@@ -262,14 +269,6 @@ All SDK related traffic is sent over HTTPS using TLS and public key pinning, and
 
 # Release Notes
 Please refer to our [Change Log](docs/changelog.md) for more information about our current SDK version and further details.
-
-# Support
-
-## Previous Version
-The previous release version 3.9.3 of the Jumio Mobile SDK is supported until 2021-12-10.
-
-In case the support period is expired, no bug fixes and technical support are provided anymore. Current bugs are typically fixed in the upcoming versions.
-Older SDK versions will keep functioning with our server until further notice, but we highly recommend to always update to the latest version to benefit from SDK improvements and bug fixes.
 
 ## Two-factor Authentication
 If you want to enable two-factor authentication for your Jumio customer portal [please contact us.](https://support.jumio.com) Once enabled, users will be guided through the setup upon their first login to obtain a security code using the "Google Authenticator" app.

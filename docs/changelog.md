@@ -8,6 +8,15 @@
 # Change Log
 All notable changes, such as SDK releases, updates and fixes, are documented in this file.
 
+## SDK Version: __3.9.6__
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed camera focus issue with iPhone 14 Pro and 14 Pro Max devices. [ID Verification]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed navigation bar UI issue for iOS 15 and 16 versions. [ID Verification]
+
+![Fixes](https://img.shields.io/badge/Fix-success) Fixed status bar issue for iPhone 14 Pro and 14 Pro Max devices. [ID Verification]
+
+![Improvement](https://img.shields.io/badge/Improvement-green) OpenSSL update to version 1.1.1 to fix vulnerabilities used for NFC. [Identity Verification]
+
 ## SDK Version: __3.9.4__
 ![Fixes](https://img.shields.io/badge/Fix-success) iProov SDK version update to 9.0.1, which fixes an issue introduced in SDK 3.9.3 when building with XCode versions prior to XCode 12.5. [Identity Verification]
 

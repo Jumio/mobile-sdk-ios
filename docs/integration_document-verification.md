@@ -14,7 +14,7 @@ Document Verification is a powerful solution to enable scanning various types (U
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/DocumentVerification/)
 
 ## Transition Guide
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: 3.9.4
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: [__4.0.0__](https://github.com/Jumio/Mobile-SDK-IOS/blob/master/docs/changelog.md)
 
 For breaking technical changes, please read our [transition guide](transition-guide_document-verification.md).
 

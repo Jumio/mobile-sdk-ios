@@ -3,7 +3,10 @@
 # Transition guide for BAM Checkout
 This section only covers the breaking technical changes that should be considered when updating from the previous version.
 
-⚠️ When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary. If you're updating from SDK version __3.7.1__ to __3.9.4__, the changes outlined in __3.7.2, 3.8.0, 3.9.0__ and all subsequent versions are __still relevant__.
+⚠️ When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary. If you're updating from SDK version __3.7.1__ to __3.9.6__, the changes outlined in __3.7.2, 3.8.0, 3.9.0__ and all subsequent versions are __still relevant__.
+
+## 3.9.6
+No backward incompatible changes.
 
 ## 3.9.4
 No backward incompatible changes.
