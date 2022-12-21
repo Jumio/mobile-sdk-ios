@@ -184,7 +184,7 @@ Our SDK supports localization for different languages. All label texts and butto
 
 Jumio SDK products support following languages for your convenience:
 
-_Afrikaans, Arabic, Bulgarian, Chinese(Simplified), Chinese(Traditional), Croatian, Czech, Danish, Dutch, Estonian, English, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Khmer, Korean, Latvian, Lithuanian, Maltese, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Vietnamese, Zulu_
+_Afrikaans, Arabic, Bulgarian, Chinese(Simplified), Chinese(Traditional), Croatian, Czech, Danish, Dutch, Estonian, English, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Khmer, Korean, Latvian, Lithuanian, Maltese, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Vietnamese, Zulu_
 
 Please check out our [sample project](sample) to see how to use the strings files in your app.
 
@@ -236,7 +236,6 @@ pod 'Jumio/Datadog', '~>4.3.1'
 In this case, it is also necessary to include the following post-install hook in your Podfile:
 
 ```
-# mandatory for all functionalities that include liveness (iProov)
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     if ['DatadogSDK'].include? target.name

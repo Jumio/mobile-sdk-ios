@@ -196,6 +196,8 @@ extension CustomUINavigationController {
         case .face: return "Face"
         case .nfc: return "NFC"
         case .deviceRisk: return "Device Risk"
+        case .multipart: return "Multi Part"
+        case .document: return "Document"
         default: return "unknown"
         }
     }
@@ -222,12 +224,12 @@ extension CustomUINavigationController {
         scanPartHandling?.attach(fileAttacher: fileAttacher)
     }
     
-    func attach(confirmationView: Jumio.Confirmation.View) {
-        scanPartHandling?.attach(confirmationView: confirmationView)
+    func attach(confirmationHandler: Jumio.Confirmation.Handler) {
+        scanPartHandling?.attach(confirmationHandler: confirmationHandler)
     }
     
-    func attach(rejectView: Jumio.Reject.View) {
-        scanPartHandling?.attach(rejectView: rejectView)
+    func attach(rejectHandler: Jumio.Reject.Handler) {
+        scanPartHandling?.attach(rejectHandler: rejectHandler)
     }
     
     func startNextScanPart() {

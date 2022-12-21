@@ -66,4 +66,13 @@ class ScanViewController: UIViewController {
     @IBAction func takePicture(_ sender: Any) {
         scanView.takePicture()
     }
+    
+    @IBAction func switchCamera(_ sender: Any) {
+        scanView.switchCamera()
+    }
+    
+    @IBAction func flash(_ sender: Any) {
+        scanView.flash = !scanView.flash
+    }
+    
 }

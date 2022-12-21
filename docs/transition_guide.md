@@ -6,6 +6,113 @@ This section only covers the breaking technical changes that should be considere
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.4.0
+#### Changes to Public API
+* New `Jumio.Credential.Part`
+  * multipart
+* New `Jumio.Scan.Step`
+  * nextPart
+* New `Jumio.Retry.Reason.iProov`:
+  * faceMisaligned
+  * eyesClosed
+  * faceTooFar
+  * faceTooClose
+  * sunglasses
+  * obscuredFace
+  * userTimeout
+  * notSupported
+* Removed `Jumio.Retry.Reason.iProov`:
+  * ambiguousOutcome
+  * lightingFlash
+  * lightingBacklit
+  * motionMouth
+* New options in `Jumio.Theme.IProov`:
+  * filterBackgroundColor
+  * surroundColor
+  * livenessAssuranceCompletedOvalStrokeColor
+* Renamed options in `Jumio.Theme.IProov`:
+  * lineColor to filterForegroundColor
+  * headerTextColor to titleTextColor
+  * floatingPromptRoundedCorners to promptRoundedCorners
+  * genuinePresenceAssuranceReadyOverlayStrokeColor to genuinePresenceAssuranceReadyOvalStrokeColor
+  * genuinePresenceAssuranceNotReadyOverlayStrokeColor to genuinePresenceAssuranceNotReadyOvalStrokeColor
+  * livenessAssuranceOverlayStrokeColor to livenessAssuranceOvalStrokeColor
+  * genuinePresenceAssuranceReadyFloatingPromptBackgroundColor to promptBackgroundColor
+  * genuinePresenceAssuranceNotReadyFloatingPromptBackgroundColor to promptBackgroundColor
+  * livenessAssuranceFloatingPromptBackgroundColor to promptBackgroundColor
+* Removed options in `Jumio.Theme.IProov`:
+  * headerBackgroundColor
+  * footerBackgroundColor
+  * livenessAssurancePrimaryTintColor
+  * livenessAssuranceSecondaryTintColor
+  * genuinePresenceAssuranceProgressBarColor
+  * genuinePresenceAssuranceNotReadyTintColor
+  * genuinePresenceAssuranceReadyTintColor
+  * floatingPromptEnabled
+
+#### Localization Keys
+The following keys have been added:
+  * IProov_PromptAlignFace
+  * IProov_FailureEyesClosed
+  * IProov_FailureFaceTooClose
+  * IProov_FailureFaceTooFar
+  * IProov_FailureMisalignedFace
+  * IProov_FailureNotSupported
+  * IProov_FailureObscuredFace
+  * IProov_FailureSunglasses
+  * IProov_FailureTooBright
+  * IProov_FailureTooDark
+  * IProov_FailureTooMuchMovement
+  * IProov_FailureUnknown
+  * IProov_FailureUserTimeout
+  * IProov_AccessibilityPromptAlignFace
+  * IProov_AccessibilityPromptScanning
+The following keys have been renamed:
+  * IProov_ErrorCameraPermissionDeniedMessageIos to IProov_ErrorCameraPermissionDeniedMessage
+The following keys have been removed:
+  * IProov_MessageFormat
+  * IProov_PromptTapToBegin
+  * IProov_PromptLivenessAlignFace
+  * IProov_PromptLivenessNoTarget
+  * IProov_PromptGenuinePresenceAlignFace
+  * IProov_ProgressStreamingSlow
+  * IProov_PromptGrantPermission
+  * IProov_PromptGrantPermissionMessage
+  * IProov_FailureAmbiguousOutcome
+  * IProov_FailureLightingBacklit
+  * IProov_FailureLightingFaceTooBright
+  + IProov_FailureLightingFlashReflectionTooLow
+  * IProov_FailureLightingTooDark
+  * IProov_FailureMotionTooMuchMouthMovement
+  * IProov_FailureMotionTooMuchMovement
+
+#### Livness
+* We have seperated our liveness soultion in `JumioIProov.xcframework`. If you want to integrate our liveness solution you need to add this framework beside `Jumio.xcframewrok` to your project. 
+
+#### Cocoapods
+* The following pods have been removed. Instead `Jumio/Liveness` should be added in your pod file.
+  * `pod 'Jumio/SlimLiveness'`
+  * `pod 'Jumio/LineFinderLiveness'`
+  * `pod 'Jumio/MRZLiveness'`
+  * `pod 'Jumio/BarcodeLiveness'`
+  * `pod 'Jumio/NFCLiveness'`
+* install hook for liveness is changed in the `podfile`:
+```
+post_install do |installer|
+   installer.pods_project.targets.each do |target|
+     if ['iProov', 'SwiftProtobuf', 'Starscream'].include? target.name
+       target.build_configurations.each do |config|
+           config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+       end
+     end
+    end
+end
+```
+
+#### Frameworks
+* iProov dependency `SwiftProtobuf` is added
+* iProov dependency `SocketIO` is removed
+
 ## 4.3.1
 No backward incompatible changes.
 

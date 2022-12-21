@@ -69,14 +69,14 @@ class ScanPartHandling {
         fileAttacher.attach(scanPart: scanPart)
     }
     
-    func attach(confirmationView: Jumio.Confirmation.View) {
+    func attach(confirmationHandler: Jumio.Confirmation.Handler) {
         guard let scanPart = scanPart else { return }
-        confirmationView.attach(scanPart: scanPart)
+        confirmationHandler.attach(scanPart: scanPart)
     }
     
-    func attach(rejectView: Jumio.Reject.View) {
+    func attach(rejectHandler: Jumio.Reject.Handler) {
         guard let scanPart = scanPart else { return }
-        rejectView.attach(scanPart: scanPart)
+        rejectHandler.attach(scanPart: scanPart)
     }
     
     func retry(reason: Jumio.Retry.Reason) {
@@ -135,6 +135,9 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
         // AddonScanPart: Jumio.Scan.Part contains an additional Addon, which can be executed. Show necessary UI for this.
         case .addonScanPart:
             print("Addon is available")
+        // NextPart: Next part in a multipart scan part is available
+        case .nextPart:
+            print("Next part is available")
         @unknown default:
             print("got unknown scan step", step)
         }

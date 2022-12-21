@@ -16,7 +16,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 - [SDK Workflow](#sdk-workflow)
 - [Custom UI](#custom-ui)
   - [Instant Feedback](#instant-feedback)
-- [Callback](#callback)
+- [Local Models for JumioDocfinder](#local-models-for-jumioDocfinder)
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
 
 ## Release Notes
@@ -83,26 +83,18 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 use_frameworks! # Required for proper framework handling
 
-pod 'Jumio/Slim', '~>4.3.1' # Manual Capture functionality
-pod 'Jumio/LineFinder', '~>4.3.1' # Manual Capture and Linefinder functionality
-pod 'Jumio/MRZ', '~>4.3.1' # Manual Capture and MRZ functionality
-pod 'Jumio/Barcode', '~>4.3.1' # Manual Capture and Barcode functionality
-pod 'Jumio/NFC', '~>4.3.1' # Manual Capture, Linefinder, MRZ and NFC functionality
+pod 'Jumio/Slim', '~>4.4.0' # Manual Capture functionality
+pod 'Jumio/LineFinder', '~>4.4.0' # Manual Capture and Linefinder functionality
+pod 'Jumio/MRZ', '~>4.4.0' # Manual Capture and MRZ functionality
+pod 'Jumio/Barcode', '~>4.4.0' # Manual Capture and Barcode functionality
+pod 'Jumio/NFC', '~>4.4.0' # Manual Capture, Linefinder, MRZ and NFC functionality
+pod 'Jumio/Jumio', '~>4.4.0' # Use JumioSDK with all available scanning methods
 
-pod 'Jumio/Jumio', '~>4.3.1' # Use JumioSDK with all available scanning methods
-
-pod 'Jumio/SlimLiveness', '~>4.3.1' # Manual Capture and Liveness functionality
-pod 'Jumio/LineFinderLiveness', '~>4.3.1' # Manual Capture, Linefinder and Liveness functionality
-pod 'Jumio/MRZLiveness', '~>4.3.1' # Manual Capture, MRZ and Liveness functionality
-pod 'Jumio/BarcodeLiveness', '~>4.3.1' # Manual Capture, Barcode and Liveness functionality
-pod 'Jumio/NFCLiveness', '~>4.3.1' # Manual Capture, Linefinder, MRZ, NFC and Liveness functionality
-
-pod 'Jumio/Liveness', '~>4.3.1' # All available scanning methods and Liveness functionality
-
-pod 'Jumio/DocFinder', '~>4.3.1' # Autocapture functionality
-
-pod 'Jumio/DeviceRisk', '~>4.3.1' # Device fingerprinting functionality (optional)
-pod 'Jumio/Datadog', '~>4.3.1' # Analytics functionality (optional)
+pod 'Jumio/Liveness', '~>4.4.0' # All available scanning methods and Liveness functionality
+pod 'Jumio/DocFinder', '~>4.4.0' # Autocapture functionality
+pod 'Jumio/DeviceRisk', '~>4.4.0' # Device fingerprinting functionality (optional)
+pod 'Jumio/Datadog', '~>4.4.0' # Analytics functionality (optional)
+pod 'Jumio/All', '~>4.4.0' # All Jumio products with all available scanning methods
 ```
 
 #### Certified Face Liveness
@@ -110,12 +102,12 @@ Jumio uses Certified Liveness technology to determine liveness.
 Please make sure to add the following post-install hook to your Podfile if you are using Jumio's liveness provider iProov:
 
 ```
-pod 'Jumio/xxxLiveness'
+pod 'Jumio/Liveness'
 
 # mandatory for all functionalities that include liveness (iProov)
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    if ['iProov', 'Socket.IO-Client-Swift', 'Starscream'].include? target.name
+    if ['iProov', 'SwiftProtobuf', 'Starscream'].include? target.name
       target.build_configurations.each do |config|
           config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
       end
@@ -134,16 +126,30 @@ If you are using Datadog analytics, please also include `'DatadogSDK'` in your t
 For more details, please refer to section [Analytics With Datadog](../README.md#analytics-with-datadog).
 
 ```
-# mandatory for all functionalities that include liveness (iProov)
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    if ['iProov', 'Socket.IO-Client-Swift', 'Starscream', 'DatadogSDK'].include? target.name
+    if ['DatadogSDK'].include? target.name
       target.build_configurations.each do |config|
           config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
       end
     end
   end
 end
+```
+
+### Via Swift Package Manager
+
+Jumio supports Swift Package Manager for easy integration of the SDK for version **4.4.0 and above**.
+
+To integrate the Jumio SDK with Swift Package Manager, add this [repo](https://github.com/Jumio/mobile-sdk-ios.git) as a dependency to your project.
+
+The Jumio SDK contains four different targets. Add them to your project based on the functionality that you need in your application.
+
+```
+Jumio # Use JumioSDK with all available scanning methods
+JumioDocFinder # Autocapture functionality
+JumioLiveness # Liveness functionality
+JumioDeviceRisk # Device fingerprinting functionality
 ```
 
 ### Via Carthage
@@ -167,11 +173,12 @@ carthage update
 Download our frameworks manually via [ios-jumio-mobile-sdk-4.3.1.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.3.1/ios-jumio-mobile-sdk-4.3.1.zip).
 
 __Using iProov (manually):__
+* JumioIProov.xcframework
 * iProov.xcframework
 * Starscream.framework (iProov dependency)
-* SocketIO.framework (iProov dependency)
+* SwiftProtobuf.framework (iProov dependency)
 
-ℹ️&nbsp;&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time. In case your application uses ZoOm as a liveness vendor, please contact [Jumio support](https://support.jumio.com) or your account manager directly.
+ℹ️&nbsp;&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
 The Jumio Mobile SDK consists of several dynamic frameworks. Depending on which product you use, you'll have to add the right frameworks to your project.
 
@@ -243,7 +250,7 @@ For more details, please refer to our [Workflow Description Guide](https://suppo
 Identity Verification has to be activated for your account. If you use Identity Verification, make sure the necessary frameworks are linked to your app project:
 * `iProov.framework`
 * `Starscream.framework` (iProov dependency)
-* `SocketIO.framework` (iProov dependency)
+* `SwiftProtobuf.framework` (iProov dependency)
 
 ℹ️&nbsp;&nbsp;__Note:__ Identity Verification requires portrait orientation in your app.
 
@@ -669,6 +676,12 @@ func jumio(controller: Jumio.Controller, logicalError: Jumio.LogicalError) {
 
 #### Instant Feedback
 The use of Instant Feedback provides immediate end user feedback by performing a usability check on any image the user took and prompting them to provide a new image immediately if this image is not usable, for example because it is too blurry. Please refer to the [JumioRejectReason table](#class-jumiorejectreason) for a list of all reject possibilities.
+
+## Local Models for JumioDocfinder
+
+If you are using our JumioDocFinder.xcframework, you can download our encrypted models and add them to your bundle from [here](https://cdn.mobile.jumio.ai/model/classifier_on_device_ep_99_float16_quant.enc) and [here](https://cdn.mobile.jumio.ai/model/normalized_ensemble_passports_v2_float16_quant.enc). 
+
+We recommend to download the files and add them to your project without changing their names (the same way you add Localization files). This will save two network requests on runntime to download these files.
 
 # Data Analysis
 You can enable or disable data analysis by calling `sdk.giveDataDogConsent(enabled: Bool)`. By default, data analysis is enabled.

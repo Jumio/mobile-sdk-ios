@@ -11,15 +11,20 @@ class ConfirmationViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var containerConfirmationView: UIView!
-    @IBOutlet weak var confirmationView: JumioConfirmationView!
+    @IBOutlet weak var firstConfirmationView: JumioConfirmationView!
+    @IBOutlet weak var secondConfirmationView: JumioConfirmationView!
     @IBOutlet weak var containerRejectView: UIView!
-    @IBOutlet weak var rejectView: JumioRejectView!
+    @IBOutlet weak var firstRejectView: JumioRejectView!
+    @IBOutlet weak var secondRejectView: JumioRejectView!
     @IBOutlet weak var confirmationRetakeButton: CustomButton!
     @IBOutlet weak var confirmationConfirmButton: CustomButton!
     @IBOutlet weak var rejectRetakeButton: CustomButton!
     
     // MARK: - Properties
     var style: Style?
+    
+    private let confirmationHandler = Jumio.Confirmation.Handler()
+    private let rejectHandler = Jumio.Reject.Handler()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -32,11 +37,13 @@ class ConfirmationViewController: UIViewController {
         // Due to similarity of those views, you could merge them together for example.
         switch style {
         case .confirm:
-            customUI?.attach(confirmationView: confirmationView)
+            customUI?.attach(confirmationHandler: confirmationHandler)
+            renderConfirmation()
             containerConfirmationView.isHidden = false
             containerRejectView.isHidden = true
         case .reject:
-            customUI?.attach(rejectView: rejectView)
+            customUI?.attach(rejectHandler: rejectHandler)
+            renderRejected()
             containerConfirmationView.isHidden = true
             containerRejectView.isHidden = false
         default:
@@ -52,16 +59,35 @@ class ConfirmationViewController: UIViewController {
     @IBAction func retake(_ sender: Any) {
         switch style {
         case .confirm:
-            confirmationView.retake()
+            confirmationHandler.retake()
         case .reject:
-            rejectView.retake()
+            rejectHandler.retake()
         default:
             break
         }
     }
     
     @IBAction func confirm(_ sender: Any) {
-        confirmationView.confirm()
+        confirmationHandler.confirm()
+    }
+    
+    // MARK: - Rendering
+    private func renderConfirmation() {
+        if confirmationHandler.parts.count > 0 {
+            confirmationHandler.renderPart(part: confirmationHandler.parts[0], view: firstConfirmationView)
+        }
+        if confirmationHandler.parts.count > 1 {
+            confirmationHandler.renderPart(part: confirmationHandler.parts[1], view: secondConfirmationView)
+        }
+    }
+    
+    private func renderRejected() {
+        if rejectHandler.parts.count > 0 {
+            rejectHandler.renderPart(part: rejectHandler.parts[0], view: firstRejectView)
+        }
+        if rejectHandler.parts.count > 1 {
+            rejectHandler.renderPart(part: rejectHandler.parts[1], view: secondRejectView)
+        }
     }
 }
 

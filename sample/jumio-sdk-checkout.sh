@@ -1,10 +1,10 @@
 #!/bin/bash
-JUMIO_SDK_VERSION=4.3.1
+JUMIO_SDK_VERSION=4.4.0
 DOWNLOAD_PATH=https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/${JUMIO_SDK_VERSION}/ios-jumio-mobile-sdk-${JUMIO_SDK_VERSION}.zip
 FRAMEWORK_DIR=${PROJECT_DIR}/Frameworks
 FRAMEWORK_ZIP=${FRAMEWORK_DIR}/frameworks.zip
 
-if [ -d ${FRAMEWORK_DIR}/Jumio+Liveness/Jumio.xcframework ]; then
+if [ -d ${FRAMEWORK_DIR}/Jumio/Jumio.xcframework ]; then
     echo "Jumio frameworks already available (see ${FRAMEWORK_DIR})"
     exit 0
 fi

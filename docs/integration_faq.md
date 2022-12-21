@@ -10,6 +10,7 @@
 	- [Bitcode](#bitcode)
 - [Jumio Authentication Workflow Integration](#jumio-authentication-workflow-integration)
 - [Language Localization](#language-localization)
+- [Overview of Scanning Methods](#overview-of-scanning-methods)
 - [Glossary of Commonly Used Abbreviations ](#glossary)
 - [Jumio Support](#jumio-support)
 
@@ -19,7 +20,7 @@ Scanning an ID with sensitive personal data printed on it naturally creates a hi
 
 One pattern that is recognizable throughout all of our customers’ SDK implementations: the more seamless the SDK integration, and the better job is done of setting user expectations prior to the SDK journey, the lower the drop-off rate becomes.
 
-Our SDK provides a variety of [customization options](integration_guide.md#customization) to help customers achieve a seamless integration. For customers using the standard SDK workflow, our [Surface tool](https://jumio.github.io/surface-ios/) provides an easy-to-use WYSIWYG interface to see simple customization options that can be incorporated with minimal effort and generate the code necessary to implement them. For customers who want to have more granular control over look and feel, our SDK offers the [CustomUI](integration_guide.md#custom-ui) option, which allows you to customize the entire user interface.
+Our SDK provides a variety of [customization options](integration_guide.md#customization) to help customers achieve a seamless integration. For customers using the standard SDK workflow, our [Surface tool](https://jumio.github.io/surface-tool/) provides an easy-to-use WYSIWYG interface to see simple customization options that can be incorporated with minimal effort and generate the code necessary to implement them. For customers who want to have more granular control over look and feel, our SDK offers the [CustomUI](integration_guide.md#custom-ui) option, which allows you to customize the entire user interface.
 
 ### Example of a Non-Ideal SDK Integration:
 ![Onboarding bad case](images/onboardingBadCase.jpg)
@@ -58,21 +59,16 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 2.83 MB | base              |
-| Slim + Liveness            | 3.62 MB | base, iproov      |
-| Linefinder                 | 3.37 MB | base, linefinder  |
-| Linefinder + Liveness      | 4.15 MB | base, linefinder, iproov      |
-| MRZ                        | 4.83 MB | base, mrz, linefinder         |
-| MRZ + Liveness             | 5.61 MB | base, mrz, linefinder, iproov |
-| NFC                        | 5.97 MB | base, mrz, nfc, linefinder         |
-| NFC + Liveness             | 6.75 MB | base, mrz, nfc, linefinder, iproov |
-| Barcode                    | 4.34 MB | base, barcode, linefinder          |
-| Barcode + Liveness         | 5.13 MB | base, barcode, linefinder, iproov  |
-| All                        | 6.94 MB | base, mrz, nfc, barcode, linefinder     |
-| All + Liveness             | 7.73 MB | base, mrz, nfc, barcode, linefinder, iproov    |
-| All + Liveness + DeviceRisk| 8.07 MB | base, mrz, nfc, barcode, linefinder, iproov, devicerisk    |
-| All + Liveness + DocFinder | 9.33 MB | base, mrz, nfc, barcode, linefinder, iproov, docfinder     |
-| All + Liveness + Datadog   | 8.48 MB | base, mrz, nfc, barcode, linefinder, iproov, datadog       |
+| Slim                       | 2.85 MB | base              |
+| Linefinder                 | 3.39 MB | base, linefinder  |
+| MRZ                        | 4.86 MB | base, mrz, linefinder         |
+| NFC                        | 6.02 MB | base, mrz, nfc, linefinder         |
+| Barcode                    | 4.37 MB | base, barcode, linefinder          |
+| All                        | 6.99 MB | base, mrz, nfc, barcode, linefinder     |
+| All + Liveness             | 8.21 MB | base, mrz, nfc, barcode, linefinder, iproov    |
+| All + Liveness + DeviceRisk| 8.56 MB | base, mrz, nfc, barcode, linefinder, iproov, devicerisk    |
+| All + Liveness + DocFinder | 9.82 MB | base, mrz, nfc, barcode, linefinder, iproov, docfinder     |
+| All + Liveness + Datadog   | 8.97 MB | base, mrz, nfc, barcode, linefinder, iproov, datadog       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 
@@ -116,7 +112,7 @@ Runtime language changes *within* the SDK or separate language support (meaning 
 ### Accessibility
 Our SDK supports accessibility features. Visually impaired users can enable __VoiceOver__ or increase __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customized.
 
-### Overview of thods
+## Overview of Scanning Methods
 
 #### Autocapture
 Combines all previously existing scanning methods into one automatic, seamless experience.

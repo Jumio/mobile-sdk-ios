@@ -11,27 +11,19 @@ extension DefaultUI {
     func customizeSDKColors() -> Jumio.Theme {
         var customTheme = Jumio.Theme()
         // IProov
-        customTheme.iProov.lineColor = Jumio.Theme.Value(.red)
-        customTheme.iProov.headerTextColor = Jumio.Theme.Value(.red)
-        customTheme.iProov.headerBackgroundColor = Jumio.Theme.Value(.blue)
-        customTheme.iProov.promptTextColor = Jumio.Theme.Value(.blue)
-        customTheme.iProov.footerBackgroundColor = Jumio.Theme.Value(.green)
+        customTheme.iProov.animationForeground = Jumio.Theme.Value(.red)
+        customTheme.iProov.animationBackground = Jumio.Theme.Value(.red)
+        customTheme.iProov.filterForegroundColor = Jumio.Theme.Value(.blue)
+        customTheme.iProov.filterBackgroundColor = Jumio.Theme.Value(.green)
+        customTheme.iProov.titleTextColor = Jumio.Theme.Value(.brown)
         customTheme.iProov.closeButtonTintColor = Jumio.Theme.Value(.green)
-        customTheme.iProov.livenessAssurancePrimaryTintColor = Jumio.Theme.Value(.cyan)
-        customTheme.iProov.livenessAssuranceSecondaryTintColor = Jumio.Theme.Value(.yellow)
-        customTheme.iProov.genuinePresenceAssuranceProgressBarColor = Jumio.Theme.Value(.purple)
-        customTheme.iProov.genuinePresenceAssuranceNotReadyTintColor = Jumio.Theme.Value(.yellow)
-        customTheme.iProov.genuinePresenceAssuranceReadyTintColor = Jumio.Theme.Value(.cyan)
-        customTheme.iProov.animationForeground = Jumio.Theme.Value(.brown)
-        customTheme.iProov.animationBackground = Jumio.Theme.Value(.yellow)
-        customTheme.iProov.floatingPromptEnabled = false
-        customTheme.iProov.floatingPromptRoundedCorners = false
-        customTheme.iProov.genuinePresenceAssuranceReadyFloatingPromptBackgroundColor = Jumio.Theme.Value(.cyan)
-        customTheme.iProov.genuinePresenceAssuranceNotReadyFloatingPromptBackgroundColor = Jumio.Theme.Value(.yellow)
-        customTheme.iProov.genuinePresenceAssuranceReadyOverlayStrokeColor = Jumio.Theme.Value(.brown)
-        customTheme.iProov.genuinePresenceAssuranceNotReadyOverlayStrokeColor = Jumio.Theme.Value(.red)
-        customTheme.iProov.livenessAssuranceFloatingPromptBackgroundColor = Jumio.Theme.Value(.cyan)
-        customTheme.iProov.livenessAssuranceOverlayStrokeColor = Jumio.Theme.Value(.yellow)
+        customTheme.iProov.surroundColor = Jumio.Theme.Value(.gray)
+        customTheme.iProov.promptTextColor = Jumio.Theme.Value(.cyan)
+        customTheme.iProov.promptBackgroundColor = Jumio.Theme.Value(.yellow)
+        customTheme.iProov.genuinePresenceAssuranceReadyOvalStrokeColor = Jumio.Theme.Value(.purple)
+        customTheme.iProov.genuinePresenceAssuranceNotReadyOvalStrokeColor = Jumio.Theme.Value(.yellow)
+        customTheme.iProov.livenessAssuranceOvalStrokeColor = Jumio.Theme.Value(.cyan)
+        customTheme.iProov.livenessAssuranceCompletedOvalStrokeColor = Jumio.Theme.Value(.brown)
                 
         // Primary & Secondry Buttons
         customTheme.primaryButton.background = Jumio.Theme.Value(light: .red, dark: .purple)
@@ -84,6 +76,12 @@ extension DefaultUI {
         customTheme.searchBubble.background = Jumio.Theme.Value(.yellow)
         customTheme.searchBubble.foreground = Jumio.Theme.Value(.cyan)
         customTheme.searchBubble.listItemSelected = Jumio.Theme.Value(.red)
+        
+        // Confirmation
+        customTheme.confirmation.imageBackground = Jumio.Theme.Value(.magenta)
+        customTheme.confirmation.imageBackgroundBorder = Jumio.Theme.Value(.green)
+        customTheme.confirmation.indicatorActive = Jumio.Theme.Value(.blue)
+        customTheme.confirmation.indicatorDefault = Jumio.Theme.Value(.black)
         
         // Global
         customTheme.background = Jumio.Theme.Value(light: .orange, dark: .magenta)
