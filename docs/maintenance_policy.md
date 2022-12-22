@@ -31,13 +31,13 @@ The life-cycle for SDK versions consists of these phases, which are outlined bel
 
 The following table is a visual representation of the SDK 4.x.x version life-cycle. SDK 3.x.x End-of-Life is set to December 31, 2023.
 
-| Version |     Release      |  End of Support  |   End of Life    | 
-|:-------:|:----------------:|:----------------:|:----------------:|
-|   4.4.0 | 21 December 2022 | 21 December 2023 | 21 December 2024 | 
-|   4.3.1 |  25 October 2022 |  25 October 2023 |  25 October 2024 | 
-|   4.3.0 |   30 August 2022 |      30 May 2023 |   30 August 2024 | 
-|   4.2.0 |      25 May 2022 | 25 February 2023 |      25 May 2024 | 
-|   4.1.2 |    19 April 2022 |  19 January 2023 |    19 April 2024 |
-|   4.1.1 |    04 April 2022 |  04 January 2023 |    04 April 2024 |
-|   4.1.0 |    09 March 2022 | 09 December 2022 |    09 March 2024 |
-|   4.0.0 | 16 November 2021 |   16 August 2022 | 16 November 2023 | 
+| Version |     Release      |   End of Support  |   End of Life    | 
+|:-------:|:----------------:|:-----------------:|:----------------:|
+|   4.4.0 | 21 December 2022 | 21 September 2023 | 21 December 2024 | 
+|   4.3.1 |  25 October 2022 |      25 July 2023 |  25 October 2024 | 
+|   4.3.0 |   30 August 2022 |       30 May 2023 |   30 August 2024 | 
+|   4.2.0 |      25 May 2022 |  25 February 2023 |      25 May 2024 | 
+|   4.1.2 |    19 April 2022 |   19 January 2023 |    19 April 2024 |
+|   4.1.1 |    04 April 2022 |   04 January 2023 |    04 April 2024 |
+|   4.1.0 |    09 March 2022 |  09 December 2022 |    09 March 2024 |
+|   4.0.0 | 16 November 2021 |    16 August 2022 | 16 November 2023 | 

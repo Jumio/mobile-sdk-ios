@@ -98,10 +98,8 @@ The minimum requirements for the SDK are:
 ℹ️&nbsp;&nbsp;__Note:__ Please be aware that as of version 4.0.0, due to SDK obfuscation the simulator is required to use the latest iOS version.
 
 The following architectures are supported in the SDK:
-- ARM64
-- x86_64 works on iOS emulator only
-
-ℹ️&nbsp;&nbsp;__Note:__ Please note that currently, Apple machines using M1 will be able to build Jumio SDK for an actual device. Running on simulator is not possible.
+- device: arm64
+- simulator: arm64 x86_64
 
 ## Authentication and Encryption
 ℹ️&nbsp;&nbsp;__As of version 4.0.0 and onward, the SDK can only be used in combination with Jumio KYX or Jumio API v3. API v2 as well as using API token and secret to authenticate against the SDK will no longer be compatible.__
@@ -202,7 +200,10 @@ For more details, please refer to our [integration guide](docs/integration_guide
 * BS (Bank statement)
 * CAAP (Cash advance application)
 * CB (Council bill)
+* CC (Credit card)
+* CCS (Credit card statement)
 * CRC (Corporate resolution certificate)
+* CUSTOM (Custom document type)
 * HCC (Health care card)
 * IC (Insurance card)
 * LAG (Lease agreement)
