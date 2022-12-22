@@ -20,7 +20,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.3.1__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.4.0__
 
 For breaking technical changes, please read our [Transition Guide](transition_guide.md).
 
@@ -154,7 +154,7 @@ JumioDeviceRisk # Device fingerprinting functionality
 
 ### Via Carthage
 
-##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.3.1, but will be available for upcoming releases.  
+##### ⚠️&nbsp;&nbsp;__Note:__ Please be aware that Carthage integration is not yet supported for SDK 4.4.0, but will be available for upcoming releases.  
 
 Jumio supports Carthage as dependency management tool for easy integration of the SDK.
 
@@ -170,7 +170,7 @@ carthage update
 ```
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.3.1.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.3.1/ios-jumio-mobile-sdk-4.3.1.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.4.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.4.0/ios-jumio-mobile-sdk-4.4.0.zip).
 
 __Using iProov (manually):__
 * JumioIProov.xcframework

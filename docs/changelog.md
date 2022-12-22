@@ -20,7 +20,7 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 ## SDK Version: __4.4.0__
 ![Improvement] Fully redesigned ID Autocapture experience - seamless capturing, precise guidance and faster user journey [ID Verification]
 
-![Improvement] Major iProov SDK version update to 8.0.3 - no more face scanning filter, improved UI and more customization options [Identity Verification]
+![Improvement] Major iProov SDK version update to 10.1.0 - no more face scanning filter, improved UI and more customization options [Identity Verification]
 
 ![Improvement] Mandatory NFC scanning option [ID Verification]
 
