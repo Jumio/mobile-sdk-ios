@@ -21,6 +21,8 @@ __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the cha
   * obscuredFace
   * userTimeout
   * notSupported
+* Updated `Jumio.Scan.Step.rejectView`:
+  * The returned scan step data now contains a dictionary `[Jumio.Credential.Part: Jumio.RejectReason]` instead of a single `Jumio.RejectReason`.
 * Removed `Jumio.Retry.Reason.iProov`:
   * ambiguousOutcome
   * lightingFlash
