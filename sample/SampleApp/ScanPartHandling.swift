@@ -121,8 +121,8 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
         // RejectView: you will need to attach a Jumio.Confirmation.View to this Jumio.Scan.Part
         case .rejectView:
             delegate?.scanPartShowRejectView()
-            guard let reason = data as? Jumio.RejectReason else { return }
-            print("reject reason", reason.rawValue)
+            guard let reasons = data as? [Jumio.Credential.Part: Jumio.RejectReason] else { return }
+            reasons.forEach { print("reject reason", $0.value.rawValue) }
         // Retry: something went wrong and needs to be retried. Jumio.Retry.Reason contains more information
         case .retry:
             guard let reason = data as? Jumio.Retry.Reason else { return }
@@ -137,7 +137,8 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
             print("Addon is available")
         // NextPart: Next part in a multipart scan part is available
         case .nextPart:
-            print("Next part is available")
+            guard let nextPart = data as? Jumio.Credential.Part else { return }
+            print("next part", nextPart)
         @unknown default:
             print("got unknown scan step", step)
         }
