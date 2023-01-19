@@ -455,9 +455,12 @@ func jumio(controller: Jumio.Controller, error: Jumio.Error)
 func jumio(controller: Jumio.Controller, logicalError: Jumio.LogicalError)
 ```
 
-If a user’s consent is required, the parameter `policyUrl` will provide a valid URL that will redirect the user to Jumio’s consent details. User can open and continue to this link if they choose to do so. If the user consents to the Jumio policy, [`controllerHandling?.userConsented()`][userConsented] is required to be called internally before any credential can be initialized and the user journey can continue. If no consent is required, the parameter `policyUrl` will be null.
+To support compliance with various biometric data protection laws in the United States, the parameter `policyUrl` will provide a valid URL that will redirect the user to Jumio’s consent details when the user is located in the United States at the time of the transaction. If no consent is required, the parameter `policyUrl` will be `null`.
+The user can open and continue to this link if they choose to do so. If the user consents to Jumio’s collection, [`controllerHandling?.userConsented()`][userConsented] is required to be called internally before any credential can be initialized and the user journey can continue. If the user does not provide consent or if [`controllerHandling?.userConsented()`][userConsented] is not called, the user journey will end.
 
-⚠️&nbsp;&nbsp;__Note:__ Please be aware that in cases where `policyUrl` is not null, the user is __legally required__ to __actually consent__ to Jumio's policy. Do not accept automatically without showing the user any terms.
+___Please note that biometric data protection laws and other laws governing consent can change over time and therefore you must include user consent handling as described above, even if a record of the user’s consent is not required for your current use case.___
+
+⚠️&nbsp;&nbsp;__Note:__ Please also be aware that in cases where `policyUrl` is not `null`, the user is required to consent to Jumio's collection of personal information, including biometric data. Do not accept automatically without showing the user any terms.
 
 ### Credential Handling
 [`Jumio.Credential`][jumioCredential] will contain all necessary information about the scanning process. For ID verification you will receive an [`IDCredential`][jumioIDCredential], for Identity Verification a [`FaceCredential`][jumioFaceCredential], and so on. Initialize the credential and check if it is already preconfigured. If this is the case, the parameter [`isConfigured`][isConfigured] will be `true` and the credential can be started right away.
@@ -679,7 +682,7 @@ The use of Instant Feedback provides immediate end user feedback by performing a
 
 ## Local Models for JumioDocfinder
 
-If you are using our JumioDocFinder.xcframework, you can download our encrypted models and add them to your bundle from [here](https://cdn.mobile.jumio.ai/model/classifier_on_device_ep_99_float16_quant.enc) and [here](https://cdn.mobile.jumio.ai/model/normalized_ensemble_passports_v2_float16_quant.enc). 
+If you are using our JumioDocFinder.xcframework, you can download our encrypted models and add them to your bundle from [here](https://cdn.mobile.jumio.ai/model/classifier_on_device_ep_99_float16_quant.enc) and [here](https://cdn.mobile.jumio.ai/model/normalized_ensemble_passports_v2_float16_quant.enc).
 
 We recommend to download the files and add them to your project without changing their names (the same way you add Localization files). This will save two network requests on runntime to download these files.
 
