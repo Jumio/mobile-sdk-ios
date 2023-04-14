@@ -14,8 +14,19 @@ All notable changes, such as SDK releases, updates and fixes, are documented in 
 For detailed technical changes please refer to our [Transition Guide](transition_guide.md).
 
 ## Support Period
-Current SDK version: __4.4.0__     
+Current SDK version: __4.5.0__     
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: __4.5.0__
+![Improvement] Added possibility for users to verify their identity using [Digital Identity](../README.md#digital-identity) [ID Verification, Identity Verification]
+
+![Improvement] iProov SDK version update to 10.1.3 [Identity Verification]
+
+![Improvement] Improved user consent handling in accordance with biometric data protection laws [ID Verification, Identity Verification]
+
+![Improvement] Improvement Added Carthage as new option for dependency manager
+
+![Fix] Bug fixes: UI bugs [ID Verification]
 
 ## SDK Version: __4.4.0__
 ![Improvement] Fully redesigned ID Autocapture experience - seamless capturing, precise guidance and faster user journey [ID Verification]

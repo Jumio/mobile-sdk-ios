@@ -1,11 +1,16 @@
 //
 //  SelectionViewController.swift
 //
-//  Copyright © 2022 Jumio Corporation. All rights reserved.
+//  Copyright © 2023 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
 import Jumio
+
+protocol SelectionViewControllerDelegate: AnyObject {
+    func selectionViewController(_ sender: SelectionViewController, physicalDocumentsFor country: String) -> [Jumio.Document.Physical]
+    func selectionViewController(_ sender: SelectionViewController, digitalDocumentsFor country: String) -> [Jumio.Document.Digital]
+}
 
 class SelectionViewController: UIViewController {
     
@@ -14,16 +19,23 @@ class SelectionViewController: UIViewController {
     @IBOutlet weak var documentTableView: UITableView!
     
     // MARK: - Properties
-    var countryMap: [String: [Jumio.Document]] = [:]
-    var countries: [Country] = []
+    var countryArray: [String] = []
+    weak var delegate: SelectionViewControllerDelegate?
     
+    fileprivate var countries: [Country] = []
     fileprivate var selectedCountry: String?
+    fileprivate var documents: [Jumio.Document] {
+        guard let selectedCountry = selectedCountry else { return [] }
+        let physicalDocuments = delegate?.selectionViewController(self, physicalDocumentsFor: selectedCountry) ?? []
+        let digitalDocuments = delegate?.selectionViewController(self, digitalDocumentsFor: selectedCountry) ?? []
+        return physicalDocuments + digitalDocuments
+    }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countries = countryMap.keys.map {
+        countries = countryArray.map {
             let isoAlpha2 = Jumio.ISOCountryConverter.toAlpha2($0)
             return Country(code: $0, localizedName: Locale.current.localizedString(forRegionCode: isoAlpha2 ?? $0) ?? $0)
         }
@@ -46,9 +58,8 @@ class SelectionViewController: UIViewController {
     
     // MARK: - Functions
     func document(from indexPath: IndexPath) -> Jumio.Document? {
-        guard let selectedCountry = selectedCountry,
-              let document = countryMap[selectedCountry]?[indexPath.row] else { return nil }
-        return document
+        guard indexPath.row < documents.count else { return nil }
+        return documents[indexPath.row]
     }
     
 }
@@ -87,8 +98,7 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
         case countryTableView:
             return countries.count
         case documentTableView:
-            guard let country = selectedCountry else { return 0 }
-            return countryMap[country]?.count ?? 0
+            return documents.count
         default:
             return 0
         }
@@ -103,7 +113,11 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
             cell?.accessoryType = selectedCountry == countries[indexPath.row].code ? .checkmark : .none
         case documentTableView:
             guard let document = document(from: indexPath) else { break }
-            cell?.textLabel?.text = "\(document.type.rawValue) \(document.variant.rawValue)"
+            if let physicalDocument = document as? Jumio.Document.Physical {
+                cell?.textLabel?.text = "\(physicalDocument.type.rawValue) \(physicalDocument.variant.rawValue)"
+            } else if let digitalDocument = document as? Jumio.Document.Digital {
+                cell?.textLabel?.text = "\(digitalDocument.title)"
+            }
             cell?.accessoryType = .disclosureIndicator
         default:
             break

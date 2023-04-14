@@ -188,25 +188,30 @@
                                     <action selector="start:" destination="SRf-st-eaV" eventType="touchUpInside" id="QHI-RA-jTD"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking “Start” you consent to Jumio collecting and disclosing your biometric data pursuant to its Privacy Policy." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmb-Nc-ypo">
-                                <rect key="frame" x="20" y="740.5" width="374" height="31.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cvA-qh-bOg">
+                                <rect key="frame" x="20" y="572" width="374" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="pxm-76-Mfi"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="SRf-st-eaV" id="vQE-gh-a4i"/>
+                                    <outlet property="delegate" destination="SRf-st-eaV" id="8hs-fN-H8a"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C0f-Mb-g5t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XcW-86-kqk" firstAttribute="top" secondItem="cvA-qh-bOg" secondAttribute="bottom" constant="20" id="9yc-7d-qtC"/>
                             <constraint firstItem="C0f-Mb-g5t" firstAttribute="trailing" secondItem="5L2-WH-B6d" secondAttribute="trailing" constant="50" id="A5b-sL-rBb"/>
                             <constraint firstItem="5L2-WH-B6d" firstAttribute="leading" secondItem="C0f-Mb-g5t" secondAttribute="leading" constant="50" id="CpX-I6-bOJ"/>
-                            <constraint firstItem="Mmb-Nc-ypo" firstAttribute="leading" secondItem="C0f-Mb-g5t" secondAttribute="leading" constant="20" id="LqN-gu-tKp"/>
+                            <constraint firstItem="cvA-qh-bOg" firstAttribute="leading" secondItem="C0f-Mb-g5t" secondAttribute="leading" constant="20" id="VfW-ra-WbU"/>
                             <constraint firstItem="C0f-Mb-g5t" firstAttribute="bottom" secondItem="XcW-86-kqk" secondAttribute="bottom" constant="20" id="Zvm-jF-czO"/>
                             <constraint firstItem="XcW-86-kqk" firstAttribute="leading" secondItem="C0f-Mb-g5t" secondAttribute="leading" constant="20" id="aSX-td-Ypg"/>
                             <constraint firstItem="Doa-hL-ohY" firstAttribute="leading" secondItem="C0f-Mb-g5t" secondAttribute="leading" constant="50" id="d94-iw-hee"/>
-                            <constraint firstItem="XcW-86-kqk" firstAttribute="top" secondItem="Mmb-Nc-ypo" secondAttribute="bottom" constant="20" id="gC0-is-0aK"/>
                             <constraint firstItem="C0f-Mb-g5t" firstAttribute="trailing" secondItem="Doa-hL-ohY" secondAttribute="trailing" constant="50" id="h43-oc-Zdy"/>
-                            <constraint firstItem="C0f-Mb-g5t" firstAttribute="trailing" secondItem="Mmb-Nc-ypo" secondAttribute="trailing" constant="20" id="iYx-ih-7ga"/>
+                            <constraint firstItem="C0f-Mb-g5t" firstAttribute="trailing" secondItem="cvA-qh-bOg" secondAttribute="trailing" constant="20" id="hMY-qB-3FK"/>
                             <constraint firstItem="C0f-Mb-g5t" firstAttribute="trailing" secondItem="XcW-86-kqk" secondAttribute="trailing" constant="20" id="qI4-H7-gFq"/>
                             <constraint firstItem="5L2-WH-B6d" firstAttribute="top" secondItem="Doa-hL-ohY" secondAttribute="bottom" constant="10" id="sbf-pi-zE9"/>
                             <constraint firstItem="Doa-hL-ohY" firstAttribute="top" secondItem="C0f-Mb-g5t" secondAttribute="top" constant="120" id="xH9-VI-scN"/>
@@ -220,14 +225,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="consentTableView" destination="cvA-qh-bOg" id="ion-MO-8we"/>
                         <outlet property="overviewLabel" destination="5L2-WH-B6d" id="34r-QV-abY"/>
-                        <outlet property="policyLabel" destination="Mmb-Nc-ypo" id="b2z-pi-ZZK"/>
                         <outlet property="startButton" destination="XcW-86-kqk" id="dbA-lU-hDL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJM-Hm-DQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1784" y="126"/>
+            <point key="canvasLocation" x="1782.608695652174" y="125.89285714285714"/>
         </scene>
         <!--Error View Controller-->
         <scene sceneID="4oh-t7-R71">
@@ -373,10 +378,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3Y-jr-C9S">
-                                <rect key="frame" x="137.5" y="118" width="139.5" height="50"/>
+                                <rect key="frame" x="137.5" y="118" width="139" height="50"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extraction state" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pES-Hf-J2i">
-                                        <rect key="frame" x="10" y="14.5" width="119.5" height="21"/>
+                                        <rect key="frame" x="10" y="14.5" width="119" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -899,7 +904,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maximum size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0P-9A-VdO">
-                                <rect key="frame" x="153" y="475.5" width="108.5" height="21"/>
+                                <rect key="frame" x="152.5" y="475.5" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -939,6 +944,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5J-f8-foQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5057" y="127"/>
+        </scene>
+        <!--Digital Identity View Controller-->
+        <scene sceneID="phR-U8-AeO">
+            <objects>
+                <viewController storyboardIdentifier="digitalIdentityView" id="QaN-uY-uMK" customClass="DigitalIdentityViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q9h-73-JG8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7NI-AV-ozT" customClass="JumioDigitalIdentityView" customModule="Jumio">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvI-R6-TNR">
+                                <rect key="frame" x="155" y="412.5" width="104" height="71"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="H23-dq-dxX">
+                                        <rect key="frame" x="42" y="10" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="processing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nR-3w-fhq">
+                                        <rect key="frame" x="10" y="40" width="84" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="0nR-3w-fhq" firstAttribute="leading" secondItem="bvI-R6-TNR" secondAttribute="leading" constant="10" id="0gs-jQ-g0X"/>
+                                    <constraint firstAttribute="bottom" secondItem="0nR-3w-fhq" secondAttribute="bottom" constant="10" id="UwN-yq-zyz"/>
+                                    <constraint firstItem="H23-dq-dxX" firstAttribute="top" secondItem="bvI-R6-TNR" secondAttribute="top" constant="10" id="VzT-aZ-FMc"/>
+                                    <constraint firstAttribute="trailing" secondItem="0nR-3w-fhq" secondAttribute="trailing" constant="10" id="ajD-lb-8ZW"/>
+                                    <constraint firstItem="0nR-3w-fhq" firstAttribute="top" secondItem="H23-dq-dxX" secondAttribute="bottom" constant="10" id="eAu-BY-qQj"/>
+                                    <constraint firstItem="H23-dq-dxX" firstAttribute="centerX" secondItem="bvI-R6-TNR" secondAttribute="centerX" id="gmp-pa-McO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QZG-OZ-n6z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7NI-AV-ozT" secondAttribute="bottom" id="93s-Gj-C9z"/>
+                            <constraint firstItem="7NI-AV-ozT" firstAttribute="leading" secondItem="q9h-73-JG8" secondAttribute="leading" id="Gy5-eW-rgN"/>
+                            <constraint firstItem="bvI-R6-TNR" firstAttribute="centerY" secondItem="q9h-73-JG8" secondAttribute="centerY" id="cJk-4w-FxA"/>
+                            <constraint firstAttribute="trailing" secondItem="7NI-AV-ozT" secondAttribute="trailing" id="fmp-Ve-Ocn"/>
+                            <constraint firstItem="7NI-AV-ozT" firstAttribute="top" secondItem="q9h-73-JG8" secondAttribute="top" id="iAl-ae-9f0"/>
+                            <constraint firstItem="bvI-R6-TNR" firstAttribute="centerX" secondItem="q9h-73-JG8" secondAttribute="centerX" id="nu4-6h-oG0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerImageTakenView" destination="bvI-R6-TNR" id="xH6-VQ-FGz"/>
+                        <outlet property="digitalIdentityView" destination="7NI-AV-ozT" id="29m-Sj-Yls"/>
+                        <outlet property="processingLabel" destination="0nR-3w-fhq" id="cSb-m9-qoi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5u-l9-BO0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5870" y="824"/>
         </scene>
     </scenes>
     <resources>

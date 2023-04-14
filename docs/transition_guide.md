@@ -1,10 +1,71 @@
 ![ID Verification](images/jumio_feature_graphic.jpg)
 
 # Transition Guide for iOS SDK
-This section only covers the breaking technical changes that should be considered when updating from the previous version.
+This section covers all technical changes that should be considered when updating from previous versions, including, but not exclusively: API breaking changes or new functionality in the public API, major dependency changes, attribute changes, deprecation notices.
 
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
+
+## 4.5.0
+#### Customization
+* Option `Jumio.Theme.ScanView.animationBackground` has been removed.
+
+#### Changes to Public API
+* Error code format updated from `[A][x][yyyy]` to `[A][xx][yyyy]`
+* Deprecated `Jumio.IDCredential.countries`:
+    * Added `Jumio.IDCredential.supportedCountries`
+    * Added `Jumio.IDCredential.physicalDocuments(for:)`
+    * Added `Jumio.IDCredential.digitalDocuments(for:)`
+* Added `Jumio.SDK.handleDeeplinkURL()`
+* Added `Jumio.Document.Physical`
+* Added `Jumio.Document.Digital`
+* New `Jumio.Credential.Part`
+  * digital
+* New `Jumio.Scan.Step`
+  * digitalIdentityView
+  * thirdPartyVerification
+* New `Jumio.Retry.Reason.DigitalIdentity`
+  * unknown
+  * expired
+  * thirdPartyVerificationError
+  * serviceError
+* Changed `JumioScanView`
+  * Changed `extraction` variable to get-only
+  * Added `startExtraction()` function
+  * Added `stopExtraction(hidePreview: Bool)` function
+  
+* Changed `JumioControllerDelegate`
+  * Changed `jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], policyUrl: String?)` to `jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?)`
+  
+* Changed `Jumio.Controller`
+  * Changed `userConsented()` to be `userConsented(to consentItem: Jumio.ConsentItem, decision: Bool)`
+  * Added `getUnconsentedItems() -> [Jumio.ConsentItem]?`
+  
+#### Localization Keys
+The following keys have been added:
+  * jumio_idtype_di
+  * jumio_di_vendor_selection_title
+  * jumio_di_retry_unknown
+  * jumio_di_retry_third_party_verification_error
+  * jumio_di_retry_service_error
+  * jumio_di_back_to_document_selection
+  
+#### Cocoapods
+* install hook for liveness is changed in the `podfile`:
+```
+post_install do |installer|
+   installer.pods_project.targets.each do |target|
+     if ['iProov', 'Starscream'].include? target.name
+       target.build_configurations.each do |config|
+           config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+       end
+     end
+    end
+end
+```
+
+#### Frameworks
+* iProov dependency `SwiftProtobuf` is removed
 
 ## 4.4.0
 #### Changes to Public API
@@ -12,6 +73,11 @@ __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the cha
   * multipart
 * New `Jumio.Scan.Step`
   * nextPart
+* Changed confirmation and reject handling
+  * Added `Jumio.Confirmation.Handler`
+  * Added `Jumio.Reject.Handler`
+  * Removed `attach`, `detach`, `retake` and `confirm` methods from `Jumio.Confirmation.View`
+  * Removed `attach`, `detach` and `retake` methods from `Jumio.Reject.View`
 * New `Jumio.Retry.Reason.iProov`:
   * faceMisaligned
   * eyesClosed
@@ -125,7 +191,7 @@ No backward incompatible changes.
   * `userAction`: Initiated by the user through the call of `Jumio.Scan.ScanPart.fallback()`.
   * `lowPerformance`: Initiated due to low performance on the current `Jumio.Scan.Mode`.
 
-* Document Verification is now supported. Please check the [Integration Guide](https://github.com/Jumio/mobile-sdk-android/blob/master/docs/integration_guide.md#jumio-document-credential) for more information.
+* Document Verification is now supported. Please check the [Integration Guide](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/integration_guide.md#jumio-document-credential) for more information.
 
 #### Cocoapods
 * One new pod added, containing data analysis functionality:

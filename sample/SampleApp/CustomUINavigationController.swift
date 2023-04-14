@@ -1,8 +1,7 @@
 //
 //  CustomUINavigationController.swift
-//  SampleApp-UIKit
 //
-//  Copyright © 2022 Jumio Corporation. All rights reserved.
+//  Copyright © 2023 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -118,6 +117,7 @@ extension CustomUINavigationController {
         case error
         case confirmation
         case scan
+        case digitalIdentityView
         case file
         case loading
         case selection
@@ -133,11 +133,13 @@ extension CustomUINavigationController {
         controllerHandling?.startNextCredential()
     }
     
-    func userConsented() {
-        // controllers initialize delegate function delivered a policy url.
-        // Means controllers .userConsented() needs to be called. In order to be able to
+    func userConsented(consentItems: [Jumio.ConsentItem]) {
+        // controllers initialize delegate function delivered a list of consent items.
+        // Means controllers .userConsented(to: decision:) needs to be called for each item. In order to be able to
         // start any credential
-        controllerHandling?.userConsented()
+        for consentItem in consentItems {
+            controllerHandling?.userConsented(to: consentItem)
+        }
     }
     
     func cancel() {
@@ -198,6 +200,7 @@ extension CustomUINavigationController {
         case .deviceRisk: return "Device Risk"
         case .multipart: return "Multi Part"
         case .document: return "Document"
+        case .digital: return "Digital"
         default: return "unknown"
         }
     }
@@ -212,12 +215,17 @@ extension CustomUINavigationController {
         case .faceManual: return "Face manual"
         case .faceIProov: return "Face iProov"
         case .docFinder: return "Doc Finder"
+        case .web: return "Web"
         default: return "unknown"
         }
     }
     
     func attach(scanView: Jumio.Scan.View) {
         scanPartHandling?.attach(scanView: scanView)
+    }
+    
+    func attach(digitalIdentityView: Jumio.DigitalIdentity.View) {
+        scanPartHandling?.attach(digitalIdentityView: digitalIdentityView)
     }
     
     func attach(fileAttacher: Jumio.FileAttacher) {
@@ -243,9 +251,9 @@ extension CustomUINavigationController {
 
 // MARK: - ControllerHandling.Delegate
 extension CustomUINavigationController: ControllerHandling.Delegate {
-    func controller(policyUrl: String) {
+    func controller(consentItems: [Jumio.ConsentItem]) {
         guard let start = topViewController as? StartViewController else { return }
-        start.handle(policyUrl: policyUrl)
+        start.handle(consentItems: consentItems)
     }
     
     func controller(overview: [String]) {
@@ -274,9 +282,10 @@ extension CustomUINavigationController: ControllerHandling.Delegate {
 
 // MARK: - CredentialHandling.Delegate
 extension CustomUINavigationController: CredentialHandling.Delegate {
-    func credentialNeedsConfiguration(for countries: [String: [Jumio.Document]]) {
+    func credentialNeedsConfiguration(for countries: [String]) {
         guard let selectionViewController = instantiate(viewController: .selection) as? SelectionViewController else { return }
-        selectionViewController.countryMap = countries
+        selectionViewController.countryArray = countries
+        selectionViewController.delegate = self
         pushViewController(selectionViewController, animated: true)
     }
     
@@ -308,6 +317,16 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
     func scanPartShowScanView() {
         guard let scanViewController = instantiate(viewController: .scan) as? ScanViewController else { return }
         pushViewController(scanViewController, animated: true)
+    }
+    
+    func scanPartShowDigitalIdentityView() {
+        guard let scanViewController = instantiate(viewController: .digitalIdentityView) as? DigitalIdentityViewController else { return }
+        pushViewController(scanViewController, animated: true)
+    }
+    
+    func scanPartThirdPartyVerification() {
+        guard let scanViewController = topViewController as? DigitalIdentityViewController else { return }
+        scanViewController.showProcessing()
     }
     
     func scanPartAttachFile() {
@@ -376,6 +395,16 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         guard let viewController = instantiate(viewController: .confirmation) as? ConfirmationViewController else { return }
         viewController.style = style
         pushViewController(viewController, animated: true)
+    }
+}
+
+extension CustomUINavigationController: SelectionViewControllerDelegate {
+    func selectionViewController(_ sender: SelectionViewController, physicalDocumentsFor country: String) -> [Jumio.Document.Physical] {
+        credentialHandling?.physicalDocuments(for: country) ?? []
+    }
+    
+    func selectionViewController(_ sender: SelectionViewController, digitalDocumentsFor country: String) -> [Jumio.Document.Digital] {
+        credentialHandling?.digitalDocuments(for: country) ?? []
     }
 }
 

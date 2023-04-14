@@ -1,8 +1,7 @@
 //
 //  ScanPartHandling.swift
-//  SampleApp-UIKit
 //
-//  Copyright © 2022 Jumio Corporation. All rights reserved.
+//  Copyright © 2023 Jumio Corporation. All rights reserved.
 //
 
 import Jumio
@@ -12,6 +11,8 @@ protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartShowLoadingView()
     func scanPartShowHelpView()
     func scanPartShowScanView()
+    func scanPartShowDigitalIdentityView()
+    func scanPartThirdPartyVerification()
     func scanPartAttachFile()
     func scanPartShowImageTaken()
     func scanPartShowProcessing()
@@ -28,6 +29,7 @@ class ScanPartHandling {
     typealias Delegate = ScanPartHandlingDelegate
     
     weak var delegate: Delegate?
+    weak var scanView: Jumio.Scan.View?
     var hasFallback: Bool? { scanPart?.hasFallback }
     var scanMode: Jumio.Scan.Mode? { scanPart?.scanMode }
     
@@ -61,7 +63,13 @@ class ScanPartHandling {
     
     func attach(scanView: Jumio.Scan.View) {
         guard let scanPart = scanPart else { return }
+        self.scanView = scanView
         scanView.attach(scanPart: scanPart)
+    }
+    
+    func attach(digitalIdentityView: Jumio.DigitalIdentity.View) {
+        guard let scanPart = scanPart else { return }
+        digitalIdentityView.attach(scanPart: scanPart)
     }
     
     func attach(fileAttacher: Jumio.FileAttacher) {
@@ -98,47 +106,62 @@ class ScanPartHandling {
 extension ScanPartHandling: Jumio.Scan.Part.Delegate {
     func jumio(scanPart: Jumio.Scan.Part, step: Jumio.Scan.Step, data: Any?) {
         switch step {
-        // Prepare: every time we are doing something asynchronously which might need longer time (for example network calls)
+        // Prepare: every time we are doing something asynchronously which might need longer time (for example network calls).
         case .prepare:
             delegate?.scanPartShowLoadingView()
-        // Started: a scanner is being started
+        // Started: a scanner is being started.
         case .started:
-            print("scan started")
-        // ScanView: you will need to attach a Jumio.Scan.View to this Jumio.Scan.Part
+            guard let credentialPart = data as? Jumio.Credential.Part else { return }
+            print("scan started ", credentialPart)
+        // ScanView: you will need to attach a Jumio.Scan.View to this Jumio.Scan.Part.
         case .scanView:
             delegate?.scanPartShowScanView()
+        // DigitalIdentityView: you will need to attach a Jumio.DigitalIdentity.View to this Jumio.Scan.Part.
+        case .digitalIdentityView:
+            delegate?.scanPartShowDigitalIdentityView()
+        // ThirdPartyVerification: The started part will switch to a third party's application to continue verification. As this might take some time, showing a loading indicator is recommended.
+        case .thirdPartyVerification:
+            delegate?.scanPartThirdPartyVerification()
         case .attachFile:
             delegate?.scanPartAttachFile()
-        // ImageTaken: an image has been taken / captured
+        // ImageTaken: an image has been taken / captured.
         case .imageTaken:
             delegate?.scanPartShowImageTaken()
-        // Processing: captured image is being processed (timeframe differs)
+        // Processing: captured image is being processed (timeframe differs).
         case .processing:
             delegate?.scanPartShowProcessing()
-        // ConfirmationView: you will need to attach a Jumio.Confirmation.View to this Jumio.Scan.Part
+        // ConfirmationView: you will need to attach a Jumio.Confirmation.View to this Jumio.Scan.Part.
         case .confirmationView:
             delegate?.scanPartShowConfirmationView()
-        // RejectView: you will need to attach a Jumio.Confirmation.View to this Jumio.Scan.Part
+        // RejectView: you will need to attach a Jumio.Confirmation.View to this Jumio.Scan.Part.
         case .rejectView:
             delegate?.scanPartShowRejectView()
             guard let reasons = data as? [Jumio.Credential.Part: Jumio.RejectReason] else { return }
             reasons.forEach { print("reject reason", $0.value.rawValue) }
-        // Retry: something went wrong and needs to be retried. Jumio.Retry.Reason contains more information
+        // Retry: something went wrong and needs to be retried. Jumio.Retry.Reason contains more information.
         case .retry:
             guard let reason = data as? Jumio.Retry.Reason else { return }
             delegate?.scanPartShowRetryView(with: reason)
             print("retry reason", reason.code, reason.message)
-        // CanFinish: Jumio.Scan.Part is finished and waits for .finish()
+        // CanFinish: Jumio.Scan.Part is finished and waits for .finish().
         case .canFinish:
             self.scanPart?.finish()
             delegate?.scanPartFinished()
         // AddonScanPart: Jumio.Scan.Part contains an additional Addon, which can be executed. Show necessary UI for this.
         case .addonScanPart:
             print("Addon is available")
-        // NextPart: Next part in a multipart scan part is available
+        // NextPart: Next part in a multipart scan part is available.
         case .nextPart:
             guard let nextPart = data as? Jumio.Credential.Part else { return }
             print("next part", nextPart)
+            
+            // We suggest to add some kind of instruction or animation here to show the user that the next part is about to be captured.
+            // For example: Front side was already captured and now it is about to scan the back side of the document.
+            // While showing this, you should disable extraction to not allow the user to extract the old part again.
+            scanView?.stopExtraction(hidePreview: false)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [weak self] in
+                self?.scanView?.startExtraction()
+            }
         @unknown default:
             print("got unknown scan step", step)
         }

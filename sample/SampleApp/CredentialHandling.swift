@@ -1,14 +1,13 @@
 //
 //  CredentialHandling.swift
-//  SampleApp-UIKit
 //
-//  Copyright © 2022 Jumio Corporation. All rights reserved.
+//  Copyright © 2023 Jumio Corporation. All rights reserved.
 //
 
 import Jumio
 
 protocol CredentialHandlingDelegate: AnyObject {
-    func credentialNeedsConfiguration(for countries: [String: [Jumio.Document]])
+    func credentialNeedsConfiguration(for countries: [String])
     func credentialNeedsConfiguration(for acquireModes: [Jumio.Acquire.Mode])
     func credential(initialized scanPartHandling: ScanPartHandling)
 }
@@ -23,8 +22,8 @@ class CredentialHandling {
     
     // IDCredential only
     var suggestedCountry: String? { (credential as? Jumio.IDCredential)?.suggestedCountry }
-    fileprivate var countries: [String: [Jumio.Document]] { (credential as? Jumio.IDCredential)?.countries ?? [:] }
     
+    fileprivate var countries: [String] { (credential as? Jumio.IDCredential)?.supportedCountries ?? [] }
     fileprivate(set) var info: Jumio.Credential.Info?
     fileprivate var credential: Jumio.Credential?
     fileprivate var credentialParts: [Jumio.Credential.Part]?
@@ -102,6 +101,14 @@ class CredentialHandling {
         credential = nil
         info = nil
         credentialParts = nil
+    }
+    
+    func physicalDocuments(for country: String) -> [Jumio.Document.Physical] {
+        (credential as? Jumio.IDCredential)?.physicalDocuments(for: country) ?? []
+    }
+    
+    func digitalDocuments(for country: String) -> [Jumio.Document.Digital] {
+        (credential as? Jumio.IDCredential)?.digitalDocuments(for: country) ?? []
     }
     
     private func configure(credential: Jumio.Credential?) {

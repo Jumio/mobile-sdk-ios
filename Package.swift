@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "4.4.0"
+let version = "4.5.0"
 
 let package = Package(
     name: "Jumio",
@@ -31,7 +31,7 @@ let package = Package(
         .package(
             name: "iProov",
             url: "https://github.com/iProov/ios.git",
-            .exact("10.1.0")
+            .exact("10.1.3")
         ),
     ],
     targets: [
@@ -63,27 +63,27 @@ let package = Package(
         .binaryTarget(
             name: "Jumio",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Jumio.xcframework.zip",
-            checksum: "3c00e83c045c987808311054c0f16800a0bd381d0e73ab66a729893b4fce5a67"
+            checksum: "5896a0254b1a07438d486522433face219e03ff3be6b7c7a223c9916121c20a3"
         ),
         .binaryTarget(
             name: "JumioDocFinder",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDocFinder.xcframework.zip",
-            checksum: "3ecc2595d0d8546fcdb766c35663665e4f4b210c9dec633d46dc114c8e26b071"
+            checksum: "4a41916d5b7e94d8bb0620b94495f93ba3bcae50fa2948e7288e708eda88e40d"
         ),
         .binaryTarget(
             name: "JumioDeviceRisk",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDeviceRisk.xcframework.zip",
-            checksum: "6f4ceabd4091b5f29ec8dabfa37466886a81ef12683b543d12e52f396f62440e"
+            checksum: "39da720a0a14dad0963b4fcde77be34c03c49fe9dfcfea8165000f9a76fee166"
         ),
         .binaryTarget(
             name: "JumioIProov",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioIProov.xcframework.zip",
-            checksum: "5fad851accbc44c23856ba521d88cc138930a4356d8aecebaee8ac0aaba971c2"
+            checksum: "4294240daf9e21be340559798e0b63732db236baf7c744c886c34c397b2b6fbb"
         ),
         .binaryTarget(
             name: "Pdf417Mobi",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Pdf417Mobi.xcframework.zip",
-            checksum: "b6d45025a2dd77ce21737a08f2627fc3ad5a572ff45dcd61de43d228f7932575"
+            checksum: "a84a6eba6215f0c8fbd27ee0be855ff1ccf5ee82e9c3b7f7ac373a0b637516ea"
         ),
     ]
 )

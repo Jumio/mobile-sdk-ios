@@ -1,14 +1,13 @@
 //
 //  ControllerHandling.swift
-//  SampleApp-UIKit
 //
-//  Copyright © 2022 Jumio Corporation. All rights reserved.
+//  Copyright © 2023 Jumio Corporation. All rights reserved.
 //
 
 import Jumio
 
 protocol ControllerHandlingDelegate: AnyObject {
-    func controller(policyUrl: String)
+    func controller(consentItems: [Jumio.ConsentItem])
     func controller(overview: [String])
     func controller(displayError: Jumio.Error)
     func controller(finished result: Jumio.Result)
@@ -31,7 +30,7 @@ class ControllerHandling {
         // calling configured sdk instance start function with a Jumio.Controller.Delegate
         // in this case self. With this call we will start the workflow and next callback
         // is our delegate function:
-        // jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], policyUrl: String?)
+        // jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?)
         controller = sdk?.start(self)
     }
     
@@ -49,8 +48,8 @@ class ControllerHandling {
         credentialHandling.start(info: info, with: controller)
     }
     
-    func userConsented() {
-        controller?.userConsented()
+    func userConsented(to consentItem: Jumio.ConsentItem) {
+        controller?.userConsented(to: consentItem, decision: true)
     }
     
     func retry(error: Jumio.Error) {
@@ -73,11 +72,12 @@ class ControllerHandling {
 
 // MARK: - Jumio.Controller.Delegate
 extension ControllerHandling: Jumio.Controller.Delegate {
-    func jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], policyUrl: String?) {
-        // check if a policy url is provided, if yes your user needs to consent to them
-        if let policyUrl = policyUrl {
-            delegate?.controller(policyUrl: policyUrl)
+    func jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?) {
+        // check if consentItems are provided, if yes your user needs to consent to them
+        if let consentItems = consentItems {
+            delegate?.controller(consentItems: consentItems)
         }
+        
         self.credentialInformations = credentialInformations
         let overviewItems: [String] = credentialInformations.map { info in
             switch info.category {

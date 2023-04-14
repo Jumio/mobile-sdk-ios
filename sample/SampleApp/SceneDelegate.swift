@@ -1,11 +1,11 @@
 //
 //  SceneDelegate.swift
-//  SampleApp-UIKit
 //
-//  Copyright © 2022 Jumio Corporation. All rights reserved.
+//  Copyright © 2023 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
+import Jumio
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -47,4 +47,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        for context in URLContexts {
+            // Add this method to handle the deeplink URL for Digital identity
+            _ = Jumio.SDK.handleDeeplinkURL(context.url)
+        }
+    }
 }

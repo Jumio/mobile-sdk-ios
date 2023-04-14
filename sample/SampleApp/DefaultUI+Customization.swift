@@ -1,7 +1,7 @@
 //
 //  DefaultUI+Customization.swift
 //
-//  Copyright © 2022 Jumio Corporation. All rights reserved.
+//  Copyright © 2023 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -69,7 +69,6 @@ extension DefaultUI {
         customTheme.scanView.bubbleForeground = Jumio.Theme.Value(.yellow)
         customTheme.scanView.bubbleBackground = Jumio.Theme.Value(.cyan)
         customTheme.scanView.foreground = Jumio.Theme.Value(.red)
-        customTheme.scanView.animationBackground = Jumio.Theme.Value(.blue.withAlphaComponent(0.5))
         customTheme.scanView.shutter = Jumio.Theme.Value(.purple)
         
         // Search Bubble

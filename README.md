@@ -1,16 +1,21 @@
 ![Jumio](docs/images/jumio_feature_graphic.jpg)
 
 ![Version](https://img.shields.io/github/v/release/Jumio/Mobile-SDK-IOS?style=flat)
+[![API Doc](https://img.shields.io/github/v/release/Jumio/Mobile-SDK-IOS?label=API%20doc&color=green&style=flat)](https://jumio.github.io/mobile-sdk-ios/Jumio)
 ![License](https://img.shields.io/cocoapods/l/JumioMobileSDK.svg?style=flat)
 ![Platform](https://img.shields.io/cocoapods/p/JumioMobileSDK.svg?style=flat)
 [![Pod Version](https://img.shields.io/cocoapods/v/Jumio.svg?style=flat)](https://cocoapods.org/pods/Jumio)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)
 [![Swift 3.0-5.x](http://img.shields.io/badge/Swift-3.x,%204.x%20&%205.x-orange.svg?style=flat)](https://swift.org/)
 
 # Table of Contents
 - [Overview](#overview)
 - [Get Started](#get-started)
-  - [Jumio SDK Integration](docs/integration_guide.md)
+  - [Jumio SDK Integration](#jumio-sdk-integration)
+  - [Code Documentation](#code-documentation)
+  - [FAQ](#faq)
+  - [Known Issues](#known-issues)
 - [Quickstart](#quickstart)
 - [Basics](#basics)
   - [General Requirements](#general-requirements)
@@ -20,13 +25,15 @@
   - [App Thinning and Size Matters](#app-thinning-and-size-matters)
   - [Language Localization](#language-localization)
 - [Document Verification](#document-verification)
+- [Digital Identity](#digital-identity)
 - [Analytics with Datadog](#analytics-with-datadog)
 - [Security](#security)
 - [Release Notes](#release-notes)
 - [Maintenance and Support](#maintenance-and-support)
-- [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
-- [FAQ](docs/integration_faq.md)
-- [Known Issues](docs/known_issues.md)
+  - [Two-factor Authentication](#two-factor-authentication)
+  - [Licenses](#licenses)
+  - [Contact](#contact)
+  - [Copyright](#copyright)
 
 # Overview
 The Jumio Software Development Kit (SDK) provides you with a set of tools and UIs (default or custom) to develop an iOS application perfectly fitted to your specific needs.
@@ -56,6 +63,15 @@ If you need information on older SDK versions, please refer to:
 - [3.9.2](https://github.com/Jumio/mobile-sdk-ios/tree/v3.9.2)
 - [3.9.1](https://github.com/Jumio/mobile-sdk-ios/tree/v3.9.1)
 - [3.9.0](https://github.com/Jumio/mobile-sdk-ios/tree/v3.9.0)
+
+## Code Documentation
+Full API documentation for the Jumio iOS SDK can be found [here](https://jumio.github.io/mobile-sdk-ios/Jumio).
+
+## FAQ
+Link to Jumio iOS SDK FAQ can be found [here](docs/integration_faq.md).
+
+## Known Issues
+List of known issues can be found [here](docs/known_issues.md).
 
 -----
 
@@ -225,13 +241,20 @@ For more details, please refer to our [integration guide](docs/integration_guide
 
 ℹ️&nbsp;&nbsp;__Note:__ To enable the use of this feature, please contact [Jumio support](#support).
 
+# Digital Identity
+As of Jumio iOS SDK 4.5.0, users may use their Digital Identity to verify their identity.
+For now 'ID by Mastercard' is the only Digital Identity provider currently supported by our SDK.
+
+If you want to enable Digital Identity verification for your account please [contact us](https://support.jumio.com).
+In case you are already set up to use Digital Identity verificaiton within your app, check out the integration steps explained [here](docs/integration_guide.md#digital-identity).
+
 # Analytics With Datadog
 Analytic feedback and diagnostics enable us to continually improve our SDK and its performance, as well as investigate potential issues. With the Jumio SDK, we use [Datadog](https://github.com/DataDog/dd-sdk-ios) as an optional tool to collect diagnostic information. Data collected includes specific SDK information like version numbers, started and finished SDK instances and scan workflows, thrown exceptions and error information, as well as other mobile events. Please note that gathering analytics data requires user consent due to legal regulations such as GDPR. The consent is granted when our MLA is accepted.
 
 To benefit from Datadog, include the following pod in your Podfile (for more details, see [Cocoapods Section](docs/integration_guide.md#via-cocoapods):
 
 ```
-pod 'Jumio/Datadog', '~>4.3.1'
+pod 'Jumio/Datadog', '~>4.5.0'
 ```
 
 In this case, it is also necessary to include the following post-install hook in your Podfile:

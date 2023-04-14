@@ -1,7 +1,7 @@
 //
 //  HelpViewController.swift
 //
-//  Copyright © 2022 Jumio Corporation. All rights reserved.
+//  Copyright © 2023 Jumio Corporation. All rights reserved.
 //
 
 import UIKit

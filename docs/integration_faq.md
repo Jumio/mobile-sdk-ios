@@ -29,6 +29,7 @@ Our SDK provides a variety of [customization options](integration_guide.md#custo
 ### Suggested Improvements with Additional Customization:
 ![Onboarding good case](images/onboardingGoodCase.jpg)
  - Host application has an explanatory help screen that explains what will happen next and why this information is needed.
+ - In `multipart` ScanParts, the user is guided to move to the next part (e.g. back side of the identity card) with an animation. The extraction should be disabled during this guidance.
  - SDK is either customized to have a more embedded appearance or [CustomUI](integration_guide.md#custom-ui) is used to create a completely seamless integration in the UX of our customers.
  - Also after the Jumio workflow that shows the displayed results and/or a message that the ID is currently verified, which might take some minutes.
 
@@ -39,10 +40,10 @@ The following table highlights the most common error codes which are returned fr
 
 | Code   | Cause    | Recommended Handling         |
 | :----: | :------- | :--------------------------- |
-| A[x][yyyy] | Caused by temporary network issues like a slow connection. | Advise to check the signal and retry the SDK journey. |
-| E[x][yyyy] | Flight mode is activated or no connection available. | The user should be asked to disable flight mode or to verify if the phone has proper signal. Advise to connect to WIFI and retry the SDK journey afterwards. |
-| G[0][0000] | The user pressed back or X to exit the SDK while no error view was presented. | Reasons for this could be manyfold. Often it might be due to the fact that the user didn't have his identity document at hand. Give the user the option to retry. |
-| J[x][yyyy] | The SDK journey was not completed within the session's max. lifetime. (The default is 15 minutes.) | The user should be informed about the timeout and be directed to start a new Jumio SDK session. |
+| A[xx][yyyy] | Caused by temporary network issues like a slow connection. | Advise to check the signal and retry the SDK journey. |
+| E[xx][yyyy] | Flight mode is activated or no connection available. | The user should be asked to disable flight mode or to verify if the phone has proper signal. Advise to connect to WIFI and retry the SDK journey afterwards. |
+| G[00][0000] | The user pressed back or X to exit the SDK while no error view was presented. | Reasons for this could be manyfold. Often it might be due to the fact that the user didn't have his identity document at hand. Give the user the option to retry. |
+| J[xx][yyyy] | The SDK journey was not completed within the session's max. lifetime. (The default is 15 minutes.) | The user should be informed about the timeout and be directed to start a new Jumio SDK session. |
 
 ### Ad blockers or Firewall
 End users might face the situation where they are connected to a network that can't reach our Jumio endpoints.
@@ -59,16 +60,16 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 2.85 MB | base              |
-| Linefinder                 | 3.39 MB | base, linefinder  |
-| MRZ                        | 4.86 MB | base, mrz, linefinder         |
-| NFC                        | 6.02 MB | base, mrz, nfc, linefinder         |
-| Barcode                    | 4.37 MB | base, barcode, linefinder          |
-| All                        | 6.99 MB | base, mrz, nfc, barcode, linefinder     |
-| All + Liveness             | 8.21 MB | base, mrz, nfc, barcode, linefinder, iproov    |
-| All + Liveness + DeviceRisk| 8.56 MB | base, mrz, nfc, barcode, linefinder, iproov, devicerisk    |
-| All + Liveness + DocFinder | 9.82 MB | base, mrz, nfc, barcode, linefinder, iproov, docfinder     |
-| All + Liveness + Datadog   | 8.97 MB | base, mrz, nfc, barcode, linefinder, iproov, datadog       |
+| Slim                       | 2.89 MB | base              |
+| Linefinder                 | 3.42 MB | base, linefinder  |
+| MRZ                        | 4.89 MB | base, mrz, linefinder         |
+| NFC                        | 6.05 MB | base, mrz, nfc, linefinder         |
+| Barcode                    | 4.40 MB | base, barcode, linefinder          |
+| All                        | 7.02 MB | base, mrz, nfc, barcode, linefinder     |
+| All + Liveness             | 8.08 MB | base, mrz, nfc, barcode, linefinder, iproov    |
+| All + Liveness + DeviceRisk| 8.42 MB | base, mrz, nfc, barcode, linefinder, iproov, devicerisk    |
+| All + Liveness + DocFinder | 9.69 MB | base, mrz, nfc, barcode, linefinder, iproov, docfinder     |
+| All + Liveness + Datadog   | 8.84 MB | base, mrz, nfc, barcode, linefinder, iproov, datadog       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 

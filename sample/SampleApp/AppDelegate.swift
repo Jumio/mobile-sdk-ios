@@ -1,11 +1,11 @@
 //
 //  AppDelegate.swift
-//  SampleApp-UIKit
 //
-//  Copyright © 2022 Jumio Corporation. All rights reserved.
+//  Copyright © 2023 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
+import Jumio
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,5 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        // Add this method to handle the deeplink URL for Digital identity
+        guard Jumio.SDK.handleDeeplinkURL(url) else {
+            return false
+        }
+        return true
     }
 }
