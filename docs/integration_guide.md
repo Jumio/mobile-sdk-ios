@@ -41,7 +41,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
   - [Custom UI customization](#custom-ui-customization)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.5.0__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.6.0__
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -70,25 +70,30 @@ pod repo update
 ```
 Adapt your Podfile and add the pods according to the product(s) you want use. Check the following example how a Podfile could look like, with a list of all available Jumio pods:
 
-⚠️⚠️&nbsp;&nbsp;__Note:__ Please do not include everything! Make sure to __only__ use pods that provide to the services you need!
+⚠️⚠️&nbsp;&nbsp;__Note:__ Please do not include everything! Make sure to __only__ use pods that provide to the services you need! It's only possible to add 1 core functionality, but as many addons as needed.
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '11.0'
 use_frameworks! # Required for proper framework handling
 
-pod 'Jumio/Slim', '~>4.5.0' # Manual Capture functionality
-pod 'Jumio/LineFinder', '~>4.5.0' # Manual Capture and Linefinder functionality
-pod 'Jumio/MRZ', '~>4.5.0' # Manual Capture and MRZ functionality
-pod 'Jumio/Barcode', '~>4.5.0' # Manual Capture and Barcode functionality
-pod 'Jumio/NFC', '~>4.5.0' # Manual Capture, Linefinder, MRZ and NFC functionality
-pod 'Jumio/Jumio', '~>4.5.0' # Use JumioSDK with all available scanning methods
+#Core:
+pod 'Jumio/Slim', '~>4.6.0' # Manual Capture functionality
+pod 'Jumio/LineFinder', '~>4.6.0' # Manual Capture and Linefinder functionality
+pod 'Jumio/MRZ', '~>4.6.0' # Manual Capture and MRZ functionality
+pod 'Jumio/Barcode', '~>4.6.0' # Manual Capture and Barcode functionality
+pod 'Jumio/NFC', '~>4.6.0' # Manual Capture, Linefinder, MRZ and NFC functionality
+pod 'Jumio/Jumio', '~>4.6.0' # Use JumioSDK with all available scanning methods
 
-pod 'Jumio/Liveness', '~>4.5.0' # All available scanning methods and Liveness functionality
-pod 'Jumio/DocFinder', '~>4.5.0' # Autocapture functionality
-pod 'Jumio/DeviceRisk', '~>4.5.0' # Device fingerprinting functionality (optional)
-pod 'Jumio/Datadog', '~>4.5.0' # Analytics functionality (optional)
-pod 'Jumio/All', '~>4.5.0' # All Jumio products with all available scanning methods
+#Addons:
+pod 'Jumio/Liveness', '~>4.6.0' # Liveness functionality
+pod 'Jumio/IProov', '~>4.6.0' # iProov liveness functionality
+pod 'Jumio/DocFinder', '~>4.6.0' # Autocapture functionality 
+pod 'Jumio/DeviceRisk', '~>4.6.0' # Device fingerprinting functionality
+pod 'Jumio/Datadog', '~>4.6.0' # Analytics functionality
+
+#All:
+pod 'Jumio/All', '~>4.6.0' # All Jumio products with all available scanning methods
 ```
 
 ##### Certified Face Liveness
@@ -96,7 +101,7 @@ Jumio uses Certified Liveness technology to determine liveness.
 Please make sure to add the following post-install hook to your Podfile if you are using Jumio's liveness provider iProov:
 
 ```
-pod 'Jumio/Liveness'
+pod 'Jumio/IProov'
 
 # mandatory for all functionalities that include liveness (iProov)
 post_install do |installer|
@@ -142,7 +147,8 @@ The Jumio SDK contains four different targets. Add them to your project based on
 ```
 Jumio # Use JumioSDK with all available scanning methods
 JumioDocFinder # Autocapture functionality
-JumioLiveness # Liveness functionality
+JumioIProov # iProov liveness functionality
+JumioLiveness # Jumio liveness functionality
 JumioDeviceRisk # Device fingerprinting functionality
 ```
 
@@ -153,12 +159,13 @@ Starting from SDK 4.5.0 Jumio supports Carthage as dependency management tool fo
 Adapt you Cartfile and add Jumio dependencies. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.5.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDocFinder.json" == 4.5.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Microblink.json" == 4.5.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.5.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDeviceRisk.json" == 4.5.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.5.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.6.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDocFinder.json" == 4.6.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Microblink.json" == 4.6.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.6.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDeviceRisk.json" == 4.6.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.6.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.6.0
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -166,8 +173,8 @@ Update you Carthage dependencies via Terminal:
 carthage update
 ```
 
-#### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.5.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.5.0/ios-jumio-mobile-sdk-4.5.0.zip).
+### Manually
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.6.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.6.0/ios-jumio-mobile-sdk-4.6.0.zip).
 
 __Using iProov (manually):__
 * JumioIProov.xcframework
@@ -483,7 +490,9 @@ func jumio(controller: Jumio.Controller, error: Jumio.Error)
 func jumio(controller: Jumio.Controller, logicalError: Jumio.LogicalError)
 ```
 #### Consent Handling
-To support compliance with various biometric data protection laws, if a user's consent is required the parameter `consentItems` will provide a list of `JumioConsentItems`. Each consent item contains a text, a consent type, a valid URL that will redirect the user to Jumio's consent details And attributedText where the text is parsed and link holder is underlined. If no consent is required, the parameter `consentItems` will be `null`.
+To support compliance with various data protection laws, if a user's consent is required the parameter `consentItems` will provide a list of `Jumio.ConsentItem`. Each consent item contains a text, a consent type and an URL that will redirect the user to Jumio's consent details. Each `Jumio.ConsentItem` also provides an attributedText where the text is parsed and link holder is underlined. 
+
+If no consent is required, the parameter `consentItems` will be `null`.
 
 Each consent item can be one of two types: 
 * `Jumio.ConsentType.active`
@@ -495,7 +504,7 @@ For `active` types, the user needs to accept the consent items explicitly, e.g. 
 
 ___Please note that biometric data protection laws and other laws governing consent can change over time and therefore you must include user consent handling as described above, even if a record of the user’s consent is not required for your current use case.___
 
-⚠️&nbsp;&nbsp;__Note:__ Please be aware that in cases where list of `consentItems` is not null, the user is **legally required** to **actually consent** to Jumio's policy. Do not accept automatically without showing the user any terms.
+⚠️&nbsp;&nbsp;__Note:__ Please be aware that in cases where list of `consentItems` is not null, the user **must consent** to Jumio's processing of personal information, including biometric data, and be provided a link to Jumio's Privacy Notice. Do not accept automatically without showing the user any terms.
 
 ### Credential Handling
 [`Jumio.Credential`][jumioCredential] will contain all necessary information about the scanning process. For ID verification you will receive an [`IDCredential`][jumioIDCredential], for Identity Verification a [`FaceCredential`][jumioFaceCredential], and so on. Initialize the credential and check if it is already preconfigured. If this is the case, the parameter [`isConfigured`][isConfigured] will be `true` and the credential can be started right away.
@@ -653,7 +662,7 @@ During the scanning process, use the `scanPart` delegate method to check on the 
 
 When background processing is executed, [`Jumio.Scan.Step.processing`][processing] is triggered.
 
-When a [`multipart`][multipart] scan part is started, an additional [`nextPart`][nextPart] step is sent after [`imageTaken`][imageTaken]. This signals that another side of the document should be scanned now. The step returns the [`Jumio.Credential.Part`][jumioCredentialPart], which should be scanned next, as data object.
+When a [`multipart`][multipart] scan part is started, an additional [`nextPart`][nextPart] step is sent after [`imageTaken`][imageTaken]. This signals that another side of the document should be scanned now. The step returns the [`Jumio.Credential.Part`][jumioCredentialPart], which should be scanned next, as data object. We suggest to actively guide the user to move to the next part, e.g. by showing an animation and by disabling the extraction during the animation.
 
 When a confirmation view should be displayed, depending on the outcome either [`Jumio.Scan.Step.confirmationView`][confirmationView] or [`Jumio.Scan.Step.rejectView`][rejectView] is triggered. To display the ScanPart in the confirmation or reject view, instantiate a [`Jumio.Confirmation.Handler`][jumioConfirmationHandler] or [`Jumio.Reject.Handler`][jumioRejectHandler], and simply attach the ScanPart to the handler and render the views once the steps are triggered:
 

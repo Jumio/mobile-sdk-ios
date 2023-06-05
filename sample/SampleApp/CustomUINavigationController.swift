@@ -378,8 +378,12 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         var message = ""
         switch extractionState {
         case .centerId: message = "CENTER_ID"
+        case .centerFace: message = "CENTER_FACE"
         case .tooClose: message = "TOO_CLOSE"
+        case .faceTooClose: message = "FACE_TOO_CLOSE"
         case .moveCloser: message = "MOVE_CLOSER"
+        case .moveFaceCloser: message = "MOVE_FACE_CLOSER"
+        case .levelEyesAndDevice: message = "LEVEL_EYES_AND_DEVICE"
         case .holdStraight: message = "HOLD_STRAIGHT"
         case .holdStill: message = "HOLD_STILL"
         @unknown default: assertionFailure("unknown extraction state")

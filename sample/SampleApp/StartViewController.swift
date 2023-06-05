@@ -87,7 +87,7 @@ extension StartViewController: UITableViewDelegate, UITableViewDataSource {
         
         // if type is .active, you need to add a UI element that allows the user to consent explicitly to this consent item
         if consentItem.type == .active {
-            let consentSwitch = UISwitch(frame: CGRectZero) as UISwitch
+            let consentSwitch = UISwitch(frame: .zero) as UISwitch
             consentSwitch.isOn = false
             consentSwitch.addTarget(self, action: #selector(consentValueChanged), for: .valueChanged)
             consentSwitch.tag = indexPath.row

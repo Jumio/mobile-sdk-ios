@@ -57,6 +57,9 @@ extension DefaultUI {
         customTheme.scanOverlay.fill = Jumio.Theme.Value(.yellow.withAlphaComponent(0.5))
         customTheme.scanOverlay.scanOverlayTransparent = Jumio.Theme.Value(.orange)
         customTheme.scanOverlay.scanBackground = Jumio.Theme.Value(.blue.withAlphaComponent(0.5))
+        customTheme.scanOverlay.livenessStroke = Jumio.Theme.Value(.yellow)
+        customTheme.scanOverlay.livenessStrokeAnimation = Jumio.Theme.Value(.red)
+        customTheme.scanOverlay.livenessStrokeAnimationCompleted = Jumio.Theme.Value(.orange)
         
         // NFC
         customTheme.nfc.passportCover = Jumio.Theme.Value(.red)
@@ -69,7 +72,9 @@ extension DefaultUI {
         customTheme.scanView.bubbleForeground = Jumio.Theme.Value(.yellow)
         customTheme.scanView.bubbleBackground = Jumio.Theme.Value(.cyan)
         customTheme.scanView.foreground = Jumio.Theme.Value(.red)
-        customTheme.scanView.shutter = Jumio.Theme.Value(.purple)
+        customTheme.scanView.darkForeground = Jumio.Theme.Value(.red)
+        customTheme.scanView.documentShutter = Jumio.Theme.Value(.purple)
+        customTheme.scanView.faceShutter = Jumio.Theme.Value(.blue)
         
         // Search Bubble
         customTheme.searchBubble.background = Jumio.Theme.Value(.yellow)

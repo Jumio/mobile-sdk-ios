@@ -3,6 +3,8 @@
 # FAQ
 
 ## Table of Contents
+- [User Consent](#user-consent)
+- [Autocapture](#autocapture)
 - [Improving User Experience and Reduce Drop-off Rate](#improve-user-experience-and-reduce-drop-off-rate)
 - [Managing Errors](#managing-errors)
 - [Reducing the Size of Your App](#reducing-the-size-of-your-app)
@@ -13,6 +15,23 @@
 - [Overview of Scanning Methods](#overview-of-scanning-methods)
 - [Glossary of Commonly Used Abbreviations ](#glossary)
 - [Jumio Support](#jumio-support)
+
+## User Consent
+User consent is now acquired for all users to ensure the accordance with biometric data protection laws. Depending on the legal requirements, consent can be acquired in one of two ways: __Active__ or __passive__.
+
+For __active__ consent instances, the user needs to accept the consent items explicitly, e.g. by enabling a UI switch or checking a checkbox for each consent item. For __passive__ consent instances, it is enough to present the consent text and URL to the user. The user implicitly accepts the passive consent items by continuing with the journey.
+
+<p float="left">
+<img src="images/consent/user_consent_passive.png" alt="Acquiring passive user consent" width="20%" height="20%">
+<img src="images/consent/user_consent_active_off.png" alt="Acquiring active user consent" width="20%" height="20%">
+<img src="images/consent/user_consent_active_on.png" alt="Acquiring passive user consent" width="20%" height="20%">
+</p>
+
+## Autocapture
+
+The new Autocapture experience allows users to capture multiple images within a single camera session. For example the user can be guided to first capture the front of a document, then flip the document and capture the back of a document.
+
+https://user-images.githubusercontent.com/27801945/232710790-9caf1be0-145e-4cf6-b1ff-5a7b98d4ab66.mov
 
 ## Improve User Experience and Reduce Drop-off Rate
 When evaluating user flows, one of the most commonly used metrics is the rate of drop-offs. At Jumio, we see considerable variance in drop-off rates across industries and customer implementations. For some implementations and industries, we see a higher rate of drop-offs on the first screens when compared with the average.
@@ -60,20 +79,19 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 2.89 MB | base              |
-| Linefinder                 | 3.42 MB | base, linefinder  |
-| MRZ                        | 4.89 MB | base, mrz, linefinder         |
-| NFC                        | 6.05 MB | base, mrz, nfc, linefinder         |
-| Barcode                    | 4.40 MB | base, barcode, linefinder          |
-| All                        | 7.02 MB | base, mrz, nfc, barcode, linefinder     |
-| All + Liveness             | 8.08 MB | base, mrz, nfc, barcode, linefinder, iproov    |
-| All + Liveness + DeviceRisk| 8.42 MB | base, mrz, nfc, barcode, linefinder, iproov, devicerisk    |
-| All + Liveness + DocFinder | 9.69 MB | base, mrz, nfc, barcode, linefinder, iproov, docfinder     |
-| All + Liveness + Datadog   | 8.84 MB | base, mrz, nfc, barcode, linefinder, iproov, datadog       |
+| Slim                       | 3.40 MB | base              |
+| Linefinder                 | 3.96 MB | base, linefinder  |
+| MRZ                        | 5.36 MB | base, mrz, linefinder         |
+| NFC                        | 7.13 MB | base, mrz, nfc, linefinder         |
+| Barcode                    | 5.07 MB | base, barcode, linefinder          |
+| All                        | 7.99 MB | base, mrz, nfc, barcode, linefinder     |
+| All + IProov               | 9.24 MB | base, mrz, nfc, barcode, linefinder, iproov    |
+| All + DeviceRisk           | 8.44 MB | base, mrz, nfc, barcode, linefinder, devicerisk    |
+| All + DocFinder            | 9.77 MB | base, mrz, nfc, barcode, linefinder, docfinder     |
+| All + Datadog              | 9.29 MB | base, mrz, nfc, barcode, linefinder, datadog       |
+| All + Liveness             | 10.65 MB | base, mrz, nfc, barcode, linefinder, liveness       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
-
-__Note:__ The size values in the table above depict the decompressed install size required on a device and are comparable to the estimated App Store files size. The size value might vary by a few percent, depending on the actual device used. Testing conducted by Jumio using iPhone X.
 
 ### Bitcode
 Bitcode is an intermediate representation of a compiled program. Apps you upload to App Store Connect that contain Bitcode will be compiled and linked on the App Store. Including Bitcode will allow Apple to re-optimize your app binary in the future without requiring you to submit a new version of your app to the App Store.
@@ -118,27 +136,42 @@ Our SDK supports accessibility features. Visually impaired users can enable __Vo
 #### Autocapture
 Combines all previously existing scanning methods into one automatic, seamless experience.
 
-![Autocapture Success](images/capturing_methods/autocapture_01.png)  ![Autocapture Scanning](images/capturing_methods/autocapture_02.png)
+<p float="left">
+<img src="images/capturing_methods/autocapture_01.png" alt="Autocapture Success" width="30%" height="30%">
+<img src="images/capturing_methods/autocapture_02.png" alt="Autocapture Scanning" width="30%" height="30%">
+</p>
 
 #### Linefinder
 Scanning using edge detection.
 
-![Linefinder Empty](images/capturing_methods/linefinder_scanning_01.png)  ![Linefinder Document](images/capturing_methods/linefinder_scanning_02.png)
+<p float="left">
+<img src="images/capturing_methods/linefinder_scanning_01.png" alt="Linefinder Empty" width="30%" height="30%">
+<img src="images/capturing_methods/linefinder_scanning_02.png" alt="Linefinder Document" width="30%" height="30%">
+</p>
 
 #### MRZ
 Data extraction from passports, some identity cards and some visas.
 
-![MRZ Empty](images/capturing_methods/mrz_scanning_01.png)  ![MRZ Document](images/capturing_methods/mrz_scanning_02.png)
+<p float="left">
+<img src="images/capturing_methods/mrz_scanning_01.png" alt="MRZ Empty" width="30%" height="30%">
+<img src="images/capturing_methods/mrz_scanning_02.png" alt="MRZ Document" width="30%" height="30%">
+</p>
 
 #### Barcode
 PDF417 barcode data extraction, for example from US and Canadian driver licenses.
 
-![Barcode Empty](images/capturing_methods/barcode_scanning_01.png)  ![Barcode Document](images/capturing_methods/barcode_scanning_02.png)
+<p float="left">
+<img src="images/capturing_methods/barcode_scanning_01.png" alt="Barcode Empty" width="30%" height="30%">
+<img src="images/capturing_methods/barcode_scanning_02.png" alt="Barcode Document" width="30%" height="30%">
+</p>
 
 #### Manual Capture
 Manual scanning (taking a picture) using the shutterbutton, fallback option in case user is having trouble.
 
-![Manual Capture Empty](images/capturing_methods/manual_capturing_01.png)  ![Manual Capture Document](images/capturing_methods/manual_capturing_02.png)
+<p float="left">
+<img src="images/capturing_methods/manual_capturing_01.png" alt="Manual Capture Empty" width="30%" height="30%">
+<img src="images/capturing_methods/manual_capturing_02.png" alt="Manual Capture Document" width="30%" height="30%">
+</p>
 
 ## Glossary
 A [quick guide to commonly used abbreviations](integration_glossary.md) throughout the documentation which may not be all that familiar.

@@ -14,8 +14,15 @@ All notable changes, such as SDK releases, updates and fixes, are documented in 
 For detailed technical changes please refer to our [Transition Guide](transition_guide.md).
 
 ## Support Period
-Current SDK version: __4.5.0__     
+Current SDK version: __4.6.0__     
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: __4.6.0__
+![Improvement] Added Jumio Liveness module to enhance the Liveness user experience and interface [Identity Verification]
+
+![Improvement] Improved Liveness customization options [Identity Verification]
+
+![Change] Dependency name for iProov liveness was changed, see: [Transition Guide](transition_guide.md). [Identity Verification]
 
 ## SDK Version: __4.5.0__
 ![Improvement] Added possibility for users to verify their identity using [Digital Identity](../README.md#digital-identity) [ID Verification, Identity Verification]
@@ -27,6 +34,15 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 ![Improvement] Improvement Added Carthage as new option for dependency manager
 
 ![Fix] Bug fixes: UI bugs [ID Verification]
+
+<details>
+<summary>More details</summary>
+
+### User consent
+
+User consent is now acquired for all users to ensure the accordance with biometric data protection laws. Please also refer to the [User Consent section](integration_faq.md#user-consent) in our FAQ.
+
+</details>
 
 ## SDK Version: __4.4.0__
 ![Improvement] Fully redesigned ID Autocapture experience - seamless capturing, precise guidance and faster user journey [ID Verification]
@@ -40,6 +56,21 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 ![Improvement] Added Swift Package Manager (SPM) as new option for dependency manager
 
 ![Fix] Bug fixes: UI bugs, internal crashes
+
+<details>
+<summary>More details</summary>
+
+### Autocapture
+
+The new Autocapture experience allows users to capture multiple images within a single camera session. For example the user can be guided to first capture the front of a document, then flip the document and capture the back of a document.
+
+Please also refer to the [Autocapture section](integration_faq.md#autocapture) in our FAQ.
+
+### iOS Simulator
+
+The Jumio SDK is now buildable with all Simulator iOS versions, but to really perform a scan you still need to use a physical device.
+
+</details>
 
 ## SDK Version: __4.3.1__
 ![Fix] Fixed camera focus issue with iPhone 14 Pro

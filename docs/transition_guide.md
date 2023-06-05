@@ -6,6 +6,22 @@ This section covers all technical changes that should be considered when updatin
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.6.0
+#### Liveness
+ * Added new library `JumioLiveness` to enhance the Liveness user experience/interface. Check out our [Integration Guide](integration_guide.md).
+ * Removed liveness confirmation handling
+
+#### Cocoapods
+  * `pod 'Jumio/IProov'` replaces ~~`pod 'Jumio/Liveness'`~~ as new pod for using iProov liveness technology.
+  * `pod 'Jumio/Liveness'` is now required to use the Jumio liveness solution.
+  
+#### SPM
+  * Library `'JumioIProov'` replaces ~~`'JumioLiveness'`~~ as new library for our iProov liveness solution.
+  * Library `'JumioLiveness'` is now required to use the Jumio liveness solution.
+  
+#### Carthage
+  * Added `'JumioLiveness.json'` which is now required to use the Jumio liveness solution.
+
 ## 4.5.0
 #### Customization
 * Option `Jumio.Theme.ScanView.animationBackground` has been removed.
@@ -70,14 +86,17 @@ end
 ## 4.4.0
 #### Changes to Public API
 * New `Jumio.Credential.Part`
-  * multipart
+  * `multipart`: This is the new Autocapture scan part. Instead of having a single scan part for all parts of a document (front, back), there is now a single `multipart` scan part that combines the two. Within this scan part all needed parts of a document are captured at once.
 * New `Jumio.Scan.Step`
-  * nextPart
+  * `nextPart`: This scan step shows that the previous part has been captured and the next one can be started (e.g. frontside has been captured, now switch to the backside of the document). Contains the `Jumio.Credential.Part` as additional data. We suggest to actively guide the user to move to the next part, e.g. by showing an animation and by disabling the extraction during the animation.
+* Updated `Jumio.Scan.Step.started`
+  * Added `Jumio.Credential.Part` as additional data
 * Changed confirmation and reject handling
   * Added `Jumio.Confirmation.Handler`
   * Added `Jumio.Reject.Handler`
-  * Removed `attach`, `detach`, `retake` and `confirm` methods from `Jumio.Confirmation.View`
-  * Removed `attach`, `detach` and `retake` methods from `Jumio.Reject.View`
+  * Moved `attach`, `detach`, `retake` and `confirm` methods from `Jumio.Confirmation.View` to `Jumio.Confirmation.Handler`
+  * Moved `attach`, `detach` and `retake` methods from `Jumio.Reject.View` to `Jumio.Reject.Handler`
+  * As a result the confirmation views for front and/or back within multipart scans are obsolete and not existing anymore.
 * New `Jumio.Retry.Reason.iProov`:
   * faceMisaligned
   * eyesClosed
@@ -154,8 +173,8 @@ The following keys have been removed:
   * IProov_FailureMotionTooMuchMouthMovement
   * IProov_FailureMotionTooMuchMovement
 
-#### Livness
-* We have seperated our liveness soultion in `JumioIProov.xcframework`. If you want to integrate our liveness solution you need to add this framework beside `Jumio.xcframewrok` to your project. 
+#### Liveness
+* We have seperated our liveness solution in `JumioIProov.xcframework`. You need to add this framework beside `Jumio.xcframework` to your project. 
 
 #### Cocoapods
 * The following pods have been removed. Instead `Jumio/Liveness` should be added in your pod file.

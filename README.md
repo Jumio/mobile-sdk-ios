@@ -254,7 +254,7 @@ Analytic feedback and diagnostics enable us to continually improve our SDK and i
 To benefit from Datadog, include the following pod in your Podfile (for more details, see [Cocoapods Section](docs/integration_guide.md#via-cocoapods):
 
 ```
-pod 'Jumio/Datadog', '~>4.5.0'
+pod 'Jumio/Datadog'
 ```
 
 In this case, it is also necessary to include the following post-install hook in your Podfile:
