@@ -14,8 +14,15 @@ All notable changes, such as SDK releases, updates and fixes, are documented in 
 For detailed technical changes please refer to our [Transition Guide](transition_guide.md).
 
 ## Support Period
-Current SDK version: __4.6.0__     
+Current SDK version: __4.6.1__     
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: __4.6.1__
+![Improvement] iProov SDK version update to 10.3.1 [Identity Verification]
+
+![Improvement] Added Apple Privacy Manifest
+
+![Change] Pod Jumio/DeviceRisk was excluded from pod Jumio/All.
 
 ## SDK Version: __4.6.0__
 ![Improvement] Added Jumio Liveness module to enhance the Liveness user experience and interface [Identity Verification]

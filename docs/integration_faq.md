@@ -79,14 +79,14 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 3.40 MB | base              |
-| Linefinder                 | 3.96 MB | base, linefinder  |
-| MRZ                        | 5.36 MB | base, mrz, linefinder         |
-| NFC                        | 7.13 MB | base, mrz, nfc, linefinder         |
-| Barcode                    | 5.07 MB | base, barcode, linefinder          |
-| All                        | 7.99 MB | base, mrz, nfc, barcode, linefinder     |
-| All + IProov               | 9.24 MB | base, mrz, nfc, barcode, linefinder, iproov    |
-| All + DeviceRisk           | 8.44 MB | base, mrz, nfc, barcode, linefinder, devicerisk    |
+| Slim                       | 3.53 MB | base              |
+| Linefinder                 | 4.10 MB | base, linefinder  |
+| MRZ                        | 5.51 MB | base, mrz, linefinder         |
+| NFC                        | 7.02 MB | base, mrz, nfc, linefinder         |
+| Barcode                    | 5.06 MB | base, barcode, linefinder          |
+| All                        | 7.97 MB | base, mrz, nfc, barcode, linefinder     |
+| All + IProov               | 9.11 MB | base, mrz, nfc, barcode, linefinder, iproov    |
+| All + DeviceRisk           | 8.31 MB | base, mrz, nfc, barcode, linefinder, devicerisk    |
 | All + DocFinder            | 9.77 MB | base, mrz, nfc, barcode, linefinder, docfinder     |
 | All + Datadog              | 9.29 MB | base, mrz, nfc, barcode, linefinder, datadog       |
 | All + Liveness             | 10.65 MB | base, mrz, nfc, barcode, linefinder, liveness       |
