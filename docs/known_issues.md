@@ -1,6 +1,7 @@
 # Known Issues
 
 ## Table of Contents
+- [Symbol not found: Starscream](#symbol-not-found-starscream)
 - [Datadog Cocoapods Restriction](#datadog-cocoapods-restriction)
 - [App Crash at Launch Using Simulator](#app-crash-at-launch-using-simulator)
 - [Cropped TableView in Document Selection for iOS 15](#cropped-tableview-in-document-selection-for-ios-15)
@@ -13,6 +14,19 @@
     - [Language Changes at Runtime](#language-changes-at-runtime)
 - [User Was Not Asked for Face Capturing](#user-was-not-asked-for-face-capturing)
 - [Country Missing from the Country List](#country-missing-from-the-country-list)
+
+## Symbol not found: Starscream
+App crash on startup with an error like this one when using Cocoapods:
+```
+Symbol not found: _$s10Starscream17WebSocketDelegateP10didReceive5event6clientyAA0bC5EventO_AA0bC0CtFTq
+```
+
+In this case please make sure to force use Starscream version `4.0.4`:
+```
+pod 'Starscream', '4.0.4' 
+```
+
+ℹ️&nbsp;&nbsp;__Note:__ This issue is fixed beginning with iOS SDK version `4.6.1`.
 
 ## Datadog Cocoapods Restriction
 The Jumio SDK currently supports the data analysis provider Datadog only with the dependency manager Cocoapods. If you need to integrate Datadog without Cocoapods, reach out to the support team.
