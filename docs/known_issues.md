@@ -16,17 +16,24 @@
 - [Country Missing from the Country List](#country-missing-from-the-country-list)
 
 ## Symbol not found: Starscream
-App crash on startup with an error like this one when using Cocoapods:
+This issue might occur due to a breaking change in Starscream's latest patch version `4.0.5` when using Cocoapods.  
+Especially when updating the Cocoapods repository via `pod install` or similar it leads to an app crash on startup with an error like:
 ```
 Symbol not found: _$s10Starscream17WebSocketDelegateP10didReceive5event6clientyAA0bC5EventO_AA0bC0CtFTq
 ```
 
-In this case please make sure to force use Starscream version `4.0.4`:
+In SDK 4.x, please make sure to force Starscream to version `4.0.4` by adding the following line to your podfile:
 ```
 pod 'Starscream', '4.0.4' 
 ```
 
-ℹ️&nbsp;&nbsp;__Note:__ This issue is fixed beginning with iOS SDK version `4.6.1`.
+In SDK 3.x, please make sure to additionally force Socket.IO-Client-Swift to version `16.0.1` by adding the following lines to your podfile:
+```
+pod 'Socket.IO-Client-Swift', '16.0.1' 
+pod 'Starscream', '4.0.4'
+```
+
+ℹ️&nbsp;&nbsp;__Note:__ This issue is fixed beginning with SDK version `4.6.1`. Also for customers who are still on SDK 3, updating to SDK `3.9.8` will resolve this.
 
 ## Datadog Cocoapods Restriction
 The Jumio SDK currently supports the data analysis provider Datadog only with the dependency manager Cocoapods. If you need to integrate Datadog without Cocoapods, reach out to the support team.
