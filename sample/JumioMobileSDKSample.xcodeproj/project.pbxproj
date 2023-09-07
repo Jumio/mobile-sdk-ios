@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,18 +19,18 @@
 		05CD5AB02577C18F00A436F4 /* iProov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA52577C16400A436F4 /* iProov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05CD5AB12577C19100A436F4 /* JumioIProov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA42577C16400A436F4 /* JumioIProov.framework */; };
 		05CD5AB22577C19100A436F4 /* JumioIProov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA42577C16400A436F4 /* JumioIProov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		05CD5AB32577C19300A436F4 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA62577C16400A436F4 /* SocketIO.framework */; };
-		05CD5AB42577C19300A436F4 /* SocketIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA62577C16400A436F4 /* SocketIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		05CD5AB52577C19400A436F4 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA32577C16400A436F4 /* Starscream.framework */; };
-		05CD5AB62577C19400A436F4 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA32577C16400A436F4 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05CD5AB32577C19300A436F4 /* SocketIO.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA62577C16400A436F4 /* SocketIO.xcframework */; };
+		05CD5AB42577C19300A436F4 /* SocketIO.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA62577C16400A436F4 /* SocketIO.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05CD5AB52577C19400A436F4 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA32577C16400A436F4 /* Starscream.xcframework */; };
+		05CD5AB62577C19400A436F4 /* Starscream.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA32577C16400A436F4 /* Starscream.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05CD5AB72577C19800A436F4 /* iProov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA52577C16400A436F4 /* iProov.framework */; };
 		05CD5AB82577C19800A436F4 /* iProov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA52577C16400A436F4 /* iProov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		05CD5AB92577C19900A436F4 /* JumioIProov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA42577C16400A436F4 /* JumioIProov.framework */; };
 		05CD5ABA2577C19900A436F4 /* JumioIProov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA42577C16400A436F4 /* JumioIProov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		05CD5ABB2577C19B00A436F4 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA62577C16400A436F4 /* SocketIO.framework */; };
-		05CD5ABC2577C19B00A436F4 /* SocketIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA62577C16400A436F4 /* SocketIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		05CD5ABD2577C19C00A436F4 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA32577C16400A436F4 /* Starscream.framework */; };
-		05CD5ABE2577C19C00A436F4 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA32577C16400A436F4 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05CD5ABB2577C19B00A436F4 /* SocketIO.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA62577C16400A436F4 /* SocketIO.xcframework */; };
+		05CD5ABC2577C19B00A436F4 /* SocketIO.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA62577C16400A436F4 /* SocketIO.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		05CD5ABD2577C19C00A436F4 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA32577C16400A436F4 /* Starscream.xcframework */; };
+		05CD5ABE2577C19C00A436F4 /* Starscream.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05CD5AA32577C16400A436F4 /* Starscream.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3078F8B52202044A003B2974 /* NetverifyBarcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F8B422020449003B2974 /* NetverifyBarcode.framework */; };
 		3078F8B62202044A003B2974 /* NetverifyBarcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F8B422020449003B2974 /* NetverifyBarcode.framework */; };
 		30CEB9A32208A88A00322964 /* NetverifyBarcode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F8B422020449003B2974 /* NetverifyBarcode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -103,14 +103,14 @@
 				05640D0724911A78006DB048 /* JumioNFC.framework in Embed Frameworks */,
 				0535EC1923CE583D00C6DEB0 /* DocumentVerification.framework in Embed Frameworks */,
 				54042A891FEBDED400626D55 /* Microblink.framework in Embed Frameworks */,
-				05CD5AB42577C19300A436F4 /* SocketIO.framework in Embed Frameworks */,
+				05CD5AB42577C19300A436F4 /* SocketIO.xcframework in Embed Frameworks */,
 				30CEB9A32208A88A00322964 /* NetverifyBarcode.framework in Embed Frameworks */,
 				54042A871FEBDED400626D55 /* JumioCore.framework in Embed Frameworks */,
 				05CD5AB02577C18F00A436F4 /* iProov.framework in Embed Frameworks */,
 				54042A851FEBDED400626D55 /* BAMCheckout.framework in Embed Frameworks */,
 				05CD5AB22577C19100A436F4 /* JumioIProov.framework in Embed Frameworks */,
 				54042A8B1FEBDED400626D55 /* Netverify.framework in Embed Frameworks */,
-				05CD5AB62577C19400A436F4 /* Starscream.framework in Embed Frameworks */,
+				05CD5AB62577C19400A436F4 /* Starscream.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,7 +123,7 @@
 			files = (
 				05640D0624911A70006DB048 /* JumioNFC.framework in Embed Frameworks */,
 				0535EC1823CE57D300C6DEB0 /* DocumentVerification.framework in Embed Frameworks */,
-				05CD5ABC2577C19B00A436F4 /* SocketIO.framework in Embed Frameworks */,
+				05CD5ABC2577C19B00A436F4 /* SocketIO.xcframework in Embed Frameworks */,
 				54042A931FEBDEF500626D55 /* Microblink.framework in Embed Frameworks */,
 				54042A911FEBDEF500626D55 /* JumioCore.framework in Embed Frameworks */,
 				05CD5AB82577C19800A436F4 /* iProov.framework in Embed Frameworks */,
@@ -131,7 +131,7 @@
 				05CD5ABA2577C19900A436F4 /* JumioIProov.framework in Embed Frameworks */,
 				30CEB9AA2209C0FA00322964 /* NetverifyBarcode.framework in Embed Frameworks */,
 				54042A951FEBDEF500626D55 /* Netverify.framework in Embed Frameworks */,
-				05CD5ABE2577C19C00A436F4 /* Starscream.framework in Embed Frameworks */,
+				05CD5ABE2577C19C00A436F4 /* Starscream.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,10 +153,10 @@
 		056F197C244DC9D100C7FFCF /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = "../frameworks/Localizations/cs.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
 		056F197E244DCA0200C7FFCF /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = "../frameworks/Localizations/ro.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
 		056F197F244DCA0700C7FFCF /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = "../frameworks/Localizations/ro.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
-		05CD5AA32577C16400A436F4 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = ../frameworks/Starscream.framework; sourceTree = "<group>"; };
+		05CD5AA32577C16400A436F4 /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Starscream.xcframework; path = ../frameworks/Starscream.xcframework; sourceTree = "<group>"; };
 		05CD5AA42577C16400A436F4 /* JumioIProov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JumioIProov.framework; path = ../frameworks/JumioIProov.framework; sourceTree = "<group>"; };
 		05CD5AA52577C16400A436F4 /* iProov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iProov.framework; path = ../frameworks/iProov.framework; sourceTree = "<group>"; };
-		05CD5AA62577C16400A436F4 /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = ../frameworks/SocketIO.framework; sourceTree = "<group>"; };
+		05CD5AA62577C16400A436F4 /* SocketIO.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SocketIO.xcframework; path = ../frameworks/SocketIO.xcframework; sourceTree = "<group>"; };
 		05D3E41824C831AF00458F8D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "../frameworks/Localizations/zh-Hant.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
 		05D3E41924C831BA00458F8D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "../frameworks/Localizations/zh-Hant.lproj/Localizable-DocumentVerification.strings"; sourceTree = "<group>"; };
 		05D3E41B24C8323C00458F8D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = "../frameworks/Localizations/vi.lproj/Localizable-Netverify.strings"; sourceTree = "<group>"; };
@@ -283,12 +283,12 @@
 				9694C9A4206156E9004CC4BA /* BAMCheckout.framework in Frameworks */,
 				05CD5AB92577C19900A436F4 /* JumioIProov.framework in Frameworks */,
 				0535EC1723CE553300C6DEB0 /* DocumentVerification.framework in Frameworks */,
-				05CD5ABB2577C19B00A436F4 /* SocketIO.framework in Frameworks */,
+				05CD5ABB2577C19B00A436F4 /* SocketIO.xcframework in Frameworks */,
 				05640D0524911862006DB048 /* JumioNFC.framework in Frameworks */,
 				05CD5AB72577C19800A436F4 /* iProov.framework in Frameworks */,
 				54042A921FEBDEF500626D55 /* Microblink.framework in Frameworks */,
 				54042A901FEBDEF500626D55 /* JumioCore.framework in Frameworks */,
-				05CD5ABD2577C19C00A436F4 /* Starscream.framework in Frameworks */,
+				05CD5ABD2577C19C00A436F4 /* Starscream.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,11 +302,11 @@
 				0535EC1623CE553000C6DEB0 /* DocumentVerification.framework in Frameworks */,
 				54042A841FEBDED400626D55 /* BAMCheckout.framework in Frameworks */,
 				05CD5AB12577C19100A436F4 /* JumioIProov.framework in Frameworks */,
-				05CD5AB32577C19300A436F4 /* SocketIO.framework in Frameworks */,
+				05CD5AB32577C19300A436F4 /* SocketIO.xcframework in Frameworks */,
 				05640D0424911862006DB048 /* JumioNFC.framework in Frameworks */,
 				05CD5AAF2577C18F00A436F4 /* iProov.framework in Frameworks */,
 				54042A8A1FEBDED400626D55 /* Netverify.framework in Frameworks */,
-				05CD5AB52577C19400A436F4 /* Starscream.framework in Frameworks */,
+				05CD5AB52577C19400A436F4 /* Starscream.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,8 +508,8 @@
 			children = (
 				05CD5AA52577C16400A436F4 /* iProov.framework */,
 				05CD5AA42577C16400A436F4 /* JumioIProov.framework */,
-				05CD5AA62577C16400A436F4 /* SocketIO.framework */,
-				05CD5AA32577C16400A436F4 /* Starscream.framework */,
+				05CD5AA62577C16400A436F4 /* SocketIO.xcframework */,
+				05CD5AA32577C16400A436F4 /* Starscream.xcframework */,
 				05640D0324911862006DB048 /* JumioNFC.framework */,
 				0535EC1523CE553000C6DEB0 /* DocumentVerification.framework */,
 				3078F8B422020449003B2974 /* NetverifyBarcode.framework */,
