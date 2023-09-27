@@ -38,15 +38,6 @@ pod 'Starscream', '4.0.4'
 ## Datadog Cocoapods Restriction
 The Jumio SDK currently supports the data analysis provider Datadog only with the dependency manager Cocoapods. If you need to integrate Datadog without Cocoapods, reach out to the support team.
 
-## App Crash at Launch Using Simulator
-The app works fine for actual devices, but crashes at launch on simulator due to the following or similar error:
-
-_dyld: Library not loaded: /System/Library/Frameworks/Combine.framework/Combine_
-_Referenced from: /Users/.../mobile-sdk-ios-master/sample/Build/Jumio.framework/Jumio_
-_Reason: image not found_
-
-Please note that as of SDK version 4.0.0, due to SDK obfuscation the simulator is required to use the latest iOS version.
-
 ## Cropped TableView in Document Selection for iOS 15
 For SDK 3.9.4 and below, document type selection appears to be cut off at the top with defaultUI using iOS 15 and above, when compiled with certain Xcode versions.
 
@@ -133,7 +124,7 @@ Runtime language changes _within_ the SDK or separate language support (meaning 
 If there is an issue with the user journey skipping over the face capturing and not asking the user to take a selfie, please make sure the parameter `config.enableIdentityVerification` is set to `true`. If it is set to `false` the 3D-Liveness step won't be performed.
 
 ## Country Missing from the Country List
-Countries with documents that need barcode functionality (e.g. US and Canadian driver licenses) might not be available if the necessary frameworks are missing:
+Countries with documents that need barcode functionality (e.g. US and Canadian driver licenses) might not be available if the necessary frameworks are missing in SDK prior to 4.7.0:
 
 `MicroBlink.framework`  
 `NetverifyBarcode.framework`

@@ -22,8 +22,8 @@ class ControllerHandling {
     weak var delegate: Delegate?
     var isComplete: Bool? { controller?.isComplete }
     
-    fileprivate var controller: Jumio.Controller?
-    fileprivate var credentialInformations: [Jumio.Credential.Info]?
+    private var controller: Jumio.Controller?
+    private var credentialInformations: [Jumio.Credential.Info]?
     
     // MARK: - Functions
     func start(sdk: Jumio.SDK?) {

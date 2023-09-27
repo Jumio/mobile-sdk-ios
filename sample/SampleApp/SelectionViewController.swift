@@ -22,9 +22,9 @@ class SelectionViewController: UIViewController {
     var countryArray: [String] = []
     weak var delegate: SelectionViewControllerDelegate?
     
-    fileprivate var countries: [Country] = []
-    fileprivate var selectedCountry: String?
-    fileprivate var documents: [Jumio.Document] {
+    private var countries: [Country] = []
+    private var selectedCountry: String?
+    private var documents: [Jumio.Document] {
         guard let selectedCountry = selectedCountry else { return [] }
         let physicalDocuments = delegate?.selectionViewController(self, physicalDocumentsFor: selectedCountry) ?? []
         let digitalDocuments = delegate?.selectionViewController(self, digitalDocumentsFor: selectedCountry) ?? []

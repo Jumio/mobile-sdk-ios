@@ -101,6 +101,8 @@ In each class, the most important methods for this service is shown and quickly 
 
 Once you start up the sample application, you'll be given the option of trying out the Jumio SDK. Select a service from the action bar at the bottom to try out different services. Your application will also need camera permission, which will be prompted for automatically once you try to start any of services.
 
+⚠️&nbsp;&nbsp;__Note:__ We only support the Jumio SDK on physical devices. The app will compile on simulator, but you won't be able to run the SDK.
+
 -----
 
 # Basics
@@ -198,7 +200,7 @@ Our SDK supports localization for different languages. All label texts and butto
 
 Jumio SDK products support following languages for your convenience:
 
-_Afrikaans, Arabic, Bulgarian, Chinese(Simplified), Chinese(Traditional), Croatian, Czech, Danish, Dutch, Estonian, English, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Khmer, Korean, Latvian, Lithuanian, Maltese, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Vietnamese, Zulu_
+_Afrikaans, Arabic, Bulgarian, Chinese (Simplified), Chinese (Traditional), Croatian, Czech, Danish, Dutch, Estonian, English, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Khmer, Korean, Latvian, Lithuanian, Maltese, Norwegian, Polish, Portuguese (Portugal), Portuguese (Brazil), Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Vietnamese, Zulu_
 
 Please check out our [sample project](sample) to see how to use the strings files in your app.
 
@@ -241,6 +243,8 @@ For more details, please refer to our [integration guide](docs/integration_guide
 
 ℹ️&nbsp;&nbsp;__Note:__ To enable the use of this feature, please contact [Jumio support](#support).
 
+----
+
 # Digital Identity
 As of Jumio iOS SDK 4.5.0, users may use their Digital Identity to verify their identity.
 For now 'ID by Mastercard' is the only Digital Identity provider currently supported by our SDK.
@@ -248,39 +252,12 @@ For now 'ID by Mastercard' is the only Digital Identity provider currently suppo
 If you want to enable Digital Identity verification for your account please [contact us](https://support.jumio.com).
 In case you are already set up to use Digital Identity verificaiton within your app, check out the integration steps explained [here](docs/integration_guide.md#digital-identity).
 
+----
+
 # Analytics With Datadog
 Analytic feedback and diagnostics enable us to continually improve our SDK and its performance, as well as investigate potential issues. With the Jumio SDK, we use [Datadog](https://github.com/DataDog/dd-sdk-ios) as an optional tool to collect diagnostic information. Data collected includes specific SDK information like version numbers, started and finished SDK instances and scan workflows, thrown exceptions and error information, as well as other mobile events. Please note that gathering analytics data requires user consent due to legal regulations such as GDPR. The consent is granted when our MLA is accepted.
 
-To benefit from Datadog, include the following pod in your Podfile (for more details, see [Cocoapods Section](docs/integration_guide.md#via-cocoapods):
-
-```
-pod 'Jumio/Datadog'
-```
-
-In this case, it is also necessary to include the following post-install hook in your Podfile:
-
-```
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    if ['DatadogSDK'].include? target.name
-      target.build_configurations.each do |config|
-          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-      end
-    end
-  end
-end
-```
-
-Alternatively, add Datadog manually by including the following framework in your project (for more details, see [Manual Section](docs/integration_guide.md#manually)):
-
-```
-JumioDatadog.xcframework
-Datadog.xcframework
-```
-
-To grant or revoke user consent, please use `Jumio.SDK.giveDataDogConsent(enabled: Bool)` method.
-
-⚠️&nbsp;&nbsp;__Note:__ The use of the Datadog module is only possible if Datadog SDK is not already included in your application.
+To benefit from Datadog, include the `JumioDatadog` in your project (for more details, see [Dependencies](docs/integration_guide.md#dependencies):
 
 ----
 

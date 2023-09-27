@@ -14,7 +14,7 @@ protocol DefaultUIDelegate: AnyObject {
 class DefaultUI {
     typealias Delegate = DefaultUIDelegate
     
-    fileprivate var jumio: Jumio.SDK?
+    private var jumio: Jumio.SDK?
     weak var delegate: DefaultUI.Delegate?
     
     var viewController: Jumio.ViewController? {

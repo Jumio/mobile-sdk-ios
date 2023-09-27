@@ -14,6 +14,7 @@
 - [Language Localization](#language-localization)
 - [Overview of Scanning Methods](#overview-of-scanning-methods)
 - [Glossary of Commonly Used Abbreviations ](#glossary)
+- [Simulator Support](#simulator-support)
 - [Jumio Support](#jumio-support)
 
 ## User Consent
@@ -79,17 +80,13 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 3.53 MB | base              |
-| Linefinder                 | 4.10 MB | base, linefinder  |
-| MRZ                        | 5.51 MB | base, mrz, linefinder         |
-| NFC                        | 7.02 MB | base, mrz, nfc, linefinder         |
-| Barcode                    | 5.06 MB | base, barcode, linefinder          |
-| All                        | 7.97 MB | base, mrz, nfc, barcode, linefinder     |
-| All + IProov               | 9.11 MB | base, mrz, nfc, barcode, linefinder, iproov    |
-| All + DeviceRisk           | 8.31 MB | base, mrz, nfc, barcode, linefinder, devicerisk    |
-| All + DocFinder            | 9.77 MB | base, mrz, nfc, barcode, linefinder, docfinder     |
-| All + Datadog              | 9.29 MB | base, mrz, nfc, barcode, linefinder, datadog       |
-| All + Liveness             | 10.65 MB | base, mrz, nfc, barcode, linefinder, liveness       |
+| Slim                       | 2.11 MB | base          |
+| All                        | 3.77 MB | base, nfc     |
+| All + IProov               | 5.05 MB | base, nfc, iproov    |
+| All + DeviceRisk           | 4.25 MB | base, nfc, devicerisk    |
+| All + DocFinder            | 5.57 MB | base, nfc, docfinder     |
+| All + Datadog              | 3.92 MB | base, nfc, datadog       |
+| All + Liveness             | 6.59 MB | base, nfc, liveness       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 
@@ -141,22 +138,6 @@ Combines all previously existing scanning methods into one automatic, seamless e
 <img src="images/capturing_methods/autocapture_02.png" alt="Autocapture Scanning" width="30%" height="30%">
 </p>
 
-#### Linefinder
-Scanning using edge detection.
-
-<p float="left">
-<img src="images/capturing_methods/linefinder_scanning_01.png" alt="Linefinder Empty" width="30%" height="30%">
-<img src="images/capturing_methods/linefinder_scanning_02.png" alt="Linefinder Document" width="30%" height="30%">
-</p>
-
-#### MRZ
-Data extraction from passports, some identity cards and some visas.
-
-<p float="left">
-<img src="images/capturing_methods/mrz_scanning_01.png" alt="MRZ Empty" width="30%" height="30%">
-<img src="images/capturing_methods/mrz_scanning_02.png" alt="MRZ Document" width="30%" height="30%">
-</p>
-
 #### Barcode
 PDF417 barcode data extraction, for example from US and Canadian driver licenses.
 
@@ -175,6 +156,9 @@ Manual scanning (taking a picture) using the shutterbutton, fallback option in c
 
 ## Glossary
 A [quick guide to commonly used abbreviations](integration_glossary.md) throughout the documentation which may not be all that familiar.
+
+## Simulator Support
+We don't support the use of the Jumio SDK on simulator, please only run it on physical devices. When running Jumio SDK in Default UI, an empty ViewController will be presented. When running Jumio SDK in Custom UI, the SDK won't provide any functionality.
 
 ## Jumio Support
 The Jumio development team is constantly striving to optimize the size of our frameworks while increasing functionality, to improve your KYC and to fight fraud. If you have any further questions, please reach out to our [support team](mailto:support@jumio.com).

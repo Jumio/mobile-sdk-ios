@@ -33,6 +33,7 @@ The following table is a visual representation of the SDK 4.x.x version life-cyc
 
 | Version |     Release      |   End of Support  |   End of Life    | 
 |:-------:|:----------------:|:-----------------:|:----------------:|
+|   4.7.0 |27 September 2023 |      27 June 2024 |27 September 2025 |
 |   4.6.1 |05 September 2023 |      05 June 2024 |05 September 2025 | 
 |   4.6.0 |     05 June 2023 |     05 March 2024 |     05 June 2025 | 
 |   4.5.0 |    14 April 2023 |   14 January 2024 |    14 April 2025 | 

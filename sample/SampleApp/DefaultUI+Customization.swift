@@ -11,8 +11,6 @@ extension DefaultUI {
     func customizeSDKColors() -> Jumio.Theme {
         var customTheme = Jumio.Theme()
         // IProov
-        customTheme.iProov.animationForeground = Jumio.Theme.Value(.red)
-        customTheme.iProov.animationBackground = Jumio.Theme.Value(.red)
         customTheme.iProov.filterForegroundColor = Jumio.Theme.Value(.blue)
         customTheme.iProov.filterBackgroundColor = Jumio.Theme.Value(.green)
         customTheme.iProov.titleTextColor = Jumio.Theme.Value(.brown)
@@ -29,12 +27,14 @@ extension DefaultUI {
         customTheme.primaryButton.background = Jumio.Theme.Value(light: .red, dark: .purple)
         customTheme.primaryButton.backgroundPressed = Jumio.Theme.Value(light: .yellow, dark: .cyan)
         customTheme.primaryButton.backgroundDisabled = Jumio.Theme.Value(light: .blue, dark: .magenta)
-        customTheme.primaryButton.text = Jumio.Theme.Value(light: .green, dark: .yellow)
+        customTheme.primaryButton.foreground = Jumio.Theme.Value(light: .green, dark: .yellow)
+        customTheme.primaryButton.foregroundPressed = Jumio.Theme.Value(light: .black, dark: .white)
+        customTheme.primaryButton.foregroundDisabled = Jumio.Theme.Value(light: .darkGray, dark: .brown)
         
         customTheme.secondaryButton.background = Jumio.Theme.Value(light: .purple, dark: .orange)
         customTheme.secondaryButton.backgroundPressed = Jumio.Theme.Value(light: .cyan, dark: .yellow)
         customTheme.secondaryButton.backgroundDisabled = Jumio.Theme.Value(light: .magenta, dark: .blue)
-        customTheme.secondaryButton.text = Jumio.Theme.Value(light: .yellow, dark: .green)
+        customTheme.secondaryButton.foreground = Jumio.Theme.Value(light: .yellow, dark: .green)
         
         // Bubble, Circle and Selection Icon
         customTheme.bubble.background = Jumio.Theme.Value(.magenta)
@@ -86,6 +86,9 @@ extension DefaultUI {
         customTheme.confirmation.imageBackgroundBorder = Jumio.Theme.Value(.green)
         customTheme.confirmation.indicatorActive = Jumio.Theme.Value(.blue)
         customTheme.confirmation.indicatorDefault = Jumio.Theme.Value(.black)
+        
+        // Scan Help
+        customTheme.scanHelp.faceAnimationForeground = Jumio.Theme.Value(.red)
         
         // Global
         customTheme.background = Jumio.Theme.Value(light: .orange, dark: .magenta)

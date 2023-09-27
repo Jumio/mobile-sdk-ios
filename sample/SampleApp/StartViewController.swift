@@ -15,9 +15,9 @@ class StartViewController: UIViewController {
     @IBOutlet weak var overviewLabel: UILabel!
     
     // MARK: - Properties
-    fileprivate var needsToConsent: Bool = false
-    fileprivate var consentItems: [Jumio.ConsentItem]?
-    fileprivate var activeConsents: [String: Bool]?
+    private var needsToConsent: Bool = false
+    private var consentItems: [Jumio.ConsentItem]?
+    private var activeConsents: [String: Bool]?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

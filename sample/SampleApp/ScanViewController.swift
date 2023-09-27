@@ -39,12 +39,6 @@ class ScanViewController: UIViewController {
         extractionStateLabel.isHidden = true
     }
     
-    func presentLegalHint(with message: String) {
-        let alertView = UIAlertController(title: "Legal hint", message: message, preferredStyle: .alert)
-        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _  in alertView.dismiss(animated: true) }))
-        present(alertView, animated: true)
-    }
-    
     func showImageTaken() {
         containerImageTakenView.isHidden = false
     }

@@ -34,9 +34,6 @@ Machine Readable Travel Document
 ### eMRTD
 Electronic Machine Readable Travel Document
 
-### MRZ
-Machine Readable Zone: Standardized, usually at the bottom of the identity page of a passports, between 2 and 3 lines long, varies in size
-
 ### NFC
 [Near-Field Communication:](https://en.wikipedia.org/wiki/Near-field_communication#Identity_and_access_tokens) Establishes wireless connection from one device to another, but only if that device is in close enough proximity; can act as an electronic identity document / electronic identity token and is already used in many identity documents worldwide
 

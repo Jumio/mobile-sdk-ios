@@ -27,6 +27,14 @@
 		96FF9C7D269C334F00E93BAA /* DefaultUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FF9C7C269C334F00E93BAA /* DefaultUI.swift */; };
 		BE107F7828EECCE600ABA33F /* JumioIProov.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05956EEA28DC9AB500EEB986 /* JumioIProov.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE3ED5AE299D25520088F7B5 /* DigitalIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3ED5AD299D25520088F7B5 /* DigitalIdentityViewController.swift */; };
+		BE42A09E2A98D928009C4DF4 /* JumioDatadog.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A09D2A98D928009C4DF4 /* JumioDatadog.xcframework */; };
+		BE42A09F2A98D928009C4DF4 /* JumioDatadog.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A09D2A98D928009C4DF4 /* JumioDatadog.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE42A0A32A98D974009C4DF4 /* DatadogRUM.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A02A98D973009C4DF4 /* DatadogRUM.xcframework */; };
+		BE42A0A42A98D974009C4DF4 /* DatadogRUM.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A02A98D973009C4DF4 /* DatadogRUM.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE42A0A52A98D974009C4DF4 /* DatadogCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A12A98D973009C4DF4 /* DatadogCore.xcframework */; };
+		BE42A0A62A98D974009C4DF4 /* DatadogCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A12A98D973009C4DF4 /* DatadogCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE42A0A72A98D974009C4DF4 /* DatadogInternal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A22A98D973009C4DF4 /* DatadogInternal.xcframework */; };
+		BE42A0A82A98D974009C4DF4 /* DatadogInternal.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A22A98D973009C4DF4 /* DatadogInternal.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C83785EE283381C1007A37F9 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83785E9283381B9007A37F9 /* Starscream.xcframework */; };
 		C83785EF283381C1007A37F9 /* Starscream.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C83785E9283381B9007A37F9 /* Starscream.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C841B2502859D7B4007EE76A /* JumioDocFinder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */; };
@@ -39,8 +47,6 @@
 		F336C8D126C1A389001D910F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336C8D026C1A389001D910F /* ResultViewController.swift */; };
 		F336C8E626C1B2D3001D910F /* iProov.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F336C8E026C1B2D3001D910F /* iProov.xcframework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F336C8E726C1B2D3001D910F /* iProov.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F336C8E026C1B2D3001D910F /* iProov.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F336C8E826C1B2D3001D910F /* Pdf417Mobi.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F336C8E126C1B2D3001D910F /* Pdf417Mobi.xcframework */; settings = {ATTRIBUTES = (Required, ); }; };
-		F336C8E926C1B2D3001D910F /* Pdf417Mobi.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F336C8E126C1B2D3001D910F /* Pdf417Mobi.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F37729F326C0255D0010AE21 /* CustomUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37729F226C0255D0010AE21 /* CustomUINavigationController.swift */; };
 		F37729F826C025970010AE21 /* ScanPartHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37729F726C025970010AE21 /* ScanPartHandling.swift */; };
 		F37729FA26C025A00010AE21 /* CredentialHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37729F926C025A00010AE21 /* CredentialHandling.swift */; };
@@ -58,14 +64,17 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BE42A0A42A98D974009C4DF4 /* DatadogRUM.xcframework in Embed Frameworks */,
 				BE107F7828EECCE600ABA33F /* JumioIProov.xcframework in Embed Frameworks */,
 				F336C8E726C1B2D3001D910F /* iProov.xcframework in Embed Frameworks */,
 				96AD3A512817F032004F7EC1 /* JumioDeviceRisk.xcframework in Embed Frameworks */,
 				C841B2512859D7B4007EE76A /* JumioDocFinder.xcframework in Embed Frameworks */,
+				BE42A0A62A98D974009C4DF4 /* DatadogCore.xcframework in Embed Frameworks */,
 				05CDA84E273E53B600A49B81 /* Jumio.xcframework in Embed Frameworks */,
 				C8FDBE3C2A051A3E001EB5AC /* JumioLiveness.xcframework in Embed Frameworks */,
 				C83785EF283381C1007A37F9 /* Starscream.xcframework in Embed Frameworks */,
-				F336C8E926C1B2D3001D910F /* Pdf417Mobi.xcframework in Embed Frameworks */,
+				BE42A0A82A98D974009C4DF4 /* DatadogInternal.xcframework in Embed Frameworks */,
+				BE42A09F2A98D928009C4DF4 /* JumioDatadog.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,7 +113,6 @@
 		77641008273BD8CF00917566 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = "Frameworks/Localization/nb.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		77641009273BD8D500917566 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "Frameworks/Localization/nl.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		7764100A273BD8DE00917566 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = "Frameworks/Localization/pl.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
-		7764100B273BD8E500917566 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = "Frameworks/Localization/pt.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		7764100C273BD8EB00917566 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = "Frameworks/Localization/ro.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		7764100D273BD8F600917566 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "Frameworks/Localization/ru.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		7764100E273BD8FD00917566 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = "Frameworks/Localization/sk.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
@@ -119,6 +127,8 @@
 		77BD147228F7013700B06588 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = "Frameworks/Localization/uk.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		77F977A927AA762E00F213AF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		77F977AB27AA836400F213AF /* SampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleApp.entitlements; sourceTree = "<group>"; };
+		9630B3022A77EAD100DBDE18 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "Frameworks/Localization/pt-BR.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
+		9630B3032A77EADC00DBDE18 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "Frameworks/Localization/pt-PT.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		967A1E6626988857005A1233 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		967A1E6826988857005A1233 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		967A1E6A26988857005A1233 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +141,10 @@
 		96EECB0027C62FFB003D8B52 /* RetryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryViewController.swift; sourceTree = "<group>"; };
 		96FF9C7C269C334F00E93BAA /* DefaultUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUI.swift; sourceTree = "<group>"; };
 		BE3ED5AD299D25520088F7B5 /* DigitalIdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalIdentityViewController.swift; sourceTree = "<group>"; };
+		BE42A09D2A98D928009C4DF4 /* JumioDatadog.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JumioDatadog.xcframework; path = Frameworks/JumioDatadog.xcframework; sourceTree = "<group>"; };
+		BE42A0A02A98D973009C4DF4 /* DatadogRUM.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DatadogRUM.xcframework; path = Frameworks/DatadogRUM.xcframework; sourceTree = "<group>"; };
+		BE42A0A12A98D973009C4DF4 /* DatadogCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DatadogCore.xcframework; path = Frameworks/DatadogCore.xcframework; sourceTree = "<group>"; };
+		BE42A0A22A98D973009C4DF4 /* DatadogInternal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DatadogInternal.xcframework; path = Frameworks/DatadogInternal.xcframework; sourceTree = "<group>"; };
 		C83785E9283381B9007A37F9 /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Starscream.xcframework; path = Frameworks/Starscream.xcframework; sourceTree = "<group>"; };
 		C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JumioDocFinder.xcframework; path = Frameworks/JumioDocFinder.xcframework; sourceTree = "<group>"; };
 		C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JumioLiveness.xcframework; path = Frameworks/JumioLiveness.xcframework; sourceTree = "<group>"; };
@@ -139,7 +153,6 @@
 		F336C8CE26C18216001D910F /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		F336C8D026C1A389001D910F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		F336C8E026C1B2D3001D910F /* iProov.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = iProov.xcframework; path = Frameworks/iProov.xcframework; sourceTree = "<group>"; };
-		F336C8E126C1B2D3001D910F /* Pdf417Mobi.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Pdf417Mobi.xcframework; path = Frameworks/Pdf417Mobi.xcframework; sourceTree = "<group>"; };
 		F37729F226C0255D0010AE21 /* CustomUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUINavigationController.swift; sourceTree = "<group>"; };
 		F37729F726C025970010AE21 /* ScanPartHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPartHandling.swift; sourceTree = "<group>"; };
 		F37729F926C025A00010AE21 /* CredentialHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialHandling.swift; sourceTree = "<group>"; };
@@ -155,14 +168,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE42A0A32A98D974009C4DF4 /* DatadogRUM.xcframework in Frameworks */,
 				F336C8E626C1B2D3001D910F /* iProov.xcframework in Frameworks */,
 				05956EEB28DC9AB500EEB986 /* JumioIProov.xcframework in Frameworks */,
 				96AD3A502817F032004F7EC1 /* JumioDeviceRisk.xcframework in Frameworks */,
 				C841B2502859D7B4007EE76A /* JumioDocFinder.xcframework in Frameworks */,
+				BE42A0A52A98D974009C4DF4 /* DatadogCore.xcframework in Frameworks */,
 				05CDA84D273E53B600A49B81 /* Jumio.xcframework in Frameworks */,
 				C8FDBE3B2A051A3E001EB5AC /* JumioLiveness.xcframework in Frameworks */,
 				C83785EE283381C1007A37F9 /* Starscream.xcframework in Frameworks */,
-				F336C8E826C1B2D3001D910F /* Pdf417Mobi.xcframework in Frameworks */,
+				BE42A0A72A98D974009C4DF4 /* DatadogInternal.xcframework in Frameworks */,
+				BE42A09E2A98D928009C4DF4 /* JumioDatadog.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,13 +225,16 @@
 		96ED5EC825CC4D5B006E8035 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE42A0A12A98D973009C4DF4 /* DatadogCore.xcframework */,
+				BE42A0A22A98D973009C4DF4 /* DatadogInternal.xcframework */,
+				BE42A0A02A98D973009C4DF4 /* DatadogRUM.xcframework */,
+				BE42A09D2A98D928009C4DF4 /* JumioDatadog.xcframework */,
 				F336C8E026C1B2D3001D910F /* iProov.xcframework */,
 				05CDA84C273E53B600A49B81 /* Jumio.xcframework */,
 				96AD3A4F2817F032004F7EC1 /* JumioDeviceRisk.xcframework */,
 				C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */,
 				05956EEA28DC9AB500EEB986 /* JumioIProov.xcframework */,
 				C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */,
-				F336C8E126C1B2D3001D910F /* Pdf417Mobi.xcframework */,
 				C83785E9283381B9007A37F9 /* Starscream.xcframework */,
 			);
 			name = Frameworks;
@@ -345,7 +364,6 @@
 				nb,
 				nl,
 				pl,
-				pt,
 				ro,
 				ru,
 				sk,
@@ -358,6 +376,8 @@
 				"zh-Hant",
 				zu,
 				uk,
+				"pt-BR",
+				"pt-PT",
 			);
 			mainGroup = 96ED5EA325CC4942006E8035;
 			productRefGroup = 96ED5EAD25CC4942006E8035 /* Products */;
@@ -445,7 +465,6 @@
 				77641008273BD8CF00917566 /* nb */,
 				77641009273BD8D500917566 /* nl */,
 				7764100A273BD8DE00917566 /* pl */,
-				7764100B273BD8E500917566 /* pt */,
 				7764100C273BD8EB00917566 /* ro */,
 				7764100D273BD8F600917566 /* ru */,
 				7764100E273BD8FD00917566 /* sk */,
@@ -458,6 +477,8 @@
 				77641015273BD92A00917566 /* zh-Hant */,
 				77641016273BD93100917566 /* zu */,
 				77BD147228F7013700B06588 /* uk */,
+				9630B3022A77EAD100DBDE18 /* pt-BR */,
+				9630B3032A77EADC00DBDE18 /* pt-PT */,
 			);
 			name = "Localizable-Jumio.strings";
 			sourceTree = "<group>";
@@ -498,7 +519,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.6.1";
+				MARKETING_VERSION = "4.7.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentSampleSwift;
@@ -526,7 +547,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.6.1";
+				MARKETING_VERSION = "4.7.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;

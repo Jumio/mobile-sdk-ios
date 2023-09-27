@@ -7,7 +7,7 @@
 import UIKit
 
 class CustomButton: UIButton {
-    fileprivate struct Config {
+    private struct Config {
         static let positiveColor: UIColor = .systemBlue
         static let positiveTextColor: UIColor = .white
         static let positiveBorderColor: UIColor = .systemBlue
@@ -43,7 +43,7 @@ class CustomButton: UIButton {
         update()
     }
     
-    fileprivate func update() {
+    private func update() {
         layer.cornerRadius = 10
         layer.borderWidth = 1.0
         switch design {

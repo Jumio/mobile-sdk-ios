@@ -19,10 +19,10 @@ class CustomUINavigationController: UINavigationController {
     
     var isConfigured: Bool { credentialHandling?.isConfigured ?? false }
     
-    fileprivate var controllerHandling: ControllerHandling?
-    fileprivate var credentialHandling: CredentialHandling?
-    fileprivate var scanPartHandling: ScanPartHandling?
-    fileprivate var jumioSDK: Jumio.SDK?
+    private var controllerHandling: ControllerHandling?
+    private var credentialHandling: CredentialHandling?
+    private var scanPartHandling: ScanPartHandling?
+    private var jumioSDK: Jumio.SDK?
     
     // MARK: -
     required init?(coder aDecoder: NSCoder) {
@@ -75,20 +75,20 @@ class CustomUINavigationController: UINavigationController {
         }
     }
     
-    fileprivate func instantiate(viewController: ViewController) -> UIViewController {
+    private func instantiate(viewController: ViewController) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: viewController.rawValue)
         viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backButton"), style: .plain, target: self, action: #selector(backPressed))
         return viewController
     }
     
-    fileprivate func pushLoadingViewController(with style: LoadingViewController.Style) {
+    private func pushLoadingViewController(with style: LoadingViewController.Style) {
         guard let loadingViewController = instantiate(viewController: .loading) as? LoadingViewController else { return }
         loadingViewController.style = style
         pushViewController(loadingViewController, animated: true)
     }
     
-    fileprivate func clean() {
+    private func clean() {
         // clean all leftovers, all jumio instances should be set to nil to avoid any memory leaks
         // by still holding a strong reference to our instances
         controllerHandling?.clean()
@@ -208,9 +208,7 @@ extension CustomUINavigationController {
         guard let scanMode = scanPartHandling?.scanMode else { return "" }
         switch scanMode {
         case .manual: return "Manual"
-        case .lineFinder: return "LineFinder"
         case .barcode: return "Barcode"
-        case .mrz: return "MRZ"
         case .nfc: return "NFC"
         case .faceManual: return "Face manual"
         case .faceIProov: return "Face iProov"
@@ -368,11 +366,6 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         scanViewController.updateView()
     }
     
-    func scanPartShowLegalHint(with message: String) {
-        guard let scanViewController = topViewController as? ScanViewController else { return }
-        scanViewController.presentLegalHint(with: message)
-    }
-    
     func scanPartShowExtractionState(with extractionState: Jumio.Scan.Update.ExtractionState) {
         guard let scanViewController = topViewController as? ScanViewController else { return }
         var message = ""
@@ -395,7 +388,7 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         nextScanPartOrFinishCredential()
     }
     
-    fileprivate func showConfirmationViewController(with style: ConfirmationViewController.Style) {
+    private func showConfirmationViewController(with style: ConfirmationViewController.Style) {
         guard let viewController = instantiate(viewController: .confirmation) as? ConfirmationViewController else { return }
         viewController.style = style
         pushViewController(viewController, animated: true)

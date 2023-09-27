@@ -41,7 +41,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
   - [Custom UI customization](#custom-ui-customization)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.6.1__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.7.0__
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -78,22 +78,18 @@ platform :ios, '11.0'
 use_frameworks! # Required for proper framework handling
 
 #Core:
-pod 'Jumio/Slim', '~>4.6.1' # Manual Capture functionality
-pod 'Jumio/LineFinder', '~>4.6.1' # Manual Capture and Linefinder functionality
-pod 'Jumio/MRZ', '~>4.6.1' # Manual Capture and MRZ functionality
-pod 'Jumio/Barcode', '~>4.6.1' # Manual Capture and Barcode functionality
-pod 'Jumio/NFC', '~>4.6.1' # Manual Capture, Linefinder, MRZ and NFC functionality
-pod 'Jumio/Jumio', '~>4.6.1' # Use JumioSDK with all available scanning methods
+pod 'Jumio/Slim', '~>4.7.0' # Manual Capture functionality
+pod 'Jumio/Jumio', '~>4.7.0' # Use JumioSDK with all available scanning methods
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.6.1' # Liveness functionality
-pod 'Jumio/IProov', '~>4.6.1' # iProov liveness functionality
-pod 'Jumio/DocFinder', '~>4.6.1' # Autocapture functionality 
-pod 'Jumio/DeviceRisk', '~>4.6.1' # Device fingerprinting functionality
-pod 'Jumio/Datadog', '~>4.6.1' # Analytics functionality
+pod 'Jumio/Liveness', '~>4.7.0' # Liveness functionality
+pod 'Jumio/IProov', '~>4.7.0' # iProov liveness functionality
+pod 'Jumio/DocFinder', '~>4.7.0' # Autocapture functionality 
+pod 'Jumio/DeviceRisk', '~>4.7.0' # Device fingerprinting functionality
+pod 'Jumio/Datadog', '~>4.7.0' # Analytics functionality
 
 #All:
-pod 'Jumio/All', '~>4.6.1' # All Jumio products with all available scanning methods, except for Jumio/DeviceRisk
+pod 'Jumio/All', '~>4.7.0' # All Jumio products with all available scanning methods, except for Jumio/DeviceRisk
 ```
 
 ##### Certified Face Liveness
@@ -120,22 +116,6 @@ Install the pods to your project via Terminal:
 pod install
 ```
 
-##### Datadog
-If you are using Datadog analytics, please also include `'DatadogSDK'` in your target names of your post-install hook.
-For more details, please refer to section [Analytics With Datadog](../README.md#analytics-with-datadog).
-
-```
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    if ['DatadogSDK'].include? target.name
-      target.build_configurations.each do |config|
-          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-      end
-    end
-  end
-end
-```
-
 #### Via Swift Package Manager
 
 Jumio supports Swift Package Manager for easy integration of the SDK for version **4.4.0 and above**.
@@ -150,6 +130,7 @@ JumioDocFinder # Autocapture functionality
 JumioIProov # iProov liveness functionality
 JumioLiveness # Jumio liveness functionality
 JumioDeviceRisk # Device fingerprinting functionality
+JumioDatadog # Analytics functionality
 ```
 
 #### Via Carthage
@@ -159,22 +140,22 @@ Starting from SDK 4.5.0 Jumio supports Carthage as dependency management tool fo
 Adapt you Cartfile and add Jumio dependencies. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDocFinder.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Microblink.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDeviceRisk.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.6.1
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.7.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDocFinder.json" == 4.7.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.7.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDeviceRisk.json" == 4.7.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.7.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.7.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDatadog.json" == 4.7.0
 ```
 
 Update you Carthage dependencies via Terminal:
 ```
-carthage update
+carthage update --use-xcframeworks
 ```
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.6.1.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.6.1/ios-jumio-mobile-sdk-4.6.1.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.7.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.7.0/ios-jumio-mobile-sdk-4.7.0.zip).
 
 __Using iProov (manually):__
 * JumioIProov.xcframework
@@ -398,8 +379,7 @@ The following tables give information on the specification of all data parameter
 | mrzLine1           | String     |	50           | MRZ line 1	|
 | mrzLine2           | String     | 50           | MRZ line 2	|
 | mrzLine3           | String     |	50           | MRZ line 3	|
-| rawBarcodeData     | String     |	50           | Extracted barcode data	|
-| extractionMethod   | Jumio.Scan.Mode  |          | Extraction method used during scanning (linefinder, manual, faceIProov, faceManual, barcode, mrz, nfc, deviceRisk) |
+| extractionMethod   | Jumio.Scan.Mode  |          | Extraction method used during scanning (manual, faceIProov, faceManual, barcode, nfc, deviceRisk) |
 | imageData          | Jumio.ImageData |          | Wrapper class for accessing image data of all credential parts from an ID verification session. This feature has to be enabled by your account manager. |
 
 #### Class ___Jumio.FaceResult___
@@ -629,7 +609,7 @@ The following sequence diagram outlines an overview of ScanPart handling details
 
 Start the scanning process by initializing the scan part. Provide a `Jumio.Credential.Part` from the list below:
 
-* [`Jumio.Scan.Mode`][jumioScanMode] values: `manual`, `faceManual`, `lineFinder`, `barcode`, `mrz`, `nfc`, `faceIProov`, `deviceRisk`, `docFinder`, `file`, `web`
+* [`Jumio.Scan.Mode`][jumioScanMode] values: `manual`, `faceManual`, `barcode`, `nfc`, `faceIProov`, `deviceRisk`, `docFinder`, `file`, `web`
 
 * [`Jumio.Credential.Part`][jumioCredentialPart] values: `front`, `back`, `face`, `nfc`, `deviceRisk`, `document`, `multipart`, `digital`
 
@@ -710,7 +690,7 @@ As soon as the scan part has been confirmed and all processing has been complete
 
 [`Jumio.Scan.Update`][jumioScanUpdate] covers scan information that is relevant and might need to be displayed during the scanning process.
 
-* [`Jumio.Scan.Update`][jumioScanUpdate] values: `fallback(FallbackReason)`, `legalHint`, `nfcExtractionStarted`, `nfcExtractionProgress`, `nfcExtractionFinished`, `extractionState(ExtractionState)`
+* [`Jumio.Scan.Update`][jumioScanUpdate] values: `fallback(FallbackReason)`, `nfcExtractionStarted`, `nfcExtractionProgress`, `nfcExtractionFinished`, `extractionState(ExtractionState)`
 
 * [`Jumio.Scan.Update.FallbackReason`][jumioFallbackReason] values: `userAction`, `lowPerformance`
 
@@ -793,9 +773,6 @@ If you implement your own UI, you can still customize how some views provided by
 By following the steps explained in [Default UI customization](#default-ui-customization) you can see potential attributes to override.
 
 ----
-
-# Data Analysis
-You can enable or disable data analysis by calling `sdk.giveDataDogConsent(enabled: Bool)`. By default, data analysis is enabled.
 
 # Security
 All SDK related traffic is sent over HTTPS using TLS and public key pinning. Additionally, the information itself within the transmission is also encrypted utilizing __Application Layer Encryption__ (ALE). ALE is a Jumio custom-designed security protocol that utilizes RSA-OAEP and AES-256 to ensure that the data cannot be read or manipulated even if the traffic was captured.

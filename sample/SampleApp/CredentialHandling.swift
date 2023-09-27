@@ -23,10 +23,10 @@ class CredentialHandling {
     // IDCredential only
     var suggestedCountry: String? { (credential as? Jumio.IDCredential)?.suggestedCountry }
     
-    fileprivate var countries: [String] { (credential as? Jumio.IDCredential)?.supportedCountries ?? [] }
-    fileprivate(set) var info: Jumio.Credential.Info?
-    fileprivate var credential: Jumio.Credential?
-    fileprivate var credentialParts: [Jumio.Credential.Part]?
+    private var countries: [String] { (credential as? Jumio.IDCredential)?.supportedCountries ?? [] }
+    private(set) var info: Jumio.Credential.Info?
+    private var credential: Jumio.Credential?
+    private var credentialParts: [Jumio.Credential.Part]?
     
     // MARK: - Functions
     func start(info: Jumio.Credential.Info, with controller: Jumio.Controller?) {

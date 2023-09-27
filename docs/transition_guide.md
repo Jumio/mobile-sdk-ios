@@ -6,6 +6,65 @@ This section covers all technical changes that should be considered when updatin
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.7.0
+#### Barcode
+ * Removed `Jumio/Barcode` dependency as the functionality was moved to Jumio core. Every dependency now contains Barcode functionality.
+
+#### MRZ
+ * Removed `Jumio/MRZ` dependency. Please use `Jumio/Jumio` instead.
+
+#### NFC
+ * Removed `Jumio/NFC` dependency. Please use `Jumio/Jumio` instead.
+
+#### Linefinder
+* Removed `Jumio/LineFinder` dependency. Please use `Jumio/Slim` in combination with `Jumio/DocFinder` instead.
+
+#### Changes to Public API
+ * Deprecated `Jumio.Theme.IProov.animationForeground`
+    * Added `Jumio.Theme.ScanHelp.faceAnimationForeground`
+ * Deprecated `Jumio.Theme.IProov.animationBackground`
+    * Added `Jumio.Theme.ScanHelp.faceAnimationBackground`
+ * Deprecated `Jumio.Theme.PrimaryButton.text`
+    * Added `Jumio.Theme.PrimaryButton.foreground`
+ * Deprecated `Jumio.Theme.SecondaryButton.text`
+    * Added `Jumio.Theme.SecondaryButton.foreground`
+ * Added `Jumio.Theme.PrimaryButton.foregroundPressed`
+ * Added `Jumio.Theme.PrimaryButton.foregroundDisabled`
+ * Removed `Jumio.Scan.Mode.lineFinder`
+ * Removed `Jumio.Scan.Mode.mrz`
+ * Deprecated `Jumio.Scan.Update.legalHint`
+ * Deprecated `Jumio.SDK.giveDataDogConsent(enabled: Bool)`
+ * Deprecated `Jumio.IDResult.rawBarcodeData`
+ 
+#### Localization Keys
+The following keys have been added:
+  * jumio_id_scan_guide_photo_side
+  * jumio_id_scan_guide_back_side
+  * jumio_id_scan_guide_photo_side_manually
+  * jumio_id_scan_guide_back_side_manually
+
+The following keys have been removed:
+  * jumio_id_scan_guide_take_photo_front_idc
+  * jumio_id_scan_guide_take_photo_back_idc
+  * jumio_id_scan_guide_take_photo_passport
+  * jumio_id_scan_guide_take_photo_front_dl
+  * jumio_id_scan_guide_take_photo_back_dl
+  * jumio_id_scan_guide_take_photo_front_pd
+  * jumio_id_scan_guide_take_photo_back_pd
+
+#### Localization
+ * Replaced Portuguese `pt` with Portuguese (Portugal) `pt-PT`
+ * Added Portugise (Brasil) `pt-BR`
+
+#### SPM
+  * Library `JumioDatadog` which can be used to integrate JumioDatadog.
+  
+#### Carthage
+  * Added `JumioDatadog.json`.
+
+#### Frameworks
+  * Datadog dependency `DatadogSDK` is removed
+
 ## 4.6.1
 #### Cocoapods
  * `pod 'Jumio/DeviceRisk'` was removed from `pod 'Jumio/All'`.
@@ -25,6 +84,11 @@ __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the cha
   
 #### Carthage
   * Added `'JumioLiveness.json'` which is now required to use the Jumio liveness solution.
+  
+#### Changes to Public API
+* Deprecated `Jumio.Theme.ScanView.shutter`:
+    * Added `Jumio.Theme.ScanView.documentShutter`
+    * Added `Jumio.Theme.ScanView.faceShutter`
 
 ## 4.5.0
 #### Customization

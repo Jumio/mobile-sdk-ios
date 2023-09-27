@@ -20,7 +20,6 @@ protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartShowRejectView()
     func scanPartShowRetryView(with reason: Jumio.Retry.Reason)
     func scanPartDidFallback()
-    func scanPartShowLegalHint(with message: String)
     func scanPartShowExtractionState(with extractionState: Jumio.Scan.Update.ExtractionState)
     func scanPartFinished()
 }
@@ -33,8 +32,8 @@ class ScanPartHandling {
     var hasFallback: Bool? { scanPart?.hasFallback }
     var scanMode: Jumio.Scan.Mode? { scanPart?.scanMode }
     
-    fileprivate(set) var credentialPart: Jumio.Credential.Part?
-    fileprivate var scanPart: Jumio.Scan.Part?
+    private(set) var credentialPart: Jumio.Credential.Part?
+    private var scanPart: Jumio.Scan.Part?
     
     func start(credentialPart: Jumio.Credential.Part, of credential: Jumio.Credential?) {
         self.credentialPart = credentialPart
@@ -174,16 +173,14 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
             // Fallback Reason, you can notify the user that fallback is triggered. It could be that user select fallback themselves or Jumio has to fallback due to low performance.
             print(fallbackReason)
             delegate?.scanPartDidFallback()
-        // LegalHint: legal hint should be shown to the user. data contains a String with a message, which can be shown to the user
-        case .legalHint:
-            guard let message = data as? String else { return }
-            delegate?.scanPartShowLegalHint(with: message)
         // NFC Updates: You can show updates in the UI in the background, when NFC progresses
         case .nfcExtractionStarted, .nfcExtractionProgress, .nfcExtractionFinished:
             break
         // ExtractionState: extraction state updates should be shown to the user to guide him through capturing process
         case .extractionState(let extractionState):
             delegate?.scanPartShowExtractionState(with: extractionState)
+        case .legalHint:
+            print("deprecated scan update, will be removed in 4.8.0")
         @unknown default:
             print("got unknown scan update", update)
         }

@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var defaultUIButton: CustomButton!
     
     // MARK: - Private properties
-    fileprivate var defaultUI: DefaultUI?
-    fileprivate var jumioViewController: Jumio.ViewController?
+    private var defaultUI: DefaultUI?
+    private var jumioViewController: Jumio.ViewController?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -102,7 +102,7 @@ extension ViewController: CustomUINavigationController.Delegate {
 
 // MARK: - Segment
 extension ViewController {
-    fileprivate enum Segment: String {
+    private enum Segment: String {
         case US
         case EU
         case SG
@@ -140,7 +140,7 @@ extension ViewController {
 
 // MARK: - Segue
 extension ViewController {
-    fileprivate enum Segue: String {
+    private enum Segue: String {
         case customUI = "showCustomUI"
         case result = "showResult"
     }
