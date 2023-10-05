@@ -1,6 +1,7 @@
 # Known Issues
 
 ## Table of Contents
+- [Xcode15](#xcode15)
 - [Symbol not found: Starscream](#symbol-not-found-starscream)
 - [Datadog Cocoapods Restriction](#datadog-cocoapods-restriction)
 - [App Crash at Launch Using Simulator](#app-crash-at-launch-using-simulator)
@@ -14,6 +15,20 @@
     - [Language Changes at Runtime](#language-changes-at-runtime)
 - [User Was Not Asked for Face Capturing](#user-was-not-asked-for-face-capturing)
 - [Country Missing from the Country List](#country-missing-from-the-country-list)
+
+## Xcode15
+There might be crashes when using our frameworks with Xcode15 when using Cocoapods.
+
+Especially when using IProov:
+![Iproov crash](images/xcode15_crash_iproov.png)
+
+or Datadog:
+![Datadog crash](images/xcode15_crash_datadog.png)
+
+To fix this issue set the minimum deployment target to 12.0 instead of 11.0 in the post-install hook of your Podfile:
+```
+config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+```
 
 ## Symbol not found: Starscream
 This issue might occur due to a breaking change in Starscream's latest patch version `4.0.5` when using Cocoapods.  

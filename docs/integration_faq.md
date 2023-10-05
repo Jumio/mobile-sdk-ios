@@ -11,6 +11,7 @@
 	- [Strip Unused Frameworks](#strip-unused-frameworks)
 	- [Bitcode](#bitcode)
 - [Jumio Authentication Workflow Integration](#jumio-authentication-workflow-integration)
+- [Fallback and Manual Capturing](#fallback-and-manual-capturing)
 - [Language Localization](#language-localization)
 - [Overview of Scanning Methods](#overview-of-scanning-methods)
 - [Glossary of Commonly Used Abbreviations ](#glossary)
@@ -113,6 +114,15 @@ In case of a __successful result__ you can grant the user access to your service
 * User is not able to align his face with the oval presented during scanning
 
 In case an Authentication fail is returned, we recommend to allow the user between 3-5 Authentication attempts to prove their identity, before you lock the user from performing the action. This approach makes the most sense, as you don't want to lock out possible valid users who might not have completed the face capture task successfully for a legitimate reason. Don't worry about offering a potential fraudster more attempts to gain access to your system - our bullet proof liveness check does not allow them to get a successful result.
+
+## Fallback and Manual Capturing
+The variable [`hasFallback`](https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Part.html#/s:5JumioAAV4ScanV4PartC11hasFallbackSbvp) determines if a fallback for the current scan mode is available and returns a boolean. If the method returns true, the available fallback scan mode will have to be started with the method [`fallback()`](https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Part.html#/s:5JumioAAV4ScanV4PartC8fallbackyyF).
+
+The variable [`isShutterEnabled`](https://jumio.github.io/mobile-sdk-ios/Jumio/Classes/JumioScanView.html#/s:5Jumio0A8ScanViewC16isShutterEnabledSbvp) determines if a shutter button needs to be shown because the image has to be taken manually and returns a boolean. If the method returns true, you will have to display your own shutter button and call the method [`takePicture()`](https://jumio.github.io/mobile-sdk-ios/Jumio/Classes/JumioScanView.html#/s:5Jumio0A8ScanViewC11takePictureyyF) once it is clicked.
+
+__Note:__ Please note that the variable `isShutterEnabled` does neither create nor display the actual shutter button!
+
+"Manual capturing" simply refers to the user being able to manually take a picture. "Fallback" refers to an alternative scan mode the SDK can resort to if possible, in case there is an issue during the original scanning process. The fallback scan mode might be manual capturing in some cases, but not all.
 
 ## Language Localization
 Our SDK supports localization for different languages and cultures. All label texts and button titles can be changed and localized using the `Localizable-Jumio.strings` file. Just adapt the values to your required language, add it to your app or framework project and mark it as Localizable.
