@@ -77,9 +77,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 use_frameworks! # Required for proper framework handling
 
-#Core:
+#Core (add one of these):
 pod 'Jumio/Slim', '~>4.7.0' # Manual Capture functionality
-pod 'Jumio/Jumio', '~>4.7.0' # Use JumioSDK with all available scanning methods
+pod 'Jumio/Jumio', '~>4.7.0' # Manual Capture + NFC functionality
 
 #Addons:
 pod 'Jumio/Liveness', '~>4.7.0' # Liveness functionality
@@ -125,7 +125,10 @@ To integrate the Jumio SDK with Swift Package Manager, add this [repo](https://g
 The Jumio SDK contains four different targets. Add them to your project based on the functionality that you need in your application.
 
 ```
-Jumio # Use JumioSDK with all available scanning methods
+#Core (always add):
+Jumio # Manual Capture + NFC functionality
+
+#Addons:
 JumioDocFinder # Autocapture functionality
 JumioIProov # iProov liveness functionality
 JumioLiveness # Jumio liveness functionality
@@ -140,7 +143,10 @@ Starting from SDK 4.5.0 Jumio supports Carthage as dependency management tool fo
 Adapt you Cartfile and add Jumio dependencies. Check the following example how a Cartfile could look like:
 
 ```
+#Core (always add):
 binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.7.0
+
+#Addons:
 binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDocFinder.json" == 4.7.0
 binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.7.0
 binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDeviceRisk.json" == 4.7.0
