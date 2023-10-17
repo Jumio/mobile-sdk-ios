@@ -81,12 +81,12 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 2.11 MB | base          |
-| All                        | 3.77 MB | base, nfc     |
-| All + IProov               | 5.05 MB | base, nfc, iproov    |
-| All + DeviceRisk           | 4.25 MB | base, nfc, devicerisk    |
-| All + DocFinder            | 5.57 MB | base, nfc, docfinder     |
-| All + Datadog              | 3.92 MB | base, nfc, datadog       |
+| Slim                       | 1.87 MB | base          |
+| All                        | 3.91 MB | base, nfc     |
+| All + IProov               | 7.74 MB | base, nfc, iproov    |
+| All + DeviceRisk           | 4.12 MB | base, nfc, devicerisk    |
+| All + DocFinder            | 5.58 MB | base, nfc, docfinder     |
+| All + Datadog              | 4.96 MB | base, nfc, datadog       |
 | All + Liveness             | 6.59 MB | base, nfc, liveness       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
@@ -129,7 +129,7 @@ Our SDK supports localization for different languages and cultures. All label te
 
 This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update. If you're having issues with Localization, please refer to our [Known Issues](known_issues.md#language-localization-issues)
 
-__Note:__ If using CocoaPods, the original file is located under `/Pods/JumioMobileSDK`.
+__Note:__ If using CocoaPods, the original file is located under `/Pods/Jumio/Localization`.
 
 Currently, the following languages are automatically supported for your convenience: [supported languages](../README.md#language-localization)
 
