@@ -17,7 +17,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 - [Code Documentation](https://jumio.github.io/mobile-sdk-ios/Jumio/)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.2.0__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.2.1__
 
 For breaking technical changes, please read our [Transition Guide](transition_guide.md).
 
