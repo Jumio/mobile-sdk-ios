@@ -1,7 +1,7 @@
 //
 //  ControllerHandling.swift
 //
-//  Copyright © 2023 Jumio Corporation. All rights reserved.
+//  Copyright © 2024 Jumio Corporation. All rights reserved.
 //
 
 import Jumio
@@ -87,8 +87,6 @@ extension ControllerHandling: Jumio.Controller.Delegate {
                 return "\u{2022} capture your face"
             case .document:
                 return "\u{2022} capture your document"
-            case .data:
-                return "\u{2022} device risk "
             @unknown default:
                 return "\u{2022} unknown"
             }

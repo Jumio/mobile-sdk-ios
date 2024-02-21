@@ -1,7 +1,7 @@
 //
 //  CustomUINavigationController.swift
 //
-//  Copyright © 2023 Jumio Corporation. All rights reserved.
+//  Copyright © 2024 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -197,7 +197,6 @@ extension CustomUINavigationController {
         case .back: return "Back"
         case .face: return "Face"
         case .nfc: return "NFC"
-        case .deviceRisk: return "Device Risk"
         case .multipart: return "Multi Part"
         case .document: return "Document"
         case .digital: return "Digital"

@@ -24,6 +24,7 @@
   - [Integration](#integration)
   - [App Thinning and Size Matters](#app-thinning-and-size-matters)
   - [Language Localization](#language-localization)
+- [ML Models](#ml-models)
 - [Document Verification](#document-verification)
 - [Digital Identity](#digital-identity)
 - [Analytics with Datadog](#analytics-with-datadog)
@@ -109,7 +110,7 @@ Once you start up the sample application, you'll be given the option of trying o
 
 ## General Requirements
 The minimum requirements for the SDK are:
-- iOS 11.0 and higher
+- iOS 12.0 and higher
 - Internet connection
 - Jumio KYX or Jumio API v3
 
@@ -205,6 +206,19 @@ _Afrikaans, Arabic, Bulgarian, Chinese (Simplified), Chinese (Traditional), Croa
 Please check out our [sample project](sample) to see how to use the strings files in your app.
 
 Our SDK supports accessibility features. Visually impaired users can enable __VoiceOver__ or increase __text size__ on their device. VoiceOver uses separate values in the localization file, which can be customized.
+
+----
+
+# ML Models
+The Jumio SDK utilizes ML Models to enable client-/server-side verification.
+
+Required models can be provided by downloading and adding them manually to the bundle or preloading them. The SDK will load them on demand if none of the previous is applied.
+
+Loading the models in advance will improve startup time of the SDK.
+
+For more details, please refer to our [integration guide](docs/integration_guide.md#ml-models).
+
+----
 
 # Document Verification
 As of iOS SDK 4.3.0, Document Verification functionality is available.

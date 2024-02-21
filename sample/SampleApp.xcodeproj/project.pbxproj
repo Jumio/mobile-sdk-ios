@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,8 +21,6 @@
 		967A1E7026988857005A1233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967A1E6E26988857005A1233 /* Main.storyboard */; };
 		967A1E7226988858005A1233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967A1E7126988858005A1233 /* Assets.xcassets */; };
 		967A1E7526988858005A1233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967A1E7326988858005A1233 /* LaunchScreen.storyboard */; };
-		96AD3A502817F032004F7EC1 /* JumioDeviceRisk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96AD3A4F2817F032004F7EC1 /* JumioDeviceRisk.xcframework */; };
-		96AD3A512817F032004F7EC1 /* JumioDeviceRisk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96AD3A4F2817F032004F7EC1 /* JumioDeviceRisk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		96EECB0127C62FFB003D8B52 /* RetryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EECB0027C62FFB003D8B52 /* RetryViewController.swift */; };
 		96FF9C7D269C334F00E93BAA /* DefaultUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FF9C7C269C334F00E93BAA /* DefaultUI.swift */; };
 		BE107F7828EECCE600ABA33F /* JumioIProov.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05956EEA28DC9AB500EEB986 /* JumioIProov.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -35,10 +33,8 @@
 		BE42A0A62A98D974009C4DF4 /* DatadogCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A12A98D973009C4DF4 /* DatadogCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE42A0A72A98D974009C4DF4 /* DatadogInternal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A22A98D973009C4DF4 /* DatadogInternal.xcframework */; };
 		BE42A0A82A98D974009C4DF4 /* DatadogInternal.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A22A98D973009C4DF4 /* DatadogInternal.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C83785EE283381C1007A37F9 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83785E9283381B9007A37F9 /* Starscream.xcframework */; };
-		C83785EF283381C1007A37F9 /* Starscream.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C83785E9283381B9007A37F9 /* Starscream.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C841B2502859D7B4007EE76A /* JumioDocFinder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */; };
-		C841B2512859D7B4007EE76A /* JumioDocFinder.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C843A5BA2A9F899B00E3F4DA /* JumioDefaultUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C843A5B82A9F899200E3F4DA /* JumioDefaultUI.xcframework */; };
+		C843A5BB2A9F899B00E3F4DA /* JumioDefaultUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C843A5B82A9F899200E3F4DA /* JumioDefaultUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8FDBE3B2A051A3E001EB5AC /* JumioLiveness.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */; };
 		C8FDBE3C2A051A3E001EB5AC /* JumioLiveness.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F336C8CB26C16351001D910F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336C8CA26C16351001D910F /* LoadingViewController.swift */; };
@@ -67,12 +63,10 @@
 				BE42A0A42A98D974009C4DF4 /* DatadogRUM.xcframework in Embed Frameworks */,
 				BE107F7828EECCE600ABA33F /* JumioIProov.xcframework in Embed Frameworks */,
 				F336C8E726C1B2D3001D910F /* iProov.xcframework in Embed Frameworks */,
-				96AD3A512817F032004F7EC1 /* JumioDeviceRisk.xcframework in Embed Frameworks */,
-				C841B2512859D7B4007EE76A /* JumioDocFinder.xcframework in Embed Frameworks */,
 				BE42A0A62A98D974009C4DF4 /* DatadogCore.xcframework in Embed Frameworks */,
 				05CDA84E273E53B600A49B81 /* Jumio.xcframework in Embed Frameworks */,
 				C8FDBE3C2A051A3E001EB5AC /* JumioLiveness.xcframework in Embed Frameworks */,
-				C83785EF283381C1007A37F9 /* Starscream.xcframework in Embed Frameworks */,
+				C843A5BB2A9F899B00E3F4DA /* JumioDefaultUI.xcframework in Embed Frameworks */,
 				BE42A0A82A98D974009C4DF4 /* DatadogInternal.xcframework in Embed Frameworks */,
 				BE42A09F2A98D928009C4DF4 /* JumioDatadog.xcframework in Embed Frameworks */,
 			);
@@ -82,8 +76,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		05956EEA28DC9AB500EEB986 /* JumioIProov.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JumioIProov.xcframework; path = Frameworks/JumioIProov.xcframework; sourceTree = "<group>"; };
-		05CDA84C273E53B600A49B81 /* Jumio.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Jumio.xcframework; path = Frameworks/Jumio/Jumio.xcframework; sourceTree = "<group>"; };
+		05956EEA28DC9AB500EEB986 /* JumioIProov.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:2MS98UEUJQ:Jumio Corporation"; lastKnownFileType = wrapper.xcframework; name = JumioIProov.xcframework; path = Frameworks/JumioIProov.xcframework; sourceTree = "<group>"; };
+		05CDA84C273E53B600A49B81 /* Jumio.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:2MS98UEUJQ:Jumio Corporation"; lastKnownFileType = wrapper.xcframework; name = Jumio.xcframework; path = Frameworks/Jumio/Jumio.xcframework; sourceTree = "<group>"; };
 		05E2139027E23B14006E36A1 /* DefaultUI+Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultUI+Customization.swift"; sourceTree = "<group>"; };
 		773CE520289037FA00E98F05 /* AcquireModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcquireModeViewController.swift; sourceTree = "<group>"; };
 		773CE5222890405800E98F05 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
@@ -137,22 +131,20 @@
 		967A1E7126988858005A1233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		967A1E7426988858005A1233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		967A1E7626988858005A1233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96AD3A4F2817F032004F7EC1 /* JumioDeviceRisk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JumioDeviceRisk.xcframework; path = Frameworks/JumioDeviceRisk.xcframework; sourceTree = "<group>"; };
 		96EECB0027C62FFB003D8B52 /* RetryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryViewController.swift; sourceTree = "<group>"; };
 		96FF9C7C269C334F00E93BAA /* DefaultUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUI.swift; sourceTree = "<group>"; };
 		BE3ED5AD299D25520088F7B5 /* DigitalIdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalIdentityViewController.swift; sourceTree = "<group>"; };
-		BE42A09D2A98D928009C4DF4 /* JumioDatadog.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JumioDatadog.xcframework; path = Frameworks/JumioDatadog.xcframework; sourceTree = "<group>"; };
+		BE42A09D2A98D928009C4DF4 /* JumioDatadog.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:2MS98UEUJQ:Jumio Corporation"; lastKnownFileType = wrapper.xcframework; name = JumioDatadog.xcframework; path = Frameworks/JumioDatadog.xcframework; sourceTree = "<group>"; };
 		BE42A0A02A98D973009C4DF4 /* DatadogRUM.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DatadogRUM.xcframework; path = Frameworks/DatadogRUM.xcframework; sourceTree = "<group>"; };
 		BE42A0A12A98D973009C4DF4 /* DatadogCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DatadogCore.xcframework; path = Frameworks/DatadogCore.xcframework; sourceTree = "<group>"; };
 		BE42A0A22A98D973009C4DF4 /* DatadogInternal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DatadogInternal.xcframework; path = Frameworks/DatadogInternal.xcframework; sourceTree = "<group>"; };
-		C83785E9283381B9007A37F9 /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Starscream.xcframework; path = Frameworks/Starscream.xcframework; sourceTree = "<group>"; };
-		C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JumioDocFinder.xcframework; path = Frameworks/JumioDocFinder.xcframework; sourceTree = "<group>"; };
-		C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JumioLiveness.xcframework; path = Frameworks/JumioLiveness.xcframework; sourceTree = "<group>"; };
+		C843A5B82A9F899200E3F4DA /* JumioDefaultUI.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:2MS98UEUJQ:Jumio Corporation"; lastKnownFileType = wrapper.xcframework; name = JumioDefaultUI.xcframework; path = Frameworks/JumioDefaultUI.xcframework; sourceTree = "<group>"; };
+		C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:2MS98UEUJQ:Jumio Corporation"; lastKnownFileType = wrapper.xcframework; name = JumioLiveness.xcframework; path = Frameworks/JumioLiveness.xcframework; sourceTree = "<group>"; };
 		F336C8CA26C16351001D910F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		F336C8CC26C1648A001D910F /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		F336C8CE26C18216001D910F /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		F336C8D026C1A389001D910F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		F336C8E026C1B2D3001D910F /* iProov.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = iProov.xcframework; path = Frameworks/iProov.xcframework; sourceTree = "<group>"; };
+		F336C8E026C1B2D3001D910F /* iProov.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:622Y49N79Q:iProov Limited"; lastKnownFileType = wrapper.xcframework; name = iProov.xcframework; path = Frameworks/iProov.xcframework; sourceTree = "<group>"; };
 		F37729F226C0255D0010AE21 /* CustomUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUINavigationController.swift; sourceTree = "<group>"; };
 		F37729F726C025970010AE21 /* ScanPartHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPartHandling.swift; sourceTree = "<group>"; };
 		F37729F926C025A00010AE21 /* CredentialHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialHandling.swift; sourceTree = "<group>"; };
@@ -171,12 +163,10 @@
 				BE42A0A32A98D974009C4DF4 /* DatadogRUM.xcframework in Frameworks */,
 				F336C8E626C1B2D3001D910F /* iProov.xcframework in Frameworks */,
 				05956EEB28DC9AB500EEB986 /* JumioIProov.xcframework in Frameworks */,
-				96AD3A502817F032004F7EC1 /* JumioDeviceRisk.xcframework in Frameworks */,
-				C841B2502859D7B4007EE76A /* JumioDocFinder.xcframework in Frameworks */,
 				BE42A0A52A98D974009C4DF4 /* DatadogCore.xcframework in Frameworks */,
 				05CDA84D273E53B600A49B81 /* Jumio.xcframework in Frameworks */,
 				C8FDBE3B2A051A3E001EB5AC /* JumioLiveness.xcframework in Frameworks */,
-				C83785EE283381C1007A37F9 /* Starscream.xcframework in Frameworks */,
+				C843A5BA2A9F899B00E3F4DA /* JumioDefaultUI.xcframework in Frameworks */,
 				BE42A0A72A98D974009C4DF4 /* DatadogInternal.xcframework in Frameworks */,
 				BE42A09E2A98D928009C4DF4 /* JumioDatadog.xcframework in Frameworks */,
 			);
@@ -231,11 +221,9 @@
 				BE42A09D2A98D928009C4DF4 /* JumioDatadog.xcframework */,
 				F336C8E026C1B2D3001D910F /* iProov.xcframework */,
 				05CDA84C273E53B600A49B81 /* Jumio.xcframework */,
-				96AD3A4F2817F032004F7EC1 /* JumioDeviceRisk.xcframework */,
-				C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */,
+				C843A5B82A9F899200E3F4DA /* JumioDefaultUI.xcframework */,
 				05956EEA28DC9AB500EEB986 /* JumioIProov.xcframework */,
 				C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */,
-				C83785E9283381B9007A37F9 /* Starscream.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -514,12 +502,11 @@
 				DEVELOPMENT_TEAM = JC7JKY534B;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.8.0";
+				MARKETING_VERSION = "4.9.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentSampleSwift;
@@ -542,12 +529,11 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JC7JKY534B;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.8.0";
+				MARKETING_VERSION = "4.9.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;
@@ -609,7 +595,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -666,7 +652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

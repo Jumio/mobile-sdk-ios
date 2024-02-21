@@ -3,7 +3,7 @@
 ## Table of Contents
 - [Xcode15](#xcode15)
 - [Symbol not found: Starscream](#symbol-not-found-starscream)
-- [Datadog Cocoapods Restriction](#datadog-cocoapods-restriction)
+- [Datadog Dependency Restriction](#datadog-dependency-restriction)
 - [App Crash at Launch Using Simulator](#app-crash-at-launch-using-simulator)
 - [Cropped TableView in Document Selection for iOS 15](#cropped-tableview-in-document-selection-for-ios-15)
 - [SDK Runs Fine on Debug Build, Fails on Release Build](#sdk-runs-fine-on-debug-build-fails-on-release-build)
@@ -50,8 +50,8 @@ pod 'Starscream', '4.0.4'
 
 ℹ️&nbsp;&nbsp;__Note:__ This issue is fixed beginning with SDK version `4.6.1`. Also for customers who are still on SDK 3, updating to SDK `3.9.8` will resolve this.
 
-## Datadog Cocoapods Restriction
-The Jumio SDK currently supports the data analysis provider Datadog only with the dependency manager Cocoapods. If you need to integrate Datadog without Cocoapods, reach out to the support team.
+## Datadog dependency Restriction
+The Jumio SDK currently supports the data analysis provider Datadog only with the dependency manager Cocoapods or Carthage. If you need to integrate Datadog using another method, reach out to the support team.
 
 ## Cropped TableView in Document Selection for iOS 15
 For SDK 3.9.4 and below, document type selection appears to be cut off at the top with defaultUI using iOS 15 and above, when compiled with certain Xcode versions.

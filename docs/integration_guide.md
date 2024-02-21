@@ -17,6 +17,10 @@ Jumio’s products allow businesses to establish the genuine identity of their u
   - [Build Settings](#build-settings)
   - [NFC Setup](#nfc-setup)
   - [Digital Identity Setup](#digital-identity-setup)
+  - [Risk Signal: Device Risk](#risk-signal-device-risk)
+- [ML Models](#ml-models)
+  - [Bundling models in the app](#bundling-models-in-the-app)
+  - [Preloading models](#preloading-models)
 - [Initialization](#initialization)
 - [Configuration](#configuration)
   - [Workflow Selection](#workflow-selection)
@@ -34,14 +38,13 @@ Jumio’s products allow businesses to establish the genuine identity of their u
   - [Credential Handling](#credential-handling)
   - [ScanPart Handling](#scanpart-handling)
   - [Result and Error Handling](#result-and-error-handling)
-- [Local Models for JumioDocfinder](#local-models-for-jumiodocfinder)
 - [Customization](#customization)
   - [Customization Tool](#customization-tool)
   - [Default UI customization](#default-ui-customization)
   - [Custom UI customization](#custom-ui-customization)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.8.0__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.9.0__
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -74,22 +77,21 @@ Adapt your Podfile and add the pods according to the product(s) you want use. Ch
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '11.0'
+platform :ios, '12.0'
 use_frameworks! # Required for proper framework handling
 
 #Core (add one of these):
-pod 'Jumio/Slim', '~>4.8.0' # Manual Capture functionality
-pod 'Jumio/Jumio', '~>4.8.0' # Manual Capture + NFC functionality
+pod 'Jumio/Slim', '~>4.9.0' # Manual & DocFinder Capture functionality
+pod 'Jumio/Jumio', '~>4.9.0' # Manual & DocFinder Capture + NFC functionality
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.8.0' # Liveness functionality
-pod 'Jumio/IProov', '~>4.8.0' # iProov liveness functionality
-pod 'Jumio/DocFinder', '~>4.8.0' # Autocapture functionality 
-pod 'Jumio/DeviceRisk', '~>4.8.0' # Device fingerprinting functionality
-pod 'Jumio/Datadog', '~>4.8.0' # Analytics functionality
+pod 'Jumio/Liveness', '~>4.9.0' # Liveness functionality
+pod 'Jumio/IProov', '~>4.9.0' # iProov liveness functionality
+pod 'Jumio/Datadog', '~>4.9.0' # Analytics functionality
+pod 'Jumio/DefaultUI', '~>4.9.0' # Default UI functionality
 
 #All:
-pod 'Jumio/All', '~>4.8.0' # All Jumio products with all available scanning methods, except for Jumio/DeviceRisk
+pod 'Jumio/All', '~>4.9.0' # All Jumio products with all available scanning methods
 ```
 
 ##### Certified Face Liveness
@@ -102,7 +104,7 @@ pod 'Jumio/IProov'
 # mandatory for all functionalities that include liveness (iProov)
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    if ['iProov', 'Starscream'].include? target.name
+    if ['iProov'].include? target.name
       target.build_configurations.each do |config|
           config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
       end
@@ -126,14 +128,12 @@ The Jumio SDK contains four different targets. Add them to your project based on
 
 ```
 #Core (always add):
-Jumio # Manual Capture + NFC functionality
+Jumio # Manual & DocFinder Capture + NFC functionality
 
 #Addons:
-JumioDocFinder # Autocapture functionality
 JumioIProov # iProov liveness functionality
 JumioLiveness # Jumio liveness functionality
-JumioDeviceRisk # Device fingerprinting functionality
-JumioDatadog # Analytics functionality
+JumioDefaultUI # Default UI functionality
 ```
 
 #### Via Carthage
@@ -144,15 +144,14 @@ Adapt you Cartfile and add Jumio dependencies. Check the following example how a
 
 ```
 #Core (always add):
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.8.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.9.0
 
 #Addons:
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDocFinder.json" == 4.8.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.8.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDeviceRisk.json" == 4.8.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.8.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.8.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDatadog.json" == 4.8.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.9.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.9.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.9.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDatadog.json" == 4.9.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.9.0
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -161,12 +160,11 @@ carthage update --use-xcframeworks
 ```
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.8.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.8.0/ios-jumio-mobile-sdk-4.8.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.9.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.9.0/ios-jumio-mobile-sdk-4.9.0.zip).
 
 __Using iProov (manually):__
 * JumioIProov.xcframework
 * iProov.xcframework
-* Starscream.framework (iProov dependency)
 
 ℹ️&nbsp;&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -231,6 +229,56 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 }
 ```
 
+### Risk Signal: Device Risk
+If you want to include risk signals into your application, please check our [Risk Signal guide](https://docs.jumio.com/production/Content/References/Risk%20Signals/Device%20Risk.htm).
+
+#### Iovation setup
+To integrate the device risk vendor Iovation into your application, please follow the [Iovation integration guide](https://github.com/iovation/deviceprint-SDK-iOS).
+
+#### API call
+To provide Jumio with the generated Device Risk blackbox, please follow the [Device Risk API guide](https://docs.jumio.com/production/Content/Integration/Integration%20Channels/REST%20APIs.htm).
+
+----
+
+## ML Models
+
+By default, required models get downloaded by the SDK if not provided via the bundle or preloaded.
+
+### Bundling models in the app
+You can download our encrypted models and add them to your bundle for the following frameworks.
+
+⚠️&nbsp;&nbsp;__Note:__ Make sure not to alter the downloaded models (name or content) before adding them to your bundle.
+
+#### DocFinder
+If you are using JumioDocFinder.xcframework, find the required models [here](https://cdn.mobile.jumio.ai/ios/model/coreml_classifier_on_device_ep_29_float16_quant.enc) and [here](https://cdn.mobile.jumio.ai/ios/model/docfinderModel_121923.enc).
+
+#### Liveness
+If you are using JumioLiveness.xcframework, find the required models [here](https://cdn.mobile.jumio.ai/ios/model/liveness_sdk_assets_v_0_0_1.enc).
+
+### Preloading models
+In version `4.9.0` we introduced the [`Jumio.Preloader`][jumioPreloader]jumioPreloader. It provides functionality to preload models without the JumioSDK being initialized. To do so call:
+
+```swift
+Jumio.Preloader.shared.preloadIfNeeded()
+```
+
+The [`Jumio.Preloader`][jumioPreloader] will identify which models are required based on your configuration.
+
+Preloaded models are cached so they will not be downloaded again. To clean the models call:
+
+```swift
+Jumio.Preloader.clean()
+```
+⚠️&nbsp;&nbsp;__Note:__ `clean` should never be called while the SDK is running.
+
+To get notified that preloading has finished, you can implement the [`Jumio.Preloader.Delegate`][jumioPreloaderDelegate] methods and set the delegate as follows:
+
+```swift
+Jumio.Preloader.shared.delegate = {your delegate}
+```
+
+----
+
 ## Initialization
 Your OAuth2 credentials are constructed using your previous API token as the Client ID and your previous API secret as the Client secret. You can view and manage your Client ID and secret in the Customer Portal under:
 * __Settings > API credentials > OAuth2 Clients__
@@ -256,9 +304,9 @@ self.present(netverifyVC, animated: true, completion: nil)
 Every Jumio SDK instance is initialized using a specific [`sdk.token`][token]. This token contains information about the workflow, credentials, transaction identifiers and other parameters. Configuration of this token allows you to provide your own internal tracking information for the user and their transaction, specify what user information is captured and by which method, as well as preset options to enhance the user journey. Values configured within the [`sdk.token`][token] during your API request will override any corresponding settings configured in the Customer Portal.
 
 ### Workflow Selection
-Use ID verification callback to receive a verification status and verified data positions (see [API v3 Callback section](https://jumio.github.io/kyx/integration-guide.html#callback)). Make sure that your customer account is enabled to use this feature. A callback URL can be specified for individual transactions (for URL constraints see chapter [Callback URL](https://jumio.github.io/kyx/integration-guide.html#jumio-callback-ip-addresses)). This setting overrides any callback URL you have set in the Jumio Customer Portal. Your callback URL must not contain sensitive data like PII (Personally Identifiable Information) or account login. Set your callback URL using the `callbackUrl` parameter.
+Use ID verification callback to receive a verification status and verified data positions (see [Callback section](https://docs.jumio.com/production/Content/Integration/Callback.htm)). Make sure that your customer account is enabled to use this feature. A callback URL can be specified for individual transactions (for URL constraints see chapter __Jumio Callback IP Addresses__). This setting overrides any callback URL you have set in the Jumio Customer Portal. Your callback URL must not contain sensitive data like PII (Personally Identifiable Information) or account login. Set your callback URL using the `callbackUrl` parameter.
 
-Use the correct [workflow definition key](https://jumio.github.io/kyx/integration-guide.html#workflow-definition-keys) in order to request a specific workflow. Set your key using the `workflowDefinition.key` parameter. For example: Use workflow [2 "ID Verification"](https://github.com/Jumio/implementation-guides/blob/master/api-guide/workflow_descriptions.md#workflow-2-id-verification) to verify an ID document and extract data from that document. Use [workflow 3 "ID and Identity Verification"](https://github.com/Jumio/implementation-guides/blob/master/api-guide/workflow_descriptions.md#workflow-3-id-and-identity-verification) to verify a photo ID document and extract data from that document, as well as compare the user's face with the photo on the ID and perform a liveness check to ensure the person is physically present.
+Use the correct [workflow definition key](https://docs.jumio.com/production/Content/References/Workflows/Standard%20Services.htm) in order to request a specific workflow. Set your key using the `workflowDefinition.key` parameter.
 
 ```
 '{
@@ -274,14 +322,13 @@ For more details, please refer to our [Workflow Description Guide](https://suppo
 
 Identity Verification has to be activated for your account. If you use Identity Verification, make sure the necessary frameworks are linked to your app project:
 * `iProov.framework`
-* `Starscream.framework` (iProov dependency)
 
 ℹ️&nbsp;&nbsp;__Note:__ Identity Verification requires portrait orientation in your app.
 
 ### Transaction Identifiers
 There are several options in order to uniquely identify specific transactions. `customerInternalReference` allows you to specify your own unique identifier for a certain scan (max. 100 characters). Use `reportingCriteria`, to identify the scan in your reports (max. 100 characters). You can also set a unique identifier for each user using `userReference` (max. 100 characters).
 
-For more details, please refer to our [API Guide](https://jumio.github.io/kyx/integration-guide.html#request-body).
+For more details, please refer to __Request Body__ section in our [KYX Guide](https://docs.jumio.com/production/Content/References/Workflows/IDIV/Account%20Creation%20or%20Update.htm).
 
 ```
 '{
@@ -301,8 +348,7 @@ You can specify issuing country using [ISO 3166-1 alpha-3](https://en.wikipedia.
 
 ⚠️&nbsp;&nbsp;__Note:__ "Digital Identity" document type can not be preselected!
 
-For more details, please refer to our [API Guide](https://jumio.github.io/kyx/integration-guide.html#request-body).
-
+For more details, please refer to __Request Body__ section in our [KYX Guide](https://docs.jumio.com/production/Content/References/Workflows/IDIV/Account%20Creation%20or%20Update.htm).
 ```
 '{
   "customerInternalReference": "CUSTOMER_REFERENCE",
@@ -367,13 +413,14 @@ The following tables give information on the specification of all data parameter
 |:-------------------|:-----------|:-------------|:-----------------|
 | issuingCountry     | String     |	3            | Country of issue as [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code |
 | idType             | String     |              | PASSPORT, DRIVER_LICENSE, IDENTITY_CARD or VISA as provided or selected |
+| idSubType          | String     |              | Sub type of the scanned ID |
 | firstName          | String     |	100	         | First name of the customer |
 | lastName           | String     |	100	         | Last name of the customer |
 | dateOfBirth        | String     |		           | Date of birth |
 | issuingDate        | String     |	             | Date of issue |
 | expiryDate         | String     |	             | Date of expiry |
 | documentNumber     | String     |	100	         | Identification number of the document |
-| personalNumber     | String     |	14           | Personal number of the document |
+| personalNumber     | String     |	             | Personal number of the document |
 | gender             | String     |		           | Gender M, F or X |
 | nationality        | String     |              | Nationality of the customer |
 | placeOfBirth       | String     |	255	         | Place of birth	|
@@ -385,7 +432,7 @@ The following tables give information on the specification of all data parameter
 | mrzLine1           | String     |	50           | MRZ line 1	|
 | mrzLine2           | String     | 50           | MRZ line 2	|
 | mrzLine3           | String     |	50           | MRZ line 3	|
-| extractionMethod   | Jumio.Scan.Mode  |          | Extraction method used during scanning (manual, faceIProov, faceManual, barcode, nfc, deviceRisk) |
+| extractionMethod   | Jumio.Scan.Mode  |          | Extraction method used during scanning (manual, faceIProov, faceManual, barcode, nfc) |
 | imageData          | Jumio.ImageData |          | Wrapper class for accessing image data of all credential parts from an ID verification session. This feature has to be enabled by your account manager. |
 
 #### Class ___Jumio.FaceResult___
@@ -436,6 +483,7 @@ List of all **_error codes_** that are available via the `code` and `message` pr
 ## Default UI
 You can use Jumio SDK with the default theme or specify a custom theme (see [Customization](#customization) for details). Please note though that some screens in Jumio SDK launch in portrait mode only.
 You can start DefaultUI by calling `startDefaultUI` method on `Jumio.SDK` instance.
+Please make sure to include the dependency `Jumio/DefaultUI`.
 
 ## Custom UI
 ID Verification can also be implemented as a __custom scan view.__ This means that only the scan view controllers (including the scan overlays) are provided by the SDK.
@@ -615,9 +663,9 @@ The following sequence diagram outlines an overview of ScanPart handling details
 
 Start the scanning process by initializing the scan part. Provide a `Jumio.Credential.Part` from the list below:
 
-* [`Jumio.Scan.Mode`][jumioScanMode] values: `manual`, `faceManual`, `barcode`, `nfc`, `faceIProov`, `deviceRisk`, `docFinder`, `file`, `web`
+* [`Jumio.Scan.Mode`][jumioScanMode] values: `manual`, `faceManual`, `barcode`, `nfc`, `faceIProov`, `docFinder`, `file`, `web`
 
-* [`Jumio.Credential.Part`][jumioCredentialPart] values: `front`, `back`, `face`, `nfc`, `deviceRisk`, `document`, `multipart`, `digital`
+* [`Jumio.Credential.Part`][jumioCredentialPart] values: `front`, `back`, `face`, `nfc`, `document`, `multipart`, `digital`
 
 When the scanning is done, the parameter [`Jumio.Scan.Step.canFinish`][canFinish] will be received and the scan part can be finished by calling `currentScanPart?.finish()`.
 
@@ -751,12 +799,6 @@ func jumio(controller: Jumio.Controller, logicalError: Jumio.LogicalError) {
 #### Instant Feedback
 The use of Instant Feedback provides immediate end user feedback by performing a usability check on any image the user took and prompting them to provide a new image immediately if this image is not usable, for example because it is too blurry. Please refer to the [JumioRejectReason table](#class-jumiorejectreason) for a list of all reject possibilities.
 
-## Local Models for JumioDocfinder
-
-If you are using our JumioDocFinder.xcframework, you can download our encrypted models and add them to your bundle from [here](https://cdn.mobile.jumio.ai/model/classifier_on_device_ep_99_float16_quant.enc) and [here](https://cdn.mobile.jumio.ai/model/normalized_ensemble_passports_v2_float16_quant.enc).
-
-We recommend to download the files and add them to your project without changing their names (the same way you add Localization files). This will save two network requests on runntime to download these files.
-
 ## Customization
 ### Customization Tool
 [Jumio Surface](https://jumio.github.io/surface-tool) is a web tool that offers the possibility to apply and visualize, in real-time, all available customization options for the Jumio SDK, as well as an export feature to import the applied changes straight into your codebase.
@@ -861,3 +903,5 @@ In any case, your use of this Software is subject to the terms and conditions th
 [jumioRejectHandler]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Reject/Handler.html
 [jumioFallbackReason]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/ExtractionState.html
 [jumioExtractionState]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/FallbackReason.html
+[jumioPreloader]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Preloader.html
+[jumioPreloaderDelegate]: https://jumio.github.io/mobile-sdk-ios/Jumio/Protocols/JumioPreloaderDelegate.html

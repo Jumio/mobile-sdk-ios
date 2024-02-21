@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //
-//  Copyright © 2023 Jumio Corporation. All rights reserved.
+//  Copyright © 2024 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -34,6 +34,8 @@ class ViewController: UIViewController {
         
         customUIButton.design = .positive
         defaultUIButton.design = .positive
+        
+        preloadModels()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -72,6 +74,14 @@ class ViewController: UIViewController {
         jumioVC.modalPresentationStyle = .fullScreen
         present(jumioVC, animated: true)
     }
+    
+    private func preloadModels() {
+        // Preload machine learning models needed to use all Jumio scan methods
+        // You can do this anywhere in the application, e.g. when the app is started for the first time.
+        // Just make sure that they are available before you start Jumio for the first time to guarantee a perfect user experience.
+        Jumio.Preloader.shared.delegate = self
+        Jumio.Preloader.shared.preloadIfNeeded()
+    }
 }
 
 // MARK: - UITextField
@@ -97,6 +107,13 @@ extension ViewController: DefaultUI.Delegate {
 extension ViewController: CustomUINavigationController.Delegate {
     func customUIDidFinish(with result: Jumio.Result) {
         performSegue(withIdentifier: Segue.result.rawValue, sender: result)
+    }
+}
+
+// MARK: - Jumio.Preloader.Delegate
+extension ViewController: Jumio.Preloader.Delegate {
+    func jumio(finished: Jumio.Preloader) {
+        print("All models are preloaded. You can start the SDK now!")
     }
 }
 

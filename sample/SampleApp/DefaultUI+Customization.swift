@@ -1,7 +1,7 @@
 //
 //  DefaultUI+Customization.swift
 //
-//  Copyright © 2023 Jumio Corporation. All rights reserved.
+//  Copyright © 2024 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -42,7 +42,6 @@ extension DefaultUI {
         customTheme.bubble.backgroundSelected = Jumio.Theme.Value(.purple)
         customTheme.bubble.circleItemForeground = Jumio.Theme.Value(.red)
         customTheme.bubble.circleItemBackground = Jumio.Theme.Value(.brown)
-        customTheme.bubble.selectionIconForeground = Jumio.Theme.Value(.cyan)
         
         // Loading, Error
         customTheme.loading.circlePlain = Jumio.Theme.Value(.yellow)
@@ -79,7 +78,7 @@ extension DefaultUI {
         // Search Bubble
         customTheme.searchBubble.background = Jumio.Theme.Value(.yellow)
         customTheme.searchBubble.foreground = Jumio.Theme.Value(.cyan)
-        customTheme.searchBubble.listItemSelected = Jumio.Theme.Value(.red)
+        customTheme.searchBubble.backgroundSelected = Jumio.Theme.Value(.red)
         
         // Confirmation
         customTheme.confirmation.imageBackground = Jumio.Theme.Value(.magenta)
@@ -95,6 +94,7 @@ extension DefaultUI {
         customTheme.navigationIconColor = Jumio.Theme.Value(.blue)
         customTheme.textForegroundColor = Jumio.Theme.Value(.green)
         customTheme.primaryColor = Jumio.Theme.Value(light: .blue, dark: .blue)
+        customTheme.selectionIconForeground = Jumio.Theme.Value(.cyan)
         
         return customTheme
     }

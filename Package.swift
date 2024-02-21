@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "4.8.0"
+let version = "4.9.0"
 
 let package = Package(
     name: "Jumio",
@@ -15,14 +15,6 @@ let package = Package(
             targets: ["JumioBundle"]
         ),
         .library(
-            name: "JumioDocFinder",
-            targets: ["JumioDocFinderBundle"]
-        ),
-        .library(
-            name: "JumioDeviceRisk",
-            targets: ["JumioDeviceRiskBundle"]
-        ),
-        .library(
             name: "JumioIProov",
             targets: ["JumioIProovBundle"]
         ),
@@ -30,30 +22,22 @@ let package = Package(
             name: "JumioLiveness",
             targets: ["JumioLivenessBundle"]
         ),
+        .library(
+            name: "JumioDefaultUI",
+            targets: ["JumioDefaultUIBundle"]
+        ),
     ],
     dependencies: [
         .package(
             name: "iProov",
             url: "https://github.com/iProov/ios.git",
-            .exact("10.3.1")
+            .upToNextMinor(from: "11.0.3")
         )
     ],
     targets: [
         .target(name: "JumioBundle",
                 dependencies: [
                     "Jumio"
-                ]
-               ),
-        .target(name: "JumioDocFinderBundle",
-                dependencies: [
-                    "JumioBundle",
-                    "JumioDocFinder"
-                ]
-               ),
-        .target(name: "JumioDeviceRiskBundle",
-                dependencies: [
-                    "JumioBundle",
-                    "JumioDeviceRisk"
                 ]
                ),
         .target(name: "JumioIProovBundle",
@@ -70,30 +54,31 @@ let package = Package(
                     "JumioLiveness"
                 ]
                ),
+        .target(name: "JumioDefaultUIBundle",
+                dependencies: [
+                    "JumioBundle",
+                    "JumioDefaultUI"
+                ]
+        ),
         .binaryTarget(
             name: "Jumio",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Jumio.xcframework.zip",
-            checksum: "f4bdb047df830dfdd244c9532d3855958699eee3684011b4cb796841112162c6"
-        ),
-        .binaryTarget(
-            name: "JumioDocFinder",
-            url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDocFinder.xcframework.zip",
-            checksum: "c5dcf0c8051d6b2e93fa0738c2ae56bf7d108384bdbb33507c8edc6ca3d0d8e7"
-        ),
-        .binaryTarget(
-            name: "JumioDeviceRisk",
-            url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDeviceRisk.xcframework.zip",
-            checksum: "3e244bf03b9fcc88bfa6b9e5e68e3a4c2d3982784d948a3bde8b2d28eb2016f8"
+            checksum: "87490d4ade767ed3352abad933b867e0d291f35d0b3bb8bd931cb09dac37ba7b"
         ),
         .binaryTarget(
             name: "JumioIProov",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioIProov.xcframework.zip",
-            checksum: "6bbc56158b0b22f1b91fb1be88fa52d2110eb75a8da3b7f918b2fb30cb7f3fd5"
+            checksum: "d4cc902fe7fab01568a9c5cdd2092a4aabeb4f62ed7275dad81f13df0d1b7b62"
         ),
         .binaryTarget(
             name: "JumioLiveness",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLiveness.xcframework.zip",
-            checksum: "71651ac66f49c90ea60e482e900720769e9d8427a4775e3d4f01752c7ef2f20b"
+            checksum: "3d5594ee8157c3bfe2258cfc0eed5198742873ad68f36a0c0603f384abecff7f"
+        ),
+        .binaryTarget(
+            name: "JumioDefaultUI",
+            url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDefaultUI.xcframework.zip",
+            checksum: "e5bbbb502fcc00019c9c5e55b98ca2fb419649a80e620f7f27dac461a4a41fd2"
         ),
     ]
 )

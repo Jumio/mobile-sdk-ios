@@ -1,7 +1,7 @@
 //
 //  ResultViewController.swift
 //
-//  Copyright © 2023 Jumio Corporation. All rights reserved.
+//  Copyright © 2024 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -52,8 +52,6 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
             return "Face"
         case .document:
             return "Document"
-        case .data:
-            return "Device Risk"
         @unknown default:
             return nil
         }
@@ -67,7 +65,7 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
             return 2
         case .face:
             return 1
-        case .document, .data:
+        case .document:
             return 0
         @unknown default:
             return 0

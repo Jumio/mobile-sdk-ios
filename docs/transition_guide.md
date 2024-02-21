@@ -6,6 +6,37 @@ This section covers all technical changes that should be considered when updatin
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.9.0
+* Minimum iOS version raised to 12.
+* Removed `Jumio/DocFinder` dependency as the functionality was moved to Jumio core. Every dependency now contains DocFinder functionality.
+* Removed `Jumio/DeviceRisk` dependency as the functionality was moved to Jumio API. Plase check out our [Integration guide](integration_guide.md#risk-signal-device-risk).
+* Removed Default UI from Jumio core functionality
+    * Added `Jumio/DefaultUI`
+    * Check out the [Integration Guide](integration_guide.md)
+* Added `idSubType` to `Jumio.IDResult`
+* Added `Jumio/Preloader`, check out the [Integration Guide](integration_guide.md#preloading-models)
+* New `Jumio.Retry.Reason.Face`
+  * generic
+  * tooMuchMovement
+  * lightingTooBright
+  * lightingTooDark
+  * eyesClosed
+  * obscuredFace
+  * multipleFaces
+  * sunglasses
+* Changed customization options
+  * Added `Jumio.Theme.face`
+  * Added `Jumio.Theme.PrimaryButton.outline`
+  * Added `Jumio.Theme.SecondaryButton.foregroundPressed`
+  * Added `Jumio.Theme.SecondaryButton.foregroundDisabled`
+  * Added `Jumio.Theme.SecondaryButton.outline`
+  * Added `Jumio.Theme.SearchBubble.outline`
+  * Added `Jumio.Theme.Loading.loadingAnimationGradient`
+  * Added `Jumio.Theme.Loading.loadingAnimationErrorGradient`
+  * Added `Jumio.Theme.Confirmation.imageBorder`
+  * Renamed `Jumio.Theme.Bubble.selectionIconForeground` to `Jumio.Theme.selectionIconForeground`
+  * Renamed `Jumio.Theme.SearchBubble.listItemSelected` to `Jumio.Theme.SearchBubble.backgroundSelected`
+
 ## 4.8.0
 #### Manual Integration
 * Framework `JumioLiveness.xcframework` is now required when using `JumioIProov.xcframework`

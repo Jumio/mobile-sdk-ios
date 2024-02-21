@@ -15,8 +15,21 @@ For detailed technical changes please refer to our [Transition Guide](transition
 
 ## Support Period
 
-Current SDK version: __4.8.0__     
+Current SDK version: __4.9.0__     
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: __4.9.0__
+![Improvement] Automated document and country selection, powered by classifer ML model [ID Verification]
+
+![Improvement] Major UI Redesign [ID Verification, Identity Verification, Document Verification]
+
+![Improvement] Improved Liveness retry logic. Prepared for granular instant feedback, if configured accordingly [Identity Verification]
+
+![Improvement] iProov SDK version update to 11.0.3 [Identity Verification] 
+
+![Change] Default UI implementation moved to its own dynamic framework, see: [Transition Guide](transition_guide.md). [Identity Verification]
+
+![Change] Removed Device Risk module from SDK [Identity Verification]
 
 ## SDK Version: __4.8.0__
 ![Improvement] Managing Liveness dependencies to help better conversion
