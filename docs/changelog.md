@@ -19,6 +19,8 @@ Current SDK version: __4.9.0__
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
 
 ## SDK Version: __4.9.0__
+![Improvement] Added possibility to pre-load required ML models. For more information checkout the according section in the [README](../README.md#ml-models) [ID Verification, Identity Verification]
+
 ![Improvement] Automated document and country selection, powered by classifer ML model [ID Verification]
 
 ![Improvement] Major UI Redesign [ID Verification, Identity Verification, Document Verification]
