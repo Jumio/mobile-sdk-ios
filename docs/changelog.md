@@ -15,8 +15,11 @@ For detailed technical changes please refer to our [Transition Guide](transition
 
 ## Support Period
 
-Current SDK version: __4.8.0__     
+Current SDK version: __4.8.1__     
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: __4.8.1__
+![Improvement] iProov SDK version update to 10.3.3 [Identity Verification]
 
 ## SDK Version: __4.8.0__
 ![Improvement] Managing Liveness dependencies to help better conversion

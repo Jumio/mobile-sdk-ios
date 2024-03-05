@@ -35,8 +35,6 @@
 		BE42A0A62A98D974009C4DF4 /* DatadogCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A12A98D973009C4DF4 /* DatadogCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE42A0A72A98D974009C4DF4 /* DatadogInternal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A22A98D973009C4DF4 /* DatadogInternal.xcframework */; };
 		BE42A0A82A98D974009C4DF4 /* DatadogInternal.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE42A0A22A98D973009C4DF4 /* DatadogInternal.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C83785EE283381C1007A37F9 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83785E9283381B9007A37F9 /* Starscream.xcframework */; };
-		C83785EF283381C1007A37F9 /* Starscream.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C83785E9283381B9007A37F9 /* Starscream.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C841B2502859D7B4007EE76A /* JumioDocFinder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */; };
 		C841B2512859D7B4007EE76A /* JumioDocFinder.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8FDBE3B2A051A3E001EB5AC /* JumioLiveness.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */; };
@@ -72,7 +70,6 @@
 				BE42A0A62A98D974009C4DF4 /* DatadogCore.xcframework in Embed Frameworks */,
 				05CDA84E273E53B600A49B81 /* Jumio.xcframework in Embed Frameworks */,
 				C8FDBE3C2A051A3E001EB5AC /* JumioLiveness.xcframework in Embed Frameworks */,
-				C83785EF283381C1007A37F9 /* Starscream.xcframework in Embed Frameworks */,
 				BE42A0A82A98D974009C4DF4 /* DatadogInternal.xcframework in Embed Frameworks */,
 				BE42A09F2A98D928009C4DF4 /* JumioDatadog.xcframework in Embed Frameworks */,
 			);
@@ -145,7 +142,6 @@
 		BE42A0A02A98D973009C4DF4 /* DatadogRUM.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DatadogRUM.xcframework; path = Frameworks/DatadogRUM.xcframework; sourceTree = "<group>"; };
 		BE42A0A12A98D973009C4DF4 /* DatadogCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DatadogCore.xcframework; path = Frameworks/DatadogCore.xcframework; sourceTree = "<group>"; };
 		BE42A0A22A98D973009C4DF4 /* DatadogInternal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DatadogInternal.xcframework; path = Frameworks/DatadogInternal.xcframework; sourceTree = "<group>"; };
-		C83785E9283381B9007A37F9 /* Starscream.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Starscream.xcframework; path = Frameworks/Starscream.xcframework; sourceTree = "<group>"; };
 		C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JumioDocFinder.xcframework; path = Frameworks/JumioDocFinder.xcframework; sourceTree = "<group>"; };
 		C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JumioLiveness.xcframework; path = Frameworks/JumioLiveness.xcframework; sourceTree = "<group>"; };
 		F336C8CA26C16351001D910F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -176,7 +172,6 @@
 				BE42A0A52A98D974009C4DF4 /* DatadogCore.xcframework in Frameworks */,
 				05CDA84D273E53B600A49B81 /* Jumio.xcframework in Frameworks */,
 				C8FDBE3B2A051A3E001EB5AC /* JumioLiveness.xcframework in Frameworks */,
-				C83785EE283381C1007A37F9 /* Starscream.xcframework in Frameworks */,
 				BE42A0A72A98D974009C4DF4 /* DatadogInternal.xcframework in Frameworks */,
 				BE42A09E2A98D928009C4DF4 /* JumioDatadog.xcframework in Frameworks */,
 			);
@@ -235,7 +230,6 @@
 				C841B24E2859D7B1007EE76A /* JumioDocFinder.xcframework */,
 				05956EEA28DC9AB500EEB986 /* JumioIProov.xcframework */,
 				C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */,
-				C83785E9283381B9007A37F9 /* Starscream.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -519,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.8.0";
+				MARKETING_VERSION = 4.8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentSampleSwift;
@@ -547,7 +541,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.8.0";
+				MARKETING_VERSION = 4.8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;

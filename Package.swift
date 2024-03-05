@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "4.8.0"
+let version = "4.8.1"
 
 let package = Package(
     name: "Jumio",
@@ -35,7 +35,7 @@ let package = Package(
         .package(
             name: "iProov",
             url: "https://github.com/iProov/ios.git",
-            .exact("10.3.1")
+            .exact("10.3.3")
         )
     ],
     targets: [
@@ -73,27 +73,27 @@ let package = Package(
         .binaryTarget(
             name: "Jumio",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Jumio.xcframework.zip",
-            checksum: "f4bdb047df830dfdd244c9532d3855958699eee3684011b4cb796841112162c6"
+            checksum: "8d5502b8decc3ff10907070370319863d1db214c0debed5511d50aa804fa95d8"
         ),
         .binaryTarget(
             name: "JumioDocFinder",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDocFinder.xcframework.zip",
-            checksum: "c5dcf0c8051d6b2e93fa0738c2ae56bf7d108384bdbb33507c8edc6ca3d0d8e7"
+            checksum: "ac3c6a3f7933a2d10005e9245718601ef8ea418fb3e68a19075c6af173deb076"
         ),
         .binaryTarget(
             name: "JumioDeviceRisk",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDeviceRisk.xcframework.zip",
-            checksum: "3e244bf03b9fcc88bfa6b9e5e68e3a4c2d3982784d948a3bde8b2d28eb2016f8"
+            checksum: "eb2f8103ee27f8e0e7acba1619cff0a6f0c2618a627e455fe512e36a735dabae"
         ),
         .binaryTarget(
             name: "JumioIProov",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioIProov.xcframework.zip",
-            checksum: "6bbc56158b0b22f1b91fb1be88fa52d2110eb75a8da3b7f918b2fb30cb7f3fd5"
+            checksum: "65c1bf2ba951dac937e2a021a434027c969b1c74841ed834c4680f614f725362"
         ),
         .binaryTarget(
             name: "JumioLiveness",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLiveness.xcframework.zip",
-            checksum: "71651ac66f49c90ea60e482e900720769e9d8427a4775e3d4f01752c7ef2f20b"
+            checksum: "62b5b7bbdfb8e01f3460b9b80d213db763436d56fc58c26c7505e7fc17d4b8b2"
         ),
     ]
 )
