@@ -33,6 +33,9 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 
 ![Change] Removed Device Risk module from SDK [Identity Verification]
 
+## SDK Version: __4.8.1__
+![Improvement] iProov SDK version update to 10.3.3 [Identity Verification]
+
 ## SDK Version: __4.8.0__
 ![Improvement] Managing Liveness dependencies to help better conversion
 
@@ -46,6 +49,9 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 ![Change] MRZ functionality moved to Jumio core. 
 
 ![Change] Barcode functionality was moved to Jumio core.  
+
+## SDK Version: __4.6.2__
+![Improvement] iProov SDK version update to 10.3.3 [Identity Verification]
 
 ## SDK Version: __4.6.1__
 ![Improvement] iProov SDK version update to 10.3.1 [Identity Verification]

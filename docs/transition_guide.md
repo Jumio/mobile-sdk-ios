@@ -37,6 +37,9 @@ __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the cha
   * Renamed `Jumio.Theme.Bubble.selectionIconForeground` to `Jumio.Theme.selectionIconForeground`
   * Renamed `Jumio.Theme.SearchBubble.listItemSelected` to `Jumio.Theme.SearchBubble.backgroundSelected`
 
+## 4.8.1
+ * Removed `Starscream` dependency for `Jumio/IProov`.
+
 ## 4.8.0
 #### Manual Integration
 * Framework `JumioLiveness.xcframework` is now required when using `JumioIProov.xcframework`
@@ -102,6 +105,9 @@ The following keys have been removed:
 
 #### Frameworks
   * Datadog dependency `DatadogSDK` is removed
+
+## 4.6.2
+ * Removed `Starscream` dependency for `Jumio/IProov`.
 
 ## 4.6.1
 #### Cocoapods
