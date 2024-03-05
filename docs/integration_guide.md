@@ -41,7 +41,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
   - [Custom UI customization](#custom-ui-customization)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.6.1__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.6.2__
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -78,22 +78,22 @@ platform :ios, '11.0'
 use_frameworks! # Required for proper framework handling
 
 #Core:
-pod 'Jumio/Slim', '~>4.6.1' # Manual Capture functionality
-pod 'Jumio/LineFinder', '~>4.6.1' # Manual Capture and Linefinder functionality
-pod 'Jumio/MRZ', '~>4.6.1' # Manual Capture and MRZ functionality
-pod 'Jumio/Barcode', '~>4.6.1' # Manual Capture and Barcode functionality
-pod 'Jumio/NFC', '~>4.6.1' # Manual Capture, Linefinder, MRZ and NFC functionality
-pod 'Jumio/Jumio', '~>4.6.1' # Use JumioSDK with all available scanning methods
+pod 'Jumio/Slim', '~>4.6.2' # Manual Capture functionality
+pod 'Jumio/LineFinder', '~>4.6.2' # Manual Capture and Linefinder functionality
+pod 'Jumio/MRZ', '~>4.6.2' # Manual Capture and MRZ functionality
+pod 'Jumio/Barcode', '~>4.6.2' # Manual Capture and Barcode functionality
+pod 'Jumio/NFC', '~>4.6.2' # Manual Capture, Linefinder, MRZ and NFC functionality
+pod 'Jumio/Jumio', '~>4.6.2' # Use JumioSDK with all available scanning methods
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.6.1' # Liveness functionality
-pod 'Jumio/IProov', '~>4.6.1' # iProov liveness functionality
-pod 'Jumio/DocFinder', '~>4.6.1' # Autocapture functionality 
-pod 'Jumio/DeviceRisk', '~>4.6.1' # Device fingerprinting functionality
-pod 'Jumio/Datadog', '~>4.6.1' # Analytics functionality
+pod 'Jumio/Liveness', '~>4.6.2' # Liveness functionality
+pod 'Jumio/IProov', '~>4.6.2' # iProov liveness functionality
+pod 'Jumio/DocFinder', '~>4.6.2' # Autocapture functionality 
+pod 'Jumio/DeviceRisk', '~>4.6.2' # Device fingerprinting functionality
+pod 'Jumio/Datadog', '~>4.6.2' # Analytics functionality
 
 #All:
-pod 'Jumio/All', '~>4.6.1' # All Jumio products with all available scanning methods, except for Jumio/DeviceRisk
+pod 'Jumio/All', '~>4.6.2' # All Jumio products with all available scanning methods, except for Jumio/DeviceRisk
 ```
 
 ##### Certified Face Liveness
@@ -106,7 +106,7 @@ pod 'Jumio/IProov'
 # mandatory for all functionalities that include liveness (iProov)
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    if ['iProov', 'Starscream'].include? target.name
+    if ['iProov'].include? target.name
       target.build_configurations.each do |config|
           config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
       end
@@ -159,13 +159,13 @@ Starting from SDK 4.5.0 Jumio supports Carthage as dependency management tool fo
 Adapt you Cartfile and add Jumio dependencies. Check the following example how a Cartfile could look like:
 
 ```
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDocFinder.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Microblink.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDeviceRisk.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.6.1
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.6.1
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.6.2
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDocFinder.json" == 4.6.2
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Microblink.json" == 4.6.2
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.6.2
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDeviceRisk.json" == 4.6.2
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.6.2
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.6.2
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -174,12 +174,11 @@ carthage update
 ```
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.6.1.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.6.1/ios-jumio-mobile-sdk-4.6.1.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.6.2.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.6.2/ios-jumio-mobile-sdk-4.6.2.zip).
 
 __Using iProov (manually):__
 * JumioIProov.xcframework
 * iProov.xcframework
-* Starscream.framework (iProov dependency)
 
 ℹ️&nbsp;&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -287,7 +286,6 @@ For more details, please refer to our [Workflow Description Guide](https://suppo
 
 Identity Verification has to be activated for your account. If you use Identity Verification, make sure the necessary frameworks are linked to your app project:
 * `iProov.framework`
-* `Starscream.framework` (iProov dependency)
 
 ℹ️&nbsp;&nbsp;__Note:__ Identity Verification requires portrait orientation in your app.
 
