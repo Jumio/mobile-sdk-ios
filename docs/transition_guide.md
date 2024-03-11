@@ -47,6 +47,9 @@ __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the cha
 #### Carthage Integration
 * Framework `JumioLiveness.xcframework` is now required when using `JumioIProov.xcframework`
 
+## 4.7.1
+ * Removed `Starscream` dependency for `Jumio/IProov`.
+
 ## 4.7.0
 #### Barcode
  * Removed `Jumio/Barcode` dependency as the functionality was moved to Jumio core. Every dependency now contains Barcode functionality.

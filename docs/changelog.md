@@ -39,6 +39,9 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 ## SDK Version: __4.8.0__
 ![Improvement] Managing Liveness dependencies to help better conversion
 
+## SDK Version: __4.7.1__
+![Improvement] iProov SDK version update to 10.3.3 [Identity Verification]
+
 ## SDK Version: __4.7.0__
 ![Improvement] Datadog SDK version update to 2.0: Added possibility to have two Datadog instances at the same time. Added SPM and Carthage support for Datadog
 
