@@ -1,6 +1,7 @@
 # Known Issues
 
 ## Table of Contents
+- [4.9.0](#490)
 - [Xcode15](#xcode15)
 - [Symbol not found: Starscream](#symbol-not-found-starscream)
 - [Datadog Dependency Restriction](#datadog-dependency-restriction)
@@ -15,6 +16,10 @@
     - [Language Changes at Runtime](#language-changes-at-runtime)
 - [User Was Not Asked for Face Capturing](#user-was-not-asked-for-face-capturing)
 - [Country Missing from the Country List](#country-missing-from-the-country-list)
+
+## 4.9.0
+There might be crashes on app startup when using our `4.9.0` frameworks on iOS 12.
+Please use version `4.9.1` instead.
 
 ## Xcode15
 There might be crashes when using our frameworks with Xcode15 when using Cocoapods.
