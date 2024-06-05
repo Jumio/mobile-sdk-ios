@@ -6,6 +6,28 @@ This section covers all technical changes that should be considered when updatin
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.10.0
+* Changed customization options
+  * Renamed `Jumio.Theme.bubble.circleItemForeground` to `Jumio.Theme.bubble.outline`
+  * Renamed `Jumio.Theme.scanView.bubbleForeground` to `Jumio.Theme.scanView.tooltipForeground`
+  * Renamed `Jumio.Theme.scanView.bubbleBackground` to `Jumio.Theme.scanView.tooltipBackground`
+  * Removed `Jumio.Theme.bubble.circleItemBackground`
+  * Removed `Jumio.Theme.searchBubble.backgroundSelected`
+  * Removed `Jumio.Theme.scanOverlay.fill`
+  * Removed `Jumio.Theme.scanOverlay.scanOverlayTransparent`
+
+#### Localization Keys
+The following keys have been added:
+  * `jumio_id_scan_prompt_captured`
+
+The following keys have been removed:
+  * `jumio_id_scan_prompt_front_captured`
+  * `jumio_id_scan_prompt_back_captured`
+  
+#### Localization
+ * Added Serbian (Cyril) `sr-Cyrl`
+ * Added Serbian (Latin) `sr-Latn`
+
 ## 4.9.1
 * Fixed a crash on iOS 12 app startup.
 

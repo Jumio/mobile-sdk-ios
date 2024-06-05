@@ -15,8 +15,15 @@ For detailed technical changes please refer to our [Transition Guide](transition
 
 ## Support Period
 
-Current SDK version: __4.9.1__     
+Current SDK version: __4.10.0__     
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: __4.10.0__
+![Improvement] Support for 4k Image capture. Improved ML model input, enhanced image and fraud checks [ID Verification]
+
+![Improvement] Added flash capture for frontside of ID documents. Enhanced checks of certain document security features [ID Verification]
+
+![Improvement] Support for Serbian language, for both Cyrillic and Latin [ID Verification, Identity Verification, Document Verification]
 
 ## SDK Version: __4.9.1__
 ![Fix] iOS 12 app startup crash fixed [ID Verification]

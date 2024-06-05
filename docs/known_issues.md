@@ -1,6 +1,7 @@
 # Known Issues
 
 ## Table of Contents
+- [Apple Privacy Guidelines](#apple-privacy-guidelines)
 - [4.9.0](#490)
 - [Xcode15](#xcode15)
 - [Symbol not found: Starscream](#symbol-not-found-starscream)
@@ -16,6 +17,9 @@
     - [Language Changes at Runtime](#language-changes-at-runtime)
 - [User Was Not Asked for Face Capturing](#user-was-not-asked-for-face-capturing)
 - [Country Missing from the Country List](#country-missing-from-the-country-list)
+
+## Apple Privacy Guidelines
+The guide of Jumio SDK compliance to Apple Privacy Guidelines is in [integration FAQ](docs/integration_faq.md#apple-privacy-guidelines)
 
 ## 4.9.0
 There might be crashes on app startup when using our `4.9.0` frameworks on iOS 12.

@@ -33,18 +33,19 @@ The following table is a visual representation of the SDK 4.x.x version life-cyc
 
 | Version |     Release      |   End of Support  |   End of Life    | 
 |:-------:|:----------------:|:-----------------:|:----------------:|
-|   4.9.1 |    13 March 2024 |  21 November 2024 | 21 February 2026 |
-|   4.9.0 | 21 February 2024 |  21 November 2024 | 21 February 2026 |
-|   4.8.0 |  17 October 2023 |      17 July 2024 |  17 October 2025 |
-|   4.7.0 |27 September 2023 |      27 June 2024 |27 September 2025 |
-|   4.6.1 |05 September 2023 |     05 March 2024 |     05 June 2025 | 
-|   4.6.0 |     05 June 2023 |     05 March 2024 |     05 June 2025 | 
-|   4.5.0 |    14 April 2023 |   14 January 2024 |    14 April 2025 | 
-|   4.4.0 | 21 December 2022 | 21 September 2023 | 21 December 2024 | 
-|   4.3.1 |  25 October 2022 |       30 May 2023 |   30 August 2024 | 
-|   4.3.0 |   30 August 2022 |       30 May 2023 |   30 August 2024 | 
-|   4.2.0 |      25 May 2022 |  25 February 2023 |      25 May 2024 | 
-|   4.1.2 |    19 April 2022 |  09 December 2022 |    09 March 2024 |
-|   4.1.1 |    04 April 2022 |  09 December 2022 |    09 March 2024 |
-|   4.1.0 |    09 March 2022 |  09 December 2022 |    09 March 2024 |
-|   4.0.0 | 16 November 2021 |    16 August 2022 | 16 November 2023 | 
+|  4.10.0 |     05 June 2024 |      5 March 2025 |      5 June 2026 |
+|  4.9.1  |    13 March 2024 |  21 November 2024 | 21 February 2026 |
+|  4.9.0  | 21 February 2024 |  21 November 2024 | 21 February 2026 |
+|  4.8.0  |  17 October 2023 |      17 July 2024 |  17 October 2025 |
+|  4.7.0  |27 September 2023 |      27 June 2024 |27 September 2025 |
+|  4.6.1  |05 September 2023 |     05 March 2024 |     05 June 2025 | 
+|  4.6.0  |     05 June 2023 |     05 March 2024 |     05 June 2025 | 
+|  4.5.0  |    14 April 2023 |   14 January 2024 |    14 April 2025 | 
+|  4.4.0  | 21 December 2022 | 21 September 2023 | 21 December 2024 | 
+|  4.3.1  |  25 October 2022 |       30 May 2023 |   30 August 2024 | 
+|  4.3.0  |   30 August 2022 |       30 May 2023 |   30 August 2024 | 
+|  4.2.0  |      25 May 2022 |  25 February 2023 |      25 May 2024 | 
+|  4.1.2  |    19 April 2022 |  09 December 2022 |    09 March 2024 |
+|  4.1.1  |    04 April 2022 |  09 December 2022 |    09 March 2024 |
+|  4.1.0  |    09 March 2022 |  09 December 2022 |    09 March 2024 |
+|  4.0.0  | 16 November 2021 |    16 August 2022 | 16 November 2023 | 

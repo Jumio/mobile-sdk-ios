@@ -4,6 +4,7 @@
 
 ## Table of Contents
 - [User Consent](#user-consent)
+- [Apple Privacy Guidelines](#apple-privacy-guidelines)
 - [Autocapture](#autocapture)
 - [Improving User Experience and Reduce Drop-off Rate](#improve-user-experience-and-reduce-drop-off-rate)
 - [Managing Errors](#managing-errors)
@@ -28,6 +29,20 @@ For __active__ consent instances, the user needs to accept the consent items exp
 <img src="images/consent/user_consent_active_off.png" alt="Acquiring active user consent" width="20%" height="20%">
 <img src="images/consent/user_consent_active_on.png" alt="Acquiring passive user consent" width="20%" height="20%">
 </p>
+
+## Apple Privacy Guidelines
+
+At WWDC23 Apple introduced new privacy manifest and signature for third-party software development kits (SDKs) and announced that developers will need to declare approved reasons for using a set of APIs in their app’s privacy manifest. These changes help app developers better understand how third-party SDKs use data, secure software dependencies, and provide additional privacy protection for end users.
+On March 13, 2024, App updates or new Apps added to App Store Connect that use an API requiring approved reasons, Apple will send an email if  the app’s privacy manifest is missing any reason. 
+On May 1, 2024, App updates or new Apps added to App Store Connect should comply with the Apple Privacy Guidelines.
+
+After the WWDC23 announcement, the requested changes were applied and released with Jumio SDK 4.6.1. Starting from Jumio SDK 4.6.1 and the versions released afterward, Jumio frameworks follow the privacy guidelines requested from Apple.
+
+Apple also published a list of most commonly used third-party SDKs. Any version of a listed SDK, as well as any SDKs that repackage those on the list, must contain a privacy manifest and a signature.
+One of Jumio SDK optional dependencies, iProov, uses one of the SDKs mentioned in the list, Starscream. iProov SDK provided new releases v11.0.3 and v10.3.3 which follow the privacy guidelines. The new iProov version was included in Jumio SDK 4.9.0. Jumio SDK also included the updated iProov SDK in the versions 4.6.2, 4.7.1 and 4.8.1. 
+
+Jumio frameworks follow Apple privacy guidelines starting from version 4.6.1 and onwards.
+Jumio frameworks and Jumio optional dependencies (iProov) follow Apple privacy guidelines on version 4.6.2, 4.7.1, 4.8.1, 4.9.0 and onwards.
 
 ## Autocapture
 
@@ -81,11 +96,11 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 1.74 MB | base          |
-| All                        | 3.66 MB | base, nfc     |
-| All + DefaultUI            | 4.21 MB | base, nfc, defaultUI    |
-| All + IProov               | 7.50 MB | base, nfc, iproov    |
-| All + Datadog              | 4.70 MB | base, nfc, datadog       |
+| Slim                       | 1.78 MB | base          |
+| All                        | 3.65 MB | base, nfc     |
+| All + DefaultUI            | 4.26 MB | base, nfc, defaultUI    |
+| All + IProov               | 7.51 MB | base, nfc, iproov    |
+| All + Datadog              | 4.86 MB | base, nfc, datadog       |
 | All + Liveness             | 6.34 MB | base, nfc, liveness       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
