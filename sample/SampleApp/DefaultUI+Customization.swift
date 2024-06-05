@@ -40,8 +40,7 @@ extension DefaultUI {
         customTheme.bubble.background = Jumio.Theme.Value(.magenta)
         customTheme.bubble.foreground = Jumio.Theme.Value(.blue)
         customTheme.bubble.backgroundSelected = Jumio.Theme.Value(.purple)
-        customTheme.bubble.circleItemForeground = Jumio.Theme.Value(.red)
-        customTheme.bubble.circleItemBackground = Jumio.Theme.Value(.brown)
+        customTheme.bubble.outline = Jumio.Theme.Value(.red)
         
         // Loading, Error
         customTheme.loading.circlePlain = Jumio.Theme.Value(.yellow)
@@ -53,8 +52,6 @@ extension DefaultUI {
         
         // Scan Overlay
         customTheme.scanOverlay.scanOverlay = Jumio.Theme.Value(.red)
-        customTheme.scanOverlay.fill = Jumio.Theme.Value(.yellow.withAlphaComponent(0.5))
-        customTheme.scanOverlay.scanOverlayTransparent = Jumio.Theme.Value(.orange)
         customTheme.scanOverlay.scanBackground = Jumio.Theme.Value(.blue.withAlphaComponent(0.5))
         customTheme.scanOverlay.livenessStroke = Jumio.Theme.Value(.yellow)
         customTheme.scanOverlay.livenessStrokeAnimation = Jumio.Theme.Value(.red)
@@ -68,8 +65,8 @@ extension DefaultUI {
         customTheme.nfc.phoneCover = Jumio.Theme.Value(.magenta)
         
         // ScanView
-        customTheme.scanView.bubbleForeground = Jumio.Theme.Value(.yellow)
-        customTheme.scanView.bubbleBackground = Jumio.Theme.Value(.cyan)
+        customTheme.scanView.tooltipForeground = Jumio.Theme.Value(.yellow)
+        customTheme.scanView.tooltipBackground = Jumio.Theme.Value(.cyan)
         customTheme.scanView.foreground = Jumio.Theme.Value(.red)
         customTheme.scanView.darkForeground = Jumio.Theme.Value(.red)
         customTheme.scanView.documentShutter = Jumio.Theme.Value(.purple)
@@ -78,7 +75,6 @@ extension DefaultUI {
         // Search Bubble
         customTheme.searchBubble.background = Jumio.Theme.Value(.yellow)
         customTheme.searchBubble.foreground = Jumio.Theme.Value(.cyan)
-        customTheme.searchBubble.backgroundSelected = Jumio.Theme.Value(.red)
         
         // Confirmation
         customTheme.confirmation.imageBackground = Jumio.Theme.Value(.magenta)

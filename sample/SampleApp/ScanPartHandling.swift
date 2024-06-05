@@ -179,8 +179,12 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
         // ExtractionState: extraction state updates should be shown to the user to guide him through capturing process
         case .extractionState(let extractionState):
             delegate?.scanPartShowExtractionState(with: extractionState)
+        // Flash: We enabled the flash. Users are not allowed to disable the flash until a .flash(.off) update is sent.
+        case .flash(let flashState):
+            print(flashState)
+            break
         case .legalHint:
-            print("deprecated scan update, will be removed in 4.8.0")
+            print("deprecated scan update, will be removed in a future version")
         @unknown default:
             print("got unknown scan update", update)
         }

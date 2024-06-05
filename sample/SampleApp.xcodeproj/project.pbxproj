@@ -79,6 +79,8 @@
 		05956EEA28DC9AB500EEB986 /* JumioIProov.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:2MS98UEUJQ:Jumio Corporation"; lastKnownFileType = wrapper.xcframework; name = JumioIProov.xcframework; path = Frameworks/JumioIProov.xcframework; sourceTree = "<group>"; };
 		05CDA84C273E53B600A49B81 /* Jumio.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:2MS98UEUJQ:Jumio Corporation"; lastKnownFileType = wrapper.xcframework; name = Jumio.xcframework; path = Frameworks/Jumio/Jumio.xcframework; sourceTree = "<group>"; };
 		05E2139027E23B14006E36A1 /* DefaultUI+Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultUI+Customization.swift"; sourceTree = "<group>"; };
+		77024A3E2BB2D037009E28AD /* sr-Cyrl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sr-Cyrl"; path = "Frameworks/Localization/sr-Cyrl.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
+		77024A3F2BB2D04A009E28AD /* sr-Latn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sr-Latn"; path = "Frameworks/Localization/sr-Latn.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		773CE520289037FA00E98F05 /* AcquireModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcquireModeViewController.swift; sourceTree = "<group>"; };
 		773CE5222890405800E98F05 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 		77640FF0273BD7F400917566 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = "Frameworks/Localization/af.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
@@ -366,6 +368,9 @@
 				uk,
 				"pt-BR",
 				"pt-PT",
+				"sr-Cyrl",
+				sr,
+				"sr-Latn",
 			);
 			mainGroup = 96ED5EA325CC4942006E8035;
 			productRefGroup = 96ED5EAD25CC4942006E8035 /* Products */;
@@ -467,6 +472,8 @@
 				77BD147228F7013700B06588 /* uk */,
 				9630B3022A77EAD100DBDE18 /* pt-BR */,
 				9630B3032A77EADC00DBDE18 /* pt-PT */,
+				77024A3E2BB2D037009E28AD /* sr-Cyrl */,
+				77024A3F2BB2D04A009E28AD /* sr-Latn */,
 			);
 			name = "Localizable-Jumio.strings";
 			sourceTree = "<group>";
@@ -506,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.9.1";
+				MARKETING_VERSION = "4.10.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentSampleSwift;
@@ -533,7 +540,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.9.1";
+				MARKETING_VERSION = "4.10.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;
