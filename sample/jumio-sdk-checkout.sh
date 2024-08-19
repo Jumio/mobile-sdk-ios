@@ -1,5 +1,5 @@
 #!/bin/bash
-JUMIO_SDK_VERSION=4.10.0
+JUMIO_SDK_VERSION=4.11.0
 DOWNLOAD_PATH=https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/${JUMIO_SDK_VERSION}/ios-jumio-mobile-sdk-${JUMIO_SDK_VERSION}.zip
 FRAMEWORK_DIR=${PROJECT_DIR}/Frameworks
 FRAMEWORK_ZIP=${FRAMEWORK_DIR}/frameworks.zip

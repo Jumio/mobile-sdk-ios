@@ -96,22 +96,14 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 1.78 MB | base          |
-| All                        | 3.65 MB | base, nfc     |
-| All + DefaultUI            | 4.26 MB | base, nfc, defaultUI    |
-| All + IProov               | 7.51 MB | base, nfc, iproov    |
-| All + Datadog              | 4.86 MB | base, nfc, datadog       |
-| All + Liveness             | 6.34 MB | base, nfc, liveness       |
+| Slim                       | 1.85 MB | base          |
+| All                        | 3.73 MB | base, nfc     |
+| All + DefaultUI            | 4.37 MB | base, nfc, defaultUI    |
+| All + IProov               | 7.58 MB | base, nfc, iproov    |
+| All + Datadog              | 4.93 MB | base, nfc, datadog       |
+| All + Liveness             | 6.42 MB | base, nfc, liveness       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
-
-### Bitcode
-Bitcode is an intermediate representation of a compiled program. Apps you upload to App Store Connect that contain Bitcode will be compiled and linked on the App Store. Including Bitcode will allow Apple to re-optimize your app binary in the future without requiring you to submit a new version of your app to the App Store.
-
-For iOS apps, Bitcode is the default, but is optional.
-If you provide Bitcode, all apps and frameworks in the app bundle (all targets in the project) need to include Bitcode.
-
-Read more about Bitcode in the [Apple documentation](https://help.apple.com/xcode/mac/current/#/devbbdc5ce4f).
 
 ## Jumio Authentication Workflow Integration
 Jumio Authentication can be used for any use case in which you want your end-users to confirm their identities. As a result of the Authentication journey you get a success or failed result back from the SDK or from our server (callback or retrieval).

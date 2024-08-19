@@ -5,6 +5,8 @@
 //
 
 import UIKit
+import AudioToolbox
+
 import Jumio
 
 protocol CustomUIDelegate: AnyObject {
@@ -336,14 +338,28 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         pushViewController(fileViewController, animated: true)
     }
     
-    func scanPartShowImageTaken() {
-        guard let scanViewController = topViewController as? ScanViewController else { return }
-        scanViewController.showImageTaken()
-    }
-    
     func scanPartShowProcessing() {
         guard let scanViewController = topViewController as? ScanViewController else { return }
         scanViewController.showProcessing()
+        
+        // we suggest to add a vibration on processing as it signals the user that the image
+        // has been captured successfully and we move on to the next step
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+    }
+    
+    func scanPartNextPart() {
+        guard let scanViewController = topViewController as? ScanViewController else { return }
+        scanViewController.updateView()
+        scanViewController.showFlipView()
+        
+        // we suggest to add a vibration on nextPart as it signals the user that the image
+        // has been captured successfully and we move on to the next part
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+    }
+    
+    func scanPartNextPartEnd() {
+        guard let scanViewController = topViewController as? ScanViewController else { return }
+        scanViewController.hideFlipView()
     }
     
     func scanPartShowConfirmationView() {
@@ -365,7 +381,7 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         scanViewController.updateView()
     }
     
-    func scanPartShowExtractionState(with extractionState: Jumio.Scan.Update.ExtractionState) {
+    func scanPartShowExtractionState(with extractionState: Jumio.Scan.Update.ExtractionState, and data: Any?) {
         guard let scanViewController = topViewController as? ScanViewController else { return }
         var message = ""
         switch extractionState {
@@ -378,6 +394,9 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         case .levelEyesAndDevice: message = "LEVEL_EYES_AND_DEVICE"
         case .holdStraight: message = "HOLD_STRAIGHT"
         case .holdStill: message = "HOLD_STILL"
+        case .tilt:
+            guard let tilt = data as? Jumio.Scan.Update.TiltState else { return }
+            message = "TILT TO: \(tilt.target), CURRENT ANGLE: \(tilt.current)"
         @unknown default: assertionFailure("unknown extraction state")
         }
         scanViewController.updateExtractionState(message: message)

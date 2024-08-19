@@ -199,6 +199,8 @@ Our SDK supports localization for different languages. All label texts and butto
 
 ℹ️&nbsp;&nbsp;__Note:__ If using CocoaPods, the original file is located under `/Pods/Jumio/Localizations`.
 
+ℹ️&nbsp;&nbsp;__Note:__ If using Swift Package Manager, make sure to add your supported languages in the Info.plist under the CFBundleLocalizations key.
+
 Jumio SDK products support following languages for your convenience:
 
 _Afrikaans, Arabic, Bulgarian, Chinese (Simplified), Chinese (Traditional), Croatian, Czech, Danish, Dutch, Estonian, English, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Khmer, Korean, Latvian, Lithuanian, Maltese, Norwegian, Polish, Portuguese (Portugal), Portuguese (Brazil), Romanian, Russian, Serbian (Cyril), Serbian (Latin), Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Vietnamese, Zulu_
@@ -290,6 +292,10 @@ Please refer to our [SDK maintenance and support policy](docs/maintenance_policy
 If you want to enable two-factor authentication for your Jumio Customer Portal [please contact us.](https://support.jumio.com) Once enabled, users will be guided through the setup upon their first login to obtain a security code using the "Google Authenticator" app.
 
 ## Licenses
+The source code and software available on this website (“Software”) is provided by Jumio Corporation or its affiliated group companies (“Jumio”) “as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage. 
+
+In any case, your use of this Software is subject to the terms and conditions that apply to your contractual relationship with Jumio. As regards Jumio’s privacy practices, please see our privacy notice available here: [Privacy Policy](https://www.jumio.com/privacy-center/privacy-notices/online-services-notice/).
+
 The software contains third-party open source software. For more information, please see [licenses](licenses).
 
 This software is based in part on the work of the Independent JPEG Group.
@@ -299,5 +305,3 @@ If you have any questions regarding our implementation guide please contact Jumi
 
 ## Copyright
 &copy; Jumio Corporation, 100 Mathilda Place Suite 100 Sunnyvale, CA 94086
-
-The source code and software available on this website (“Software”) is provided by Jumio Corporation or its affiliated group companies (“Jumio”) “as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage. In any case, your use of this Software is subject to the terms and conditions that apply to your contractual relationship with Jumio. As regards Jumio’s privacy practices, please see our privacy notice available here: [Privacy Policy](https://www.jumio.com/privacy-center/privacy-notices/online-services-notice/).

@@ -14,13 +14,14 @@ protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartShowDigitalIdentityView()
     func scanPartThirdPartyVerification()
     func scanPartAttachFile()
-    func scanPartShowImageTaken()
     func scanPartShowProcessing()
+    func scanPartNextPart()
+    func scanPartNextPartEnd()
     func scanPartShowConfirmationView()
     func scanPartShowRejectView()
     func scanPartShowRetryView(with reason: Jumio.Retry.Reason)
     func scanPartDidFallback()
-    func scanPartShowExtractionState(with extractionState: Jumio.Scan.Update.ExtractionState)
+    func scanPartShowExtractionState(with extractionState: Jumio.Scan.Update.ExtractionState, and data: Any?)
     func scanPartFinished()
 }
 
@@ -125,7 +126,7 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
             delegate?.scanPartAttachFile()
         // ImageTaken: an image has been taken / captured.
         case .imageTaken:
-            delegate?.scanPartShowImageTaken()
+            print("Image has been taken")
         // Processing: captured image is being processed (timeframe differs).
         case .processing:
             delegate?.scanPartShowProcessing()
@@ -158,7 +159,9 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
             // For example: Front side was already captured and now it is about to scan the back side of the document.
             // While showing this, you should disable extraction to not allow the user to extract the old part again.
             scanView?.stopExtraction(hidePreview: false)
+            delegate?.scanPartNextPart()
             DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [weak self] in
+                self?.delegate?.scanPartNextPartEnd()
                 self?.scanView?.startExtraction()
             }
         @unknown default:
@@ -178,11 +181,13 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
             break
         // ExtractionState: extraction state updates should be shown to the user to guide him through capturing process
         case .extractionState(let extractionState):
-            delegate?.scanPartShowExtractionState(with: extractionState)
+            delegate?.scanPartShowExtractionState(with: extractionState, and: data)
         // Flash: We enabled the flash. Users are not allowed to disable the flash until a .flash(.off) update is sent.
         case .flash(let flashState):
             print(flashState)
-            break
+        // Triggered, when the face position during a liveness scan should be changed
+        case .nextPosition:
+            print("next position")
         case .legalHint:
             print("deprecated scan update, will be removed in a future version")
         @unknown default:

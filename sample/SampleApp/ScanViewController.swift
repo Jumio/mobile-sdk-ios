@@ -15,8 +15,8 @@ class ScanViewController: UIViewController {
     @IBOutlet weak var fallbackButton: CustomButton!
     @IBOutlet weak var containerInformationView: UIView!
     @IBOutlet weak var informationLabel: UILabel!
-    @IBOutlet weak var containerImageTakenView: UIView!
-    @IBOutlet weak var processingLabel: UILabel!
+    @IBOutlet weak var processingView: UIView!
+    @IBOutlet weak var flipView: UIView!
     @IBOutlet weak var extractionStateLabel: UILabel!
     
     // MARK: - Lifecycle
@@ -27,7 +27,8 @@ class ScanViewController: UIViewController {
         // means a Jumio.Scan.View needs to be attached.
         customUI?.attach(scanView: scanView)
         containerInformationView.layer.cornerRadius = 10
-        containerImageTakenView.layer.cornerRadius = 10
+        processingView.layer.cornerRadius = 10
+        flipView.layer.cornerRadius = 10
         updateView()
     }
     
@@ -39,12 +40,16 @@ class ScanViewController: UIViewController {
         extractionStateLabel.isHidden = true
     }
     
-    func showImageTaken() {
-        containerImageTakenView.isHidden = false
+    func showProcessing() {
+        processingView.isHidden = false
     }
     
-    func showProcessing() {
-        processingLabel.isHidden = false
+    func showFlipView() {
+        flipView.isHidden = false
+    }
+    
+    func hideFlipView() {
+        flipView.isHidden = true
     }
     
     func updateExtractionState(message: String) {

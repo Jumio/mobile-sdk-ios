@@ -6,7 +6,38 @@ This section covers all technical changes that should be considered when updatin
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.11.0
+
+#### SPM
+  * Library `JumioLocalization` makes it possible to localize strings with Swift Package Manager.
+
+#### Scan Updates
+* Added `Jumio.Scan.Update.ExtractionState.tilt`
+* Added `Jumio.Scan.Update.TiltState`
+* Added additional time parameter (in seconds) for `Jumio.Scan.Update.ExtractionState.holdStill` update
+* Added `Jumio.Scan.Update.nextPosition`
+
+#### Scan Steps
+* `Jumio.Scan.Step.imageTaken` is sent exactly once per scan.
+  * Please use `Jumio.Scan.Update.nextPosition` to determine the position change for Jumio Liveness instead.
+
+#### Logical Errors
+* Deprecated `noDataCenterSet` error
+* Added `tokenValidationFailed` error for starting SDK with empty token 
+* Added `dataCenterValidationFailed` error for starting SDK without datacenter
+
+#### Localization Keys
+The following keys have been added:
+* `jumio_id_scan_guide_photo_side_tilt`
+* `jumio_id_scan_prompt_tilt_less`
+* `jumio_id_scan_prompt_tilt_more`
+
+#### Reject Reasons
+* Added `401 unsupportedDocument` to `Jumio.RejectReason`.
+
 ## 4.10.0
+* Added `Jumio.Scan.Update.flash(FlashState)`
+* Added `Jumio.Scan.Update.FlashState`
 * Changed customization options
   * Renamed `Jumio.Theme.bubble.circleItemForeground` to `Jumio.Theme.bubble.outline`
   * Renamed `Jumio.Theme.scanView.bubbleForeground` to `Jumio.Theme.scanView.tooltipForeground`

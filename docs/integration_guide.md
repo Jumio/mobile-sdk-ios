@@ -81,17 +81,17 @@ platform :ios, '12.0'
 use_frameworks! # Required for proper framework handling
 
 #Core (add one of these):
-pod 'Jumio/Slim', '~>4.10.0' # Manual & DocFinder Capture functionality
-pod 'Jumio/Jumio', '~>4.10.0' # Manual & DocFinder Capture + NFC functionality
+pod 'Jumio/Slim', '~>4.11.0' # Manual & DocFinder Capture functionality
+pod 'Jumio/Jumio', '~>4.11.0' # Manual & DocFinder Capture + NFC functionality
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.10.0' # Liveness functionality
-pod 'Jumio/IProov', '~>4.10.0' # iProov liveness functionality
-pod 'Jumio/Datadog', '~>4.10.0' # Analytics functionality
-pod 'Jumio/DefaultUI', '~>4.10.0' # Default UI functionality
+pod 'Jumio/Liveness', '~>4.11.0' # Liveness functionality
+pod 'Jumio/IProov', '~>4.11.0' # iProov liveness functionality
+pod 'Jumio/Datadog', '~>4.11.0' # Analytics functionality
+pod 'Jumio/DefaultUI', '~>4.11.0' # Default UI functionality
 
 #All:
-pod 'Jumio/All', '~>4.10.0' # All Jumio products with all available scanning methods
+pod 'Jumio/All', '~>4.11.0' # All Jumio products with all available scanning methods
 ```
 
 ##### Certified Face Liveness
@@ -124,7 +124,7 @@ Jumio supports Swift Package Manager for easy integration of the SDK for version
 
 To integrate the Jumio SDK with Swift Package Manager, add this [repo](https://github.com/Jumio/mobile-sdk-ios.git) as a dependency to your project.
 
-The Jumio SDK contains four different targets. Add them to your project based on the functionality that you need in your application.
+The Jumio SDK contains five different targets. Add them to your project based on the functionality that you need in your application.
 
 ```
 #Core (always add):
@@ -134,6 +134,7 @@ Jumio # Manual & DocFinder Capture + NFC functionality
 JumioIProov # iProov liveness functionality
 JumioLiveness # Jumio liveness functionality
 JumioDefaultUI # Default UI functionality
+JumioLocalization # Adds strings for localization
 ```
 
 #### Via Carthage
@@ -144,14 +145,14 @@ Adapt you Cartfile and add Jumio dependencies. Check the following example how a
 
 ```
 #Core (always add):
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.10.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.11.0
 
 #Addons:
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.10.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.10.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.10.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDatadog.json" == 4.10.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.10.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.11.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.11.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.11.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDatadog.json" == 4.11.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.11.0
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -160,7 +161,7 @@ carthage update --use-xcframeworks
 ```
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.10.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.10.0/ios-jumio-mobile-sdk-4.10.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.11.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.11.0/ios-jumio-mobile-sdk-4.11.0.zip).
 
 __Using iProov (manually):__
 * JumioIProov.xcframework
@@ -445,20 +446,21 @@ The following tables give information on the specification of all data parameter
 #### Class ___Jumio.RejectReason___
 List of all possible reject reasons returned if Instant Feedback is used:   
 
-| Code          | Message  | Description      | Check enabled server-side (2022-05-12) |
-|:--------------|:---------|:-----------------|:--------------:|
-| 102  | BLACK_WHITE_COPY | Document appears to be a black and white photocopy | x |
-| 103  | COLOR_PHOTOCOPY  | Document appears to be a colored photocopy | |
-| 104  | DIGITAL_COPY     | Document appears to be a digital copy | x |
-| 200  | NOT_READABLE     | Document is not readable | |
-| 201  | NO_DOC           | No document could be detected | x |
-| 206  | MISSING_BACK     | Backside of the document is missing | x |
-| 214  | MISSING_FRONT    | Frontside of the document is missing | x |
-| 2001 | BLURRY           | Document image is unusable because it is blurry | x |
-| 2003 | MISSING_PART_DOC | Part of the document is missing | x |
-| 2005 | DAMAGED_DOCUMENT | Document appears to be damaged | |
-| 2004 | HIDDEN_PART_DOC  | Part of the document is hidden | |
-| 2006 | GLARE            | Document image is unusable because of glare | x |
+| Code | Message               | Description      | Check enabled server-side (2022-05-12) |
+|:-----|:----------------------|:-----------------|:--------------:|
+| 102  | BLACK_WHITE_COPY      | Document appears to be a black and white photocopy | x |
+| 103  | COLOR_PHOTOCOPY       | Document appears to be a colored photocopy | |
+| 104  | DIGITAL_COPY          | Document appears to be a digital copy | x |
+| 200  | NOT_READABLE          | Document is not readable | |
+| 201  | NO_DOC                | No document could be detected | x |
+| 206  | MISSING_BACK          | Backside of the document is missing | x |
+| 214  | MISSING_FRONT         | Frontside of the document is missing | x |
+| 401  | UNSUPPORTED_DOCUMENT  | Frontside or backside of document is unsupported | x |
+| 2001 | BLURRY                | Document image is unusable because it is blurry | x |
+| 2003 | MISSING_PART_DOC      | Part of the document is missing | x |
+| 2005 | DAMAGED_DOCUMENT      | Document appears to be damaged | |
+| 2004 | HIDDEN_PART_DOC       | Part of the document is hidden | |
+| 2006 | GLARE                 | Document image is unusable because of glare | x |
 
 #### Error Codes
 List of all **_error codes_** that are available via the `code` and `message` property of the [`Jumio.Error`][jumioError] object. The first letter (A-Z) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([xx][yyyy]).
@@ -690,13 +692,13 @@ During the scanning process, use the `scanPart` delegate method to check on the 
 
 [`prepare`][prepare] is only sent if a scan part requires upfront preparation and the customer should be notified (e.g. by displaying a loading screen).
 [`started`][started] is always sent when a scan part is started. If a loading view was triggered before, it can now be dismissed. It additionally returns the started [`Jumio.Credential.Part`][jumioCredentialPart] as data object.
-[`imageTaken`][imageTaken] is triggered as soon as the image is taken. The camera preview is stopped during that step.
+[`imageTaken`][imageTaken] is triggered as soon as all images of one part are taken. There can't be more than one [`imageTaken`][imageTaken] step during one part. Instead, [`Jumio.Scan.Update.nextPosition`][nextPosition] events are sent, when multiple images are taken! 
 [`digitalIdentityView`][digitalIdentityView] is only sent if a scan part is digital and is triggered to indicate that the scan part needs a `Jumio.DigitalIdentity.View` attached.
 [`thirdPartyVerification`][thirdPartyVerification] is triggered to indicate that the scan part will switch to a third party's application to continue verification. As this might take some time, showing a loading indicator is recommended.
 
-When background processing is executed, [`Jumio.Scan.Step.processing`][processing] is triggered.
+When background processing is executed, [`Jumio.Scan.Step.processing`][processing] is triggered. The camera preview is stopped during that step.
 
-When a [`multipart`][multipart] scan part is started, an additional [`nextPart`][nextPart] step is sent after [`imageTaken`][imageTaken]. This signals that another side of the document should be scanned now. The step returns the [`Jumio.Credential.Part`][jumioCredentialPart], which should be scanned next, as data object. We suggest to actively guide the user to move to the next part, e.g. by showing an animation and by disabling the extraction during the animation.
+When a [`multipart`][multipart] scan part is started, an additional [`nextPart`][nextPart] step is sent after all images from the current part are taken. This signals that another side of the document should be scanned now. The step returns the [`Jumio.Credential.Part`][jumioCredentialPart], which should be scanned next, as data object. We suggest to actively guide the user to move to the next part, e.g. by showing an animation and by disabling the extraction during the animation.
 
 When a confirmation view should be displayed, depending on the outcome either [`Jumio.Scan.Step.confirmationView`][confirmationView] or [`Jumio.Scan.Step.rejectView`][rejectView] is triggered. To display the ScanPart in the confirmation or reject view, instantiate a [`Jumio.Confirmation.Handler`][jumioConfirmationHandler] or [`Jumio.Reject.Handler`][jumioRejectHandler], and simply attach the ScanPart to the handler and render the views once the steps are triggered:
 
@@ -744,11 +746,15 @@ As soon as the scan part has been confirmed and all processing has been complete
 
 [`Jumio.Scan.Update`][jumioScanUpdate] covers scan information that is relevant and might need to be displayed during the scanning process.
 
-* [`Jumio.Scan.Update`][jumioScanUpdate] values: `fallback(FallbackReason)`, `nfcExtractionStarted`, `nfcExtractionProgress`, `nfcExtractionFinished`, `extractionState(ExtractionState)`
+* [`Jumio.Scan.Update`][jumioScanUpdate] values: `fallback(FallbackReason)`, `nfcExtractionStarted`, `nfcExtractionProgress`, `nfcExtractionFinished`, `extractionState(ExtractionState)`, `flash(FlashState)`, `nextPosition`
 
 * [`Jumio.Scan.Update.FallbackReason`][jumioFallbackReason] values: `userAction`, `lowPerformance`
 
-* [`Jumio.Scan.Update.ExtractionState`][jumioExtractionState] values: `centerId`, `tooClose`, `moveCloser`, `holdStraight`, `holdStill`
+* [`Jumio.Scan.Update.ExtractionState`][jumioExtractionState] values: `centerId`, `tooClose`, `moveCloser`, `holdStraight`, `holdStill`, `tilt`
+
+* [`Jumio.Scan.Update.FlashState`][jumioFlashState] values: `on`, `off`
+
+* [`Jumio.Scan.Update.TiltState`][jumioTiltState] is sent in the data parameter of `jumio(scanPart: Jumio.Scan.Part, updates: Jumio.Scan.Update, data: Any?)` for the update `extractionState(.tilt)` and returns the current tilt angle as well as the target tilt angle.
 
 ### Result and Error Handling
 The method `jumio(controller: Jumio.Controller, finished result: Jumio.Result)` has to be implemented to handle data after a successful scan, which will return [`Jumio.Result`][jumioResult].
@@ -762,7 +768,7 @@ func jumio(controller: Jumio.Controller, finished result: Jumio.Result) {
 
 ⚠️&nbsp;&nbsp;__Note:__ We recommend to hide any sensitive data, which you display to the user, when the app goes to the background. This includes the results you receive from us.
 
-The delegate method `(controller: Jumio.Controller, error: Jumio.Error)` has to be implemented to handle data after an unsuccessful scan, which will return [`Jumio.Error`][jumioError]. Check the parameter [`error.isRetryable`][isRetryable] to see if the failed scan attempt can be retried. If an error is not retryable, the only possibility is to cancel the controller. This will result in a finished call with a [`Jumio.Result`][jumioResult] instance containing this error.
+The delegate method `jumio(controller: Jumio.Controller, error: Jumio.Error)` has to be implemented to handle data after an unsuccessful scan, which will return [`Jumio.Error`][jumioError]. Check the parameter [`error.isRetryable`][isRetryable] to see if the failed scan attempt can be retried. If an error is not retryable, the only possibility is to cancel the controller. This will result in a finished call with a [`Jumio.Result`][jumioResult] instance containing this error.
 
 ```
 func jumio(controller: Jumio.Controller, error: Jumio.Error) {
@@ -778,7 +784,7 @@ func jumio(controller: Jumio.Controller, error: Jumio.Error) {
 
 The delegate method `(controller: Jumio.Controller, error: Jumio.LogicalError)` has to be implemented to handle data after an unsuccessful scan. [`Jumio.LogicalError`][jumioLogicalError] case occurs whenever some kind of logical error occurs. (For example: `.deadCredential: Credential` is returned when a credential has already been finished or canceled and can’t execute any action anymore. Controller has to be finished or canceled before a new one can be initialized.
 
-* [`Jumio.LogicalError`][jumioLogicalError] values: `dependencyWrongVersion`, `notYetImplemented`, `deadController`, `errorNotRetryable`, `needToConsentFirst`, `controllerNotCompleted`, `isBeingFinished`, `multipleCredentials`, `unknownCredential`, `deadCredential`, `credentialNotCompleted`, `multipleScanParts`, `unknownScanPart`, `scanPartNotCompleted`, `deadScanPart`, `noFallbackAvailable`, `takePictureNotAllowed`
+* [`Jumio.LogicalError`][jumioLogicalError] values: `dependencyWrongVersion`, `notYetImplemented`, `deadController`, `errorNotRetryable`, `needToConsentFirst`, `controllerNotCompleted`, `isBeingFinished`, `multipleCredentials`, `unknownCredential`, `deadCredential`, `credentialNotCompleted`, `multipleScanParts`, `unknownScanPart`, `scanPartNotCompleted`, `deadScanPart`, `noFallbackAvailable`, `takePictureNotAllowed`, `tokenValidationFailed`, `dataCenterValidationFailed`
 
 ```
 func jumio(controller: Jumio.Controller, logicalError: Jumio.LogicalError) {
@@ -857,9 +863,10 @@ In any case, your use of this Software is subject to the terms and conditions th
 [isSupportedConfiguration]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html#/s:5JumioAAV12IDCredentialC24isSupportedConfiguration7country8documentSbSS_AB8DocumentVtF
 [setConfiguration]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html#/s:5JumioAAV12IDCredentialC16setConfiguration7country8documentySS_AB8DocumentVtF
 [credentialCategory]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Credential.html#/s:5JumioAAV10CredentialC8CategoryO
+[prepare]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO7prepareyA2FmF
 [started]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO7startedyA2FmF
 [imageTaken]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO10imageTakenyA2FmF
-[processing]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO10imageTakenyA2FmF
+[processing]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO10processingyA2FmF
 [digitalIdentityView]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO10digitalIdentityViewyA2FmF
 [thirdPartyVerification]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO10thirdPartyVerificationyA2FmF
 [confirmationView]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO16confirmationViewyA2FmF
@@ -872,6 +879,7 @@ In any case, your use of this Software is subject to the terms and conditions th
 [retry]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO5retryyA2FmF
 [isRetryable]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Error.html#/s:5JumioAAV5ErrorV11isRetryableSbvp
 [multipart]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Credential/Part.html#/s:5JumioAAV10CredentialC4PartO9multipartyA2FmF
+[nextPosition]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update.html#/s:5JumioAAV4ScanV6UpdateO12nextPositionyA2FmF
 
 [jumioScanView]: https://jumio.github.io/mobile-sdk-ios/Jumio/Classes/JumioScanView.html
 [jumioTheme]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Theme.html
@@ -903,5 +911,7 @@ In any case, your use of this Software is subject to the terms and conditions th
 [jumioRejectHandler]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Reject/Handler.html
 [jumioFallbackReason]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/ExtractionState.html
 [jumioExtractionState]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/FallbackReason.html
+[jumioFlashState]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/FlashState.html
+[jumioTiltState]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/TiltState.html
 [jumioPreloader]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Preloader.html
 [jumioPreloaderDelegate]: https://jumio.github.io/mobile-sdk-ios/Jumio/Protocols/JumioPreloaderDelegate.html
