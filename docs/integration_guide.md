@@ -44,7 +44,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
   - [Custom UI customization](#custom-ui-customization)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.10.0__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.11.0__
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
