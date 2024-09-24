@@ -18,12 +18,18 @@ For detailed technical changes please refer to our [Transition Guide](transition
 Current SDK version: __4.11.0__     
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
 
+## SDK Version: __4.11.1__
+![Fix] Removed Datadog from default podspec [ID Verification, Identity Verification, Document Verification]
+
 ## SDK Version: __4.11.0__
 ![Improvement] Added tilted image capture for frontside of ID documents. Enhanced checks of certain document security features [ID Verification]
 
 ![Improvement] Added unsupported documents check to improve quality of extracted data and improve user experience [ID Verification]
 
 ![Improvement] Added an Updated Authentication Service [Identity Verification]
+
+## SDK Version: __4.10.1__
+![Fix] Removed Datadog from default podspec [ID Verification, Identity Verification, Document Verification]
 
 ## SDK Version: __4.10.0__
 ![Improvement] Support for 4k Image capture. Improved ML model input, enhanced image and fraud checks [ID Verification]

@@ -81,17 +81,17 @@ platform :ios, '12.0'
 use_frameworks! # Required for proper framework handling
 
 #Core (add one of these):
-pod 'Jumio/Slim', '~>4.11.0' # Manual & DocFinder Capture functionality
-pod 'Jumio/Jumio', '~>4.11.0' # Manual & DocFinder Capture + NFC functionality
+pod 'Jumio/Slim', '~>4.11.1' # Manual & DocFinder Capture functionality
+pod 'Jumio/Jumio', '~>4.11.1' # Manual & DocFinder Capture + NFC functionality
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.11.0' # Liveness functionality
-pod 'Jumio/IProov', '~>4.11.0' # iProov liveness functionality
-pod 'Jumio/Datadog', '~>4.11.0' # Analytics functionality
-pod 'Jumio/DefaultUI', '~>4.11.0' # Default UI functionality
+pod 'Jumio/Liveness', '~>4.11.1' # Liveness functionality
+pod 'Jumio/IProov', '~>4.11.1' # iProov liveness functionality
+pod 'Jumio/Datadog', '~>4.11.1' # Analytics functionality
+pod 'Jumio/DefaultUI', '~>4.11.1' # Default UI functionality
 
 #All:
-pod 'Jumio/All', '~>4.11.0' # All Jumio products with all available scanning methods
+pod 'Jumio/All', '~>4.11.1' # All Jumio products with all available scanning methods
 ```
 
 ##### Certified Face Liveness

@@ -6,6 +6,9 @@ This section covers all technical changes that should be considered when updatin
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.11.1
+* Removed `Jumio/Datadog` from default podspec configuration. This fixes [this known issue](known_issues.md#xcode16).
+
 ## 4.11.0
 
 #### SPM
@@ -34,6 +37,9 @@ The following keys have been added:
 
 #### Reject Reasons
 * Added `401 unsupportedDocument` to `Jumio.RejectReason`.
+
+## 4.10.1
+* Removed `Jumio/Datadog` from default podspec configuration. This fixes [this known issue](known_issues.md#xcode16).
 
 ## 4.10.0
 * Added `Jumio.Scan.Update.flash(FlashState)`

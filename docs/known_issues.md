@@ -1,6 +1,7 @@
 # Known Issues
 
 ## Table of Contents
+- [Xcode16](#xcode16)
 - [Apple Privacy Guidelines](#apple-privacy-guidelines)
 - [4.9.0](#490)
 - [Xcode15](#xcode15)
@@ -17,6 +18,11 @@
     - [Language Changes at Runtime](#language-changes-at-runtime)
 - [User Was Not Asked for Face Capturing](#user-was-not-asked-for-face-capturing)
 - [Country Missing from the Country List](#country-missing-from-the-country-list)
+
+## Xcode16
+There might be crashes on app startup when using our Datadog frameworks with Xcode16 via Cocoapods.
+For versions `4.10.0` and `4.11.0` if you use `Jumio` default podspec (`All`) please use the fixed versions `4.10.1` and `4.11.1`.
+For versions below `4.10.0` or if you use `Jumio/Datadog` pod we advise to remove the Datadog dependency (`Jumio/Datadog`) or update to the newer versions.
 
 ## Apple Privacy Guidelines
 The guide of Jumio SDK compliance to Apple Privacy Guidelines is in [integration FAQ](docs/integration_faq.md#apple-privacy-guidelines)
