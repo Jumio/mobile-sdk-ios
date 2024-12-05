@@ -18,7 +18,7 @@ protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartNextPart()
     func scanPartNextPartEnd()
     func scanPartShowConfirmationView()
-    func scanPartShowRejectView()
+    func scanPartShowRejectView(reasons: [Jumio.Credential.Part: Jumio.RejectReason])
     func scanPartShowRetryView(with reason: Jumio.Retry.Reason)
     func scanPartDidFallback()
     func scanPartShowExtractionState(with extractionState: Jumio.Scan.Update.ExtractionState, and data: Any?)
@@ -135,9 +135,9 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
             delegate?.scanPartShowConfirmationView()
         // RejectView: you will need to attach a Jumio.Confirmation.View to this Jumio.Scan.Part.
         case .rejectView:
-            delegate?.scanPartShowRejectView()
-            guard let reasons = data as? [Jumio.Credential.Part: Jumio.RejectReason] else { return }
-            reasons.forEach { print("reject reason", $0.value.rawValue) }
+            let reasons = data as? [Jumio.Credential.Part: Jumio.RejectReason]
+            delegate?.scanPartShowRejectView(reasons: reasons ?? [:])
+            reasons?.forEach { print("reject reason", $0.value.rawValue) }
         // Retry: something went wrong and needs to be retried. Jumio.Retry.Reason contains more information.
         case .retry:
             guard let reason = data as? Jumio.Retry.Reason else { return }
@@ -177,14 +177,17 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
             print(fallbackReason)
             delegate?.scanPartDidFallback()
         // NFC Updates: You can show updates in the UI in the background, when NFC progresses
-        case .nfcExtractionStarted, .nfcExtractionProgress, .nfcExtractionFinished:
+        case .nfcExtractionStarted, .nfcExtractionFinished:
             break
+        case .nfcExtractionProgress:
+            // Progress in percent (0-100) in the currently extracted data group, as shown in the system dialog
+            print("NFC Progress: \(data as? Int ?? 0)")
         // ExtractionState: extraction state updates should be shown to the user to guide him through capturing process
         case .extractionState(let extractionState):
             delegate?.scanPartShowExtractionState(with: extractionState, and: data)
         // Flash: We enabled the flash. Users are not allowed to disable the flash until a .flash(.off) update is sent.
         case .flash(let flashState):
-            print(flashState)
+            print("Flash turned on: \(flashState == .on)")
         // Triggered, when the face position during a liveness scan should be changed
         case .nextPosition:
             print("next position")

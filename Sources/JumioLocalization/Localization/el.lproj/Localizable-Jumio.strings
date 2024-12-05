@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Λήψη φωτογραφίας";
 "jumio_accessibility_scan_switch_camera" = "Εναλλαγή κάμερας";
 "jumio_analyzing_biometric" = "Ανάλυση βιομετρικών δεδομένων";
+"jumio_brazil_cnh_subtitle" = "Για να προχωρήσετε στη μεταφόρτωση, βεβαιωθείτε ότι έχετε πραγματοποιήσει λήψη ψηφιακής άδειας οδήγησης σε PDF από την επίσημη κρατική εφαρμογή [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Μεταφόρτωση CNH Digital PDF";
 "jumio_button_cancel" = "Ακύρωση";
 "jumio_di_back_to_document_selection" = "Θα επιστρέψετε στην επιλογή εγγράφου.";
 "jumio_di_retry_expire" = "Η περίοδος έληξε";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Βεβαιωθείτε ότι όλες οι λεπτομέρειες στο έγγραφό σας είναι ευανάγνωστες.";
 "jumio_error_instant_feedback_blurry_title" = "Η εικόνα είναι πολύ θολή για να επαληθευτεί";
 "jumio_error_instant_feedback_both_images_retaken" = "Απαιτείται επανάληψη λήψης των εικόνων";
+"jumio_error_instant_feedback_brazil_cnh" = "Βεβαιωθείτε ότι έχετε πραγματοποιήσει λήψη Ψηφιακής άδειας οδήγησης σε PDF από την επίσημη κρατική εφαρμογή [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Δοκιμάστε ξανά με μια έγχρωμη εικόνα";
 "jumio_error_instant_feedback_bw_copy_title" = "Η εικόνα είναι ασπρόμαυρο φωτοαντίγραφο";
 "jumio_error_instant_feedback_color_photocopy_title" = "Η εικόνα φαίνεται να είναι έγχρωμο φωτοαντίιγραφο";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Το έγγραφο που καταγράφηκε δεν υποστηρίζεται";
 "jumio_error_network_problems" = "Αντιμετωπίσαμε πρόβλημα επικοινωνίας δικτύου";
 "jumio_error_no_camera_connection" = "Η πρόσβαση στην κάμερα είναι απενεργοποιημένη";
-"jumio_error_ocr_failed" = "Η σάρωση δεν είναι διαθέσιμη αυτήν τη στιγμή, επικοινωνήστε με την ομάδα υποστήριξης";
+"jumio_error_scanning_not_possible" = "Η σάρωση δεν είναι διαθέσιμη αυτήν τη στιγμή, επικοινωνήστε με την ομάδα υποστήριξης";
 "jumio_error_session_expired" = "Η περίοδος λειτουργίας έληξε";
 "jumio_error_wrong_token" = "Η σάρωση δεν είναι διαθέσιμη αυτήν τη στιγμή, επικοινωνήστε με την ομάδα υποστήριξης";
 "jumio_face_help_eyes_closed" = "Κρατήστε τα μάτια σας ανοιχτά";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Τραβήξτε μια σέλφι";
 "jumio_identity_scan_tips_placing" = "Ευθυγραμμίστε το πρόσωπό σας στο οβάλ πλαίσιο και πιέστε το κουμπί του κλείστρου";
 "jumio_identity_title" = "Επαλήθευση προσώπου";
+"jumio_idtype_brazil_cnh" = "Βραζιλία CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Αναζήτηση χώρας";
 "jumio_idtype_countrysearch_title" = "Επιλέξτε χώρα έκδοσης";
 "jumio_idtype_di" = "Ψηφιακή ταυτότητα";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Το πρόσωπό σας πρέπει να φωτίζεται ομοιόμορφα και να ξεχωρίζει από το φόντο";
 "jumio_iproov_intro_la" = "Κεντράρετε το πρόσωπό σας στο πλαίσιο και ακολουθήστε τις οδηγίες που εμφανίζονται στην οθόνη";
 "jumio_list_supported_document_title" = "Υποστηριζόμενα έγγραφα";
+"jumio_liveness_prompt_keep_centered" = "Μείνετε στο κέντρο";
+"jumio_liveness_prompt_keep_still" = "Μείνετε ακίνητοι";
+"jumio_liveness_prompt_keep_upright" = "Μείνετε σε όρθια θέση";
+"jumio_liveness_prompt_move_away" = "Απομακρυνθείτε";
 "jumio_liveness_prompt_no_target" = "Τοποθετήστε το πρόσωπό σας στο πλαίσιο";
-"jumio_liveness_prompt_success_another_shot" = "Εντάξει! Ας τραβήξουμε άλλη μια φωτογραφία";
+"jumio_liveness_prompt_success_another_scan" = "Ας κάνουμε άλλη μία σάρωση";
+"jumio_liveness_prompt_tilt_down" = "Γείρετε προς τα κάτω";
+"jumio_liveness_prompt_tilt_left" = "Γείρετε προς τα αριστερά";
+"jumio_liveness_prompt_tilt_right" = "Γείρετε προς τα δεξιά";
+"jumio_liveness_prompt_tilt_up" = "Γείρετε προς τα πάνω";
+"jumio_liveness_scanning_completed" = "Η σάρωση ολοκληρώθηκε";
 "jumio_liveness_upfront_intro" = "Πρέπει να κάνουμε σάρωση του προσώπου σας για να επαληθεύσουμε ότι είστε πραγματικό άτομο.";
 "jumio_loading_title" = "Φόρτωση";
 "jumio_nfc_button_skip" = "Παραλείπω";
@@ -215,7 +228,8 @@
 "jumio_start_instructions_02" = "Ετοιμαστείτε να βγάλετε μια selfie";
 "jumio_start_instructions_03" = "Χρησιμοποιήστε ένα έγκυρο έγγραφο";
 "jumio_start_instructions_07" = "Η εφαρμογή ενδέχεται να χρησιμοποιήσει το φλας της κάμερας";
-"jumio_start_verification" = "Έναρξη επαλήθευσης";
+"jumio_start_verification" = "Ξεκινήστε την επαλήθευση";
 "jumio_start_verification_subtitle" = "Αυτή η διαδικασία έχει σχεδιαστεί για την επιβεβαίωση της ταυτότητάς σας και την προστασία σας από πλαστοπροσωπία";
+"jumio_try_again" = "Δοκιμάστε ξανά";
 "jumio_uploading_success" = "Η φόρτωση ήταν επιτυχής";
 "jumio_uploading_title" = "Μεταφόρτωση";

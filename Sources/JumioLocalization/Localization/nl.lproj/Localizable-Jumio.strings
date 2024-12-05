@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Neem een foto";
 "jumio_accessibility_scan_switch_camera" = "Schakel camera";
 "jumio_analyzing_biometric" = "Biometrische gegevens analyseren";
+"jumio_brazil_cnh_subtitle" = "Om verder te gaan met uploaden, moet je ervoor zorgen dat je een pdf van het digitale rijbewijs hebt gedownload van de officiële overheidsapplicatie [({Carteira Digital de Trânsito})].";
+"jumio_brazil_cnh_upload_button" = "CNH Digital-pdf uploaden";
 "jumio_button_cancel" = "Annuleer";
 "jumio_di_back_to_document_selection" = "Je wordt teruggeleid naar de documentselectie.";
 "jumio_di_retry_expire" = "Uw sessie is verlopen";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Zorg ervoor dat alle details op uw document leesbaar zijn.";
 "jumio_error_instant_feedback_blurry_title" = "De afbeelding is te wazig om te worden geverifieerd";
 "jumio_error_instant_feedback_both_images_retaken" = "Foto's moeten opnieuw worden genomen";
+"jumio_error_instant_feedback_brazil_cnh" = "Zorg ervoor dat je een pdf van het digitale rijbewijs hebt gedownload van de officiële overheidsapplicatie [({Carteira Digital de Trânsito})].";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Probeer het opnieuw met een foto in kleur.";
 "jumio_error_instant_feedback_bw_copy_title" = "De afbeelding is een zwart-wit foto";
 "jumio_error_instant_feedback_color_photocopy_title" = "De afbeelding lijkt een kleurenkopie te zijn";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Het vastgelegde document wordt niet ondersteund";
 "jumio_error_network_problems" = "We zijn gestuit op een netwerk communicatieprobleem";
 "jumio_error_no_camera_connection" = "Cameratoegang ontgrendeld";
-"jumio_error_ocr_failed" = "Scannen is momenteel niet beschikbaar, neem contact op met het ondersteuningsteam";
+"jumio_error_scanning_not_possible" = "Scannen is momenteel niet beschikbaar, neem contact op met het ondersteuningsteam";
 "jumio_error_session_expired" = "Sessie verlopen";
 "jumio_error_wrong_token" = "Scannen is momenteel niet beschikbaar, neem contact op met het ondersteuningsteam";
 "jumio_face_help_eyes_closed" = "Houd uw ogen open";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Neem een selfie";
 "jumio_identity_scan_tips_placing" = "Plaats uw gezicht in het ovale kader en druk op de ontspanknop";
 "jumio_identity_title" = "Gezichtsverificatie";
+"jumio_idtype_brazil_cnh" = "Brazilië CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Zoek land";
 "jumio_idtype_countrysearch_title" = "Selecteer het land van afgifte";
 "jumio_idtype_di" = "Digitale ID";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Uw gezicht moet gelijkmatig verlicht worden en zich onderscheiden van de achtergrond";
 "jumio_iproov_intro_la" = "Plaats je gezicht in het frame en volg de instructies op het scherm";
 "jumio_list_supported_document_title" = "Ondersteunde documenten";
+"jumio_liveness_prompt_keep_centered" = "In midden houden";
+"jumio_liveness_prompt_keep_still" = "Niet bewegen";
+"jumio_liveness_prompt_keep_upright" = "Rechtop houden";
+"jumio_liveness_prompt_move_away" = "Afstand nemen";
 "jumio_liveness_prompt_no_target" = "Plaats je gezicht in het frame";
-"jumio_liveness_prompt_success_another_shot" = "Gelukt! Laten we nog een foto nemen";
+"jumio_liveness_prompt_success_another_scan" = "Laten we nog een scan maken";
+"jumio_liveness_prompt_tilt_down" = "Omlaag kantelen";
+"jumio_liveness_prompt_tilt_left" = "Links kantelen";
+"jumio_liveness_prompt_tilt_right" = "Rechts kantelen";
+"jumio_liveness_prompt_tilt_up" = "Omhoog kantelen";
+"jumio_liveness_scanning_completed" = "Scannen voltooid";
 "jumio_liveness_upfront_intro" = "We moeten een scan van je gezicht maken om te controleren of je een echt persoon bent.";
 "jumio_loading_title" = "Aan het laden";
 "jumio_nfc_button_skip" = "Overspringen";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "De app kan de cameraflits gebruiken";
 "jumio_start_verification" = "Verificatie starten";
 "jumio_start_verification_subtitle" = "Dit proces is ontworpen om je identiteit te bevestigen en je te beschermen tegen identiteitsdiefstal";
+"jumio_try_again" = "Probeer het nog eens";
 "jumio_uploading_success" = "Uploaden succesvol";
 "jumio_uploading_title" = "Uploaden";

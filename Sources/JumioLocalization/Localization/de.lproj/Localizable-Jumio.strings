@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Foto aufnehmen";
 "jumio_accessibility_scan_switch_camera" = "Kamera wechseln";
 "jumio_analyzing_biometric" = "Biometrie-Daten werden analysiert";
+"jumio_brazil_cnh_subtitle" = "Um mit dem Hochladen fortzufahren, achten Sie darauf, dass Sie ein PDF des digitalen Führerscheins aus der offiziellen Regierungsanwendung [({Carteira Digital de Trânsito})] heruntergeladen haben.";
+"jumio_brazil_cnh_upload_button" = "Eine CNH Digital-PDF hochladen";
 "jumio_button_cancel" = "Beenden";
 "jumio_di_back_to_document_selection" = "Sie kehren zur Dokumentauswahl zurück.";
 "jumio_di_retry_expire" = "Ihre Sitzung ist abgelaufen";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Stellen Sie sicher, dass alle Informationen auf Ihrem Dokument lesbar sind.";
 "jumio_error_instant_feedback_blurry_title" = "Das Bild ist zu verschwommen, um überprüft zu werden";
 "jumio_error_instant_feedback_both_images_retaken" = "Bilder müssen erneut aufgenommen werden";
+"jumio_error_instant_feedback_brazil_cnh" = "Achten Sie darauf, dass Sie ein PDF des digitalen Führerscheins aus der offiziellen Regierungsanwendung [({Carteira Digital de Trânsito})] heruntergeladen haben.";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Versuchen Sie es bitte noch einmal mit einem Farbfoto";
 "jumio_error_instant_feedback_bw_copy_title" = "Bei dem Bild handelt es sich um eine Schwarz-Weiß-Fotokopie";
 "jumio_error_instant_feedback_color_photocopy_title" = "Bei dem Bild scheint es sich um eine Farbfotokopie zu handeln";
@@ -115,7 +118,7 @@
 "jumio_error_instant_feedback_missing_front_tip_front_side_doc" = "Machen Sie ein Foto von der Vorderseite Ihres Dokuments";
 "jumio_error_instant_feedback_missing_front_title" = "Die Vorderseite Ihres Dokuments fehlt";
 "jumio_error_instant_feedback_missing_part_doc_title" = "Das Bild Ihres Dokuments zeigt nicht die für die Verifizierung erforderlichen Informationen an";
-"jumio_error_instant_feedback_no_doc_tip_gov_id" = "Verwenden Sie einen gültigen, amtlichen Ausweis.";
+"jumio_error_instant_feedback_no_doc_tip_gov_id" = "Verwenden Sie einen gültigen, amtlichen Ausweis";
 "jumio_error_instant_feedback_no_doc_tip_hand" = "Decken Sie den Ausweis nicht mit Ihrer Hand ab";
 "jumio_error_instant_feedback_no_doc_tip_whole_document" = "Stellen Sie sicher, dass Sie das gesamte Dokument erfassen";
 "jumio_error_instant_feedback_no_doc_title" = "Das Bild ist keine gültige Identifizierung";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Das erfasste Dokument wird nicht unterstützt";
 "jumio_error_network_problems" = "Es ist ein Verbindungsproblem aufgetreten";
 "jumio_error_no_camera_connection" = "Kamerazugriff ist deaktiviert";
-"jumio_error_ocr_failed" = "Scannen derzeit nicht verfügbar, bitte kontaktieren Sie das Support-Team";
+"jumio_error_scanning_not_possible" = "Scannen derzeit nicht verfügbar, bitte kontaktieren Sie das Support-Team";
 "jumio_error_session_expired" = "Sitzung abgelaufen";
 "jumio_error_wrong_token" = "Scannen derzeit nicht verfügbar, bitte kontaktieren Sie das Support-Team";
 "jumio_face_help_eyes_closed" = "Halten Sie die Augen offen";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Selfie aufnehmen";
 "jumio_identity_scan_tips_placing" = "Richten Sie Ihr Gesicht im ovalen Rahmen aus und drücken Sie dann auf den Auslöser";
 "jumio_identity_title" = "Gesichtserkennung";
+"jumio_idtype_brazil_cnh" = "Brasilien CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Land suchen";
 "jumio_idtype_countrysearch_title" = "Ausstellungsland auswählen";
 "jumio_idtype_di" = "Digitale ID";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Ihr Gesicht muss gleichmäßig ausgeleuchtet sein und sich vom Hintergrund abheben";
 "jumio_iproov_intro_la" = "Zentrieren Sie Ihr Gesicht im Rahmen und befolgen Sie die Anweisungen auf dem Bildschirm";
 "jumio_list_supported_document_title" = "Unterstützte Dokumente";
+"jumio_liveness_prompt_keep_centered" = "Mittig bleiben";
+"jumio_liveness_prompt_keep_still" = "Halten Sie still";
+"jumio_liveness_prompt_keep_upright" = "Gerade bleiben";
+"jumio_liveness_prompt_move_away" = "Etwas weiter weg";
 "jumio_liveness_prompt_no_target" = "Bewegen Sie Ihr Gesicht in den Rahmen";
-"jumio_liveness_prompt_success_another_shot" = "Geschafft! Machen wir ein weiteres Foto";
+"jumio_liveness_prompt_success_another_scan" = "Scannen wir noch einmal";
+"jumio_liveness_prompt_tilt_down" = "Nach unten neigen";
+"jumio_liveness_prompt_tilt_left" = "Nach links neigen";
+"jumio_liveness_prompt_tilt_right" = "Nach rechts neigen";
+"jumio_liveness_prompt_tilt_up" = "Nach oben neigen";
+"jumio_liveness_scanning_completed" = "Scannen abgeschlossen";
 "jumio_liveness_upfront_intro" = "Wir müssen Ihr Gesicht scannen, um zu verifizieren, dass Sie wirklich eine Person sind.";
 "jumio_loading_title" = "Lädt";
 "jumio_nfc_button_skip" = "Überspringen";
@@ -211,11 +224,12 @@
 "jumio_nfc_retry_error_general" = "Erneut versuchen u. Anweisungen wie illustriert befolgen";
 "jumio_nfc_retry_tag_lost" = "Stillhalten, sobald Reisepass erkannt wurde";
 "jumio_start_button" = "Starten";
-"jumio_start_instructions_01" = "Suchen Sie eine gut beleuchtete Oberfläche.";
+"jumio_start_instructions_01" = "Suchen Sie eine gut beleuchtete Oberfläche";
 "jumio_start_instructions_02" = "Machen Sie sich bereit für ein Selfie.";
 "jumio_start_instructions_03" = "Verwenden Sie ein gültiges Dokument.";
 "jumio_start_instructions_07" = "Die App verwendet möglicherweise den Kamerablitz";
-"jumio_start_verification" = "Ausweisprüfung starten";
+"jumio_start_verification" = "Start der Verifizierung";
 "jumio_start_verification_subtitle" = "Dieser Prozess dient dazu, Ihre Identität zu bestätigen und Sie vor Identitätsdiebstahl zu schützen";
+"jumio_try_again" = "Erneut versuchen";
 "jumio_uploading_success" = "Upload erfolgreich";
 "jumio_uploading_title" = "Hochladen";

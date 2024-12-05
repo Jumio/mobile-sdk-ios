@@ -24,7 +24,7 @@
 "IProov_FailureSunglasses" = "Tháo kính râm";
 "IProov_FailureTooBright" = "Di chuyển đến một nơi tối hơn";
 "IProov_FailureTooDark" = "Di chuyển đến một nơi sáng hơn";
-"IProov_FailureTooMuchMovement" = "Giữ khuôn mặt không di chuyển";
+"IProov_FailureTooMuchMovement" = "Giữ yên";
 "IProov_FailureUnknown" = "Thử lại";
 "IProov_LanguageFile" = "";
 "IProov_MessageFormatWithUsername" = "";
@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Chụp ảnh";
 "jumio_accessibility_scan_switch_camera" = "Chuyển đổi máy ảnh";
 "jumio_analyzing_biometric" = "Đang phân tích dữ liệu sinh trắc học";
+"jumio_brazil_cnh_subtitle" = "Để tiếp tục tải lên, vui lòng đảm bảo rằng bạn đã tải xuống Giấy phép lái xe kỹ thuật số ở định dạng PDF từ ứng dụng chính thức của chính phủ [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Tải lên bản PDF của CNH Digital";
 "jumio_button_cancel" = "Hủy";
 "jumio_di_back_to_document_selection" = "Bạn sẽ được điều hướng trở lại lựa chọn tài liệu.";
 "jumio_di_retry_expire" = "Phiên của bạn đã hết hạn";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Đảm bảo rằng tất cả các chi tiết trên tài liệu của bạn đều có thể đọc được";
 "jumio_error_instant_feedback_blurry_title" = "Hình ảnh quá mờ để có thể xác minh";
 "jumio_error_instant_feedback_both_images_retaken" = "Hình ảnh phải được chụp lại";
+"jumio_error_instant_feedback_brazil_cnh" = "Vui lòng đảm bảo rằng bạn đã tải xuống Giấy phép lái xe kỹ thuật số định dạng PDF từ ứng dụng chính thức của chính phủ [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Vui lòng thử lại với một hình ảnh màu";
 "jumio_error_instant_feedback_bw_copy_title" = "Hình ảnh là một bản photocopy đen trắng";
 "jumio_error_instant_feedback_color_photocopy_title" = "Hình ảnh có vẻ là một bản photocopy màu";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Tài liệu không được hỗ trợ";
 "jumio_error_network_problems" = "Chúng tôi đã gặp sự cố về giao tiếp mạng";
 "jumio_error_no_camera_connection" = "Quyền truy cập máy ảnh bị vô hiệu hóa";
-"jumio_error_ocr_failed" = "Tính năng quét không khả dụng vào lúc này, vui lòng liên hệ với nhóm hỗ trợ";
+"jumio_error_scanning_not_possible" = "Tính năng quét không khả dụng vào lúc này, vui lòng liên hệ với nhóm hỗ trợ";
 "jumio_error_session_expired" = "Phiên hết hạn";
 "jumio_error_wrong_token" = "Tính năng quét không khả dụng vào lúc này, vui lòng liên hệ với nhóm hỗ trợ";
 "jumio_face_help_eyes_closed" = "Giữ cho đôi mắt của bạn mở";
@@ -133,7 +136,7 @@
 "jumio_face_help_sunglasses" = "Tháo kính râm";
 "jumio_face_help_too_bright" = "Di chuyển đến một nơi tối hơn";
 "jumio_face_help_too_dark" = "Di chuyển đến một nơi sáng hơn";
-"jumio_face_help_too_much_movement" = "Giữ khuôn mặt không di chuyển";
+"jumio_face_help_too_much_movement" = "Giữ yên";
 "jumio_face_reject_details_multiple_people" = "Trở thành người duy nhất trong khung hình";
 "jumio_face_reject_title_eyes_closed" = "Mắt bị nhắm lại";
 "jumio_face_reject_title_generic" = "Xác minh khuôn mặt không thành công";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Chụp ảnh tự chụp";
 "jumio_identity_scan_tips_placing" = "Căn chỉnh khuôn mặt của bạn trong khung hình bầu dục và nhấn nút chụp";
 "jumio_identity_title" = "Xác minh khuôn mặt";
+"jumio_idtype_brazil_cnh" = "PDF CNH Digital Brazil";
 "jumio_idtype_countrysearch_search" = "Tìm kiếm quốc gia";
 "jumio_idtype_countrysearch_title" = "Chọn quốc gia phát hành";
 "jumio_idtype_di" = "ID kỹ thuật số";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Khuôn mặt của bạn phải được chiếu sáng đồng đều và nổi bật so với nền xung quanh";
 "jumio_iproov_intro_la" = "Căn giữa khuôn mặt của bạn trong khung và làm theo hướng dẫn trên màn hình";
 "jumio_list_supported_document_title" = "Tài liệu được hỗ trợ";
+"jumio_liveness_prompt_keep_centered" = "Giữ ở vị trí trung tâm";
+"jumio_liveness_prompt_keep_still" = "Giữ yên";
+"jumio_liveness_prompt_keep_upright" = "Giữ thẳng";
+"jumio_liveness_prompt_move_away" = "Di chuyển ra xa";
 "jumio_liveness_prompt_no_target" = "Kéo mặt bạn vào khung";
-"jumio_liveness_prompt_success_another_shot" = "Đã hiểu! Hãy chụp một bức ảnh khác";
+"jumio_liveness_prompt_success_another_scan" = "Hãy quét lần nữa";
+"jumio_liveness_prompt_tilt_down" = "Nghiêng xuống";
+"jumio_liveness_prompt_tilt_left" = "Nghiêng trái";
+"jumio_liveness_prompt_tilt_right" = "Nghiêng phải";
+"jumio_liveness_prompt_tilt_up" = "Nghiêng lên";
+"jumio_liveness_scanning_completed" = "Đã quét xong";
 "jumio_liveness_upfront_intro" = "Chúng tôi cần quét khuôn mặt bạn để xác minh rằng bạn là người thật.";
 "jumio_loading_title" = "Đang tải";
 "jumio_nfc_button_skip" = "Nhảy";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "Ứng dụng có thể sử dụng đèn flash của camera";
 "jumio_start_verification" = "Bắt đầu xác minh";
 "jumio_start_verification_subtitle" = "Quy trình này được thiết kế để xác minh danh tính của bạn và giúp bạn không bị đánh cắp danh tính";
+"jumio_try_again" = "Vui lòng thử lại";
 "jumio_uploading_success" = "Tải lên thành công";
 "jumio_uploading_title" = "Đang tải lên";

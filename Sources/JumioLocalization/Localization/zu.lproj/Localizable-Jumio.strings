@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Thatha isithombe";
 "jumio_accessibility_scan_switch_camera" = "Shintsha ikhamera yakho";
 "jumio_analyzing_biometric" = "Ihlaziya idatha ye-biometric";
+"jumio_brazil_cnh_subtitle" = "Ukuze uqhubeke nokulayisha, qinisekisa ukuthi udawunilode i-PDF yelayisensi yokushayela eyidijithali ku-aplikheshini esemthethweni kahulumeni [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Layisha i-PDF ye-CNH Eyidijithali";
 "jumio_button_cancel" = "Khansela";
 "jumio_di_back_to_document_selection" = "Uzozulazula ubuyele ekukhethweni kwedokhumenti";
 "jumio_di_retry_expire" = "Iseshini yakho isiphelelwe yisikhathi";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Qinisekisa ukuthi yonke imininingwane ekudokhumenti lakho iyafundeka";
 "jumio_error_instant_feedback_blurry_title" = "Isithombe siluvindo kakhulu ukuthi siqinisekiswe";
 "jumio_error_instant_feedback_both_images_retaken" = "Izithombe kumelwe zithathwe kabusha";
+"jumio_error_instant_feedback_brazil_cnh" = "Qinisekisa ukuthi udawunilode i-PDF yelayisensi yokushayela Eyidijithali ku-aplikheshini esemthethweni kahulumeni  [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Sicela uphinde uzame ngesithombe esinombala";
 "jumio_error_instant_feedback_bw_copy_title" = "Isithombe siyikhophi engenawo umbala";
 "jumio_error_instant_feedback_color_photocopy_title" = "Isithombe sibonakala siyikhophi enombala";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "I dokhumenti ayixhaswa";
 "jumio_error_network_problems" = "Sithole inkinga yokuxhumana kwenethiwekhi";
 "jumio_error_no_camera_connection" = "Ukusebenzisa ikhamera kuvaliwe";
-"jumio_error_ocr_failed" = "Ukuskena akukho okwamanje, sicela uxhumane nethimba losizo";
+"jumio_error_scanning_not_possible" = "Ukuskena akukho okwamanje, sicela uxhumane nethimba losizo";
 "jumio_error_session_expired" = "Isikhathi Siphelile";
 "jumio_error_wrong_token" = "Ukuskena akukho okwamanje, sicela uxhumane nethimba losizo";
 "jumio_face_help_eyes_closed" = "Gcina amehlo akho evuliwe";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Thatha i-selfie";
 "jumio_identity_scan_tips_placing" = "Qondanisa ubuso bakho bungene endilingeni esaqanda bese ucindezela inkinobho yokuthwebula";
 "jumio_identity_title" = "Ukuqinisekisa Ubuso";
+"jumio_idtype_brazil_cnh" = "I-Brazil CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Funa Izwe";
 "jumio_idtype_countrysearch_title" = "Khetha izwe elikhiphile";
 "jumio_idtype_di" = "I-ID Eyidijithali";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Ubuso bakho kumelwe bukhanyiswe ngendlela efanayo futhi bugqame kunalokho okungemuva";
 "jumio_iproov_intro_la" = "Beka ubuso bakho phakathi nendawo ohlakeni futhi ulandele iziqondiso ezisesikrinini";
 "jumio_list_supported_document_title" = "Ama-dokhumenti akhokhelwayo";
+"jumio_liveness_prompt_keep_centered" = "Bugcine bumaphakathi";
+"jumio_liveness_prompt_keep_still" = "Yima unganyakazi";
+"jumio_liveness_prompt_keep_upright" = "Bugcine buqondile";
+"jumio_liveness_prompt_move_away" = "Hlehlela Emuva";
 "jumio_liveness_prompt_no_target" = "Beka ubuso bakho ohlakeni";
-"jumio_liveness_prompt_success_another_shot" = "Ngiyaqonda! Masithathe esinye isithombe";
+"jumio_liveness_prompt_success_another_scan" = "Masithathe esinye iskeni";
+"jumio_liveness_prompt_tilt_down" = "Butshekisele ezansi";
+"jumio_liveness_prompt_tilt_left" = "Butshekisele kwesokunxele";
+"jumio_liveness_prompt_tilt_right" = "Butshekisele kwesokudla";
+"jumio_liveness_prompt_tilt_up" = "Butshekisele phezulu";
+"jumio_liveness_scanning_completed" = "Ukuskena kuphelile";
 "jumio_liveness_upfront_intro" = "Kudingeka siskene ubuso bakho ukuze siqinisekise ukuthi ungumuntu ongokoqobo.";
 "jumio_loading_title" = "Iyaloda";
 "jumio_nfc_button_skip" = "Yeqa";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "I-app ingase isebenzise i-flash yekhamera";
 "jumio_start_verification" = "Qala ukuqinisekisa";
 "jumio_start_verification_subtitle" = "Le nqubo iklanyelwe ukuqinisekisa ubuwena futhi ikuvikele ekwebiweni komazisi wakho";
+"jumio_try_again" = "Sicela uphinde uzame";
 "jumio_uploading_success" = "Ukufaka kuphumelele";
 "jumio_uploading_title" = "Iyafaka";

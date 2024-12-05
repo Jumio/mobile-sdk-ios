@@ -212,9 +212,12 @@ extension CustomUINavigationController {
         case .barcode: return "Barcode"
         case .nfc: return "NFC"
         case .faceManual: return "Face manual"
+        case .liveness: return "Liveness"
+        case .livenessPremium: return "Liveness Premium"
         case .faceIProov: return "Face iProov"
         case .docFinder: return "Doc Finder"
         case .web: return "Web"
+        case .file: return "File"
         default: return "unknown"
         }
     }
@@ -366,8 +369,8 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         showConfirmationViewController(with: .confirm)
     }
     
-    func scanPartShowRejectView() {
-        showConfirmationViewController(with: .reject)
+    func scanPartShowRejectView(reasons: [Jumio.Credential.Part: Jumio.RejectReason]) {
+        showConfirmationViewController(with: .reject(reasons: reasons))
     }
     
     func scanPartShowRetryView(with reason: Jumio.Retry.Reason) {
@@ -391,12 +394,26 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         case .faceTooClose: message = "FACE_TOO_CLOSE"
         case .moveCloser: message = "MOVE_CLOSER"
         case .moveFaceCloser: message = "MOVE_FACE_CLOSER"
+        case .moveFaceIntoFrame: message = "MOVE_FACE_INTO_FRAME"
         case .levelEyesAndDevice: message = "LEVEL_EYES_AND_DEVICE"
         case .holdStraight: message = "HOLD_STRAIGHT"
-        case .holdStill: message = "HOLD_STILL"
+        case .holdStill:
+            if let holdStillTime = data as? Double {
+                // For id scanning, .holdStill returns a Double in the data parameter signalling the time a user needs to hold still
+                // Use this parameter to show e.g. an animation
+                message = String(format: "HOLD_STILL FOR %.2fs", holdStillTime)
+            } else {
+                // For liveness scanning, the time is not returned.
+                // The liveness scan view always shows an animation on hold still - so you should not add an additional animation
+                message = "HOLD_STILL"
+            }
         case .tilt:
             guard let tilt = data as? Jumio.Scan.Update.TiltState else { return }
             message = "TILT TO: \(tilt.target), CURRENT ANGLE: \(tilt.current)"
+        case .tiltFaceUp: message = "TILT_FACE_UP"
+        case .tiltFaceDown: message = "TILT_FACE_DOWN"
+        case .tiltFaceLeft: message = "TILT_FACE_LEFT"
+        case .tiltFaceRight: message = "TILT_FACE_RIGHT"
         @unknown default: assertionFailure("unknown extraction state")
         }
         scanViewController.updateExtractionState(message: message)

@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Pořídit fotografii";
 "jumio_accessibility_scan_switch_camera" = "Přepnout fotoaparát";
 "jumio_analyzing_biometric" = "Analyzují se biometrické údaje...";
+"jumio_brazil_cnh_subtitle" = "Pokud chcete pokračovat v nahrávání, ujistěte se, že jste si stáhli digitální řidičský průkaz ve formátu PDF z oficiální vládní aplikace [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Nahrát digitální soubor PDF společnosti CNH";
 "jumio_button_cancel" = "Zrušit";
 "jumio_di_back_to_document_selection" = "Budete přesměrováni zpět k výběru dokumentu.";
 "jumio_di_retry_expire" = "Platno relace vypršela";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Zkontrolujte, zda jsou veškeré detaily ve vašem dokumentu čitelné";
 "jumio_error_instant_feedback_blurry_title" = "Obrázek je příliš rozmazaný, než aby mohl být ověřen";
 "jumio_error_instant_feedback_both_images_retaken" = "Snímky musí být pořízeny znovu";
+"jumio_error_instant_feedback_brazil_cnh" = "Ujistěte se, že jste si stáhli digitální řidičský průkaz ve formátu PDF z oficiální vládní aplikace [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Zkuste to znovu s barevným obrázkem";
 "jumio_error_instant_feedback_bw_copy_title" = "Obrázek je černobílá fotokopie";
 "jumio_error_instant_feedback_color_photocopy_title" = "Obrázek vypadá jako barevná fotokopie";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Zachycený dokument není podporován";
 "jumio_error_network_problems" = "Při síťové komunikaci došlo k problému.";
 "jumio_error_no_camera_connection" = "Přístup ke kameře zamítnut";
-"jumio_error_ocr_failed" = "Skenování není v tuto chvíli k dispozici, obraťte se na tým podpory";
+"jumio_error_scanning_not_possible" = "Skenování není v tuto chvíli k dispozici, obraťte se na tým podpory";
 "jumio_error_session_expired" = "Relace vypršela";
 "jumio_error_wrong_token" = "Skenování není v tuto chvíli k dispozici, obraťte se na tým podpory";
 "jumio_face_help_eyes_closed" = "Mějte otevřené oči";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Pořiďte selfie";
 "jumio_identity_scan_tips_placing" = "Zarovnejte svou tvář s oválným rámečkem a stiskněte tlačítko závěrky";
 "jumio_identity_title" = "Ověření pomocí obličeje";
+"jumio_idtype_brazil_cnh" = "Brazilské CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Hledat stát";
 "jumio_idtype_countrysearch_title" = "Vyberte zemi vydání";
 "jumio_idtype_di" = "Digitální ID";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Je nutné, aby byla vaše tvář rovnoměrně osvětlená a nesplývala s pozadím";
 "jumio_iproov_intro_la" = "Obličej nasměrujte do středu rámečku a postupujte dle pokynů na obrazovce";
 "jumio_list_supported_document_title" = "Podporované dokumenty";
+"jumio_liveness_prompt_keep_centered" = "Držte se uprostřed";
+"jumio_liveness_prompt_keep_still" = "Zůstaňte v klidu";
+"jumio_liveness_prompt_keep_upright" = "Držte vzpřímeně";
+"jumio_liveness_prompt_move_away" = "Vzdalte se";
 "jumio_liveness_prompt_no_target" = "Umístěte obličej do rámečku";
-"jumio_liveness_prompt_success_another_shot" = "Mám to! Proveďme nyní další pokus";
+"jumio_liveness_prompt_success_another_scan" = "Pojďme udělat další fotku";
+"jumio_liveness_prompt_tilt_down" = "Nakloňte dolů";
+"jumio_liveness_prompt_tilt_left" = "Nakloňte doleva";
+"jumio_liveness_prompt_tilt_right" = "Nakloňte doprava";
+"jumio_liveness_prompt_tilt_up" = "Nakloňte nahoru";
+"jumio_liveness_scanning_completed" = "Skenování dokončeno";
 "jumio_liveness_upfront_intro" = "Musíme pořídit sken vašeho obličeje, abychom si mohli ověřit, že jste skutečná osoba.";
 "jumio_loading_title" = "Načítá se...";
 "jumio_nfc_button_skip" = "Přeskočit";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "Aplikace může používat blesk fotoaparátu";
 "jumio_start_verification" = "Zahájit ověřování";
 "jumio_start_verification_subtitle" = "Tento proces je navržen tak, aby bylo možné ověřit vaši totožnost a ochránit vás před krádeží identity";
+"jumio_try_again" = "Zkuste to znovu";
 "jumio_uploading_success" = "Nahrání proběhlo úspěšně.";
 "jumio_uploading_title" = "Nahrávání";

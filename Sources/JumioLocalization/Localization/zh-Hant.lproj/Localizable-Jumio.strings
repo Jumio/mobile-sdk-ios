@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "拍照";
 "jumio_accessibility_scan_switch_camera" = "切換相機";
 "jumio_analyzing_biometric" = "正在分析生物特徵資料";
+"jumio_brazil_cnh_subtitle" = "若要繼續上傳，請確保您已從官方政府應用程式 [({Carteira Digital de Trânsito})] 下載數位駕照 PDF";
+"jumio_brazil_cnh_upload_button" = "上傳 CNH Digital PDF";
 "jumio_button_cancel" = "取消";
 "jumio_di_back_to_document_selection" = "您將導覽回文件選擇。";
 "jumio_di_retry_expire" = "您的工作階段已過期";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "確保文件的所有詳細資料均可讀取";
 "jumio_error_instant_feedback_blurry_title" = "圖像過於模糊，無法進行驗證";
 "jumio_error_instant_feedback_both_images_retaken" = "必須重新拍攝圖像";
+"jumio_error_instant_feedback_brazil_cnh" = "確保您已從官方政府應用程式 [({Carteira Digital de Trânsito})] 下載數位駕照 PDF";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "請使用彩色圖片重試";
 "jumio_error_instant_feedback_bw_copy_title" = "圖片為黑白影印";
 "jumio_error_instant_feedback_color_photocopy_title" = "圖片似乎是彩色影印件";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "不支援捕獲的文檔";
 "jumio_error_network_problems" = "我們遇到了網路通訊問題";
 "jumio_error_no_camera_connection" = "相機存取權限已停用";
-"jumio_error_ocr_failed" = "目前無法掃描，請聯絡支援團隊";
+"jumio_error_scanning_not_possible" = "目前無法掃描，請聯絡支援團隊";
 "jumio_error_session_expired" = "工作階段已過期";
 "jumio_error_wrong_token" = "目前無法掃描，請聯絡支援團隊";
 "jumio_face_help_eyes_closed" = "保持眼睛睜開";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "自拍";
 "jumio_identity_scan_tips_placing" = "將您的臉部對準橢圓形框，然後按下快門按鈕";
 "jumio_identity_title" = "面部驗證";
+"jumio_idtype_brazil_cnh" = "巴西CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "搜尋國家/地區";
 "jumio_idtype_countrysearch_title" = "選擇簽發的國家/地區";
 "jumio_idtype_di" = "數位 ID";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "您的臉必須被均勻照亮，且與背景對比強烈";
 "jumio_iproov_intro_la" = "將您的面部置於框中間，並遵循螢幕上的指示";
 "jumio_list_supported_document_title" = "支援的文件";
+"jumio_liveness_prompt_keep_centered" = "保持居中";
+"jumio_liveness_prompt_keep_still" = "保持不動";
+"jumio_liveness_prompt_keep_upright" = "保持直立";
+"jumio_liveness_prompt_move_away" = "跑出框外了";
 "jumio_liveness_prompt_no_target" = "將您的面部置於框內";
-"jumio_liveness_prompt_success_another_shot" = "瞭解！讓我們再拍一張";
+"jumio_liveness_prompt_success_another_scan" = "請再拍一張";
+"jumio_liveness_prompt_tilt_down" = "向下低頭";
+"jumio_liveness_prompt_tilt_left" = "向左邊一點";
+"jumio_liveness_prompt_tilt_right" = "向右邊一點";
+"jumio_liveness_prompt_tilt_up" = "向上抬頭";
+"jumio_liveness_scanning_completed" = "掃描完成";
 "jumio_liveness_upfront_intro" = "我們需要掃描您的臉部，以驗證您是真人。";
 "jumio_loading_title" = "載入中";
 "jumio_nfc_button_skip" = "跳躍";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "該應用程式可能需要使用相機閃光燈";
 "jumio_start_verification" = "開始驗證";
 "jumio_start_verification_subtitle" = "此程序旨在驗證您的身分並保護您免遭身分盜用";
+"jumio_try_again" = "請再試一次";
 "jumio_uploading_success" = "上傳成功";
 "jumio_uploading_title" = "上傳中";

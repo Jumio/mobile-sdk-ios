@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Ta ett foto";
 "jumio_accessibility_scan_switch_camera" = "Växla kamera";
 "jumio_analyzing_biometric" = "Analyserar biometriska data";
+"jumio_brazil_cnh_subtitle" = "För att fortsätta med uppladdningen, se till att du har laddat ner ett digitalt körkort i PDF-format från den officiella myndighetsapplikationen [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Ladda upp CNH Digital (PDF)";
 "jumio_button_cancel" = "Avbryt";
 "jumio_di_back_to_document_selection" = "Du kommer att återvända till dokumentval.";
 "jumio_di_retry_expire" = "Din session har löpt ut";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Kontrollera att alla uppgifter på ditt dokument är läsbara";
 "jumio_error_instant_feedback_blurry_title" = "Bilden är för oskarp för att verifieras";
 "jumio_error_instant_feedback_both_images_retaken" = "Bilder måste tas om";
+"jumio_error_instant_feedback_brazil_cnh" = "Se till att du har laddat ner ett digitalt körkort i PDF-format från den officiella myndighetsapplikationen [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Försök igen med en färgbild";
 "jumio_error_instant_feedback_bw_copy_title" = "Bilden är en svartvit kopia";
 "jumio_error_instant_feedback_color_photocopy_title" = "Bilden verkar vara en färgkopia";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Dokumentet stöds inte";
 "jumio_error_network_problems" = "Nätverket har stött på ett kommunikationsproblem";
 "jumio_error_no_camera_connection" = "Kameraåtkomst inaktiverad";
-"jumio_error_ocr_failed" = "Skanning är inte tillgänglig just nu. Kontakta supportteamet";
+"jumio_error_scanning_not_possible" = "Skanning är inte tillgänglig just nu. Kontakta supportteamet";
 "jumio_error_session_expired" = "Sessionen har löpt ut";
 "jumio_error_wrong_token" = "Skanning är inte tillgänglig just nu. Kontakta supportteamet";
 "jumio_face_help_eyes_closed" = "Håll ögonen öppna";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Ta en selfie";
 "jumio_identity_scan_tips_placing" = "Rama in ditt ansikte i den ovala ramen och tryck på slutarknappen";
 "jumio_identity_title" = "Ansiktsverifiering";
+"jumio_idtype_brazil_cnh" = "Brasilien CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Sök land";
 "jumio_idtype_countrysearch_title" = "Välj utfärdande land";
 "jumio_idtype_di" = "Digitalt ID";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Ditt ansikte måste vara jämnt upplyst och sticka ut från bakgrunden";
 "jumio_iproov_intro_la" = "Se till att ansiktet är i mitten av ramen och följ instruktionerna på skärmen";
 "jumio_list_supported_document_title" = "Stödda dokument";
+"jumio_liveness_prompt_keep_centered" = "Håll dig centrerad";
+"jumio_liveness_prompt_keep_still" = "Håll stadigt";
+"jumio_liveness_prompt_keep_upright" = "Håll dig upprätt";
+"jumio_liveness_prompt_move_away" = "Flytta dig bakåt";
 "jumio_liveness_prompt_no_target" = "Rama in ansiktet";
-"jumio_liveness_prompt_success_another_shot" = "Okej! Gör ett nytt försök";
+"jumio_liveness_prompt_success_another_scan" = "Låt oss göra en ny skanning";
+"jumio_liveness_prompt_tilt_down" = "Luta nedåt";
+"jumio_liveness_prompt_tilt_left" = "Luta åt vänster";
+"jumio_liveness_prompt_tilt_right" = "Luta åt höger";
+"jumio_liveness_prompt_tilt_up" = "Luta uppåt";
+"jumio_liveness_scanning_completed" = "Skanningen är klar";
 "jumio_liveness_upfront_intro" = "Vi måste skanna ditt ansikte för att verifiera att du är en riktig person.";
 "jumio_loading_title" = "Laddar";
 "jumio_nfc_button_skip" = "Hoppa";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "Appen kan använda kamerablixten";
 "jumio_start_verification" = "Starta verifiering";
 "jumio_start_verification_subtitle" = "Den här processen är till för att bekräfta din identitet och skydda dig mot identitetsstöld";
+"jumio_try_again" = "Försök igen";
 "jumio_uploading_success" = "Uppladdning klar";
 "jumio_uploading_title" = "Laddar upp";

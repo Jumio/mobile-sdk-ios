@@ -13,6 +13,8 @@ class FileViewController: UIViewController {
     
     @IBOutlet weak var maxPagesLabel: UILabel!
     @IBOutlet weak var maxSizeLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var helpButton: UIButton!
     
     private let fileAttacher = Jumio.FileAttacher()
     
@@ -23,8 +25,19 @@ class FileViewController: UIViewController {
         customUI?.attach(fileAttacher: fileAttacher)
         
         // The different documents have different requirements. These can be found in fileAttacher.fileRequirements.
-        maxSizeLabel.text = "maximum size: \(ByteCountFormatter.string(fromByteCount: Int64(fileAttacher.fileRequirements?.maxFileSize ?? 0), countStyle: .binary))"
-        maxPagesLabel.text = "maximum pages: \(fileAttacher.fileRequirements?.pdfMaxPages ?? 0)"
+        maxSizeLabel.text = "Maximum file size: \(ByteCountFormatter.string(fromByteCount: Int64(fileAttacher.fileRequirements?.maxFileSize ?? 0), countStyle: .binary))"
+        maxPagesLabel.text = "Maximum number of pages: \(fileAttacher.fileRequirements?.pdfMaxPages ?? 0)"
+        passwordLabel.text = "Document should not be password protected"
+        
+        helpButton.isHidden = fileAttacher.helpUrl == nil
+    }
+    
+    @IBAction func openHelp(_ sender: Any) {
+        guard let helpUrlString = fileAttacher.helpUrl,
+              let helpUrl = URL(string: helpUrlString)
+        else { return }
+        
+        UIApplication.shared.open(helpUrl)
     }
     
     @IBAction func selectFile(_ sender: Any) {

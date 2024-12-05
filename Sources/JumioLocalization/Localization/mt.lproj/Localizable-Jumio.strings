@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Ħu ritratt";
 "jumio_accessibility_scan_switch_camera" = "Eqleb għall-kamera l-oħra";
 "jumio_analyzing_biometric" = "Qed janalizza d-dejta bijometrika";
+"jumio_brazil_cnh_subtitle" = "Biex ittella' l-PDF, aċċerta li niżżilt PDF tal-liċenzja tas-sewqan diġitali mill-applikazzjoni uffiċjali tal-gvern [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Tella' PDF ta' CNH Digital";
 "jumio_button_cancel" = "Ikkanċella";
 "jumio_di_back_to_document_selection" = "Se tittieħed lura fis-selezzjoni tad-dokumenti.";
 "jumio_di_retry_expire" = "Is-sessjoni tiegħek skadiet";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Kun żgur li d-dettalji kollha fuq id-dokument tiegħek jistgħu jinqraw";
 "jumio_error_instant_feedback_blurry_title" = "Ir-ritratt mhux ċar biżżejjed biex jiġi vverifikat";
 "jumio_error_instant_feedback_both_images_retaken" = "Ir-ritratti għandhom bżonn jittieħdu mill-ġdid";
+"jumio_error_instant_feedback_brazil_cnh" = "Aċċerta li niżżilt PDF tal-liċenzja tas-sewqan Diġitali mill-applikazzjoni uffiċjali tal-gvern [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Jekk jogħġbok erġa' pprova b'immaġni tal-kulur";
 "jumio_error_instant_feedback_bw_copy_title" = "L-immaġni hija fotokopja bl-abjad u bl-iswed";
 "jumio_error_instant_feedback_color_photocopy_title" = "L-immaġni tidher li hija fotokopja bil-kulur";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Id-dokument ma jinxtegħax";
 "jumio_error_network_problems" = "Iltqajna ma' problema fil-komunikazzjoni tan-netwerk";
 "jumio_error_no_camera_connection" = "L-aċċess għall-kamera huwa ddiżattivat";
-"jumio_error_ocr_failed" = "Bħalissa ma tistax tiskennja, jekk jogħġbok ikkuntattja lit-tim tal-appoġġ";
+"jumio_error_scanning_not_possible" = "Bħalissa ma tistax tiskennja, jekk jogħġbok ikkuntattja lit-tim tal-appoġġ";
 "jumio_error_session_expired" = "Is-sessjoni Skadiet";
 "jumio_error_wrong_token" = "Bħalissa ma tistax tiskennja, jekk jogħġbok ikkuntattja lit-tim tal-appoġġ";
 "jumio_face_help_eyes_closed" = "Żomm għajnejk miftuħin";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Ħu stessu";
 "jumio_identity_scan_tips_placing" = "Poġġi wiċċek fil-frejm ovali u agħfas il-buttuna biex tieħu r-ritratt";
 "jumio_identity_title" = "Verifika tal-Wiċċ";
+"jumio_idtype_brazil_cnh" = "Brażil CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Fittex il-Pajjiż";
 "jumio_idtype_countrysearch_title" = "Agħżel il-pajjiż tal-ħruġ";
 "jumio_idtype_di" = "ID diġitali";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Wiċċek irid ikun imdawwal sew u jikkuntrasta mal-isfond";
 "jumio_iproov_intro_la" = "Poġġi wiċċek fil-frejm u imxi mal-istruzzjonijiet li tara fuq l-iskrin";
 "jumio_list_supported_document_title" = "Dokumenti appoġġjati";
+"jumio_liveness_prompt_keep_centered" = "Żomm fin-nofs";
+"jumio_liveness_prompt_keep_still" = "Tiċċaqlaqx";
+"jumio_liveness_prompt_keep_upright" = "Oqgħod dritt";
+"jumio_liveness_prompt_move_away" = "Ersaq lura";
 "jumio_liveness_prompt_no_target" = "Poġġi wiċċek fil-frejm";
-"jumio_liveness_prompt_success_another_shot" = "Ħadnih! Ejja nieħdu ieħor";
+"jumio_liveness_prompt_success_another_scan" = "Ejja nieħdu scan ieħor";
+"jumio_liveness_prompt_tilt_down" = "Mejjel 'l isfel";
+"jumio_liveness_prompt_tilt_left" = "Mejjel lejn ix-xellug";
+"jumio_liveness_prompt_tilt_right" = "Mejjel lejn il-lemin";
+"jumio_liveness_prompt_tilt_up" = "Mejjel 'il fuq";
+"jumio_liveness_scanning_completed" = "L-iskennjar lest";
 "jumio_liveness_upfront_intro" = "Irridu nieħdu niskennjaw wiċċek biex nivverifikaw li int persuna reali.";
 "jumio_loading_title" = "Qed jillowdja";
 "jumio_nfc_button_skip" = "Aqbeż";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "L-app tista' tuża l-flash tal-kamera";
 "jumio_start_verification" = "Ibda l-verifika";
 "jumio_start_verification_subtitle" = "Dan il-proċess hu ddisinjat biex jivverifika l-identità tiegħek u jipproteġik mis-serq tal-identità";
+"jumio_try_again" = "Erġa' pprova";
 "jumio_uploading_success" = "Telgħu b'suċċess";
 "jumio_uploading_title" = "Qed itella'";

@@ -16,6 +16,9 @@ class ConfirmationViewController: UIViewController {
     @IBOutlet weak var containerRejectView: UIView!
     @IBOutlet weak var firstRejectView: JumioRejectView!
     @IBOutlet weak var secondRejectView: JumioRejectView!
+    @IBOutlet weak var rejectTitle: UILabel!
+    @IBOutlet weak var rejectCode: UILabel!
+    @IBOutlet weak var rejectMessage: UILabel!
     @IBOutlet weak var confirmationRetakeButton: CustomButton!
     @IBOutlet weak var confirmationConfirmButton: CustomButton!
     @IBOutlet weak var rejectRetakeButton: CustomButton!
@@ -41,11 +44,19 @@ class ConfirmationViewController: UIViewController {
             renderConfirmation()
             containerConfirmationView.isHidden = false
             containerRejectView.isHidden = true
-        case .reject:
+        case .reject(let reasons):
             customUI?.attach(rejectHandler: rejectHandler)
             renderRejected()
             containerConfirmationView.isHidden = true
             containerRejectView.isHidden = false
+            
+            // When the brazilian digital id is rejected, you won't receive images
+            // Instead, you will receive the reject reason invalidCertificate
+            rejectTitle.isHidden = reasons[.digital] != Jumio.RejectReason.invalidCertificate
+            rejectCode.isHidden = reasons[.digital] != Jumio.RejectReason.invalidCertificate
+            rejectCode.text = reasons[.digital]?.rawValue ?? ""
+            rejectMessage.isHidden = reasons[.digital] != Jumio.RejectReason.invalidCertificate
+            rejectMessage.text = "The uploaded document has no valid certificate"
         default:
             break
         }
@@ -95,6 +106,6 @@ class ConfirmationViewController: UIViewController {
 extension ConfirmationViewController {
     enum Style {
         case confirm
-        case reject
+        case reject(reasons: [Jumio.Credential.Part: Jumio.RejectReason])
     }
 }

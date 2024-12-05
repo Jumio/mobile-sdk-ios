@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Uzņemt fotoattēlu";
 "jumio_accessibility_scan_switch_camera" = "Pārslēgt kameru";
 "jumio_analyzing_biometric" = "Analizē biometriskos datus";
+"jumio_brazil_cnh_subtitle" = "Lai turpinātu augšupielādi, pārbaudiet, vai esat lejupielādējis digitālās autovadītāja apliecības PDF no valdības oficiālās lietotnes [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Augšupielādēt CNH Digital PDF";
 "jumio_button_cancel" = "Atcelt";
 "jumio_di_back_to_document_selection" = "Jūs atgriezīsieties dokumentu atlases sadaļā.";
 "jumio_di_retry_expire" = "Jūsu sesija ir beigusies";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Pārliecinieties, vai visi jūsu dokumentā esošie dati ir skaidri salasāmi";
 "jumio_error_instant_feedback_blurry_title" = "Attēls ir pārāk izplūdis, lai to varētu pārbaudīt";
 "jumio_error_instant_feedback_both_images_retaken" = "Fotoattēli jāuzņem vēlreiz";
+"jumio_error_instant_feedback_brazil_cnh" = "Pārbaudiet, vai esat lejupielādējis digitālās autovadītāja apliecības PDF no valdības oficiālās lietotnes [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Mēģiniet vēlreiz ar krāsainu attēlu";
 "jumio_error_instant_feedback_bw_copy_title" = "Attēls ir melnbalta fotokopija";
 "jumio_error_instant_feedback_color_photocopy_title" = "Šķiet, ka attēls ir krāsaina fotokopija";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Dokuments netiek atbalstīts";
 "jumio_error_network_problems" = "Esam saskārušies ar tīkla komunikācijas problēmu";
 "jumio_error_no_camera_connection" = "Piekļuve kamerai ir atspējota";
-"jumio_error_ocr_failed" = "Skenēšana pašlaik nav pieejama. Lūdzu, sazinieties ar atbalsta komandu";
+"jumio_error_scanning_not_possible" = "Skenēšana pašlaik nav pieejama. Lūdzu, sazinieties ar atbalsta komandu";
 "jumio_error_session_expired" = "Sesija beigusies";
 "jumio_error_wrong_token" = "Skenēšana pašlaik nav pieejama. Lūdzu, sazinieties ar atbalsta komandu";
 "jumio_face_help_eyes_closed" = "Acīm jābūt atvērtām";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Uzņemt pašportretu";
 "jumio_identity_scan_tips_placing" = "Iecentrējiet seju ovālajā rāmī un nospiediet slēdža pogu";
 "jumio_identity_title" = "Sejas pārbaude";
+"jumio_idtype_brazil_cnh" = "Brazīlijas CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Meklēt valsti";
 "jumio_idtype_countrysearch_title" = "Izvēlieties izdevējvalsti";
 "jumio_idtype_di" = "Digitālais ID";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Jūsu sejai jābūt vienmērīgi izgaismotai un jāizceļas uz fona";
 "jumio_iproov_intro_la" = "Iecentrējiet seju rāmītī un sekojiet norādījumiem uz ekrāna";
 "jumio_list_supported_document_title" = "Atbalstītie dokumenti";
+"jumio_liveness_prompt_keep_centered" = "Centrējiet";
+"jumio_liveness_prompt_keep_still" = "Nekustieties";
+"jumio_liveness_prompt_keep_upright" = "Paceliet";
+"jumio_liveness_prompt_move_away" = "Atkāpieties";
 "jumio_liveness_prompt_no_target" = "Ievietojiet seju rāmītī";
-"jumio_liveness_prompt_success_another_shot" = "Sapratu! Pamēģināsim vēlreiz";
+"jumio_liveness_prompt_success_another_scan" = "Noskanēsim vēlreiz";
+"jumio_liveness_prompt_tilt_down" = "Nolieciet zemāk";
+"jumio_liveness_prompt_tilt_left" = "Nolieciet pa kreisi";
+"jumio_liveness_prompt_tilt_right" = "Nolieciet pa labi";
+"jumio_liveness_prompt_tilt_up" = "Paceliet augstāk";
+"jumio_liveness_scanning_completed" = "Skenēšana pabeigta";
 "jumio_liveness_upfront_intro" = "Mums ir jānoskenē Jūsu seja, lai pārbaudītu, vai esat īsta persona.";
 "jumio_loading_title" = "Ielādē";
 "jumio_nfc_button_skip" = "Izlaist";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "Lietotne var izmantot kameras zibspuldzi";
 "jumio_start_verification" = "Sākt verifikāciju";
 "jumio_start_verification_subtitle" = "Process paredzēts jūsu identitātes verificēšanai un aizsardzībai pret identitātes zādzību";
+"jumio_try_again" = "Mēģiniet vēlreiz";
 "jumio_uploading_success" = "Augšupielāde veiksmīga";
 "jumio_uploading_title" = "Augšupielādē";

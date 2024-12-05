@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Fotofrafiši";
 "jumio_accessibility_scan_switch_camera" = "Prebaci kameru";
 "jumio_analyzing_biometric" = "Analiziranje biometrijskih podataka";
+"jumio_brazil_cnh_subtitle" = "Da biste nastavili sa otpremanjem, uverite se da ste preuzeli digitalnu vozačku dozvolu u PDF-u sa zvanične vladine aplikacije [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Otpremite CNH Digital PDF";
 "jumio_button_cancel" = "Otkaži";
 "jumio_di_back_to_document_selection" = "Bićete vraćeni na izbor dokumenata.";
 "jumio_di_retry_expire" = "Sesija je istekla";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Uverite se da su svi detalji u vašem dokumentu čitljivi";
 "jumio_error_instant_feedback_blurry_title" = "Slika je previše mutna za verifikaciju";
 "jumio_error_instant_feedback_both_images_retaken" = "Slike moraju biti pono fotografisane";
+"jumio_error_instant_feedback_brazil_cnh" = "Uverite se da ste preuzeli digitalnu vozačku dozvolu u PDF-u sa zvanične vladine aplikacije [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Pokušajte ponovo sa slikom u boji";
 "jumio_error_instant_feedback_bw_copy_title" = "Slika je crno-bela fotokopija";
 "jumio_error_instant_feedback_color_photocopy_title" = "Izgleda da je slika fotokopija u boji";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Dokument nije podržan";
 "jumio_error_network_problems" = "Naišli smo na problem mrežne komunikacije";
 "jumio_error_no_camera_connection" = "Pristup kameri onemogućen";
-"jumio_error_ocr_failed" = "Skeniranje trenutno nije dostupno, obratite se timu za podršku";
+"jumio_error_scanning_not_possible" = "Skeniranje trenutno nije dostupno, obratite se timu za podršku";
 "jumio_error_session_expired" = "Sesija je istekla";
 "jumio_error_wrong_token" = "";
 "jumio_face_help_eyes_closed" = "Držite oči otvorene";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Snimite selfi";
 "jumio_identity_scan_tips_placing" = "Poravnajte lice u ovalnom okviru i pritisnite okidač";
 "jumio_identity_title" = "Verifikacija lica";
+"jumio_idtype_brazil_cnh" = "Brazil CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Pretraži zemlju";
 "jumio_idtype_countrysearch_title" = "Izaberite zemlju izdavanja";
 "jumio_idtype_di" = "Digitalni ID";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Vaše lice mora da bude ravnomerno osvetljeno i da se izdvaja od pozadine";
 "jumio_iproov_intro_la" = "Centrirajte svoje lice u okviru i pratite uputstva na ekranu";
 "jumio_list_supported_document_title" = "Podržani dokumenti";
+"jumio_liveness_prompt_keep_centered" = "Držite se u sredini";
+"jumio_liveness_prompt_keep_still" = "Budite mirni";
+"jumio_liveness_prompt_keep_upright" = "Držite glavu uspravno";
+"jumio_liveness_prompt_move_away" = "Sklonite se";
 "jumio_liveness_prompt_no_target" = "Stavite svoje lice u okvir";
-"jumio_liveness_prompt_success_another_shot" = "Razumem! Napravimo još jedan snimak";
+"jumio_liveness_prompt_success_another_scan" = "Napravimo još jedan snimak";
+"jumio_liveness_prompt_tilt_down" = "Pomerite se nadole";
+"jumio_liveness_prompt_tilt_left" = "Okrenite se ulevo";
+"jumio_liveness_prompt_tilt_right" = "Okrenite se udesno";
+"jumio_liveness_prompt_tilt_up" = "Pomerite se nagore";
+"jumio_liveness_scanning_completed" = "Skeniranje je završeno";
 "jumio_liveness_upfront_intro" = "Moramo da vam skeniramo lice da bismo potvrdili da ste stvarna osoba.";
 "jumio_loading_title" = "Učitavanje";
 "jumio_nfc_button_skip" = "Preskoči";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "Aplikacija može da koristi blic kamere";
 "jumio_start_verification" = "Počni verifikaciju";
 "jumio_start_verification_subtitle" = "Ovaj proces je dizajniran da potvrdi vaš identitet i zaštiti vas od krađe identiteta";
+"jumio_try_again" = "Pokušajte ponovo";
 "jumio_uploading_success" = "Otpremanje je uspešno";
 "jumio_uploading_title" = "Otpremanje";

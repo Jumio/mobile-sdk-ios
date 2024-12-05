@@ -6,6 +6,49 @@ This section covers all technical changes that should be considered when updatin
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.12.0
+
+#### Scan Modes
+* Added `Jumio.Scan.Mode.livenessPremium`
+
+#### Scan Updates
+* Added `Jumio.Scan.Update.ExtractionState.tiltFaceUp`
+* Added `Jumio.Scan.Update.ExtractionState.tiltFaceDown`
+* Added `Jumio.Scan.Update.ExtractionState.tiltFaceLeft`
+* Added `Jumio.Scan.Update.ExtractionState.tiltFaceRight`
+* Added `Jumio.Scan.Update.ExtractionState.moveFaceIntoFrame`
+
+#### Jumio IDResult
+* Added `curp` to `Jumio.IDResult`
+* Removed `rawBarcodeData` from `Jumio.IDResult`
+
+#### Localization Keys
+The following keys have been added:
+* `jumio_liveness_prompt_keep_centered`
+* `jumio_liveness_prompt_keep_still`
+* `jumio_liveness_prompt_keep_upright`
+* `jumio_liveness_prompt_move_away`
+* `jumio_liveness_prompt_success_another_scan`
+* `jumio_liveness_prompt_tilt_down`
+* `jumio_liveness_prompt_tilt_left`
+* `jumio_liveness_prompt_tilt_right`
+* `jumio_liveness_prompt_tilt_up`
+* `jumio_liveness_scanning_completed`
+* `jumio_error_scanning_not_possible`
+
+The following keys have been removed:
+* `jumio_liveness_prompt_success_another_shot`
+* `jumio_error_ocr_failed`
+
+#### Reject Reasons
+* Added `Jumio.RejectReason.invalidCertificate`
+
+#### File Attacher
+* Added property `helpUrl`
+
+#### ML Models
+* Replaced model for determining liveness. Find the new model [here](https://cdn.mobile.jumio.ai/ios/model/liveness_sdk_assets_v_1_1_5.enc).
+
 ## 4.11.1
 * Removed `Jumio/Datadog` from default podspec configuration. This fixes [this known issue](known_issues.md#xcode16).
 

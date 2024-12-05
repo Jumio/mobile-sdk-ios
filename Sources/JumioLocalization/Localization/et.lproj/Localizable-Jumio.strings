@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Pildista";
 "jumio_accessibility_scan_switch_camera" = "Lülituge teisele kaamerale";
 "jumio_analyzing_biometric" = "Biomeetriliste andmete analüüsimine";
+"jumio_brazil_cnh_subtitle" = "Üleslaadimisega jätkamiseks veenduge, et olete ametlikust riiklikust rakendusest alla laadinud digitaalse juhiloa [({Carteira Digital de Trânsito})] PDF-i.";
+"jumio_brazil_cnh_upload_button" = "Laadige üles PDF-vormingus CNH Digital";
 "jumio_button_cancel" = "Tühista";
 "jumio_di_back_to_document_selection" = "Teid suunatakse tagasi dokumendi valimisse.";
 "jumio_di_retry_expire" = "Sessioon on aegunud";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Veenduge, et kõik doumendil olevad andmed oleksid loetavad";
 "jumio_error_instant_feedback_blurry_title" = "Foto on tuvastamiseks liiga hägune";
 "jumio_error_instant_feedback_both_images_retaken" = "Pildid tuleb uuesti teha";
+"jumio_error_instant_feedback_brazil_cnh" = "Veenduge, et olete ametlikust valitsuse rakendusest alla laadinud PDF-vormingus digitaalse juhiloa [({Carteira Digital de Trânsito})].";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Palun proovige uuesti värvipildiga";
 "jumio_error_instant_feedback_bw_copy_title" = "Pilt on mustvalge fotokoopia";
 "jumio_error_instant_feedback_color_photocopy_title" = "Näib, et pilt on värviline fotokoopia";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Jäädvustatud dokumenti ei toetata";
 "jumio_error_network_problems" = "Meil on tekkinud võrgusuhtluse probleem";
 "jumio_error_no_camera_connection" = "Juurdepääs kaamerale on keelatud";
-"jumio_error_ocr_failed" = "Skannimine pole praegu saadaval, võtke ühendust kasutajatoega";
+"jumio_error_scanning_not_possible" = "Skannimine pole praegu saadaval, võtke ühendust kasutajatoega";
 "jumio_error_session_expired" = "Sessioon on aegunud";
 "jumio_error_wrong_token" = "Skannimine pole praegu saadaval, võtke ühendust kasutajatoega";
 "jumio_face_help_eyes_closed" = "Hoidke oma silmad lahti";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Tehke selfie";
 "jumio_identity_scan_tips_placing" = "Kontrollige, et teie nägu oleks ovaalses raamis ja vajutage pildistamisnuppu";
 "jumio_identity_title" = "Näotuvastus";
+"jumio_idtype_brazil_cnh" = "Brasiilia CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Riigi otsing";
 "jumio_idtype_countrysearch_title" = "Valige dokumendi väljastanud riik";
 "jumio_idtype_di" = "Digi-ID";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Nägu peab olema ühtlaselt valgustatud ja taustast eristuv";
 "jumio_iproov_intro_la" = "Asetage nägu raami keskele ja järgige ekraanil kuvatud juhiseid";
 "jumio_list_supported_document_title" = "Toetatud dokumendid";
+"jumio_liveness_prompt_keep_centered" = "Hoia nägu keskel";
+"jumio_liveness_prompt_keep_still" = "Olge paigal";
+"jumio_liveness_prompt_keep_upright" = "Hoia pea sirgelt";
+"jumio_liveness_prompt_move_away" = "Liigu kaugemale";
 "jumio_liveness_prompt_no_target" = "Asetage oma nägu raami sisse";
-"jumio_liveness_prompt_success_another_shot" = "Sain aru! Teeme veel ühe võtte";
+"jumio_liveness_prompt_success_another_scan" = "Teeme veel ühe võtte";
+"jumio_liveness_prompt_tilt_down" = "Kalluta alla";
+"jumio_liveness_prompt_tilt_left" = "Kalluta vasakule";
+"jumio_liveness_prompt_tilt_right" = "Kalluta paremale";
+"jumio_liveness_prompt_tilt_up" = "Kalluta üles";
+"jumio_liveness_scanning_completed" = "Skannimine on lõpetatud";
 "jumio_liveness_upfront_intro" = "Peame skannima Sinu näo kinnitamaks, et oled inimene, mitte robot.";
 "jumio_loading_title" = "Laadimine";
 "jumio_nfc_button_skip" = "Vahele jätma";
@@ -215,7 +228,8 @@
 "jumio_start_instructions_02" = "Olge valmis selfit tegema";
 "jumio_start_instructions_03" = "Kasutage kehtivat dokumenti";
 "jumio_start_instructions_07" = "Rakendus võib kasutada kaamera välku";
-"jumio_start_verification" = "Alustage kinnitamist";
+"jumio_start_verification" = "Alusta kontrollimist";
 "jumio_start_verification_subtitle" = "Selle protsessi eesmärk on teie isiku kinnitamine ja teie identiteedivarguse eest kaitsmine";
+"jumio_try_again" = "Palun proovi uuesti";
 "jumio_uploading_success" = "Üleslaadimine õnnestus";
 "jumio_uploading_title" = "Üleslaadimine";

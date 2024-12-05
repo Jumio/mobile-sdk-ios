@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Posnemi fotografijo";
 "jumio_accessibility_scan_switch_camera" = "Preklopi kamero";
 "jumio_analyzing_biometric" = "Analiziranje biometričnih podatkov";
+"jumio_brazil_cnh_subtitle" = "Za nadaljevanje z nalaganjem se prepričajte, da ste datoteko PDF z elektronskim vozniškim dovoljenjem prenesli iz uradne državne aplikacije [({Carteira Digital de Trânsito})].";
+"jumio_brazil_cnh_upload_button" = "Naloži PDF CNH Digital";
 "jumio_button_cancel" = "Prekliči";
 "jumio_di_back_to_document_selection" = "Preusmerjeni boste nazaj na izbiro dokumenta.";
 "jumio_di_retry_expire" = "Vaša seja je potekla";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Poskrbite, da so vsi podatki na vašem dokumentu čitljivi";
 "jumio_error_instant_feedback_blurry_title" = "Slika ni dovolj ostra za preverjanje";
 "jumio_error_instant_feedback_both_images_retaken" = "Slika mora biti ponovno posneta";
+"jumio_error_instant_feedback_brazil_cnh" = "Prepričajte se, da ste datoteko PDF z elektronskim vozniškim dovoljenjem prenesli iz uradne državne aplikacije [({Carteira Digital de Trânsito})].";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Poskusite znova z barvno sliko";
 "jumio_error_instant_feedback_bw_copy_title" = "Slika je črno-bela fotokopija";
 "jumio_error_instant_feedback_color_photocopy_title" = "Videti je, da je slika barvna fotokopija";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Dokument ni podprt";
 "jumio_error_network_problems" = "Naleteli smo na težavo z omrežno komunikacijo";
 "jumio_error_no_camera_connection" = "Dostop do kamere je onemogočen.";
-"jumio_error_ocr_failed" = "Optično branje trenutno ni na voljo, obrnite se na podporno ekipo";
+"jumio_error_scanning_not_possible" = "Optično branje trenutno ni na voljo, obrnite se na podporno ekipo";
 "jumio_error_session_expired" = "Seja potekla";
 "jumio_error_wrong_token" = "Optično branje trenutno ni na voljo, obrnite se na podporno ekipo";
 "jumio_face_help_eyes_closed" = "Oči imejte odprte";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Posnemi fotografijo samega sebe";
 "jumio_identity_scan_tips_placing" = "Obraz postavite v ovalni okvir in pritisnite gumb sprožilca";
 "jumio_identity_title" = "Preverjanje obraza";
+"jumio_idtype_brazil_cnh" = "Brazil CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Išči državo";
 "jumio_idtype_countrysearch_title" = "Izberite državo izdajateljico";
 "jumio_idtype_di" = "Digitalna identiteta";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Vaš obraz mora biti enakomerno osvetljen in izstopati mora od ozadja";
 "jumio_iproov_intro_la" = "Obraz postavite na sredino okvirja in sledite navodilom na zaslonu";
 "jumio_list_supported_document_title" = "Podprti dokumenti";
+"jumio_liveness_prompt_keep_centered" = "Glava na sredini";
+"jumio_liveness_prompt_keep_still" = "Stojte pri miru";
+"jumio_liveness_prompt_keep_upright" = "Glava zravnano";
+"jumio_liveness_prompt_move_away" = "Premakni na stran";
 "jumio_liveness_prompt_no_target" = "Obraz postavite v okvir";
-"jumio_liveness_prompt_success_another_shot" = "Razumem! Poskusimo še enkrat";
+"jumio_liveness_prompt_success_another_scan" = "Skenirajmo še enkrat";
+"jumio_liveness_prompt_tilt_down" = "Nagni navzdol";
+"jumio_liveness_prompt_tilt_left" = "Nagni v levo";
+"jumio_liveness_prompt_tilt_right" = "Nagni v desno";
+"jumio_liveness_prompt_tilt_up" = "Nagni navzgor";
+"jumio_liveness_scanning_completed" = "Optično branje končano";
 "jumio_liveness_upfront_intro" = "Da bi preverili, ali ste resnična oseba, moramo skenirati vaš obraz.";
 "jumio_loading_title" = "Nalaganje";
 "jumio_nfc_button_skip" = "Preskoči";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "Aplikacija lahko uporablja bliskavico fotoaparata";
 "jumio_start_verification" = "Začetek preverjanja";
 "jumio_start_verification_subtitle" = "Ta postopek je namenjen preverjanju vaše identitete in zaščiti pred krajo identitete";
+"jumio_try_again" = "Poskusite znova";
 "jumio_uploading_success" = "Nalaganje uspešno";
 "jumio_uploading_title" = "Nalaganje";

@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Scattare una foto";
 "jumio_accessibility_scan_switch_camera" = "Cambia fotocamera";
 "jumio_analyzing_biometric" = "Analisi dei dati biometrici";
+"jumio_brazil_cnh_subtitle" = "Per procedere con il caricamento, assicurati di aver scaricato la patente di guida digitale in formato PDF dall'applicazione ufficiale del governo [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Carica CNH Digital in PDF";
 "jumio_button_cancel" = "Annulla";
 "jumio_di_back_to_document_selection" = "Tornerai alla selezione del documento.";
 "jumio_di_retry_expire" = "La tua sessione è scaduta";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Assicurati che tutti i dettagli del tuo documento siano leggibili";
 "jumio_error_instant_feedback_blurry_title" = "L'immagine è troppo sfocata per la verifica";
 "jumio_error_instant_feedback_both_images_retaken" = "Le foto devono essere scattate di nuovo";
+"jumio_error_instant_feedback_brazil_cnh" = "Assicurati di aver scaricato la patente di guida digitale in formato PDF dall'applicazione ufficiale del governo [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Riprova con un'immagine a colori";
 "jumio_error_instant_feedback_bw_copy_title" = "L'immagine è una fotocopia in bianco e nero";
 "jumio_error_instant_feedback_color_photocopy_title" = "L'immagine sembra essere una fotocopia a colori";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Il documento acquisito non è supportato";
 "jumio_error_network_problems" = "Abbiamo riscontrato un problema di comunicazione di rete";
 "jumio_error_no_camera_connection" = "Accesso alla fotocamera disabilitato";
-"jumio_error_ocr_failed" = "La scansione non è disponibile al momento. Rivolgiti al team assistenza";
+"jumio_error_scanning_not_possible" = "La scansione non è disponibile al momento. Rivolgiti al team assistenza";
 "jumio_error_session_expired" = "Sessione scaduta";
 "jumio_error_wrong_token" = "La scansione non è disponibile al momento. Rivolgiti al team assistenza";
 "jumio_face_help_eyes_closed" = "Tieni aperti gli occhi";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Scatta un selfie";
 "jumio_identity_scan_tips_placing" = "Allinea il viso con la cornice ovale e premi il pulsante di scatto";
 "jumio_identity_title" = "Riconoscimento facciale";
+"jumio_idtype_brazil_cnh" = "Brasile CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Cercare Paese";
 "jumio_idtype_countrysearch_title" = "Seleziona il paese di emissione";
 "jumio_idtype_di" = "Identità digitale";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Il viso deve essere illuminato in modo uniforme e distinguersi dallo sfondo";
 "jumio_iproov_intro_la" = "Centra il viso nella cornice e segui le istruzioni sullo schermo";
 "jumio_list_supported_document_title" = "Documenti supportati";
+"jumio_liveness_prompt_keep_centered" = "Centra il viso";
+"jumio_liveness_prompt_keep_still" = "Non muoverti";
+"jumio_liveness_prompt_keep_upright" = "Raddrizza la testa";
+"jumio_liveness_prompt_move_away" = "Allontanati";
 "jumio_liveness_prompt_no_target" = "Inquadra il viso nell'ovale";
-"jumio_liveness_prompt_success_another_shot" = "Bene! Facciamo un'altra scansione";
+"jumio_liveness_prompt_success_another_scan" = "Facciamo un'altra scansione";
+"jumio_liveness_prompt_tilt_down" = "Inclina in basso";
+"jumio_liveness_prompt_tilt_left" = "Inclina a sinistra";
+"jumio_liveness_prompt_tilt_right" = "Inclina a destra";
+"jumio_liveness_prompt_tilt_up" = "Inclina in alto";
+"jumio_liveness_scanning_completed" = "Scansione completata";
 "jumio_liveness_upfront_intro" = "Dobbiamo eseguire una scansione del tuo viso per verificare che tu sia una persona reale.";
 "jumio_loading_title" = "Caricamento";
 "jumio_nfc_button_skip" = "Salta";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "L'applicazione potrebbe utilizzare il flash della fotocamera";
 "jumio_start_verification" = "Inizia la verifica";
 "jumio_start_verification_subtitle" = "Questo processo è pensato per verificare la tua identità e proteggerti dai furti d'identità";
+"jumio_try_again" = "Riprova";
 "jumio_uploading_success" = "Caricamento completato";
 "jumio_uploading_title" = "Caricamento";

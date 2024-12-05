@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Nufotografuokite";
 "jumio_accessibility_scan_switch_camera" = "Perjungti kamerą";
 "jumio_analyzing_biometric" = "Analizuojami biometriniai duomenys";
+"jumio_brazil_cnh_subtitle" = "Norėdami tęsti įkėlimą įsitikinkite, kad atsisiuntėte skaitmeninio vairuotojo pažymėjimo PDF failą iš oficialios vyriausybės programėlės [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Įkelti „CNH Digital PDF“";
 "jumio_button_cancel" = "Atšaukti";
 "jumio_di_back_to_document_selection" = "Būsite nukreipti atgal į dokumentų pasirinkimą.";
 "jumio_di_retry_expire" = "Jūsų seanso laikas baigėsi";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Patikrinkite, ar visi jūsų dokumento duomenys įskaitomi";
 "jumio_error_instant_feedback_blurry_title" = "Nuotrauka neryški, todėl neįmanoma patvirtinti";
 "jumio_error_instant_feedback_both_images_retaken" = "Nuotraukas būtina pakartoti";
+"jumio_error_instant_feedback_brazil_cnh" = "Įsitikinkite, kad atsisiuntėte skaitmeninio vairuotojo pažymėjimo PDF failą iš oficialios vyriausybės programėlės [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Pateikite spalvotą nuotrauką";
 "jumio_error_instant_feedback_bw_copy_title" = "Nuotrauka yra nespalvota fotokopija";
 "jumio_error_instant_feedback_color_photocopy_title" = "Panašu, kad tai spalvota fotokopija";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Dokumentas nepalaikomas";
 "jumio_error_network_problems" = "Aptikta ryšio problema";
 "jumio_error_no_camera_connection" = "Prieiga prie fotoaparato išjungta";
-"jumio_error_ocr_failed" = "Šiuo metu skenavimas neprieinamas, susisiekite su pagalbos komanda";
+"jumio_error_scanning_not_possible" = "Šiuo metu skenavimas neprieinamas, susisiekite su pagalbos komanda";
 "jumio_error_session_expired" = "Seanso laikas baigėsi";
 "jumio_error_wrong_token" = "Šiuo metu skenavimas neprieinamas, susisiekite su pagalbos komanda";
 "jumio_face_help_eyes_closed" = "Nemirksėkite";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Pasidarykite asmenukę";
 "jumio_identity_scan_tips_placing" = "Sutalpinkite savo veidą į ovalų rėmelį ir fotografuokite";
 "jumio_identity_title" = "Veido atpažinimas";
+"jumio_idtype_brazil_cnh" = "Brazilijos CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Ieškoti šalies";
 "jumio_idtype_countrysearch_title" = "Pasirinkite išdavimo šalį";
 "jumio_idtype_di" = "Skaitmeninė tapatybė";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Jūsų veidas turi būti tolygiai apšviestas ir išsiskirti iš fono";
 "jumio_iproov_intro_la" = "Išlaikykite veidą rėmelio centre ir vadovaukitės ekrane pateikiamais nurodymais";
 "jumio_list_supported_document_title" = "Palaikomi dokumentai";
+"jumio_liveness_prompt_keep_centered" = "Laikykitės centro";
+"jumio_liveness_prompt_keep_still" = "Nejudėkite";
+"jumio_liveness_prompt_keep_upright" = "Laikykitės tiesiai";
+"jumio_liveness_prompt_move_away" = "Atsitraukite";
 "jumio_liveness_prompt_no_target" = "Patalpinkite savo veidą rėmelyje";
-"jumio_liveness_prompt_success_another_shot" = "Supratau! Pabandom iš naujo";
+"jumio_liveness_prompt_success_another_scan" = "Skenuokime dar kartą";
+"jumio_liveness_prompt_tilt_down" = "Palenkite žemyn";
+"jumio_liveness_prompt_tilt_left" = "Pasisukite į kairę";
+"jumio_liveness_prompt_tilt_right" = "Pasisukite į dešinę";
+"jumio_liveness_prompt_tilt_up" = "Palenkite aukštyn";
+"jumio_liveness_scanning_completed" = "Skenavimas baigtas";
 "jumio_liveness_upfront_intro" = "Norėdami įsitikinti, kad esate tikras asmuo, turėsime nuskaityti jūsų veidą.";
 "jumio_loading_title" = "Įkeliama";
 "jumio_nfc_button_skip" = "Praleisti";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "Programėlė gali pasinaudoti fotoaparato blykste";
 "jumio_start_verification" = "Pradėkite patvirtinimą";
 "jumio_start_verification_subtitle" = "Šio proceso tikslas – patvirtinti jūsų tapatybę ir užtikrinti apsaugą nuo tapatybės vagystės";
+"jumio_try_again" = "Bandykite dar kartą";
 "jumio_uploading_success" = "Įkėlimas sėkmingas";
 "jumio_uploading_title" = "Įkeliama";

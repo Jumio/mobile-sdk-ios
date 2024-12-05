@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Заснемане на снимка";
 "jumio_accessibility_scan_switch_camera" = "Превключване на камерата";
 "jumio_analyzing_biometric" = "Анализиране на биометричните данни";
+"jumio_brazil_cnh_subtitle" = "За да продължите с прикачването на файл, уверете се, че сте свалили CNH Digital в PDF формат от официалния сайт на правителството [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Прикачете PDF на CNH Digital";
 "jumio_button_cancel" = "Отмяна";
 "jumio_di_back_to_document_selection" = "Ще се върнете обратно към избора на документ.";
 "jumio_di_retry_expire" = "Сесията ви изтече";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Уверете се, че всички данни в документа ви са четливи.";
 "jumio_error_instant_feedback_blurry_title" = "Изображението е твърде неясно";
 "jumio_error_instant_feedback_both_images_retaken" = "Изображенията трябва да се заснемат отново";
+"jumio_error_instant_feedback_brazil_cnh" = "Уверете се, че сте свалили дигиталната шофьорска книжа в PDF формат от официалния сайт на правителството [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Опитайте отново с цветно изображение";
 "jumio_error_instant_feedback_bw_copy_title" = "Изображението е черно-бяло фотокопие";
 "jumio_error_instant_feedback_color_photocopy_title" = "Изображението изглежда е цветно фотокопие";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Заснетият документ не се поддържа";
 "jumio_error_network_problems" = "Възникна проблем с мрежовата комуникация";
 "jumio_error_no_camera_connection" = "Достъпът до камерата е деактивиран";
-"jumio_error_ocr_failed" = "В момента сканирането не е достъпно, свържете се с екипа по поддръжка";
+"jumio_error_scanning_not_possible" = "В момента сканирането не е достъпно, свържете се с екипа по поддръжка";
 "jumio_error_session_expired" = "Сесията е изтекла";
 "jumio_error_wrong_token" = "В момента сканирането не е достъпно, свържете се с екипа по поддръжка";
 "jumio_face_help_eyes_closed" = "Дръжте очите си отворени";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Заснемане на селфи";
 "jumio_identity_scan_tips_placing" = "Позиционирайте лицето си в рамката и натиснете бутона за снимка";
 "jumio_identity_title" = "Проверка на лицето";
+"jumio_idtype_brazil_cnh" = "Бразилски CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Търсене на държава";
 "jumio_idtype_countrysearch_title" = "Изберете издаваща държава";
 "jumio_idtype_di" = "Цифрова самоличност";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Лицето ви трябва да е равномерно осветено и да се откроява от фона";
 "jumio_iproov_intro_la" = "Позиционирайте лицето си в центъра на рамката и последвайте инструкциите на екрана";
 "jumio_list_supported_document_title" = "Поддържани документи";
+"jumio_liveness_prompt_keep_centered" = "Стойте в средата";
+"jumio_liveness_prompt_keep_still" = "Стойте неподвижно";
+"jumio_liveness_prompt_keep_upright" = "Дръжте главата изправена";
+"jumio_liveness_prompt_move_away" = "Отдалечете се малко";
 "jumio_liveness_prompt_no_target" = "Позиционирайте лицето си в рамката";
-"jumio_liveness_prompt_success_another_shot" = "Готово! Нека направим още един опит за снимка";
+"jumio_liveness_prompt_success_another_scan" = "Нека направим още едно заснемане";
+"jumio_liveness_prompt_tilt_down" = "Наведете надолу";
+"jumio_liveness_prompt_tilt_left" = "Наклонете наляво";
+"jumio_liveness_prompt_tilt_right" = "Наклонете надясно";
+"jumio_liveness_prompt_tilt_up" = "Повдигнете нагоре";
+"jumio_liveness_scanning_completed" = "Сканирането завърши";
 "jumio_liveness_upfront_intro" = "Трябва да направим снимка на лицето ви, за да потвърдим, че сте истински човек.";
 "jumio_loading_title" = "Зареждане";
 "jumio_nfc_button_skip" = "Пропуснете";
@@ -215,7 +228,8 @@
 "jumio_start_instructions_02" = "Подготви се за селфи";
 "jumio_start_instructions_03" = "Използвай валиден документ";
 "jumio_start_instructions_07" = "Приложението може да използва светкавицата на камерата";
-"jumio_start_verification" = "Начало на удостоверяването";
+"jumio_start_verification" = "Започнете верификация";
 "jumio_start_verification_subtitle" = "Целта на процеса е да потвърди самоличността ти и да те защити от кражба на самоличност";
+"jumio_try_again" = "Опитайте отново";
 "jumio_uploading_success" = "Качването е успешно";
 "jumio_uploading_title" = "Качване";

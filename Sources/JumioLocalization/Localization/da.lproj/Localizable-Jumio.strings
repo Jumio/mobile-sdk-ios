@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Tag et billede";
 "jumio_accessibility_scan_switch_camera" = "Skift kamera";
 "jumio_analyzing_biometric" = "Analyserer biometriske data";
+"jumio_brazil_cnh_subtitle" = "For at fortsætte med din upload skal du have downloadet et digitalt kørekort i PDF-format fra myndighedernes officielle program [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "Upload CNH Digital som PDF";
 "jumio_button_cancel" = "Annuller";
 "jumio_di_back_to_document_selection" = "Du bliver sendt tilbage til valg af dokument.";
 "jumio_di_retry_expire" = "Din session er udløbet";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Sørg for, at alle detaljer i dokumentet er læsbare";
 "jumio_error_instant_feedback_blurry_title" = "Billedet er for uskarpt til at blive kontrolleret";
 "jumio_error_instant_feedback_both_images_retaken" = "Billederne skal tages igen";
+"jumio_error_instant_feedback_brazil_cnh" = "Sørg for, at du har downloadet et digitalt kørekort i PDF-format fra myndighedernes officielle program [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Prøv igen med et farvebillede";
 "jumio_error_instant_feedback_bw_copy_title" = "Billedet er sort/hvidt";
 "jumio_error_instant_feedback_color_photocopy_title" = "Billedet ser ud til at være et farvefoto";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "Det optagne dokument understøttes ikke";
 "jumio_error_network_problems" = "Der er opstået et problem med netværksforbindelsen";
 "jumio_error_no_camera_connection" = "Kameraadgang deaktiveret";
-"jumio_error_ocr_failed" = "Scanning er ikke tilgængelig på dette tidspunkt. Kontakt kundesupport";
+"jumio_error_scanning_not_possible" = "Scanning er ikke tilgængelig på dette tidspunkt. Kontakt kundesupport";
 "jumio_error_session_expired" = "Sessionen er udløbet";
 "jumio_error_wrong_token" = "Scanning er ikke tilgængelig på dette tidspunkt. Kontakt kundesupport";
 "jumio_face_help_eyes_closed" = "Hold øjnene åbne";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Tag en selfie";
 "jumio_identity_scan_tips_placing" = "Anbring dit ansigt i den ovale ramme, og tryk på udløserknappen";
 "jumio_identity_title" = "Ansigtsverifikation";
+"jumio_idtype_brazil_cnh" = "Brasilien CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Søg land";
 "jumio_idtype_countrysearch_title" = "Vælg udstedelsesland";
 "jumio_idtype_di" = "Digitalt ID";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Dit ansigt skal være jævnt belyst og skille sig ud fra baggrunden";
 "jumio_iproov_intro_la" = "Centrer dit ansigt i rammen, og og følg vejledningen på skærmen";
 "jumio_list_supported_document_title" = "Understøttede dokumenter";
+"jumio_liveness_prompt_keep_centered" = "Stå i midten";
+"jumio_liveness_prompt_keep_still" = "Stå helt stille";
+"jumio_liveness_prompt_keep_upright" = "Kig lige ud";
+"jumio_liveness_prompt_move_away" = "Ryk tilbage";
 "jumio_liveness_prompt_no_target" = "Anbring dit ansigt i rammen";
-"jumio_liveness_prompt_success_another_shot" = "OK! Lad os tage et andet billede";
+"jumio_liveness_prompt_success_another_scan" = "Lad os lave en ny scanning";
+"jumio_liveness_prompt_tilt_down" = "Kig nedad";
+"jumio_liveness_prompt_tilt_left" = "Hæld mod venstre";
+"jumio_liveness_prompt_tilt_right" = "Hæld mod højre";
+"jumio_liveness_prompt_tilt_up" = "Kig opad";
+"jumio_liveness_scanning_completed" = "Scanning afsluttet";
 "jumio_liveness_upfront_intro" = "Vi er nødt til at scanne dit ansigt for at kunne bekræfte, at du er et menneske.";
 "jumio_loading_title" = "Indlæser";
 "jumio_nfc_button_skip" = "Springe";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "Appen bruger muligvis kameraets blitz";
 "jumio_start_verification" = "Start bekræftelse";
 "jumio_start_verification_subtitle" = "Denne proces er designet til at bekræfte din identitet og beskytte dig mod identitetstyveri";
+"jumio_try_again" = "Prøv venligst igen";
 "jumio_uploading_success" = "Upload gennemført";
 "jumio_uploading_title" = "Uploader";

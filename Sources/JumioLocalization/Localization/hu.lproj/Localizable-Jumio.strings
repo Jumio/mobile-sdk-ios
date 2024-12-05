@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "Fénykép készítése";
 "jumio_accessibility_scan_switch_camera" = "Kamera váltása";
 "jumio_analyzing_biometric" = "Biometrikus adatok elemzése";
+"jumio_brazil_cnh_subtitle" = "A feltöltés folytatásához feltétlenül töltsön le egy PDF-formátumú digitális járművezetői engedélyt a hivatalos kormányzati alkalmazásból [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "CNH Digital PDF feltöltése";
 "jumio_button_cancel" = "Mégse";
 "jumio_di_back_to_document_selection" = "Vissza fog térni a dokumentum kiválasztásához.";
 "jumio_di_retry_expire" = "A munkamenete lejárt";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "Győződjön meg arról, hogy a dokumentum minden adata olvasható.";
 "jumio_error_instant_feedback_blurry_title" = "A kép túl homályos az ellenőrzéshez";
 "jumio_error_instant_feedback_both_images_retaken" = "A képek készítését meg kell ismételni";
+"jumio_error_instant_feedback_brazil_cnh" = "Feltétlenül töltsön le egy PDF-formátumú digitális járművezetői engedélyt a hivatalos kormányzati alkalmazásból [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "Kérjük, próbálkozzon újra egy színes képpel";
 "jumio_error_instant_feedback_bw_copy_title" = "A kép fekete-fehér fénymásolat";
 "jumio_error_instant_feedback_color_photocopy_title" = "A kép színes fénymásolatnak tűnik";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "A dokumentum nem támogatott";
 "jumio_error_network_problems" = "Hálózati kommunikációs problémába ütköztünk";
 "jumio_error_no_camera_connection" = "A kamera hozzáférése letiltva";
-"jumio_error_ocr_failed" = "A beolvasás jelenleg nem érhető el, vegye fel a kapcsolatot a témogatási csapattal";
+"jumio_error_scanning_not_possible" = "A beolvasás jelenleg nem érhető el, vegye fel a kapcsolatot a témogatási csapattal";
 "jumio_error_session_expired" = "A munkamenet lejárt";
 "jumio_error_wrong_token" = "A beolvasás jelenleg nem érhető el, vegye fel a kapcsolatot a témogatási csapattal";
 "jumio_face_help_eyes_closed" = "Tartsa nyitva a szemét";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "Készítsen egy szelfit";
 "jumio_identity_scan_tips_placing" = "Arcát helyezze az ovális keretbe, majd nyomja meg az exponáló gombot.";
 "jumio_identity_title" = "Arcellenőrzés";
+"jumio_idtype_brazil_cnh" = "Brazil CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "Ország keresése";
 "jumio_idtype_countrysearch_title" = "Válasszon kiállító országot";
 "jumio_idtype_di" = "Digitális azonosító";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "Gondoskodjon arról, hogy arca egyenletesen legyen megvilágítva, és elkülönüljön a háttértől";
 "jumio_iproov_intro_la" = "Helyezze az arcát a keret közepébe, és kövesse a képernyőn megjelenő utasításokat";
 "jumio_list_supported_document_title" = "Támogatott dokumentumok";
+"jumio_liveness_prompt_keep_centered" = "Helyezkedjen középre";
+"jumio_liveness_prompt_keep_still" = "Maradjon mozdulatlan";
+"jumio_liveness_prompt_keep_upright" = "Tartsa egyenesen";
+"jumio_liveness_prompt_move_away" = "Menjen távolabb";
 "jumio_liveness_prompt_no_target" = "Igazítsa az arcát a keretbe";
-"jumio_liveness_prompt_success_another_shot" = "Értem! Készítsünk egy másik fényképet";
+"jumio_liveness_prompt_success_another_scan" = "Végezzünk még egy beolvasást";
+"jumio_liveness_prompt_tilt_down" = "Döntse előre";
+"jumio_liveness_prompt_tilt_left" = "Döntse balra";
+"jumio_liveness_prompt_tilt_right" = "Döntse jobbra";
+"jumio_liveness_prompt_tilt_up" = "Döntse hátra";
+"jumio_liveness_scanning_completed" = "A szkennelés befejeződött";
 "jumio_liveness_upfront_intro" = "Be kell szkennelnünk az arcát, hogy meggyőződjünk róla, valódi személyről van szó.";
 "jumio_loading_title" = "Betöltés";
 "jumio_nfc_button_skip" = "Kihagyás";
@@ -215,7 +228,8 @@
 "jumio_start_instructions_02" = "Készüljön fel a szelfi elkészítésére";
 "jumio_start_instructions_03" = "Érvényes okmányt használjon";
 "jumio_start_instructions_07" = "Az alkalmazás a kamera vakuját használhatja";
-"jumio_start_verification" = "Ellenőrzés indítása";
+"jumio_start_verification" = "Kezdje meg az ellenőrzést";
 "jumio_start_verification_subtitle" = "Ez a folyamat segít ellenőrizni a személyazonosságát, és védelmet nyújt a személyazonosság-lopással szemben";
+"jumio_try_again" = "Próbálja meg újra";
 "jumio_uploading_success" = "Feltöltés sikeres";
 "jumio_uploading_title" = "Feltöltés";

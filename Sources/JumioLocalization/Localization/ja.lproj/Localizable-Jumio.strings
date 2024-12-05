@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "写真を撮る";
 "jumio_accessibility_scan_switch_camera" = "カメラを切り替える";
 "jumio_analyzing_biometric" = "生体認証データを分析しています";
+"jumio_brazil_cnh_subtitle" = "アップロードを続けるには、政府の公式アプリ[({Carteira Digital de Trânsito})]からデジタル運転免許証のPDFをダウンロードしていることを確認してください。";
+"jumio_brazil_cnh_upload_button" = "CNH Digital PDFをアップロード";
 "jumio_button_cancel" = "キャンセル";
 "jumio_di_back_to_document_selection" = "ドキュメント選択画面に戻ります。";
 "jumio_di_retry_expire" = "セッションの有効期限が切れました";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "ドキュメントのすべての詳細情報が読み取り可能であることを確認してください";
 "jumio_error_instant_feedback_blurry_title" = "画像がぼやけすぎているため認証できません";
 "jumio_error_instant_feedback_both_images_retaken" = "画像は撮り直す必要があります";
+"jumio_error_instant_feedback_brazil_cnh" = "政府の公式アプリ[({Carteira Digital de Trânsito})]からデジタル運転免許証のPDFをダウンロードしていることを確認してください。";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "カラー画像でもう一度やり直してください";
 "jumio_error_instant_feedback_bw_copy_title" = "画像は白黒コピーです";
 "jumio_error_instant_feedback_color_photocopy_title" = "画像はカラーコピーと思われます";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "キャプチャされたドキュメントはサポートされていません";
 "jumio_error_network_problems" = "ネットワーク通信の問題が発生しました";
 "jumio_error_no_camera_connection" = "カメラへのアクセスが無効になっています";
-"jumio_error_ocr_failed" = "スキャンは現在利用できません。サポートチームにお問い合わせください";
+"jumio_error_scanning_not_possible" = "スキャンは現在利用できません。サポートチームにお問い合わせください";
 "jumio_error_session_expired" = "セッションの有効期限が切れました";
 "jumio_error_wrong_token" = "スキャンは現在利用できません。サポートチームにお問い合わせください";
 "jumio_face_help_eyes_closed" = "目を開けた状態を保ってください";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "自撮り";
 "jumio_identity_scan_tips_placing" = "楕円の枠に顔を合わせてシャッターボタンを押してください";
 "jumio_identity_title" = "顔認証";
+"jumio_idtype_brazil_cnh" = "ブラジル CNH Digital PDF";
 "jumio_idtype_countrysearch_search" = "国を検索";
 "jumio_idtype_countrysearch_title" = "発行国を選択";
 "jumio_idtype_di" = "デジタルID";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "あなたの顔が、均一に照らされ、背景よりも目立つようにしてください";
 "jumio_iproov_intro_la" = "顔がフレームの中央になるようにして、画面の指示に従います。";
 "jumio_list_supported_document_title" = "サポートされるドキュメント";
+"jumio_liveness_prompt_keep_centered" = "中心を保ってください";
+"jumio_liveness_prompt_keep_still" = "静止したまま";
+"jumio_liveness_prompt_keep_upright" = "まっすぐ保ってください";
+"jumio_liveness_prompt_move_away" = "退出";
 "jumio_liveness_prompt_no_target" = "顔をフレームの中に入れます";
-"jumio_liveness_prompt_success_another_shot" = "了解！もう一枚撮りましょう";
+"jumio_liveness_prompt_success_another_scan" = "もう一枚撮りましょう";
+"jumio_liveness_prompt_tilt_down" = "下に傾けてください";
+"jumio_liveness_prompt_tilt_left" = "左に傾けてください";
+"jumio_liveness_prompt_tilt_right" = "右に傾けてください";
+"jumio_liveness_prompt_tilt_up" = "上に傾けてください";
+"jumio_liveness_scanning_completed" = "スキャンが完了しました";
 "jumio_liveness_upfront_intro" = "あなたが実在の人物であることを確認するため、顔をスキャンする必要があります。";
 "jumio_loading_title" = "読み込み中";
 "jumio_nfc_button_skip" = "スキップ";
@@ -217,5 +230,6 @@
 "jumio_start_instructions_07" = "アプリがカメラのフラッシュをオンにする場合があります";
 "jumio_start_verification" = "認証を開始";
 "jumio_start_verification_subtitle" = "このプロセスは、本人確認を行い、個人情報の盗難から保護することを目的としています";
+"jumio_try_again" = "もう一度やり直してください";
 "jumio_uploading_success" = "正常にアップロードされました";
 "jumio_uploading_title" = "アップロード中";

@@ -60,6 +60,8 @@
 "jumio_accessibility_scan_shutter_button" = "ថតរូប";
 "jumio_accessibility_scan_switch_camera" = "ប្តូរកាមេរ៉ា";
 "jumio_analyzing_biometric" = "កំពុងវិភាគទិន្នន័យជីវមាត្រ";
+"jumio_brazil_cnh_subtitle" = "ដើម្បីបន្តអាប់ឡូដ ត្រូវប្រាកដថា អ្នកបានទាញយកប័ណ្ណបើកបរឌីជីថលជាទម្រង់ PDF ពីកម្មវិធីផ្លូវការរបស់រដ្ឋាភិបាល [({Carteira Digital de Trânsito})]";
+"jumio_brazil_cnh_upload_button" = "អាប់ឡូដ CNH Digital PDF";
 "jumio_button_cancel" = "បោះបង់";
 "jumio_di_back_to_document_selection" = "អ្នកនឹងរុករកត្រលប់មកកាន់ការជ្រើសរើសឯកសារវិញ។";
 "jumio_di_retry_expire" = "រយៈពេលរបស់អ្នកបានផុតកំណត់ហើយ";
@@ -98,6 +100,7 @@
 "jumio_error_instant_feedback_blurry_tip_readable" = "ត្រូវប្រាកដថាព័ត៌មានលម្អិតទាំងអស់នៅលើឯកសាររបស់អ្នកអាចអានដាច់";
 "jumio_error_instant_feedback_blurry_title" = "រូបភាពព្រិលពេកមិនអាចផ្ទៀងផ្ទាត់បានទេ";
 "jumio_error_instant_feedback_both_images_retaken" = "រូបភាពត្រូវតែថតម្ដងទៀត";
+"jumio_error_instant_feedback_brazil_cnh" = "ត្រូវប្រាកដថា អ្នកបានទាញយកប័ណ្ណបើកបរឌីជីថលជាទម្រង់ PDF ពីកម្មវិធីផ្លូវការរបស់រដ្ឋាភិបាល [({Carteira Digital de Trânsito})]";
 "jumio_error_instant_feedback_bw_copy_tip_color_image" = "សូមព្យាយាមម្តងទៀតជាមួយនឹងរូបភាពពណ៌";
 "jumio_error_instant_feedback_bw_copy_title" = "រូបភាពគឺជារូបថតចម្លងសខ្មៅ";
 "jumio_error_instant_feedback_color_photocopy_title" = "រូបភាពហាក់ដូចជារូបថតចម្លងពណ៌";
@@ -125,7 +128,7 @@
 "jumio_error_instant_feedback_unsupported_document_title" = "ឯកសារ ដែល បាន ចាប់ យក មិន ត្រូវ បាន គាំទ្រ ឡើយ";
 "jumio_error_network_problems" = "យើងបានជួបបញ្ហាទំនាក់ទំនងបណ្តាញ";
 "jumio_error_no_camera_connection" = "ការចូលប្រើកាមេរ៉ាត្រូវបានបិទ";
-"jumio_error_ocr_failed" = "ការស្កេនមិនមាននៅពេលនេះទេ សូមទាក់ទងក្រុមផ្ដល់ជំនួយ";
+"jumio_error_scanning_not_possible" = "ការស្កេនមិនមាននៅពេលនេះទេ សូមទាក់ទងក្រុមផ្ដល់ជំនួយ";
 "jumio_error_session_expired" = "រយៈពេលបានផុតកំណត់";
 "jumio_error_wrong_token" = "ការស្កេនមិនមាននៅពេលនេះទេ សូមទាក់ទងក្រុមផ្ដល់ជំនួយ";
 "jumio_face_help_eyes_closed" = "សូមកុំបិទភ្នែក";
@@ -179,6 +182,7 @@
 "jumio_identity_scan_prompt_initial" = "ថតរូបសែលហ្វី";
 "jumio_identity_scan_tips_placing" = "តម្រង់មុខរបស់អ្នកក្នុងស៊ុមរាងពងក្រពើ ហើយចុចប៊ូតុងបិទបើកកាមេរ៉ា";
 "jumio_identity_title" = "ការផ្ទៀងផ្ទាត់ទម្រង់មុខ";
+"jumio_idtype_brazil_cnh" = "CNH Digital PDF ពីប្រាហ៊ីល";
 "jumio_idtype_countrysearch_search" = "ស្វែងរកប្រទេស";
 "jumio_idtype_countrysearch_title" = "ជ្រើសរើសប្រទេសដែលចេញប័ណ្ណ";
 "jumio_idtype_di" = "អត្តសញ្ញាណបណ្ណឌីជីថល";
@@ -197,8 +201,17 @@
 "jumio_iproov_failure_generic_light" = "ផ្ទៃមុខរបស់អ្នកត្រូវតែមានពន្លឺស្មើគ្នា និងលេចធ្លោពីផ្ទៃខាងក្រោយ";
 "jumio_iproov_intro_la" = "ដាក់មុខរបស់អ្នកឲ្យចំពាក់កណ្ដាលស៊ុម ហើយអនុវត្តតាមការណែនាំនៅលើអេក្រង់។";
 "jumio_list_supported_document_title" = "ឯកសារដែលគាំទ្រ";
+"jumio_liveness_prompt_keep_centered" = "រក្សានៅកណ្ដាល";
+"jumio_liveness_prompt_keep_still" = "កាន់ឲ្យនឹង";
+"jumio_liveness_prompt_keep_upright" = "រក្សាឲ្យត្រង់";
+"jumio_liveness_prompt_move_away" = "ខិតទៅឲ្យឆ្ងាយ";
 "jumio_liveness_prompt_no_target" = "ដាក់មុខរបស់អ្នកនៅក្នុងស៊ុម";
-"jumio_liveness_prompt_success_another_shot" = "យល់ហើយ! អញ្ចឹងថតមួយទៀត";
+"jumio_liveness_prompt_success_another_scan" = "តោះថតការស្កេនមួយទៀត";
+"jumio_liveness_prompt_tilt_down" = "ផ្អៀងចុះក្រោម";
+"jumio_liveness_prompt_tilt_left" = "ផ្អៀងទៅឆ្វេង";
+"jumio_liveness_prompt_tilt_right" = "ផ្អៀងទៅស្ដាំ";
+"jumio_liveness_prompt_tilt_up" = "ផ្ទៀងឡើងលើ";
+"jumio_liveness_scanning_completed" = "បានបញ្ចប់ការស្កេន";
 "jumio_liveness_upfront_intro" = "យើងត្រូវថតការស្កេនមុខរបស់អ្នក ដើម្បីផ្ទៀងផ្ទាត់ថា អ្នកជាមនុស្សពិត។";
 "jumio_loading_title" = "កំពុងផ្ទុក";
 "jumio_nfc_button_skip" = "រំលង";
@@ -215,7 +228,8 @@
 "jumio_start_instructions_02" = "សូមត្រៀមឲ្យរួចរាល់ដើម្បីថតសែលហ្វី";
 "jumio_start_instructions_03" = "ប្រើឯកសារត្រឹមត្រូវ";
 "jumio_start_instructions_07" = "កម្មវិធីនេះអាចនឹងប្រើផ្លាសរបស់កាមេរ៉ា";
-"jumio_start_verification" = "ចាប់ផ្តើមការផ្ទៀងផ្ទាត់";
+"jumio_start_verification" = "ចាប់ផ្ដើមផ្ទៀងផ្ទាត់";
 "jumio_start_verification_subtitle" = "ដំណើរការនេះត្រូវបានរៀបចំឡើង ដើម្បីផ្ទៀងផ្ទាត់អត្តសញ្ញាណរបស់អ្នក និងការពារអ្នកពីចោរលួចអត្តសញ្ញាណ";
+"jumio_try_again" = "សូមព្យាយាមម្តងទៀត";
 "jumio_uploading_success" = "ការផ្ទុកឡើងបានជោគជ័យ";
 "jumio_uploading_title" = "កំពុងផ្ទុកឡើង";

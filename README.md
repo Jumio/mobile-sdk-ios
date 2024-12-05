@@ -114,8 +114,6 @@ The minimum requirements for the SDK are:
 - Internet connection
 - Jumio KYX or Jumio API v3
 
-ℹ️&nbsp;&nbsp;__Note:__ Please be aware that as of version 4.0.0, due to SDK obfuscation the simulator is required to use the latest iOS version.
-
 The following architectures are supported in the SDK:
 - device: arm64
 - simulator: arm64 x86_64
@@ -126,10 +124,6 @@ The following architectures are supported in the SDK:
 Before starting a session in our SDK, an SDK token has to be obtained. Refer to out [API Guide](https://docs.jumio.com/production/Content/Integration/Integration%20Guide.htm) for further details. To authenticate against the API calls, an OAuth2 access token needs to be retrieved from the Customer Portal.
 
 Within the response of the [Account Creation or Account Update](https://docs.jumio.com/production/Content/Integration/Creating%20or%20Updatng%20Account/Creating%20or%20Updating%20Accounts.htm) API, an SDK token is returned, which needs to be applied to initiate the mobile SDK.
-
-### Basic Authentication (Deprecated)
-Previously, Basic Auth credentials were constructed using your API token as the User ID and your API secret as the password. You still can manage API token and secret in the Customer Portal under:
-* __Settings > API credentials > API Users__
 
 ### Authentication with OAuth2
 Your OAuth2 credentials are constructed using your API token as the Client ID and your API secret as the Client secret. You can view and manage your API token and secret in the Customer Portal under:
@@ -191,8 +185,6 @@ Additionally, check out the [Xcode sample project](sample) to learn the most com
 
 ## App Thinning and Size Matters
 App thinning (app slicing, bitcode and on-demand resources) is supported within the SDK. For app slicing, the image resources are placed within a xcassets collection. For ID Verification, some resource files (e.g. images) are loaded on demand.
-
-In case you experience a build error when building your app in Debug configuration and aim to run it on a device, we advise to temporarily disable the build setting "Enable Bitcode" in your Xcode project.
 
 ## Language Localization
 Our SDK supports localization for different languages. All label texts and button titles can be changed and localized using the `Localizable-Jumio.strings` file. Just adapt the values to your required language, add it to your app or framework project and mark it as Localizable. This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update.
@@ -263,7 +255,7 @@ For more details, please refer to our [integration guide](docs/integration_guide
 
 # Digital Identity
 As of Jumio iOS SDK 4.5.0, users may use their Digital Identity to verify their identity.
-For now 'ID by Mastercard' is the only Digital Identity provider currently supported by our SDK.
+For now 'Brazil CNH-e PDF' and 'ID by Mastercard' are the only Digital Identity providers currently supported by our SDK.
 
 If you want to enable Digital Identity verification for your account please [contact us](https://support.jumio.com).
 In case you are already set up to use Digital Identity verificaiton within your app, check out the integration steps explained [here](docs/integration_guide.md#digital-identity).
@@ -289,7 +281,7 @@ Please refer to our [Change Log](docs/changelog.md) for more information about o
 Please refer to our [SDK maintenance and support policy](docs/maintenance_policy.md) for more information about Mobile SDK maintenance and support.
 
 ## Two-factor Authentication
-If you want to enable two-factor authentication for your Jumio Customer Portal [please contact us.](https://support.jumio.com) Once enabled, users will be guided through the setup upon their first login to obtain a security code using the "Google Authenticator" app.
+If you want to enable two-factor authentication for your Jumio Customer Portal [please contact us.](https://support.jumio.com). Once enabled, users will be guided through the setup upon their first login to obtain a security code using the "Google Authenticator" app.
 
 ## Licenses
 The source code and software available on this website (“Software”) is provided by Jumio Corporation or its affiliated group companies (“Jumio”) “as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage. 
