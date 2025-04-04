@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PhysicalDocument Structure Reference</title>
+    <title>DocumentInfo Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Struct/PhysicalDocument" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/DocumentInfo" class="dashAnchor"></a>
 
-    <a title="PhysicalDocument Structure Reference"></a>
+    <a title="DocumentInfo Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -48,7 +48,7 @@
       <img class="carat" src="../../img/carat.png" alt=""/>
       <a class="breadcrumb" href="../../Structs/Jumio.html">Jumio</a>
       <img class="carat" src="../../img/carat.png" alt=""/>
-      PhysicalDocument Structure Reference
+      DocumentInfo Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -212,15 +212,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>PhysicalDocument</h1>
+            <h1>DocumentInfo</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PhysicalDocument</span> <span class="p">:</span> <span class="kt">CustomDebugStringConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt"><a href="../../Structs/Jumio.html">Jumio</a></span><span class="o">.</span><span class="kt">Document</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DocumentInfo</span></code></pre>
 
                 </div>
               </div>
-            <p><code>Jumio.PhysicalDocument</code> represents a specific <code><a href="../../Structs/Jumio/PhysicalDocument/DocumentType.html">Jumio.PhysicalDocument.DocumentType</a></code> and <code><a href="../../Structs/Jumio/PhysicalDocument/DocumentVariant.html">Jumio.PhysicalDocument.DocumentVariant</a></code> combination</p>
+            <p>Information for a Document</p>
 
           </div>
         </section>
@@ -228,22 +228,13 @@
         <section class="section">
           <div class="section-content">
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Enums"></a>
-                <a name="//apple_ref/swift/Section/Enums" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Enums"></a>
-                  <h3 class="section-name"><span>Enums</span>
-</h3>
-                </div>
-              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5JumioAAV16PhysicalDocumentV0C4TypeO"></a>
-                    <a name="//apple_ref/swift/Enum/DocumentType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV16PhysicalDocumentV0C4TypeO">DocumentType</a>
+                    <a name="/s:5JumioAAV12DocumentInfoV14issuingCountrySSvp"></a>
+                    <a name="//apple_ref/swift/Property/issuingCountry" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5JumioAAV12DocumentInfoV14issuingCountrySSvp">issuingCountry</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -251,15 +242,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Supported document types</p>
+                        <p>The issuing country of the document</p>
 
-                        <a href="../../Structs/Jumio/PhysicalDocument/DocumentType.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DocumentType</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CaseIterable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">issuingCountry</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -269,9 +259,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5JumioAAV16PhysicalDocumentV0C7VariantO"></a>
-                    <a name="//apple_ref/swift/Enum/DocumentVariant" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV16PhysicalDocumentV0C7VariantO">DocumentVariant</a>
+                    <a name="/s:5JumioAAV12DocumentInfoV12documentTypeAB08PhysicalB0V0bE0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/documentType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5JumioAAV12DocumentInfoV12documentTypeAB08PhysicalB0V0bE0Ovp">documentType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -279,109 +269,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Supported document variants</p>
-
-                        <a href="../../Structs/Jumio/PhysicalDocument/DocumentVariant.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DocumentVariant</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Public"></a>
-                <a name="//apple_ref/swift/Section/Public" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Public"></a>
-                  <h3 class="section-name"><span>Public</span>
-</h3>
-                </div>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5JumioAAV16PhysicalDocumentV4typeAD0C4TypeOvp"></a>
-                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV16PhysicalDocumentV4typeAD0C4TypeOvp">type</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>Jumio.Document.DocumentType</code></p>
+                        <p>The <code>Jumio.Document.Physical.DocumentType</code> of the document</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Jumio/PhysicalDocument/DocumentType.html">DocumentType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5JumioAAV16PhysicalDocumentV7variantAD0C7VariantOvp"></a>
-                    <a name="//apple_ref/swift/Property/variant" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV16PhysicalDocumentV7variantAD0C7VariantOvp">variant</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>Jumio.Document.DocumentVariant</code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">variant</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Jumio/PhysicalDocument/DocumentVariant.html">DocumentVariant</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5JumioAAV16PhysicalDocumentV5partsSayAB10CredentialC4PartOGvp"></a>
-                    <a name="//apple_ref/swift/Property/parts" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5JumioAAV16PhysicalDocumentV5partsSayAB10CredentialC4PartOGvp">parts</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Array of <code><a href="../../Structs/Jumio/Credential/Part.html">Jumio.Credential.Part</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">parts</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Structs/Jumio.html">Jumio</a></span><span class="o">.</span><span class="kt"><a href="../../Structs/Jumio/Credential.html">Credential</a></span><span class="o">.</span><span class="kt">Part</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">documentType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Jumio.html">Jumio</a></span><span class="o">.</span><span class="kt">Document</span><span class="o">.</span><span class="kt">Physical</span><span class="o">.</span><span class="kt">DocumentType</span></code></pre>
 
                         </div>
                       </div>
