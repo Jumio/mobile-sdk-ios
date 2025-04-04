@@ -77,7 +77,7 @@ Adapt your Podfile and add the pods according to the product(s) you want use. Ch
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '12.0'
+platform :ios, '13.0'
 use_frameworks! # Required for proper framework handling
 
 #Core (add one of these):
