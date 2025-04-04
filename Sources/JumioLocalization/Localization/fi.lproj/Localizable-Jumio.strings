@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Ole liikkumatta";
 "jumio_face_reject_details_multiple_people" = "Varmista, että olet ainoa kehyksessä näkyvä henkilö";
 "jumio_face_reject_title_eyes_closed" = "Silmät ovat kiinni";
-"jumio_face_reject_title_generic" = "Kasvojentunnistus epäonnistui";
+"jumio_face_reject_title_generic" = "Yritä uudelleen";
 "jumio_face_reject_title_multiple_people" = "Useita henkilöitä tunnistettu";
 "jumio_face_reject_title_obscured_face" = "Kasvot eivät näy selkeästi";
 "jumio_face_reject_title_sunglasses" = "Aurinkolasit on havaittu";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Skannaus ei riitä";
 "jumio_nfc_header_extracting" = "Tietoja poimitaan";
 "jumio_nfc_header_finish" = "Skannaus valmis";
+"jumio_nfc_id_description" = "Liu'uta henkilökorttia puhelimen takakantta pitkin, kunnes se tunnistetaan automaattisesti";
+"jumio_nfc_id_header_start" = "Aseta henkilökorttisi";
+"jumio_nfc_id_retry_tag_lost" = "Kun henkilökortti on tunnistettu, pidä paikallaan";
 "jumio_nfc_retry_error_general" = "Yritä uudelleen ja seuraa ohjeita kuvan osoittamalla tavalla";
 "jumio_nfc_retry_tag_lost" = "Pysy paikoillasi, kun passi on tunnistettu";
 "jumio_start_button" = "Aloita";

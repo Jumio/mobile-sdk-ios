@@ -27,7 +27,6 @@
 - [ML Models](#ml-models)
 - [Document Verification](#document-verification)
 - [Digital Identity](#digital-identity)
-- [Analytics with Datadog](#analytics-with-datadog)
 - [Security](#security)
 - [Release Notes](#release-notes)
 - [Maintenance and Support](#maintenance-and-support)
@@ -259,13 +258,6 @@ For now 'Brazil CNH-e PDF' and 'ID by Mastercard' are the only Digital Identity 
 
 If you want to enable Digital Identity verification for your account please [contact us](https://support.jumio.com).
 In case you are already set up to use Digital Identity verificaiton within your app, check out the integration steps explained [here](docs/integration_guide.md#digital-identity).
-
-----
-
-# Analytics With Datadog
-Analytic feedback and diagnostics enable us to continually improve our SDK and its performance, as well as investigate potential issues. With the Jumio SDK, we use [Datadog](https://github.com/DataDog/dd-sdk-ios) as an optional tool to collect diagnostic information. Data collected includes specific SDK information like version numbers, started and finished SDK instances and scan workflows, thrown exceptions and error information, as well as other mobile events. Please note that gathering analytics data requires user consent due to legal regulations such as GDPR. The consent is granted when our MLA is accepted.
-
-To benefit from Datadog, include the `JumioDatadog` in your project (for more details, see [Dependencies](docs/integration_guide.md#dependencies):
 
 ----
 

@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Håll stadigt";
 "jumio_face_reject_details_multiple_people" = "Du måste vara den enda personen inom ramen";
 "jumio_face_reject_title_eyes_closed" = "Ögonen är slutna";
-"jumio_face_reject_title_generic" = "Ansiktsverifieringen misslyckades";
+"jumio_face_reject_title_generic" = "Försök igen";
 "jumio_face_reject_title_multiple_people" = "Flera personer har detekterats";
 "jumio_face_reject_title_obscured_face" = "Ansiktet är dolt";
 "jumio_face_reject_title_sunglasses" = "Solglasögon upptäckta";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Skanning avbruten";
 "jumio_nfc_header_extracting" = "Hämtar uppgifter";
 "jumio_nfc_header_finish" = "Skanningen är klar";
+"jumio_nfc_id_description" = "Svep ID-kortet längs med baksidan av din telefon tills det detekteras automatiskt";
+"jumio_nfc_id_header_start" = "Placera ditt ID-kort";
+"jumio_nfc_id_retry_tag_lost" = "När ID-kortet har identifierats, håll det stilla";
 "jumio_nfc_retry_error_general" = "Försök igen och följ instruktionerna enligt bilden";
 "jumio_nfc_retry_tag_lost" = "Håll stilla när passet har detekterats";
 "jumio_start_button" = "Start";

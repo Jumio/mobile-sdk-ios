@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "保持不动";
 "jumio_face_reject_details_multiple_people" = "画面内不要出现其他人";
 "jumio_face_reject_title_eyes_closed" = "眼睛闭着";
-"jumio_face_reject_title_generic" = "面部验证失败";
+"jumio_face_reject_title_generic" = "请重试";
 "jumio_face_reject_title_multiple_people" = "检测到多个人";
 "jumio_face_reject_title_obscured_face" = "脸部模糊";
 "jumio_face_reject_title_sunglasses" = "检测到太阳镜";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "扫描未完成";
 "jumio_nfc_header_extracting" = "正在提取数据";
 "jumio_nfc_header_finish" = "扫描完成";
+"jumio_nfc_id_description" = "在手机背面滑动身份识别卡，直到自动检测到该卡片";
+"jumio_nfc_id_header_start" = "摆放好您的身份识别卡";
+"jumio_nfc_id_retry_tag_lost" = "检测到身份证后，保持静止";
 "jumio_nfc_retry_error_general" = "重试并按照说明进行操作";
 "jumio_nfc_retry_tag_lost" = "一旦检测到护照，请保持不动";
 "jumio_start_button" = "开始";

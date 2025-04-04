@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "No se mueva";
 "jumio_face_reject_details_multiple_people" = "Debe ser la única persona dentro del encuadre";
 "jumio_face_reject_title_eyes_closed" = "Ojos cerrados";
-"jumio_face_reject_title_generic" = "Error de verificación facial";
+"jumio_face_reject_title_generic" = "Inténtelo de nuevo";
 "jumio_face_reject_title_multiple_people" = "Varias personas detectadas";
 "jumio_face_reject_title_obscured_face" = "Rostro oscuro";
 "jumio_face_reject_title_sunglasses" = "Gafas de sol detectadas";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Escaneo incompleto";
 "jumio_nfc_header_extracting" = "Extrayendo datos";
 "jumio_nfc_header_finish" = "Escaneo completado";
+"jumio_nfc_id_description" = "Deslice la tarjeta de identificación por la parte posterior del teléfono hasta que se detecte automáticamente.";
+"jumio_nfc_id_header_start" = "Coloque su tarjeta de identificación";
+"jumio_nfc_id_retry_tag_lost" = "Una vez detectada la tarjeta de identificación, manténgala quieta";
 "jumio_nfc_retry_error_general" = "Inténtelo de nuevo y siga las instrucciones como se ilustra";
 "jumio_nfc_retry_tag_lost" = "Quédese quieto tras detectarse el pasaporte";
 "jumio_start_button" = "Empezar";

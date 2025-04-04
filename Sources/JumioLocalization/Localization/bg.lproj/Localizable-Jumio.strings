@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Стойте неподвижно";
 "jumio_face_reject_details_multiple_people" = "Увери се, че си единственият човек в кадъра";
 "jumio_face_reject_title_eyes_closed" = "Очите са затворени";
-"jumio_face_reject_title_generic" = "Неуспешна проверка на лицето";
+"jumio_face_reject_title_generic" = "Опитайте отново";
 "jumio_face_reject_title_multiple_people" = "Повече от един човек";
 "jumio_face_reject_title_obscured_face" = "Лицето не се вижда ясно";
 "jumio_face_reject_title_sunglasses" = "Засечени слънчеви очила";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Незавършено сканир.";
 "jumio_nfc_header_extracting" = "Извличане на данните";
 "jumio_nfc_header_finish" = "Сканирането завърши";
+"jumio_nfc_id_description" = "Плъзнете личната си карта по гърба на телефона, докато бъде автоматично засечена";
+"jumio_nfc_id_header_start" = "Позиционирайте личната си карта";
+"jumio_nfc_id_retry_tag_lost" = "След като личната карта бъде засечена, задръжте неподвижно";
 "jumio_nfc_retry_error_general" = "Опитайте отново и следвайте инструкциите, както е показано";
 "jumio_nfc_retry_tag_lost" = "Щом паспортът бъде засечен, стойте неподвижни";
 "jumio_start_button" = "Старт";

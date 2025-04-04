@@ -96,12 +96,11 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 1.86 MB | base          |
-| All                        | 3.73 MB | base, nfc     |
-| All + DefaultUI            | 4.61 MB | base, nfc, defaultUI    |
-| All + IProov               | 6.65 MB | base, nfc, iproov    |
-| All + Datadog              | 5.16 MB | base, nfc, datadog       |
-| All + Liveness             | 5.49 MB | base, nfc, liveness       |
+| Slim                       | 1.85 MB | base          |
+| All                        | 3.76 MB | base, nfc     |
+| All + DefaultUI            | 4.62 MB | base, nfc, defaultUI    |
+| All + IProov               | 6.68 MB | base, nfc, iproov    |
+| All + Liveness             | 5.51 MB | base, nfc, liveness       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 

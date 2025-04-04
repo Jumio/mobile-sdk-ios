@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Hou stil";
 "jumio_face_reject_details_multiple_people" = "Sorg dat jy die enigste persoon in die raampie is";
 "jumio_face_reject_title_eyes_closed" = "Oë is toe";
-"jumio_face_reject_title_generic" = "Gesigverifiëring het misluk";
+"jumio_face_reject_title_generic" = "Probeer asb. weer";
 "jumio_face_reject_title_multiple_people" = "Veelvuldige mense waargeneem";
 "jumio_face_reject_title_obscured_face" = "Gesig is bedek";
 "jumio_face_reject_title_sunglasses" = "Sonbril waargeneem";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Skandering onvoltooi";
 "jumio_nfc_header_extracting" = "Data word onttrek";
 "jumio_nfc_header_finish" = "Skandering voltooi";
+"jumio_nfc_id_description" = "Skuif die ID-kaart langs die agterkant van jou foon tot dit outomaties bespeur word";
+"jumio_nfc_id_header_start" = "Posisioneer jou ID-kaart";
+"jumio_nfc_id_retry_tag_lost" = "Sodra die ID-kaart opgespoor is, hou stil";
 "jumio_nfc_retry_error_general" = "Probeer weer en volg die instruksies soos geïllustreer";
 "jumio_nfc_retry_tag_lost" = "Hou stil sodra die paspoort bespeur is";
 "jumio_start_button" = "Begin";

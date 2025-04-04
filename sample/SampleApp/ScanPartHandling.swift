@@ -1,7 +1,7 @@
 //
 //  ScanPartHandling.swift
 //
-//  Copyright © 2024 Jumio Corporation. All rights reserved.
+//  Copyright © 2025 Jumio Corporation. All rights reserved.
 //
 
 import Jumio
@@ -9,7 +9,6 @@ import UIKit
 
 protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartShowLoadingView()
-    func scanPartShowHelpView()
     func scanPartShowScanView()
     func scanPartShowDigitalIdentityView()
     func scanPartThirdPartyVerification()
@@ -46,11 +45,6 @@ class ScanPartHandling {
     func start(addon: Jumio.Scan.Part) {
         scanPart = addon
         scanPart?.start()
-        
-        if scanPart?.scanMode == .nfc {
-            // For the addon nfc there is no scan step .scanView. Therefore, a view should be shown immediately.
-            delegate?.scanPartShowHelpView()
-        }
     }
     
     func fallback() {
@@ -89,11 +83,6 @@ class ScanPartHandling {
     
     func retry(reason: Jumio.Retry.Reason) {
         scanPart?.retry(reason: reason)
-    }
-    
-    func helpView() -> UIView? {
-        // This returns a help view for the current scan part. This is available for NFC and iProov.
-        return scanPart?.getHelpAnimation()
     }
     
     func clean() {

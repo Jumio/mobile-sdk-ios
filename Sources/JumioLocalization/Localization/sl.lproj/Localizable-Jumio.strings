@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Stojte pri miru";
 "jumio_face_reject_details_multiple_people" = "Poskrbite, da boste v okviru vidni samo vi";
 "jumio_face_reject_title_eyes_closed" = "Oči so zaprte";
-"jumio_face_reject_title_generic" = "Preverjanje obraza ni uspelo";
+"jumio_face_reject_title_generic" = "Poskusite znova";
 "jumio_face_reject_title_multiple_people" = "Zaznanih je več ljudi";
 "jumio_face_reject_title_obscured_face" = "Obraz je zakrit";
 "jumio_face_reject_title_sunglasses" = "Zaznane sončne očala";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Nedokončano branje";
 "jumio_nfc_header_extracting" = "Pridobiv. podatkov";
 "jumio_nfc_header_finish" = "Optično branje končano";
+"jumio_nfc_id_description" = "Osebno izkaznico premikajte vodoravno za telefonom, dokler je samodejno ne zazna.";
+"jumio_nfc_id_header_start" = "Pokažite osebno izkaznico.";
+"jumio_nfc_id_retry_tag_lost" = "Ko je osebna izkaznica zaznana, držite pri miru";
 "jumio_nfc_retry_error_general" = "Poskusite znova in sledite prikazanim navodilom";
 "jumio_nfc_retry_tag_lost" = "Ko je potni list zaznan, držite pri miru";
 "jumio_start_button" = "Začni";

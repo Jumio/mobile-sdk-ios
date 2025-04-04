@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Halten Sie still";
 "jumio_face_reject_details_multiple_people" = "Achten Sie darauf, dass Sie die einzige Person im Rahmen sind.";
 "jumio_face_reject_title_eyes_closed" = "Die Augen sind geschlossen";
-"jumio_face_reject_title_generic" = "Gesichtserkennung fehlgeschlagen";
+"jumio_face_reject_title_generic" = "Erneut versuchen";
 "jumio_face_reject_title_multiple_people" = "Mehrere Personen erkannt";
 "jumio_face_reject_title_obscured_face" = "Das Gesicht ist verdeckt";
 "jumio_face_reject_title_sunglasses" = "Sonnenbrillen werden erkannt";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Scan unvollständig";
 "jumio_nfc_header_extracting" = "Daten extrahieren";
 "jumio_nfc_header_finish" = "Scannen abgeschlossen";
+"jumio_nfc_id_description" = "Bewegen Sie den Ausweis auf der Rückseite Ihres Telefons entlang, bis er automatisch erkannt wird.";
+"jumio_nfc_id_header_start" = "Ausweis positionieren";
+"jumio_nfc_id_retry_tag_lost" = "Sobald der Ausweis erkannt wurde, halten Sie ihn still";
 "jumio_nfc_retry_error_general" = "Erneut versuchen u. Anweisungen wie illustriert befolgen";
 "jumio_nfc_retry_tag_lost" = "Stillhalten, sobald Reisepass erkannt wurde";
 "jumio_start_button" = "Starten";

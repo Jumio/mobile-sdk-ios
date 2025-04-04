@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Μείνετε ακίνητοι";
 "jumio_face_reject_details_multiple_people" = "Να είστε το μόνο άτομο εντός του πλαισίου";
 "jumio_face_reject_title_eyes_closed" = "Τα μάτια είναι κλειστά";
-"jumio_face_reject_title_generic" = "Η επαλήθευση προσώπου απέτυχε";
+"jumio_face_reject_title_generic" = "Δοκιμάστε ξανά";
 "jumio_face_reject_title_multiple_people" = "Εντοπίστηκαν πολλά άτομα";
 "jumio_face_reject_title_obscured_face" = "Το πρόσωπο είναι δυσδιάκριτο";
 "jumio_face_reject_title_sunglasses" = "Ανιχνεύονται γυαλιά ηλίου";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Μη ολοκληρωμ. σάρωση";
 "jumio_nfc_header_extracting" = "Εξαγωγή δεδομένων";
 "jumio_nfc_header_finish" = "Η σάρωση ολοκληρώθηκε";
+"jumio_nfc_id_description" = "Σύρετε την ταυτότητα κατά μήκος του πίσω μέρους του κινητού, μέχρι να εντοπιστεί αυτόματα";
+"jumio_nfc_id_header_start" = "Τοποθετήστε την ταυτότητά σας";
+"jumio_nfc_id_retry_tag_lost" = "Μόλις εντοπιστεί η ταυτότητα, κρατήστε την ακίνητη";
 "jumio_nfc_retry_error_general" = "Δοκιμάστε ξανά και ακολουθήστε τις οδηγίες που εμφανίζονται";
 "jumio_nfc_retry_tag_lost" = "Κρατήστε το ακίνητο όταν εντοπ. το διαβατήριο";
 "jumio_start_button" = "Έναρξη";

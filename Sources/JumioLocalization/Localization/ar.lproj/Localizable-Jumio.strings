@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "حافظ على ثباتك";
 "jumio_face_reject_details_multiple_people" = "كن الشخص الوحيد في الإطار";
 "jumio_face_reject_title_eyes_closed" = "الأعين مغلقة";
-"jumio_face_reject_title_generic" = "فشل التحقق من الوجه";
+"jumio_face_reject_title_generic" = "حاول مرة اخرى";
 "jumio_face_reject_title_multiple_people" = "جرى اكتشاف أشخاص متعددين";
 "jumio_face_reject_title_obscured_face" = "الوجه مشوش";
 "jumio_face_reject_title_sunglasses" = "تم اكتشاف النظارات الشمسية";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "المسح غير مكتمل";
 "jumio_nfc_header_extracting" = "استخراج البيانات";
 "jumio_nfc_header_finish" = "اكتمل المسح";
+"jumio_nfc_id_description" = "مرر بطاقة الهوية على امتداد الجزء الخلفي لهاتفك حتى يتم اكتشافها تلقائيًا";
+"jumio_nfc_id_header_start" = "ضع بطاقة هويتك";
+"jumio_nfc_id_retry_tag_lost" = "بمجرد الكشف عن بطاقة الهوية، اثبت في مكانك";
 "jumio_nfc_retry_error_general" = "حاول مرة أخرى واتبع التعليمات كما هو موضح";
 "jumio_nfc_retry_tag_lost" = "انتظر حتى يتم اكتشاف جواز السفر";
 "jumio_start_button" = "بدء";

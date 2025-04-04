@@ -44,7 +44,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
   - [Custom UI customization](#custom-ui-customization)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.12.0__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.13.0__
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -81,17 +81,16 @@ platform :ios, '12.0'
 use_frameworks! # Required for proper framework handling
 
 #Core (add one of these):
-pod 'Jumio/Slim', '~>4.12.0' # Manual & DocFinder Capture functionality
-pod 'Jumio/Jumio', '~>4.12.0' # Manual & DocFinder Capture + NFC functionality
+pod 'Jumio/Slim', '~>4.13.0' # Manual & DocFinder Capture functionality
+pod 'Jumio/Jumio', '~>4.13.0' # Manual & DocFinder Capture + NFC functionality
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.12.0' # Liveness functionality
-pod 'Jumio/IProov', '~>4.12.0' # iProov liveness functionality
-pod 'Jumio/Datadog', '~>4.12.0' # Analytics functionality
-pod 'Jumio/DefaultUI', '~>4.12.0' # Default UI functionality
+pod 'Jumio/Liveness', '~>4.13.0' # Liveness functionality
+pod 'Jumio/IProov', '~>4.13.0' # iProov liveness functionality
+pod 'Jumio/DefaultUI', '~>4.13.0' # Default UI functionality
 
 #All:
-pod 'Jumio/All', '~>4.12.0' # All Jumio products with all available scanning methods
+pod 'Jumio/All', '~>4.13.0' # All Jumio products with all available scanning methods
 ```
 
 ##### Certified Face Liveness
@@ -100,17 +99,6 @@ Please make sure to add the following post-install hook to your Podfile if you a
 
 ```
 pod 'Jumio/IProov'
-
-# mandatory for all functionalities that include liveness (iProov)
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    if ['iProov'].include? target.name
-      target.build_configurations.each do |config|
-          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-      end
-    end
-  end
-end
 ```
 
 Install the pods to your project via Terminal:
@@ -145,14 +133,13 @@ Adapt you Cartfile and add Jumio dependencies. Check the following example how a
 
 ```
 #Core (always add):
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.12.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.13.0
 
 #Addons:
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.12.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.12.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.12.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDatadog.json" == 4.12.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.12.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.13.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.13.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.13.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.13.0
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -161,7 +148,7 @@ carthage update --use-xcframeworks
 ```
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.12.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.12.0/ios-jumio-mobile-sdk-4.12.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.13.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.13.0/ios-jumio-mobile-sdk-4.13.0.zip).
 
 __Using iProov (manually):__
 * JumioIProov.xcframework
@@ -205,7 +192,7 @@ For Objective-C projects, you should set "Objective-C Automatic Reference Counti
 To make our SDK capable of reading NFC chips you will need to set the following settings:
 
 Add the Near Field Communication Tag Reading capability to your project, App ID and provisioning profiles in [Apple Developer portal](https://developer.apple.com).
-Add `NFCReaderUsageDescription` to your __info.plist__ file with a proper description of why you are using this feature. You will also need to add the following key and value to your plist file to be able to read NFC chips from passports:
+Add `NFCReaderUsageDescription` to your __info.plist__ file with a proper description of why you are using this feature. You will also need to add the following key and value to your plist file to be able to read NFC chips from passports and identity cards:
 ```
 <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
 <array>
@@ -253,8 +240,8 @@ You can download our encrypted models and add them to your bundle for the follow
 
 ⚠️&nbsp;&nbsp;__Note:__ Make sure not to alter the downloaded models (name or content) before adding them to your bundle.
 
-#### DocFinder
-If you are using JumioDocFinder.xcframework, find the required models [here](https://cdn.mobile.jumio.ai/ios/model/coreml_classifier_on_device_ep_29_float16_quant.enc) and [here](https://cdn.mobile.jumio.ai/ios/model/docfinderModel_121923.enc).
+#### ID Verification
+You can find the models required for the [`Jumio.Scan.Mode`][jumioScanMode] `docFinder`  [here](https://cdn.mobile.jumio.ai/ios/model/coreml_classifier_on_device_ep_29_float16_quant.enc) and [here](https://cdn.mobile.jumio.ai/ios/model/docfinderModel_121923.enc).
 
 #### Liveness
 If you are using JumioLiveness.xcframework, find the required models [here](https://cdn.mobile.jumio.ai/ios/model/liveness_sdk_assets_v_1_1_5.enc).
@@ -748,7 +735,7 @@ func jumio(scanPart: Jumio.Scan.Part, step: Jumio.Scan.Step, data: Any?) {
 }
 ```
 
-As soon as the scan part has been confirmed and all processing has been completed [`canFinish`][canFinish] is triggered. `scanPart.finish()` can now be called. During the finish routine the SDK checks if there is an add-on functionality for this part available, e.g. possible NFC scanning after an MRZ scan part. If an add-on is available, the `addonScanPart` step is triggered.
+As soon as the scan part has been confirmed and all processing has been completed [`canFinish`][canFinish] is triggered. `scanPart.finish()` can now be called. During the finish routine the SDK checks if there is an add-on functionality for this part available, e.g. possible NFC scanning after a DocFinder scan part. If an add-on is available, the `addonScanPart` step is triggered.
 
 To see if the finished credential part was the last one of the credential, check `currentCredentialPart == currentCredential?.credentialPart?.last()` Check if the credential is complete by calling [`currentCredential?.isComplete`][isComplete] and finish the current credential by calling [`currentCredential?.finish()`][credentialFinish].
 

@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Não se mexa";
 "jumio_face_reject_details_multiple_people" = "Você deve ser a única pessoa a se enquadrar";
 "jumio_face_reject_title_eyes_closed" = "Os olhos estão fechados";
-"jumio_face_reject_title_generic" = "O reconhecimento facial falhou";
+"jumio_face_reject_title_generic" = "Tente novamente";
 "jumio_face_reject_title_multiple_people" = "Várias pessoas detectadas";
 "jumio_face_reject_title_obscured_face" = "O rosto está obscurecido";
 "jumio_face_reject_title_sunglasses" = "Óculos de sol detectados";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Varredura incompleta";
 "jumio_nfc_header_extracting" = "Extraindo dados";
 "jumio_nfc_header_finish" = "Varredura concluída";
+"jumio_nfc_id_description" = "Até que seu documento de identidade seja detectado automaticamente, deslize-o pela parte de trás do seu celular";
+"jumio_nfc_id_header_start" = "Posicione seu documento de identidade";
+"jumio_nfc_id_retry_tag_lost" = "Uma vez que o cartão de identificação for detectado, mantenha-o imóvel";
 "jumio_nfc_retry_error_general" = "Tente novamente e siga as instruções conforme ilustrado";
 "jumio_nfc_retry_tag_lost" = "Não se mexa quando o passaporte for detectado";
 "jumio_start_button" = "Iniciar";

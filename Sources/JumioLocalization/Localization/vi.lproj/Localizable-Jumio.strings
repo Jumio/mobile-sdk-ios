@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Giữ yên";
 "jumio_face_reject_details_multiple_people" = "Trở thành người duy nhất trong khung hình";
 "jumio_face_reject_title_eyes_closed" = "Mắt bị nhắm lại";
-"jumio_face_reject_title_generic" = "Xác minh khuôn mặt không thành công";
+"jumio_face_reject_title_generic" = "Vui lòng thử lại";
 "jumio_face_reject_title_multiple_people" = "Đã phát hiện nhiều người";
 "jumio_face_reject_title_obscured_face" = "Khuôn mặt đã bị che khuất";
 "jumio_face_reject_title_sunglasses" = "Đã phát hiện kính râm";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Quét chưa hoàn tất";
 "jumio_nfc_header_extracting" = "Trích xuất dữ liệu";
 "jumio_nfc_header_finish" = "Đã quét xong";
+"jumio_nfc_id_description" = "Trượt thẻ ID dọc theo mặt sau của điện thoại cho đến khi thẻ được tự động phát hiện";
+"jumio_nfc_id_header_start" = "Định vị thẻ ID của bạn";
+"jumio_nfc_id_retry_tag_lost" = "Khi thẻ ID được phát hiện, hãy giữ yên";
 "jumio_nfc_retry_error_general" = "Hãy thử lại và làm theo hướng dẫn như hình minh họa";
 "jumio_nfc_retry_tag_lost" = "Giữ yên sau khi phát hiện thấy hộ chiếu";
 "jumio_start_button" = "Bắt đầu";

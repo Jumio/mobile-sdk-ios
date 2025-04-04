@@ -1,7 +1,7 @@
 //
 //  CustomUINavigationController.swift
 //
-//  Copyright © 2024 Jumio Corporation. All rights reserved.
+//  Copyright © 2025 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -308,12 +308,6 @@ extension CustomUINavigationController: CredentialHandling.Delegate {
 extension CustomUINavigationController: ScanPartHandling.Delegate {
     func scanPartShowLoadingView() {
         pushLoadingViewController(with: .loading)
-    }
-    
-    func scanPartShowHelpView() {
-        guard let helpViewController = instantiate(viewController: .help) as? HelpViewController else { return }
-        helpViewController.helpView = scanPartHandling?.helpView()
-        pushViewController(helpViewController, animated: true)
     }
     
     func scanPartShowScanView() {

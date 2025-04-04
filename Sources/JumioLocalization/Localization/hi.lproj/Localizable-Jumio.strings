@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "हिले नहीं";
 "jumio_face_reject_details_multiple_people" = "फ़्रेम में होने वाले एकमात्र व्यक्ति बनें";
 "jumio_face_reject_title_eyes_closed" = "आँखें बंद है";
-"jumio_face_reject_title_generic" = "चेहरे का वेरिफिकेशन नहीं हो पाया";
+"jumio_face_reject_title_generic" = "पुन: प्रयास करें";
 "jumio_face_reject_title_multiple_people" = "बहुत सारे लोगों का पता चला";
 "jumio_face_reject_title_obscured_face" = "चेहरा अस्पष्ट है";
 "jumio_face_reject_title_sunglasses" = "धूप का चश्मा पहचाना गया है";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "स्कैन अधूरा";
 "jumio_nfc_header_extracting" = "डेटा निकालना";
 "jumio_nfc_header_finish" = "स्कैनिंग पूरी हुई";
+"jumio_nfc_id_description" = "आईडी कार्ड को अपने फ़ोन के पीछे तब तक स्लाइड करें जब तक कि यह अपने आप पहचान न लिया जाए";
+"jumio_nfc_id_header_start" = "अपनी आईडी रखें";
+"jumio_nfc_id_retry_tag_lost" = "एक बार आईडी कार्ड का पता चलने के बाद, स्थिर रहें";
 "jumio_nfc_retry_error_general" = "फिर से कोशिश करें और निर्देशों का सचित्र पालन करें";
 "jumio_nfc_retry_tag_lost" = "पासपोर्ट का पता लगने के बाद स्थिर पकड़े रखें";
 "jumio_start_button" = "शुरू करें";

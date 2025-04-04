@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Не рухайтесь";
 "jumio_face_reject_details_multiple_people" = "В кадрі маєте бути лише ви";
 "jumio_face_reject_title_eyes_closed" = "Очі заплющені";
-"jumio_face_reject_title_generic" = "Не вдалося перевірити обличчя";
+"jumio_face_reject_title_generic" = "Повторіть спробу";
 "jumio_face_reject_title_multiple_people" = "Виявлено кілька людей";
 "jumio_face_reject_title_obscured_face" = "Обличчя не видно";
 "jumio_face_reject_title_sunglasses" = "Виявлено сонцезахисні окуляри";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Сканування не повне";
 "jumio_nfc_header_extracting" = "Extracting data";
 "jumio_nfc_header_finish" = "Сканування завершено";
+"jumio_nfc_id_description" = "Проведіть ID-карткою вздовж задньої панелі телефону, доки вона не буде виявлена автоматично";
+"jumio_nfc_id_header_start" = "Розмістіть свою ідентифікаційну картку";
+"jumio_nfc_id_retry_tag_lost" = "Коли ідентифікаційну картку буде виявлено, не ворушиться";
 "jumio_nfc_retry_error_general" = "Повторіть спробу та дотримуйтесь показаних інструкцій";
 "jumio_nfc_retry_tag_lost" = "Коли буде виявлено паспорт, не ворушиться";
 "jumio_start_button" = "Почати";

@@ -1,7 +1,7 @@
 //
 //  LoadingViewController.swift
 //
-//  Copyright © 2024 Jumio Corporation. All rights reserved.
+//  Copyright © 2025 Jumio Corporation. All rights reserved.
 //
 
 import UIKit

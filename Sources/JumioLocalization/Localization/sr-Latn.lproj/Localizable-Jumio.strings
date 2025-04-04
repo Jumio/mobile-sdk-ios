@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Ne pomerajte se";
 "jumio_face_reject_details_multiple_people" = "Budite jedina osoba u kadru";
 "jumio_face_reject_title_eyes_closed" = "Oči su zatvorene";
-"jumio_face_reject_title_generic" = "Verifikacija lica nije uspela";
+"jumio_face_reject_title_generic" = "Pokušajte ponovo";
 "jumio_face_reject_title_multiple_people" = "Otkriveno je više ljudi";
 "jumio_face_reject_title_obscured_face" = "Lice je sakriveno";
 "jumio_face_reject_title_sunglasses" = "Otkrivene su sunčane naočare";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Nepotpuno skeniranje";
 "jumio_nfc_header_extracting" = "Izdvajanje podataka";
 "jumio_nfc_header_finish" = "Skeniranje je završeno";
+"jumio_nfc_id_description" = "Pomerajte ličnu kartu preko zadnje strane telefona dok ne bude automatski prepoznata";
+"jumio_nfc_id_header_start" = "Postavite ličnu kartu";
+"jumio_nfc_id_retry_tag_lost" = "Kada se otkrije lična karta, držite je mirno";
 "jumio_nfc_retry_error_general" = "Pokušajte ponovo i pratite uputstva kao što je prikazano";
 "jumio_nfc_retry_tag_lost" = "Budite mirni kada se pasoš otkrije";
 "jumio_start_button" = "Započni";

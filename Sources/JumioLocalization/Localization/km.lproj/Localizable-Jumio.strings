@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "កាន់ឲ្យនឹង";
 "jumio_face_reject_details_multiple_people" = "ជាមនុស្សតែម្នាក់គត់នៅក្នុងស៊ុម";
 "jumio_face_reject_title_eyes_closed" = "ភ្នែកបិទ";
-"jumio_face_reject_title_generic" = "ការផ្ទៀងផ្ទាត់មុខបានបរាជ័យ";
+"jumio_face_reject_title_generic" = "សូមព្យាយាមម្តងទៀត";
 "jumio_face_reject_title_multiple_people" = "បានរកឃើញមនុស្សច្រើន";
 "jumio_face_reject_title_obscured_face" = "បាំងមុខ";
 "jumio_face_reject_title_sunglasses" = "បានរកឃើញវ៉ិបសត្វ";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "ការស្កេនមិនទាន់ចប់";
 "jumio_nfc_header_extracting" = "កំពុងទាញទិន្នន័យចេញ";
 "jumio_nfc_header_finish" = "បានបញ្ចប់ការស្កេន";
+"jumio_nfc_id_description" = "រុញអត្តសញ្ញាណប័ណ្ណតាមបណ្ដោយខ្នងទូរសព្ទរបស់អ្នក រហូតដល់វាត្រូវបានរកឃើញដោយស្វ័យប្រវត្តិ";
+"jumio_nfc_id_header_start" = "ដាក់ទីតាំងអត្តសញ្ញាណប័ណ្ណរបស់អ្នក";
+"jumio_nfc_id_retry_tag_lost" = "នៅពេលដែលអត្តសញ្ញាណប័ណ្ណត្រូវបានរកឃើញ សូមសង្កត់នៅស្ងៀម";
 "jumio_nfc_retry_error_general" = "ព្យាយាមម្តងទៀត ហើយធ្វើតាមការណែនាំដូចដែលបានបង្ហាញ";
 "jumio_nfc_retry_tag_lost" = "កាន់ឱ្យនឹងនៅពេលដែលលិខិតឆ្លងដែនត្រូវបានរកឃើញ";
 "jumio_start_button" = "ចាប់ផ្តើម";

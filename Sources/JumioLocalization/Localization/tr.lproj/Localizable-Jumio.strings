@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Sabit durun";
 "jumio_face_reject_details_multiple_people" = "Kadrajda sadece siz olun";
 "jumio_face_reject_title_eyes_closed" = "Gözler kapalı";
-"jumio_face_reject_title_generic" = "Yüz doğrulanamadı";
+"jumio_face_reject_title_generic" = "Tekrar deneyin";
 "jumio_face_reject_title_multiple_people" = "Birden fazla kişi algılandı";
 "jumio_face_reject_title_obscured_face" = "Yüz belirsiz";
 "jumio_face_reject_title_sunglasses" = "Gözlük tespit edildi";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Tarama tamamlanamadı";
 "jumio_nfc_header_extracting" = "Veri ayıklanıyor";
 "jumio_nfc_header_finish" = "Tarama tamamlandı";
+"jumio_nfc_id_description" = "Kimlik kartını otomatik olarak algılanana kadar telefonunuzun arka yüzeyinde kaydırın";
+"jumio_nfc_id_header_start" = "Kimlik kartınızı konumlandırın";
+"jumio_nfc_id_retry_tag_lost" = "Kimlik kartı algılandığında, hareketsiz tutun";
 "jumio_nfc_retry_error_general" = "Tekrar deneyin ve talimatları gösterildiği gibi uygulayın";
 "jumio_nfc_retry_tag_lost" = "Pasaport algılandıktan sonra sabit durun";
 "jumio_start_button" = "Başla";

@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Yima unganyakazi";
 "jumio_face_reject_details_multiple_people" = "Makube nguwe kuphela osohlakeni";
 "jumio_face_reject_title_eyes_closed" = "Amehlo avaliwe";
-"jumio_face_reject_title_generic" = "Ukuqinisekisa kobuso kuhlulekile";
+"jumio_face_reject_title_generic" = "Sicela uphinde uzame";
 "jumio_face_reject_title_multiple_people" = "Kubonakala abantu abaningi";
 "jumio_face_reject_title_obscured_face" = "Ubuso busithekile";
 "jumio_face_reject_title_sunglasses" = "Izibuko zokukhanya zitholakele";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Ukuskena akuphelele";
 "jumio_nfc_header_extracting" = "Ikhipha imininigwane";
 "jumio_nfc_header_finish" = "Ukuskena kuphelile";
+"jumio_nfc_id_description" = "Slayida ikhadi le-ID kungemuva lefoni yakho kuze kube yilapho litholwa ngokuzenzekelayo";
+"jumio_nfc_id_header_start" = "Beka ikhadi lakho le-ID";
+"jumio_nfc_id_retry_tag_lost" = "Uma ikhadi le-ID selitholakele, yibambe unganyakazi";
 "jumio_nfc_retry_error_general" = "Zama futhi ulandele iziqondiso njengoba kubonisiwe";
 "jumio_nfc_retry_tag_lost" = "Bamba kunganyakazi lapho kutholwa ipasipoti";
 "jumio_start_button" = "Qala";

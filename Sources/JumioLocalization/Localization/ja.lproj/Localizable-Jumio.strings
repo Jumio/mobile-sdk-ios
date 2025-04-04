@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "静止したまま";
 "jumio_face_reject_details_multiple_people" = "フレームには一人だけ入るようにしてください";
 "jumio_face_reject_title_eyes_closed" = "目が閉じています";
-"jumio_face_reject_title_generic" = "顔認証に失敗しました";
+"jumio_face_reject_title_generic" = "もう一度やり直してください";
 "jumio_face_reject_title_multiple_people" = "複数の人物が検出されました";
 "jumio_face_reject_title_obscured_face" = "顔がぼやけています";
 "jumio_face_reject_title_sunglasses" = "サングラスが検出されました";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "スキャンが不完全";
 "jumio_nfc_header_extracting" = "データを抽出しています";
 "jumio_nfc_header_finish" = "スキャンが完了しました";
+"jumio_nfc_id_description" = "IDカードが自動的に検出されるまで、携帯電話の背面に沿ってスライドさせます";
+"jumio_nfc_id_header_start" = "IDカードを置きます";
+"jumio_nfc_id_retry_tag_lost" = "IDカードが検出されたら、そのまま静止";
 "jumio_nfc_retry_error_general" = "もう一度やり直して、図のように指示に従ってください";
 "jumio_nfc_retry_tag_lost" = "パスポートが検出されても静止したまま";
 "jumio_start_button" = "開始";

@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Non muoverti";
 "jumio_face_reject_details_multiple_people" = "Devi essere l'unica persona inquadrata";
 "jumio_face_reject_title_eyes_closed" = "Gli occhi sono chiusi";
-"jumio_face_reject_title_generic" = "Riconoscimento facciale non riuscito";
+"jumio_face_reject_title_generic" = "Riprova";
 "jumio_face_reject_title_multiple_people" = "Più persone rilevate";
 "jumio_face_reject_title_obscured_face" = "Il viso è coperto";
 "jumio_face_reject_title_sunglasses" = "Gli occhiali da sole sono rilevati";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Scansione incompleta";
 "jumio_nfc_header_extracting" = "Estrazione dati";
 "jumio_nfc_header_finish" = "Scansione completata";
+"jumio_nfc_id_description" = "Fai scorrere la carta d'identità sulla parte posteriore del telefono fino a quando non viene rilevata automaticamente.";
+"jumio_nfc_id_header_start" = "Posiziona la carta d'identità";
+"jumio_nfc_id_retry_tag_lost" = "Una volta rilevata la carta d'identità, tienila ferma";
 "jumio_nfc_retry_error_general" = "Riprova seguendo le istruzioni come illustrato";
 "jumio_nfc_retry_tag_lost" = "Resta immobile dopo la lettura del passaporto";
 "jumio_start_button" = "Inizia";

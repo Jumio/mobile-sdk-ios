@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Olge paigal";
 "jumio_face_reject_details_multiple_people" = "Peate olema ainus inimene raamis";
 "jumio_face_reject_title_eyes_closed" = "Silmad on suletud";
-"jumio_face_reject_title_generic" = "Näotuvastus nurjus";
+"jumio_face_reject_title_generic" = "Palun proovi uuesti";
 "jumio_face_reject_title_multiple_people" = "Tuvastati mitu inimest";
 "jumio_face_reject_title_obscured_face" = "Nägu on hägune";
 "jumio_face_reject_title_sunglasses" = "Tuvastatakse päikeseprillid";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Skannimine puudulik";
 "jumio_nfc_header_extracting" = "Andmete väljavõtmine";
 "jumio_nfc_header_finish" = "Skannimine on lõpetatud";
+"jumio_nfc_id_description" = "Libistage ID-kaarti mööda telefoni tagaosa, kuni selle automaatse tuvastamiseni";
+"jumio_nfc_id_header_start" = "Paigutage oma ID-kaart";
+"jumio_nfc_id_retry_tag_lost" = "Kui ID-kaart on tuvastatud, hoidke paigal";
 "jumio_nfc_retry_error_general" = "Proovige uuesti ja järgige joonisel toodud juhiseid";
 "jumio_nfc_retry_tag_lost" = "Kui pass on tuvastatud, hoidke seda paigal";
 "jumio_start_button" = "Alusta";

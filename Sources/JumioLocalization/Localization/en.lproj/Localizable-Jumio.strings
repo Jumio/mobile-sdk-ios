@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Keep still";
 "jumio_face_reject_details_multiple_people" = "Be the only person in the frame";
 "jumio_face_reject_title_eyes_closed" = "Eyes are closed";
-"jumio_face_reject_title_generic" = "Face verification failed";
+"jumio_face_reject_title_generic" = "Please try again";
 "jumio_face_reject_title_multiple_people" = "Multiple people detected";
 "jumio_face_reject_title_obscured_face" = "Face is obscured";
 "jumio_face_reject_title_sunglasses" = "Sunglasses detected";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Scan incomplete";
 "jumio_nfc_header_extracting" = "Extracting data";
 "jumio_nfc_header_finish" = "Scanning completed";
+"jumio_nfc_id_description" = "Slide the ID card along the back of your phone until it’s detected automatically";
+"jumio_nfc_id_header_start" = "Position your ID card";
+"jumio_nfc_id_retry_tag_lost" = "Once the ID card is detected, hold still";
 "jumio_nfc_retry_error_general" = "Try again and follow the instructions as illustrated";
 "jumio_nfc_retry_tag_lost" = "Hold still once the passport is detected";
 "jumio_start_button" = "Start";

@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Nehýbte sa";
 "jumio_face_reject_details_multiple_people" = "Buďte jedinou osobou v rámiku";
 "jumio_face_reject_title_eyes_closed" = "Oči sú zatvorené";
-"jumio_face_reject_title_generic" = "Overenie tváre zlyhalo";
+"jumio_face_reject_title_generic" = "Skúste to znova";
 "jumio_face_reject_title_multiple_people" = "Bolo zistených viacero ľudí";
 "jumio_face_reject_title_obscured_face" = "Tvár je zakrytá";
 "jumio_face_reject_title_sunglasses" = "Okuliare na slnko detekované";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Skenovanie neúplné";
 "jumio_nfc_header_extracting" = "Sťahovanie údajov";
 "jumio_nfc_header_finish" = "Skenovanie bolo dokončené";
+"jumio_nfc_id_description" = "Posúvajte doklad totožnosti pozdĺž zadnej strany telefónu, kým sa nerozpozná automaticky";
+"jumio_nfc_id_header_start" = "Umiestnite svoj doklad totožnosti";
+"jumio_nfc_id_retry_tag_lost" = "Po rozpoznaní ID karty nehýbte";
 "jumio_nfc_retry_error_general" = "Postup zopakujte a pokračujte podľa pokynov na obrázku";
 "jumio_nfc_retry_tag_lost" = "Ani po zistení pasu sa nehýbte";
 "jumio_start_button" = "Začať";

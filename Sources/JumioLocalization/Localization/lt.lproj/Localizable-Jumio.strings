@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Nejudėkite";
 "jumio_face_reject_details_multiple_people" = "Įsitikinkite, kad esate vienintelis asmuo rėmelyje";
 "jumio_face_reject_title_eyes_closed" = "Užmerktos akys";
-"jumio_face_reject_title_generic" = "Veido patvirtinimas nepavyko";
+"jumio_face_reject_title_generic" = "Bandykite dar kartą";
 "jumio_face_reject_title_multiple_people" = "Aptikti keli asmenys";
 "jumio_face_reject_title_obscured_face" = "Nesimato veido";
 "jumio_face_reject_title_sunglasses" = "Aptikti akiniai nuo saulės";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Nuskaitymas nebaigta";
 "jumio_nfc_header_extracting" = "Iškeliami duomenys";
 "jumio_nfc_header_finish" = "Skenavimas baigtas";
+"jumio_nfc_id_description" = "Slinkite tapatybės kortelę palei telefono galinę pusę, kol ji bus automatiškai aptikta.";
+"jumio_nfc_id_header_start" = "Tinkamai laikykite tapatybės kortelę";
+"jumio_nfc_id_retry_tag_lost" = "Kai aptinkama ID kortelė, laikykite ją nejudindami";
 "jumio_nfc_retry_error_general" = "Bandykite dar kartą ir vykdykite instrukcijas, kaip nurodyta";
 "jumio_nfc_retry_tag_lost" = "Nejudėkite, kol pasas bus surastas";
 "jumio_start_button" = "Pradėti";

@@ -139,7 +139,7 @@
 "jumio_face_help_too_much_movement" = "Fique imóvel";
 "jumio_face_reject_details_multiple_people" = "Tem de ser a única pessoa na moldura";
 "jumio_face_reject_title_eyes_closed" = "Os olhos estão fechados";
-"jumio_face_reject_title_generic" = "A verificação facial falhou";
+"jumio_face_reject_title_generic" = "Tente novamente";
 "jumio_face_reject_title_multiple_people" = "Várias pessoas detetadas";
 "jumio_face_reject_title_obscured_face" = "O rosto está obscurecido";
 "jumio_face_reject_title_sunglasses" = "Óculos de sol foram detectados";
@@ -221,6 +221,9 @@
 "jumio_nfc_general_error_dialog_title" = "Digitalização incomp";
 "jumio_nfc_header_extracting" = "A extrair dados";
 "jumio_nfc_header_finish" = "Digitalização concluída";
+"jumio_nfc_id_description" = "Deslize o cartão de identificação junto à traseira do seu telefone até que seja detetado automaticamente";
+"jumio_nfc_id_header_start" = "Posicione o seu cartão de identificação";
+"jumio_nfc_id_retry_tag_lost" = "Uma vez que o cartão de identificação é detectado, mantenha-o imóvel";
 "jumio_nfc_retry_error_general" = "Tente novamente e siga as instruções conforme ilustrado";
 "jumio_nfc_retry_tag_lost" = "Pare quando o passaporte for detectado";
 "jumio_start_button" = "Começar";
