@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "หากต้องการดำเนินการอัปโหลด ตรวจสอบให้แน่ใจว่าคุณได้ดาวน์โหลดใบอนุญาตขับขี่ดิจิทัล PDF จากแอปพลิเคชันของรัฐบาลอย่างเป็นทางการแล้ว [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "อัปโหลดไฟล์ PDF ของ CNH Digital";
 "jumio_button_cancel" = "ยกเลิก";
+"jumio_button_continue" = "ดำเนินการต่อ";
+"jumio_change_issuing_country" = "เปลี่ยนประเทศผู้ออกเอกสาร";
+"jumio_current_issuing_country" = "ประเทศที่ออกให้ในปัจจุบัน: %@";
 "jumio_di_back_to_document_selection" = "เราจะพาคุณกลับไปเลือกเอกสาร";
 "jumio_di_retry_expire" = "เซสชันของคุณหมดอายุ";
 "jumio_di_retry_service_error" = "การยืนยันล้มเหลว";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "ขนาดไฟล์สูงสุด: %@";
 "jumio_dv_upload_tips_page_size" = "จำนวนหน้าสูงสุด: %lu";
 "jumio_dv_upload_tips_protected" = "เอกสารไม่ควรมีการป้องกันด้วยรหัสผ่าน";
+"jumio_eidas_description" = "แตะ \"ดำเนินการต่อ\" เพื่อเริ่มขั้นตอนการเข้าสู่ระบบ \n \nจากนั้น เลือก \"เข้าสู่ระบบ eIDAS\" ในหน้าถัดไป และเลือกธงของประเทศคุณเพื่อดำเนินการต่อ \n \nใช้การเข้าสู่ระบบ eIDAS เพื่อการยืนยันที่ปลอดภัยและสอดคล้องกับสหภาพยุโรป";
+"jumio_eidas_login_header" = "การเข้าสู่ระบบ eIDAS";
 "jumio_error_auth_failed" = "การรับรองความถูกต้องล้มเหลว";
 "jumio_error_button_retake_both" = "ถ่ายรูปใหม่ทั้งคู่";
 "jumio_error_button_retake_one" = "ถ่ายรูปใหม่";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "ไม่สามารถสแกนได้ในขณะนี้ โปรดติดต่อทีมสนับสนุน";
 "jumio_error_session_expired" = "เซสชันหมดอายุ";
 "jumio_error_wrong_token" = "ไม่สามารถสแกนได้ในขณะนี้ โปรดติดต่อทีมสนับสนุน";
+"jumio_european_did_login_header" = "ID ดิจิทัลยุโรป";
 "jumio_face_help_eyes_closed" = "ลืมตาไว้";
 "jumio_face_help_obscured_face" = "นำสิ่งที่บดบังใบหน้าออก";
 "jumio_face_help_sunglasses" = "ถอดแว่นกันแดด";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "ถ่ายภาพด้านรูปภาพ";
 "jumio_id_scan_guide_photo_side_manually" = "ถ่ายภาพด้านรูปภาพด้วยตัวเอง";
 "jumio_id_scan_guide_photo_side_tilt" = "เอียงเพื่อให้มองเห็นขอบด้านล่าง จากนั้นจัดแนวให้เข้ากับกรอบ";
+"jumio_id_scan_hint_error_fallback" = "เปลี่ยนวิธีสแกนเนื่องจากเกิดข้อผิดพลาด";
 "jumio_id_scan_hint_performance_fallback" = "การสแกนได้รับการปรับปรุงเพื่อให้อุปกรณ์มีประสิทธิภาพดีขึ้น";
 "jumio_id_scan_manual" = "ถ่ายภาพเอกสารของคุณ";
 "jumio_id_scan_manual_tips" = "ดูให้แน่ใจว่าถ่ายภาพเอกสารทั้งฉบับ";
+"jumio_id_scan_prompt_analyzing" = "วิเคราะห์ภาพ...";
 "jumio_id_scan_prompt_capture_success" = "เข้าใจแล้ว";
 "jumio_id_scan_prompt_captured" = "ถูกจับภาพ";
 "jumio_id_scan_prompt_center_id" = "จัดเอกสารให้อยู่กึ่งกลาง";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "เมื่อตรวจพบบัตรประจําตัวประชาชนแล้ว ให้กดค้างไว้";
 "jumio_nfc_retry_error_general" = "ลองอีกครั้งและทำตามคำแนะนำดังที่แสดง";
 "jumio_nfc_retry_tag_lost" = "ถือนิ่ง ๆ เมื่อตรวจพบหนังสือเดินทางแล้ว";
+"jumio_scan_switch_to_back_camera" = "เปลี่ยนเป็นกล้องหลัง";
+"jumio_scan_switch_to_front_camera" = "เปลี่ยนเป็นกล้องหน้า";
+"jumio_select" = "เลือก";
 "jumio_start_button" = "เริ่ม";
 "jumio_start_instructions_01" = "ค้นหาพื้นผิวที่มีแสงสว่างเพียงพอ";
 "jumio_start_instructions_02" = "เตรียมพร้อมถ่ายภาพเซลฟี่";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "แอปอาจใช้แฟลชกล้อง";
 "jumio_start_verification" = "เริ่มการตรวจสอบ";
 "jumio_start_verification_subtitle" = "ขั้นตอนการตรวจสอบนี้ออกแบบมาเพื่อยืนยันตัวตนของคุณและปกป้องคุณจากการขโมยอัตลักษณ์";
+"jumio_switched_to_back_camera" = "สลับไปใช้กล้องหลังแล้ว";
+"jumio_switched_to_front_camera" = "สลับไปที่กล้องหน้าแล้ว";
 "jumio_try_again" = "โปรดลองอีกครั้ง";
 "jumio_uploading_success" = "อัปโหลดสำเร็จ";
 "jumio_uploading_title" = "กำลังอัปโหลด";

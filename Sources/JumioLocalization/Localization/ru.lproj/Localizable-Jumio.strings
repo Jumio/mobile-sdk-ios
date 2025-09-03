@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Для того, чтобы выполнить загрузку, убедитесь, что вы скачали цифровое водительское удостоверение PDF из официального государственного приложения [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Загрузить CNH Digital PDF";
 "jumio_button_cancel" = "Отменить";
+"jumio_button_continue" = "Продолжить";
+"jumio_change_issuing_country" = "Изменить страну выдачи";
+"jumio_current_issuing_country" = "Текущая страна выдачи: %@";
 "jumio_di_back_to_document_selection" = "Вы вернетесь к выбору документа.";
 "jumio_di_retry_expire" = "Время вашего сеанса истекло";
 "jumio_di_retry_service_error" = "Проверка не удалась";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Максимальный размер файла: %@";
 "jumio_dv_upload_tips_page_size" = "Максимальное количество страниц: %lu";
 "jumio_dv_upload_tips_protected" = "Документ не должен быть защищен паролем";
+"jumio_eidas_description" = "Чтобы начать процесс входа в систему, нажмите «Продолжить». \n\nЗатем, чтобы продолжить, выберите «Вход через eIDAS» на следующей странице и выберите флаг своей страны. \n\nИспользуйте систему входа через eIDAS для безопасной проверки на соответствие требованиям ЕС.";
+"jumio_eidas_login_header" = "Вход через eIDAS";
 "jumio_error_auth_failed" = "Ошибка аутентификации";
 "jumio_error_button_retake_both" = "Переснять обе стороны";
 "jumio_error_button_retake_one" = "Переснять";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Сканирование сейчас не доступно, пожалуйста, свяжитесь с командой поддержки";
 "jumio_error_session_expired" = "Время сеанса истекло";
 "jumio_error_wrong_token" = "Сканирование сейчас не доступно, пожалуйста, свяжитесь с командой поддержки";
+"jumio_european_did_login_header" = "Европейский цифровой идентификатор";
 "jumio_face_help_eyes_closed" = "Держите глаза открытыми";
 "jumio_face_help_obscured_face" = "Уберите все, что закрывает лицо";
 "jumio_face_help_sunglasses" = "Снимите солнечные очки";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Сделать снимок стороны с ФОТО";
 "jumio_id_scan_guide_photo_side_manually" = "Сделать снимок стороны с ФОТО вручную";
 "jumio_id_scan_guide_photo_side_tilt" = "Отклоните так, чтобы был виден нижний край, а затем совместите с рамкой";
+"jumio_id_scan_hint_error_fallback" = "Метод сканирования изменился из-за ошибки.";
 "jumio_id_scan_hint_performance_fallback" = "Сканирование оптимизировано для повышения производительности устройства";
 "jumio_id_scan_manual" = "Сфотографируйте свой документ";
 "jumio_id_scan_manual_tips" = "Убедитесь, что вы сфотографировали весь документ";
+"jumio_id_scan_prompt_analyzing" = "Анализируем изображение...";
 "jumio_id_scan_prompt_capture_success" = "Понятно!";
 "jumio_id_scan_prompt_captured" = "Отснято";
 "jumio_id_scan_prompt_center_id" = "Разместите документ по центру";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Когда ID карта обнаружена, держите неподвижно";
 "jumio_nfc_retry_error_general" = "Попробуйте еще раз и следуйте инструкциям, как на рисунке";
 "jumio_nfc_retry_tag_lost" = "Когда паспорт обнаружен, держите неподвижно";
+"jumio_scan_switch_to_back_camera" = "Переключиться на заднюю камеру";
+"jumio_scan_switch_to_front_camera" = "Переключиться на переднюю камеру";
+"jumio_select" = "Выбрать";
 "jumio_start_button" = "Начать";
 "jumio_start_instructions_01" = "Найдите хорошо освещенную поверхность";
 "jumio_start_instructions_02" = "Будьте готовы сделать селфи";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Приложение может использовать вспышку камеры";
 "jumio_start_verification" = "Начать проверку";
 "jumio_start_verification_subtitle" = "Этот процесс предназначен для проверки вашей личности и защиты от кражи персональных данных";
+"jumio_switched_to_back_camera" = "Переключено на заднюю камеру";
+"jumio_switched_to_front_camera" = "Переключено на фронтальную камеру";
 "jumio_try_again" = "Попробуйте еще раз";
 "jumio_uploading_success" = "Загрузка успешно завершена";
 "jumio_uploading_title" = "Загрузка";

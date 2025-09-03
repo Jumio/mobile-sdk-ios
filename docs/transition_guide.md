@@ -6,6 +6,28 @@ This section covers all technical changes that should be considered when updatin
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.14.0
+
+#### Scan Updates
+* Added `Jumio.Scan.Update.ExtractionState.imageAnalysis`
+* Added `Jumio.Scan.Update.cameraAvailable`
+
+#### Localization Keys
+The following keys have been added:
+* `jumio_id_scan_prompt_analyzing`
+* `jumio_scan_switch_to_back_camera`
+* `jumio_scan_switch_to_front_camera`
+* `jumio_switched_to_back_camera`
+* `jumio_switched_to_front_camera`
+* `jumio_button_continue`
+* `jumio_change_issuing_country`
+* `jumio_current_issuing_country`
+* `jumio_eidas_description`
+* `jumio_eidas_login_header`
+* `jumio_european_did_login_header`
+* `jumio_id_scan_hint_error_fallback`
+* `jumio_select`
+
 ## 4.13.0
 * Increased minimum iOS version to 13.0.
 * Removed `Jumio/Datadog` module.

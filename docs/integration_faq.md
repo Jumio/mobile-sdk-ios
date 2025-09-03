@@ -44,6 +44,19 @@ One of Jumio SDK optional dependencies, iProov, uses one of the SDKs mentioned i
 Jumio frameworks follow Apple privacy guidelines starting from version 4.6.1 and onwards.
 Jumio frameworks and Jumio optional dependencies (iProov) follow Apple privacy guidelines on version 4.6.2, 4.7.1, 4.8.1, 4.9.0 and onwards.
 
+## Apple Accessibility Nutrition Labels
+
+At WWDC25 Apple introduced Accessibility Nutrition Labels, which inform users before download whether the app is accessible to them. Jumio conforms to and tests the following accessibility categories:
+
+* VoiceOver: The Jumio SDK supports VoiceOver.
+* Larger Text: It is possible to increase text size within the Jumio SDK.
+* Dark Interface: The Jumio SDK supports both light and dark mode.
+* Differentiate Without Color Alone: The Jumio SDK doesn't rely solely on color, but uses shapes to indicate required user actions.
+* Sufficient Contrast: The Jumio SDK follows the color guidelines to have sufficient contrast.
+* Reduced Motion: The Jumio SDK doesn't contain any animations, which could cause discomfort.
+* Captions: The Jumio SDK doesn't play any videos. 
+* Audio Descriptions: The Jumio SDK doesn't play any audio.
+
 ## Autocapture
 
 The new Autocapture experience allows users to capture multiple images within a single camera session. For example the user can be guided to first capture the front of a document, then flip the document and capture the back of a document.
@@ -96,11 +109,11 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 1.85 MB | base          |
-| All                        | 3.76 MB | base, nfc     |
-| All + DefaultUI            | 4.62 MB | base, nfc, defaultUI    |
-| All + IProov               | 6.68 MB | base, nfc, iproov    |
-| All + Liveness             | 5.51 MB | base, nfc, liveness       |
+| Slim                       | 2.09 MB | base          |
+| All                        | 3.92 MB | base, nfc     |
+| All + DefaultUI            | 5.08 MB | base, nfc, defaultUI    |
+| All + IProov               | 6.86 MB | base, nfc, iproov    |
+| All + Liveness             | 5.69 MB | base, nfc, liveness       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 

@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Para continuar con el proceso, asegurate de haber descargado el PDF de la licencia de conducir digital de la aplicación oficial del gobierno [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Subir el PDF de CNH Digital";
 "jumio_button_cancel" = "Cancelar";
+"jumio_button_continue" = "Continuar";
+"jumio_change_issuing_country" = "Cambiar país de emisión";
+"jumio_current_issuing_country" = "País de emisión actual: %@";
 "jumio_di_back_to_document_selection" = "Se le conducirá de nuevo a la selección de documentos.";
 "jumio_di_retry_expire" = "Su sesión ha caducado";
 "jumio_di_retry_service_error" = "Error en la verificación";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Tamaño máximo de archivo: %@";
 "jumio_dv_upload_tips_page_size" = "Número máximo de páginas: %lu";
 "jumio_dv_upload_tips_protected" = "El documento no debe estar protegido con contraseña";
+"jumio_eidas_description" = "Pulse \"Continuar\" para iniciar el proceso de inicio de sesión. \n\nA continuación, seleccione \"Inicio de sesión eIDAS\" en la página siguiente y elija la bandera de su país para continuar. \n\nUtilice Inicio de sesión eIDAS para realizar una verificación segura y conforme a la UE.";
+"jumio_eidas_login_header" = "Inicio de sesión eIDAS";
 "jumio_error_auth_failed" = "Error de autenticación";
 "jumio_error_button_retake_both" = "Volver a tomar ambas";
 "jumio_error_button_retake_one" = "Volver a tomar";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "La opción de escanear no está disponible en este momento. Póngase en contacto con el equipo de soporte";
 "jumio_error_session_expired" = "La sesión ha caducado";
 "jumio_error_wrong_token" = "La opción de escanear no está disponible en este momento. Póngase en contacto con el equipo de soporte";
+"jumio_european_did_login_header" = "Identificación digital europea";
 "jumio_face_help_eyes_closed" = "Mantenga los ojos abiertos";
 "jumio_face_help_obscured_face" = "Quite cualquier cosa que cubra la cara";
 "jumio_face_help_sunglasses" = "Quítese las gafas de sol";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Capture el lado de la FOTO";
 "jumio_id_scan_guide_photo_side_manually" = "Capture manualmente el lado de la FOTO";
 "jumio_id_scan_guide_photo_side_tilt" = "Inclínelo para que se vea el borde inferior y, después, alinéelo con el marco";
+"jumio_id_scan_hint_error_fallback" = "El método de escaneo ha cambiado debido a un error.";
 "jumio_id_scan_hint_performance_fallback" = "Escaneo optimizado para un mejor rendimiento del dispositivo";
 "jumio_id_scan_manual" = "Tome una foto del documento";
 "jumio_id_scan_manual_tips" = "Asegúrese de capturar todo el documento";
+"jumio_id_scan_prompt_analyzing" = "Analizando la imagen...";
 "jumio_id_scan_prompt_capture_success" = "¡Entendido!";
 "jumio_id_scan_prompt_captured" = "Capturado";
 "jumio_id_scan_prompt_center_id" = "Centre su documento";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Una vez detectada la tarjeta de identificación, manténgala quieta";
 "jumio_nfc_retry_error_general" = "Inténtelo de nuevo y siga las instrucciones como se ilustra";
 "jumio_nfc_retry_tag_lost" = "Quédese quieto tras detectarse el pasaporte";
+"jumio_scan_switch_to_back_camera" = "Cambiar a la cámara trasera";
+"jumio_scan_switch_to_front_camera" = "Cambiar a la cámara frontal";
+"jumio_select" = "Seleccionar";
 "jumio_start_button" = "Empezar";
 "jumio_start_instructions_01" = "Busque una superficie bien iluminada";
 "jumio_start_instructions_02" = "Prepárese para tomarse una selfi";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "La aplicación puede utilizar el flash de la cámara";
 "jumio_start_verification" = "Iniciar verificación";
 "jumio_start_verification_subtitle" = "Este proceso está diseñado para verificar su identidad y protegerlo del robo de identidad";
+"jumio_switched_to_back_camera" = "Se ha cambiado a la cámara trasera";
+"jumio_switched_to_front_camera" = "Se ha cambiado a la cámara frontal";
 "jumio_try_again" = "Inténtelo de nuevo";
 "jumio_uploading_success" = "Carga correcta";
 "jumio_uploading_title" = "Cargando";

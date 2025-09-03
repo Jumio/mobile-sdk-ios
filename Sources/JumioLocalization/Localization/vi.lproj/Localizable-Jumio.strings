@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Để tiếp tục tải lên, vui lòng đảm bảo rằng bạn đã tải xuống Giấy phép lái xe kỹ thuật số ở định dạng PDF từ ứng dụng chính thức của chính phủ [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Tải lên bản PDF của CNH Digital";
 "jumio_button_cancel" = "Hủy";
+"jumio_button_continue" = "Tiếp tục";
+"jumio_change_issuing_country" = "Thay đổi quốc gia cấp";
+"jumio_current_issuing_country" = "Quốc gia cấp hiện tại: %@";
 "jumio_di_back_to_document_selection" = "Bạn sẽ được điều hướng trở lại lựa chọn tài liệu.";
 "jumio_di_retry_expire" = "Phiên của bạn đã hết hạn";
 "jumio_di_retry_service_error" = "Xác minh không thành công";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Kích thước tệp tối đa: %@";
 "jumio_dv_upload_tips_page_size" = "Số trang tối đa: %lu";
 "jumio_dv_upload_tips_protected" = "Tài liệu không được bảo vệ bằng mật khẩu";
+"jumio_eidas_description" = "Nhấn 'Tiếp tục' để bắt đầu quá trình đăng nhập.\n\nTiếp theo, chọn 'Đăng nhập eIDAS' trên trang tiếp theo và chọn quốc kỳ của quốc gia bạn để tiếp tục.\n\nSử dụng Đăng nhập eIDAS để xác minh an toàn, tuân thủ quy định của Liên minh Châu Âu.";
+"jumio_eidas_login_header" = "Đăng nhập eIDAS";
 "jumio_error_auth_failed" = "Xác thực thất bại";
 "jumio_error_button_retake_both" = "Chụp lại cả hai";
 "jumio_error_button_retake_one" = "Chụp lại";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Tính năng quét không khả dụng vào lúc này, vui lòng liên hệ với nhóm hỗ trợ";
 "jumio_error_session_expired" = "Phiên hết hạn";
 "jumio_error_wrong_token" = "Tính năng quét không khả dụng vào lúc này, vui lòng liên hệ với nhóm hỗ trợ";
+"jumio_european_did_login_header" = "ID kỹ thuật số Châu Âu";
 "jumio_face_help_eyes_closed" = "Giữ cho đôi mắt của bạn mở";
 "jumio_face_help_obscured_face" = "Tháo khẩu trang";
 "jumio_face_help_sunglasses" = "Tháo kính râm";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Chụp mặt TRƯỚC của giấy tờ";
 "jumio_id_scan_guide_photo_side_manually" = "Chụp mặt TRƯỚC của giấy tờ theo cách thủ công";
 "jumio_id_scan_guide_photo_side_tilt" = "Nghiêng sao cho có thể nhìn thấy cạnh dưới rồi căn chỉnh cho phù hợp với khung";
+"jumio_id_scan_hint_error_fallback" = "Phương thức quét thay đổi do đã xảy ra lỗi.";
 "jumio_id_scan_hint_performance_fallback" = "Quy trình quét được tối ưu hóa để thiết bị đạt hiệu suất tốt hơn";
 "jumio_id_scan_manual" = "Chụp ảnh tài liệu của bạn";
 "jumio_id_scan_manual_tips" = "Đảm bảo chụp toàn bộ tài liệu";
+"jumio_id_scan_prompt_analyzing" = "Đang phân tích hình ảnh...";
 "jumio_id_scan_prompt_capture_success" = "Đã hiểu!";
 "jumio_id_scan_prompt_captured" = "Đã chụp";
 "jumio_id_scan_prompt_center_id" = "Căn giữa tài liệu của bạn";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Khi thẻ ID được phát hiện, hãy giữ yên";
 "jumio_nfc_retry_error_general" = "Hãy thử lại và làm theo hướng dẫn như hình minh họa";
 "jumio_nfc_retry_tag_lost" = "Giữ yên sau khi phát hiện thấy hộ chiếu";
+"jumio_scan_switch_to_back_camera" = "Chuyển sang máy ảnh sau";
+"jumio_scan_switch_to_front_camera" = "Chuyển sang máy ảnh trước";
+"jumio_select" = "Chọn";
 "jumio_start_button" = "Bắt đầu";
 "jumio_start_instructions_01" = "Tìm bề mặt có đủ ánh sáng";
 "jumio_start_instructions_02" = "Hãy sẵn sàng để chụp ảnh selfie";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Ứng dụng có thể sử dụng đèn flash của camera";
 "jumio_start_verification" = "Bắt đầu xác minh";
 "jumio_start_verification_subtitle" = "Quy trình này được thiết kế để xác minh danh tính của bạn và giúp bạn không bị đánh cắp danh tính";
+"jumio_switched_to_back_camera" = "Đã chuyển sang camera sau";
+"jumio_switched_to_front_camera" = "Đã chuyển sang camera trước";
 "jumio_try_again" = "Vui lòng thử lại";
 "jumio_uploading_success" = "Tải lên thành công";
 "jumio_uploading_title" = "Đang tải lên";

@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "ដើម្បីបន្តអាប់ឡូដ ត្រូវប្រាកដថា អ្នកបានទាញយកប័ណ្ណបើកបរឌីជីថលជាទម្រង់ PDF ពីកម្មវិធីផ្លូវការរបស់រដ្ឋាភិបាល [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "អាប់ឡូដ CNH Digital PDF";
 "jumio_button_cancel" = "បោះបង់";
+"jumio_button_continue" = "បន្ត";
+"jumio_change_issuing_country" = "ប្តូរប្រទេសដែលចេញអោយ";
+"jumio_current_issuing_country" = "ប្រទេស​ចេញ​ប័ណ្ណ​បច្ចុប្បន្ន៖ %@";
 "jumio_di_back_to_document_selection" = "អ្នកនឹងរុករកត្រលប់មកកាន់ការជ្រើសរើសឯកសារវិញ។";
 "jumio_di_retry_expire" = "រយៈពេលរបស់អ្នកបានផុតកំណត់ហើយ";
 "jumio_di_retry_service_error" = "ការផ្ទៀងផ្ទាត់បានបរាជ័យ";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "ទំហំឯកសារអតិបរមា៖ %@";
 "jumio_dv_upload_tips_page_size" = "ចំនួនទំព័រអតិបរមា៖ %lu";
 "jumio_dv_upload_tips_protected" = "ឯកសារមិនគួរការពារដោយពាក្យសម្ងាត់ឡើយ";
+"jumio_eidas_description" = "ចុច 'បន្ត' ដើម្បីចាប់ផ្ដើមដំណើរការចូល។ \n\nបន្ទប់មក ជ្រើសរើស 'eIDAS Login' នៅលើទំព័រមកដល់ខាងមុខ ហើយជ្រើសរើសទង់ជាតិនៃប្រទេសរបស់អ្នកដើម្បីបន្ត។ \n\nប្រើ eIDAS Login ដើម្បីការផ្ទៀងផ្ទាត់មានសុវត្ថិភាព និងអនុលោមតាមច្បាប់អឺរ៉ុប។";
+"jumio_eidas_login_header" = "eIDAS Login";
 "jumio_error_auth_failed" = "ការផ្ទៀងផ្ទាត់បានបរាជ័យ";
 "jumio_error_button_retake_both" = "ថតទាំងសងខាងម្ដងទៀត";
 "jumio_error_button_retake_one" = "ថតម្ដងទៀត";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "ការស្កេនមិនមាននៅពេលនេះទេ សូមទាក់ទងក្រុមផ្ដល់ជំនួយ";
 "jumio_error_session_expired" = "រយៈពេលបានផុតកំណត់";
 "jumio_error_wrong_token" = "ការស្កេនមិនមាននៅពេលនេះទេ សូមទាក់ទងក្រុមផ្ដល់ជំនួយ";
+"jumio_european_did_login_header" = "លេខសម្គាល់ឌីជីថលអឺរ៉ុប";
 "jumio_face_help_eyes_closed" = "សូមកុំបិទភ្នែក";
 "jumio_face_help_obscured_face" = "ដោះរបាំងមុខចេញ";
 "jumio_face_help_sunglasses" = "ដោះវែនតាចេញ";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "ថតយកម្ខាងនៃរូបថត";
 "jumio_id_scan_guide_photo_side_manually" = "ថតយកម្ខាងនៃរូបថតដោយដៃ";
 "jumio_id_scan_guide_photo_side_tilt" = "សូមផ្អៀងដើម្បីឲ្យមើលឃើញគែមខាងក្រោម​ ហើយបន្ទាប់មកតម្រឹមស៊ុម";
+"jumio_id_scan_hint_error_fallback" = "វិធីសាស្ត្រស្គែនបានផ្លាស់ប្ដូរដោយសារមានកំហុស។";
 "jumio_id_scan_hint_performance_fallback" = "ការស្កេនត្រូវបានបង្កើនប្រសិទ្ធភាពដើម្បីឲ្យឧបករណ៍ដំណើរការបានកាន់តែប្រសើរ";
 "jumio_id_scan_manual" = "ថតរូបឯកសាររបស់អ្នក";
 "jumio_id_scan_manual_tips" = "ត្រូវប្រាកដថាថតឯកសារទាំងមូល";
+"jumio_id_scan_prompt_analyzing" = "វិភាគរូបភាព...";
 "jumio_id_scan_prompt_capture_success" = "យល់ហើយ!";
 "jumio_id_scan_prompt_captured" = "បានថតរូប";
 "jumio_id_scan_prompt_center_id" = "ដាក់ឯកសារចំកណ្ដាល";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "នៅពេលដែលអត្តសញ្ញាណប័ណ្ណត្រូវបានរកឃើញ សូមសង្កត់នៅស្ងៀម";
 "jumio_nfc_retry_error_general" = "ព្យាយាមម្តងទៀត ហើយធ្វើតាមការណែនាំដូចដែលបានបង្ហាញ";
 "jumio_nfc_retry_tag_lost" = "កាន់ឱ្យនឹងនៅពេលដែលលិខិតឆ្លងដែនត្រូវបានរកឃើញ";
+"jumio_scan_switch_to_back_camera" = "ប្តូរទៅកាមេរ៉ាក្រោយ";
+"jumio_scan_switch_to_front_camera" = "ប្តូរទៅកាមេរ៉ាមុខ";
+"jumio_select" = "ជ្រើសរើស";
 "jumio_start_button" = "ចាប់ផ្តើម";
 "jumio_start_instructions_01" = "រកមើលផ្ទៃដែលមានពន្លឺល្អ";
 "jumio_start_instructions_02" = "សូមត្រៀមឲ្យរួចរាល់ដើម្បីថតសែលហ្វី";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "កម្មវិធីនេះអាចនឹងប្រើផ្លាសរបស់កាមេរ៉ា";
 "jumio_start_verification" = "ចាប់ផ្ដើមផ្ទៀងផ្ទាត់";
 "jumio_start_verification_subtitle" = "ដំណើរការនេះត្រូវបានរៀបចំឡើង ដើម្បីផ្ទៀងផ្ទាត់អត្តសញ្ញាណរបស់អ្នក និងការពារអ្នកពីចោរលួចអត្តសញ្ញាណ";
+"jumio_switched_to_back_camera" = "បាន​ប្ដូរ​ទៅ​កាមេរ៉ា​ក្រោយ";
+"jumio_switched_to_front_camera" = "បាន​ប្ដូរ​ទៅ​កាមេរ៉ា​មុខ";
 "jumio_try_again" = "សូមព្យាយាមម្តងទៀត";
 "jumio_uploading_success" = "ការផ្ទុកឡើងបានជោគជ័យ";
 "jumio_uploading_title" = "កំពុងផ្ទុកឡើង";

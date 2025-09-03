@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Yükleme işlemine devam etmek için resmi devlet uygulaması üzerinden dijital ehliyet PDF'sini [({Carteira Digital de Trânsito})] indirmiş olmanız gerekmektedir";
 "jumio_brazil_cnh_upload_button" = "CNH Digital PDF'sini yükleyin";
 "jumio_button_cancel" = "İptal";
+"jumio_button_continue" = "Devam et";
+"jumio_change_issuing_country" = "Düzenleyen Ülkeyi Değiştir";
+"jumio_current_issuing_country" = "Mevcut Düzenleyen Ülke: %@";
 "jumio_di_back_to_document_selection" = "Belge seçme ekranına geri döndürüleceksiniz.";
 "jumio_di_retry_expire" = "Oturumunuzun süresi doldu";
 "jumio_di_retry_service_error" = "Doğrulama başarısız oldu";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Maksimum dosya boyutu: %@";
 "jumio_dv_upload_tips_page_size" = "Maksimum sayfa sayısı: %lu";
 "jumio_dv_upload_tips_protected" = "Belge şifre korumalı olmamalıdır";
+"jumio_eidas_description" = "Oturum açma işlemini başlatmak için 'Devam'a dokunun. \n\nArdından bir sonraki sayfada 'eIDAS Oturumu Açma'yı seçin ve devam etmek için ülkenizin bayrağını seçin. \n\nGüvenli, AB uyumlu doğrulama için eIDAS Oturumu Açma'yı kullanın.";
+"jumio_eidas_login_header" = "eIDAS Oturumu Açma";
 "jumio_error_auth_failed" = "Kimlik doğrulama başarısız oldu";
 "jumio_error_button_retake_both" = "İkisini de yeniden çek";
 "jumio_error_button_retake_one" = "Yeniden çek";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Tarama şu anda kullanılamıyor, lütfen destek ekibi ile iletişime geçin.";
 "jumio_error_session_expired" = "Oturum Sona Erdi.";
 "jumio_error_wrong_token" = "Tarama şu anda kullanılamıyor, lütfen destek ekibi ile iletişime geçin.";
+"jumio_european_did_login_header" = "Avrupa dijital kimliği";
 "jumio_face_help_eyes_closed" = "Gözlerinizi açık tutun";
 "jumio_face_help_obscured_face" = "Yüzünüzü kapatan her şeyi çıkarın";
 "jumio_face_help_sunglasses" = "Güneş gözlüklerini çıkarın";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "FOTOĞRAFLI tarafı çek";
 "jumio_id_scan_guide_photo_side_manually" = "FOTOĞRAFLI tarafı manuel çek";
 "jumio_id_scan_guide_photo_side_tilt" = "Alt kenar görünecek şekilde eğip çerçeveye hizalayın";
+"jumio_id_scan_hint_error_fallback" = "Bir hata nedeniyle tarama yöntemi değişti.";
 "jumio_id_scan_hint_performance_fallback" = "Daha iyi cihaz performansı elde etmek için optimize edilmiş tarama";
 "jumio_id_scan_manual" = "Belgenizin fotoğrafını çekin";
 "jumio_id_scan_manual_tips" = "Belgenin tamamını çektiğinizden emin olun";
+"jumio_id_scan_prompt_analyzing" = "Görüntü analiz ediliyor...";
 "jumio_id_scan_prompt_capture_success" = "Tamamdır!";
 "jumio_id_scan_prompt_captured" = "Yakalandı";
 "jumio_id_scan_prompt_center_id" = "Belgenizi ortalayın";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Kimlik kartı algılandığında, hareketsiz tutun";
 "jumio_nfc_retry_error_general" = "Tekrar deneyin ve talimatları gösterildiği gibi uygulayın";
 "jumio_nfc_retry_tag_lost" = "Pasaport algılandıktan sonra sabit durun";
+"jumio_scan_switch_to_back_camera" = "Arka kameraya geç";
+"jumio_scan_switch_to_front_camera" = "Ön kameraya geç";
+"jumio_select" = "Seçin";
 "jumio_start_button" = "Başla";
 "jumio_start_instructions_01" = "İyi aydınlatılmış bir yüzey bulun";
 "jumio_start_instructions_02" = "Selfie çekmeye hazır olun";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Uygulama kamera flaşını kullanabilir";
 "jumio_start_verification" = "Doğrulamayı başlat";
 "jumio_start_verification_subtitle" = "Bu süreç, kimliğinizi doğrulamak ve sizi kimlik hırsızlığına karşı korumak için tasarlanmıştır";
+"jumio_switched_to_back_camera" = "Arka kameraya geçildi";
+"jumio_switched_to_front_camera" = "Ön kameraya geçildi";
 "jumio_try_again" = "Tekrar deneyin";
 "jumio_uploading_success" = "Yükleme başarılı";
 "jumio_uploading_title" = "Yükleniyor";

@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Για να προχωρήσετε στη μεταφόρτωση, βεβαιωθείτε ότι έχετε πραγματοποιήσει λήψη ψηφιακής άδειας οδήγησης σε PDF από την επίσημη κρατική εφαρμογή [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Μεταφόρτωση CNH Digital PDF";
 "jumio_button_cancel" = "Ακύρωση";
+"jumio_button_continue" = "Συνέχεια";
+"jumio_change_issuing_country" = "Αλλαγή χώρας έκδοσης";
+"jumio_current_issuing_country" = "Τρέχουσα χώρα έκδοσης: %@";
 "jumio_di_back_to_document_selection" = "Θα επιστρέψετε στην επιλογή εγγράφου.";
 "jumio_di_retry_expire" = "Η περίοδος έληξε";
 "jumio_di_retry_service_error" = "Η επαλήθευση απέτυχε";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Μέγιστο μέγεθος αρχείου: %@";
 "jumio_dv_upload_tips_page_size" = "Μέγιστος αριθμός σελίδων: %lu";
 "jumio_dv_upload_tips_protected" = "Το έγγραφο δεν πρέπει να προστατεύεται από κωδικό πρόσβασης";
+"jumio_eidas_description" = "Πατήστε 'Συνέχεια' για να ξεκινήσετε τη διαδικασία εισόδου.\n\nΣτη συνέχεια, επιλέξτε 'Είσοδος eIDAS' στην επόμενη σελίδα και επιλέξτε τη σημαία της χώρας σας, για να συνεχίσετε.\n\nΧρησιμοποιήστε την Είσοδο eIDAS για ασφαλή επαλήθευση, σύμφωνα με τους κανόνες της ΕΕ.";
+"jumio_eidas_login_header" = "Είσοδος eIDAS";
 "jumio_error_auth_failed" = "Ο έλεγχος ταυτότητας απέτυχε";
 "jumio_error_button_retake_both" = "Επανάληψη λήψης και των δύο εικόνων";
 "jumio_error_button_retake_one" = "Επανάληψη λήψης";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Η σάρωση δεν είναι διαθέσιμη αυτήν τη στιγμή, επικοινωνήστε με την ομάδα υποστήριξης";
 "jumio_error_session_expired" = "Η περίοδος λειτουργίας έληξε";
 "jumio_error_wrong_token" = "Η σάρωση δεν είναι διαθέσιμη αυτήν τη στιγμή, επικοινωνήστε με την ομάδα υποστήριξης";
+"jumio_european_did_login_header" = "Ευρωπαϊκή ψηφιακή ταυτότητα";
 "jumio_face_help_eyes_closed" = "Κρατήστε τα μάτια σας ανοιχτά";
 "jumio_face_help_obscured_face" = "Αφαιρέστε οτιδήποτε καλύπτει το πρόσωπό σας";
 "jumio_face_help_sunglasses" = "Βγάλτε τα γυαλιά ηλίου";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Πάρτε μια φωτογραφία την όψη με τη ΦΩΤΟΓΡΑΦΙΑ";
 "jumio_id_scan_guide_photo_side_manually" = "Πάρτε μια φωτογραφία την όψη με τη ΦΩΤΟΓΡΑΦΙΑ με μη αυτόματο τρόπο";
 "jumio_id_scan_guide_photo_side_tilt" = "Δώστε κλίση ώστε η κάτω πλευρά να είναι ορατή και, στη συνέχεια, ευθυγραμμίστε με το πλαίσιο";
+"jumio_id_scan_hint_error_fallback" = "Η μέθοδος σάρωσης άλλαξε λόγω σφάλματος.";
 "jumio_id_scan_hint_performance_fallback" = "Βελτιστοποιημένη σάρωση για καλύτερη απόδοση της συσκευής";
 "jumio_id_scan_manual" = "Βγάλτε μια φωτογραφία το έγγραφό σας";
 "jumio_id_scan_manual_tips" = "Φροντίστε να αποτυπώσετε ολόκληρο το έγγραφο";
+"jumio_id_scan_prompt_analyzing" = "Αναλύοντας την εικόνα...";
 "jumio_id_scan_prompt_capture_success" = "Το κατάλαβα!";
 "jumio_id_scan_prompt_captured" = "Καταγράφηκε";
 "jumio_id_scan_prompt_center_id" = "Κεντράρετε το έγγραφό σας";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Μόλις εντοπιστεί η ταυτότητα, κρατήστε την ακίνητη";
 "jumio_nfc_retry_error_general" = "Δοκιμάστε ξανά και ακολουθήστε τις οδηγίες που εμφανίζονται";
 "jumio_nfc_retry_tag_lost" = "Κρατήστε το ακίνητο όταν εντοπ. το διαβατήριο";
+"jumio_scan_switch_to_back_camera" = "Μετάβαση στην πίσω κάμερα";
+"jumio_scan_switch_to_front_camera" = "Μετάβαση στην μπροστινή κάμερα";
+"jumio_select" = "Επιλέξτε";
 "jumio_start_button" = "Έναρξη";
 "jumio_start_instructions_01" = "Βρείτε μια καλά φωτισμένη επιφάνεια";
 "jumio_start_instructions_02" = "Ετοιμαστείτε να βγάλετε μια selfie";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Η εφαρμογή ενδέχεται να χρησιμοποιήσει το φλας της κάμερας";
 "jumio_start_verification" = "Ξεκινήστε την επαλήθευση";
 "jumio_start_verification_subtitle" = "Αυτή η διαδικασία έχει σχεδιαστεί για την επιβεβαίωση της ταυτότητάς σας και την προστασία σας από πλαστοπροσωπία";
+"jumio_switched_to_back_camera" = "Έγινε εναλλαγή στην πίσω κάμερα";
+"jumio_switched_to_front_camera" = "Έγινε εναλλαγή στην μπροστινή κάμερα";
 "jumio_try_again" = "Δοκιμάστε ξανά";
 "jumio_uploading_success" = "Η φόρτωση ήταν επιτυχής";
 "jumio_uploading_title" = "Μεταφόρτωση";

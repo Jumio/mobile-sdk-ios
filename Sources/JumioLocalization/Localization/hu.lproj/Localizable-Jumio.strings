@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "A feltöltés folytatásához feltétlenül töltsön le egy PDF-formátumú digitális járművezetői engedélyt a hivatalos kormányzati alkalmazásból [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "CNH Digital PDF feltöltése";
 "jumio_button_cancel" = "Mégse";
+"jumio_button_continue" = "Tovább";
+"jumio_change_issuing_country" = "Kiállító ország módosítása";
+"jumio_current_issuing_country" = "Jelenlegi kibocsátó ország: %@";
 "jumio_di_back_to_document_selection" = "Vissza fog térni a dokumentum kiválasztásához.";
 "jumio_di_retry_expire" = "A munkamenete lejárt";
 "jumio_di_retry_service_error" = "Az ellenőrzés sikertelen";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Fájl maximális mérete: %@";
 "jumio_dv_upload_tips_page_size" = "Oldalak maximális száma: %lu";
 "jumio_dv_upload_tips_protected" = "A dokumentum nem lehet jelszóval védett";
+"jumio_eidas_description" = "Koppintson a „Tovább” gombra a bejelentkezési folyamat megkezdéséhez. \n\nEzután válassza ki az „eIDAS bejelentkezés” lehetőséget a megjelenő oldalon, majd a folytatáshoz válassza ki az országa zászlaját. \n\nHasználja az eIDAS bejelentkezést az uniós előírásoknak megfelelő, biztonságos ellenőrzéshez.";
+"jumio_eidas_login_header" = "eIDAS bejelentkezés";
 "jumio_error_auth_failed" = "A hitelesítés sikertelen";
 "jumio_error_button_retake_both" = "Mindkettő megismétlése";
 "jumio_error_button_retake_one" = "Megismétlés";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "A beolvasás jelenleg nem érhető el, vegye fel a kapcsolatot a témogatási csapattal";
 "jumio_error_session_expired" = "A munkamenet lejárt";
 "jumio_error_wrong_token" = "A beolvasás jelenleg nem érhető el, vegye fel a kapcsolatot a témogatási csapattal";
+"jumio_european_did_login_header" = "Európai digitális azonosító";
 "jumio_face_help_eyes_closed" = "Tartsa nyitva a szemét";
 "jumio_face_help_obscured_face" = "Vegye le az arcát takaró tárgyakat";
 "jumio_face_help_sunglasses" = "Vegye le a napszemüveget";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Rögzítse a FOTÓS oldalt";
 "jumio_id_scan_guide_photo_side_manually" = "Rögzítse manuálisan a FOTÓS oldalt";
 "jumio_id_scan_guide_photo_side_tilt" = "Döntés úgy, hogy az alsó szél látható legyen, majd igazítás a kerethez";
+"jumio_id_scan_hint_error_fallback" = "A keresési módszer egy hiba miatt módosult.";
 "jumio_id_scan_hint_performance_fallback" = "A szkennelés optimalizálása az eszköz jobb teljesítménye érdekében";
 "jumio_id_scan_manual" = "Készítsen fényképet a dokumentumról";
 "jumio_id_scan_manual_tips" = "Ügyeljen arra, hogy a teljes dokumentumot rögzítse";
+"jumio_id_scan_prompt_analyzing" = "A kép elemzése...";
 "jumio_id_scan_prompt_capture_success" = "Megvan!";
 "jumio_id_scan_prompt_captured" = "Lefényképezve";
 "jumio_id_scan_prompt_center_id" = "Igazítsa középre a dokumentumot";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Ha az azonosító kártya felismerésre került, tartsa mozdulatlanul";
 "jumio_nfc_retry_error_general" = "Próbálja újra, és kövesse az utasításokat az ábra szerint";
 "jumio_nfc_retry_tag_lost" = "Az útlevél észlelése után tartsa lenyomva";
+"jumio_scan_switch_to_back_camera" = "Váltás a hátlapi kamerára";
+"jumio_scan_switch_to_front_camera" = "Váltás az előlapi kamerára";
+"jumio_select" = "Kiválasztás";
 "jumio_start_button" = "Indítás";
 "jumio_start_instructions_01" = "Keressen egy jól megvilágított felületet";
 "jumio_start_instructions_02" = "Készüljön fel a szelfi elkészítésére";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Az alkalmazás a kamera vakuját használhatja";
 "jumio_start_verification" = "Kezdje meg az ellenőrzést";
 "jumio_start_verification_subtitle" = "Ez a folyamat segít ellenőrizni a személyazonosságát, és védelmet nyújt a személyazonosság-lopással szemben";
+"jumio_switched_to_back_camera" = "Váltás a hátlapi kamerára";
+"jumio_switched_to_front_camera" = "Elülső kamerára váltva";
 "jumio_try_again" = "Próbálja meg újra";
 "jumio_uploading_success" = "Feltöltés sikeres";
 "jumio_uploading_title" = "Feltöltés";

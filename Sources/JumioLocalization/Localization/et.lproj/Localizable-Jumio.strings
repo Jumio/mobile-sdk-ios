@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Üleslaadimisega jätkamiseks veenduge, et olete ametlikust riiklikust rakendusest alla laadinud digitaalse juhiloa [({Carteira Digital de Trânsito})] PDF-i.";
 "jumio_brazil_cnh_upload_button" = "Laadige üles PDF-vormingus CNH Digital";
 "jumio_button_cancel" = "Tühista";
+"jumio_button_continue" = "Jätka";
+"jumio_change_issuing_country" = "Muuda väljastanud riiki";
+"jumio_current_issuing_country" = "Praegune väljastajariik: %@";
 "jumio_di_back_to_document_selection" = "Teid suunatakse tagasi dokumendi valimisse.";
 "jumio_di_retry_expire" = "Sessioon on aegunud";
 "jumio_di_retry_service_error" = "Tuvastamine ebaõnnestus";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Maksimaalne faili suurus: %@";
 "jumio_dv_upload_tips_page_size" = "Maksimaalne lehekülgede arv: %lu";
 "jumio_dv_upload_tips_protected" = "Dokument ei tohi olla parooliga kaitstud";
+"jumio_eidas_description" = "Sisselogimisprotsessi alustamiseks puudutage valikut „Jätka“\n\nJärgmisel lehel valige 'eIDASe sisselogimine' ja seejärel valige jätkamiseks oma riigi lipp.\n\nKasutage eIDASe sisselogimist turvaliseks EL-i nõuetele vastavaks kinnitamiseks.";
+"jumio_eidas_login_header" = "eIDASe sisselogimine";
 "jumio_error_auth_failed" = "Tuvastamine ebaõnnestus";
 "jumio_error_button_retake_both" = "Mõlemad uuesti";
 "jumio_error_button_retake_one" = "Uuesti";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Skannimine pole praegu saadaval, võtke ühendust kasutajatoega";
 "jumio_error_session_expired" = "Sessioon on aegunud";
 "jumio_error_wrong_token" = "Skannimine pole praegu saadaval, võtke ühendust kasutajatoega";
+"jumio_european_did_login_header" = "Euroopa digitaalne isikutunnistus";
 "jumio_face_help_eyes_closed" = "Hoidke oma silmad lahti";
 "jumio_face_help_obscured_face" = "Eemaldage nägu katvad aksessuaarid";
 "jumio_face_help_sunglasses" = "Eemaldage päikseprillid";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Jäädvusta FOTO pool.";
 "jumio_id_scan_guide_photo_side_manually" = "Jäädvusta käsitsi FOTO pool.";
 "jumio_id_scan_guide_photo_side_tilt" = "Kallutage nii, et alumine serv oleks nähtav ja joondage seejärel raamiga";
+"jumio_id_scan_hint_error_fallback" = "Skannimismeetod muutus vea tõttu.";
 "jumio_id_scan_hint_performance_fallback" = "Seadme parema jõudluse saavutamiseks on skannimist optimeeritud";
 "jumio_id_scan_manual" = "Tehke foto oma dokumendist";
 "jumio_id_scan_manual_tips" = "Kontrollige, et kogu dokument oleks pildil nähtav";
+"jumio_id_scan_prompt_analyzing" = "Pildi analüüsimine...";
 "jumio_id_scan_prompt_capture_success" = "Sain aru!";
 "jumio_id_scan_prompt_captured" = "Jäädvustatud";
 "jumio_id_scan_prompt_center_id" = "Tsentreerige oma dokument";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Kui ID-kaart on tuvastatud, hoidke paigal";
 "jumio_nfc_retry_error_general" = "Proovige uuesti ja järgige joonisel toodud juhiseid";
 "jumio_nfc_retry_tag_lost" = "Kui pass on tuvastatud, hoidke seda paigal";
+"jumio_scan_switch_to_back_camera" = "Lülitu tagakaamerale";
+"jumio_scan_switch_to_front_camera" = "Lülitu esikaamerale";
+"jumio_select" = "Vali";
 "jumio_start_button" = "Alusta";
 "jumio_start_instructions_01" = "Kasutage hästi valgustatud pinda";
 "jumio_start_instructions_02" = "Olge valmis selfit tegema";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Rakendus võib kasutada kaamera välku";
 "jumio_start_verification" = "Alusta kontrollimist";
 "jumio_start_verification_subtitle" = "Selle protsessi eesmärk on teie isiku kinnitamine ja teie identiteedivarguse eest kaitsmine";
+"jumio_switched_to_back_camera" = "Lülitati tagakaamerale";
+"jumio_switched_to_front_camera" = "Lülituti esikaamerale";
 "jumio_try_again" = "Palun proovi uuesti";
 "jumio_uploading_success" = "Üleslaadimine õnnestus";
 "jumio_uploading_title" = "Üleslaadimine";

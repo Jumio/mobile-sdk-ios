@@ -408,6 +408,7 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         case .tiltFaceDown: message = "TILT_FACE_DOWN"
         case .tiltFaceLeft: message = "TILT_FACE_LEFT"
         case .tiltFaceRight: message = "TILT_FACE_RIGHT"
+        case .imageAnalysis: message = "IMAGE_ANALYSIS"
         @unknown default: assertionFailure("unknown extraction state")
         }
         scanViewController.updateExtractionState(message: message)

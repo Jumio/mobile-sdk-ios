@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "若要繼續上傳，請確保您已從官方政府應用程式 [({Carteira Digital de Trânsito})] 下載數位駕照 PDF";
 "jumio_brazil_cnh_upload_button" = "上傳 CNH Digital PDF";
 "jumio_button_cancel" = "取消";
+"jumio_button_continue" = "繼續";
+"jumio_change_issuing_country" = "變更簽發國家/地區";
+"jumio_current_issuing_country" = "目前核發國家/地區: %@";
 "jumio_di_back_to_document_selection" = "您將導覽回文件選擇。";
 "jumio_di_retry_expire" = "您的工作階段已過期";
 "jumio_di_retry_service_error" = "驗證失敗。";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "最大檔案：%@";
 "jumio_dv_upload_tips_page_size" = "最大頁數：%lu";
 "jumio_dv_upload_tips_protected" = "文件不應受密碼保護";
+"jumio_eidas_description" = "輕觸「繼續」開始登入程序。\n\n然後，在接下來的頁面上選擇「eIDAS 登入」並選擇您所在國家的國旗後繼續。\n\n使用 eIDAS 登入進行安全、符合歐盟標準的驗證。";
+"jumio_eidas_login_header" = "eIDAS 登入";
 "jumio_error_auth_failed" = "驗證失敗";
 "jumio_error_button_retake_both" = "兩個都需重新拍攝";
 "jumio_error_button_retake_one" = "重新拍攝";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "目前無法掃描，請聯絡支援團隊";
 "jumio_error_session_expired" = "工作階段已過期";
 "jumio_error_wrong_token" = "目前無法掃描，請聯絡支援團隊";
+"jumio_european_did_login_header" = "歐洲數位身分證";
 "jumio_face_help_eyes_closed" = "保持眼睛睜開";
 "jumio_face_help_obscured_face" = "取下任何面罩";
 "jumio_face_help_sunglasses" = "取下太陽鏡";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "捕捉照片面";
 "jumio_id_scan_guide_photo_side_manually" = "手動捕捉照片面";
 "jumio_id_scan_guide_photo_side_tilt" = "傾斜以看見底部邊緣，然後對齊邊框";
+"jumio_id_scan_hint_error_fallback" = "發生錯誤，因此變更掃描方法。";
 "jumio_id_scan_hint_performance_fallback" = "掃描最佳化以獲得更好的裝置效能";
 "jumio_id_scan_manual" = "拍一張文件相片";
 "jumio_id_scan_manual_tips" = "確保擷取完整文件";
+"jumio_id_scan_prompt_analyzing" = "正在分析影像...";
 "jumio_id_scan_prompt_capture_success" = "瞭解！";
 "jumio_id_scan_prompt_captured" = "被捕獲";
 "jumio_id_scan_prompt_center_id" = "文件置中";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "一旦偵測到身份證，請保持不動";
 "jumio_nfc_retry_error_general" = "重試並按照說明進行操作";
 "jumio_nfc_retry_tag_lost" = "偵測到護照後保持不動";
+"jumio_scan_switch_to_back_camera" = "切換至後置相機";
+"jumio_scan_switch_to_front_camera" = "切換至前置相機";
+"jumio_select" = "選擇";
 "jumio_start_button" = "開始";
 "jumio_start_instructions_01" = "找到一個光線充足的表面";
 "jumio_start_instructions_02" = "準備自拍";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "該應用程式可能需要使用相機閃光燈";
 "jumio_start_verification" = "開始驗證";
 "jumio_start_verification_subtitle" = "此程序旨在驗證您的身分並保護您免遭身分盜用";
+"jumio_switched_to_back_camera" = "已切換至後置鏡頭";
+"jumio_switched_to_front_camera" = "已切換至前置鏡頭";
 "jumio_try_again" = "請再試一次";
 "jumio_uploading_success" = "上傳成功";
 "jumio_uploading_title" = "上傳中";

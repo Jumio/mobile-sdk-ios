@@ -182,6 +182,8 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
             print("next position")
         case .legalHint:
             print("deprecated scan update, will be removed in a future version")
+        case .cameraAvailable:
+            print("camera available")
         @unknown default:
             print("got unknown scan update", update)
         }

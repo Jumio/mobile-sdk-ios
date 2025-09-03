@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Než začnete s nahrávaním, uistite sa, že ste si stiahli dokument PDF s digitálnym vodičským preukazom z oficiálnej štátnej aplikácie [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Nahrajte PDF s dokumentom CNH Digital";
 "jumio_button_cancel" = "Zrušiť";
+"jumio_button_continue" = "Pokračovať";
+"jumio_change_issuing_country" = "Zmeniť krajinu vydania";
+"jumio_current_issuing_country" = "Aktuálna krajina vydania: %@";
 "jumio_di_back_to_document_selection" = "Prejdete späť na výber dokumentu.";
 "jumio_di_retry_expire" = "Vaša relácia vypršala";
 "jumio_di_retry_service_error" = "Overenie zlyhalo";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Maximálna veľkosť súboru: %@";
 "jumio_dv_upload_tips_page_size" = "Maximálny počet strán: %lu";
 "jumio_dv_upload_tips_protected" = "Dokument nesmie byť chránený heslom";
+"jumio_eidas_description" = "Ak chcete začať s prihlasovaním, ťuknite na Pokračovať. \n\nPotom na ďalšej stránke vyberte možnosť Prihlásenie eIDAS a pokračujte výberom vlajky svojej krajiny. \n\nVyužite prihlásenie eIDAS na bezpečné overenie v súlade s nariadeniami EÚ.";
+"jumio_eidas_login_header" = "Prihlásenie eIDAS";
 "jumio_error_auth_failed" = "Overenie zlyhalo";
 "jumio_error_button_retake_both" = "Obidva znovu odfotiť";
 "jumio_error_button_retake_one" = "Znovu odfotiť";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Skenovanie nie je momentálne k dispozícii, obráťte sa na tím podpory";
 "jumio_error_session_expired" = "Platnosť relácie vypršala";
 "jumio_error_wrong_token" = "Skenovanie nie je momentálne k dispozícii, obráťte sa na tím podpory";
+"jumio_european_did_login_header" = "Európsky digitálny identifikačný doklad";
 "jumio_face_help_eyes_closed" = "Majte oči otvorené";
 "jumio_face_help_obscured_face" = "Odstráňte všetky pokrývky tváre";
 "jumio_face_help_sunglasses" = "Odstráňte slnečné okuliare";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Nasnímajte stranu s FOTKOU";
 "jumio_id_scan_guide_photo_side_manually" = "Mnauálne nasnímajte stranu s FOTKOU";
 "jumio_id_scan_guide_photo_side_tilt" = "Nakloňte tak, aby bol viditeľný spodný okraj, a potom zarovnajte s rámikom";
+"jumio_id_scan_hint_error_fallback" = "Metóda skenovania sa zmenila z dôvodu chyby.";
 "jumio_id_scan_hint_performance_fallback" = "Skenovanie je optimalizované pre lepší výkon zariadenia";
 "jumio_id_scan_manual" = "Odfoťte dokument";
 "jumio_id_scan_manual_tips" = "Musíte zachytiť celý dokument";
+"jumio_id_scan_prompt_analyzing" = "Analýza obrázka...";
 "jumio_id_scan_prompt_capture_success" = "Hotovo!";
 "jumio_id_scan_prompt_captured" = "Odfotené";
 "jumio_id_scan_prompt_center_id" = "Vycentrujte dokument";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Po rozpoznaní ID karty nehýbte";
 "jumio_nfc_retry_error_general" = "Postup zopakujte a pokračujte podľa pokynov na obrázku";
 "jumio_nfc_retry_tag_lost" = "Ani po zistení pasu sa nehýbte";
+"jumio_scan_switch_to_back_camera" = "Prepnúť na zadný fotoaparát";
+"jumio_scan_switch_to_front_camera" = "Prepnúť na predný fotoaparát";
+"jumio_select" = "Vybrať";
 "jumio_start_button" = "Začať";
 "jumio_start_instructions_01" = "Nájdite dobre osvetlený povrch";
 "jumio_start_instructions_02" = "Pripravte sa na nasnímanie selfie";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Aplikácia môže používať blesk";
 "jumio_start_verification" = "Začať overovanie";
 "jumio_start_verification_subtitle" = "Tento proces je určený na potvrdenie vašej totožnosti a na vašu ochranu pred krádežou totožnosti";
+"jumio_switched_to_back_camera" = "Prepli ste na zadný fotoaparát";
+"jumio_switched_to_front_camera" = "Prepli ste na predný fotoaparát";
 "jumio_try_again" = "Skúste to znova";
 "jumio_uploading_success" = "Nahrávanie úspešné";
 "jumio_uploading_title" = "Nahrávanie";

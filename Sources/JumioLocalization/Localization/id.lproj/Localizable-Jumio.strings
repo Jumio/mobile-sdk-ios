@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Untuk melanjutkan pengunggahan, pastikan Anda telah mengunduh PDF lisensi driver digital dari aplikasi resmi pemerintah [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Unggah PDF CNH Digital";
 "jumio_button_cancel" = "Batal";
+"jumio_button_continue" = "Lanjutkan";
+"jumio_change_issuing_country" = "Ubah Negara Penerbit";
+"jumio_current_issuing_country" = "Negara Penerbit Saat Ini: %@";
 "jumio_di_back_to_document_selection" = "Anda akan diarahkan kembali ke pemilihan dokumen.";
 "jumio_di_retry_expire" = "Sesi Anda telah kedaluwarsa";
 "jumio_di_retry_service_error" = "Verifikasi gagal";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Ukuran maksimum file: %@";
 "jumio_dv_upload_tips_page_size" = "Jumlah maksimum halaman: %lu";
 "jumio_dv_upload_tips_protected" = "Dokumen tidak boleh dilindungi dengan kata sandi";
+"jumio_eidas_description" = "Ketuk 'Lanjutkan' untuk memulai proses login.\n\nSelanjutnya, pilih 'Login eIDAS' pada halaman berikutnya lalu pilih bendera negara Anda.\n\nGunakan Login eIDAS agar verifikasi Anda aman dan mematuhi peraturan UE.";
+"jumio_eidas_login_header" = "Login eIDAS";
 "jumio_error_auth_failed" = "Autentikasi gagal";
 "jumio_error_button_retake_both" = "Ambil ulang keduanya";
 "jumio_error_button_retake_one" = "Ambil ulang";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Pemindaian tidak tersedia saat ini, hubungi tim dukungan";
 "jumio_error_session_expired" = "Sesi Berakhir";
 "jumio_error_wrong_token" = "Pemindaian tidak tersedia saat ini, hubungi tim dukungan";
+"jumio_european_did_login_header" = "ID digital Eropa";
 "jumio_face_help_eyes_closed" = "Jangan pejamkan mata";
 "jumio_face_help_obscured_face" = "Lepas penutup wajah";
 "jumio_face_help_sunglasses" = "Lepas kacamata hitam";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Potret sisi samping FOTO";
 "jumio_id_scan_guide_photo_side_manually" = "Potret sisi samping FOTO secara manual";
 "jumio_id_scan_guide_photo_side_tilt" = "Miringkan agar tepi bawah terlihat lalu sejajarkan dengan bingkai";
+"jumio_id_scan_hint_error_fallback" = "Metode pemindaian berubah karena terjadi kesalahan.";
 "jumio_id_scan_hint_performance_fallback" = "Pemindaian dioptimalkan untuk menghasilkan performa perangkat yang lebih baik";
 "jumio_id_scan_manual" = "Ambil foto dokumen Anda";
 "jumio_id_scan_manual_tips" = "Pastikan menangkap seluruh dokumen";
+"jumio_id_scan_prompt_analyzing" = "Menganalisis gambar...";
 "jumio_id_scan_prompt_capture_success" = "Oke!";
 "jumio_id_scan_prompt_captured" = "Ditangkap";
 "jumio_id_scan_prompt_center_id" = "Posisikan dokumen Anda di tengah";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Setelah kartu ID terdeteksi, tahan tetap";
 "jumio_nfc_retry_error_general" = "Coba lagi dan ikuti instruksi seperti yang diilustrasikan";
 "jumio_nfc_retry_tag_lost" = "Tahan terus setelah paspor terdeteksi";
+"jumio_scan_switch_to_back_camera" = "Alihkan ke kamera belakang";
+"jumio_scan_switch_to_front_camera" = "Alihkan ke kamera depan";
+"jumio_select" = "Pilih";
 "jumio_start_button" = "Mulai";
 "jumio_start_instructions_01" = "Cari permukaan yang cukup terang";
 "jumio_start_instructions_02" = "Bersiaplah untuk selfie";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Aplikasi mungkin menggunakan blitz kamera";
 "jumio_start_verification" = "Mulai verifikasi";
 "jumio_start_verification_subtitle" = "Proses ini dirancang untuk memverifikasi identitas dan melindungi Anda dari pencurian identitas";
+"jumio_switched_to_back_camera" = "Beralih ke kamera belakang";
+"jumio_switched_to_front_camera" = "Beralih ke kamera depan";
 "jumio_try_again" = "Harap coba lagi";
 "jumio_uploading_success" = "Pengunggahan berhasil";
 "jumio_uploading_title" = "Mengunggah";

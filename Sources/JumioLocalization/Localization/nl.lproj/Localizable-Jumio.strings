@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Om verder te gaan met uploaden, moet je ervoor zorgen dat je een pdf van het digitale rijbewijs hebt gedownload van de officiële overheidsapplicatie [({Carteira Digital de Trânsito})].";
 "jumio_brazil_cnh_upload_button" = "CNH Digital-pdf uploaden";
 "jumio_button_cancel" = "Annuleer";
+"jumio_button_continue" = "Doorgaan";
+"jumio_change_issuing_country" = "Wijzig land van uitgifte";
+"jumio_current_issuing_country" = "Huidig land van uitgifte: %@";
 "jumio_di_back_to_document_selection" = "Je wordt teruggeleid naar de documentselectie.";
 "jumio_di_retry_expire" = "Uw sessie is verlopen";
 "jumio_di_retry_service_error" = "Verificatie mislukt";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Maximale bestandsgrootte: %@";
 "jumio_dv_upload_tips_page_size" = "Maximaal aantal pagina's: %lu";
 "jumio_dv_upload_tips_protected" = "Het identiteitsbewijs moet niet met een wachtwoord worden beveiligd";
+"jumio_eidas_description" = "Tik op 'Doorgaan' om het inlogproces te starten. \n\nTik op de volgende pagina vervolgens op 'eIDAS Login' en kies de vlag van uw land om verder te gaan. \n\nGebruik eIDAS Login voor veilige, EU-conforme verificatie.";
+"jumio_eidas_login_header" = "eIDAS Login";
 "jumio_error_auth_failed" = "Authentificatie mislukt";
 "jumio_error_button_retake_both" = "Allebei opnieuw nemen";
 "jumio_error_button_retake_one" = "Opnieuw nemen";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Scannen is momenteel niet beschikbaar, neem contact op met het ondersteuningsteam";
 "jumio_error_session_expired" = "Sessie verlopen";
 "jumio_error_wrong_token" = "Scannen is momenteel niet beschikbaar, neem contact op met het ondersteuningsteam";
+"jumio_european_did_login_header" = "Europese digitale ID";
 "jumio_face_help_eyes_closed" = "Houd uw ogen open";
 "jumio_face_help_obscured_face" = "Verwijder eventuele gezichtsbedekkende voorwerpen";
 "jumio_face_help_sunglasses" = "Zet uw zonnebril af";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "De FOTOKANT vastleggen";
 "jumio_id_scan_guide_photo_side_manually" = "Handmatig de FOTOKANT vastleggen";
 "jumio_id_scan_guide_photo_side_tilt" = "Kantel, zodat de onderrand zichtbaar is en lijn vervolgens uit met het kader";
+"jumio_id_scan_hint_error_fallback" = "Scanmethode gewijzigd vanwege een fout.";
 "jumio_id_scan_hint_performance_fallback" = "Geoptimaliseerd scannen voor betere apparaatprestaties";
 "jumio_id_scan_manual" = "Maak een foto van uw document";
 "jumio_id_scan_manual_tips" = "Zorg ervoor dat u het hele document vastlegt";
+"jumio_id_scan_prompt_analyzing" = "De afbeelding analyseren...";
 "jumio_id_scan_prompt_capture_success" = "Hebbes!";
 "jumio_id_scan_prompt_captured" = "Gevangen genomen";
 "jumio_id_scan_prompt_center_id" = "Centreer uw document";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Zodra de ID-kaart is gedetecteerd, stilhouden";
 "jumio_nfc_retry_error_general" = "Probeer het nog eens en volg de instructies zoals afgebeeld";
 "jumio_nfc_retry_tag_lost" = "Houd stil zodra het paspoort is gedetecteerd";
+"jumio_scan_switch_to_back_camera" = "Verander naar achterste camera";
+"jumio_scan_switch_to_front_camera" = "Verander naar voorste camera";
+"jumio_select" = "Selecteer";
 "jumio_start_button" = "Beginnen";
 "jumio_start_instructions_01" = "Zoek een goed verlichte ondergrond";
 "jumio_start_instructions_02" = "Maak je klaar om een selfie te maken";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "De app kan de cameraflits gebruiken";
 "jumio_start_verification" = "Verificatie starten";
 "jumio_start_verification_subtitle" = "Dit proces is ontworpen om je identiteit te bevestigen en je te beschermen tegen identiteitsdiefstal";
+"jumio_switched_to_back_camera" = "Overgeschakeld naar de camera aan de achterkant";
+"jumio_switched_to_front_camera" = "Overgeschakeld naar de camera aan de voorzijde";
 "jumio_try_again" = "Probeer het nog eens";
 "jumio_uploading_success" = "Uploaden succesvol";
 "jumio_uploading_title" = "Uploaden";

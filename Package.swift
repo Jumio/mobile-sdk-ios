@@ -1,13 +1,13 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "4.13.0"
+let version = "4.14.0"
 
 let package = Package(
     name: "Jumio",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v13)
     ],
     products: [
         .library(
@@ -72,22 +72,22 @@ let package = Package(
         .binaryTarget(
             name: "Jumio",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Jumio.xcframework.zip",
-            checksum: "e56c41fdb2926be192f82c6053b0e97ecd1c801fe3e1ee93fd40ebe2fa7d9795"
+            checksum: "c8c4b85e77c4037f90c758c87275ef713f5d428dda2793afda99169a43c60577"
         ),
         .binaryTarget(
             name: "JumioIProov",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioIProov.xcframework.zip",
-            checksum: "e852a50e26808dc1f5db819a9a79bca674212a7f36a05e75f5cdff0c589c61b6"
+            checksum: "2333d0fba262f108d20835e60b6ce6c8f6327d0717d7289648d3fc1223f4dc53"
         ),
         .binaryTarget(
             name: "JumioLiveness",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLiveness.xcframework.zip",
-            checksum: "ad81006376265cd1948dfea9482ec6dd12af5636b3244fbcba9dcf2be56ff476"
+            checksum: "8a789853349ce2c961f4300bec0f4bd1a1f8a409a356f29d6edc68efcc35e45d"
         ),
         .binaryTarget(
             name: "JumioDefaultUI",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDefaultUI.xcframework.zip",
-            checksum: "a79edfe612a4d07b09920a498e0fd665d80c5d8a36d64a5b077eba80c12b38cc"
+            checksum: "7adeb215bc7818433da6f38ebd328025c08527aca71d04accfe15c8c95c9de1f"
         ),
     ]
 )

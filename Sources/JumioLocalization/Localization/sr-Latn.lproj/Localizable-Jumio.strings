@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Da biste nastavili sa otpremanjem, uverite se da ste preuzeli digitalnu vozačku dozvolu u PDF-u sa zvanične vladine aplikacije [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Otpremite CNH Digital PDF";
 "jumio_button_cancel" = "Otkaži";
+"jumio_button_continue" = "Nastavi";
+"jumio_change_issuing_country" = "Promeni zemlju izdavanja";
+"jumio_current_issuing_country" = "Trenutna zemlja izdavanja: %@";
 "jumio_di_back_to_document_selection" = "Bićete vraćeni na izbor dokumenata.";
 "jumio_di_retry_expire" = "Sesija je istekla";
 "jumio_di_retry_service_error" = "Verifikacija nije uspela";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Maksimalna veličina datoteke: %@";
 "jumio_dv_upload_tips_page_size" = "Maksimalan broj stranica: %lu";
 "jumio_dv_upload_tips_protected" = "Dokument ne treba da bude zaštićen lozinkom";
+"jumio_eidas_description" = "Dodirnite „Nastavi“ da biste započeli proces prijavljivanja. \n\nZatim izaberite „eIDAS prijavljivanje“ na sledećoj stranici, pa odaberite zastavu svoje zemlje da biste nastavili. \n\nKoristite eIDAS prijavljivanje za bezbednu verifikaciju u skladu sa pravilima EU.";
+"jumio_eidas_login_header" = "eIDAS prijavljivanje";
 "jumio_error_auth_failed" = "Autentifikacija nije uspela";
 "jumio_error_button_retake_both" = "Fotografiši ponovo obe strane";
 "jumio_error_button_retake_one" = "Ponovo fotografiši";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Skeniranje trenutno nije dostupno, obratite se timu za podršku";
 "jumio_error_session_expired" = "Sesija je istekla";
 "jumio_error_wrong_token" = "";
+"jumio_european_did_login_header" = "Evropski digitalni ID";
 "jumio_face_help_eyes_closed" = "Držite oči otvorene";
 "jumio_face_help_obscured_face" = "Uklonite bilo kakve prekrivače lica";
 "jumio_face_help_sunglasses" = "Skinite sunčane naočare";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Snimite stranu sa FOTOGRAFIJOM";
 "jumio_id_scan_guide_photo_side_manually" = "Ručno snimite stranu sa FOTOGRAFIJOM";
 "jumio_id_scan_guide_photo_side_tilt" = "Nagnite tako da donja ivica bude vidljiva, a zatim poravnajte sa okvirom";
+"jumio_id_scan_hint_error_fallback" = "Metoda skeniranja promenjena je zbog greške.";
 "jumio_id_scan_hint_performance_fallback" = "Skeniranje je optimizovano za bolje performanse uređaja";
 "jumio_id_scan_manual" = "Fotografišite dokument";
 "jumio_id_scan_manual_tips" = "Obavezno snimite ceo dokument";
+"jumio_id_scan_prompt_analyzing" = "Analiziranje slike...";
 "jumio_id_scan_prompt_capture_success" = "Razumem!";
 "jumio_id_scan_prompt_captured" = "Snimljeno";
 "jumio_id_scan_prompt_center_id" = "Centrirajte dokument";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Kada se otkrije lična karta, držite je mirno";
 "jumio_nfc_retry_error_general" = "Pokušajte ponovo i pratite uputstva kao što je prikazano";
 "jumio_nfc_retry_tag_lost" = "Budite mirni kada se pasoš otkrije";
+"jumio_scan_switch_to_back_camera" = "Prebaci na zadnju kameru";
+"jumio_scan_switch_to_front_camera" = "Prebaci na prednju kameru";
+"jumio_select" = "Izaberite";
 "jumio_start_button" = "Započni";
 "jumio_start_instructions_01" = "Pronađite dobro osvetljenu površinu";
 "jumio_start_instructions_02" = "Budite spremni da napravite selfi";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Aplikacija može da koristi blic kamere";
 "jumio_start_verification" = "Počni verifikaciju";
 "jumio_start_verification_subtitle" = "Ovaj proces je dizajniran da potvrdi vaš identitet i zaštiti vas od krađe identiteta";
+"jumio_switched_to_back_camera" = "Prebačeno na zadnju kameru";
+"jumio_switched_to_front_camera" = "Prebačeno na prednju kameru";
 "jumio_try_again" = "Pokušajte ponovo";
 "jumio_uploading_success" = "Otpremanje je uspešno";
 "jumio_uploading_title" = "Otpremanje";

@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Norėdami tęsti įkėlimą įsitikinkite, kad atsisiuntėte skaitmeninio vairuotojo pažymėjimo PDF failą iš oficialios vyriausybės programėlės [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Įkelti „CNH Digital PDF“";
 "jumio_button_cancel" = "Atšaukti";
+"jumio_button_continue" = "Tęsti";
+"jumio_change_issuing_country" = "Pakeisti išdavusią šalį";
+"jumio_current_issuing_country" = "Dabartinė išdavimo šalis: %@";
 "jumio_di_back_to_document_selection" = "Būsite nukreipti atgal į dokumentų pasirinkimą.";
 "jumio_di_retry_expire" = "Jūsų seanso laikas baigėsi";
 "jumio_di_retry_service_error" = "Nepavyko patvirtinti";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Didžiausias failo dydis: %@";
 "jumio_dv_upload_tips_page_size" = "Maksimalus puslapių skaičius: %lu";
 "jumio_dv_upload_tips_protected" = "Dokumentas neturi būti apsaugotas slaptažodžiu";
+"jumio_eidas_description" = "Bakstelėkite „Tęsti“, kad pradėtumėte prisijungimo procesą. \n\nTada kitame puslapyje pasirinkite „eIDAS prisijungimas“ ir norėdami tęsti pasirinkite savo šalies vėliavą. \n\nNaudokitės eIDAS prisijungimu, kad saugiai patvirtintumėte tapatybę pagal ES reikalavimus.";
+"jumio_eidas_login_header" = "eIDAS prisijungimas";
 "jumio_error_auth_failed" = "Autentifikavimas nepavyko";
 "jumio_error_button_retake_both" = "Pakartoti abi";
 "jumio_error_button_retake_one" = "Pakartoti";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Šiuo metu skenavimas neprieinamas, susisiekite su pagalbos komanda";
 "jumio_error_session_expired" = "Seanso laikas baigėsi";
 "jumio_error_wrong_token" = "Šiuo metu skenavimas neprieinamas, susisiekite su pagalbos komanda";
+"jumio_european_did_login_header" = "Europos skaitmeninė tapatybė";
 "jumio_face_help_eyes_closed" = "Nemirksėkite";
 "jumio_face_help_obscured_face" = "Nusiimkite veido apdangalus";
 "jumio_face_help_sunglasses" = "Nusiimkite akinius nuo saulės";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Nufotografuokite pusę su NUOTRAUKA";
 "jumio_id_scan_guide_photo_side_manually" = "Nufotografuokite dokumento pusę su NUOTRAUKA";
 "jumio_id_scan_guide_photo_side_tilt" = "Pasukite, kad matytųsi apatinis kraštas, ir sulygiuokite su rėmeliu";
+"jumio_id_scan_hint_error_fallback" = "Nuskaitymo būdas pakeistas dėl klaidos.";
 "jumio_id_scan_hint_performance_fallback" = "Nuskaitymas optimizuotas siekiant pagreitinti procedūrą";
 "jumio_id_scan_manual" = "Nufotografuokite savo asmens dokumentą";
 "jumio_id_scan_manual_tips" = "Nufotografuokite visą dokumentą";
+"jumio_id_scan_prompt_analyzing" = "Analizuojamas vaizdas...";
 "jumio_id_scan_prompt_capture_success" = "Pavyko!";
 "jumio_id_scan_prompt_captured" = "Užfiksuota";
 "jumio_id_scan_prompt_center_id" = "Lygiuokite savo dokumentą centre";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Kai aptinkama ID kortelė, laikykite ją nejudindami";
 "jumio_nfc_retry_error_general" = "Bandykite dar kartą ir vykdykite instrukcijas, kaip nurodyta";
 "jumio_nfc_retry_tag_lost" = "Nejudėkite, kol pasas bus surastas";
+"jumio_scan_switch_to_back_camera" = "Perjungti į gale esančią kamerą";
+"jumio_scan_switch_to_front_camera" = "Perjungti į priekyje esančią kamerą";
+"jumio_select" = "Pasirinkti";
 "jumio_start_button" = "Pradėti";
 "jumio_start_instructions_01" = "Raskite gerai apšviestą paviršių";
 "jumio_start_instructions_02" = "Būkite pasiruošę pasidaryti asmenukę";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Programėlė gali pasinaudoti fotoaparato blykste";
 "jumio_start_verification" = "Pradėkite patvirtinimą";
 "jumio_start_verification_subtitle" = "Šio proceso tikslas – patvirtinti jūsų tapatybę ir užtikrinti apsaugą nuo tapatybės vagystės";
+"jumio_switched_to_back_camera" = "Perjungta į galinę kamerą";
+"jumio_switched_to_front_camera" = "Perjungta į priekinę kamerą";
 "jumio_try_again" = "Bandykite dar kartą";
 "jumio_uploading_success" = "Įkėlimas sėkmingas";
 "jumio_uploading_title" = "Įkeliama";

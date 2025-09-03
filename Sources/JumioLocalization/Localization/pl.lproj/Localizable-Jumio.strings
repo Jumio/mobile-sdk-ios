@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Przed przesłaniem dokumentu upewnij się, że plik PDF cyfrowego prawa jazdy został pobrany z oficjalnej aplikacji rządowej [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Załaduj profil cyfrowy CNH w pliku PDF";
 "jumio_button_cancel" = "Anuluj";
+"jumio_button_continue" = "Kontynuuj";
+"jumio_change_issuing_country" = "Zmień kraj wydania";
+"jumio_current_issuing_country" = "Obecny kraj wydania: %@";
 "jumio_di_back_to_document_selection" = "Nastąpi powrót do wyboru dokumentów.";
 "jumio_di_retry_expire" = "Sesja wygasła";
 "jumio_di_retry_service_error" = "Weryfikacja nie powiodła się";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Maksymalny rozmiar pliku: %@";
 "jumio_dv_upload_tips_page_size" = "Maksymalna liczba stron: %lu";
 "jumio_dv_upload_tips_protected" = "Dokument nie powinien być chroniony hasłem";
+"jumio_eidas_description" = "Dotknij przycisku „Kontynuuj”, aby rozpocząć proces logowania.\nNastępnie wybierz „Logowanie aIDAS” na kolejnej strony i wybierz flagę swojego kraju, aby kontynuować.\nKorzystaj z logowania eIDAS w celu bezpiecznej weryfikacji, zgodnej z przepisami Unii Europejskiej.";
+"jumio_eidas_login_header" = "Przepisy eIDAS";
 "jumio_error_auth_failed" = "Uwierzytelnianie nie powiodło się";
 "jumio_error_button_retake_both" = "Zrób ponownie oba";
 "jumio_error_button_retake_one" = "Zrób ponownie";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Skanowanie jest obecnie niedostępne, skontaktuj się z zespołem pomocy technicznej";
 "jumio_error_session_expired" = "Sesja wygasła";
 "jumio_error_wrong_token" = "Skanowanie jest obecnie niedostępne, skontaktuj się z zespołem pomocy technicznej";
+"jumio_european_did_login_header" = "Europejski identyfikator cyfrowy";
 "jumio_face_help_eyes_closed" = "Miej otwarte oczy";
 "jumio_face_help_obscured_face" = "Zdejmij wszystkie osłony twarzy";
 "jumio_face_help_sunglasses" = "Zdejmij okulary przeciwsłoneczne";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Uchwyć stronę ze ZDJĘCIEM";
 "jumio_id_scan_guide_photo_side_manually" = "Ręcznie uchwyć stronę ze ZDJĘCIEM";
 "jumio_id_scan_guide_photo_side_tilt" = "Pochyl tak, aby dolna krawędź była widoczna, a następnie wyrównaj do ramki";
+"jumio_id_scan_hint_error_fallback" = "Zmieniono metodę skanowania z powodu błędu.";
 "jumio_id_scan_hint_performance_fallback" = "Skanowanie zoptymalizowane pod kątem lepszej wydajności urządzenia";
 "jumio_id_scan_manual" = "Zrób zdjęcie swojego dokumentu";
 "jumio_id_scan_manual_tips" = "Upewnij się, że uchwycono cały dokument";
+"jumio_id_scan_prompt_analyzing" = "Analiza obrazu...";
 "jumio_id_scan_prompt_capture_success" = "Mamy to!";
 "jumio_id_scan_prompt_captured" = "Uchwycono";
 "jumio_id_scan_prompt_center_id" = "Wyśrodkuj swój dokument tożsamości";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Gdy karta identyfikacyjna zostanie wykryta, nie ruszaj się";
 "jumio_nfc_retry_error_general" = "Spróbuj ponownie i postępuj zgodnie z instrukcjami";
 "jumio_nfc_retry_tag_lost" = "Nie ruszaj urządzenia po wykryciu paszportu";
+"jumio_scan_switch_to_back_camera" = "Przełącz na tylny aparat";
+"jumio_scan_switch_to_front_camera" = "Przełącz na przedni aparat";
+"jumio_select" = "Wybierz";
 "jumio_start_button" = "Start";
 "jumio_start_instructions_01" = "Znajdź dobrze oświetloną powierzchnię";
 "jumio_start_instructions_02" = "Przygotuj się do zrobienia selfie";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Aplikacja może korzystać z lampy błyskowej aparatu";
 "jumio_start_verification" = "Rozpocznij weryfikację";
 "jumio_start_verification_subtitle" = "Celem tej procedury jest sprawdzenie Twojej tożsamości i ochrona przed jej kradzieżą";
+"jumio_switched_to_back_camera" = "Przełączono na tylny aparat";
+"jumio_switched_to_front_camera" = "Przełączono na przedni aparat";
 "jumio_try_again" = "Spróbuj ponownie";
 "jumio_uploading_success" = "Przesyłanie zakończone pomyślnie";
 "jumio_uploading_title" = "Przesyłanie";

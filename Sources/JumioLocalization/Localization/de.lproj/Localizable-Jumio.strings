@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Um mit dem Hochladen fortzufahren, achten Sie darauf, dass Sie ein PDF des digitalen Führerscheins aus der offiziellen Regierungsanwendung [({Carteira Digital de Trânsito})] heruntergeladen haben.";
 "jumio_brazil_cnh_upload_button" = "Eine CNH Digital-PDF hochladen";
 "jumio_button_cancel" = "Beenden";
+"jumio_button_continue" = "Weiter";
+"jumio_change_issuing_country" = "Ausstellungsland ändern";
+"jumio_current_issuing_country" = "Aktuelles Ausstellungsland: %@";
 "jumio_di_back_to_document_selection" = "Sie kehren zur Dokumentauswahl zurück.";
 "jumio_di_retry_expire" = "Ihre Sitzung ist abgelaufen";
 "jumio_di_retry_service_error" = "Die Verifizierung ist fehlgeschlagen";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Max. Dateigröße: %@";
 "jumio_dv_upload_tips_page_size" = "Max. Seitenanzahl: %lu";
 "jumio_dv_upload_tips_protected" = "Dokument darf nicht passwortgeschützt sein";
+"jumio_eidas_description" = "Tippen Sie auf ‚Weiter‘, um den Anmeldevorgang zu starten. \n\nWählen Sie dann auf der nächsten Seite ‚eIDAS-Anmeldung‘ und dann die Flagge Ihres Landes aus, um fortzufahren. \n\nMit der eIDAS-Anmeldung können Sie sich sicher und EU-konform verifizieren.";
+"jumio_eidas_login_header" = "eIDAS-Anmeldung";
 "jumio_error_auth_failed" = "Authentifizierung fehlgeschlagen";
 "jumio_error_button_retake_both" = "Beides erneut aufnehmen";
 "jumio_error_button_retake_one" = "Erneut aufnehmen";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Scannen derzeit nicht verfügbar, bitte kontaktieren Sie das Support-Team";
 "jumio_error_session_expired" = "Sitzung abgelaufen";
 "jumio_error_wrong_token" = "Scannen derzeit nicht verfügbar, bitte kontaktieren Sie das Support-Team";
+"jumio_european_did_login_header" = "Europäische digitale ID";
 "jumio_face_help_eyes_closed" = "Halten Sie die Augen offen";
 "jumio_face_help_obscured_face" = "Entfernen Sie alle Gesichtsbedeckungen";
 "jumio_face_help_sunglasses" = "Nehmen Sie Sonnenbrillen ab";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Nehmen Sie die FOTO-SEITE auf";
 "jumio_id_scan_guide_photo_side_manually" = "Nehmen Sie die FOTO-SEITE manuell auf";
 "jumio_id_scan_guide_photo_side_tilt" = "So kippen, dass die Unterkante sichtbar ist, und dann am Rahmen ausrichten";
+"jumio_id_scan_hint_error_fallback" = "Die Scanmethode wurde aufgrund eines Fehlers geändert.";
 "jumio_id_scan_hint_performance_fallback" = "Optimiertes Scannen für bessere Geräteleistung";
 "jumio_id_scan_manual" = "Machen Sie ein Foto Ihres Dokuments";
 "jumio_id_scan_manual_tips" = "Stellen Sie sicher, dass Sie das gesamte Dokument erfassen";
+"jumio_id_scan_prompt_analyzing" = "Das Bild wird analysiert...";
 "jumio_id_scan_prompt_capture_success" = "Abgeschlossen!";
 "jumio_id_scan_prompt_captured" = "Erfasst";
 "jumio_id_scan_prompt_center_id" = "Zentrieren Sie Ihr Dokument";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Sobald der Ausweis erkannt wurde, halten Sie ihn still";
 "jumio_nfc_retry_error_general" = "Erneut versuchen u. Anweisungen wie illustriert befolgen";
 "jumio_nfc_retry_tag_lost" = "Stillhalten, sobald Reisepass erkannt wurde";
+"jumio_scan_switch_to_back_camera" = "Zu Rückkamera wechseln";
+"jumio_scan_switch_to_front_camera" = "Zu Frontkamera wechseln";
+"jumio_select" = "Auswählen";
 "jumio_start_button" = "Starten";
 "jumio_start_instructions_01" = "Suchen Sie eine gut beleuchtete Oberfläche";
 "jumio_start_instructions_02" = "Machen Sie sich bereit für ein Selfie.";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Die App verwendet möglicherweise den Kamerablitz";
 "jumio_start_verification" = "Start der Verifizierung";
 "jumio_start_verification_subtitle" = "Dieser Prozess dient dazu, Ihre Identität zu bestätigen und Sie vor Identitätsdiebstahl zu schützen";
+"jumio_switched_to_back_camera" = "Auf Rückkamera umgeschaltet";
+"jumio_switched_to_front_camera" = "Auf Frontkamera umgeschaltet";
 "jumio_try_again" = "Erneut versuchen";
 "jumio_uploading_success" = "Upload erfolgreich";
 "jumio_uploading_title" = "Hochladen";

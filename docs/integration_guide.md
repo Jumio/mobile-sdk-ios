@@ -44,7 +44,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
   - [Custom UI customization](#custom-ui-customization)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.13.0__
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.14.0__
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -81,16 +81,16 @@ platform :ios, '13.0'
 use_frameworks! # Required for proper framework handling
 
 #Core (add one of these):
-pod 'Jumio/Slim', '~>4.13.0' # Manual & DocFinder Capture functionality
-pod 'Jumio/Jumio', '~>4.13.0' # Manual & DocFinder Capture + NFC functionality
+pod 'Jumio/Slim', '~>4.14.0' # Manual & DocFinder Capture functionality
+pod 'Jumio/Jumio', '~>4.14.0' # Manual & DocFinder Capture + NFC functionality
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.13.0' # Liveness functionality
-pod 'Jumio/IProov', '~>4.13.0' # iProov liveness functionality
-pod 'Jumio/DefaultUI', '~>4.13.0' # Default UI functionality
+pod 'Jumio/Liveness', '~>4.14.0' # Liveness functionality
+pod 'Jumio/IProov', '~>4.14.0' # iProov liveness functionality
+pod 'Jumio/DefaultUI', '~>4.14.0' # Default UI functionality
 
 #All:
-pod 'Jumio/All', '~>4.13.0' # All Jumio products with all available scanning methods
+pod 'Jumio/All', '~>4.14.0' # All Jumio products with all available scanning methods
 ```
 
 ##### Certified Face Liveness
@@ -133,13 +133,13 @@ Adapt you Cartfile and add Jumio dependencies. Check the following example how a
 
 ```
 #Core (always add):
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.13.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.14.0
 
 #Addons:
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.13.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.13.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.13.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.13.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.14.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.14.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.14.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.14.0
 ```
 
 Update you Carthage dependencies via Terminal:
@@ -148,7 +148,7 @@ carthage update --use-xcframeworks
 ```
 
 ### Manually
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.13.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.13.0/ios-jumio-mobile-sdk-4.13.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.14.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.14.0/ios-jumio-mobile-sdk-4.14.0.zip).
 
 __Using iProov (manually):__
 * JumioIProov.xcframework
@@ -218,7 +218,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 ```
 
 #### Other Digital Identity providers
-Other Digital Identity providers, like 'Brazil CNH-e PDF', stay within the app. Follow [Jumio ID Credential](#jumio-id-credential) and implement the [Scan Steps](#scan-steps) needed for the [`Jumio.Scan.Mode`][jumioScanMode] `digital`.
+Other Digital Identity providers, like 'Brazil CNH-e PDF' or 'eIDAS', stay within the app. Follow [Jumio ID Credential](#jumio-id-credential) and implement the [Scan Steps](#scan-steps) needed for the [`Jumio.Scan.Mode`][jumioScanMode] `digital`.
 
 ### Risk Signal: Device Risk
 If you want to include risk signals into your application, please check our [Risk Signal guide](https://docs.jumio.com/production/Content/References/Risk%20Signals/Device%20Risk.htm).
@@ -754,20 +754,22 @@ Then call [`controller?.finish()`][controllerFinish] to end the user journey.
 
 [`Jumio.Scan.Update`][jumioScanUpdate]s are sent via `jumio(scanPart: Jumio.Scan.Part, updates update: Jumio.Scan.Update, data: Any?)` and cover scan information that is relevant and might need to be displayed during the scanning process.
 
-* [`Jumio.Scan.Update`][jumioScanUpdate] values: `fallback(FallbackReason)`, `nfcExtractionStarted`, `nfcExtractionProgress`, `nfcExtractionFinished`, `extractionState(ExtractionState)`, `flash(FlashState)`, `nextPosition`
+* [`Jumio.Scan.Update`][jumioScanUpdate] values: `fallback(FallbackReason)`, `nfcExtractionStarted`, `nfcExtractionProgress`, `nfcExtractionFinished`, `extractionState(ExtractionState)`, `flash(FlashState)`, `nextPosition`, `cameraAvailable`
     * In case of a `fallback`, the `scanMode` changed and you should adapt the user interface to reflect the new scan mode. For example, if you fallback to a manual scan method, you might want to show a shutter button.
     * `nfcExtractionStarted`, `nfcExtractionProgress`, and `nfcExtractionFinished` make it possible to track the progress of a NFC scan. `nfcExtractionProgress` additionally delivers an integer in the data parameter in the range of 0-100 to signal the progress in the current data group.
     * `extractionState`s signal a desired user behaviour.
     * `flash` signals the enabling or disabling of the camera flash.
     * `nextPosition` signals that the user needs to take a second image, e.g., needs to move the face in a liveness scan.
+    * `cameraAvailable` signals that the camera loaded successfully. Note that `cameraAvailable` is also called when the camera facing was successfully changed.
 
 * [`Jumio.Scan.Update.FallbackReason`][jumioFallbackReason] values: `userAction`, `lowPerformance`
     * `userAction` is sent after `scanPart.fallback()` was called.
     * `lowPerformance` is sent, when the device is not capable of running the current `scanMode`.
 
 * [`Jumio.Scan.Update.ExtractionState`][jumioExtractionState]:
-    * We send the following extraction states for the scan mode `docFinder`: `centerId`, `tooClose`, `moveCloser`, `holdStraight`, `tilt`
+    * We send the following extraction states for the scan mode `docFinder`: `centerId`, `tooClose`, `moveCloser`, `holdStraight`, `tilt`, `imageAnalysis`
         * In `id` scans, a Double representing the time for which the user needs to hold still is sent in the data parameter of `jumio(scanPart: Jumio.Scan.Part, updates: Jumio.Scan.Update, data: Any?)`, when the extraction state `holdStill` is returned.
+        * We suggest to disable orientation changes during the states `FLASH` and `IMAGE_ANALYSIS`. Please note - fallback and camera switch will also not be available during these stages.
     * We send the following extraction states for the scan modes `liveness` and `livenessPremium`: `centerFace`, `faceTooClose`, `moveFaceCloser`, `moveFaceIntoFrame`, `levelEyesAndDevice`, `holdStill`, `tiltFaceUp`, `tiltFaceDown`, `tiltFaceLeft`, `tiltFaceRight`
 
 * [`Jumio.Scan.Update.FlashState`][jumioFlashState] values: `on`, `off`

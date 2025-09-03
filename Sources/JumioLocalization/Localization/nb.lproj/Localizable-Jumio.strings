@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "For å gå videre må du kontrollere at du har lastet ned et digitalt førerkort som PDF fra den offisielle appen fra brasilianske myndigheter [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Last opp PDF av CNH Digital";
 "jumio_button_cancel" = "Avbryt";
+"jumio_button_continue" = "Fortsett";
+"jumio_change_issuing_country" = "Endre utstedelsesland";
+"jumio_current_issuing_country" = "Nåværende utstedelsesland: %@";
 "jumio_di_back_to_document_selection" = "Du vil sendes tilbake til dokumentvalget.";
 "jumio_di_retry_expire" = "Økten din har utløpt";
 "jumio_di_retry_service_error" = "Bekreftelsen mislyktes";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Maksimal filstørrelse: %@";
 "jumio_dv_upload_tips_page_size" = "Maksimalt antall sider: %lu";
 "jumio_dv_upload_tips_protected" = "Dokumentet skal ikke være passordbeskyttet";
+"jumio_eidas_description" = "Trykk på «Fortsett» for å logge inn.\n\nDeretter velger du «Logg inn med eIDAS» på siden som dukker opp, og så flagget til landet ditt.\n\neIDAS er en sikker, EU-godkjent verifiseringsmåte.";
+"jumio_eidas_login_header" = "Logg inn med eIDAS";
 "jumio_error_auth_failed" = "Godkjenning mislyktes";
 "jumio_error_button_retake_both" = "Ta begge på nytt";
 "jumio_error_button_retake_one" = "Ta på nytt";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Skanning er ikke tilgjengelig for øyeblikket. Kontakt kundestøtte";
 "jumio_error_session_expired" = "Økten er utløpt";
 "jumio_error_wrong_token" = "Skanning er ikke tilgjengelig for øyeblikket. Kontakt kundestøtte";
+"jumio_european_did_login_header" = "Europeisk digital ID";
 "jumio_face_help_eyes_closed" = "Hold øynene åpne";
 "jumio_face_help_obscured_face" = "Ta av alt som kan dekke til ansiktet";
 "jumio_face_help_sunglasses" = "Ta av solbriller";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Ta bilde av FOTOSIDEN";
 "jumio_id_scan_guide_photo_side_manually" = "Ta bilde av FOTOSIDEN manuelt";
 "jumio_id_scan_guide_photo_side_tilt" = "Vipp slik at den nederste kanten er synlig, og juster til det passer i rammen";
+"jumio_id_scan_hint_error_fallback" = "Skannemetoden ble endret på grunn av en feil.";
 "jumio_id_scan_hint_performance_fallback" = "Skanningen er justert for å sikre at enheten fungerer optimalt";
 "jumio_id_scan_manual" = "Ta et bilde av dokumentet ditt";
 "jumio_id_scan_manual_tips" = "Sørg for å få med hele dokumentet";
+"jumio_id_scan_prompt_analyzing" = "Analyserer bildet...";
 "jumio_id_scan_prompt_capture_success" = "Ferdig!";
 "jumio_id_scan_prompt_captured" = "Fanget";
 "jumio_id_scan_prompt_center_id" = "Midtstill dokumentet";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Når ID-kortet er oppdaget, hold det stille";
 "jumio_nfc_retry_error_general" = "Prøv igjen, og følg instruksjonene som vist";
 "jumio_nfc_retry_tag_lost" = "Hold stille mens passet registreres";
+"jumio_scan_switch_to_back_camera" = "Bytt til bakkamera";
+"jumio_scan_switch_to_front_camera" = "Bytt til frontkamera";
+"jumio_select" = "Velg";
 "jumio_start_button" = "Start";
 "jumio_start_instructions_01" = "Finn en overflate med godt lys";
 "jumio_start_instructions_02" = "Gjør deg klar til å ta en selfie";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "Appen kan bruke kamerablitsen";
 "jumio_start_verification" = "Start verifisering";
 "jumio_start_verification_subtitle" = "Prosessen er utformet for å bekrefte identiteten din og beskytte deg mot identitetstyveri";
+"jumio_switched_to_back_camera" = "Byttet til kameraet på baksiden";
+"jumio_switched_to_front_camera" = "Byttet til frontkamera";
 "jumio_try_again" = "Vennligst prøv igjen";
 "jumio_uploading_success" = "Opplasting vellykket";
 "jumio_uploading_title" = "Laster opp";

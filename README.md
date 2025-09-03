@@ -109,7 +109,7 @@ Once you start up the sample application, you'll be given the option of trying o
 
 ## General Requirements
 The minimum requirements for the SDK are:
-- iOS 12.0 and higher
+- iOS 13.0 and higher
 - Internet connection
 - Jumio KYX or Jumio API v3
 
@@ -194,7 +194,7 @@ Our SDK supports localization for different languages. All label texts and butto
 
 Jumio SDK products support following languages for your convenience:
 
-_Afrikaans, Arabic, Bulgarian, Chinese (Simplified), Chinese (Traditional), Croatian, Czech, Danish, Dutch, Estonian, English, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Khmer, Korean, Latvian, Lithuanian, Maltese, Norwegian, Polish, Portuguese (Portugal), Portuguese (Brazil), Romanian, Russian, Serbian (Cyril), Serbian (Latin), Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Vietnamese, Zulu_
+_Afrikaans, Arabic, Bulgarian, Burmese, Chinese (Simplified), Chinese (Traditional), Croatian, Czech, Danish, Dutch, Estonian, English, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Khmer, Korean, Latvian, Lithuanian, Maltese, Norwegian, Polish, Portuguese (Portugal), Portuguese (Brazil), Romanian, Russian, Serbian (Cyril), Serbian (Latin), Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukrainian, Vietnamese, Zulu_
 
 Please check out our [sample project](sample) to see how to use the strings files in your app.
 
@@ -254,7 +254,7 @@ For more details, please refer to our [integration guide](docs/integration_guide
 
 # Digital Identity
 As of Jumio iOS SDK 4.5.0, users may use their Digital Identity to verify their identity.
-For now 'Brazil CNH-e PDF' and 'ID by Mastercard' are the only Digital Identity providers currently supported by our SDK.
+For now, 'Brazil CNH-e PDF', 'ID by Mastercard' and 'eIDAS' are the only Digital Identity providers supported by our SDK.
 
 If you want to enable Digital Identity verification for your account please [contact us](https://support.jumio.com).
 In case you are already set up to use Digital Identity verificaiton within your app, check out the integration steps explained [here](docs/integration_guide.md#digital-identity).

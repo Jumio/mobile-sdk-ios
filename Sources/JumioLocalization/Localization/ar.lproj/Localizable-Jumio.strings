@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "للمتابعة في التحميل، تأكد من تنزيل نسخة PDF من رخصة القيادة الرقمية من تطبيق الحكومة الرسمي [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "تحميل ملف CNH Digital بتنسيق PDF";
 "jumio_button_cancel" = "إلغاء";
+"jumio_button_continue" = "متابعة";
+"jumio_change_issuing_country" = "تغيير بلد الإصدار";
+"jumio_current_issuing_country" = "بلد الإصدار الحالي: %@";
 "jumio_di_back_to_document_selection" = "ستتم إعادتك إلى تحديد المستندات.";
 "jumio_di_retry_expire" = "انتهت صلاحية جلستك";
 "jumio_di_retry_service_error" = "فشل التحقق";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "الحد الأقصى لحجم الملف: %@";
 "jumio_dv_upload_tips_page_size" = "الحد الأقصى لعدد الصفحات: %lu";
 "jumio_dv_upload_tips_protected" = "يجب ألا يكون المستند محميًا بكلمة مرور";
+"jumio_eidas_description" = "اضغط على \"متابعة\" لبدء تسجيل الدخول. \n\nبعد ذلك، حدد \"تسجيل الدخول إلى eIDAS\" في الصفحة القادمة واختر علم بلدك للمتابعة. \n\nاستخدم تسجيل الدخول إلى eIDAS للتحقق الآمن والمتوافق مع متطلبات الاتحاد الأوروبي.";
+"jumio_eidas_login_header" = "تسجيل الدخول إلى eIDAS";
 "jumio_error_auth_failed" = "فشلت المصادقة";
 "jumio_error_button_retake_both" = "أعد التقاط كليهما";
 "jumio_error_button_retake_one" = "إعادة الالتقاط";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "المسح غير متاح في الوقت الحالي، يُرجى الاتصال بفريق الدعم";
 "jumio_error_session_expired" = "انتهت صلاحية الجلسة";
 "jumio_error_wrong_token" = "المسح غير متاح في الوقت الحالي، يُرجى الاتصال بفريق الدعم";
+"jumio_european_did_login_header" = "الهوية الرقمية الأوروبية";
 "jumio_face_help_eyes_closed" = "أبقِ عينيك مفتوحتين";
 "jumio_face_help_obscured_face" = "اخلع أي أغطية على الوجه";
 "jumio_face_help_sunglasses" = "اخلع النظارة الشمسية";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "التقط جانب \"الصورة\"";
 "jumio_id_scan_guide_photo_side_manually" = "التقط يدويًا جانب \"الصورة\"";
 "jumio_id_scan_guide_photo_side_tilt" = "عليك بإمالتها حتى تكون الحافة السفلية مرئية، ثم عليك بمحاذاتها مع الإطار";
+"jumio_id_scan_hint_error_fallback" = "تغيرت طريقة المسح بسبب خطأ.";
 "jumio_id_scan_hint_performance_fallback" = "تم تحسين المسح الضوئي للحصول على أداء أفضل للجهاز";
 "jumio_id_scan_manual" = "التقط صورة لمستندك";
 "jumio_id_scan_manual_tips" = "تأكد من التقاط المستند بأكمله";
+"jumio_id_scan_prompt_analyzing" = "تحليل الصورة...";
 "jumio_id_scan_prompt_capture_success" = "حسنًا!";
 "jumio_id_scan_prompt_captured" = "تم التقاطه";
 "jumio_id_scan_prompt_center_id" = "اجعل المستند في الوسط";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "بمجرد الكشف عن بطاقة الهوية، اثبت في مكانك";
 "jumio_nfc_retry_error_general" = "حاول مرة أخرى واتبع التعليمات كما هو موضح";
 "jumio_nfc_retry_tag_lost" = "انتظر حتى يتم اكتشاف جواز السفر";
+"jumio_scan_switch_to_back_camera" = "التبديل إلى الكاميرا الخلفية";
+"jumio_scan_switch_to_front_camera" = "التبديل إلى الكاميرا الأمامية";
+"jumio_select" = "تحديد";
 "jumio_start_button" = "بدء";
 "jumio_start_instructions_01" = "ابحث عن سطح جيد الإضاءة";
 "jumio_start_instructions_02" = "استعد لالتقاط صورة ذاتية";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "قد يستخدم التطبيق فلاش الكاميرا";
 "jumio_start_verification" = "ابدأ التحقق";
 "jumio_start_verification_subtitle" = "تم تصميم هذه العملية للتحقق من هويتك وحمايتك من سرقة الهوية";
+"jumio_switched_to_back_camera" = "تم التبديل إلى الكاميرا الخلفية";
+"jumio_switched_to_front_camera" = "تم التبديل إلى الكاميرا الأمامية";
 "jumio_try_again" = "حاول مرة اخرى";
 "jumio_uploading_success" = "تحميل ناجح";
 "jumio_uploading_title" = "تحميل";

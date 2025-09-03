@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Ukuze uqhubeke nokulayisha, qinisekisa ukuthi udawunilode i-PDF yelayisensi yokushayela eyidijithali ku-aplikheshini esemthethweni kahulumeni [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Layisha i-PDF ye-CNH Eyidijithali";
 "jumio_button_cancel" = "Khansela";
+"jumio_button_continue" = "Qhubeka";
+"jumio_change_issuing_country" = "Shintsha Izwe Elikhiphayo";
+"jumio_current_issuing_country" = "Izwe Elikhiphayo Lamanje: %@";
 "jumio_di_back_to_document_selection" = "Uzozulazula ubuyele ekukhethweni kwedokhumenti";
 "jumio_di_retry_expire" = "Iseshini yakho isiphelelwe yisikhathi";
 "jumio_di_retry_service_error" = "Ukuqinisekisa kuhlulekile";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Usayizi ophezulu wefayela: %@";
 "jumio_dv_upload_tips_page_size" = "Inani eliphezulu lamakhasi: %lu";
 "jumio_dv_upload_tips_protected" = "Idokhumenti akufanele livikelwe ngephasiwedi";
+"jumio_eidas_description" = "Thepha okuthi 'Qhubeka' ukuze uqalise inqubo yokungena ngemvume. \n\nOkulandelayo, khetha okuthi 'Ukungena Ngemvume Kwe-eIDAS' ekhasini elilandelayo bese ukhetha ifulegi lezwe lakini ukuze uqhubeke. \n\nSebenzisa Ukungena Ngemvume Kwe-eIDAS ukuze uthole ukuqinisekisa okuvikelekile, okuhambisana nomthetho wase-EU.";
+"jumio_eidas_login_header" = "Ukungena Ngemvume Kwe-eIDAS";
 "jumio_error_auth_failed" = "Ukuqinisekisa kuhlulekile";
 "jumio_error_button_retake_both" = "Kuthathe kabusha kokubili";
 "jumio_error_button_retake_one" = "Thatha kabusha";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Ukuskena akukho okwamanje, sicela uxhumane nethimba losizo";
 "jumio_error_session_expired" = "Isikhathi Siphelile";
 "jumio_error_wrong_token" = "Ukuskena akukho okwamanje, sicela uxhumane nethimba losizo";
+"jumio_european_did_login_header" = "I-ID yedijithali yaseYurophu";
 "jumio_face_help_eyes_closed" = "Gcina amehlo akho evuliwe";
 "jumio_face_help_obscured_face" = "Susa noma yimi emboze ubuso";
 "jumio_face_help_sunglasses" = "Susa izibuko";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Thwebula uhlangothi LWESITHOMBE";
 "jumio_id_scan_guide_photo_side_manually" = "Thwebula ngokwakho uhlangothi LWESITHOMBE";
 "jumio_id_scan_guide_photo_side_tilt" = "Tshekisa ukuze kubonakale unqenqema olungezansi bese uqondanisa nohlaka";
+"jumio_id_scan_hint_error_fallback" = "Indlela yokuskena ishintshile ngenxa yephutha.";
 "jumio_id_scan_hint_performance_fallback" = "Ukuskena kuthuthukisiwe ukuze idivayisi isebenze kangcono";
 "jumio_id_scan_manual" = "Thatha isithombe sedokhumenti yakho";
 "jumio_id_scan_manual_tips" = "Qiniseka ukuthi uthwebula isithombe sayo yonke incwadi";
+"jumio_id_scan_prompt_analyzing" = "Ihlaziya isithombe...";
 "jumio_id_scan_prompt_capture_success" = "Ngiyitholile!";
 "jumio_id_scan_prompt_captured" = "Kuthunjiwe";
 "jumio_id_scan_prompt_center_id" = "Beka idokhumenti phakathi nendawo";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Uma ikhadi le-ID selitholakele, yibambe unganyakazi";
 "jumio_nfc_retry_error_general" = "Zama futhi ulandele iziqondiso njengoba kubonisiwe";
 "jumio_nfc_retry_tag_lost" = "Bamba kunganyakazi lapho kutholwa ipasipoti";
+"jumio_scan_switch_to_back_camera" = "Shintshela kukhamera yangemuva";
+"jumio_scan_switch_to_front_camera" = "Shintshela kwikhamera yaphambili";
+"jumio_select" = "Khetha";
 "jumio_start_button" = "Qala";
 "jumio_start_instructions_01" = "Thola indawo ekhanya kahle";
 "jumio_start_instructions_02" = "Lungela ukuzithatha isithombe";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "I-app ingase isebenzise i-flash yekhamera";
 "jumio_start_verification" = "Qala ukuqinisekisa";
 "jumio_start_verification_subtitle" = "Le nqubo iklanyelwe ukuqinisekisa ubuwena futhi ikuvikele ekwebiweni komazisi wakho";
+"jumio_switched_to_back_camera" = "Kushintshelwe kukhamera engemuva";
+"jumio_switched_to_front_camera" = "Kushintshelwe kukhamera engaphambili";
 "jumio_try_again" = "Sicela uphinde uzame";
 "jumio_uploading_success" = "Ukufaka kuphumelele";
 "jumio_uploading_title" = "Iyafaka";

@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "Para prosseguir com o envio, baixe a versão PDF da carteira de motorista digital do aplicativo oficial do governo [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Enviar arquivo PDF da CNH Digital";
 "jumio_button_cancel" = "Cancelar";
+"jumio_button_continue" = "Continuar";
+"jumio_change_issuing_country" = "Alterar país emissor";
+"jumio_current_issuing_country" = "País emissor atual: %@";
 "jumio_di_back_to_document_selection" = "Você retornará à seleção de documentos.";
 "jumio_di_retry_expire" = "Sua sessão expirou";
 "jumio_di_retry_service_error" = "A verificação falhou";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "Tamanho máximo do arquivo: %@";
 "jumio_dv_upload_tips_page_size" = "Número máximo de páginas: %lu";
 "jumio_dv_upload_tips_protected" = "O documento não deve ser protegido por senha";
+"jumio_eidas_description" = "Toque em Continuar para iniciar o processo de login. \n\nEm seguida, selecione Login eIDAS na próxima página e escolha a bandeira que representa o seu país para continuar.\n\nUse login eIDAS para garantir uma verificação segura e em conformidade com a UE.";
+"jumio_eidas_login_header" = "Login eIDAS";
 "jumio_error_auth_failed" = "Falha na autenticação";
 "jumio_error_button_retake_both" = "Refazer ambos";
 "jumio_error_button_retake_one" = "Refazer";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "Escaneamento não disponível no momento, entre em contato com a equipe de suporte";
 "jumio_error_session_expired" = "Sessão expirada";
 "jumio_error_wrong_token" = "Escaneamento não disponível no momento, entre em contato com a equipe de suporte";
+"jumio_european_did_login_header" = "ID digital europeia";
 "jumio_face_help_eyes_closed" = "Mantenha seus olhos abertos";
 "jumio_face_help_obscured_face" = "Remova qualquer tipo de cobertura facial";
 "jumio_face_help_sunglasses" = "Tire os óculos de sol";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "Capture o lado da FOTO";
 "jumio_id_scan_guide_photo_side_manually" = "Capture manualmente o lado da FOTO";
 "jumio_id_scan_guide_photo_side_tilt" = "Incline para que a borda inferior fique visível e depois alinhe com a moldura";
+"jumio_id_scan_hint_error_fallback" = "Método de digitalização alterado devido a um erro.";
 "jumio_id_scan_hint_performance_fallback" = "Varredura otimizada para um melhor desempenho do dispositivo";
 "jumio_id_scan_manual" = "Tire uma foto do seu documento";
 "jumio_id_scan_manual_tips" = "Certifique-se de capturar todo o documento";
+"jumio_id_scan_prompt_analyzing" = "Analisando a imagem...";
 "jumio_id_scan_prompt_capture_success" = "Entendi!";
 "jumio_id_scan_prompt_captured" = "Capturado";
 "jumio_id_scan_prompt_center_id" = "Centralize o seu documento";
@@ -182,7 +190,7 @@
 "jumio_identity_scan_prompt_initial" = "Tire uma selfie";
 "jumio_identity_scan_tips_placing" = "Alinhe seu rosto na moldura oval e pressione o botão do obturador";
 "jumio_identity_title" = "Verificação facial";
-"jumio_idtype_brazil_cnh" = "PDF do CNH Digital do Brasil";
+"jumio_idtype_brazil_cnh" = "Carteira de motorista digital";
 "jumio_idtype_countrysearch_search" = "Pesquisar país";
 "jumio_idtype_countrysearch_title" = "Selecione o país emissor";
 "jumio_idtype_di" = "Identidade digital";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "Uma vez que o cartão de identificação for detectado, mantenha-o imóvel";
 "jumio_nfc_retry_error_general" = "Tente novamente e siga as instruções conforme ilustrado";
 "jumio_nfc_retry_tag_lost" = "Não se mexa quando o passaporte for detectado";
+"jumio_scan_switch_to_back_camera" = "Alternar para a câmera traseira";
+"jumio_scan_switch_to_front_camera" = "Alternar para a câmera frontal";
+"jumio_select" = "Selecionar";
 "jumio_start_button" = "Iniciar";
 "jumio_start_instructions_01" = "Encontre uma superfície bem iluminada";
 "jumio_start_instructions_02" = "Prepare-se para tirar a selfie";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "O aplicativo pode usar o flash da câmera";
 "jumio_start_verification" = "Iniciar a verificação";
 "jumio_start_verification_subtitle" = "Este processo foi criado para verificar se é realmente você e para te proteger contra roubo de identidade";
+"jumio_switched_to_back_camera" = "Alternado para a câmera traseira";
+"jumio_switched_to_front_camera" = "Alternado para a câmera frontal";
 "jumio_try_again" = "Tente novamente";
 "jumio_uploading_success" = "Upload bem-sucedido";
 "jumio_uploading_title" = "Enviando";

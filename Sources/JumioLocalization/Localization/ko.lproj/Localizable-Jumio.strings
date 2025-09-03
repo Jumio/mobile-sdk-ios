@@ -63,6 +63,9 @@
 "jumio_brazil_cnh_subtitle" = "업로드하려면 정부 공식 신청서 [({Carteira Digital de Trânsito})]에서 디지털 운전면허증 PDF를 다운로드했는지 확인하세요";
 "jumio_brazil_cnh_upload_button" = "CNH Digital PDF 업로드";
 "jumio_button_cancel" = "취소";
+"jumio_button_continue" = "계속";
+"jumio_change_issuing_country" = "발급 국가 변경";
+"jumio_current_issuing_country" = "현재 발급 국가: %@";
 "jumio_di_back_to_document_selection" = "문서 선택으로 돌아갑니다.";
 "jumio_di_retry_expire" = "세션이 만료되었습니다.";
 "jumio_di_retry_service_error" = "확인에 실패했습니다.";
@@ -86,6 +89,8 @@
 "jumio_dv_upload_tips_file_size" = "최대 파일 크기: %@";
 "jumio_dv_upload_tips_page_size" = "최대 페이지 수: %lu";
 "jumio_dv_upload_tips_protected" = "문서를 암호로 보호하면 안 됩니다.";
+"jumio_eidas_description" = "'계속' 버튼을 눌러 로그인 프로세스를 시작하세요.\n\n그 다음 페이지에서 'eIDAS 로그인'을 선택하고 해당 국가의 국기를 선택하여 계속 진행합니다.\n\neIDAS 로그인을 통해 EU 규정을 준수하여 안전하게 인증하세요.";
+"jumio_eidas_login_header" = "eIDAS 로그인";
 "jumio_error_auth_failed" = "인증 실패";
 "jumio_error_button_retake_both" = "모두 다시 찍기";
 "jumio_error_button_retake_one" = "다시 찍기";
@@ -131,6 +136,7 @@
 "jumio_error_scanning_not_possible" = "현재 스캔을 사용할 수 없습니다. 지원팀에 문의하시기 바랍니다.";
 "jumio_error_session_expired" = "세션 만료";
 "jumio_error_wrong_token" = "현재 스캔을 사용할 수 없습니다. 지원팀에 문의하시기 바랍니다.";
+"jumio_european_did_login_header" = "유럽 디지털 ID";
 "jumio_face_help_eyes_closed" = "눈을 뜨고 계세요";
 "jumio_face_help_obscured_face" = "얼굴을 가리는 것을 모두 제거하세요";
 "jumio_face_help_sunglasses" = "선글라스를 벗으세요";
@@ -154,9 +160,11 @@
 "jumio_id_scan_guide_photo_side" = "사진 측면을 캡처합니다";
 "jumio_id_scan_guide_photo_side_manually" = "수동으로 사진 측면을 캡처합니다";
 "jumio_id_scan_guide_photo_side_tilt" = "하단 가장자리가 보이도록 기울인 다음 프레임에 맞춥니다";
+"jumio_id_scan_hint_error_fallback" = "오류로 인해 스캔 방법이 변경되었습니다.";
 "jumio_id_scan_hint_performance_fallback" = "더 나은 장치 성능을 위해 최적화된 스캔";
 "jumio_id_scan_manual" = "문서 사진 찍기";
 "jumio_id_scan_manual_tips" = "전체 서류를 캡처해야 합니다";
+"jumio_id_scan_prompt_analyzing" = "이미지 분석 중...";
 "jumio_id_scan_prompt_capture_success" = "끝났습니다!";
 "jumio_id_scan_prompt_captured" = "캡처됨";
 "jumio_id_scan_prompt_center_id" = "문서를 중앙에 놓아주세요";
@@ -226,6 +234,9 @@
 "jumio_nfc_id_retry_tag_lost" = "신분증이 감지되면 가만히 기다리세요";
 "jumio_nfc_retry_error_general" = "다시 시도하고 그림대로 지시를 따르세요";
 "jumio_nfc_retry_tag_lost" = "여권이 감지되면 움직임을 멈추세요";
+"jumio_scan_switch_to_back_camera" = "후면 카메라로 전환";
+"jumio_scan_switch_to_front_camera" = "전면 카메라로 전환";
+"jumio_select" = "선택";
 "jumio_start_button" = "시작";
 "jumio_start_instructions_01" = "조명이 밝은 표면을 찾으세요";
 "jumio_start_instructions_02" = "셀카를 찍을 준비를 하세요";
@@ -233,6 +244,8 @@
 "jumio_start_instructions_07" = "앱에서 카메라 플래시를 사용할 수 있습니다";
 "jumio_start_verification" = "인증 시작";
 "jumio_start_verification_subtitle" = "이 절차는 신원을 확인하고 신원 도용으로부터 귀하를 보호하기 위해 고안되었습니다";
+"jumio_switched_to_back_camera" = "후면 카메라로 전환됨";
+"jumio_switched_to_front_camera" = "전면 카메라로 전환됨";
 "jumio_try_again" = "다시 시도하세요";
 "jumio_uploading_success" = "업로드 성공";
 "jumio_uploading_title" = "업로드 중";
