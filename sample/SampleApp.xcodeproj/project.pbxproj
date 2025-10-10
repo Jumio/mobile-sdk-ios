@@ -489,12 +489,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.14.0";
+				MARKETING_VERSION = "4.15.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentSampleSwift;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = JumioDevelopmentSampleSwift;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -517,12 +517,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.14.0";
+				MARKETING_VERSION = "4.15.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = JumioDistributionSampleSwift;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

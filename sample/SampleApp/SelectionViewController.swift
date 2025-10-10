@@ -7,6 +7,7 @@
 import UIKit
 import Jumio
 
+@MainActor
 protocol SelectionViewControllerDelegate: AnyObject {
     func selectionViewController(_ sender: SelectionViewController, physicalDocumentsFor country: String) -> [Jumio.Document.Physical]
     func selectionViewController(_ sender: SelectionViewController, digitalDocumentsFor country: String) -> [Jumio.Document.Digital]

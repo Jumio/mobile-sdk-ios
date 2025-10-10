@@ -63,6 +63,11 @@ extension DefaultUI {
         customTheme.nfc.passportPageLight = Jumio.Theme.Value(.cyan)
         customTheme.nfc.passportForeground = Jumio.Theme.Value(.yellow)
         customTheme.nfc.phoneCover = Jumio.Theme.Value(.magenta)
+        customTheme.nfc.phoneScreen = Jumio.Theme.Value(.purple)
+        customTheme.nfc.chipPrimary = Jumio.Theme.Value(.black)
+        customTheme.nfc.chipSecondary = Jumio.Theme.Value(.gray)
+        customTheme.nfc.chipGlow = Jumio.Theme.Value(.green)
+        customTheme.nfc.pulse = Jumio.Theme.Value(.orange)
         
         // ScanView
         customTheme.scanView.tooltipForeground = Jumio.Theme.Value(.yellow)

@@ -7,7 +7,7 @@
 [![Pod Version](https://img.shields.io/cocoapods/v/Jumio.svg?style=flat)](https://cocoapods.org/pods/Jumio)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)
-[![Swift 3.0-5.x](http://img.shields.io/badge/Swift-3.x,%204.x%20&%205.x-orange.svg?style=flat)](https://swift.org/)
+[![Swift 3.0-5.x](https://img.shields.io/badge/Swift-4.x,%205.x%20&%206.x-orange.svg?style=flat)](https://swift.org/)
 
 # Table of Contents
 - [Overview](#overview)

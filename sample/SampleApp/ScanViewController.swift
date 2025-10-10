@@ -7,7 +7,15 @@
 import UIKit
 import Jumio
 
+@MainActor
 class ScanViewController: UIViewController {
+    
+    var message: String? {
+        didSet {
+            guard isViewLoaded else { return }
+            updateExtractionStateLabel()
+        }
+    }
     
     // MARK: - IBOutlets
     @IBOutlet weak var scanView: JumioScanView!
@@ -34,10 +42,12 @@ class ScanViewController: UIViewController {
     
     // MARK: - Functions
     func updateView() {
-        informationLabel.text = "\(customUI?.credentialPart ?? "") \(customUI?.scanMode ?? "")"
-        containerShutterView.isHidden = !scanView.isShutterEnabled
-        fallbackButton.isHidden = !(customUI?.hasFallback ?? true)
-        extractionStateLabel.isHidden = true
+        Task { @MainActor [weak self] in
+            self?.informationLabel.text = "\(self?.customUI?.credentialPart ?? "") \(self?.customUI?.scanMode ?? "")"
+            self?.containerShutterView.isHidden = !(await self?.scanView.isShutterEnabled ?? false)
+            self?.fallbackButton.isHidden = !(self?.customUI?.hasFallback ?? true)
+            self?.updateExtractionStateLabel()
+        }
     }
     
     func showProcessing() {
@@ -52,8 +62,8 @@ class ScanViewController: UIViewController {
         flipView.isHidden = true
     }
     
-    func updateExtractionState(message: String) {
-        extractionStateLabel.isHidden = false
+    private func updateExtractionStateLabel() {
+        extractionStateLabel.isHidden = message?.isEmpty ?? true
         extractionStateLabel.text = message
     }
     
@@ -71,7 +81,9 @@ class ScanViewController: UIViewController {
     }
     
     @IBAction func flash(_ sender: Any) {
-        scanView.flash = !scanView.flash
+        Task { [weak self] in
+            self?.scanView.set(flash: await !(self?.scanView.flash ?? false))
+        }
     }
     
 }

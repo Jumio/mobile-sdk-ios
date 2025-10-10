@@ -6,12 +6,14 @@
 
 import Jumio
 
+@MainActor
 protocol CredentialHandlingDelegate: AnyObject {
     func credentialNeedsConfiguration(for countries: [String])
     func credentialNeedsConfiguration(for acquireModes: [Jumio.Acquire.Mode])
     func credential(initialized scanPartHandling: ScanPartHandling)
 }
 
+@MainActor
 class CredentialHandling {
     typealias Delegate = CredentialHandlingDelegate
     
@@ -90,7 +92,9 @@ class CredentialHandling {
     }
     
     func cancel() {
-        credential?.cancel()
+        Task { [weak self] in
+            await self?.credential?.cancel()
+        }
     }
     
     func finish() {

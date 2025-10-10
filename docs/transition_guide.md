@@ -6,6 +6,55 @@ This section covers all technical changes that should be considered when updatin
 ⚠️&nbsp;&nbsp;When updating your SDK version, __all__ changes/updates made in in the meantime have to be taken into account and applied if necessary.     
 __Example:__ If you're updating from SDK version __3.7.2__ to __3.9.2__, the changes outlined in __3.8.0, 3.9.0__ and __3.9.1__ are __still relevant__.
 
+## 4.15.0
+
+#### Changes to Public API
+The following functions and property-getters are now `async`:
+* `Jumio.Controller.cancel()`
+* `Jumio.Credential.cancel()`
+* `Jumio.ScanPart.cancel()`
+* `Jumio.ScanPart.finish()`
+* `Jumio.Scan.View.isShutterEnabled`
+* `Jumio.Scan.View.flash`
+    * Added `Jumio.Scan.View.set(flash:)` as `Jumio.Scan.View.flash` is get-only.
+* `Jumio.Scan.View.hasFlash`
+
+The following functions and properties are now annotated with `@MainActor`:
+* `Jumio.Confirmation.Handler.parts`
+* `Jumio.Confirmation.Handler.renderPart(part:,view:)`
+* `Jumio.Reject.Handler.parts`
+* `Jumio.Reject.Handler.renderPart(part:,view:)`
+* All functions in `Jumio.DefaultUI.Delegate`
+* All functions in `Jumio.Controller.Delegate`
+* All functions in `Jumio.ScanPart.Delegate`
+* All functions in `Jumio.Preloader.Delegate`
+
+The following classes, structs and enums conform now to `Sendable`:
+* `Jumio.Theme` and all structs within
+* `Jumio.Scan.Mode`
+* `Jumio.Scan.Step`
+* `Jumio.Scan.Update`
+* `Jumio.Scan.Update.ExtractionState`
+* `Jumio.Scan.Update.FallbackReason`
+* `Jumio.Scan.Update.FlashState`
+* `Jumio.Scan.Update.TiltState`
+
+#### Customization options
+* Added `Jumio.Theme.NFC.phoneScreen`
+* Added `Jumio.Theme.NFC.chipPrimary`
+* Added `Jumio.Theme.NFC.chipSecondary`
+* Added `Jumio.Theme.NFC.chipBorder`
+* Added `Jumio.Theme.NFC.pulse`
+  
+#### Localization Keys
+The following keys have been added:
+* `jumio_nfc_error_description_id`
+* `jumio_nfc_error_description_other`
+* `jumio_nfc_error_description_us`
+
+The following key has been removed:
+* `jumio_nfc_retry_error_general`
+
 ## 4.14.0
 
 #### Scan Updates

@@ -9,6 +9,7 @@ import AudioToolbox
 
 import Jumio
 
+@MainActor
 protocol CustomUIDelegate: AnyObject {
     func customUIDidFinish(with result: Jumio.Result)
 }
@@ -346,6 +347,7 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
     
     func scanPartNextPart() {
         guard let scanViewController = topViewController as? ScanViewController else { return }
+        scanViewController.message = nil
         scanViewController.updateView()
         scanViewController.showFlipView()
         
@@ -375,6 +377,7 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
     
     func scanPartDidFallback() {
         guard let scanViewController = topViewController as? ScanViewController else { return }
+        scanViewController.message = nil
         scanViewController.updateView()
     }
     
@@ -411,7 +414,7 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         case .imageAnalysis: message = "IMAGE_ANALYSIS"
         @unknown default: assertionFailure("unknown extraction state")
         }
-        scanViewController.updateExtractionState(message: message)
+        scanViewController.message = message
     }
     
     func scanPartFinished() {

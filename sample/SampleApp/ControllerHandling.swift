@@ -6,6 +6,7 @@
 
 import Jumio
 
+@MainActor
 protocol ControllerHandlingDelegate: AnyObject {
     func controller(consentItems: [Jumio.ConsentItem])
     func controller(overview: [String])
@@ -15,6 +16,7 @@ protocol ControllerHandlingDelegate: AnyObject {
     func controller(initialized credentialHandling: CredentialHandling)
 }
 
+@MainActor
 class ControllerHandling {
     typealias Delegate = ControllerHandlingDelegate
     
@@ -57,7 +59,9 @@ class ControllerHandling {
     }
     
     func cancel() {
-        controller?.cancel()
+        Task { [weak self] in
+            await self?.controller?.cancel()
+        }
     }
     
     func finish() {
@@ -102,7 +106,9 @@ extension ControllerHandling: Jumio.Controller.Delegate {
             // the controller. This will result in finished call with a Jumio.Result
             // instance containing this error. Instead of instantly cancel, you could
             // inspect, show this given error. In our sample code we just cancel right away.
-            controller.cancel()
+            Task {
+                await controller.cancel()
+            }
             return
         }
         delegate?.controller(displayError: error)

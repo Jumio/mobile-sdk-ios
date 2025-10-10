@@ -109,11 +109,11 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration      | Size   | Modules |
 | :------------------------- | :----: | :-----: |
-| Slim                       | 2.09 MB | base          |
-| All                        | 3.92 MB | base, nfc     |
-| All + DefaultUI            | 5.08 MB | base, nfc, defaultUI    |
-| All + IProov               | 6.86 MB | base, nfc, iproov    |
-| All + Liveness             | 5.69 MB | base, nfc, liveness       |
+| Slim                       | 2.43 MB | base          |
+| All                        | 4.29 MB | base, nfc     |
+| All + DefaultUI            | 5.71 MB | base, nfc, defaultUI    |
+| All + IProov               | 7.21 MB | base, nfc, iproov    |
+| All + Liveness             | 6.05 MB | base, nfc, liveness       |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 
@@ -180,6 +180,14 @@ Manual scanning (taking a picture) using the shutterbutton, fallback option in c
 <p float="left">
 <img src="images/capturing_methods/manual_capturing_01.png" alt="Manual Capture Empty" width="30%" height="30%">
 <img src="images/capturing_methods/manual_capturing_02.png" alt="Manual Capture Document" width="30%" height="30%">
+</p>
+
+#### Enhanced Injection Detection
+You may see additional detection screens during the ID Scan process. This is expected behavior and is part of Jumio's enhanced fraud protection measures.
+
+<p float="left">
+<img src="images/capturing_methods/enhanced_injection_detection_01.png" alt="Enhanced Injection Detection" width="30%" height="30%">
+<img src="images/capturing_methods/enhanced_injection_detection_02.png" alt="Enhanced Injection Detection" width="30%" height="30%">
 </p>
 
 ## Glossary

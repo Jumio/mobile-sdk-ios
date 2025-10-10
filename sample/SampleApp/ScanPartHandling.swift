@@ -7,6 +7,7 @@
 import Jumio
 import UIKit
 
+@MainActor
 protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartShowLoadingView()
     func scanPartShowScanView()
@@ -24,6 +25,7 @@ protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartFinished()
 }
 
+@MainActor
 class ScanPartHandling {
     typealias Delegate = ScanPartHandlingDelegate
     
@@ -52,7 +54,9 @@ class ScanPartHandling {
     }
     
     func cancel() {
-        scanPart?.cancel()
+        Task { [weak self] in
+            await self?.scanPart?.cancel()
+        }
     }
     
     func attach(scanView: Jumio.Scan.View) {
@@ -134,11 +138,15 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
             print("retry reason", reason.code, reason.message)
         // CanFinish: Jumio.Scan.Part is finished and waits for .finish().
         case .canFinish:
-            self.scanPart?.finish()
-            delegate?.scanPartFinished()
+            Task { [weak self] in
+                await self?.scanPart?.finish()
+                self?.delegate?.scanPartFinished()
+            }
         // AddonScanPart: Jumio.Scan.Part contains an additional Addon, which can be executed. Show necessary UI for this.
         case .addonScanPart:
             print("Addon is available")
+            let addonConfiguration = data as? Jumio.AddonScanPart.Configuration
+            print("Addon Configuration: ", addonConfiguration as Any)
         // NextPart: Next part in a multipart scan part is available.
         case .nextPart:
             guard let nextPart = data as? Jumio.Credential.Part else { return }
@@ -173,6 +181,8 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
             print("NFC Progress: \(data as? Int ?? 0)")
         // ExtractionState: extraction state updates should be shown to the user to guide him through capturing process
         case .extractionState(let extractionState):
+            // Make sure that the view is fully loaded, when you update your view based on extraction states to avoid crashes.
+            // Extraction states can be sent very close after the scan step Jumio.Scan.Step.scanView.
             delegate?.scanPartShowExtractionState(with: extractionState, and: data)
         // Flash: We enabled the flash. Users are not allowed to disable the flash until a .flash(.off) update is sent.
         case .flash(let flashState):

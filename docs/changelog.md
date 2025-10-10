@@ -15,13 +15,24 @@ For detailed technical changes please refer to our [Transition Guide](transition
 
 ## Support Period
 
-Current SDK version: __4.14.0__     
+Current SDK version: __4.15.0__     
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: __4.15.0__
+![Improvement] Added support for NFC read-only scanning.
+
+![Improvement] Introduced a configurable max retry count for NFC scanning.
+
+![Improvement] Included NFC scanning result status in transaction details via the Retrieval API.
+
+![Improvement] Enhanced user experience for NFC scanning with automatic NFC chip location detection.
 
 ## SDK Version: __4.14.0__
 ![Improvement] Added enhanced virtual camera injection detection [ID Verification, Selfie Verification]
 
 ![Improvement] Accessibility updates for compliance with WCAG 2.2 AA and EAA
+
+![Improvement] Added support for Digital Identity using eIDAS for selected countries [ID Verification]
 
 ## SDK Version: __4.13.0__
 ![Improvement] Added support for NFC extraction of Chilean IDs
