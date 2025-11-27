@@ -1,6 +1,7 @@
-![ID Verification](images/jumio_feature_graphic.jpg)
+![Header Graphic](images/jumio_feature_graphic.jpg)
 
 # Integration Guide for iOS SDK
+
 Jumio’s products allow businesses to establish the genuine identity of their users by verifying government-issued IDs in real-time. ID Verification, Selfie Verification and other services are used by financial service organizations and other leading brands to create trust for safe onboarding, money transfers and user authentication.
 
 ## Table of Contents
@@ -44,36 +45,45 @@ Jumio’s products allow businesses to establish the genuine identity of their u
   - [Custom UI customization](#custom-ui-customization)
 
 ## Release Notes
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: __4.15.0__
+
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.15.0**
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
 ## Code Documentation
+
 Full API documentation for the Jumio iOS SDK can be found [here](https://jumio.github.io/mobile-sdk-ios/Jumio).
 
 ## Setup
+
 The [basic setup](../README.md#basics) is required before continuing with the following setup for the Jumio SDK. If you are updating your SDK to a newer version, please also refer to:
 
-:arrow_right:&nbsp;&nbsp;[Changelog](docs/changelog.md)    
-:arrow_right:&nbsp;&nbsp;[Transition Guide](docs/transition_guide.md)
+:arrow_right:&nbsp;&nbsp;[Changelog](changelog.md)  
+:arrow_right:&nbsp;&nbsp;[Transition Guide](transition_guide.md)
 
 ### Dependencies
 
 #### Via Cocoapods
+
 Jumio supports CocoaPods as dependency management tool for easy integration of the SDK. You are required to use **Cocoapods 1.11.0** or newer.
 
 If you are not yet using Cocoapods in your project, first run:
+
 ```
 sudo gem install cocoapods
 pod init
 ```
+
 Then update your local clone of the specs repo in Terminal to ensure that you are using the latest podspec files using:
+
 ```
 pod repo update
 ```
+
 Adapt your Podfile and add the pods according to the product(s) you want use. Check the following example how a Podfile could look like, with a list of all available Jumio pods:
 
-⚠️⚠️&nbsp;&nbsp;__Note:__ Please do not include everything! Make sure to __only__ use pods that provide to the services you need! It's only possible to add 1 core functionality, but as many addons as needed.
+⚠️⚠️&nbsp;&nbsp;**Note:** Please do not include everything! Make sure to **only** use pods that provide to the services you need! It's only possible to add 1 core functionality, but as many addons as needed.
+
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -102,6 +112,7 @@ To integrate the Jumio SDK with Swift Package Manager, add this [repo](https://g
 The Jumio SDK contains five different targets. Add them to your project based on the functionality that you need in your application.
 
 ```
+
 #Core (always add):
 Jumio # Manual & DocFinder Capture + NFC functionality
 
@@ -110,6 +121,7 @@ JumioIProov # iProov liveness functionality
 JumioLiveness # Jumio liveness functionality
 JumioDefaultUI # Default UI functionality
 JumioLocalization # Adds strings for localization
+
 ```
 
 #### Via Carthage
@@ -119,6 +131,7 @@ Starting from SDK 4.5.0 Jumio supports Carthage as dependency management tool fo
 Adapt you Cartfile and add Jumio dependencies. Check the following example how a Cartfile could look like:
 
 ```
+
 #Core (always add):
 binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.15.0
 
@@ -127,74 +140,94 @@ binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/J
 binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.15.0
 binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.15.0
 binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.15.0
+
 ```
 
 Update you Carthage dependencies via Terminal:
+
 ```
+
 carthage update --use-xcframeworks
+
 ```
 
 ### Manually
+
 Download our frameworks manually via [ios-jumio-mobile-sdk-4.15.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.15.0/ios-jumio-mobile-sdk-4.15.0.zip).
 
-__Using iProov (manually):__
-* JumioIProov.xcframework
-* iProov.xcframework
+**Using iProov (manually):**
 
-ℹ️&nbsp;&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
+- JumioIProov.xcframework
+- iProov.xcframework
+
+ℹ️&nbsp;&nbsp;**Note:** Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
 The Jumio Mobile SDK consists of several dynamic frameworks. Depending on which product you use, you'll have to add the right frameworks to your project.
 
 Please see [Strip unused frameworks](integration_faq.md#strip-unused-frameworks) for more information.
 
-Add the following linker flags to your Xcode Build Settings:  
-ℹ️&nbsp;&nbsp;__Note:__ Added automatically if using CocoaPods.
+Add the following linker flags to your Xcode Build Settings:
+ℹ️&nbsp;&nbsp;**Note:** Added automatically if using CocoaPods.
+
 - "-lc++"
 - "-ObjC" (recommended) or -all_load
 
 Make sure that the following Xcode build settings in your app are set accordingly:
 
-| Setting | Value |
-| :--- | :---: |
-| Link Frameworks Automatically | YES |
+| Setting                       | Value |
+| :---------------------------- | :---: |
+| Link Frameworks Automatically |  YES  |
 
 ### SDK Version Check
+
 Use [`Jumio.SDK.version`][sdkVersion] to check which SDK version is being used.
 
 ### Jailbreak Detection
+
 For security reasons, applications implementing the SDK should not run on jailbroken devices. Use either the below method [`isJailbroken`][isJailbroken] or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices.
-```
-Jumio.SDK.isJailbroken
+
 ```
 
-⚠️&nbsp;&nbsp;__Note:__ Please be aware that the JumioSDK jailbreak check uses various mechanisms for detection, but doesn't guarantee to detect 100% of all jailbroken devices.
+Jumio.SDK.isJailbroken
+
+```
+
+⚠️&nbsp;&nbsp;**Note:** Please be aware that the JumioSDK jailbreak check uses various mechanisms for detection, but doesn't guarantee to detect 100% of all jailbroken devices.
 
 ### Build Settings
+
 For security reasons, you should set the following build settings:
 To generate a position independent executable, the build settings "Generate Position-Dependent Executable" and "Generate Position-Dependent Code" should both be set to "No".
 For Objective-C projects, you should enable stack canaries by adding "-fstack-protector-all" to "Other C Flags".
 For Objective-C projects, you should set "Objective-C Automatic Reference Counting" to "Yes".
 
 ### NFC Setup
+
 To make our SDK capable of reading NFC chips you will need to set the following settings:
 
 Add the Near Field Communication Tag Reading capability to your project, App ID and provisioning profiles in [Apple Developer portal](https://developer.apple.com).
-Add `NFCReaderUsageDescription` to your __info.plist__ file with a proper description of why you are using this feature. You will also need to add the following key and value to your plist file to be able to read NFC chips from passports and identity cards:
-```
-<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
-<array>
-    <string>A0000002471001</string>
-</array>
+Add `NFCReaderUsageDescription` to your **info.plist** file with a proper description of why you are using this feature. You will also need to add the following key and value to your plist file to be able to read NFC chips from passports and identity cards:
+
 ```
 
+<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+<array>
+<string>A0000002471001</string>
+</array>
+
+````
+
 ### Digital Identity Setup
+
 Over the course of Digital Identity verification with 'ID by Mastercard' the SDK will launch an according third party application representing your Digital Identity.
 Communication between both applications (your integrating application and the Digital Identity application) is done via a so-called "deep link".
 
 #### Deep link setup
+
 To enable your app specific deep link, our support team has to setup an according scheme of your choice for you. This scheme will be used by the SDK to identify your application while returning from the Digital Identity provider's application. For the scheme basically any string can be used, however it is recommended that it is unique to your application in some way.
 
 Following snippet shows how the deep link needs to be setup in your application's `AppDelegate.swift` file:
+
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool{
     guard Jumio.SDK.handleDeeplinkURL(url) else {
@@ -205,35 +238,43 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 ```
 
 #### Other Digital Identity providers
+
 Other Digital Identity providers, like 'Brazil CNH-e PDF' or 'eIDAS', stay within the app. Follow [Jumio ID Credential](#jumio-id-credential) and implement the [Scan Steps](#scan-steps) needed for the [`Jumio.Scan.Mode`][jumioScanMode] `digital`.
 
 ### Risk Signal: Device Risk
-If you want to include risk signals into your application, please check our [Risk Signal guide](https://docs.jumio.com/production/Content/References/Risk%20Signals/Device%20Risk.htm).
+
+If you want to include risk signals into your application, please check our [Risk Signal guide](https://documentation.jumio.ai/docs/references/riskSignals/deviceRiskCheck/deviceRisk).
 
 #### Iovation setup
+
 To integrate the device risk vendor Iovation into your application, please follow the [Iovation integration guide](https://github.com/iovation/deviceprint-SDK-iOS).
 
 #### API call
-To provide Jumio with the generated Device Risk blackbox, please follow the [Device Risk API guide](https://docs.jumio.com/production/Content/Integration/Integration%20Channels/REST%20APIs.htm).
 
-----
+To provide Jumio with the generated Device Risk blackbox, please follow the [Device Risk API guide](https://documentation.jumio.ai/docs/developer-resources/API/#rest-apis-for-credential-acquisition).
+
+---
 
 ## ML Models
 
 By default, required models get downloaded by the SDK if not provided via the bundle or preloaded.
 
 ### Bundling models in the app
+
 You can download our encrypted models and add them to your bundle for the following frameworks.
 
-⚠️&nbsp;&nbsp;__Note:__ Make sure not to alter the downloaded models (name or content) before adding them to your bundle.
+⚠️&nbsp;&nbsp;**Note:** Make sure not to alter the downloaded models (name or content) before adding them to your bundle.
 
 #### ID Verification
-You can find the models required for the [`Jumio.Scan.Mode`][jumioScanMode] `docFinder`  [here](https://cdn.mobile.jumio.ai/ios/model/coreml_classifier_on_device_ep_29_float16_quant.enc) and [here](https://cdn.mobile.jumio.ai/ios/model/docfinderModel_121923.enc).
+
+You can find the models required for the [`Jumio.Scan.Mode`][jumioScanMode] `docFinder` [here](https://cdn.mobile.jumio.ai/ios/model/coreml_classifier_on_device_ep_29_float16_quant.enc) and [here](https://cdn.mobile.jumio.ai/ios/model/docfinderModel_121923.enc).
 
 #### Liveness
+
 If you are using JumioLiveness.xcframework, find the required models [here](https://cdn.mobile.jumio.ai/ios/model/liveness_sdk_assets_v_1_1_5.enc).
 
 ### Preloading models
+
 In version `4.9.0` we introduced the [`Jumio.Preloader`][jumioPreloader]jumioPreloader. It provides functionality to preload models without the JumioSDK being initialized. To do so call:
 
 ```swift
@@ -247,7 +288,8 @@ Preloaded models are cached so they will not be downloaded again. To clean the m
 ```swift
 Jumio.Preloader.clean()
 ```
-⚠️&nbsp;&nbsp;__Note:__ `clean` should never be called while the SDK is running.
+
+⚠️&nbsp;&nbsp;**Note:** `clean` should never be called while the SDK is running.
 
 To get notified that preloading has finished, you can implement the [`Jumio.Preloader.Delegate`][jumioPreloaderDelegate] methods and set the delegate as follows:
 
@@ -255,11 +297,13 @@ To get notified that preloading has finished, you can implement the [`Jumio.Prel
 Jumio.Preloader.shared.delegate = {your delegate}
 ```
 
-----
+---
 
 ## Initialization
-Your OAuth2 credentials are constructed using your previous API token as the Client ID and your previous API secret as the Client secret. You can view and manage your Client ID and secret in the Customer Portal under:
-* __Settings > API credentials > OAuth2 Clients__
+
+Your OAuth2 credentials are constructed using your previous API token as the Client ID and your previous API secret as the Client secret. You can view and manage your Client ID and secret in the Jumio Portal under:
+
+- **Settings > API credentials > OAuth2 Clients**
 
 Client ID and Client secret are used to generate an OAuth2 access token. OAuth2 has to be activated for your account. Contact your Jumio Account Manager for activation. Send a workflow request using the acquired OAuth2 access token to receive the SDK token necessary to initialize the Jumio SDK. For more details, please refer to [Authentication and Encryption](../README.md#authentication-and-encryption).
 
@@ -271,20 +315,30 @@ sdk.dataCenter = jumioDataCenter
 
 Make sure that your SDK token is correct. If it isn't, an exception will be thrown. Then provide a reference to identify the scans in your reports (max. 100 characters or `null`). Data center is set to `JumioDataCenter.US` by default. If your customer account is in the EU data center, use `JumioDataCenter.EU` instead. Alternatively, use `JumioDataCenter.SG` for Singapore.
 
-⚠️&nbsp;&nbsp;__Note:__ We strongly recommend storing all credentials outside of your app! We suggest loading them during runtime from your server-side implementation.
+⚠️&nbsp;&nbsp;**Note:** We strongly recommend storing all credentials outside of your app! We suggest loading them during runtime from your server-side implementation.
 
 Make sure initialization and presentation are timely within one minute. On iPads, the presentation style `UIModalPresentationFormSheet` is default and mandatory.
+
 ```
 self.present(jumioViewController, animated: true, completion: nil)
 ```
 
 ## Configuration
-Every Jumio SDK instance is initialized using a specific [`sdk.token`][token]. This token contains information about the workflow, credentials, transaction identifiers and other parameters. Configuration of this token allows you to provide your own internal tracking information for the user and their transaction, specify what user information is captured and by which method, as well as preset options to enhance the user journey. Values configured within the [`sdk.token`][token] during your API request will override any corresponding settings configured in the Customer Portal.
+
+Every Jumio SDK instance is initialized using a specific [`sdk.token`][token]. This token contains information about the workflow, credentials, transaction identifiers and other parameters. Configuration of this token allows you to provide your own internal tracking information for the user and their transaction, specify what user information is captured and by which method, as well as preset options to enhance the user journey. Values configured within the [`sdk.token`][token] during your API request will override any corresponding settings configured in the Jumio Portal.
+
+### Session Initialization Best Practices
+
+- Generate SDK tokens just-in-time before SDK launch.
+- Implement backend-controlled retry logic.
+- Use reportingCriteria and Customer Internal Reference for tracking.
+- Ensure runtime permissions are granted before launch.
 
 ### Workflow Selection
-Use ID verification callback to receive a verification status and verified data positions (see [Callback section](https://docs.jumio.com/production/Content/Integration/Callback.htm)). Make sure that your customer account is enabled to use this feature. A callback URL can be specified for individual transactions (for URL constraints see chapter __Jumio Callback IP Addresses__). This setting overrides any callback URL you have set in the Jumio Customer Portal. Your callback URL must not contain sensitive data like PII (Personally Identifiable Information) or account login. Set your callback URL using the `callbackUrl` parameter.
 
-Use the correct [workflow definition key](https://docs.jumio.com/production/Content/References/Workflows/Standard%20Services.htm) in order to request a specific workflow. Set your key using the `workflowDefinition.key` parameter.
+Use ID verification callback to receive a verification status and verified data positions (see [Callback section](https://documentation.jumio.ai/docs/developer-resources/callback)). Make sure that your customer account is enabled to use this feature. A callback URL can be specified for individual transactions (for URL constraints see chapter **Jumio Callback IP Addresses**). This setting overrides any callback URL you have set in the Jumio Portal. Your callback URL must not contain sensitive data like PII (Personally Identifiable Information) or account login. Set your callback URL using the `callbackUrl` parameter.
+
+Use the correct [workflow definition key](https://documentation.jumio.ai/docs/references/servicesAndworkflow/standardService/standardServices) in order to request a specific workflow. Set your key using the `workflowDefinition.key` parameter.
 
 ```
 '{
@@ -299,14 +353,16 @@ Use the correct [workflow definition key](https://docs.jumio.com/production/Cont
 For more details, please refer to our [Workflow Description Guide](https://support.jumio.com/hc/en-us/articles/4408958923803-KYX-Workflows-User-Guide).
 
 Selfie Verification has to be activated for your account. If you use Selfie Verification, make sure the necessary frameworks are linked to your app project:
-* `iProov.framework`
 
-ℹ️&nbsp;&nbsp;__Note:__ Selfie Verification requires portrait orientation in your app.
+- `iProov.framework`
+
+ℹ️&nbsp;&nbsp;**Note:** Selfie Verification requires portrait orientation in your app.
 
 ### Transaction Identifiers
+
 There are several options in order to uniquely identify specific transactions. `customerInternalReference` allows you to specify your own unique identifier for a certain scan (max. 100 characters). Use `reportingCriteria`, to identify the scan in your reports (max. 100 characters). You can also set a unique identifier for each user using `userReference` (max. 100 characters).
 
-For more details, please refer to __Request Body__ section in our [KYX Guide](https://docs.jumio.com/production/Content/References/Workflows/IDIV/Account%20Creation%20or%20Update.htm).
+For more details, please refer to **Request Body** section in our [KYX Guide](https://documentation.jumio.ai/docs/developer-resources/API/CreateUpdateAccounts/creating-and-updating-accounts).
 
 ```
 '{
@@ -319,14 +375,16 @@ For more details, please refer to __Request Body__ section in our [KYX Guide](ht
 }'
 ```
 
-⚠️&nbsp;&nbsp;__Note:__ Transaction identifiers must not contain sensitive data like PII (Personally Identifiable Information) or account login.
+⚠️&nbsp;&nbsp;**Note:** Transaction identifiers must not contain sensitive data like PII (Personally Identifiable Information) or account login.
 
 ### Preselection
+
 You can specify issuing country using [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country codes, as well as ID types to skip selection during the scanning process. In the example down below, Austria ("AUT") and the USA ("USA") have been preselected. PASSPORT and DRIVER_LICENSE have been chosen as preselected document types. If all parameters are preselected and valid and there is only one given combination (one country and one document type), the document selection screen in the SDK can be skipped entirely.
 
-⚠️&nbsp;&nbsp;__Note:__ "Digital Identity" document type can not be preselected!
+⚠️&nbsp;&nbsp;**Note:** "Digital Identity" document type can not be preselected!
 
-For more details, please refer to __Request Body__ section in our [KYX Guide](https://docs.jumio.com/production/Content/References/Workflows/IDIV/Account%20Creation%20or%20Update.htm).
+For more details, please refer to **Request Body** section in our [KYX Guide](https://documentation.jumio.ai/docs/developer-resources/API/CreateUpdateAccounts/creating-and-updating-accounts).
+
 ```
 '{
   "customerInternalReference": "CUSTOMER_REFERENCE",
@@ -348,23 +406,31 @@ For more details, please refer to __Request Body__ section in our [KYX Guide](ht
 ```
 
 ### Camera Handling
+
 Use [`cameraFacing`][cameraFacing] attribute of [`Jumio.Scan.View`][jumioScanView] to configure the default camera and set it to `front` or `back`.
+
 ```
 scanView.cameraFacing = .front
 ```
+
 Use boolean [`hasFlash`][hasFlash] of [`Jumio.Scan.View`][jumioScanView] to see if flash is available for the current device camera. Use boolean [`flash`][flash] to toggle the camera flash.
 
 ## SDK Workflow
-Implement the delegate methods of the [`DefaultUIDelegate`]() protocol to be notified of successful initialization, successful scans, and errors. Dismiss the [`Jumio.ViewController`][jumioViewController] instance in your app in case of success or error.
+
+Implement the delegate methods of the [`DefaultUIDelegate`](DefaultUIDelegate) protocol to be notified of successful initialization, successful scans, and errors. Dismiss the [`Jumio.ViewController`][jumioViewController] instance in your app in case of success or error.
 
 ### Initialization
+
 When this method is fired, the SDK has finished initialization and loading tasks, and is ready to use. The error object is only set when an error has occurred (e.g. wrong credentials are set or a network error occurred).
+
 ```
 sdk.startDefaultUI()
 ```
 
 ### Success
+
 Upon success, the extracted document data is returned within a [`Jumio.Result`][jumioResult] object that includes `workflowExecutionId` and `accountId`. The parameter [`isSuccess`][isSuccess] will be `true`.
+
 ```
 func jumio(sdk: Jumio.SDK, finished result: Jumio.Result) {
         delegate?.defaultUIDidFinish(with: result)
@@ -372,7 +438,9 @@ func jumio(sdk: Jumio.SDK, finished result: Jumio.Result) {
 ```
 
 ### Error
+
 A workflow will result in an error when the user presses the cancel button during the workflow or in an error situation. [`Jumio.Result`][jumioResult] returns `workflowExecutionId` and `accountId`. It will also return a [`Jumio.Error`][jumioError] object, which contains an error code and error message. The parameter [`isSuccess`][isSuccess] will be `false`.
+
 ```
 func jumio(sdk: Jumio.SDK, finished result: Jumio.Result) {
         delegate?.defaultUIDidFinish(with: result)
@@ -380,92 +448,100 @@ func jumio(sdk: Jumio.SDK, finished result: Jumio.Result) {
 ```
 
 ### Retrieving information
+
 The following tables give information on the specification of all data parameters and errors:
-* [`Jumio.IDResult`][jumioIDResult]
-* [`Jumio.FaceResult`][jumioFaceResult]
-* [`Jumio.RejectReason`][jumioRejectReason]
-* [`Jumio.Error`][jumioError]
 
-#### Class ___Jumio.IDResult___
-| Parameter          | Type  	    | Max. length  | Description      |
-|:-------------------|:-----------|:-------------|:-----------------|
-| issuingCountry     | String     |	3            | Country of issue as [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code |
-| idType             | String     |              | PASSPORT, DRIVER_LICENSE, IDENTITY_CARD or VISA as provided or selected |
-| idSubType          | String     |              | Sub type of the scanned ID |
-| firstName          | String     | 100          | First name of the customer |
-| lastName           | String     | 100          | Last name of the customer |
-| dateOfBirth        | String     |              | Date of birth |
-| issuingDate        | String     |              | Date of issue |
-| expiryDate         | String     |              | Date of expiry |
-| documentNumber     | String     | 100          | Identification number of the document |
-| personalNumber     | String     |              | Personal number of the document |
-| curp               | String     |              | Unique Population Registry Code |
-| gender             | String     |              | Gender M, F or X |
-| nationality        | String     |              | Nationality of the customer |
-| placeOfBirth       | String     | 255          | Place of birth	|
-| country            | String     |              | Country of residence |
-| address            | String     | 64           | Street name of residence |
-| city               | String     | 64           | City of residence |
-| subdivision        | String     | 3            | Last three characters of [ISO 3166-2:US](https://en.wikipedia.org/wiki/ISO_3166-2:US) or [ISO 3166-2:CA](https://en.wikipedia.org/wiki/ISO_3166-2:CA) subdivision code	|
-| postalCode         | String     | 15           | Postal code of residence |
-| mrzLine1           | String     | 50           | MRZ line 1	|
-| mrzLine2           | String     | 50           | MRZ line 2	|
-| mrzLine3           | String     | 50           | MRZ line 3	|
-| extractionMethod   | Jumio.Scan.Mode  |          | Extraction method used during scanning (manual, faceIProov, barcode, nfc, docFinder) |
-| imageData          | Jumio.ImageData |          | Wrapper class for accessing image data of all credential parts from an ID verification session. This feature has to be enabled by your account manager. |
+- [`Jumio.IDResult`][jumioIDResult]
+- [`Jumio.FaceResult`][jumioFaceResult]
+- [`Jumio.RejectReason`][jumioRejectReason]
+- [`Jumio.Error`][jumioError]
 
-#### Class ___Jumio.FaceResult___
-|Parameter  |Type 	  | Max. length | Description      |
-|:----------|:--------|:------------|:-----------------|
-| passed    |	Boolean |	          	|
-| extractionMethod | Jumio.Scan.Mode  | | Extraction method used during scanning (faceManual, faceIProov, liveness, livenessPremium) |
-| imageData | Jumio.ImageData | | Wrapper class for accessing image data of all credential parts from an ID verification session. This feature has to be enabled by your account manager. |
+#### Class **_Jumio.IDResult_**
 
-#### Class ___Jumio.RejectReason___
-List of all possible reject reasons returned if Instant Feedback is used. The actually returned reasons depend on the server-side configuration of your merchant:   
+| Parameter        | Type            | Max. length | Description                                                                                                                                                            |
+| :--------------- | :-------------- | :---------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| issuingCountry   | String          | 3           | Country of issue as [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code                                                                |
+| idType           | String          |             | PASSPORT, DRIVER_LICENSE, IDENTITY_CARD or VISA as provided or selected                                                                                                |
+| idSubType        | String          |             | Sub type of the scanned ID                                                                                                                                             |
+| firstName        | String          | 100         | First name of the customer                                                                                                                                             |
+| lastName         | String          | 100         | Last name of the customer                                                                                                                                              |
+| dateOfBirth      | String          |             | Date of birth                                                                                                                                                          |
+| issuingDate      | String          |             | Date of issue                                                                                                                                                          |
+| expiryDate       | String          |             | Date of expiry                                                                                                                                                         |
+| documentNumber   | String          | 100         | Identification number of the document                                                                                                                                  |
+| personalNumber   | String          |             | Personal number of the document                                                                                                                                        |
+| curp             | String          |             | Unique Population Registry Code                                                                                                                                        |
+| gender           | String          |             | Gender M, F or X                                                                                                                                                       |
+| nationality      | String          |             | Nationality of the customer                                                                                                                                            |
+| placeOfBirth     | String          | 255         | Place of birth                                                                                                                                                         |
+| country          | String          |             | Country of residence                                                                                                                                                   |
+| address          | String          | 64          | Street name of residence                                                                                                                                               |
+| city             | String          | 64          | City of residence                                                                                                                                                      |
+| subdivision      | String          | 3           | Last three characters of [ISO 3166-2:US](https://en.wikipedia.org/wiki/ISO_3166-2:US) or [ISO 3166-2:CA](https://en.wikipedia.org/wiki/ISO_3166-2:CA) subdivision code |
+| postalCode       | String          | 15          | Postal code of residence                                                                                                                                               |
+| mrzLine1         | String          | 50          | MRZ line 1                                                                                                                                                             |
+| mrzLine2         | String          | 50          | MRZ line 2                                                                                                                                                             |
+| mrzLine3         | String          | 50          | MRZ line 3                                                                                                                                                             |
+| extractionMethod | Jumio.Scan.Mode |             | Extraction method used during scanning (manual, faceIProov, barcode, nfc, docFinder)                                                                                   |
+| imageData        | Jumio.ImageData |             | Wrapper class for accessing image data of all credential parts from an ID verification session. This feature has to be enabled by your account manager.                |
 
-| Code | Message               | Description      |
-|:-----|:----------------------|:-----------------|
-| 102  | BLACK_WHITE_COPY      | Document appears to be a black and white photocopy |
-| 103  | COLOR_PHOTOCOPY       | Document appears to be a colored photocopy |
-| 104  | DIGITAL_COPY          | Document appears to be a digital copy |
-| 200  | NOT_READABLE          | Document is not readable |
-| 201  | NO_DOC                | No document could be detected |
-| 206  | MISSING_BACK          | Backside of the document is missing |
-| 214  | MISSING_FRONT         | Frontside of the document is missing |
-| 401  | UNSUPPORTED_DOCUMENT  | Frontside or backside of document is unsupported |
-| 501  | INVALID_CERTIFICATE   | Document has no valid certificate, relevant for digital ids |
-| 2001 | BLURRY                | Document image is unusable because it is blurry |
-| 2003 | MISSING_PART_DOC      | Part of the document is missing |
-| 2005 | DAMAGED_DOCUMENT      | Document appears to be damaged |
-| 2004 | HIDDEN_PART_DOC       | Part of the document is hidden |
-| 2006 | GLARE                 | Document image is unusable because of glare |
+#### Class **_Jumio.FaceResult_**
+
+| Parameter        | Type            | Max. length | Description                                                                                                                                             |
+| :--------------- | :-------------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| passed           | Boolean         |             |
+| extractionMethod | Jumio.Scan.Mode |             | Extraction method used during scanning (faceManual, faceIProov, liveness, livenessPremium)                                                              |
+| imageData        | Jumio.ImageData |             | Wrapper class for accessing image data of all credential parts from an ID verification session. This feature has to be enabled by your account manager. |
+
+#### Class **_Jumio.RejectReason_**
+
+List of all possible reject reasons returned if Instant Feedback is used. The actually returned reasons depend on the server-side configuration of your merchant:
+
+| Code | Message              | Description                                                 |
+| :--- | :------------------- | :---------------------------------------------------------- |
+| 102  | BLACK_WHITE_COPY     | Document appears to be a black and white photocopy          |
+| 103  | COLOR_PHOTOCOPY      | Document appears to be a colored photocopy                  |
+| 104  | DIGITAL_COPY         | Document appears to be a digital copy                       |
+| 200  | NOT_READABLE         | Document is not readable                                    |
+| 201  | NO_DOC               | No document could be detected                               |
+| 206  | MISSING_BACK         | Backside of the document is missing                         |
+| 214  | MISSING_FRONT        | Frontside of the document is missing                        |
+| 401  | UNSUPPORTED_DOCUMENT | Frontside or backside of document is unsupported            |
+| 501  | INVALID_CERTIFICATE  | Document has no valid certificate, relevant for digital ids |
+| 2001 | BLURRY               | Document image is unusable because it is blurry             |
+| 2003 | MISSING_PART_DOC     | Part of the document is missing                             |
+| 2005 | DAMAGED_DOCUMENT     | Document appears to be damaged                              |
+| 2004 | HIDDEN_PART_DOC      | Part of the document is hidden                              |
+| 2006 | GLARE                | Document image is unusable because of glare                 |
 
 #### Error Codes
+
 List of all **_error codes_** that are available via the `code` and `message` property of the [`Jumio.Error`][jumioError] object. The first letter (A-Z) represents the error case. The remaining characters are represented by numbers that contain information helping us understand the problem situation ([xx][yyyy]).
 
-| Code | Message  | Description |
-| :----------------------------: |:-------------|:-----------------|
-| A[xx][yyyy]| We have encountered a network communication problem | Retry possible, user decided to cancel |
-| B[xx][yyyy]| Authentication failed | Secure connection could not be established, retry impossible |
-| C[xx]0401 | Authentication failed | API credentials invalid, retry impossible |
-| E[xx]0000 | No Internet connection available | Retry possible, user decided to cancel |
-| F000000 | Scanning not available at this time, please contact the app vendor | Resources cannot be loaded, retry impossible |
-| G000000 | Cancelled by end-user | No error occurred |
-| H000000 | The camera is currently not available | Camera cannot be initialized, retry impossible |
-| I000000 | Certificate not valid anymore. Please update your application | End-to-end encryption key not valid anymore, retry impossible |
-| J000000 | Transaction already finished | User did not complete SDK journey within session lifetime |
-| N000000 | Scanning not available at this time, please contact the app vendor | Required images are missing to finalize the acquisition |
+|    Code     | Message                                                            | Description                                                   |
+| :---------: | :----------------------------------------------------------------- | :------------------------------------------------------------ |
+| A[xx][yyyy] | We have encountered a network communication problem                | Retry possible, user decided to cancel                        |
+| B[xx][yyyy] | Authentication failed                                              | Secure connection could not be established, retry impossible  |
+|  C[xx]0401  | Authentication failed                                              | API credentials invalid, retry impossible                     |
+|  E[xx]0000  | No Internet connection available                                   | Retry possible, user decided to cancel                        |
+|   F000000   | Scanning not available at this time, please contact the app vendor | Resources cannot be loaded, retry impossible                  |
+|   G000000   | Cancelled by end-user                                              | No error occurred                                             |
+|   H000000   | The camera is currently not available                              | Camera cannot be initialized, retry impossible                |
+|   I000000   | Certificate not valid anymore. Please update your application      | End-to-end encryption key not valid anymore, retry impossible |
+|   J000000   | Transaction already finished                                       | User did not complete SDK journey within session lifetime     |
+|   N000000   | Scanning not available at this time, please contact the app vendor | Required images are missing to finalize the acquisition       |
 
-⚠️&nbsp;&nbsp;__Note:__ Please always include the whole error code when filing an error related issue to our support team.
+⚠️&nbsp;&nbsp;**Note:** Please always include the whole error code when filing an error related issue to our support team.
 
 ## Default UI
+
 You can use Jumio SDK with the default theme or specify a custom theme (see [Customization](#customization) for details). Please note though that some screens in Jumio SDK launch in portrait mode only.
 You can start DefaultUI by calling `startDefaultUI` method on `Jumio.SDK` instance.
 Please make sure to include the dependency `Jumio/DefaultUI`.
 
 ## Custom UI
-ID Verification can also be implemented as a __custom scan view.__ This means that only the scan view controllers (including the scan overlays) are provided by the SDK.
+
+ID Verification can also be implemented as a **custom scan view.** This means that only the scan view controllers (including the scan overlays) are provided by the SDK.
 The handling of the lifecycle, document selection, readability confirmation, error handling, and all other steps necessary to complete a scan have to be handled by the client application that implements the SDK.
 
 The following sequence diagram outlines components, callbacks and functions for a basic ID Verification workflow:
@@ -474,7 +550,7 @@ The following sequence diagram outlines components, callbacks and functions for 
 
 Custom UI enables you to create and use a custom scan view with a plain scanning user interface. In order to do that, initialize the SDK instance by setting [`sdk.token`][token] and [`sdk.dataCenter`][dataCenter]. Specify a `delegate` instance which creates a [`Jumio.Controller`][jumioController].
 
-⚠️&nbsp;&nbsp;__Note:__ Instead of setting a `defaultUIDelegate` property, like you would do for DefaultUI, you need to pass a [`Jumio.Controller.Delegate`][jumioControllerDelegate] to the `start` function.
+⚠️&nbsp;__Note:__ Instead of setting a `defaultUIDelegate` property, like you would do for DefaultUI, you need to pass a [`Jumio.Controller.Delegate`][jumioControllerDelegate] to the `start` function.
 
 ```
 sdk = Jumio.SDK()
@@ -482,7 +558,7 @@ sdk?.token = "YOUR_SDK_TOKEN"
 sdk?.dataCenter = jumioDataCenter
 ```
 
-* [`JumioDataCenter`][dataCenter] values: `US`, `EU`, `SG`
+- [`JumioDataCenter`][dataCenter] values: `US`, `EU`, `SG`
 
 Create a [`Jumio.Controller`][jumioController] instance and start the SDK:
 
@@ -491,7 +567,16 @@ var controller = Jumio.Controller?
 controller = sdk?.start(controllerDelegate)
 ```
 
+### UI/UX Best Practices
+
+- Launch SDK only after explicit user consent.
+- Show pre-permission screens explaining camera use.
+- Prompt better lighting for retries.
+- Avoid flashlight use by default.
+- Use SDK localization.
+
 ### Controller Handling
+
 Once the controller is initialized, the following delegate methods will be available to handle [`Jumio.Controller`][jumioController]:
 
 ```
@@ -503,33 +588,37 @@ func jumio(controller: Jumio.Controller, finished result: Jumio.Result)
 func jumio(controller: Jumio.Controller, error: Jumio.Error)
 func jumio(controller: Jumio.Controller, logicalError: Jumio.LogicalError)
 ```
+
 #### Consent Handling
-To support compliance with various data protection laws, if a user's consent is required the parameter `consentItems` will provide a list of `Jumio.ConsentItem`. Each consent item contains a text, a consent type and an URL that will redirect the user to Jumio's consent details. Each `Jumio.ConsentItem` also provides an attributedText where the text is parsed and link holder is underlined. 
+
+To support compliance with various data protection laws, if a user's consent is required the parameter `consentItems` will provide a list of `Jumio.ConsentItem`. Each consent item contains a text, a consent type and an URL that will redirect the user to Jumio's consent details. Each `Jumio.ConsentItem` also provides an attributedText where the text is parsed and link holder is underlined.
 
 If no consent is required, the parameter `consentItems` will be `null`.
 
-Each consent item can be one of two types: 
-* `Jumio.ConsentType.active`
-* `Jumio.ConsentType.passive` 
+Each consent item can be one of two types:
+
+- `Jumio.ConsentType.active`
+- `Jumio.ConsentType.passive`
 
 For `active` types, the user needs to accept the consent items explicitly, e.g. by enabling an UISwitch or checking a checkbox for each consent item. For `passive` types, it is enough to present the consent text and URL to the user. The user implicitly accepts the passive consent items by continuing with the journey.
- 
- The user can open and continue to the provided consent link if they choose to do so. If the user consents to the Jumio policy, [`controllerHandling?.userConsented(consentItem: Jumio.ConsentItem, decision: Bool)`][userConsented] is required to be called internally before any credential can be initialized and the user journey can continue. If no consent is required, the list of `consentItems` will be `null`. If the user does not consent or if [`controllerHandling?.userConsented(consentItem: Jumio.ConsentItem, decision: Bool)`][userConsented] is not called for all the items inside the`consentItems` list, the user will not be able to continue the user journey.
 
-___Please note that biometric data protection laws and other laws governing consent can change over time and therefore you must include user consent handling as described above, even if a record of the user’s consent is not required for your current use case.___
+The user can open and continue to the provided consent link if they choose to do so. If the user consents to the Jumio policy, [`controllerHandling?.userConsented(consentItem: Jumio.ConsentItem, decision: Bool)`][userConsented] is required to be called internally before any credential can be initialized and the user journey can continue. If no consent is required, the list of `consentItems` will be `null`. If the user does not consent or if [`controllerHandling?.userConsented(consentItem: Jumio.ConsentItem, decision: Bool)`][userConsented] is not called for all the items inside the`consentItems` list, the user will not be able to continue the user journey.
 
-⚠️&nbsp;&nbsp;__Note:__ Please be aware that in cases where list of `consentItems` is not null, the user **must consent** to Jumio's processing of personal information, including biometric data, and be provided a link to Jumio's Privacy Notice. Do not accept automatically without showing the user any terms.
+**_Please note that biometric data protection laws and other laws governing consent can change over time and therefore you must include user consent handling as described above, even if a record of the user’s consent is not required for your current use case._**
+
+⚠️&nbsp;&nbsp;**Note:** Please be aware that in cases where list of `consentItems` is not null, the user **must consent** to Jumio's processing of personal information, including biometric data, and be provided a link to Jumio's Privacy Notice. Do not accept automatically without showing the user any terms.
 
 ### Credential Handling
+
 [`Jumio.Credential`][jumioCredential] will contain all necessary information about the scanning process. For ID verification you will receive an [`IDCredential`][jumioIDCredential], for Selfie Verification a [`FaceCredential`][jumioFaceCredential], and so on. Initialize the credential and check if it is already preconfigured. If this is the case, the parameter [`isConfigured`][isConfigured] will be `true` and the credential can be started right away.
 
- ```
+```
 var currentCredential: Jumio.Credential?
 currentCredential = controller?.start(credentialInfo: currentCredentialInfo)
 
 if currentCredential?.isConfigured {
-    scanSides = currentCredential?.scanSides
-    // start next scan part
+   scanSides = currentCredential?.scanSides
+   // start next scan part
 }
 ```
 
@@ -541,39 +630,46 @@ currentCredential.setConfiguration(country: country, document: document)
 ```
 
 #### Jumio ID Credential
+
 In case of [`Jumio.IDCredential`][jumioIDCredential], you can retrieve all available countries from [`supportedCountries`][supportedCountries]. After selecting a specific country from that list, you can query available documents for that country by either calling `physicalDocuments(for:)` or `digitalDocuments(for:)`. To configure the [`Jumio.IDCredential`][jumioIDCredential], pass your desired document as well as the country to `setConfiguration()`:
 
 Retrieve the supported countries:
+
 ```
 let idCredential = ...
 let supportedCountries = idCredential.supportedCountries
 ```
 
 Retrieve the Physical documents for a country:
+
 ```
 let idCredential = ...
 let physicalDocuments = idCredential.physicalDocuments(for: countryCode)
 ```
 
 Retrieve the Digital documents for a country:
+
 ```
 let idCredential = ...
 let digitalDocuments = idCredential.digitalDocuments(for: countryCode)
 ```
 
 Set a valid country / document combination:
+
 ```
 let idCredential = ...
 idCredential.setConfiguration(country: country, document: document)
 ```
 
 Retrieve the first credential part of the credential to start the scanning process by calling:
+
 ```
 var credentialParts: [Jumio.Credential.Part]?
 credentialParts = currentCredential?.parts
 ```
 
 Check if current [`Credential.Part`][jumioCredentialPart] is the first one:
+
 ```
 var index = credentialParts?.firstIndex { $0 == previousCredentialPart } ?? 0
 index += previousCredentialPart != nil ? 1 : 0
@@ -581,31 +677,34 @@ guard credentialParts?.count ?? 0 > index,
               let credentialPart = credentialParts?[index] else { return }
 ```
 
-* [`Jumio.Credential.Category`][credentialCategory] values: `id`, `face`, `document`
+- [`Jumio.Credential.Category`][credentialCategory] values: `id`, `face`, `document`
 
-* [`Jumio.Document`][jumioDocument] values: `Jumio.Document.Physical`, `Jumio.Document.Digital`
+- [`Jumio.Document`][jumioDocument] values: `Jumio.Document.Physical`, `Jumio.Document.Digital`
 
-* [`Jumio.Document.Physical`][jumioPhysicalDocument] represents a single JumioDocumentType and JumioDocumentVariant combination
+- [`Jumio.Document.Physical`][jumioPhysicalDocument] represents a single JumioDocumentType and JumioDocumentVariant combination
 
-    * [`Jumio.Document.Physical.DocumentType`][jumioDocumentType] values: `passport`, `visa`, `drivingLicense`, `identityCard`
+  - [`Jumio.Document.Physical.DocumentType`][jumioDocumentType] values: `passport`, `visa`, `drivingLicense`, `identityCard`
 
-    * [`Jumio.Document.Physical.DocumentVariant`][jumioDocumentVariant] values: `paper`, `plastic`
+  - [`Jumio.Document.Physical.DocumentVariant`][jumioDocumentVariant] values: `paper`, `plastic`
 
-* [`Jumio.Document.Digital`][jumioDigitalDocument] represents a digital document ("Digital Identity")
+- [`Jumio.Document.Digital`][jumioDigitalDocument] represents a digital document ("Digital Identity")
 
 #### Jumio Face Credential
+
 In case of [`Jumio.FaceCredential`][jumioFaceCredential], Jumio uses Certified Liveness technology to determine liveness. The mode can be detected by checking the [`Jumio.Scan.Mode`][jumioScanMode] of the [`Jumio.Scan.Part`][jumioScanPart]. Make sure to also implement `faceManual` as a fallback, in case `liveness` or `faceIProov` is not available.
 
 Retrieve the credential part of the credential to start the scanning process by calling:
+
 ```
 var credentialPart = [Jumio.Credential.Part]?
 var scanPart = credential?.initScanPart(credentialPart, scanPartDelegate: self)
 ```
 
 #### Jumio Document Credential
+
 In case of [`Jumio.DocumentCredential`][jumioDocumentCredential], there is the option to either acquire the image using the camera or selecting a file from the device. Call `setConfiguration` with a [`Jumio.Acquire.Mode`][jumioAcquireMode] to select the preferred mode as described in the code documentation.
 
-* [`Jumio.Acquire.Mode`][jumioAcquireMode] values: `camera`, `file`
+- [`Jumio.Acquire.Mode`][jumioAcquireMode] values: `camera`, `file`
 
 ```
 func select(acquireMode: Jumio.Acquire.Mode?) {
@@ -619,7 +718,9 @@ func select(acquireMode: Jumio.Acquire.Mode?) {
         delegate?.loaded(scanSides: createViewModels(from: documentCredential.parts))
     }
 ```
+
 Retrieve the credential part of the credential to start the scanning process by calling:
+
 ```
 func initScanPart(with credentialPart: Jumio.Credential.Part) {
         guard let scanPart = createScanPart(credentialPart: credentialPart) else { return }
@@ -629,7 +730,9 @@ func initScanPart(with credentialPart: Jumio.Credential.Part) {
 }
 
 ```
+
 If [`Jumio.Acquire.Mode`][jumioAcquireMode] `file` is used, the [`JumioFileAttacher`][jumioFileAttacher] needs to be utilized to add a File or FileDescriptor for the selected [`Jumio.Scan.Part`][jumioScanPart].
+
 ```
 let attacher = Jumio.FileAttacher()
 attacher.attach(scanPart: scanPart)
@@ -638,21 +741,22 @@ attacher.set(url: "path/to/your/file")
 ```
 
 ### ScanPart Handling
+
 The following sequence diagram outlines an overview of ScanPart handling details:
 ![ScanPart Happy Path Diagram](images/happy_paths/scanpart_happy_path_diagram.png)
 
 Start the scanning process by initializing the scan part. Provide a `Jumio.Credential.Part` from the list below:
 
-* [`Jumio.Credential.Part`][jumioCredentialPart] values: `front`, `back`, `face`, `nfc`, `document`, `multipart`, `digital`
+- [`Jumio.Credential.Part`][jumioCredentialPart] values: `front`, `back`, `face`, `nfc`, `document`, `multipart`, `digital`
 
 Each [`Jumio.Scan.Part`][jumioScanPart] has an associated `scanMode`. Depending on the scan mode, you need to provide a different user guidance. The following scan modes are available for the different `Jumio.Credential.Part`s:
 
-* [`Jumio.Scan.Mode`][jumioScanMode] values:
-    * `front`, `back`, `multipart`: `manual`, `barcode`, `docFinder`
-    * `digital`: `web`, `file`
-    * `nfc`: `nfc`
-    * `face`: `faceManual`, `faceIProov`, `liveness`, `livenessPremium`
-    * `document`: `manual`, `file`
+- [`Jumio.Scan.Mode`][jumioScanMode] values:
+  - `front`, `back`, `multipart`: `manual`, `barcode`, `docFinder`
+  - `digital`: `web`, `file`
+  - `nfc`: `nfc`
+  - `face`: `faceManual`, `faceIProov`, `liveness`, `livenessPremium`
+  - `document`: `manual`, `file`
 
 During the scanning process, use the `scanPart` delegate method to check on the scanning progress.
 
@@ -660,7 +764,7 @@ During the scanning process, use the `scanPart` delegate method to check on the 
 
 A [`Jumio.Scan.Step`][jumioScanStep] is sent via `jumio(scanPart: Jumio.Scan.Part, step: Jumio.Scan.Step, data: Any?)` and covers lifecycle events which require action from the customer to continue the process.
 
-* [`Jumio.Scan.Step`][jumioScanStep] values: `prepare`, `started`, `scanView`, `digitalIdentityView`, `thirdPartyVerification`, `attachFile`, `imageTaken`, `processing`, `nextPart`, `confirmationView`, `retry`, `rejectView`, `canFinish`, `addonScanPart`.
+- [`Jumio.Scan.Step`][jumioScanStep] values: `prepare`, `started`, `scanView`, `digitalIdentityView`, `thirdPartyVerification`, `attachFile`, `imageTaken`, `processing`, `nextPart`, `confirmationView`, `retry`, `rejectView`, `canFinish`, `addonScanPart`.
 
 [`prepare`][prepare] is only sent if a scan part requires upfront preparation and the customer should be notified (e.g. by displaying a loading screen).
 
@@ -693,7 +797,7 @@ func jumio(scanPart: Jumio.Scan.Part, step: Jumio.Scan.Step, data: Any?) {
   case .rejectView:
     // Use the rejectReasons to show the user why the scan was rejected
     let rejectReasons = data as? [Jumio.Credential.Part: Jumio.RejectReason] ?? [:]
-    
+
     if let scanPart = self.scanPart {
       rejectHandler?.attach(scanPart: scanPart)
       delegate?.showRejectViews()
@@ -713,6 +817,7 @@ func showRejectViews() {
 The scan part can be confirmed by calling `confirmationHandler?.confirm()` or the scan can be taken again: Either by calling `confirmationHandler?.retake()` in case the scan attempt was successful, or by calling `rejectHandler?.retake()` in case the scan attempt was rejected. (Bad lighting conditions or glare, image was blurry, etc. ...)
 
 The retry scan step returns a data object of type [`Jumio.Retry.Reason`][jumioRetryReason]. On [`retry`][retry], a retry has to be triggered on the credential.
+
 ```
 func jumio(scanPart: Jumio.Scan.Part, step: Jumio.Scan.Step, data: Any?) {
   case .retry:
@@ -741,30 +846,34 @@ Then call [`controller?.finish()`][controllerFinish] to end the user journey.
 
 [`Jumio.Scan.Update`][jumioScanUpdate]s are sent via `jumio(scanPart: Jumio.Scan.Part, updates update: Jumio.Scan.Update, data: Any?)` and cover scan information that is relevant and might need to be displayed during the scanning process.
 
-* [`Jumio.Scan.Update`][jumioScanUpdate] values: `fallback(FallbackReason)`, `nfcExtractionStarted`, `nfcExtractionProgress`, `nfcExtractionFinished`, `extractionState(ExtractionState)`, `flash(FlashState)`, `nextPosition`, `cameraAvailable`
-    * In case of a `fallback`, the `scanMode` changed and you should adapt the user interface to reflect the new scan mode. For example, if you fallback to a manual scan method, you might want to show a shutter button.
-    * `nfcExtractionStarted`, `nfcExtractionProgress`, and `nfcExtractionFinished` make it possible to track the progress of a NFC scan. `nfcExtractionProgress` additionally delivers an integer in the data parameter in the range of 0-100 to signal the progress in the current data group.
-    * `extractionState`s signal a desired user behaviour.
-    * `flash` signals the enabling or disabling of the camera flash.
-    * `nextPosition` signals that the user needs to take a second image, e.g., needs to move the face in a liveness scan.
-    * `cameraAvailable` signals that the camera loaded successfully. Note that `cameraAvailable` is also called when the camera facing was successfully changed.
+- [`Jumio.Scan.Update`][jumioScanUpdate] values: `fallback(FallbackReason)`, `nfcExtractionStarted`, `nfcExtractionProgress`, `nfcExtractionFinished`, `extractionState(ExtractionState)`, `flash(FlashState)`, `nextPosition`, `cameraAvailable`
+
+  - In case of a `fallback`, the `scanMode` changed and you should adapt the user interface to reflect the new scan mode. For example, if you fallback to a manual scan method, you might want to show a shutter button.
+  - `nfcExtractionStarted`, `nfcExtractionProgress`, and `nfcExtractionFinished` make it possible to track the progress of a NFC scan. `nfcExtractionProgress` additionally delivers an integer in the data parameter in the range of 0-100 to signal the progress in the current data group.
+  - `extractionState`s signal a desired user behaviour.
+  - `flash` signals the enabling or disabling of the camera flash.
+  - `nextPosition` signals that the user needs to take a second image, e.g., needs to move the face in a liveness scan.
+  - `cameraAvailable` signals that the camera loaded successfully. Note that `cameraAvailable` is also called when the camera facing was successfully changed.
 
 * [`Jumio.Scan.Update.FallbackReason`][jumioFallbackReason] values: `userAction`, `lowPerformance`
-    * `userAction` is sent after `scanPart.fallback()` was called.
-    * `lowPerformance` is sent, when the device is not capable of running the current `scanMode`.
+
+  - `userAction` is sent after `scanPart.fallback()` was called.
+  - `lowPerformance` is sent, when the device is not capable of running the current `scanMode`.
 
 * [`Jumio.Scan.Update.ExtractionState`][jumioExtractionState]:
-    * We send the following extraction states for the scan mode `docFinder`: `centerId`, `tooClose`, `moveCloser`, `holdStraight`, `tilt`, `imageAnalysis`
-        * In `id` scans, a Double representing the time for which the user needs to hold still is sent in the data parameter of `jumio(scanPart: Jumio.Scan.Part, updates: Jumio.Scan.Update, data: Any?)`, when the extraction state `holdStill` is returned.
-        * We suggest to disable orientation changes during the states `FLASH` and `IMAGE_ANALYSIS`. Please note - fallback and camera switch will also not be available during these stages.
-    * We send the following extraction states for the scan modes `liveness` and `livenessPremium`: `centerFace`, `faceTooClose`, `moveFaceCloser`, `moveFaceIntoFrame`, `levelEyesAndDevice`, `holdStill`, `tiltFaceUp`, `tiltFaceDown`, `tiltFaceLeft`, `tiltFaceRight`
+
+  - We send the following extraction states for the scan mode `docFinder`: `centerId`, `tooClose`, `moveCloser`, `holdStraight`, `tilt`, `imageAnalysis`
+  - We suggest to disable orientation changes during the states `FLASH` and `IMAGE_ANALYSIS`. Please note - fallback and camera switch will also not be available during these stages.
+
+  * We send the following extraction states for the scan modes `liveness` and `livenessPremium`: `centerFace`, `faceTooClose`, `moveFaceCloser`, `moveFaceIntoFrame`, `levelEyesAndDevice`, `holdStill`, `tiltFaceUp`, `tiltFaceDown`, `tiltFaceLeft`, `tiltFaceRight`
 
 * [`Jumio.Scan.Update.FlashState`][jumioFlashState] values: `on`, `off`
 
 * [`Jumio.Scan.Update.TiltState`][jumioTiltState] is sent in the data parameter of `jumio(scanPart: Jumio.Scan.Part, updates: Jumio.Scan.Update, data: Any?)` for the update `extractionState(.tilt)` and returns the current tilt angle as well as the target tilt angle.
-    * When a tilt update is sent, advise the user to tilt the identity document by e.g. showing an animation or an overlay.
+  - When a tilt update is sent, advise the user to tilt the identity document by e.g. showing an animation or an overlay.
 
 ### Result and Error Handling
+
 The method `jumio(controller: Jumio.Controller, finished result: Jumio.Result)` has to be implemented to handle data after a successful scan, which will return [`Jumio.Result`][jumioResult].
 
 ```
@@ -774,7 +883,7 @@ func jumio(controller: Jumio.Controller, finished result: Jumio.Result) {
     }
 ```
 
-⚠️&nbsp;&nbsp;__Note:__ We recommend to hide any sensitive data, which you display to the user, when the app goes to the background. This includes the results you receive from us.
+⚠️&nbsp;&nbsp;**Note:** We recommend to hide any sensitive data, which you display to the user, when the app goes to the background. This includes the results you receive from us.
 
 The delegate method `jumio(controller: Jumio.Controller, error: Jumio.Error)` has to be implemented to handle data after an unsuccessful scan, which will return [`Jumio.Error`][jumioError]. Check the parameter [`error.isRetryable`][isRetryable] to see if the failed scan attempt can be retried. If an error is not retryable, the only possibility is to cancel the controller. This will result in a finished call with a [`Jumio.Result`][jumioResult] instance containing this error.
 
@@ -794,7 +903,7 @@ func jumio(controller: Jumio.Controller, error: Jumio.Error) {
 
 The delegate method `(controller: Jumio.Controller, error: Jumio.LogicalError)` has to be implemented to handle data after an unsuccessful scan. [`Jumio.LogicalError`][jumioLogicalError] case occurs whenever some kind of logical error occurs. (For example: `.deadCredential: Credential` is returned when a credential has already been finished or canceled and can’t execute any action anymore. Controller has to be finished or canceled before a new one can be initialized.
 
-* [`Jumio.LogicalError`][jumioLogicalError] values: `dependencyWrongVersion`, `notYetImplemented`, `deadController`, `errorNotRetryable`, `needToConsentFirst`, `controllerNotCompleted`, `isBeingFinished`, `multipleCredentials`, `unknownCredential`, `deadCredential`, `credentialNotCompleted`, `multipleScanParts`, `unknownScanPart`, `scanPartNotCompleted`, `deadScanPart`, `noFallbackAvailable`, `takePictureNotAllowed`, `tokenValidationFailed`, `dataCenterValidationFailed`
+- [`Jumio.LogicalError`][jumioLogicalError] values: `dependencyWrongVersion`, `notYetImplemented`, `deadController`, `errorNotRetryable`, `needToConsentFirst`, `controllerNotCompleted`, `isBeingFinished`, `multipleCredentials`, `unknownCredential`, `deadCredential`, `credentialNotCompleted`, `multipleScanParts`, `unknownScanPart`, `scanPartNotCompleted`, `deadScanPart`, `noFallbackAvailable`, `takePictureNotAllowed`, `tokenValidationFailed`, `dataCenterValidationFailed`
 
 ```
 func jumio(controller: Jumio.Controller, logicalError: Jumio.LogicalError) {
@@ -813,45 +922,76 @@ func jumio(controller: Jumio.Controller, logicalError: Jumio.LogicalError) {
 ```
 
 #### Instant Feedback
+
 The use of Instant Feedback provides immediate end user feedback by performing a usability check on any image the user took and prompting them to provide a new image immediately if this image is not usable, for example because it is too blurry. Please refer to the [JumioRejectReason table](#class-jumiorejectreason) for a list of all reject possibilities.
 
+#### Error Handling & Retry Strategy
+
+- Categorize errors: soft (retry allowed) vs hard (exit flow).
+- On failure: create new accountId or reuse existing accountId with new session.
+- Redirect to retry/support screen instead of immediate SDK relaunch.
+- Log errors without storing PII.
+
 ## Customization
+
 ### Customization Tool
+
 [Jumio Surface](https://jumio.github.io/surface-tool) is a web tool that offers the possibility to apply and visualize, in real-time, all available customization options for the Jumio SDK, as well as an export feature to import the applied changes straight into your codebase.
 
 [![Jumio Surface](images/surface_tool.png)](https://jumio.github.io/surface-tool)
 
 ### Default UI customization
+
 The surface tool utilizes each screen of Jumio's [Default UI](#default-ui) to visualize all items and colors that can be customized. If you are planning to use the [Default UI](#default-ui) implementation, you can specify the [`Jumio.Theme`][jumioTheme] as a parent style and overriding attributes within this theme.
 
-After customizing the SDK via the surface tool, you can click the `Swift` button in the __Output__ menu on the bottom right to copy the code from the theme [`Jumio.Theme`][jumioTheme] to your iOS app's.
+After customizing the SDK via the surface tool, you can click the `Swift` button in the **Output** menu on the bottom right to copy the code from the theme [`Jumio.Theme`][jumioTheme] to your iOS app's.
 
 You can customize Jumio SDK UI. By using [`Jumio.Theme`][jumioTheme] class you can create your own theme and set it to your Jumio instance. You can use ['our sample app'](../sample/SampleApp/DefaultUI+Customization.swift) as guide to create your theme.
 
 #### Dark Mode
+
 [`Jumio.Theme`][jumioTheme] attributes can also be customized for dark mode. For each [`Jumio.Theme.Value`][jumioThemeValue] you can initiate with either only one color or with `light and dark`. If `light and dark` colors have been specified, they will be applied to the modes respectively.
 Dark mode will be applied when darkmode is enabled in system settings.
 
 ### Custom UI customization
+
 If you implement your own UI, you can still customize how some views provided by the SDK look.
 By following the steps explained in [Default UI customization](#default-ui-customization) you can see potential attributes to override.
 
-----
+## Testing & Validation
+
+- Use Jumio official sample apps to validate flows.
+- Test on varied device tiers and OS versions.
+- Test multiple ID types and lighting conditions.
+
+---
 
 # Security
-All SDK related traffic is sent over HTTPS using TLS and public key pinning. Additionally, the information itself within the transmission is also encrypted utilizing __Application Layer Encryption__ (ALE). ALE is a Jumio custom-designed security protocol that utilizes RSA-OAEP and AES-256 to ensure that the data cannot be read or manipulated even if the traffic was captured.
+
+All SDK related traffic is sent over HTTPS using TLS and public key pinning. Additionally, the information itself within the transmission is also encrypted utilizing **Application Layer Encryption** (ALE). ALE is a Jumio custom-designed security protocol that utilizes RSA-OAEP and AES-256 to ensure that the data cannot be read or manipulated even if the traffic was captured.
+
+## Token Management & Session Security
+
+- Always create SDK tokens server-side.
+- Auth tokens are valid for 60 Mins. Kindly reuse them.
+- Pass Auth tokens securely using HTTPS only and store in-memory only.
+- Never hard-code or store the token creation mechanism on devices.
+- Always log accountId and workflowExecutionId.
 
 # Support
 
 ## Licenses
+
 The software contains third-party open source software. For more information, see [licenses](#licenses).
 
 This software is based in part on the work of the Independent JPEG Group.
 
 ## Contact
+
 If you have any questions regarding our implementation guide please contact Jumio Customer Service at support@jumio.com. The [Jumio online helpdesk](https://support.jumio.com) contains a wealth of information regarding our services including demo videos, product descriptions, FAQs, and other resources that can help to get you started with Jumio.
 
 ## Copyright
+
 &copy; Jumio Corporation, 395 Page Mill Road, Suite 150, Palo Alto, CA 94306
 
 The source code and software available on this website (“Software”) is provided by Jumio Corp. or its affiliated group companies (“Jumio”) "as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall Jumio be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including but not limited to procurement of substitute goods or services, loss of use, data, profits, or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this Software, even if advised of the possibility of such damage.
@@ -893,7 +1033,6 @@ In any case, your use of this Software is subject to the terms and conditions th
 [isRetryable]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Error.html#/s:5JumioAAV5ErrorV11isRetryableSbvp
 [multipart]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Credential/Part.html#/s:5JumioAAV10CredentialC4PartO9multipartyA2FmF
 [nextPosition]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update.html#/s:5JumioAAV4ScanV6UpdateO12nextPositionyA2FmF
-
 [jumioScanView]: https://jumio.github.io/mobile-sdk-ios/Jumio/Classes/JumioScanView.html
 [jumioTheme]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Theme.html
 [jumioThemeValue]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Theme.html#/s:5JumioAAV5ThemeV5ValueV
