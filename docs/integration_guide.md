@@ -419,7 +419,7 @@ Use boolean [`hasFlash`][hasFlash] of [`Jumio.Scan.View`][jumioScanView] to see 
 
 ## SDK Workflow
 
-Implement the delegate methods of the [`DefaultUIDelegate`](defaultUIDelegate) protocol to be notified of successful initialization, successful scans, and errors. Dismiss the [`Jumio.ViewController`][jumioViewController] instance in your app in case of success or error.
+Implement the delegate methods of the [`DefaultUIDelegate`][defaultUIDelegate] protocol to be notified of successful initialization, successful scans, and errors. Dismiss the [`Jumio.ViewController`][jumioViewController] instance in your app in case of success or error.
 
 ### Initialization
 
@@ -984,7 +984,7 @@ All SDK related traffic is sent over HTTPS using TLS and public key pinning. Add
 
 ## Licenses
 
-The software contains third-party open source software. For more information, see [licenses](licenses).
+The software contains third-party open source software. For more information, see [licenses](../licenses).
 
 This software is based in part on the work of the Independent JPEG Group.
 
