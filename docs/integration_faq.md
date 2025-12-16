@@ -1,3 +1,4 @@
+
 ![Header Graphic](images/jumio_feature_graphic.jpg)
 
 # FAQ
@@ -10,7 +11,6 @@
 - [Managing Errors](#managing-errors)
 - [Reducing the Size of Your App](#reducing-the-size-of-your-app)
 	- [Strip Unused Frameworks](#strip-unused-frameworks)
-	- [Bitcode](#bitcode)
 - [Jumio Authentication Workflow Integration](#jumio-authentication-workflow-integration)
 - [Fallback and Manual Capturing](#fallback-and-manual-capturing)
 - [Language Localization](#language-localization)
@@ -90,7 +90,7 @@ Our SDK provides a variety of [customization options](integration_guide.md#custo
 
 ## Managing Errors
 
-Not every error that is returned from the SDK should be treated the same. The error codes listed for [ID Verification](integration_guide.md#error-codes) should be handled specifically.
+Not every error that is returned from the SDK should be treated the same. The [error codes listed for ID Verification](integration_guide.md#error-codes) should be handled specifically.
 
 The following table highlights the most common error codes which are returned from the SDK and explains how to handle them appropriately in your application.
 
@@ -151,7 +151,7 @@ The variable [`hasFallback`](https://jumio.github.io/mobile-sdk-ios/Jumio/Struct
 
 The variable [`isShutterEnabled`](https://jumio.github.io/mobile-sdk-ios/Jumio/Classes/JumioScanView.html#/s:5Jumio0A8ScanViewC16isShutterEnabledSbvp) determines if a shutter button needs to be shown because the image has to be taken manually and returns a boolean. If the method returns true, you will have to display your own shutter button and call the method [`takePicture()`](https://jumio.github.io/mobile-sdk-ios/Jumio/Classes/JumioScanView.html#/s:5Jumio0A8ScanViewC11takePictureyyF) once it is clicked.
 
-**Note:** Please note that the variable `isShutterEnabled` does neither create nor display the actual shutter button!
+⚠️&nbsp;__Note:__ Please note that the variable `isShutterEnabled` does neither create nor display the actual shutter button!
 
 "Manual capturing" simply refers to the user being able to manually take a picture. "Fallback" refers to an alternative scan mode the SDK can resort to if possible, in case there is an issue during the original scanning process. The fallback scan mode might be manual capturing in some cases, but not all.
 
@@ -161,7 +161,7 @@ Our SDK supports localization for different languages and cultures. All label te
 
 This way, when upgrading our SDK to a newer version your localization file won't be overwritten. Make sure, that the content of this localization file is up to date after an SDK update. If you're having issues with Localization, please refer to our [Known Issues](known_issues.md#language-localization-issues)
 
-**Note:** If using CocoaPods, the original file is located under `/Pods/Jumio/Localization`.
+⚠️&nbsp;__Note:__ If using CocoaPods, the original file is located under `/Pods/Jumio/Localization`.
 
 Currently, the following languages are automatically supported for your convenience: [supported languages](../README.md#language-localization)
 

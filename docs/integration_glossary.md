@@ -30,7 +30,7 @@ Know Your Customer
 
 ### KYX
 
-Know Your Everything: Jumio’s end-to-end [identity platform](https://www.jumio.com/kyx/)
+Know Your Everything: Jumio’s end-to-end [identity platform](https://www.jumio.com/platform/)
 
 ### MRP
 
@@ -66,7 +66,7 @@ An [access token using the OAuth2 protocol](https://oauth.net/2/access-tokens/) 
 
 ### PII
 
-Personal(ly) Identifiable Information: All of our products deal with highly sensitive data regarding information relating to an identifiable person, which is handled with great care, the best possible security and in compliance with the GDPR
+Personal(ly) Identifiable Information: All of our products deal with highly sensitive data regarding information relating to an identifiable person, which is handled with great care, the best possible security and in compliance with the GDPR.
 
 ### PP
 
@@ -74,4 +74,4 @@ Passport
 
 ### 3D-Liveness
 
-Liveness check: The 3D-liveness check makes sure that a face scan performed was not of a picture, but of an actual, living person who also matches the picture on the previously scanned document
+Liveness check: The 3D-liveness check makes sure that a face scan performed was not of a picture, but of an actual, living person who also matches the picture on the previously scanned document.

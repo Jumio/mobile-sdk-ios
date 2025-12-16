@@ -184,7 +184,7 @@ Your OAuth2 access token is valid for 60 minutes. After the token lifetime is ex
 
 ### Workflow Transaction Token Timeout
 
-The token lifetime is set to 30 minutes per default. It can be configured via the [Jumio Portal](https://documentation.jumio.ai/docs/portals/settings/aboutIDVSettings) and can be overwritten using the API call (`tokenLifetime`). Within this token lifetime the token can be used to initialize the SDK.
+The token lifetime is set to 30 minutes per default. It can be configured via the [Jumio Portal](https://documentation.jumio.ai/docs/portals/welcome_to_the_jumio_portal) and can be overwritten using the API call (`tokenLifetime`). Within this token lifetime the token can be used to initialize the SDK.
 
 As soon as the workflow (transaction) starts, a 15 minutes session timeout is triggered. For each action performed (capture image, upload image) the session timeout will reset, and the 15 minutes will start again.
 
@@ -279,7 +279,7 @@ For more details, please refer to our [integration guide](docs/integration_guide
 - VT (Vehicle title)
 - WWCC (Working with children check)
 
-ℹ️&nbsp;&nbsp;**Note:** To enable the use of this feature, please contact [Jumio support](#support).
+ℹ️&nbsp;&nbsp;**Note:** To enable the use of this feature, please contact [Jumio support](https://support.jumio.com).
 
 ---
 
@@ -289,7 +289,7 @@ As of Jumio iOS SDK 4.5.0, users may use their Digital Identity to verify their 
 For now, 'Brazil CNH-e PDF', 'ID by Mastercard' and 'eIDAS' are the only Digital Identity providers supported by our SDK.
 
 If you want to enable Digital Identity verification for your account please [contact us](https://support.jumio.com).
-In case you are already set up to use Digital Identity verificaiton within your app, check out the integration steps explained [here](docs/integration_guide.md#digital-identity).
+In case you are already set up to use Digital Identity verificaiton within your app, check out the integration steps explained [here](docs/integration_guide.md#digital-identity-setup).
 
 ---
 

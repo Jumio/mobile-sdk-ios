@@ -43,6 +43,8 @@ Jumio’s products allow businesses to establish the genuine identity of their u
   - [Customization Tool](#customization-tool)
   - [Default UI customization](#default-ui-customization)
   - [Custom UI customization](#custom-ui-customization)
+- [Security](#security)
+- [Support](#support)
 
 ## Release Notes
 
@@ -82,7 +84,7 @@ pod repo update
 
 Adapt your Podfile and add the pods according to the product(s) you want use. Check the following example how a Podfile could look like, with a list of all available Jumio pods:
 
-⚠️⚠️&nbsp;&nbsp;**Note:** Please do not include everything! Make sure to **only** use pods that provide to the services you need! It's only possible to add 1 core functionality, but as many addons as needed.
+⚠️&nbsp;__Note:__ Please do not include everything! Make sure to **only** use pods that provide to the services you need! It's only possible to add 1 core functionality, but as many addons as needed.
 
 ```
 source 'https://github.com/CocoaPods/Specs.git'
@@ -160,14 +162,14 @@ Download our frameworks manually via [ios-jumio-mobile-sdk-4.15.0.zip](https://r
 - JumioIProov.xcframework
 - iProov.xcframework
 
-ℹ️&nbsp;&nbsp;**Note:** Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
+⚠️&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
 The Jumio Mobile SDK consists of several dynamic frameworks. Depending on which product you use, you'll have to add the right frameworks to your project.
 
 Please see [Strip unused frameworks](integration_faq.md#strip-unused-frameworks) for more information.
 
-Add the following linker flags to your Xcode Build Settings:
-ℹ️&nbsp;&nbsp;**Note:** Added automatically if using CocoaPods.
+Add the following linker flags to your Xcode Build Settings:  
+⚠️&nbsp;__Note:__ Added automatically if using CocoaPods.
 
 - "-lc++"
 - "-ObjC" (recommended) or -all_load
@@ -215,7 +217,7 @@ Add `NFCReaderUsageDescription` to your **info.plist** file with a proper descri
 <string>A0000002471001</string>
 </array>
 
-````
+```
 
 ### Digital Identity Setup
 
@@ -251,7 +253,7 @@ To integrate the device risk vendor Iovation into your application, please follo
 
 #### API call
 
-To provide Jumio with the generated Device Risk blackbox, please follow the [Device Risk API guide](https://documentation.jumio.ai/docs/developer-resources/API/#rest-apis-for-credential-acquisition).
+To provide Jumio with the generated Device Risk blackbox, please follow the [Device Risk API guide](https://documentation.jumio.ai/docs/references/riskSignals/deviceRiskCheck/deviceRiskwithMobileSDK).
 
 ---
 
@@ -350,13 +352,13 @@ Use the correct [workflow definition key](https://documentation.jumio.ai/docs/re
 }'
 ```
 
-For more details, please refer to our [Workflow Description Guide](https://support.jumio.com/hc/en-us/articles/4408958923803-KYX-Workflows-User-Guide).
+For more details, please refer to our [Workflow Description Guide](https://documentation.jumio.ai/docs/references/servicesAndworkflow/standardService/standardServices).
 
 Selfie Verification has to be activated for your account. If you use Selfie Verification, make sure the necessary frameworks are linked to your app project:
 
 - `iProov.framework`
 
-ℹ️&nbsp;&nbsp;**Note:** Selfie Verification requires portrait orientation in your app.
+⚠️&nbsp;__Note:__ Selfie Verification requires portrait orientation in your app.
 
 ### Transaction Identifiers
 
@@ -417,7 +419,7 @@ Use boolean [`hasFlash`][hasFlash] of [`Jumio.Scan.View`][jumioScanView] to see 
 
 ## SDK Workflow
 
-Implement the delegate methods of the [`DefaultUIDelegate`](DefaultUIDelegate) protocol to be notified of successful initialization, successful scans, and errors. Dismiss the [`Jumio.ViewController`][jumioViewController] instance in your app in case of success or error.
+Implement the delegate methods of the [`DefaultUIDelegate`](defaultUIDelegate) protocol to be notified of successful initialization, successful scans, and errors. Dismiss the [`Jumio.ViewController`][jumioViewController] instance in your app in case of success or error.
 
 ### Initialization
 
@@ -982,7 +984,7 @@ All SDK related traffic is sent over HTTPS using TLS and public key pinning. Add
 
 ## Licenses
 
-The software contains third-party open source software. For more information, see [licenses](#licenses).
+The software contains third-party open source software. For more information, see [licenses](licenses).
 
 This software is based in part on the work of the Independent JPEG Group.
 
@@ -1010,7 +1012,7 @@ In any case, your use of this Software is subject to the terms and conditions th
 [isSuccess]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Result.html#/s:5JumioAAV6ResultC9isSuccessSbvp
 [userConsented]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Controller.html#/s:5JumioAAV10ControllerC13userConsentedyyF
 [isConfigured]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Credential.html#/s:5JumioAAV10CredentialC12isConfiguredSbvp
-[countries]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html#/s:5JumioAAV12IDCredentialC9countriesSDySSSayAB8DocumentVGGvp
+[countries]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html#/s:5JumioAAV12IDCredentialC9countriesSDySSSayAA0A8Document_pGGvp
 [isSupportedConfiguration]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html#/s:5JumioAAV12IDCredentialC24isSupportedConfiguration7country8documentSbSS_AB8DocumentVtF
 [setConfiguration]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html#/s:5JumioAAV12IDCredentialC16setConfiguration7country8documentySS_AB8DocumentVtF
 [credentialCategory]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Credential.html#/s:5JumioAAV10CredentialC8CategoryO
@@ -1018,8 +1020,8 @@ In any case, your use of this Software is subject to the terms and conditions th
 [started]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO7startedyA2FmF
 [imageTaken]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO10imageTakenyA2FmF
 [processing]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO10processingyA2FmF
-[digitalIdentityView]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO10digitalIdentityViewyA2FmF
-[thirdPartyVerification]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO10thirdPartyVerificationyA2FmF
+[digitalIdentityView]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO19digitalIdentityViewyA2FmF
+[thirdPartyVerification]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO22thirdPartyVerificationyA2FmF
 [attachFile]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO10attachFileyA2FmF
 [scanView]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO8scanViewyA2FmF
 [confirmationView]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html#/s:5JumioAAV4ScanV4StepO16confirmationViewyA2FmF
@@ -1055,17 +1057,17 @@ In any case, your use of this Software is subject to the terms and conditions th
 [jumioDataCredential]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/DataCredential.html
 [jumioFaceCredential]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/FaceCredential.html
 [jumioDocument]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Document.html
-[jumioDocumentType]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Document.html#/s:5JumioAAV8DocumentV0B4TypeO
-[jumioDocumentVariant]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Document.html#/s:5JumioAAV8DocumentV0B7VariantO
+[jumioDocumentType]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/PhysicalDocument/DocumentType.html
+[jumioDocumentVariant]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/PhysicalDocument/DocumentVariant.html
 [jumioScanStep]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Step.html
 [jumioScanUpdate]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update.html
 [jumioScanMode]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Mode.html
 [jumioCredentialPart]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Credential/Part.html
-[jumioScanPart]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Mode.html
+[jumioScanPart]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Part.html
 [jumioConfirmationHandler]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Confirmation/Handler.html
 [jumioRejectHandler]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Reject/Handler.html
-[jumioFallbackReason]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/ExtractionState.html
-[jumioExtractionState]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/FallbackReason.html
+[jumioFallbackReason]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/FallbackReason.html
+[jumioExtractionState]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/ExtractionState.html
 [jumioFlashState]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/FlashState.html
 [jumioTiltState]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Scan/Update/TiltState.html
 [jumioPreloader]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Preloader.html

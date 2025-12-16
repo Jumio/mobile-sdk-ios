@@ -11,10 +11,10 @@ For detailed technical changes please refer to our [Transition Guide](transition
 
 ## Support Period
 
-Current SDK version: **4.15.0**  
+Current SDK version: __4.15.0__  
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
 
-## SDK Version: **4.15.0**
+## SDK Version: 4.15.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added support for NFC read-only scanning.
 
@@ -24,7 +24,7 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Enhanced user experience for NFC scanning with automatic NFC chip location detection.
 
-## SDK Version: **4.14.0**
+## SDK Version: 4.14.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added enhanced virtual camera injection detection [ID Verification, Selfie Verification]
 
@@ -32,23 +32,23 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added support for Digital Identity using eIDAS for selected countries [ID Verification]
 
-## SDK Version: **4.13.0**
+## SDK Version: 4.13.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added support for NFC extraction of Chilean IDs
 
 ![Fix](https://img.shields.io/badge/Fix-success) Various bug fixes and improvements
 
-## SDK Version: **4.12.0**
+## SDK Version: 4.12.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added support for Jumio Liveness Premium with enhanced deepfake detection [Selfie Verification]
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added support for Brazilian Digital Driver's License [ID Verification]
 
-## SDK Version: **4.11.1**
+## SDK Version: 4.11.1
 
 ![Fix](https://img.shields.io/badge/Fix-success) Removed Datadog from default podspec [ID Verification, Selfie Verification, Document Verification]
 
-## SDK Version: **4.11.0**
+## SDK Version: 4.11.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added tilted image capture for frontside of ID documents. Enhanced checks of certain document security features [ID Verification]
 
@@ -56,11 +56,11 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added an Updated Authentication Service [Selfie Verification]
 
-## SDK Version: **4.10.1**
+## SDK Version: 4.10.1
 
 ![Fix](https://img.shields.io/badge/Fix-success) Removed Datadog from default podspec [ID Verification, Selfie Verification, Document Verification]
 
-## SDK Version: **4.10.0**
+## SDK Version: 4.10.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Support for 4k Image capture. Improved ML model input, enhanced image and fraud checks [ID Verification]
 
@@ -68,11 +68,11 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Support for Serbian language, for both Cyrillic and Latin [ID Verification, Selfie Verification, Document Verification]
 
-## SDK Version: **4.9.1**
+## SDK Version: 4.9.1
 
 ![Fix](https://img.shields.io/badge/Fix-success) iOS 12 app startup crash fixed [ID Verification]
 
-## SDK Version: **4.9.0**
+## SDK Version: 4.9.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added possibility to pre-load required ML models. For more information checkout the according section
 in the [README](../README.md#ml-models) [ID Verification, Identity Verification]
@@ -88,19 +88,19 @@ in the [README](../README.md#ml-models) [ID Verification, Identity Verification]
 
 ![Change](https://img.shields.io/badge/Change-blue) Removed Device Risk module from SDK [Selfie Verification]
 
-## SDK Version: **4.8.1**
+## SDK Version: 4.8.1
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 10.3.3 [Selfie Verification]
 
-## SDK Version: **4.8.0**
+## SDK Version: 4.8.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Managing Liveness dependencies to help better conversion
 
-## SDK Version: **4.7.1**
+## SDK Version: 4.7.1
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 10.3.3 [Selfie Verification]
 
-## SDK Version: **4.7.0**
+## SDK Version: 4.7.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Datadog SDK version update to 2.0: Added possibility to have two Datadog instances at the same time. Added SPM and Carthage support for Datadog
 
@@ -112,11 +112,11 @@ in the [README](../README.md#ml-models) [ID Verification, Identity Verification]
 
 ![Change](https://img.shields.io/badge/Change-blue) Barcode functionality was moved to Jumio core.
 
-## SDK Version: **4.6.2**
+## SDK Version: 4.6.2
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 10.3.3 [Selfie Verification]
 
-## SDK Version: **4.6.1**
+## SDK Version: 4.6.1
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 10.3.1 [Selfie Verification]
 
@@ -124,7 +124,7 @@ in the [README](../README.md#ml-models) [ID Verification, Identity Verification]
 
 ![Change](https://img.shields.io/badge/Change-blue) Pod Jumio/DeviceRisk was excluded from pod Jumio/All.
 
-## SDK Version: **4.6.0**
+## SDK Version: 4.6.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added Jumio Liveness module to enhance the Liveness user experience and interface [Selfie Verification]
 
@@ -132,7 +132,7 @@ in the [README](../README.md#ml-models) [ID Verification, Identity Verification]
 
 ![Change](https://img.shields.io/badge/Change-blue) Dependency name for iProov liveness was changed, see: [Transition Guide](transition_guide.md). [Selfie Verification]
 
-## SDK Version: **4.5.0**
+## SDK Version: 4.5.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Added possibility for users to verify their identity using [Digital Identity](../README.md#digital-identity) [ID Verification, Identity Verification]
 
@@ -153,7 +153,7 @@ User consent is now acquired for all users to ensure the accordance with biometr
 
 </details>
 
-## SDK Version: **4.4.0**
+## SDK Version: 4.4.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Fully redesigned ID Autocapture experience - seamless capturing, precise guidance and faster user journey [ID Verification]
 
@@ -182,11 +182,11 @@ The Jumio SDK is now buildable with all Simulator iOS versions, but to really pe
 
 </details>
 
-## SDK Version: **4.3.1**
+## SDK Version: 4.3.1
 
 ![Fix](https://img.shields.io/badge/Fix-success) Fixed camera focus issue with iPhone 14 Pro
 
-## SDK Version: **4.3.0**
+## SDK Version: 4.3.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Alignment of previously existing scanning method and improved user experience through addition of Autocapture module [ID Verification]
 
@@ -199,7 +199,7 @@ The Jumio SDK is now buildable with all Simulator iOS versions, but to really pe
 
 ![Fix](https://img.shields.io/badge/Fix-success) UI bugs, internal crashes [Selfie Verification]
 
-## SDK Version: **4.2.0**
+## SDK Version: 4.2.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Support for device fingerprint capability [ID Verification, Selfie Verification]
 
@@ -209,11 +209,11 @@ The Jumio SDK is now buildable with all Simulator iOS versions, but to really pe
 
 ![Fix](https://img.shields.io/badge/Fix-success) Bug fixes: UI bugs, internal crashes, security patches
 
-## SDK Version: **4.1.2**
+## SDK Version: 4.1.2
 
 ![Fix](https://img.shields.io/badge/Fix-success) Fixed NFC library handling
 
-## SDK Version: **4.1.1**
+## SDK Version: 4.1.1
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Improved customization options [ID Verification, Selfie Verification]
 
@@ -223,7 +223,7 @@ The Jumio SDK is now buildable with all Simulator iOS versions, but to really pe
 
 ![Fix](https://img.shields.io/badge/Fix-success) Bug fixes: UI bugs
 
-## SDK Version: **4.1.0**
+## SDK Version: 4.1.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Improved, granular user feedback for improved user experience and workflow through addition of Instant Feedback [ID Verification, Selfie Verification]
 
@@ -235,7 +235,7 @@ The Jumio SDK is now buildable with all Simulator iOS versions, but to really pe
 
 ![Fix](https://img.shields.io/badge/Fix-success) Bug fixes: UI bugs, security improvements, internal crashes
 
-## SDK Version: **4.0.0**
+## SDK Version: 4.0.0
 
 This is a complete rewrite of our SDK. The SDK was built with Custom UI as a basis and restructured to align Android and iOS to reduce overall complexity and integration effort.
 
@@ -249,100 +249,6 @@ This is a complete rewrite of our SDK. The SDK was built with Custom UI as a bas
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Manual capture is now available as a fallback option for all other capture methods
 
-## SDK Version: **3.9.4**
-
-![Fix](https://img.shields.io/badge/Fix-success) iProov SDK version update to 9.0.1, which fixes an issue introduced in SDK 3.9.3 when building with XCode versions prior to XCode 12.5. [Selfie Verification]
-
-## SDK Version: **3.9.3**
-
-![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 9.0.0, which improves performance, reliability and security against spoof attacks. [Selfie Verification]
-
-## SDK Version: **3.9.2**
-
-![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 8.4.0, which improves performance and accuracy [Selfie Verification]
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed issue to avoid duplicate invocation of shouldDisplayHelpWithText: in CustomUI [Selfie Verification]
-
-## SDK Version: **3.9.1**
-
-![Improvement](https://img.shields.io/badge/Improvement-green) iProov SDK version update to 8.3.1, which improves performance and offers additional customization options [Selfie Verification]
-
-## SDK Version: **3.9.0**
-
-![Improvement](https://img.shields.io/badge/Improvement-green) Improved retry guidance for Selfie Verification [Selfie Verification]
-
-![Improvement](https://img.shields.io/badge/Improvement-green) Improved customization options for Selfie Verification [Selfie Verification]
-
-![Improvement](https://img.shields.io/badge/Improvement-green) MicroBlink pdf417 version update to 7.3.0 [ID Verification/Fastfill]
-
-![Improvement](https://img.shields.io/badge/Improvement-green) Added more granular differentiations for `ScanMode` in CustomUI [Selfie Verification]
-
-![Improvement](https://img.shields.io/badge/Improvement-green) Improved handling of extracted data reading from barcodes [ID Verification/Fastfill]
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed rare issue of help animation overlapping with view header on smaller screen sizes [Selfie Verification]
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed missing close button on initial document selection screen [ID Verification/Fastfill]
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed app crashing after back button click on barcode backside scan view in some scenarios [ID Verification/Fastfill]
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed app crashing on face scan start after barcode scanning in some scenarios when using Zoom in certain cases [ID Verification/Fastfill, Selfie Verification]
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed rare occurrence of app being stuck on processing after app is put in the background during iProov face scan [Selfie Verification]
-
-![Change](https://img.shields.io/badge/Change-blue) iProov SDK version update to 8.2.0, which includes image quality improvements that reduces false rejects [Selfie Verification]
-
-## SDK Version: **3.8.0**
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed minor breaking constraints on scan view [ID Verification]
-
-![Change](https://img.shields.io/badge/Change-blue) Added iProov as an additional liveness vendor to the [Jumio KYX platform](https://www.jumio.com/kyx/) [Selfie Verification]
-
-## SDK Version: **3.7.2**
-
-![Improvement](https://img.shields.io/badge/Improvement-green) New error code is returned in case an ad blocker or a firewall is detected [ID Verification/Fastfill, Authentication, Document Verification]
-
-![Improvement](https://img.shields.io/badge/Improvement-green) Added option to test custom UI on Simulator and change position after NetverifyCustomScanViewController is displayed [ID Verification Custom UI]
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed a rare problem in which Selfie Verification (Face capture) was skipped [ID Verification]
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed a problem in which the close button disappeared on iOS 14 [ID Verification/Fastfill]
-
-![Fix](https://img.shields.io/badge/Fix-success) Added a fix to bypass a [CoreNFC bug in XCode 12](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes) that caused the SDK to crash in Simulator
-
-## SDK Version: **3.7.1**
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed problem in reading the issuing date correctly from AUS passports [ID Verification]
-
-![Fix](https://img.shields.io/badge/Fix-success) Fixed problem that front of ID was missing for processing in certain edge cases [ID Verification]
-
-## SDK Version: **3.7.0**
-
-![Change](https://img.shields.io/badge/Change-blue) New NFC reading functionality of Passports [ID Verification]
-
-![Change](https://img.shields.io/badge/Change-blue) Adjusted Jumio logo and default color to reflect new Jumio appearance [ID Verification/Fastfill, Authentication, Document Verification]
-
-![Improvement](https://img.shields.io/badge/Improvement-green) Support of 24 new languages [ID Verification/Fastfill, Authentication, Document Verification]
-
-![Improvement](https://img.shields.io/badge/Improvement-green) Possibility to retrieve the captured images directly in the SDK [ID Verification/Fastfill]
-
-![Fix](https://img.shields.io/badge/Fix-success) Various smaller bug fixes/improvements [ID Verification/Fastfill, Authentication, Document Verification]
-
-## SDK version: **3.6.0**
-
-![Change](https://img.shields.io/badge/Change-blue) Added support for right-to-left languages [Netverify/Fastfill, Authentication, Document Verification]
-
-![Change](https://img.shields.io/badge/Change-blue) Provide access to document guidance animation [Netverify Custom UI]
-
-![Change](https://img.shields.io/badge/Change-blue) Added Carthage as an additional dependency manager [Netverify/Fastfill, Authentication, Document Verification, BAM Checkout]
-
-![Change](https://img.shields.io/badge/Change-blue) Adjusted handling of document types which don’t support plastic documents [Netverify]
-
-![Improvement](https://img.shields.io/badge/Improvement-green) Support for 5 new languages (Czech, Greek, Hungarian, Polish, Romanian) [Netverify/Fastfill, Authentication, Document Verification]
-
-![Improvement](https://img.shields.io/badge/Improvement-green) Improved accessibility handling [Netverify/Fastfill, Authentication, Document Verification]
-
-![Fix](https://img.shields.io/badge/Fix-success) Various smaller bug fixes/improvements [Netverify/Fastfill, Authentication, Document Verification]
-
 ## Contact
 
-If you have any questions regarding our implementation guide please contact Jumio Customer Service at support@jumio.com. The Jumio online helpdesk contains a wealth of information regarding our service including demo videos, product descriptions, FAQs and other things that may help to get you started with Jumio. [Check it out at here.](https://support.jumio.com.)
+If you have any questions regarding our implementation guide please contact Jumio Customer Service at support@jumio.com. The Jumio online helpdesk contains a wealth of information regarding our service including demo videos, product descriptions, FAQs and other things that may help to get you started with Jumio. [Check it out at here.](https://support.jumio.com).

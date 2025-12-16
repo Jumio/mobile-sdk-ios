@@ -9,11 +9,10 @@
 - [Xcode15](#xcode15)
 - [Symbol not found: Starscream](#symbol-not-found-starscream)
 - [Datadog Dependency Restriction](#datadog-dependency-restriction)
-- [App Crash at Launch Using Simulator](#app-crash-at-launch-using-simulator)
 - [Cropped TableView in Document Selection for iOS 15](#cropped-tableview-in-document-selection-for-ios-15)
 - [SDK Runs Fine on Debug Build, Fails on Release Build](#sdk-runs-fine-on-debug-build-fails-on-release-build)
 - [App Crash: Symbol not found for iProov, SocketIO or Starscream](#app-crash-symbol-not-found-for-iproov-socketio-or-starscream)
-- [CoreNFC Issues with Xcode 12 and Xcode 12.1](#corenfc-issues-with-xcode-12and-xcode-12.1)
+- [CoreNFC Issues with Xcode 12 and Xcode 12.1](#corenfc-issues-with-xcode-12-and-xcode-121)
 - [Custom Theme Issues](#custom-theme-issues)
   - [Language Localization Issues](#language-localization-issues)
     - [Localizable.strings File](#localizable.strings-file)
@@ -74,7 +73,7 @@ pod 'Socket.IO-Client-Swift', '16.0.1'
 pod 'Starscream', '4.0.4'
 ```
 
-ℹ️&nbsp;&nbsp;**Note:** This issue is fixed beginning with SDK version `4.6.1`. Also for customers who are still on SDK 3, updating to SDK `3.9.8` will resolve this.
+⚠️&nbsp;__Note:__ This issue is fixed beginning with SDK version `4.6.1`. Also for customers who are still on SDK 3, updating to SDK `3.9.8` will resolve this.
 
 ## Datadog dependency Restriction
 
@@ -119,9 +118,9 @@ Alternatively, it is also possible to set the key `manageAppVersionAndBuildNumbe
 
 After updating to SDK 3.8.0 and above, the app crashes without warning or the following error message is displayed:
 
-_dyld: Symbol not found: _$s8SocketIO0A11ClientEventO10disconnectyA2CmFWC_  
+_dyld: Symbol not found: _$s8SocketIO0A11ClientEventO10disconnectyA2CmFWC\_  
 _Referenced from: /Users/.../Frameworks/iProov.framework/iProov  
-  Expected in: /Users/b.../Frameworks/SocketIO.framework/SocketIO
+ Expected in: /Users/b.../Frameworks/SocketIO.framework/SocketIO
  in /Users/.../Frameworks/iProov.framework/iProov_
 
 When using iProov, please make sure the following post install hook is included in your `podfile`:
@@ -166,7 +165,7 @@ To select a different language use the “+” button in the **Localizations** s
 
 The `Localizable-Jumio.strings` file makes it possible to easily add translations as key-value pairs. Adapt the values to your required language as needed and add it to your app or framework project. Again, please make sure to mark the project as _Localizable._ After SDK updates, make sure to check whether the content of this localization file is up to date, as individual strings may have changed.
 
-ℹ️&nbsp;&nbsp;**Note:** Refer to the transition guides for possible updates.
+⚠️&nbsp;__Tip:__ Refer to the transition guides for possible updates.
 
 #### Language Changes at Runtime
 
@@ -185,4 +184,4 @@ Countries with documents that need barcode functionality (e.g. US and Canadian d
 
 Frameworks and instructions on how to integrate them [can be found here.](../README.md#integration)
 
-ℹ️&nbsp;&nbsp;**Note:** Version numbers may vary.
+ℹ️&nbsp;__Info:__ Version numbers may vary.
