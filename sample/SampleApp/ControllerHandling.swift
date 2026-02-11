@@ -1,7 +1,7 @@
 //
 //  ControllerHandling.swift
 //
-//  Copyright © 2025 Jumio Corporation. All rights reserved.
+//  Copyright © 2026 Jumio Corporation. All rights reserved.
 //
 
 import Jumio
@@ -83,6 +83,7 @@ extension ControllerHandling: Jumio.Controller.Delegate {
         }
         
         self.credentialInformations = credentialInformations
+        
         let overviewItems: [String] = credentialInformations.map { info in
             switch info.category {
             case .id:

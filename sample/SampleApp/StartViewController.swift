@@ -1,7 +1,7 @@
 //
 //  StartViewController.swift
 //
-//  Copyright © 2025 Jumio Corporation. All rights reserved.
+//  Copyright © 2026 Jumio Corporation. All rights reserved.
 //
 
 import UIKit

@@ -8,6 +8,38 @@ This section covers all technical changes that should be considered when updatin
 When updating your SDK version, **all** changes/updates made in in the meantime have to be taken into account and applied if necessary.
 **Example:** If you're updating from SDK version **3.7.2** to **3.9.2**, the changes outlined in **3.8.0, 3.9.0** and **3.9.1** are **still relevant**.
 
+## 4.16.0
+
+#### DefaultUI
+
+- Removed support for landscape orientation on iPhones in DefaultUI.
+
+#### Modules
+
+- Removed `Jumio/IProov`, please use `Jumio/Liveness` instead.
+- Removed NFC functionality from Jumio core:
+  - Removed `Jumio/Slim` as now `Jumio/Jumio` acts as the only Jumio core product.
+  - Added `Jumio/NFC` as new dependency for NFC functionality.
+  - Check out the [Integration guide](integration_guide.md#via-cocoapods)
+
+#### Customization options
+
+- Added `Jumio.Theme.ScanView.shutter`:
+- Removed `Jumio.Theme.ScanView.documentShutter`
+- Removed `Jumio.Theme.ScanView.faceShutter`
+
+#### Document Verification
+
+- Document Verification supports additional mime types:
+    - `image/webp`
+    - `image/jpeg`
+    - `image/png`
+    - `image/heic`
+    
+#### Scan Updates
+
+- Added `Jumio.Scan.Update.ExtractionState.rotate`
+
 ## 4.15.0
 
 #### Changes to Public API

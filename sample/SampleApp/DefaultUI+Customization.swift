@@ -1,7 +1,7 @@
 //
 //  DefaultUI+Customization.swift
 //
-//  Copyright © 2025 Jumio Corporation. All rights reserved.
+//  Copyright © 2026 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -10,18 +10,6 @@ import Jumio
 extension DefaultUI {
     func customizeSDKColors() -> Jumio.Theme {
         var customTheme = Jumio.Theme()
-        // IProov
-        customTheme.iProov.filterForegroundColor = Jumio.Theme.Value(.blue)
-        customTheme.iProov.filterBackgroundColor = Jumio.Theme.Value(.green)
-        customTheme.iProov.titleTextColor = Jumio.Theme.Value(.brown)
-        customTheme.iProov.closeButtonTintColor = Jumio.Theme.Value(.green)
-        customTheme.iProov.surroundColor = Jumio.Theme.Value(.gray)
-        customTheme.iProov.promptTextColor = Jumio.Theme.Value(.cyan)
-        customTheme.iProov.promptBackgroundColor = Jumio.Theme.Value(.yellow)
-        customTheme.iProov.genuinePresenceAssuranceReadyOvalStrokeColor = Jumio.Theme.Value(.purple)
-        customTheme.iProov.genuinePresenceAssuranceNotReadyOvalStrokeColor = Jumio.Theme.Value(.yellow)
-        customTheme.iProov.livenessAssuranceOvalStrokeColor = Jumio.Theme.Value(.cyan)
-        customTheme.iProov.livenessAssuranceCompletedOvalStrokeColor = Jumio.Theme.Value(.brown)
                 
         // Primary & Secondry Buttons
         customTheme.primaryButton.background = Jumio.Theme.Value(light: .red, dark: .purple)
@@ -74,8 +62,8 @@ extension DefaultUI {
         customTheme.scanView.tooltipBackground = Jumio.Theme.Value(.cyan)
         customTheme.scanView.foreground = Jumio.Theme.Value(.red)
         customTheme.scanView.darkForeground = Jumio.Theme.Value(.red)
-        customTheme.scanView.documentShutter = Jumio.Theme.Value(.purple)
-        customTheme.scanView.faceShutter = Jumio.Theme.Value(.blue)
+        customTheme.scanView.background = Jumio.Theme.Value(.lightGray)
+        customTheme.scanView.shutter = Jumio.Theme.Value(.purple)
         
         // Search Bubble
         customTheme.searchBubble.background = Jumio.Theme.Value(.yellow)

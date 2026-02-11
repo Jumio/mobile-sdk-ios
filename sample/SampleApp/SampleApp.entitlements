@@ -6,5 +6,13 @@
 	<array>
 		<string>TAG</string>
 	</array>
+	<key>com.apple.security.hardened-process</key>
+	<true/>
+	<key>com.apple.security.hardened-process.dyld-ro</key>
+	<true/>
+	<key>com.apple.security.hardened-process.enhanced-security-version</key>
+	<string>1</string>
+	<key>com.apple.security.hardened-process.platform-restrictions</key>
+	<string>2</string>
 </dict>
 </plist>

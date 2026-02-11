@@ -247,7 +247,7 @@ For more details, please refer to our [integration guide](docs/integration_guide
 As of iOS SDK 4.3.0, Document Verification functionality is available.
 This functionality allows users to submit a number of different document types (e.g. a utility bill or bank statement) in digital form and verify the validity and authenticity of this document.
 
-Documents can be submitted using one of two ways: Taking a photo of the document or uploading a PDF file.
+Documents can be submitted using one of two ways: Taking a photo of the document or uploading a file.
 For more details, please refer to our [integration guide](docs/integration_guide.md#jumio-document-credential).
 
 ### Supported Documents:

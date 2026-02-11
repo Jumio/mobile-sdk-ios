@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "4.15.0"
+let version = "4.16.0"
 
 let package = Package(
     name: "Jumio",
@@ -15,10 +15,6 @@ let package = Package(
             targets: ["JumioBundle"]
         ),
         .library(
-            name: "JumioIProov",
-            targets: ["JumioIProovBundle"]
-        ),
-        .library(
             name: "JumioLiveness",
             targets: ["JumioLivenessBundle"]
         ),
@@ -27,15 +23,12 @@ let package = Package(
             targets: ["JumioDefaultUIBundle"]
         ),
         .library(
+            name: "JumioNFC",
+            targets: ["JumioNFCBundle"]
+        ),
+        .library(
             name: "JumioLocalization",
             targets: ["JumioLocalization"]
-        )
-    ],
-    dependencies: [
-        .package(
-            name: "iProov",
-            url: "https://github.com/iProov/ios.git",
-            .upToNextMinor(from: "11.1.1")
         )
     ],
     targets: [
@@ -44,24 +37,23 @@ let package = Package(
                     "Jumio"
                 ]
                ),
-        .target(name: "JumioIProovBundle",
-                dependencies: [
-                    "JumioBundle",
-                    "JumioLivenessBundle",
-                    "JumioIProov",
-                    .product(name: "iProov", package: "iProov")
-                ]
-               ),
         .target(name: "JumioLivenessBundle",
                 dependencies: [
                     "JumioBundle",
-                    "JumioLiveness"
+                    "JumioLiveness",
+                    "JumioLivenessClient"
                 ]
                ),
         .target(name: "JumioDefaultUIBundle",
                 dependencies: [
                     "JumioBundle",
                     "JumioDefaultUI"
+                ]
+        ),
+        .target(name: "JumioNFCBundle",
+                dependencies: [
+                    "JumioBundle",
+                    "JumioNFC"
                 ]
         ),
         .target(name: "JumioLocalization",
@@ -72,22 +64,27 @@ let package = Package(
         .binaryTarget(
             name: "Jumio",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Jumio.xcframework.zip",
-            checksum: "89a2523520aaa6b2a9f07b8a8509a43dc2790649521e04d7f9789d9d55a549bc"
-        ),
-        .binaryTarget(
-            name: "JumioIProov",
-            url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioIProov.xcframework.zip",
-            checksum: "37e3e757d7ab94e2a290537328d234f8c12444c7bd72742dab896e168f234d0a"
+            checksum: "4be947eb1412a7c3894a56b81b77b7353182ceb6d9034729b38c6fc179a36632"
         ),
         .binaryTarget(
             name: "JumioLiveness",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLiveness.xcframework.zip",
-            checksum: "540814cf2d94338b1e868aff0419143b8599a36b6fa7aee1a14038e771c038d7"
+            checksum: "08487644e482e128b4b4103acd953b82529015dbf751ec94646a6b2d52413d10"
+        ),
+        .binaryTarget(
+            name: "JumioLivenessClient",
+            url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLivenessClient.xcframework.zip",
+            checksum: "8eb91c11a4ca3374aae1944a6831c49172b5bdab60fa7a86e2a02e786a09adf0"
         ),
         .binaryTarget(
             name: "JumioDefaultUI",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDefaultUI.xcframework.zip",
-            checksum: "6429b29d4fddbd2c341d67c59caa5e2faca6ec86124734badfb9662556facd8a"
+            checksum: "fdeb51b82051d4e6e23e33ee7aab2ac6b3d8d8be98e7f3ff879ee6c0fc34efe9"
+        ),
+        .binaryTarget(
+            name: "JumioNFC",
+            url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioNFC.xcframework.zip",
+            checksum: "f89400395d12057aa0be7bae954743576ff661134857c0dd26c123fa123590e4"
         ),
     ]
 )

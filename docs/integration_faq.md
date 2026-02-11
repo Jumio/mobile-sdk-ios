@@ -117,13 +117,13 @@ Depending on your specific needs, you may want to strip out unused functionality
 
 The following table shows a range of different product configurations with the frameworks that are required and the corresponding application size. These measurements reflect the extra size that Jumio components add to your app download size and are based on our [sample application](../sample) after being uploaded to the [Appstore](https://apps.apple.com/us/app/jumio-showcase/id639531180).
 
-| Product Configuration |  Size   |       Modules        |
-| :-------------------- | :-----: | :------------------: |
-| Slim                  | 2.43 MB |         base         |
-| All                   | 4.29 MB |      base, nfc       |
-| All + DefaultUI       | 5.71 MB | base, nfc, defaultUI |
-| All + IProov          | 7.21 MB |  base, nfc, iproov   |
-| All + Liveness        | 6.05 MB | base, nfc, liveness  |
+| Product Configuration |  Size   |            Modules             |
+| :-------------------- | :-----: | :----------------------------: |
+| Core                  | 2.40 MB |              base              |
+| Core + NFC            | 4.25 MB |           base, nfc            |
+| Core + DefaultUI      | 3.86 MB |       base, defaultUI          |
+| Core + Liveness       | 4.44 MB |        base, liveness          |
+| Core + all            | 7.75 MB | base, nfc, defaultUI, liveness |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 

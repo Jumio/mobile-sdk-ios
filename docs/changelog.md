@@ -11,8 +11,18 @@ For detailed technical changes please refer to our [Transition Guide](transition
 
 ## Support Period
 
-Current SDK version: __4.15.0__  
+Current SDK version: __4.16.0__  
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: 4.16.0
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Redesign of the ID Autocapture user experience
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Support for image upload for DocProof workflows
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Support for Liveness capture using back camera
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Added separate NFC package
 
 ## SDK Version: 4.15.0
 

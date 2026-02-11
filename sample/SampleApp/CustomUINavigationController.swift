@@ -1,7 +1,7 @@
 //
 //  CustomUINavigationController.swift
 //
-//  Copyright © 2025 Jumio Corporation. All rights reserved.
+//  Copyright © 2026 Jumio Corporation. All rights reserved.
 //
 
 import UIKit
@@ -215,7 +215,6 @@ extension CustomUINavigationController {
         case .faceManual: return "Face manual"
         case .liveness: return "Liveness"
         case .livenessPremium: return "Liveness Premium"
-        case .faceIProov: return "Face iProov"
         case .docFinder: return "Doc Finder"
         case .web: return "Web"
         case .file: return "File"
@@ -412,6 +411,7 @@ extension CustomUINavigationController: ScanPartHandling.Delegate {
         case .tiltFaceLeft: message = "TILT_FACE_LEFT"
         case .tiltFaceRight: message = "TILT_FACE_RIGHT"
         case .imageAnalysis: message = "IMAGE_ANALYSIS"
+        case .rotate: message = "ROTATE"
         @unknown default: assertionFailure("unknown extraction state")
         }
         scanViewController.message = message

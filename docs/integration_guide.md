@@ -48,7 +48,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 
 ## Release Notes
 
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.15.0**
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.16.0**
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -92,17 +92,16 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '13.0'
 use_frameworks! # Required for proper framework handling
 
-#Core (add one of these):
-pod 'Jumio/Slim', '~>4.15.0' # Manual & DocFinder Capture functionality
-pod 'Jumio/Jumio', '~>4.15.0' # Manual & DocFinder Capture + NFC functionality
+#Core (always add):
+pod 'Jumio/Jumio', '~>4.16.0' # Manual & DocFinder Capture
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.15.0' # Liveness functionality
-pod 'Jumio/IProov', '~>4.15.0' # iProov liveness functionality
-pod 'Jumio/DefaultUI', '~>4.15.0' # Default UI functionality
+pod 'Jumio/Liveness', '~>4.16.0' # Liveness functionality
+pod 'Jumio/DefaultUI', '~>4.16.0' # Default UI functionality
+pod 'Jumio/NFC', '~>4.16.0' # NFC functionality
 
 #All:
-pod 'Jumio/All', '~>4.15.0' # All Jumio products with all available scanning methods
+pod 'Jumio/All', '~>4.16.0' # All Jumio products with all available scanning methods
 ```
 
 #### Via Swift Package Manager
@@ -116,12 +115,12 @@ The Jumio SDK contains five different targets. Add them to your project based on
 ```
 
 #Core (always add):
-Jumio # Manual & DocFinder Capture + NFC functionality
+Jumio # Manual & DocFinder Capture
 
 #Addons:
-JumioIProov # iProov liveness functionality
 JumioLiveness # Jumio liveness functionality
 JumioDefaultUI # Default UI functionality
+JumioNFC # NFC functionality
 JumioLocalization # Adds strings for localization
 
 ```
@@ -135,13 +134,12 @@ Adapt you Cartfile and add Jumio dependencies. Check the following example how a
 ```
 
 #Core (always add):
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.15.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.16.0
 
 #Addons:
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioIProov.json" == 4.15.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/IProovDependencies.json" == 4.15.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.15.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.15.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.16.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.16.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioNFC.json" == 4.16.0
 
 ```
 
@@ -155,12 +153,7 @@ carthage update --use-xcframeworks
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.15.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.15.0/ios-jumio-mobile-sdk-4.15.0.zip).
-
-**Using iProov (manually):**
-
-- JumioIProov.xcframework
-- iProov.xcframework
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.16.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.16.0/ios-jumio-mobile-sdk-4.16.0.zip).
 
 ⚠️&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -184,24 +177,29 @@ Make sure that the following Xcode build settings in your app are set accordingl
 
 Use [`Jumio.SDK.version`][sdkVersion] to check which SDK version is being used.
 
-### Jailbreak Detection
+### Device & App Integrity
+We strongly suggest to run the SDK only on uncompromised devices and in untampered apps. We advise the following checks and settings to further hinder attackers from modifying the SDKs behaviour. 
 
-For security reasons, applications implementing the SDK should not run on jailbroken devices. Use either the below method [`isJailbroken`][isJailbroken] or a self-devised check to prevent usage of SDK scanning functionality on jailbroken devices.
-
+#### Jailbreak Detection
+For security reasons, applications implementing the SDK should not run on jailbroken devices. We strongly advise to add a self-devised check to prevent users from running the SDK on jailbroken devices. We provide the below method [`isJailbroken`][isJailbroken] as a fallback mechanism.
 ```
-
 Jumio.SDK.isJailbroken
-
 ```
 
-⚠️&nbsp;&nbsp;**Note:** Please be aware that the JumioSDK jailbreak check uses various mechanisms for detection, but doesn't guarantee to detect 100% of all jailbroken devices.
+⚠️&nbsp;&nbsp;__Note:__ Please be aware that this jailbreak check uses various lightweight mechanisms for detection and doesn't guarantee to detect 100% of all jailbroken devices.
 
-### Build Settings
-
+#### Build Settings
 For security reasons, you should set the following build settings:
+Activate the Enhanced Security capability and check "Enable Additional Runtime Platform Restrictions" and "Enable-Read-only Platform Memory" to leverage the platform's advanced hardening features.
 To generate a position independent executable, the build settings "Generate Position-Dependent Executable" and "Generate Position-Dependent Code" should both be set to "No".
 For Objective-C projects, you should enable stack canaries by adding "-fstack-protector-all" to "Other C Flags".
 For Objective-C projects, you should set "Objective-C Automatic Reference Counting" to "Yes".
+
+#### App Attest
+Use App Attest to check whether an attacker modified the binary of your application before installing it. We suggest to sign API token requests with App Attest and to return tokens only to legitimate applications.
+
+#### Deny Debugger Usage
+We recommend to deny debugging of publicly released apps. We published a [Guide](https://medium.com/jumio/the-invisible-shield-implementing-low-level-anti-debugging-in-ios-1a70a905c318), which provides detailed instructions on how to prevent attackers from debugging your app.
 
 ### NFC Setup
 
@@ -354,12 +352,6 @@ Use the correct [workflow definition key](https://documentation.jumio.ai/docs/re
 
 For more details, please refer to our [Workflow Description Guide](https://documentation.jumio.ai/docs/references/servicesAndworkflow/standardService/standardServices).
 
-Selfie Verification has to be activated for your account. If you use Selfie Verification, make sure the necessary frameworks are linked to your app project:
-
-- `iProov.framework`
-
-⚠️&nbsp;__Note:__ Selfie Verification requires portrait orientation in your app.
-
 ### Transaction Identifiers
 
 There are several options in order to uniquely identify specific transactions. `customerInternalReference` allows you to specify your own unique identifier for a certain scan (max. 100 characters). Use `reportingCriteria`, to identify the scan in your reports (max. 100 characters). You can also set a unique identifier for each user using `userReference` (max. 100 characters).
@@ -484,7 +476,7 @@ The following tables give information on the specification of all data parameter
 | mrzLine1         | String          | 50          | MRZ line 1                                                                                                                                                             |
 | mrzLine2         | String          | 50          | MRZ line 2                                                                                                                                                             |
 | mrzLine3         | String          | 50          | MRZ line 3                                                                                                                                                             |
-| extractionMethod | Jumio.Scan.Mode |             | Extraction method used during scanning (manual, faceIProov, barcode, nfc, docFinder)                                                                                   |
+| extractionMethod | Jumio.Scan.Mode |             | Extraction method used during scanning (manual, barcode, nfc, docFinder)                                                                                               |
 | imageData        | Jumio.ImageData |             | Wrapper class for accessing image data of all credential parts from an ID verification session. This feature has to be enabled by your account manager.                |
 
 #### Class **_Jumio.FaceResult_**
@@ -492,7 +484,7 @@ The following tables give information on the specification of all data parameter
 | Parameter        | Type            | Max. length | Description                                                                                                                                             |
 | :--------------- | :-------------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | passed           | Boolean         |             |
-| extractionMethod | Jumio.Scan.Mode |             | Extraction method used during scanning (faceManual, faceIProov, liveness, livenessPremium)                                                              |
+| extractionMethod | Jumio.Scan.Mode |             | Extraction method used during scanning (faceManual, liveness, livenessPremium)                                                                          |
 | imageData        | Jumio.ImageData |             | Wrapper class for accessing image data of all credential parts from an ID verification session. This feature has to be enabled by your account manager. |
 
 #### Class **_Jumio.RejectReason_**
@@ -537,7 +529,7 @@ List of all **_error codes_** that are available via the `code` and `message` pr
 
 ## Default UI
 
-You can use Jumio SDK with the default theme or specify a custom theme (see [Customization](#customization) for details). Please note though that some screens in Jumio SDK launch in portrait mode only.
+You can use Jumio SDK with the default theme or specify a custom theme (see [Customization](#customization) for details). Please note that the Jumio SDK launches in portrait mode only.
 You can start DefaultUI by calling `startDefaultUI` method on `Jumio.SDK` instance.
 Please make sure to include the dependency `Jumio/DefaultUI`.
 
@@ -693,7 +685,7 @@ guard credentialParts?.count ?? 0 > index,
 
 #### Jumio Face Credential
 
-In case of [`Jumio.FaceCredential`][jumioFaceCredential], Jumio uses Certified Liveness technology to determine liveness. The mode can be detected by checking the [`Jumio.Scan.Mode`][jumioScanMode] of the [`Jumio.Scan.Part`][jumioScanPart]. Make sure to also implement `faceManual` as a fallback, in case `liveness` or `faceIProov` is not available.
+In case of [`Jumio.FaceCredential`][jumioFaceCredential], Jumio uses Certified Liveness technology to determine liveness. The mode can be detected by checking the [`Jumio.Scan.Mode`][jumioScanMode] of the [`Jumio.Scan.Part`][jumioScanPart]. Make sure to also implement `faceManual` as a fallback, in case `liveness` is not available.
 
 Retrieve the credential part of the credential to start the scanning process by calling:
 
@@ -701,6 +693,8 @@ Retrieve the credential part of the credential to start the scanning process by 
 var credentialPart = [Jumio.Credential.Part]?
 var scanPart = credential?.initScanPart(credentialPart, scanPartDelegate: self)
 ```
+
+⚠️&nbsp;__Note:__ Portrait orientation is required when performing the face credential.
 
 #### Jumio Document Credential
 
@@ -741,6 +735,7 @@ attacher.attach(scanPart: scanPart)
 attacher.set(url: "path/to/your/file")
 
 ```
+Check the [`Jumio.FileRequirements`][jumioFileRequirements] to know the specifications of the file. Currently, the SDK supports `application/pdf`, `image/webp`, `image/jpeg`, `image/png` and `image/heic`.
 
 ### ScanPart Handling
 
@@ -757,7 +752,7 @@ Each [`Jumio.Scan.Part`][jumioScanPart] has an associated `scanMode`. Depending 
   - `front`, `back`, `multipart`: `manual`, `barcode`, `docFinder`
   - `digital`: `web`, `file`
   - `nfc`: `nfc`
-  - `face`: `faceManual`, `faceIProov`, `liveness`, `livenessPremium`
+  - `face`: `faceManual`, `liveness`, `livenessPremium`
   - `document`: `manual`, `file`
 
 During the scanning process, use the `scanPart` delegate method to check on the scanning progress.
@@ -864,8 +859,8 @@ Then call [`controller?.finish()`][controllerFinish] to end the user journey.
 
 * [`Jumio.Scan.Update.ExtractionState`][jumioExtractionState]:
 
-  - We send the following extraction states for the scan mode `docFinder`: `centerId`, `tooClose`, `moveCloser`, `holdStraight`, `tilt`, `imageAnalysis`
-  - We suggest to disable orientation changes during the states `FLASH` and `IMAGE_ANALYSIS`. Please note - fallback and camera switch will also not be available during these stages.
+  - We send the following extraction states for the scan mode `docFinder`: `centerId`, `tooClose`, `moveCloser`, `holdStraight`, `tilt`, `imageAnalysis`, `rotate`
+  - Please note - fallback and camera switch will also not be available during the states `FLASH` and `IMAGE_ANALYSIS`.
 
   * We send the following extraction states for the scan modes `liveness` and `livenessPremium`: `centerFace`, `faceTooClose`, `moveFaceCloser`, `moveFaceIntoFrame`, `levelEyesAndDevice`, `holdStill`, `tiltFaceUp`, `tiltFaceDown`, `tiltFaceLeft`, `tiltFaceRight`
 
@@ -1075,3 +1070,4 @@ In any case, your use of this Software is subject to the terms and conditions th
 [jumioAcquireMode]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Acquire/Mode.html
 [jumioFileAttacher]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/FileAttacher.html
 [jumioFileAttachHelpUrl]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/FileAttacher.html#/s:5JumioAAV12FileAttacherC7helpUrlSSSgvp
+[jumioFileRequirements]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/FileRequirements.html
