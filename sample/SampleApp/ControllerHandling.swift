@@ -6,7 +6,6 @@
 
 import Jumio
 
-@MainActor
 protocol ControllerHandlingDelegate: AnyObject {
     func controller(consentItems: [Jumio.ConsentItem])
     func controller(overview: [String])
@@ -16,7 +15,6 @@ protocol ControllerHandlingDelegate: AnyObject {
     func controller(initialized credentialHandling: CredentialHandling)
 }
 
-@MainActor
 class ControllerHandling {
     typealias Delegate = ControllerHandlingDelegate
     
@@ -76,13 +74,14 @@ class ControllerHandling {
 
 // MARK: - Jumio.Controller.Delegate
 extension ControllerHandling: Jumio.Controller.Delegate {
-    func jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?) {
+    func jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?, termsOfUse: Jumio.TermsOfUse?) {
         // check if consentItems are provided, if yes your user needs to consent to them
         if let consentItems = consentItems {
             delegate?.controller(consentItems: consentItems)
         }
         
-        self.credentialInformations = credentialInformations
+        // respect the order of credentials, otherwise, a logical error is thrown
+        self.credentialInformations = credentialInformations.sorted(by: { $0.order < $1.order })
         
         let overviewItems: [String] = credentialInformations.map { info in
             switch info.category {

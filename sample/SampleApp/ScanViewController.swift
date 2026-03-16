@@ -7,7 +7,6 @@
 import UIKit
 import Jumio
 
-@MainActor
 class ScanViewController: UIViewController {
     
     var message: String? {

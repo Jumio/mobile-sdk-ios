@@ -119,11 +119,11 @@ The following table shows a range of different product configurations with the f
 
 | Product Configuration |  Size   |            Modules             |
 | :-------------------- | :-----: | :----------------------------: |
-| Core                  | 2.40 MB |              base              |
-| Core + NFC            | 4.25 MB |           base, nfc            |
-| Core + DefaultUI      | 3.86 MB |       base, defaultUI          |
-| Core + Liveness       | 4.44 MB |        base, liveness          |
-| Core + all            | 7.75 MB | base, nfc, defaultUI, liveness |
+| Core                  | 2.45 MB |              base              |
+| Core + NFC            | 4.48 MB |           base, nfc            |
+| Core + DefaultUI      | 3.75 MB |       base, defaultUI          |
+| Core + Liveness       | 4.31 MB |        base, liveness          |
+| Core + all            | 7.64 MB | base, nfc, defaultUI, liveness |
 
 In case you use a combination of these products, make sure to add frameworks only once to your app and that those frameworks are linked and embedded in your Xcode project.
 

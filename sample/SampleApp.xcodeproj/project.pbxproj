@@ -10,6 +10,7 @@
 		05E2139127E23B14006E36A1 /* DefaultUI+Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E2139027E23B14006E36A1 /* DefaultUI+Customization.swift */; };
 		773CE521289037FA00E98F05 /* AcquireModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773CE520289037FA00E98F05 /* AcquireModeViewController.swift */; };
 		773CE5232890405800E98F05 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773CE5222890405800E98F05 /* FileViewController.swift */; };
+		775A51BC2F1FB5B1003F3FDB /* DocumentFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775A51BB2F1FB5B1003F3FDB /* DocumentFoundViewController.swift */; };
 		77640FF1273BD7F400917566 /* Localizable-Jumio.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77640FEF273BD7F400917566 /* Localizable-Jumio.strings */; };
 		967A1E6926988857005A1233 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A1E6826988857005A1233 /* AppDelegate.swift */; };
 		967A1E6B26988857005A1233 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A1E6A26988857005A1233 /* SceneDelegate.swift */; };
@@ -68,6 +69,7 @@
 		77024A3F2BB2D04A009E28AD /* sr-Latn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "sr-Latn"; path = "Frameworks/Localization/sr-Latn.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		773CE520289037FA00E98F05 /* AcquireModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcquireModeViewController.swift; sourceTree = "<group>"; };
 		773CE5222890405800E98F05 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		775A51BB2F1FB5B1003F3FDB /* DocumentFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentFoundViewController.swift; sourceTree = "<group>"; };
 		77640FF0273BD7F400917566 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = "Frameworks/Localization/af.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		77640FF2273BD80400917566 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = "Frameworks/Localization/ar.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
 		77640FF3273BD83800917566 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = "Frameworks/Localization/bg.lproj/Localizable-Jumio.strings"; sourceTree = SOURCE_ROOT; };
@@ -255,6 +257,7 @@
 				F336C8CE26C18216001D910F /* ErrorViewController.swift */,
 				96EECB0027C62FFB003D8B52 /* RetryViewController.swift */,
 				BE3ED5AD299D25520088F7B5 /* DigitalIdentityViewController.swift */,
+				775A51BB2F1FB5B1003F3FDB /* DocumentFoundViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			files = (
 				F336C8CD26C1648A001D910F /* ConfirmationViewController.swift in Sources */,
 				967A1E6D26988857005A1233 /* ViewController.swift in Sources */,
+				775A51BC2F1FB5B1003F3FDB /* DocumentFoundViewController.swift in Sources */,
 				96FF9C7D269C334F00E93BAA /* DefaultUI.swift in Sources */,
 				F336C8D126C1A389001D910F /* ResultViewController.swift in Sources */,
 				773CE521289037FA00E98F05 /* AcquireModeViewController.swift in Sources */,
@@ -491,11 +495,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.16.0";
+				MARKETING_VERSION = "4.17.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentSampleSwift;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = JumioDevelopmentSampleSwift;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -521,11 +526,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.16.0";
+				MARKETING_VERSION = "4.17.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = JumioDistributionSampleSwift;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

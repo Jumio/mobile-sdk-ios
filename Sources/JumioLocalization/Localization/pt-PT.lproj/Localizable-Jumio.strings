@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Frente";
 "jumio_accessibility_scan_shutter_button" = "Tire uma fotografia";
 "jumio_accessibility_scan_switch_camera" = "Alternar câmara";
-"jumio_analyzing_biometric" = "A analisar os dados biométricos";
 "jumio_brazil_cnh_subtitle" = "Para continuar com o carregamento, certifique-se de que transferiu um PDF da carta de condução digital a partir da aplicação governamental oficial [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Carregar um PDF da CNH Digital";
 "jumio_button_cancel" = "Cancelar";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "A imagem é demasiado desfocada para ser verificada";
 "jumio_error_instant_feedback_both_images_retaken" = "As imagens têm de ser captadas de novo";
 "jumio_error_instant_feedback_brazil_cnh" = "Certifique-se de que transferiu um PDF da carta de condução digital a partir da aplicação governamental oficial [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Tente novamente com uma imagem a cores";
-"jumio_error_instant_feedback_bw_copy_title" = "A imagem é uma fotocópia a preto e branco";
-"jumio_error_instant_feedback_color_photocopy_title" = "A imagem parece ser uma fotocópia a cores";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Tente novamente com um documento diferente";
 "jumio_error_instant_feedback_damaged_doc_title" = "O documento parece estar danificado";
 "jumio_error_instant_feedback_digital_copy_tip" = "Capture uma imagem do seu documento original";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Incline para a direita";
 "jumio_liveness_prompt_tilt_up" = "Incline para cima";
 "jumio_liveness_prompt_too_far" = "Aproximar";
-"jumio_liveness_scanning_completed" = "Digitalização concluída";
 "jumio_liveness_upfront_intro" = "Precisamos de fazer uma digitalização do seu rosto para verificar que é uma pessoa real.";
+"jumio_loaders_almost_there" = "Estamos quase lá...";
+"jumio_loaders_finishing_up" = "A finalizar...";
+"jumio_loaders_starting_camera" = "A iniciar a câmara...";
+"jumio_loaders_success" = "Sucesso";
+"jumio_loaders_this_will_take_a_moment" = "Isto vai demorar um momento";
+"jumio_loaders_working_on_it" = "A processar...";
 "jumio_loading_title" = "A carregar";
 "jumio_nfc_button_skip" = "Pular";
 "jumio_nfc_description_secure_connection" = "A estabelecer ligação segura";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Mude para a câmara traseira";
 "jumio_scan_switch_to_front_camera" = "Mude para a câmara dianteira";
 "jumio_select" = "Selecionar";
+"jumio_selfiedone_ID_Found" = "Documento de identificação encontrado";
+"jumio_selfiedone_continue" = "Continuar";
+"jumio_selfiedone_scan_ID_manually" = "Digitalizar documento de identidade manualmente";
+"jumio_selfiedone_we_found_your_ID" = "Encontrámos um dos seus documentos de identificação";
 "jumio_start_button" = "Começar";
 "jumio_start_instructions_01" = "Encontre uma superfície bem iluminada";
 "jumio_start_instructions_02" = "Prepare-se para tirar uma selfie";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Mudei para a câmara traseira";
 "jumio_switched_to_front_camera" = "Mudou para a câmara frontal";
 "jumio_try_again" = "Tente novamente";
-"jumio_uploading_success" = "Carregamento bem sucedido";
-"jumio_uploading_title" = "A carregar";

@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Mặt trước";
 "jumio_accessibility_scan_shutter_button" = "Chụp ảnh";
 "jumio_accessibility_scan_switch_camera" = "Chuyển đổi máy ảnh";
-"jumio_analyzing_biometric" = "Đang phân tích dữ liệu sinh trắc học";
 "jumio_brazil_cnh_subtitle" = "Để tiếp tục tải lên, vui lòng đảm bảo rằng bạn đã tải xuống Giấy phép lái xe kỹ thuật số ở định dạng PDF từ ứng dụng chính thức của chính phủ [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Tải lên bản PDF của CNH Digital";
 "jumio_button_cancel" = "Hủy";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Hình ảnh quá mờ để có thể xác minh";
 "jumio_error_instant_feedback_both_images_retaken" = "Hình ảnh phải được chụp lại";
 "jumio_error_instant_feedback_brazil_cnh" = "Vui lòng đảm bảo rằng bạn đã tải xuống Giấy phép lái xe kỹ thuật số định dạng PDF từ ứng dụng chính thức của chính phủ [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Vui lòng thử lại với một hình ảnh màu";
-"jumio_error_instant_feedback_bw_copy_title" = "Hình ảnh là một bản photocopy đen trắng";
-"jumio_error_instant_feedback_color_photocopy_title" = "Hình ảnh có vẻ là một bản photocopy màu";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Vui lòng thử lại với một tài liệu khác";
 "jumio_error_instant_feedback_damaged_doc_title" = "Tài liệu có vẻ bị hỏng";
 "jumio_error_instant_feedback_digital_copy_tip" = "Chụp ảnh tài liệu gốc của bạn";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Nghiêng phải";
 "jumio_liveness_prompt_tilt_up" = "Nghiêng lên";
 "jumio_liveness_prompt_too_far" = "Di chuyển lại gần hơn";
-"jumio_liveness_scanning_completed" = "Đã quét xong";
 "jumio_liveness_upfront_intro" = "Chúng tôi cần quét khuôn mặt bạn để xác minh rằng bạn là người thật.";
+"jumio_loaders_almost_there" = "Sắp xong rồi...";
+"jumio_loaders_finishing_up" = "Đang hoàn tất...";
+"jumio_loaders_starting_camera" = "Đang khởi động máy ảnh...";
+"jumio_loaders_success" = "Thành công";
+"jumio_loaders_this_will_take_a_moment" = "Việc này sẽ mất một chút thời gian";
+"jumio_loaders_working_on_it" = "Đang xử lý...";
 "jumio_loading_title" = "Đang tải";
 "jumio_nfc_button_skip" = "Nhảy";
 "jumio_nfc_description_secure_connection" = "Thiết lập kết nối an toàn";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Chuyển sang máy ảnh sau";
 "jumio_scan_switch_to_front_camera" = "Chuyển sang máy ảnh trước";
 "jumio_select" = "Chọn";
+"jumio_selfiedone_ID_Found" = "Đã tìm thấy giấy tờ tùy thân";
+"jumio_selfiedone_continue" = "Tiếp tục";
+"jumio_selfiedone_scan_ID_manually" = "Quét giấy tờ tùy thân thủ công";
+"jumio_selfiedone_we_found_your_ID" = "Chúng tôi đã tìm thấy một trong các giấy tờ tùy thân của bạn";
 "jumio_start_button" = "Bắt đầu";
 "jumio_start_instructions_01" = "Tìm bề mặt có đủ ánh sáng";
 "jumio_start_instructions_02" = "Hãy sẵn sàng để chụp ảnh selfie";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Đã chuyển sang camera sau";
 "jumio_switched_to_front_camera" = "Đã chuyển sang camera trước";
 "jumio_try_again" = "Vui lòng thử lại";
-"jumio_uploading_success" = "Tải lên thành công";
-"jumio_uploading_title" = "Đang tải lên";

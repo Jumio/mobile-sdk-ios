@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Лицева сторона";
 "jumio_accessibility_scan_shutter_button" = "Зробити фото";
 "jumio_accessibility_scan_switch_camera" = "Перемкнути камеру";
-"jumio_analyzing_biometric" = "Триває аналіз біометричних даних";
 "jumio_brazil_cnh_subtitle" = "Щоб продовжити завантаження, переконайтеся, що ви завантажили PDF-файл цифрових водійських прав з офіційного урядового застосунку [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Завантажити CNH Digital PDF";
 "jumio_button_cancel" = "Скасувати";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Зображення надто розмите для перевірки";
 "jumio_error_instant_feedback_both_images_retaken" = "Зображення необхідно перезняти";
 "jumio_error_instant_feedback_brazil_cnh" = "Переконайтеся, що ви завантажили PDF-файл цифрових водійських прав з офіційного державного застосунку [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Будь ласка, повторіть спробу з кольоровим зображенням";
-"jumio_error_instant_feedback_bw_copy_title" = "Зображення є чорно-білою фотокопією";
-"jumio_error_instant_feedback_color_photocopy_title" = "Зображення схоже на кольорову фотокопію";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Будь ласка, повторіть спробу з іншим документом";
 "jumio_error_instant_feedback_damaged_doc_title" = "Схоже, що документ пошкоджено";
 "jumio_error_instant_feedback_digital_copy_tip" = "Сфотографуйте оригінал документа";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Нахиліть праворуч";
 "jumio_liveness_prompt_tilt_up" = "Нахиліть угору";
 "jumio_liveness_prompt_too_far" = "Підсуньтесь ближче";
-"jumio_liveness_scanning_completed" = "Сканування завершено";
 "jumio_liveness_upfront_intro" = "Нам потрібно просканувати ваше обличчя, щоб переконатися, що ви реальна людина.";
+"jumio_loaders_almost_there" = "Майже готово...";
+"jumio_loaders_finishing_up" = "Завершення...";
+"jumio_loaders_starting_camera" = "Запуск камери...";
+"jumio_loaders_success" = "Успішно";
+"jumio_loaders_this_will_take_a_moment" = "Це займе деякий час";
+"jumio_loaders_working_on_it" = "Обробляємо...";
 "jumio_loading_title" = "Завантаження";
 "jumio_nfc_button_skip" = "Пропустити";
 "jumio_nfc_description_secure_connection" = "Встановлення безпечного з'єднання";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Перемкнутися на задню камеру";
 "jumio_scan_switch_to_front_camera" = "Перемкнутися на передню камеру";
 "jumio_select" = "Вибрати";
+"jumio_selfiedone_ID_Found" = "Документ знайдено";
+"jumio_selfiedone_continue" = "Продовжити";
+"jumio_selfiedone_scan_ID_manually" = "Сканувати документ вручну";
+"jumio_selfiedone_we_found_your_ID" = "Ми знайшли один із ваших документів, що посвідчують особу";
 "jumio_start_button" = "Почати";
 "jumio_start_instructions_01" = "Знайдіть добре освітлену поверхню";
 "jumio_start_instructions_02" = "Приготуйтеся зробити селфі";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Переключено на задню камеру";
 "jumio_switched_to_front_camera" = "Переключено на передню камеру";
 "jumio_try_again" = "Повторіть спробу";
-"jumio_uploading_success" = "Вивантаження успішно виконано";
-"jumio_uploading_title" = "Вивантаження";

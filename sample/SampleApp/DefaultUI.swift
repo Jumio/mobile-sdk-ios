@@ -7,12 +7,10 @@
 import UIKit
 import Jumio
 
-@MainActor
 protocol DefaultUIDelegate: AnyObject {
     func defaultUIDidFinish(with result: Jumio.Result)
 }
 
-@MainActor
 class DefaultUI {
     typealias Delegate = DefaultUIDelegate
     

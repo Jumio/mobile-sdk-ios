@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Voorkant";
 "jumio_accessibility_scan_shutter_button" = "Neem een foto";
 "jumio_accessibility_scan_switch_camera" = "Schakel camera";
-"jumio_analyzing_biometric" = "Biometrische gegevens analyseren";
 "jumio_brazil_cnh_subtitle" = "Om verder te gaan met uploaden, moet je ervoor zorgen dat je een pdf van het digitale rijbewijs hebt gedownload van de officiële overheidsapplicatie [({Carteira Digital de Trânsito})].";
 "jumio_brazil_cnh_upload_button" = "CNH Digital-pdf uploaden";
 "jumio_button_cancel" = "Annuleer";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "De afbeelding is te wazig om te worden geverifieerd";
 "jumio_error_instant_feedback_both_images_retaken" = "Foto's moeten opnieuw worden genomen";
 "jumio_error_instant_feedback_brazil_cnh" = "Zorg ervoor dat je een pdf van het digitale rijbewijs hebt gedownload van de officiële overheidsapplicatie [({Carteira Digital de Trânsito})].";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Probeer het opnieuw met een foto in kleur.";
-"jumio_error_instant_feedback_bw_copy_title" = "De afbeelding is een zwart-wit foto";
-"jumio_error_instant_feedback_color_photocopy_title" = "De afbeelding lijkt een kleurenkopie te zijn";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Probeer het opnieuw met een ander document";
 "jumio_error_instant_feedback_damaged_doc_title" = "Het document lijkt te zijn beschadigd";
 "jumio_error_instant_feedback_digital_copy_tip" = "Een foto van uw originele document maken";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Rechts kantelen";
 "jumio_liveness_prompt_tilt_up" = "Omhoog kantelen";
 "jumio_liveness_prompt_too_far" = "Kom dichterbij";
-"jumio_liveness_scanning_completed" = "Scannen voltooid";
 "jumio_liveness_upfront_intro" = "We moeten een scan van je gezicht maken om te controleren of je een echt persoon bent.";
+"jumio_loaders_almost_there" = "Bijna klaar...";
+"jumio_loaders_finishing_up" = "Aan het afronden...";
+"jumio_loaders_starting_camera" = "Camera starten...";
+"jumio_loaders_success" = "Geslaagd";
+"jumio_loaders_this_will_take_a_moment" = "Dit duurt een ogenblik";
+"jumio_loaders_working_on_it" = "Bezig met verwerken...";
 "jumio_loading_title" = "Aan het laden";
 "jumio_nfc_button_skip" = "Overspringen";
 "jumio_nfc_description_secure_connection" = "Veilige verbinding tot stand brengen";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Verander naar achterste camera";
 "jumio_scan_switch_to_front_camera" = "Verander naar voorste camera";
 "jumio_select" = "Selecteer";
+"jumio_selfiedone_ID_Found" = "ID-bewijs gevonden";
+"jumio_selfiedone_continue" = "Doorgaan";
+"jumio_selfiedone_scan_ID_manually" = "ID handmatig scannen";
+"jumio_selfiedone_we_found_your_ID" = "We hebben een van uw identificatiedocumenten gevonden";
 "jumio_start_button" = "Beginnen";
 "jumio_start_instructions_01" = "Zoek een goed verlichte ondergrond";
 "jumio_start_instructions_02" = "Maak je klaar om een selfie te maken";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Overgeschakeld naar de camera aan de achterkant";
 "jumio_switched_to_front_camera" = "Overgeschakeld naar de camera aan de voorzijde";
 "jumio_try_again" = "Probeer het nog eens";
-"jumio_uploading_success" = "Uploaden succesvol";
-"jumio_uploading_title" = "Uploaden";

@@ -6,14 +6,13 @@
 
 import Jumio
 
-@MainActor
 protocol CredentialHandlingDelegate: AnyObject {
+    func credentialContains(lookupResult: Jumio.LookupResult)
     func credentialNeedsConfiguration(for countries: [String])
     func credentialNeedsConfiguration(for acquireModes: [Jumio.Acquire.Mode])
     func credential(initialized scanPartHandling: ScanPartHandling)
 }
 
-@MainActor
 class CredentialHandling {
     typealias Delegate = CredentialHandlingDelegate
     
@@ -36,6 +35,18 @@ class CredentialHandling {
         self.info = info
         // starting a credential with given information
         credential = controller?.start(credentialInfo: info)
+        
+        // Check, if a lookup result is available.
+        if let idCredential = credential as? Jumio.IDCredential, let lookupResult = idCredential.lookupResult {
+            // Ask the user whether the lookup result should be used
+            delegate?.credentialContains(lookupResult: lookupResult)
+        } else {
+            // No lookup result is available, we start a new scan
+            scan()
+        }
+    }
+    
+    func scan() {
         // check if a credentials needs further configuration
         // for example ID credentials without preselection will need a selection of country + document
         if !isConfigured {
@@ -113,6 +124,10 @@ class CredentialHandling {
     
     func digitalDocuments(for country: String) -> [Jumio.Document.Digital] {
         (credential as? Jumio.IDCredential)?.digitalDocuments(for: country) ?? []
+    }
+    
+    func userConsented(to legalStatement: Jumio.LookupResult.LegalStatement, decision: Bool) {
+        (credential as? Jumio.IDCredential)?.userConsented(to: legalStatement, decision: decision)
     }
     
     private func configure(credential: Jumio.Credential?) {

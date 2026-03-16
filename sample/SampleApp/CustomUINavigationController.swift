@@ -9,7 +9,6 @@ import AudioToolbox
 
 import Jumio
 
-@MainActor
 protocol CustomUIDelegate: AnyObject {
     func customUIDidFinish(with result: Jumio.Result)
 }
@@ -127,6 +126,7 @@ extension CustomUINavigationController {
         case acquireMode
         case help
         case retry
+        case documentFound
     }
 }
 
@@ -158,6 +158,10 @@ extension CustomUINavigationController {
     // and skip a country selection if needed
     var suggestedCountry: String? { credentialHandling?.suggestedCountry }
     
+    func scan() {
+        credentialHandling?.scan()
+    }
+    
     func select(country: String, document: Jumio.Document) {
         credentialHandling?.select(country: country, document: document)
     }
@@ -176,6 +180,11 @@ extension CustomUINavigationController {
         controllerHandling?.startNextCredential(previousInfo: previousInfo)
     }
     
+    func finishCredential() {
+        credentialHandling?.finish()
+        nextCredentialOrFinishController()
+    }
+    
     func retry(error: Jumio.Error) {
         controllerHandling?.retry(error: error)
     }
@@ -187,6 +196,10 @@ extension CustomUINavigationController {
     func cancelScanPart() {
         scanPartHandling?.cancel()
         scanPartFinished()
+    }
+    
+    func userConsented(to legalStatement: Jumio.LookupResult.LegalStatement, decision: Bool) {
+        credentialHandling?.userConsented(to: legalStatement, decision: decision)
     }
 }
 
@@ -284,6 +297,12 @@ extension CustomUINavigationController: ControllerHandling.Delegate {
 
 // MARK: - CredentialHandling.Delegate
 extension CustomUINavigationController: CredentialHandling.Delegate {
+    func credentialContains(lookupResult: Jumio.LookupResult) {
+        guard let documentFoundViewController = instantiate(viewController: .documentFound) as? DocumentFoundViewController else { return }
+        documentFoundViewController.lookupResult = lookupResult
+        pushViewController(documentFoundViewController, animated: true)
+    }
+    
     func credentialNeedsConfiguration(for countries: [String]) {
         guard let selectionViewController = instantiate(viewController: .selection) as? SelectionViewController else { return }
         selectionViewController.countryArray = countries

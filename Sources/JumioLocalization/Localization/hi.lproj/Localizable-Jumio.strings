@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "आगे";
 "jumio_accessibility_scan_shutter_button" = "एक तस्वीर लें";
 "jumio_accessibility_scan_switch_camera" = "कैमरा स्विच करें";
-"jumio_analyzing_biometric" = "बायोमेट्रिक डेटा का विश्लेषण किया जा रहा है";
 "jumio_brazil_cnh_subtitle" = "अपलोड जारी रखने के लिए, सुनिश्चित करें कि आपने ऑफिशियल सरकारी एप्लिकेशन [({Carteira Digital de Trânsito})] से डिजिटल ड्राइविंग लाइसेंस की PDF डाउनलोड की है";
 "jumio_brazil_cnh_upload_button" = "CNH Digital PDF अपलोड करें";
 "jumio_button_cancel" = "रद्द करें";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "छवि सत्यापित होने के लिए बहुत धुंधली है";
 "jumio_error_instant_feedback_both_images_retaken" = "इमेजों को फिर से लेना आवश्यक हैं";
 "jumio_error_instant_feedback_brazil_cnh" = "सुनिश्चित करें कि आपने ऑफिशियल सरकारी एप्लिकेशन [({Carteira Digital de Trânsito})] से डिजिटल ड्राइविंग लाइसेंस की PDF डाउनलोड की है";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "कृपया रंगीन छवि के साथ पुन: प्रयास करें";
-"jumio_error_instant_feedback_bw_copy_title" = "छवि एक ब्लैक एंड व्हाइट फोटोकॉपी है";
-"jumio_error_instant_feedback_color_photocopy_title" = "छवि एक रंगीन फोटोकॉपी प्रतीत होती है";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "कृपया किसी अन्य दस्तावेज़ के साथ पुनः प्रयास करें";
 "jumio_error_instant_feedback_damaged_doc_title" = "ऐसा लगता है कि दस्तावेज़ क्षतिग्रस्त हो गया है";
 "jumio_error_instant_feedback_digital_copy_tip" = "अपने मूल दस्तावेज़ की एक छवि कैप्चर करें";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "दाईं ओर झुकाएं";
 "jumio_liveness_prompt_tilt_up" = "ऊपर झुकाएं";
 "jumio_liveness_prompt_too_far" = "थोड़ा और पास आएं";
-"jumio_liveness_scanning_completed" = "स्कैनिंग पूरी हुई";
 "jumio_liveness_upfront_intro" = "यह वेरीफाई करने के लिए कि आप एक वास्तविक व्यक्ति हैं, हमें आपके चेहरे को स्कैन करने की आवश्यकता है।";
+"jumio_loaders_almost_there" = "बस होने ही वाला है...";
+"jumio_loaders_finishing_up" = "समाप्त हो रहा है...";
+"jumio_loaders_starting_camera" = "कैमरा शुरू हो रहा है...";
+"jumio_loaders_success" = "सफल";
+"jumio_loaders_this_will_take_a_moment" = "इसमें थोड़ा समय लगेगा";
+"jumio_loaders_working_on_it" = "इस पर काम कर रहे हैं...";
 "jumio_loading_title" = "लोड हो रहा है";
 "jumio_nfc_button_skip" = "छोड़ें";
 "jumio_nfc_description_secure_connection" = "सुरक्षित कनेक्शन स्थापित किया जा रहा है";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "बैक कैमरा पर स्विच करें";
 "jumio_scan_switch_to_front_camera" = "फ्रंट कैमरा पर स्विच करें";
 "jumio_select" = "चुनें";
+"jumio_selfiedone_ID_Found" = "आईडी मिल गया";
+"jumio_selfiedone_continue" = "जारी रखें";
+"jumio_selfiedone_scan_ID_manually" = "आईडी को मैनुअली स्कैन करें";
+"jumio_selfiedone_we_found_your_ID" = "हमें आपका एक पहचान दस्तावेज़ मिला है";
 "jumio_start_button" = "शुरू करें";
 "jumio_start_instructions_01" = "एक अच्छी रोशनी वाली सतह ढूंढें";
 "jumio_start_instructions_02" = "सेल्फी लेने के लिए तैयार हो जाएं";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "बैक कैमरे पर स्विच किया गया";
 "jumio_switched_to_front_camera" = "फ़्रंट कैमरे पर स्विच किया गया";
 "jumio_try_again" = "पुन: प्रयास करें";
-"jumio_uploading_success" = "अपलोड सफल";
-"jumio_uploading_title" = "अपलोड किया जा रहा है";

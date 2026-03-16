@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "4.16.0"
+let version = "4.17.0"
 
 let package = Package(
     name: "Jumio",
@@ -64,27 +64,27 @@ let package = Package(
         .binaryTarget(
             name: "Jumio",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Jumio.xcframework.zip",
-            checksum: "4be947eb1412a7c3894a56b81b77b7353182ceb6d9034729b38c6fc179a36632"
+            checksum: "9a3b0665996e9d387768a9159a6c0f01a12c0472f56179253ff8d1daaeae6f74"
         ),
         .binaryTarget(
             name: "JumioLiveness",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLiveness.xcframework.zip",
-            checksum: "08487644e482e128b4b4103acd953b82529015dbf751ec94646a6b2d52413d10"
+            checksum: "4ad19bd8898b3b03fef8fc4e857885c47e97ff0a676eae28af6cf08ef087edac"
         ),
         .binaryTarget(
             name: "JumioLivenessClient",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLivenessClient.xcframework.zip",
-            checksum: "8eb91c11a4ca3374aae1944a6831c49172b5bdab60fa7a86e2a02e786a09adf0"
+            checksum: "9c8068d2e1c2ad66fbed1fd7acc8d24115b9fa0b19362061c4c649857f545a82"
         ),
         .binaryTarget(
             name: "JumioDefaultUI",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDefaultUI.xcframework.zip",
-            checksum: "fdeb51b82051d4e6e23e33ee7aab2ac6b3d8d8be98e7f3ff879ee6c0fc34efe9"
+            checksum: "7ce611f2c84a9e3e3943d9c2e78bffd34df2428809590e453262a1cd45ae5ab8"
         ),
         .binaryTarget(
             name: "JumioNFC",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioNFC.xcframework.zip",
-            checksum: "f89400395d12057aa0be7bae954743576ff661134857c0dd26c123fa123590e4"
+            checksum: "c484653fff2c2faddb52dbd1797c9d9e7a258ae200adebf400026fdbe556c28e"
         ),
     ]
 )

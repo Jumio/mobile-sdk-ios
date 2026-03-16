@@ -7,7 +7,6 @@
 import Jumio
 import UIKit
 
-@MainActor
 protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartShowLoadingView()
     func scanPartShowScanView()
@@ -25,7 +24,6 @@ protocol ScanPartHandlingDelegate: AnyObject {
     func scanPartFinished()
 }
 
-@MainActor
 class ScanPartHandling {
     typealias Delegate = ScanPartHandlingDelegate
     

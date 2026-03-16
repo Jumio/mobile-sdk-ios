@@ -48,7 +48,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 
 ## Release Notes
 
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.16.0**
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.17.0**
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -93,15 +93,15 @@ platform :ios, '13.0'
 use_frameworks! # Required for proper framework handling
 
 #Core (always add):
-pod 'Jumio/Jumio', '~>4.16.0' # Manual & DocFinder Capture
+pod 'Jumio/Jumio', '~>4.17.0' # Manual & DocFinder Capture
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.16.0' # Liveness functionality
-pod 'Jumio/DefaultUI', '~>4.16.0' # Default UI functionality
-pod 'Jumio/NFC', '~>4.16.0' # NFC functionality
+pod 'Jumio/Liveness', '~>4.17.0' # Liveness functionality
+pod 'Jumio/DefaultUI', '~>4.17.0' # Default UI functionality
+pod 'Jumio/NFC', '~>4.17.0' # NFC functionality
 
 #All:
-pod 'Jumio/All', '~>4.16.0' # All Jumio products with all available scanning methods
+pod 'Jumio/All', '~>4.17.0' # All Jumio products with all available scanning methods
 ```
 
 #### Via Swift Package Manager
@@ -134,12 +134,12 @@ Adapt you Cartfile and add Jumio dependencies. Check the following example how a
 ```
 
 #Core (always add):
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.16.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.17.0
 
 #Addons:
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.16.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.16.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioNFC.json" == 4.16.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.17.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.17.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioNFC.json" == 4.17.0
 
 ```
 
@@ -153,7 +153,7 @@ carthage update --use-xcframeworks
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.16.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.16.0/ios-jumio-mobile-sdk-4.16.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.17.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.17.0/ios-jumio-mobile-sdk-4.17.0.zip).
 
 ⚠️&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -493,8 +493,6 @@ List of all possible reject reasons returned if Instant Feedback is used. The ac
 
 | Code | Message              | Description                                                 |
 | :--- | :------------------- | :---------------------------------------------------------- |
-| 102  | BLACK_WHITE_COPY     | Document appears to be a black and white photocopy          |
-| 103  | COLOR_PHOTOCOPY      | Document appears to be a colored photocopy                  |
 | 104  | DIGITAL_COPY         | Document appears to be a digital copy                       |
 | 200  | NOT_READABLE         | Document is not readable                                    |
 | 201  | NO_DOC               | No document could be detected                               |
@@ -575,7 +573,7 @@ Once the controller is initialized, the following delegate methods will be avail
 
 ```
 // initialization finished
-func jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?)
+func jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?, termsOfUse: Jumio.TermsOfUse?)
 
 // result handling
 func jumio(controller: Jumio.Controller, finished result: Jumio.Result)
@@ -602,6 +600,14 @@ The user can open and continue to the provided consent link if they choose to do
 
 ⚠️&nbsp;&nbsp;**Note:** Please be aware that in cases where list of `consentItems` is not null, the user **must consent** to Jumio's processing of personal information, including biometric data, and be provided a link to Jumio's Privacy Notice. Do not accept automatically without showing the user any terms.
 
+#### Terms of Use Handling
+
+The `termsOfUse` parameter provides a [`Jumio.TermsOfUse`][jumioTermsOfUse] containing:
+- `text`: The localized string containing the terms of use text.
+- `url`: The URL to redirect the user to Jumio’s terms of use details.
+
+If the `termsOfUse` parameter is `null`, then it should be ignored.
+
 ### Credential Handling
 
 [`Jumio.Credential`][jumioCredential] will contain all necessary information about the scanning process. For ID verification you will receive an [`IDCredential`][jumioIDCredential], for Selfie Verification a [`FaceCredential`][jumioFaceCredential], and so on. Initialize the credential and check if it is already preconfigured. If this is the case, the parameter [`isConfigured`][isConfigured] will be `true` and the credential can be started right away.
@@ -623,7 +629,17 @@ currentCredential.isSupportedConfiguration(country: country, document: document)
 currentCredential.setConfiguration(country: country, document: document)
 ```
 
+Make sure to initialize credentials in the order defined in the [`Jumio.Credential.Info.order`][jumioCredentialInfoOrder]. If multiple credentials have the same order, you can initialize them in any order.
+
 #### Jumio ID Credential
+
+To use the document found in `Jumio.LookupResult` for the Selfie.Done workflow, a consent value `true` is mandatory. If the user does not want to use the document, an explicit `false` (non-consent) must still be recorded before the process can proceed:
+
+```
+let idCredential = ...
+// The legalStatment is retrieved from the `Jumio.LookupResult.LegalStatement`
+idCredential.userConsented(to: legalStatement, decision: true)
+```
 
 In case of [`Jumio.IDCredential`][jumioIDCredential], you can retrieve all available countries from [`supportedCountries`][supportedCountries]. After selecting a specific country from that list, you can query available documents for that country by either calling `physicalDocuments(for:)` or `digitalDocuments(for:)`. To configure the [`Jumio.IDCredential`][jumioIDCredential], pass your desired document as well as the country to `setConfiguration()`:
 
@@ -1045,6 +1061,7 @@ In any case, your use of this Software is subject to the terms and conditions th
 [jumioController]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Controller.html
 [jumioControllerDelegate]: https://jumio.github.io/mobile-sdk-ios/Jumio/Protocols/JumioControllerDelegate.html
 [jumioCredential]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Credential.html
+[jumioCredentialInfoOrder]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Credential/Info.html#/s:5JumioAAV10CredentialC4InfoV5orderSivp
 [jumioIDCredential]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html
 [jumioPhysicalDocument]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/PhysicalDocument.html
 [jumioDigitalDocument]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/DigitalDocument.html
@@ -1071,3 +1088,4 @@ In any case, your use of this Software is subject to the terms and conditions th
 [jumioFileAttacher]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/FileAttacher.html
 [jumioFileAttachHelpUrl]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/FileAttacher.html#/s:5JumioAAV12FileAttacherC7helpUrlSSSgvp
 [jumioFileRequirements]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/FileRequirements.html
+[jumioTermsOfUse]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/TermsOfUse.html

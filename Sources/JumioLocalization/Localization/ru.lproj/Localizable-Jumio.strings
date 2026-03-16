@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Лицевая сторона";
 "jumio_accessibility_scan_shutter_button" = "Сфотографировать";
 "jumio_accessibility_scan_switch_camera" = "Переключить камеру";
-"jumio_analyzing_biometric" = "Анализ биометрических данных";
 "jumio_brazil_cnh_subtitle" = "Для того, чтобы выполнить загрузку, убедитесь, что вы скачали цифровое водительское удостоверение PDF из официального государственного приложения [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Загрузить CNH Digital PDF";
 "jumio_button_cancel" = "Отменить";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Изображение слишком размытое для проверки";
 "jumio_error_instant_feedback_both_images_retaken" = "Изображения необходимо переснять";
 "jumio_error_instant_feedback_brazil_cnh" = "Убедитесь, что вы скачали Цифровое водительское удостоверение PDF из официального государственного приложения [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Попробуйте еще раз с цветным изображением";
-"jumio_error_instant_feedback_bw_copy_title" = "Изображение является черно-белой ксерокопией";
-"jumio_error_instant_feedback_color_photocopy_title" = "Изображение похоже на цветную ксерокопию";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Попробуйте еще раз с другим документом";
 "jumio_error_instant_feedback_damaged_doc_title" = "Документ кажется поврежденным";
 "jumio_error_instant_feedback_digital_copy_tip" = "Сфотографируйте оригинал документа";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Наклоните вправо";
 "jumio_liveness_prompt_tilt_up" = "Поднимите вверх";
 "jumio_liveness_prompt_too_far" = "Подойдите ближе";
-"jumio_liveness_scanning_completed" = "Сканирование завершено";
 "jumio_liveness_upfront_intro" = "Нам нужно отсканировать ваше лицо, чтобы убедиться, что вы реальный человек.";
+"jumio_loaders_almost_there" = "Почти готово...";
+"jumio_loaders_finishing_up" = "Завершение...";
+"jumio_loaders_starting_camera" = "Запуск камеры...";
+"jumio_loaders_success" = "Успешно";
+"jumio_loaders_this_will_take_a_moment" = "Это займет некоторое время";
+"jumio_loaders_working_on_it" = "Обрабатываем...";
 "jumio_loading_title" = "Загрузка";
 "jumio_nfc_button_skip" = "Пропускать";
 "jumio_nfc_description_secure_connection" = "Установление безопасного соединения";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Переключиться на заднюю камеру";
 "jumio_scan_switch_to_front_camera" = "Переключиться на переднюю камеру";
 "jumio_select" = "Выбрать";
+"jumio_selfiedone_ID_Found" = "Документ найден";
+"jumio_selfiedone_continue" = "Продолжить";
+"jumio_selfiedone_scan_ID_manually" = "Сканировать документ вручную";
+"jumio_selfiedone_we_found_your_ID" = "Мы нашли один из ваших документов, удостоверяющих личность";
 "jumio_start_button" = "Начать";
 "jumio_start_instructions_01" = "Найдите хорошо освещенную поверхность";
 "jumio_start_instructions_02" = "Будьте готовы сделать селфи";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Переключено на заднюю камеру";
 "jumio_switched_to_front_camera" = "Переключено на фронтальную камеру";
 "jumio_try_again" = "Попробуйте еще раз";
-"jumio_uploading_success" = "Загрузка успешно завершена";
-"jumio_uploading_title" = "Загрузка";

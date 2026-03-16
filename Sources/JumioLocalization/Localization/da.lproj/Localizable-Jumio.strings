@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Forside";
 "jumio_accessibility_scan_shutter_button" = "Tag et billede";
 "jumio_accessibility_scan_switch_camera" = "Skift kamera";
-"jumio_analyzing_biometric" = "Analyserer biometriske data";
 "jumio_brazil_cnh_subtitle" = "For at fortsætte med din upload skal du have downloadet et digitalt kørekort i PDF-format fra myndighedernes officielle program [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Upload CNH Digital som PDF";
 "jumio_button_cancel" = "Annuller";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Billedet er for uskarpt til at blive kontrolleret";
 "jumio_error_instant_feedback_both_images_retaken" = "Billederne skal tages igen";
 "jumio_error_instant_feedback_brazil_cnh" = "Sørg for, at du har downloadet et digitalt kørekort i PDF-format fra myndighedernes officielle program [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Prøv igen med et farvebillede";
-"jumio_error_instant_feedback_bw_copy_title" = "Billedet er sort/hvidt";
-"jumio_error_instant_feedback_color_photocopy_title" = "Billedet ser ud til at være et farvefoto";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Prøv igen med et andet dokument";
 "jumio_error_instant_feedback_damaged_doc_title" = "Dokumentet ser ud til at være beskadiget";
 "jumio_error_instant_feedback_digital_copy_tip" = "Tag et billede af dit originaldokument";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Hæld mod højre";
 "jumio_liveness_prompt_tilt_up" = "Kig opad";
 "jumio_liveness_prompt_too_far" = "Ryk tættere på";
-"jumio_liveness_scanning_completed" = "Scanning afsluttet";
 "jumio_liveness_upfront_intro" = "Vi er nødt til at scanne dit ansigt for at kunne bekræfte, at du er et menneske.";
+"jumio_loaders_almost_there" = "Næsten færdig...";
+"jumio_loaders_finishing_up" = "Afslutter...";
+"jumio_loaders_starting_camera" = "Starter kamera...";
+"jumio_loaders_success" = "Fuldført";
+"jumio_loaders_this_will_take_a_moment" = "Det tager et øjeblik";
+"jumio_loaders_working_on_it" = "Arbejder på det...";
 "jumio_loading_title" = "Indlæser";
 "jumio_nfc_button_skip" = "Springe";
 "jumio_nfc_description_secure_connection" = "Opretter sikker forbindelse";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Skift til kamera på bagsiden";
 "jumio_scan_switch_to_front_camera" = "Skift til frontkamera";
 "jumio_select" = "Vælg";
+"jumio_selfiedone_ID_Found" = "ID fundet";
+"jumio_selfiedone_continue" = "Fortsæt";
+"jumio_selfiedone_scan_ID_manually" = "Scan ID manuelt";
+"jumio_selfiedone_we_found_your_ID" = "Vi fandt et af dine identifikationsdokumenter";
 "jumio_start_button" = "Start";
 "jumio_start_instructions_01" = "Find en belyst flade";
 "jumio_start_instructions_02" = "Gør dig klar til at tage et selfie";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Skiftet til bagsidekameraet";
 "jumio_switched_to_front_camera" = "Skiftet til frontkameraet";
 "jumio_try_again" = "Prøv venligst igen";
-"jumio_uploading_success" = "Upload gennemført";
-"jumio_uploading_title" = "Uploader";

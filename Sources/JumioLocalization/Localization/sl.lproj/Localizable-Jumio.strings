@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Spredaj";
 "jumio_accessibility_scan_shutter_button" = "Posnemi fotografijo";
 "jumio_accessibility_scan_switch_camera" = "Preklopi kamero";
-"jumio_analyzing_biometric" = "Analiziranje biometričnih podatkov";
 "jumio_brazil_cnh_subtitle" = "Za nadaljevanje z nalaganjem se prepričajte, da ste datoteko PDF z elektronskim vozniškim dovoljenjem prenesli iz uradne državne aplikacije [({Carteira Digital de Trânsito})].";
 "jumio_brazil_cnh_upload_button" = "Naloži PDF CNH Digital";
 "jumio_button_cancel" = "Prekliči";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Slika ni dovolj ostra za preverjanje";
 "jumio_error_instant_feedback_both_images_retaken" = "Slika mora biti ponovno posneta";
 "jumio_error_instant_feedback_brazil_cnh" = "Prepričajte se, da ste datoteko PDF z elektronskim vozniškim dovoljenjem prenesli iz uradne državne aplikacije [({Carteira Digital de Trânsito})].";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Poskusite znova z barvno sliko";
-"jumio_error_instant_feedback_bw_copy_title" = "Slika je črno-bela fotokopija";
-"jumio_error_instant_feedback_color_photocopy_title" = "Videti je, da je slika barvna fotokopija";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Poskusite znova z drugim dokumentom";
 "jumio_error_instant_feedback_damaged_doc_title" = "Dokument je videti poškodovan";
 "jumio_error_instant_feedback_digital_copy_tip" = "Zajemite sliko originalnega dokumenta";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Nagni v desno";
 "jumio_liveness_prompt_tilt_up" = "Nagni navzgor";
 "jumio_liveness_prompt_too_far" = "Približajte se";
-"jumio_liveness_scanning_completed" = "Optično branje končano";
 "jumio_liveness_upfront_intro" = "Da bi preverili, ali ste resnična oseba, moramo skenirati vaš obraz.";
+"jumio_loaders_almost_there" = "Skoraj končano...";
+"jumio_loaders_finishing_up" = "Zaključevanje...";
+"jumio_loaders_starting_camera" = "Zagon kamere...";
+"jumio_loaders_success" = "Uspeh";
+"jumio_loaders_this_will_take_a_moment" = "To bo trajalo trenutek";
+"jumio_loaders_working_on_it" = "Obdelovanje...";
 "jumio_loading_title" = "Nalaganje";
 "jumio_nfc_button_skip" = "Preskoči";
 "jumio_nfc_description_secure_connection" = "Vzpostavljanje varne povezave";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Preklopi na zadnjo kamero";
 "jumio_scan_switch_to_front_camera" = "Preklopi na sprednjo kamero";
 "jumio_select" = "Izbira";
+"jumio_selfiedone_ID_Found" = "Osebni dokument najden";
+"jumio_selfiedone_continue" = "Nadaljuj";
+"jumio_selfiedone_scan_ID_manually" = "Ročno skeniraj osebni dokument";
+"jumio_selfiedone_we_found_your_ID" = "Našli smo enega od vaših identifikacijskih dokumentov";
 "jumio_start_button" = "Začni";
 "jumio_start_instructions_01" = "Poiščite dobro osvetljeno površino";
 "jumio_start_instructions_02" = "Pripravite se na selfi";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Preklopljeno na zadnjo kamero";
 "jumio_switched_to_front_camera" = "Preklopljeno na sprednjo kamero";
 "jumio_try_again" = "Poskusite znova";
-"jumio_uploading_success" = "Nalaganje uspešno";
-"jumio_uploading_title" = "Nalaganje";

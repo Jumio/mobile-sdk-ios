@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Μπροστινό μέρος";
 "jumio_accessibility_scan_shutter_button" = "Λήψη φωτογραφίας";
 "jumio_accessibility_scan_switch_camera" = "Εναλλαγή κάμερας";
-"jumio_analyzing_biometric" = "Ανάλυση βιομετρικών δεδομένων";
 "jumio_brazil_cnh_subtitle" = "Για να προχωρήσετε στη μεταφόρτωση, βεβαιωθείτε ότι έχετε πραγματοποιήσει λήψη ψηφιακής άδειας οδήγησης σε PDF από την επίσημη κρατική εφαρμογή [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Μεταφόρτωση CNH Digital PDF";
 "jumio_button_cancel" = "Ακύρωση";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Η εικόνα είναι πολύ θολή για να επαληθευτεί";
 "jumio_error_instant_feedback_both_images_retaken" = "Απαιτείται επανάληψη λήψης των εικόνων";
 "jumio_error_instant_feedback_brazil_cnh" = "Βεβαιωθείτε ότι έχετε πραγματοποιήσει λήψη Ψηφιακής άδειας οδήγησης σε PDF από την επίσημη κρατική εφαρμογή [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Δοκιμάστε ξανά με μια έγχρωμη εικόνα";
-"jumio_error_instant_feedback_bw_copy_title" = "Η εικόνα είναι ασπρόμαυρο φωτοαντίγραφο";
-"jumio_error_instant_feedback_color_photocopy_title" = "Η εικόνα φαίνεται να είναι έγχρωμο φωτοαντίιγραφο";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Δοκιμάστε ξανά με διαφορετικό έγγραφο";
 "jumio_error_instant_feedback_damaged_doc_title" = "Το έγγραφο φαίνεται να είναι κατεστραμμένο";
 "jumio_error_instant_feedback_digital_copy_tip" = "Κάντε λήψη του πρωτότυπου εγγράφου";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Γείρετε προς τα δεξιά";
 "jumio_liveness_prompt_tilt_up" = "Γείρετε προς τα πάνω";
 "jumio_liveness_prompt_too_far" = "Ελάτε πιο κοντά";
-"jumio_liveness_scanning_completed" = "Η σάρωση ολοκληρώθηκε";
 "jumio_liveness_upfront_intro" = "Πρέπει να κάνουμε σάρωση του προσώπου σας για να επαληθεύσουμε ότι είστε πραγματικό άτομο.";
+"jumio_loaders_almost_there" = "Σχεδόν έτοιμο...";
+"jumio_loaders_finishing_up" = "Ολοκλήρωση...";
+"jumio_loaders_starting_camera" = "Εκκίνηση κάμερας...";
+"jumio_loaders_success" = "Επιτυχία";
+"jumio_loaders_this_will_take_a_moment" = "Αυτό θα διαρκέσει μια στιγμή";
+"jumio_loaders_working_on_it" = "Γίνεται επεξεργασία...";
 "jumio_loading_title" = "Φόρτωση";
 "jumio_nfc_button_skip" = "Παραλείπω";
 "jumio_nfc_description_secure_connection" = "Δημιουργία ασφαλούς σύνδεσης";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Μετάβαση στην πίσω κάμερα";
 "jumio_scan_switch_to_front_camera" = "Μετάβαση στην μπροστινή κάμερα";
 "jumio_select" = "Επιλέξτε";
+"jumio_selfiedone_ID_Found" = "Βρέθηκε έγγραφο ταυτοποίησης";
+"jumio_selfiedone_continue" = "Συνέχεια";
+"jumio_selfiedone_scan_ID_manually" = "Σάρωση ταυτότητας με μη αυτόματο τρόπο";
+"jumio_selfiedone_we_found_your_ID" = "Βρήκαμε ένα από τα έγγραφα ταυτοποίησής σας";
 "jumio_start_button" = "Έναρξη";
 "jumio_start_instructions_01" = "Βρείτε μια καλά φωτισμένη επιφάνεια";
 "jumio_start_instructions_02" = "Ετοιμαστείτε να βγάλετε μια selfie";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Έγινε εναλλαγή στην πίσω κάμερα";
 "jumio_switched_to_front_camera" = "Έγινε εναλλαγή στην μπροστινή κάμερα";
 "jumio_try_again" = "Δοκιμάστε ξανά";
-"jumio_uploading_success" = "Η φόρτωση ήταν επιτυχής";
-"jumio_uploading_title" = "Μεταφόρτωση";

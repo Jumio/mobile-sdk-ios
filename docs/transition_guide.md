@@ -8,6 +8,55 @@ This section covers all technical changes that should be considered when updatin
 When updating your SDK version, **all** changes/updates made in in the meantime have to be taken into account and applied if necessary.
 **Example:** If you're updating from SDK version **3.7.2** to **3.9.2**, the changes outlined in **3.8.0, 3.9.0** and **3.9.1** are **still relevant**.
 
+## 4.17.0
+
+#### Changes to Public API
+
+- Added `Jumio.LookupResult`
+- Added `Jumio.LookupResult.LegalStatement`
+- Added `Jumio.IDCredential.lookupResult`
+- Added `Jumio.IDCredential.userConsented(to: Jumio.LookupResult.LegalStatement, decision: Bool)
+- Added `Jumio.Credential.Info.order`
+- Added `Jumio.TermsOfUse`
+- Changed `Jumio.Controller.Delegate.jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?)` to `Jumio.Controller.Delegate.jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?, termsOfUse: Jumio.TermsOfUse?)`.
+
+#### Logical Errors
+
+- Added `pendingLowOrderCredential` for starting a credential when not all lower order credentials are completed.
+
+#### Customization options
+
+- Added `Jumio.Theme.termsOfUseForeground`
+
+#### Localization Keys
+
+The following keys have been added:
+
+- `jumio_loaders_almost_there`
+- `jumio_loaders_finishing_up`
+- `jumio_loaders_starting_camera`
+- `jumio_loaders_success`
+- `jumio_loaders_this_will_take_a_moment`
+- `jumio_loaders_working_on_it`
+- `jumio_selfiedone_ID_Found`
+- `jumio_selfiedone_continue`
+- `jumio_selfiedone_scan_ID_manually`
+- `jumio_selfiedone_we_found_your_ID`
+
+The following key has been removed:
+
+- `jumio_analyzing_biometric`
+- `jumio_dv_confirm_file_info`
+- `jumio_dv_method_description`
+- `jumio_dv_retry_not_readable`
+- `jumio_dv_retry_size_limit`
+- `jumio_error_instant_feedback_bw_copy_tip_color_image`
+- `jumio_error_instant_feedback_bw_copy_title`
+- `jumio_error_instant_feedback_color_photocopy_title`
+- `jumio_liveness_scanning_completed`
+- `jumio_uploading_success`
+- `jumio_uploading_title`
+
 ## 4.16.0
 
 #### DefaultUI
@@ -24,7 +73,7 @@ When updating your SDK version, **all** changes/updates made in in the meantime 
 
 #### Customization options
 
-- Added `Jumio.Theme.ScanView.shutter`:
+- Added `Jumio.Theme.ScanView.shutter`
 - Removed `Jumio.Theme.ScanView.documentShutter`
 - Removed `Jumio.Theme.ScanView.faceShutter`
 

@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Predná strana";
 "jumio_accessibility_scan_shutter_button" = "Zhotoviť fotografiu";
 "jumio_accessibility_scan_switch_camera" = "Prepnutie fotoaparátu";
-"jumio_analyzing_biometric" = "Analýza biometrických údajov";
 "jumio_brazil_cnh_subtitle" = "Než začnete s nahrávaním, uistite sa, že ste si stiahli dokument PDF s digitálnym vodičským preukazom z oficiálnej štátnej aplikácie [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Nahrajte PDF s dokumentom CNH Digital";
 "jumio_button_cancel" = "Zrušiť";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Fotografia je príliš rozmazaná na overenie";
 "jumio_error_instant_feedback_both_images_retaken" = "Fotografie je potrebné urobiť znovu";
 "jumio_error_instant_feedback_brazil_cnh" = "Uistite sa, že ste si stiahli PDF s digitálnym vodičským preukazom z oficiálnej štátnej aplikácie [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Skúste to znova s farebným obrázkom";
-"jumio_error_instant_feedback_bw_copy_title" = "Obrázok je čiernobielou fotokópiou";
-"jumio_error_instant_feedback_color_photocopy_title" = "Obrázok vyzerá ako farebná fotokópia";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Skúste použiť iný preukaz totožnosti";
 "jumio_error_instant_feedback_damaged_doc_title" = "Preukaz totožnosti sa zdá byť poškodený";
 "jumio_error_instant_feedback_digital_copy_tip" = "Nasnímajte svoj originálny preukaz totožnosti";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Nakloňte sa doprava";
 "jumio_liveness_prompt_tilt_up" = "Zdvihnite hlavu";
 "jumio_liveness_prompt_too_far" = "Pristúpte bližšie";
-"jumio_liveness_scanning_completed" = "Skenovanie bolo dokončené";
 "jumio_liveness_upfront_intro" = "Musíme naskenovať vašu tvár, aby sme si overili, že ste skutočná osoba.";
+"jumio_loaders_almost_there" = "Takmer hotovo...";
+"jumio_loaders_finishing_up" = "Dokončuje sa...";
+"jumio_loaders_starting_camera" = "Spúšťa sa fotoaparát...";
+"jumio_loaders_success" = "Úspech";
+"jumio_loaders_this_will_take_a_moment" = "Bude to chvíľu trvať";
+"jumio_loaders_working_on_it" = "Spracúva sa...";
 "jumio_loading_title" = "Načítavanie";
 "jumio_nfc_button_skip" = "Preskočiť";
 "jumio_nfc_description_secure_connection" = "Vytvorenie zabezpečeného pripojenia";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Prepnúť na zadný fotoaparát";
 "jumio_scan_switch_to_front_camera" = "Prepnúť na predný fotoaparát";
 "jumio_select" = "Vybrať";
+"jumio_selfiedone_ID_Found" = "Doklad totožnosti nájdený";
+"jumio_selfiedone_continue" = "Pokračovať";
+"jumio_selfiedone_scan_ID_manually" = "Naskenovať doklad manuálne";
+"jumio_selfiedone_we_found_your_ID" = "Našli sme jeden z vašich dokladov totožnosti";
 "jumio_start_button" = "Začať";
 "jumio_start_instructions_01" = "Nájdite dobre osvetlený povrch";
 "jumio_start_instructions_02" = "Pripravte sa na nasnímanie selfie";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Prepli ste na zadný fotoaparát";
 "jumio_switched_to_front_camera" = "Prepli ste na predný fotoaparát";
 "jumio_try_again" = "Skúste to znova";
-"jumio_uploading_success" = "Nahrávanie úspešné";
-"jumio_uploading_title" = "Nahrávanie";

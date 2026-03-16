@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "အရှေ့ခြမ်း";
 "jumio_accessibility_scan_shutter_button" = "ဓာတ်ပုံ ရိုက်ပါ";
 "jumio_accessibility_scan_switch_camera" = "ကင်မရာကို ပြောင်းရန်";
-"jumio_analyzing_biometric" = "ဇီဝအချက်အလက်ဒေတာကို ခွဲခြမ်းစိတ်ဖြာနေသည်";
 "jumio_brazil_cnh_subtitle" = "အပ်လုဒ်တင်ခြင်းကို ဆက်လုပ်ရန် သင်သည် တရားဝင်အစိုးရအပလီကေးရှင်းမှ ဒစ်ဂျစ်တယ်ယာဉ်မောင်းလိုင်စင် PDF ကို ဒေါင်းလုဒ်လုပ်ထားကြောင်း သေချာပါစေ [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "CNH ဒစ်ဂျစ်တယ် PDF ကို အပ်လုဒ်တင်ရန်";
 "jumio_button_cancel" = "ပယ်ဖျက်ရန်";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "ရုပ်ပုံသည် အတည်ပြု၍မရလောက်အောင် မှုန်ဝါးလွန်းသည်";
 "jumio_error_instant_feedback_both_images_retaken" = "ဓာတ်ပုံများကို ပြန်ရိုက်ရမည်";
 "jumio_error_instant_feedback_brazil_cnh" = "သင်သည် တရားဝင်အစိုးရအပလီကေးရှင်းမှ ဒစ်ဂျစ်တယ်ယာဉ်မောင်းလိုင်စင် PDF ကို ဒေါင်းလုဒ်လုပ်ထားကြောင်း သေချာပါစေ [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "အရောင်ပါသောဓာတ်ပုံဖြင့် ထပ်စမ်းကြည့်ပါ";
-"jumio_error_instant_feedback_bw_copy_title" = "ရုပ်ပုံသည် အဖြူအမည်း ဓာတ်ပုံမိတ္တူ ဖြစ်နေသည်";
-"jumio_error_instant_feedback_color_photocopy_title" = "ဓာတ်က ကာလာဓာတ်ပုံမိတ္တူ ဖြစ်ပုံရသည်";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "အခြားစာရွက်စာတမ်းဖြင့် ထပ်မံကြိုးစားပါ";
 "jumio_error_instant_feedback_damaged_doc_title" = "စာရွက်စာတမ်းသည် ပျက်စီးနေပုံရသည်";
 "jumio_error_instant_feedback_digital_copy_tip" = "မူရင်းစာရွက်စာတမ်းကို ဓာတ်ပုံရိုက်ပါ";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "ညာဘက်စောင်းပါ";
 "jumio_liveness_prompt_tilt_up" = "အပေါ်မော့ပါ";
 "jumio_liveness_prompt_too_far" = "ပိုနီးရာသို့ ရွှေ့ပါ";
-"jumio_liveness_scanning_completed" = "စကန်ဖတ်ပြီးပါပြီ";
 "jumio_liveness_upfront_intro" = "သင် လူအစစ်ဖြစ်ကြောင်း အတည်ပြုရန် သင့်မျက်နှာကို စကန်ဖတ်ရန် လိုအပ်သည်။";
+"jumio_loaders_almost_there" = "ပြီးခါနီးပါပြီ...";
+"jumio_loaders_finishing_up" = "ပြီးဆုံးနေပါပြီ...";
+"jumio_loaders_starting_camera" = "ကင်မရာ စတင်နေသည်...";
+"jumio_loaders_success" = "အောင်မြင်သည်";
+"jumio_loaders_this_will_take_a_moment" = "ခဏကြာပါမည်";
+"jumio_loaders_working_on_it" = "လုပ်ဆောင်နေသည်...";
 "jumio_loading_title" = "တင်နေသည်";
 "jumio_nfc_button_skip" = "ကျော်ရန်";
 "jumio_nfc_description_secure_connection" = "လုံခြုံသောချိတ်ဆက်မှုတည်ဆောက်နေသည်";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "နောက်ကင်မရာသို့ ပြောင်းပါ";
 "jumio_scan_switch_to_front_camera" = "ရှေ့ကင်မရာသို့ ပြောင်းပါ";
 "jumio_select" = "ရွေးချယ်ရန်";
+"jumio_selfiedone_ID_Found" = "အိုင်ဒီကို တွေ့ရှိပါသည်";
+"jumio_selfiedone_continue" = "ဆက်လုပ်ရန်";
+"jumio_selfiedone_scan_ID_manually" = "အိုင်ဒီကို ကိုယ်တိုင်စကန်ဖတ်ပါ";
+"jumio_selfiedone_we_found_your_ID" = "သင်၏ သက်သေခံစာရွက်စာတမ်းများထဲမှ တစ်ခုကို ကျွန်ုပ်တို့ တွေ့ရှိခဲ့သည်";
 "jumio_start_button" = "စတင်ရန်";
 "jumio_start_instructions_01" = "အလင်းရောင်ကောင်းကောင်းရသော မျက်နှာပြင်ကို ရှာပါ";
 "jumio_start_instructions_02" = "ဆဲလ်ဖီရိုက်ရန် အသင့်ပြင်ပါ";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "နောက်ကင်မရာသို့ ပြောင်းလိုက်သည်";
 "jumio_switched_to_front_camera" = "ရှေ့ကင်မရာသို့ ပြောင်းထားသည်";
 "jumio_try_again" = "ထပ်ကြိုးစားကြည့်ပါ";
-"jumio_uploading_success" = "အပ်လုဒ်တင်ခြင်း အောင်မြင်ပါသည်";
-"jumio_uploading_title" = "အပ်လုဒ်တင်နေသည်";

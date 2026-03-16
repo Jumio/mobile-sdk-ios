@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "In-naħa ta' quddiem";
 "jumio_accessibility_scan_shutter_button" = "Ħu ritratt";
 "jumio_accessibility_scan_switch_camera" = "Eqleb għall-kamera l-oħra";
-"jumio_analyzing_biometric" = "Qed janalizza d-dejta bijometrika";
 "jumio_brazil_cnh_subtitle" = "Biex ittella' l-PDF, aċċerta li niżżilt PDF tal-liċenzja tas-sewqan diġitali mill-applikazzjoni uffiċjali tal-gvern [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Tella' PDF ta' CNH Digital";
 "jumio_button_cancel" = "Ikkanċella";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Ir-ritratt mhux ċar biżżejjed biex jiġi vverifikat";
 "jumio_error_instant_feedback_both_images_retaken" = "Ir-ritratti għandhom bżonn jittieħdu mill-ġdid";
 "jumio_error_instant_feedback_brazil_cnh" = "Aċċerta li niżżilt PDF tal-liċenzja tas-sewqan Diġitali mill-applikazzjoni uffiċjali tal-gvern [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Jekk jogħġbok erġa' pprova b'immaġni tal-kulur";
-"jumio_error_instant_feedback_bw_copy_title" = "L-immaġni hija fotokopja bl-abjad u bl-iswed";
-"jumio_error_instant_feedback_color_photocopy_title" = "L-immaġni tidher li hija fotokopja bil-kulur";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Jekk jogħġbok erġa' pprova b'dokument differenti";
 "jumio_error_instant_feedback_damaged_doc_title" = "Id-dokument jidher li għandu l-ħsara";
 "jumio_error_instant_feedback_digital_copy_tip" = "Ħu ritratt tad-dokument oriġinali tiegħek";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Mejjel lejn il-lemin";
 "jumio_liveness_prompt_tilt_up" = "Mejjel 'il fuq";
 "jumio_liveness_prompt_too_far" = "Ersaq aktar viċin";
-"jumio_liveness_scanning_completed" = "L-iskennjar lest";
 "jumio_liveness_upfront_intro" = "Irridu nieħdu niskennjaw wiċċek biex nivverifikaw li int persuna reali.";
+"jumio_loaders_almost_there" = "Kważi lest...";
+"jumio_loaders_finishing_up" = "Qed jitlesta...";
+"jumio_loaders_starting_camera" = "Qed tistartja l-kamera...";
+"jumio_loaders_success" = "Suċċess";
+"jumio_loaders_this_will_take_a_moment" = "Dan se jieħu ftit";
+"jumio_loaders_working_on_it" = "Qed nipproċessaw...";
 "jumio_loading_title" = "Qed jillowdja";
 "jumio_nfc_button_skip" = "Aqbeż";
 "jumio_nfc_description_secure_connection" = "Qed jistabbilixxi konnessjoni sigura";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Eqleb għall-kamera tan-naħa ta' wara";
 "jumio_scan_switch_to_front_camera" = "Eqleb għall-kamera ta' quddiem";
 "jumio_select" = "Agħżel";
+"jumio_selfiedone_ID_Found" = "ID Instab";
+"jumio_selfiedone_continue" = "Kompli";
+"jumio_selfiedone_scan_ID_manually" = "Skennja l-ID Manwalment";
+"jumio_selfiedone_we_found_your_ID" = "Sibna wieħed mid-dokumenti ta' identifikazzjoni tiegħek";
 "jumio_start_button" = "Ibda";
 "jumio_start_instructions_01" = "Sib wiċċ imdawwal sew";
 "jumio_start_instructions_02" = "Lesti ruħek biex tieħu stessu";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Inqaleb għall-kamera ta' wara";
 "jumio_switched_to_front_camera" = "Inqaleb għall-kamera ta' quddiem";
 "jumio_try_again" = "Erġa' pprova";
-"jumio_uploading_success" = "Telgħu b'suċċess";
-"jumio_uploading_title" = "Qed itella'";

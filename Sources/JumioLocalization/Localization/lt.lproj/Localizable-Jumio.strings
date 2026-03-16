@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Priekinė dalis";
 "jumio_accessibility_scan_shutter_button" = "Nufotografuokite";
 "jumio_accessibility_scan_switch_camera" = "Perjungti kamerą";
-"jumio_analyzing_biometric" = "Analizuojami biometriniai duomenys";
 "jumio_brazil_cnh_subtitle" = "Norėdami tęsti įkėlimą įsitikinkite, kad atsisiuntėte skaitmeninio vairuotojo pažymėjimo PDF failą iš oficialios vyriausybės programėlės [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Įkelti „CNH Digital PDF“";
 "jumio_button_cancel" = "Atšaukti";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Nuotrauka neryški, todėl neįmanoma patvirtinti";
 "jumio_error_instant_feedback_both_images_retaken" = "Nuotraukas būtina pakartoti";
 "jumio_error_instant_feedback_brazil_cnh" = "Įsitikinkite, kad atsisiuntėte skaitmeninio vairuotojo pažymėjimo PDF failą iš oficialios vyriausybės programėlės [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Pateikite spalvotą nuotrauką";
-"jumio_error_instant_feedback_bw_copy_title" = "Nuotrauka yra nespalvota fotokopija";
-"jumio_error_instant_feedback_color_photocopy_title" = "Panašu, kad tai spalvota fotokopija";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Bandykite pateikti kitą dokumentą";
 "jumio_error_instant_feedback_damaged_doc_title" = "Panašu, kad dokumentas pažeistas";
 "jumio_error_instant_feedback_digital_copy_tip" = "Nufotografuokite savo dokumento originalą";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Pasisukite į dešinę";
 "jumio_liveness_prompt_tilt_up" = "Palenkite aukštyn";
 "jumio_liveness_prompt_too_far" = "Prieikite arčiau";
-"jumio_liveness_scanning_completed" = "Skenavimas baigtas";
 "jumio_liveness_upfront_intro" = "Norėdami įsitikinti, kad esate tikras asmuo, turėsime nuskaityti jūsų veidą.";
+"jumio_loaders_almost_there" = "Beveik baigta...";
+"jumio_loaders_finishing_up" = "Užbaigiama...";
+"jumio_loaders_starting_camera" = "Paleidžiama kamera...";
+"jumio_loaders_success" = "Pavyko";
+"jumio_loaders_this_will_take_a_moment" = "Tai užtruks akimirką";
+"jumio_loaders_working_on_it" = "Apdorojama...";
 "jumio_loading_title" = "Įkeliama";
 "jumio_nfc_button_skip" = "Praleisti";
 "jumio_nfc_description_secure_connection" = "Užmezgamas saugus ryšys";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Perjungti į gale esančią kamerą";
 "jumio_scan_switch_to_front_camera" = "Perjungti į priekyje esančią kamerą";
 "jumio_select" = "Pasirinkti";
+"jumio_selfiedone_ID_Found" = "Asmens dokumentas rastas";
+"jumio_selfiedone_continue" = "Tęsti";
+"jumio_selfiedone_scan_ID_manually" = "Nuskaityti asmens dokumentą rankiniu būdu";
+"jumio_selfiedone_we_found_your_ID" = "Radome vieną iš jūsų tapatybės dokumentų";
 "jumio_start_button" = "Pradėti";
 "jumio_start_instructions_01" = "Raskite gerai apšviestą paviršių";
 "jumio_start_instructions_02" = "Būkite pasiruošę pasidaryti asmenukę";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Perjungta į galinę kamerą";
 "jumio_switched_to_front_camera" = "Perjungta į priekinę kamerą";
 "jumio_try_again" = "Bandykite dar kartą";
-"jumio_uploading_success" = "Įkėlimas sėkmingas";
-"jumio_uploading_title" = "Įkeliama";

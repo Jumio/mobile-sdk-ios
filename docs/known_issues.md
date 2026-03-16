@@ -3,22 +3,19 @@
 # Known Issues
 
 ## Table of Contents
+- [Portrait Effect](#portrait-effect)
 - [Xcode16](#xcode16)
 - [Apple Privacy Guidelines](#apple-privacy-guidelines)
 - [4.9.0](#490)
-- [Xcode15](#xcode15)
-- [Symbol not found: Starscream](#symbol-not-found-starscream)
-- [Datadog Dependency Restriction](#datadog-dependency-restriction)
-- [Cropped TableView in Document Selection for iOS 15](#cropped-tableview-in-document-selection-for-ios-15)
 - [SDK Runs Fine on Debug Build, Fails on Release Build](#sdk-runs-fine-on-debug-build-fails-on-release-build)
-- [App Crash: Symbol not found for iProov, SocketIO or Starscream](#app-crash-symbol-not-found-for-iproov-socketio-or-starscream)
-- [CoreNFC Issues with Xcode 12 and Xcode 12.1](#corenfc-issues-with-xcode-12-and-xcode-121)
 - [Custom Theme Issues](#custom-theme-issues)
   - [Language Localization Issues](#language-localization-issues)
     - [Localizable.strings File](#localizable.strings-file)
     - [Language Changes at Runtime](#language-changes-at-runtime)
-- [User Was Not Asked for Face Capturing](#user-was-not-asked-for-face-capturing)
-- [Country Missing from the Country List](#country-missing-from-the-country-list)
+    
+## Portrait Effect
+
+The Liveness check will fail, if you add the key `NSCameraPortraitEffectEnabled` to your Info.plist file. Make sure that it is not set.
 
 ## Xcode16
 
@@ -34,62 +31,6 @@ The guide of Jumio SDK compliance to Apple Privacy Guidelines is in [integration
 
 There might be crashes on app startup when using our `4.9.0` frameworks on iOS 12.
 Please use version `4.9.1` instead.
-
-## Xcode15
-
-There might be crashes when using our frameworks with Xcode15 when using Cocoapods.
-
-Especially when using IProov:
-![Iproov crash](images/xcode15_crash_iproov.png)
-
-or Datadog:
-![Datadog crash](images/xcode15_crash_datadog.png)
-
-To fix this issue set the minimum deployment target to 12.0 instead of 11.0 in the post-install hook of your Podfile:
-
-```
-config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
-```
-
-## Symbol not found: Starscream
-
-This issue might occur due to a breaking change in Starscream's latest patch version `4.0.5` when using Cocoapods.  
-Especially when updating the Cocoapods repository via `pod install` or similar it leads to an app crash on startup with an error like:
-
-```
-Symbol not found: _$s10Starscream17WebSocketDelegateP10didReceive5event6clientyAA0bC5EventO_AA0bC0CtFTq
-```
-
-In SDK 4.x, please make sure to force Starscream to version `4.0.4` by adding the following line to your podfile:
-
-```
-pod 'Starscream', '4.0.4'
-```
-
-In SDK 3.x, please make sure to additionally force Socket.IO-Client-Swift to version `16.0.1` by adding the following lines to your podfile:
-
-```
-pod 'Socket.IO-Client-Swift', '16.0.1'
-pod 'Starscream', '4.0.4'
-```
-
-⚠️&nbsp;__Note:__ This issue is fixed beginning with SDK version `4.6.1`. Also for customers who are still on SDK 3, updating to SDK `3.9.8` will resolve this.
-
-## Datadog dependency Restriction
-
-The Jumio SDK currently supports the data analysis provider Datadog only with the dependency manager Cocoapods or Carthage. If you need to integrate Datadog using another method, reach out to the support team.
-
-## Cropped TableView in Document Selection for iOS 15
-
-For SDK 3.9.4 and below, document type selection appears to be cut off at the top with defaultUI using iOS 15 and above, when compiled with certain Xcode versions.
-
-This bug can be resolved by setting `sectionHeaderTopPadding` attribute of `NetverifyViewController` instance to an appropriate distance for devices using iOS 15, for example:
-
-```
-if #available(iOS 15.0, *) {
-    UITableView.appearance(whenContainedInInstancesOf: [NetverifyViewController.self]).sectionHeaderTopPadding = 24
-}
-```
 
 ## SDK Runs Fine on Debug Build, Fails on Release Build
 
@@ -113,37 +54,6 @@ Alternatively, it is also possible to set the key `manageAppVersionAndBuildNumbe
 <key>manageAppVersionAndBuildNumber</key>
 <false/>
 ```
-
-## App Crash: Symbol not found for iProov, SocketIO or Starscream
-
-After updating to SDK 3.8.0 and above, the app crashes without warning or the following error message is displayed:
-
-_dyld: Symbol not found: _$s8SocketIO0A11ClientEventO10disconnectyA2CmFWC\_  
-_Referenced from: /Users/.../Frameworks/iProov.framework/iProov  
- Expected in: /Users/b.../Frameworks/SocketIO.framework/SocketIO
- in /Users/.../Frameworks/iProov.framework/iProov_
-
-When using iProov, please make sure the following post install hook is included in your `podfile`:
-
-```
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    if ['iProov', 'Socket.IO-Client-Swift', 'Starscream'].include? target.name
-      target.build_configurations.each do |config|
-          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-      end
-    end
-   end
-end
-```
-
-## CoreNFC Issues with Xcode 12 and Xcode 12.1
-
-Building an application including NetverifyFace framework with a simulator target using Xcode12 might result in the following error:
-
-`Building for iOS Simulator, but linking in dylib built for iOS, file '.../mobile-sdk-ios/frameworks/NetverifyFace.framework/NetverifyFace' for architecture arm64`
-
-This seems to be an issues with the linking against `Core NFC`. Apple is aware of this and [will resolve it in Xcode 12.2.](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-beta-release-notes#Simulator) The problem seems to occur on iOS 14 simulators only. Any version lower than that should not have any issues.
 
 ## Library Not Loaded: Image Not Found
 
@@ -170,18 +80,3 @@ The `Localizable-Jumio.strings` file makes it possible to easily add translation
 #### Language Changes at Runtime
 
 Runtime language changes _within_ the SDK or separate language support (meaning the SDK language differs from the overall device language) is not possible. This goes against Apple's basic iOS user model for switching languages in the Settings app.
-
-## User Was Not Asked for Face Capturing
-
-If there is an issue with the user journey skipping over the face capturing and not asking the user to take a selfie, please make sure the parameter `config.enableIdentityVerification` is set to `true`. If it is set to `false` the 3D-Liveness step won't be performed.
-
-## Country Missing from the Country List
-
-Countries with documents that need barcode functionality (e.g. US and Canadian driver licenses) might not be available if the necessary frameworks are missing in SDK prior to 4.7.0:
-
-`MicroBlink.framework`  
-`NetverifyBarcode.framework`
-
-Frameworks and instructions on how to integrate them [can be found here.](../README.md#integration)
-
-ℹ️&nbsp;__Info:__ Version numbers may vary.

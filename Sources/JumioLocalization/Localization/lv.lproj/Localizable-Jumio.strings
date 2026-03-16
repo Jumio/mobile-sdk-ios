@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Priekšpuse";
 "jumio_accessibility_scan_shutter_button" = "Uzņemt fotoattēlu";
 "jumio_accessibility_scan_switch_camera" = "Pārslēgt kameru";
-"jumio_analyzing_biometric" = "Analizē biometriskos datus";
 "jumio_brazil_cnh_subtitle" = "Lai turpinātu augšupielādi, pārbaudiet, vai esat lejupielādējis digitālās autovadītāja apliecības PDF no valdības oficiālās lietotnes [({Carteira Digital de Trânsito})]";
 "jumio_brazil_cnh_upload_button" = "Augšupielādēt CNH Digital PDF";
 "jumio_button_cancel" = "Atcelt";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Attēls ir pārāk izplūdis, lai to varētu pārbaudīt";
 "jumio_error_instant_feedback_both_images_retaken" = "Fotoattēli jāuzņem vēlreiz";
 "jumio_error_instant_feedback_brazil_cnh" = "Pārbaudiet, vai esat lejupielādējis digitālās autovadītāja apliecības PDF no valdības oficiālās lietotnes [({Carteira Digital de Trânsito})]";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Mēģiniet vēlreiz ar krāsainu attēlu";
-"jumio_error_instant_feedback_bw_copy_title" = "Attēls ir melnbalta fotokopija";
-"jumio_error_instant_feedback_color_photocopy_title" = "Šķiet, ka attēls ir krāsaina fotokopija";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Mēģiniet vēlreiz ar citu dokumentu";
 "jumio_error_instant_feedback_damaged_doc_title" = "Šķiet, ka dokuments ir bojāts";
 "jumio_error_instant_feedback_digital_copy_tip" = "Nofotografējiet dokumenta oriģinālu";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Nolieciet pa labi";
 "jumio_liveness_prompt_tilt_up" = "Paceliet augstāk";
 "jumio_liveness_prompt_too_far" = "Panāciet tuvāk";
-"jumio_liveness_scanning_completed" = "Skenēšana pabeigta";
 "jumio_liveness_upfront_intro" = "Mums ir jānoskenē Jūsu seja, lai pārbaudītu, vai esat īsta persona.";
+"jumio_loaders_almost_there" = "Gandrīz gatavs...";
+"jumio_loaders_finishing_up" = "Pabeigšana...";
+"jumio_loaders_starting_camera" = "Notiek kameras palaišana...";
+"jumio_loaders_success" = "Veiksmīgi";
+"jumio_loaders_this_will_take_a_moment" = "Tas aizņems brīdi";
+"jumio_loaders_working_on_it" = "Notiek apstrāde...";
 "jumio_loading_title" = "Ielādē";
 "jumio_nfc_button_skip" = "Izlaist";
 "jumio_nfc_description_secure_connection" = "Izveido drošu savienojumu";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Pārslēgties uz aizmugurējo kameru";
 "jumio_scan_switch_to_front_camera" = "Pārslēgties uz priekšējo kameru";
 "jumio_select" = "Atlasīt";
+"jumio_selfiedone_ID_Found" = "ID atrasts";
+"jumio_selfiedone_continue" = "Turpināt";
+"jumio_selfiedone_scan_ID_manually" = "Skenēt ID manuāli";
+"jumio_selfiedone_we_found_your_ID" = "Mēs atradām vienu no jūsu identifikācijas dokumentiem";
 "jumio_start_button" = "Sākt";
 "jumio_start_instructions_01" = "Atrodiet labi apgaismotu virsmu";
 "jumio_start_instructions_02" = "Sagatavojieties pašportreta uzņemšanai";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Pārslēgts uz aizmugurējo kameru";
 "jumio_switched_to_front_camera" = "Pārslēgts uz priekšējo kameru";
 "jumio_try_again" = "Mēģiniet vēlreiz";
-"jumio_uploading_success" = "Augšupielāde veiksmīga";
-"jumio_uploading_title" = "Augšupielādē";

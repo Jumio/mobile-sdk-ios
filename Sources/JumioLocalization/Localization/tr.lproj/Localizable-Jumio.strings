@@ -11,7 +11,6 @@
 "jumio_accessibility_scan_id_front" = "Ön Yüz";
 "jumio_accessibility_scan_shutter_button" = "Fotoğraf çek";
 "jumio_accessibility_scan_switch_camera" = "Kamerayı değiştir";
-"jumio_analyzing_biometric" = "Biyometrik veriler inceleniyor";
 "jumio_brazil_cnh_subtitle" = "Yükleme işlemine devam etmek için resmi devlet uygulaması üzerinden dijital ehliyet PDF'sini [({Carteira Digital de Trânsito})] indirmiş olmanız gerekmektedir";
 "jumio_brazil_cnh_upload_button" = "CNH Digital PDF'sini yükleyin";
 "jumio_button_cancel" = "İptal";
@@ -64,9 +63,6 @@
 "jumio_error_instant_feedback_blurry_title" = "Görüntü doğrulanamayacak kadar bulanık";
 "jumio_error_instant_feedback_both_images_retaken" = "Görüntüler yeniden çekilmelidir";
 "jumio_error_instant_feedback_brazil_cnh" = "Resmi devlet uygulaması üzerinden Dijital ehliyet PDF'sini [({Carteira Digital de Trânsito})] indirmeyi unutmayın";
-"jumio_error_instant_feedback_bw_copy_tip_color_image" = "Lütfen renkli bir görüntüyle tekrar deneyin";
-"jumio_error_instant_feedback_bw_copy_title" = "Bu görüntü siyah beyaz bir fotokopi";
-"jumio_error_instant_feedback_color_photocopy_title" = "Bu görüntü renkli bir fotokopi gibi görünüyor";
 "jumio_error_instant_feedback_damaged_doc_tip_different_doc" = "Lütfen farklı bir belgeyle tekrar deneyin";
 "jumio_error_instant_feedback_damaged_doc_title" = "Bu belge hasarlı görünüyor";
 "jumio_error_instant_feedback_digital_copy_tip" = "Orijinal belgenizin bir fotoğrafını çekin";
@@ -178,8 +174,13 @@
 "jumio_liveness_prompt_tilt_right" = "Sağa eğin";
 "jumio_liveness_prompt_tilt_up" = "Yukarı kaldırın";
 "jumio_liveness_prompt_too_far" = "Yaklaşın";
-"jumio_liveness_scanning_completed" = "Tarama tamamlandı";
 "jumio_liveness_upfront_intro" = "Gerçek bir insan olduğunuzu doğrulamak için yüzünüzü taramamız gerekiyor.";
+"jumio_loaders_almost_there" = "Neredeyse tamamlandı...";
+"jumio_loaders_finishing_up" = "Bitiriliyor...";
+"jumio_loaders_starting_camera" = "Kamera başlatılıyor...";
+"jumio_loaders_success" = "Başarılı";
+"jumio_loaders_this_will_take_a_moment" = "Bu işlem biraz zaman alacak";
+"jumio_loaders_working_on_it" = "İşleniyor...";
 "jumio_loading_title" = "Yükleniyor";
 "jumio_nfc_button_skip" = "Atla";
 "jumio_nfc_description_secure_connection" = "Güvenli bağlantı kuruluyor";
@@ -198,6 +199,10 @@
 "jumio_scan_switch_to_back_camera" = "Arka kameraya geç";
 "jumio_scan_switch_to_front_camera" = "Ön kameraya geç";
 "jumio_select" = "Seçin";
+"jumio_selfiedone_ID_Found" = "Kimlik Bulundu";
+"jumio_selfiedone_continue" = "Devam Et";
+"jumio_selfiedone_scan_ID_manually" = "Kimliği Manuel Olarak Tara";
+"jumio_selfiedone_we_found_your_ID" = "Kimlik belgelerinizden birini bulduk";
 "jumio_start_button" = "Başla";
 "jumio_start_instructions_01" = "İyi aydınlatılmış bir yüzey bulun";
 "jumio_start_instructions_02" = "Selfie çekmeye hazır olun";
@@ -209,5 +214,3 @@
 "jumio_switched_to_back_camera" = "Arka kameraya geçildi";
 "jumio_switched_to_front_camera" = "Ön kameraya geçildi";
 "jumio_try_again" = "Tekrar deneyin";
-"jumio_uploading_success" = "Yükleme başarılı";
-"jumio_uploading_title" = "Yükleniyor";
