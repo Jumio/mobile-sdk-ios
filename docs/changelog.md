@@ -20,8 +20,6 @@ Please refer to our [SDK maintenance and support policy](maintenance_policy.md) 
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Redesigned loading screens
 
-![Improvement](https://img.shields.io/badge/Improvement-green) Added Jumio Terms of Use to the Start screen
-
 ## SDK Version: 4.16.0
 
 ![Improvement](https://img.shields.io/badge/Improvement-green) Redesign of the ID Autocapture user experience
