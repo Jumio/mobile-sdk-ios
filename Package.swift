@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "4.17.0"
+let version = "4.17.1"
 
 let package = Package(
     name: "Jumio",
@@ -64,27 +64,27 @@ let package = Package(
         .binaryTarget(
             name: "Jumio",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Jumio.xcframework.zip",
-            checksum: "9a3b0665996e9d387768a9159a6c0f01a12c0472f56179253ff8d1daaeae6f74"
+            checksum: "2a1fa5b4fe24d9f914f4fa6b1b03f97433e216d81587632c7849d9c18b4eeb65"
         ),
         .binaryTarget(
             name: "JumioLiveness",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLiveness.xcframework.zip",
-            checksum: "4ad19bd8898b3b03fef8fc4e857885c47e97ff0a676eae28af6cf08ef087edac"
+            checksum: "e8534c1fbea286875e0618a7430588120b0a3cc068956133325d53fa1e99c52f"
         ),
         .binaryTarget(
             name: "JumioLivenessClient",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLivenessClient.xcframework.zip",
-            checksum: "9c8068d2e1c2ad66fbed1fd7acc8d24115b9fa0b19362061c4c649857f545a82"
+            checksum: "05c4917781cae8d9039b220b862f294c07eaf712cc6c0b1750f0535eae8382ee"
         ),
         .binaryTarget(
             name: "JumioDefaultUI",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDefaultUI.xcframework.zip",
-            checksum: "7ce611f2c84a9e3e3943d9c2e78bffd34df2428809590e453262a1cd45ae5ab8"
+            checksum: "48f2d2d3110f2004eb5f7f8c6e81892a7f85b63305ad487aef9a91997c8ad1b3"
         ),
         .binaryTarget(
             name: "JumioNFC",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioNFC.xcframework.zip",
-            checksum: "c484653fff2c2faddb52dbd1797c9d9e7a258ae200adebf400026fdbe556c28e"
+            checksum: "b6ccdbbe5806e230f063f6880b83bf0bef170230ff45cdb2ce999163b96a42a1"
         ),
     ]
 )

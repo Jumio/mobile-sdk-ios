@@ -48,7 +48,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 
 ## Release Notes
 
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.17.0**
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.17.1**
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -93,15 +93,15 @@ platform :ios, '13.0'
 use_frameworks! # Required for proper framework handling
 
 #Core (always add):
-pod 'Jumio/Jumio', '~>4.17.0' # Manual & DocFinder Capture
+pod 'Jumio/Jumio', '~>4.17.1' # Manual & DocFinder Capture
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.17.0' # Liveness functionality
-pod 'Jumio/DefaultUI', '~>4.17.0' # Default UI functionality
-pod 'Jumio/NFC', '~>4.17.0' # NFC functionality
+pod 'Jumio/Liveness', '~>4.17.1' # Liveness functionality
+pod 'Jumio/DefaultUI', '~>4.17.1' # Default UI functionality
+pod 'Jumio/NFC', '~>4.17.1' # NFC functionality
 
 #All:
-pod 'Jumio/All', '~>4.17.0' # All Jumio products with all available scanning methods
+pod 'Jumio/All', '~>4.17.1' # All Jumio products with all available scanning methods
 ```
 
 #### Via Swift Package Manager
@@ -134,12 +134,12 @@ Adapt you Cartfile and add Jumio dependencies. Check the following example how a
 ```
 
 #Core (always add):
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.17.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.17.1
 
 #Addons:
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.17.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.17.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioNFC.json" == 4.17.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.17.1
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.17.1
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioNFC.json" == 4.17.1
 
 ```
 
@@ -153,7 +153,7 @@ carthage update --use-xcframeworks
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.17.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.17.0/ios-jumio-mobile-sdk-4.17.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.17.1.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.17.1/ios-jumio-mobile-sdk-4.17.1.zip).
 
 ⚠️&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 

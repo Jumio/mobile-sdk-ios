@@ -11,8 +11,12 @@ For detailed technical changes please refer to our [Transition Guide](transition
 
 ## Support Period
 
-Current SDK version: __4.17.0__  
+Current SDK version: __4.17.1__  
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: 4.17.1
+
+![Fix](https://img.shields.io/badge/Fix-success) x86_64 simulator crash fix
 
 ## SDK Version: 4.17.0
 

@@ -4,7 +4,7 @@
 //  Copyright © 2026 Jumio Corporation. All rights reserved.
 //
 
-import Jumio
+@preconcurrency import Jumio
 import UIKit
 
 protocol ScanPartHandlingDelegate: AnyObject {
