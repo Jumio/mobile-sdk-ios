@@ -8,6 +8,14 @@ This section covers all technical changes that should be considered when updatin
 When updating your SDK version, **all** changes/updates made in in the meantime have to be taken into account and applied if necessary.
 **Example:** If you're updating from SDK version **3.7.2** to **3.9.2**, the changes outlined in **3.8.0, 3.9.0** and **3.9.1** are **still relevant**.
 
+## 4.17.2
+
+- Adds `CFBundleShortVersionString` to JumioLivenessClient.xcframework.
+
+## 4.17.1
+
+- Adds x86_64 simulator support to JumioLivenessClient.xcframework.
+
 ## 4.17.0
 
 #### Changes to Public API

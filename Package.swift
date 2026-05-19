@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "4.17.0"
+let version = "4.17.2"
 
 let package = Package(
     name: "Jumio",
@@ -64,27 +64,27 @@ let package = Package(
         .binaryTarget(
             name: "Jumio",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Jumio.xcframework.zip",
-            checksum: "9a3b0665996e9d387768a9159a6c0f01a12c0472f56179253ff8d1daaeae6f74"
+            checksum: "1bc0cc5dc3c661ca4eb0ad80c8a4e3106a7cc8a09c0a4a048efffd5c31e8e63c"
         ),
         .binaryTarget(
             name: "JumioLiveness",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLiveness.xcframework.zip",
-            checksum: "4ad19bd8898b3b03fef8fc4e857885c47e97ff0a676eae28af6cf08ef087edac"
+            checksum: "8fed22c483f25005ab863980083f2541e38ce918410337dee0f0e072293f97a7"
         ),
         .binaryTarget(
             name: "JumioLivenessClient",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLivenessClient.xcframework.zip",
-            checksum: "9c8068d2e1c2ad66fbed1fd7acc8d24115b9fa0b19362061c4c649857f545a82"
+            checksum: "2868568e5ebca2f06ea4c5911369e56c216102de4992bc1ffe5aba5e4a1109cc"
         ),
         .binaryTarget(
             name: "JumioDefaultUI",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDefaultUI.xcframework.zip",
-            checksum: "7ce611f2c84a9e3e3943d9c2e78bffd34df2428809590e453262a1cd45ae5ab8"
+            checksum: "a30e68fd4ed4fe988fda42f7cdfd9893703e3a14d2a4d1b5aca561cabe42a575"
         ),
         .binaryTarget(
             name: "JumioNFC",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioNFC.xcframework.zip",
-            checksum: "c484653fff2c2faddb52dbd1797c9d9e7a258ae200adebf400026fdbe556c28e"
+            checksum: "810345c6c8047cc6279db2f83c395c11e1a80c182cab867221a8c8d38834e41a"
         ),
     ]
 )
