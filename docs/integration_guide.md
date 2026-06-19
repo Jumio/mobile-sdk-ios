@@ -267,7 +267,7 @@ You can download our encrypted models and add them to your bundle for the follow
 
 #### ID Verification
 
-You can find the models required for the [`Jumio.Scan.Mode`][jumioScanMode] `docFinder` [here](https://cdn.mobile.jumio.ai/ios/model/coreml_classifier_on_device_ep_29_float16_quant.enc) and [here](https://cdn.mobile.jumio.ai/ios/model/docfinderModel_121923.enc).
+You can find the models required for the [`Jumio.Scan.Mode`][jumioScanMode] `docFinder` [here](https://cdn.mobile.jumio.ai/ios/model/mobile-classifier-model-1.0.0.enc) and [here](https://cdn.mobile.jumio.ai/ios/model/docfinderModel_121923.enc).
 
 #### Liveness
 
