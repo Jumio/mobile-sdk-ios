@@ -8,6 +8,41 @@ This section covers all technical changes that should be considered when updatin
 When updating your SDK version, **all** changes/updates made in in the meantime have to be taken into account and applied if necessary.
 **Example:** If you're updating from SDK version **3.7.2** to **3.9.2**, the changes outlined in **3.8.0, 3.9.0** and **3.9.1** are **still relevant**.
 
+## 4.18.0
+
+#### Changes to Public API
+
+- `Jumio.DigitalDocument.DocumentType` enum has been added with the following supported values: `TRUST_CHECK`, `EIDAS`, `MASTERCARD`, `DIGITAL_DRIVING_LICENSE_PDF`
+- `Jumio.DigitalDocument` property `type` has changed from `String` to `Jumio.DigitalDocument.DocumentType`
+- `Jumio.DigitalDocument` contains new optional property `logoUrl`
+- `Jumio.IDCredential` contains new function `setDefaultDocumentConfiguration()` 
+
+#### Preselection
+
+- Digital Identity documents can now be preselected via the account request. See the [Preselection](integration_guide.md#preselection) section in the integration guide for details.
+
+#### Localization Keys
+
+The following keys have been added:
+
+- `jumio_di_continue_with_provider`
+- `jumio_di_doctype_digital_id_subheader`
+- `jumio_di_external_instructions_one`
+- `jumio_di_external_instructions_two`
+- `jumio_di_external_instructions_three`
+- `jumio_di_external_sub_header`
+- `jumio_di_select_from_list_below`
+- `jumio_di_unexpected_error_description`
+- `jumio_di_unexpected_error_title`
+- `jumio_di_use_another_id`
+- `jumio_di_what_happens_next`
+- `jumio_physical_id`
+
+The following keys have been renamed:
+
+- `jumio_idtype_subtitle_id` has been renamed to `jumio_select_id_type`
+- `jumio_di_vendor_selection_title` has been renamed to `jumio_di_choose_digital_id`
+
 ## 4.17.2
 
 - Adds `CFBundleShortVersionString` to JumioLivenessClient.xcframework.

@@ -4,7 +4,7 @@
 //  Copyright © 2026 Jumio Corporation. All rights reserved.
 //
 
-@preconcurrency import Jumio
+import Jumio
 
 protocol ControllerHandlingDelegate: AnyObject {
     func controller(consentItems: [Jumio.ConsentItem])

@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "4.17.2"
+let version = "4.18.0"
 
 let package = Package(
     name: "Jumio",
@@ -64,27 +64,27 @@ let package = Package(
         .binaryTarget(
             name: "Jumio",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Jumio.xcframework.zip",
-            checksum: "1bc0cc5dc3c661ca4eb0ad80c8a4e3106a7cc8a09c0a4a048efffd5c31e8e63c"
+            checksum: "eddf062afa95ec8981bb59a56f97871eb9e245c27fd7686ecbd4b1d5d3a3100d"
         ),
         .binaryTarget(
             name: "JumioLiveness",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLiveness.xcframework.zip",
-            checksum: "8fed22c483f25005ab863980083f2541e38ce918410337dee0f0e072293f97a7"
+            checksum: "3efcf14eb49de31bc65709ec64466d19b4066526f9319ecebabd2b0d80594f5d"
         ),
         .binaryTarget(
             name: "JumioLivenessClient",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLivenessClient.xcframework.zip",
-            checksum: "2868568e5ebca2f06ea4c5911369e56c216102de4992bc1ffe5aba5e4a1109cc"
+            checksum: "9360d12471feeaa1c92fc8de8b58199b83027ace9fffb47ef2a490087e20d8c2"
         ),
         .binaryTarget(
             name: "JumioDefaultUI",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDefaultUI.xcframework.zip",
-            checksum: "a30e68fd4ed4fe988fda42f7cdfd9893703e3a14d2a4d1b5aca561cabe42a575"
+            checksum: "9390419a150ccec12cec9f2969fbe9c859e0c0bc3bfc39711dbb3b61d885fbdf"
         ),
         .binaryTarget(
             name: "JumioNFC",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioNFC.xcframework.zip",
-            checksum: "810345c6c8047cc6279db2f83c395c11e1a80c182cab867221a8c8d38834e41a"
+            checksum: "254dad96300902463fc1e5f4fc35335f3fbd4283f4f4aae231855c18984a2406"
         ),
     ]
 )

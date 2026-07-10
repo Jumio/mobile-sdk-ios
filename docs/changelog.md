@@ -11,8 +11,16 @@ For detailed technical changes please refer to our [Transition Guide](transition
 
 ## Support Period
 
-Current SDK version: __4.17.2__  
+Current SDK version: __4.18.0__  
 Please refer to our [SDK maintenance and support policy](maintenance_policy.md) for more information about Mobile SDK maintenance and support.
+
+## SDK Version: 4.18.0
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Added support for the Jumio Digital Identity Hub
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Added controls for limiting and preventing Manual Capture (ID and Selfie)
+
+![Improvement](https://img.shields.io/badge/Improvement-green) Added support for localized default consent links
 
 ## SDK Version: 4.17.2
 

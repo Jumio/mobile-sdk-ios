@@ -48,7 +48,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 
 ## Release Notes
 
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.17.2**
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.18.0**
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -93,15 +93,15 @@ platform :ios, '13.0'
 use_frameworks! # Required for proper framework handling
 
 #Core (always add):
-pod 'Jumio/Jumio', '~>4.17.2' # Manual & DocFinder Capture
+pod 'Jumio/Jumio', '~>4.18.0' # Manual & DocFinder Capture
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.17.2' # Liveness functionality
-pod 'Jumio/DefaultUI', '~>4.17.2' # Default UI functionality
-pod 'Jumio/NFC', '~>4.17.2' # NFC functionality
+pod 'Jumio/Liveness', '~>4.18.0' # Liveness functionality
+pod 'Jumio/DefaultUI', '~>4.18.0' # Default UI functionality
+pod 'Jumio/NFC', '~>4.18.0' # NFC functionality
 
 #All:
-pod 'Jumio/All', '~>4.17.2' # All Jumio products with all available scanning methods
+pod 'Jumio/All', '~>4.18.0' # All Jumio products with all available scanning methods
 ```
 
 #### Via Swift Package Manager
@@ -134,12 +134,12 @@ Adapt you Cartfile and add Jumio dependencies. Check the following example how a
 ```
 
 #Core (always add):
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.17.2
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.18.0
 
 #Addons:
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.17.2
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.17.2
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioNFC.json" == 4.17.2
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.18.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.18.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioNFC.json" == 4.18.0
 
 ```
 
@@ -153,7 +153,7 @@ carthage update --use-xcframeworks
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.17.2.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.17.2/ios-jumio-mobile-sdk-4.17.2.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.18.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.18.0/ios-jumio-mobile-sdk-4.18.0.zip).
 
 ⚠️&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -375,8 +375,6 @@ For more details, please refer to **Request Body** section in our [KYX Guide](ht
 
 You can specify issuing country using [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country codes, as well as ID types to skip selection during the scanning process. In the example down below, Austria ("AUT") and the USA ("USA") have been preselected. PASSPORT and DRIVER_LICENSE have been chosen as preselected document types. If all parameters are preselected and valid and there is only one given combination (one country and one document type), the document selection screen in the SDK can be skipped entirely.
 
-⚠️&nbsp;&nbsp;**Note:** "Digital Identity" document type can not be preselected!
-
 For more details, please refer to **Request Body** section in our [KYX Guide](https://documentation.jumio.ai/docs/developer-resources/API/CreateUpdateAccounts/creating-and-updating-accounts).
 
 ```
@@ -397,6 +395,37 @@ For more details, please refer to **Request Body** section in our [KYX Guide](ht
     ]
   }
 }'
+```
+
+Digital Identity documents can also be preselected by specifying `"DIGITAL_IDENTITY"` as the type. To narrow down to a specific digital identity subtype, use the optional `"subType"` field with a single value. Supported subtypes are: `EIDAS`, `DIGITAL_DRIVING_LICENSE_PDF`. If only one digital identity type is available for the preselected country (and no physical documents), the document selection screen in the SDK can be skipped entirely.
+
+```json
+{
+  "customerInternalReference": "CUSTOMER_REFERENCE",
+  "workflowDefinition": {
+    "key": X,
+    "credentials": [
+      {
+        "category": "ID",
+        "type": {
+          "values": [
+            "DIGITAL_IDENTITY"
+          ]
+        },
+        "subType": {
+          "values": [
+            "EIDAS"
+          ]
+        },
+        "country": {
+          "values": [
+            "AUT"
+          ]
+        }
+      }
+    ]
+  }
+}
 ```
 
 ### Camera Handling
@@ -610,7 +639,10 @@ If the `termsOfUse` parameter is `null`, then it should be ignored.
 
 ### Credential Handling
 
-[`Jumio.Credential`][jumioCredential] will contain all necessary information about the scanning process. For ID verification you will receive an [`IDCredential`][jumioIDCredential], for Selfie Verification a [`FaceCredential`][jumioFaceCredential], and so on. Initialize the credential and check if it is already preconfigured. If this is the case, the parameter [`isConfigured`][isConfigured] will be `true` and the credential can be started right away.
+The [`Jumio.Credential`][jumioCredential] object contains all necessary information about the scanning process. You will receive a specific subclass depending on the verification type, such as an [`IDCredential`][jumioIDCredential] for ID Verification or a [`FaceCredential`][jumioFaceCredential] for Selfie Verification.
+
+Initialize the credential and check if it is already preconfigured. If the [`isConfigured`][isConfigured] parameter is true, the credential can be started right away. If you are using digital identities and do not want the user to select a specific document type for physical document scanning, call [`setDefaultDocumentConfiguration()`][setDefaultDocumentConfiguration] on the IDCredential. This allows the user to skip country selection and proceed directly to document scanning.
+
 
 ```
 var currentCredential: Jumio.Credential?
@@ -698,6 +730,8 @@ guard credentialParts?.count ?? 0 > index,
   - [`Jumio.Document.Physical.DocumentVariant`][jumioDocumentVariant] values: `paper`, `plastic`
 
 - [`Jumio.Document.Digital`][jumioDigitalDocument] represents a digital document ("Digital Identity")
+
+  - [`JumioDigitalDocumentType`][jumiodigitaldocumenttype] values: `TRUST_CHECK`, `EIDAS`, `MASTERCARD`, `DIGITAL_DRIVING_LICENSE_PDF`
 
 #### Jumio Face Credential
 
@@ -1023,6 +1057,7 @@ In any case, your use of this Software is subject to the terms and conditions th
 [isSuccess]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Result.html#/s:5JumioAAV6ResultC9isSuccessSbvp
 [userConsented]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Controller.html#/s:5JumioAAV10ControllerC13userConsentedyyF
 [isConfigured]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/Credential.html#/s:5JumioAAV10CredentialC12isConfiguredSbvp
+[setDefaultDocumentConfiguration]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html#/s:5JumioAAV12IDCredentialC31setDefaultDocumentConfigurationyyF
 [countries]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html#/s:5JumioAAV12IDCredentialC9countriesSDySSSayAA0A8Document_pGGvp
 [isSupportedConfiguration]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html#/s:5JumioAAV12IDCredentialC24isSupportedConfiguration7country8documentSbSS_AB8DocumentVtF
 [setConfiguration]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html#/s:5JumioAAV12IDCredentialC16setConfiguration7country8documentySS_AB8DocumentVtF
@@ -1065,6 +1100,7 @@ In any case, your use of this Software is subject to the terms and conditions th
 [jumioIDCredential]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/IDCredential.html
 [jumioPhysicalDocument]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/PhysicalDocument.html
 [jumioDigitalDocument]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/DigitalDocument.html
+[jumiodigitaldocumenttype]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/DigitalDocument.html
 [jumioDocumentCredential]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/DocumentCredential.html
 [jumioDataCredential]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/DataCredential.html
 [jumioFaceCredential]: https://jumio.github.io/mobile-sdk-ios/Jumio/Structs/Jumio/FaceCredential.html
