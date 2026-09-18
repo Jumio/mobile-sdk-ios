@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "L-iskennjar ġiet ottimizzat għal prestazzjoni aħjar tal-apparat";
 "jumio_id_scan_manual" = "Ħu ritratt tad-dokument tiegħek";
 "jumio_id_scan_manual_tips" = "Aċċerta li tieħu ritratt tad-dokument kollu";
-"jumio_id_scan_prompt_analyzing" = "Nanalizzaw l-immaġni...";
 "jumio_id_scan_prompt_capture_success" = "Irċivejnih(a)!";
 "jumio_id_scan_prompt_captured" = "Maħżuna";
 "jumio_id_scan_prompt_center_id" = "Poġġi d-dokument tiegħek fin-nofs";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Mejjel lejn il-lemin";
 "jumio_liveness_prompt_tilt_up" = "Mejjel 'il fuq";
 "jumio_liveness_prompt_too_far" = "Ersaq aktar viċin";
-"jumio_liveness_upfront_intro" = "Irridu nieħdu niskennjaw wiċċek biex nivverifikaw li int persuna reali.";
+"jumio_liveness_upfront_intro" = "Għandna bżonn niskennjaw wiċċek biex nivverifikaw l-identità tiegħek u li inti persuna reali.";
 "jumio_loaders_almost_there" = "Kważi lest...";
 "jumio_loaders_finishing_up" = "Qed jitlesta...";
 "jumio_loaders_starting_camera" = "Qed tistartja l-kamera...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Agħżel it-tip ta' dokument tal-identità";
 "jumio_selfiedone_ID_Found" = "ID Instab";
 "jumio_selfiedone_continue" = "Kompli";
+"jumio_selfiedone_faster_verification_subtitle" = "Jekk diġà vverifikajt l-identità tiegħek ma' wieħed mill-klijenti tagħna, jista' jkun li nkunu nistgħu nużaw dokument tal-ID li pprovdejt qabel.";
+"jumio_selfiedone_faster_verification_title" = "Agħżel verifika aktar mgħaġġla";
+"jumio_selfiedone_no_scan_id_manually_button" = "Le, skennja l-ID manwalment";
 "jumio_selfiedone_scan_ID_manually" = "Skennja l-ID Manwalment";
-"jumio_selfiedone_we_found_your_ID" = "Sibna wieħed mid-dokumenti ta' identifikazzjoni tiegħek";
+"jumio_selfiedone_start_verification_subtitle" = "Ġejt ridirett hawnhekk minn klijent ta' Jumio li juża s-servizzi tagħna għall-verifika tal-identità, il-prevenzjoni tal-frodi, u l-integrità tal-kontijiet.";
+"jumio_selfiedone_submit_button" = "Ibgħat";
+"jumio_selfiedone_we_found_your_ID" = "Sibna dokument tal-identità li pprovdejt qabel";
+"jumio_selfiedone_yes_continue_button" = "Iva, Kompli";
 "jumio_start_button" = "Ibda";
 "jumio_start_instructions_01" = "Sib wiċċ imdawwal sew";
 "jumio_start_instructions_02" = "Lesti ruħek biex tieħu stessu";

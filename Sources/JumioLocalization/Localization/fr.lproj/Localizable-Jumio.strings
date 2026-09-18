@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Numérisation optimisée pour une meilleure performance de l'appareil";
 "jumio_id_scan_manual" = "Prenez une photo de votre document";
 "jumio_id_scan_manual_tips" = "Assurez-vous de prendre l'intégralité du document";
-"jumio_id_scan_prompt_analyzing" = "Analyse de l'image...";
 "jumio_id_scan_prompt_capture_success" = "C'est bon !";
 "jumio_id_scan_prompt_captured" = "Capturé";
 "jumio_id_scan_prompt_center_id" = "Centrez votre document";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Inclinez la tête à droite";
 "jumio_liveness_prompt_tilt_up" = "Levez la tête";
 "jumio_liveness_prompt_too_far" = "Se rapprocher";
-"jumio_liveness_upfront_intro" = "Nous devons scanner votre visage pour vérifier que vous êtes une vraie personne.";
+"jumio_liveness_upfront_intro" = "Nous devons scanner votre visage pour vérifier votre identité et confirmer que vous êtes une vraie personne.";
 "jumio_loaders_almost_there" = "On y est presque...";
 "jumio_loaders_finishing_up" = "Finalisation...";
 "jumio_loaders_starting_camera" = "Démarrage de la caméra...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Sélectionnez le type de pièce d'identité";
 "jumio_selfiedone_ID_Found" = "Pièce d'identité trouvée";
 "jumio_selfiedone_continue" = "Continuer";
+"jumio_selfiedone_faster_verification_subtitle" = "Si vous avez déjà vérifié votre identité auprès de l'un de nos clients, il se peut que nous puissions utiliser une pièce d'identité que vous avez fournie précédemment.";
+"jumio_selfiedone_faster_verification_title" = "Choisissez une vérification plus rapide";
+"jumio_selfiedone_no_scan_id_manually_button" = "Non, numériser la pièce d'identité manuellement";
 "jumio_selfiedone_scan_ID_manually" = "Scanner la pièce d'identité manuellement";
-"jumio_selfiedone_we_found_your_ID" = "Nous avons trouvé l'une de vos pièces d'identité";
+"jumio_selfiedone_start_verification_subtitle" = "Vous avez été redirigé ici par un client de Jumio qui utilise nos services de vérification d'identité, de prévention des fraudes et d'intégrité des comptes.";
+"jumio_selfiedone_submit_button" = "Soumettre";
+"jumio_selfiedone_we_found_your_ID" = "Nous avons trouvé une pièce d'identité que vous avez fournie précédemment";
+"jumio_selfiedone_yes_continue_button" = "Oui, continuer";
 "jumio_start_button" = "Commencer";
 "jumio_start_instructions_01" = "Trouvez une surface bien éclairée";
 "jumio_start_instructions_02" = "Préparez-vous à prendre un selfie";

@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Skenovanie je optimalizované pre lepší výkon zariadenia";
 "jumio_id_scan_manual" = "Odfoťte dokument";
 "jumio_id_scan_manual_tips" = "Musíte zachytiť celý dokument";
-"jumio_id_scan_prompt_analyzing" = "Analýza obrázka...";
 "jumio_id_scan_prompt_capture_success" = "Hotovo!";
 "jumio_id_scan_prompt_captured" = "Odfotené";
 "jumio_id_scan_prompt_center_id" = "Vycentrujte dokument";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Nakloňte sa doprava";
 "jumio_liveness_prompt_tilt_up" = "Zdvihnite hlavu";
 "jumio_liveness_prompt_too_far" = "Pristúpte bližšie";
-"jumio_liveness_upfront_intro" = "Musíme naskenovať vašu tvár, aby sme si overili, že ste skutočná osoba.";
+"jumio_liveness_upfront_intro" = "Musíme naskenovať vašu tvár, aby sme si overili vašu totožnosť a to, že ste skutočná osoba.";
 "jumio_loaders_almost_there" = "Takmer hotovo...";
 "jumio_loaders_finishing_up" = "Dokončuje sa...";
 "jumio_loaders_starting_camera" = "Spúšťa sa fotoaparát...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Vyberte typ preukazu totožnosti";
 "jumio_selfiedone_ID_Found" = "Doklad totožnosti nájdený";
 "jumio_selfiedone_continue" = "Pokračovať";
+"jumio_selfiedone_faster_verification_subtitle" = "Ak ste už overili svoju totožnosť u jedného z našich zákazníkov, možno budeme môcť použiť preukaz totožnosti, ktorý ste nám poskytli už predtým.";
+"jumio_selfiedone_faster_verification_title" = "Vyberte si rýchlejšie overenie";
+"jumio_selfiedone_no_scan_id_manually_button" = "Nie, naskenovať preukaz manuálne";
 "jumio_selfiedone_scan_ID_manually" = "Naskenovať doklad manuálne";
-"jumio_selfiedone_we_found_your_ID" = "Našli sme jeden z vašich dokladov totožnosti";
+"jumio_selfiedone_start_verification_subtitle" = "Boli ste sem presmerovaní zákazníkom spoločnosti Jumio, ktorý využíva naše služby overovania totožnosti, prevencie podvodov a integrity účtov.";
+"jumio_selfiedone_submit_button" = "Odoslať";
+"jumio_selfiedone_we_found_your_ID" = "Našli sme doklad totožnosti, ktorý ste predtým poskytli";
+"jumio_selfiedone_yes_continue_button" = "Áno, pokračovať";
 "jumio_start_button" = "Začať";
 "jumio_start_instructions_01" = "Nájdite dobre osvetlený povrch";
 "jumio_start_instructions_02" = "Pripravte sa na nasnímanie selfie";

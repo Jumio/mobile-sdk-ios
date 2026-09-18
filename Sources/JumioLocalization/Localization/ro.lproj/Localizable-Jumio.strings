@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Scanare optimizată pentru o performanță mai bună a dispozitivului";
 "jumio_id_scan_manual" = "Faceți o poză documentului";
 "jumio_id_scan_manual_tips" = "Asigurați-vă că ați capturat întregul document";
-"jumio_id_scan_prompt_analyzing" = "Analizând imaginea...";
 "jumio_id_scan_prompt_capture_success" = "Realizat!";
 "jumio_id_scan_prompt_captured" = "Capturat";
 "jumio_id_scan_prompt_center_id" = "Încadrați-vă documentul";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Înclinați la dreapta";
 "jumio_liveness_prompt_tilt_up" = "Înclinați în sus";
 "jumio_liveness_prompt_too_far" = "Apropiați-vă";
-"jumio_liveness_upfront_intro" = "Trebuie să vă scanăm fața pentru a verifica dacă sunteți o persoană reală.";
+"jumio_liveness_upfront_intro" = "Trebuie să vă scanăm fața pentru a vă verifica identitatea și a ne asigura că sunteți o persoană reală.";
 "jumio_loaders_almost_there" = "Aproape gata...";
 "jumio_loaders_finishing_up" = "Se finalizează...";
 "jumio_loaders_starting_camera" = "Pornire cameră...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Selectați tipul actului de identitate";
 "jumio_selfiedone_ID_Found" = "Document de identitate găsit";
 "jumio_selfiedone_continue" = "Continuă";
+"jumio_selfiedone_faster_verification_subtitle" = "Dacă v-ați verificat deja identitatea cu unul dintre clienții noștri, este posibil să putem utiliza un act de identitate pe care l-ați furnizat anterior.";
+"jumio_selfiedone_faster_verification_title" = "Alegeți o verificare mai rapidă";
+"jumio_selfiedone_no_scan_id_manually_button" = "Nu, scanează documentul manual";
 "jumio_selfiedone_scan_ID_manually" = "Scanați actul de identitate manual";
-"jumio_selfiedone_we_found_your_ID" = "Am găsit unul dintre documentele dvs. de identitate";
+"jumio_selfiedone_start_verification_subtitle" = "Ați fost redirecționat aici de un client Jumio care folosește serviciile noastre de verificare a identității, de prevenire a fraudelor și de integritate a conturilor.";
+"jumio_selfiedone_submit_button" = "Trimite";
+"jumio_selfiedone_we_found_your_ID" = "Am găsit un document de identitate pe care l-ați furnizat anterior";
+"jumio_selfiedone_yes_continue_button" = "Da, continuă";
 "jumio_start_button" = "Start";
 "jumio_start_instructions_01" = "Găsiți o suprafață bine iluminată";
 "jumio_start_instructions_02" = "Pregătiți-vă pentru selfie-ul dvs.";

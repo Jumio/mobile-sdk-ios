@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "掃描最佳化以獲得更好的裝置效能";
 "jumio_id_scan_manual" = "拍一張文件相片";
 "jumio_id_scan_manual_tips" = "確保擷取完整文件";
-"jumio_id_scan_prompt_analyzing" = "正在分析影像...";
 "jumio_id_scan_prompt_capture_success" = "瞭解！";
 "jumio_id_scan_prompt_captured" = "被捕獲";
 "jumio_id_scan_prompt_center_id" = "文件置中";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "向右邊一點";
 "jumio_liveness_prompt_tilt_up" = "向上抬頭";
 "jumio_liveness_prompt_too_far" = "靠近一點";
-"jumio_liveness_upfront_intro" = "我們需要掃描您的臉部，以驗證您是真人。";
+"jumio_liveness_upfront_intro" = "我們需要掃描您的臉部，以驗證您的身分並確認您是真人。";
 "jumio_loaders_almost_there" = "即將完成...";
 "jumio_loaders_finishing_up" = "正在完成...";
 "jumio_loaders_starting_camera" = "正在啟動相機...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "選擇身分證件類型";
 "jumio_selfiedone_ID_Found" = "已找到身分證件";
 "jumio_selfiedone_continue" = "繼續";
+"jumio_selfiedone_faster_verification_subtitle" = "如果您已經在我們的任一客戶那裡驗證過您的身分，我們或許可以使用您先前提供的身分證件。";
+"jumio_selfiedone_faster_verification_title" = "選擇更快速的驗證";
+"jumio_selfiedone_no_scan_id_manually_button" = "不，手動掃描身分證件";
 "jumio_selfiedone_scan_ID_manually" = "手動掃描身分證明文件";
-"jumio_selfiedone_we_found_your_ID" = "我們找到您的一份身分證明文件";
+"jumio_selfiedone_start_verification_subtitle" = "您是由使用我們身分驗證、詐欺防範和帳戶完整性服務的 Jumio 客戶引導至此的。";
+"jumio_selfiedone_submit_button" = "提交";
+"jumio_selfiedone_we_found_your_ID" = "我們找到了您之前提供的身分證明文件";
+"jumio_selfiedone_yes_continue_button" = "是，繼續";
 "jumio_start_button" = "開始";
 "jumio_start_instructions_01" = "找到一個光線充足的表面";
 "jumio_start_instructions_02" = "準備自拍";

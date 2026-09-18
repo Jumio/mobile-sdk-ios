@@ -127,6 +127,7 @@ extension CustomUINavigationController {
         case help
         case retry
         case documentFound
+        case fasterVerification
     }
 }
 
@@ -198,7 +199,11 @@ extension CustomUINavigationController {
         scanPartFinished()
     }
     
-    func userConsented(to legalStatement: Jumio.LookupResult.LegalStatement, decision: Bool) {
+    func fasterVerificationConsented() {
+        credentialHandling?.fasterVerificationConsented()
+    }
+    
+    func userConsented(to legalStatement: Jumio.LegalStatement, decision: Bool) {
         credentialHandling?.userConsented(to: legalStatement, decision: decision)
     }
 }
@@ -297,6 +302,12 @@ extension CustomUINavigationController: ControllerHandling.Delegate {
 
 // MARK: - CredentialHandling.Delegate
 extension CustomUINavigationController: CredentialHandling.Delegate {
+    func credentialContains(fasterVerification: Jumio.FasterVerification) {
+        guard let fasterVerificationViewController = instantiate(viewController: .fasterVerification) as? FasterVerificationViewController else { return }
+        fasterVerificationViewController.fasterVerification = fasterVerification
+        pushViewController(fasterVerificationViewController, animated: true)
+    }
+    
     func credentialContains(lookupResult: Jumio.LookupResult) {
         guard let documentFoundViewController = instantiate(viewController: .documentFound) as? DocumentFoundViewController else { return }
         documentFoundViewController.lookupResult = lookupResult

@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Skannaus optimoitu laitteen parempaa suorituskykyä varten";
 "jumio_id_scan_manual" = "Ota valokuva asiakirjastasi";
 "jumio_id_scan_manual_tips" = "Varmista, että asiakirja näkyy kokonaisuudessaan";
-"jumio_id_scan_prompt_analyzing" = "Kuvaa analysoidaan...";
 "jumio_id_scan_prompt_capture_success" = "Selvä!";
 "jumio_id_scan_prompt_captured" = "Tallennettu";
 "jumio_id_scan_prompt_center_id" = "Keskitä asiakirjasi";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Kallista oikealle";
 "jumio_liveness_prompt_tilt_up" = "Kallista ylös";
 "jumio_liveness_prompt_too_far" = "Siirry lähemmäs";
-"jumio_liveness_upfront_intro" = "Meidän täytyy skannata kasvosi vahvistaaksemme, että olet oikea henkilö.";
+"jumio_liveness_upfront_intro" = "Meidän täytyy skannata kasvosi vahvistaaksemme henkilöllisyytesi ja sen, että olet oikea henkilö.";
 "jumio_loaders_almost_there" = "Melkein valmista...";
 "jumio_loaders_finishing_up" = "Viimeistellään...";
 "jumio_loaders_starting_camera" = "Käynnistetään kameraa...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Valitse henkilöllisyystodistuksen tyyppi";
 "jumio_selfiedone_ID_Found" = "Henkilötodistus löytyi";
 "jumio_selfiedone_continue" = "Jatka";
+"jumio_selfiedone_faster_verification_subtitle" = "Jos olet jo vahvistanut henkilöllisyytesi jollakin asiakkaistamme, voimme ehkä käyttää aiemmin toimittamaasi henkilöllisyystodistusta.";
+"jumio_selfiedone_faster_verification_title" = "Valitse nopeampi vahvistus";
+"jumio_selfiedone_no_scan_id_manually_button" = "Ei, skannaa henkilöllisyystodistus manuaalisesti";
 "jumio_selfiedone_scan_ID_manually" = "Skannaa henkilötodistus manuaalisesti";
-"jumio_selfiedone_we_found_your_ID" = "Löysimme yhden henkilöllisyysasiakirjoistasi";
+"jumio_selfiedone_start_verification_subtitle" = "Sinut ohjasi tänne Jumion asiakas, joka käyttää henkilöllisyyden todentamiseen, petostentorjuntaan ja tilien eheyteen liittyviä palveluitamme.";
+"jumio_selfiedone_submit_button" = "Lähetä";
+"jumio_selfiedone_we_found_your_ID" = "Löysimme aiemmin toimittamasi henkilöllisyysasiakirjan";
+"jumio_selfiedone_yes_continue_button" = "Kyllä, jatka";
 "jumio_start_button" = "Aloita";
 "jumio_start_instructions_01" = "Etsi hyvin valaistu pinta";
 "jumio_start_instructions_02" = "Valmistaudu ottamaan selfie";

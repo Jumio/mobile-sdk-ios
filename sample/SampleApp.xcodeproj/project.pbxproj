@@ -31,6 +31,7 @@
 		C8985ECE2EB8A35D007FEB15 /* JumioLivenessClient.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8985ECB2EB8A34D007FEB15 /* JumioLivenessClient.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8FDBE3B2A051A3E001EB5AC /* JumioLiveness.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */; };
 		C8FDBE3C2A051A3E001EB5AC /* JumioLiveness.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DCC1300F303C6A3500BD9614 /* FasterVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1300E303C6A2A00BD9614 /* FasterVerificationViewController.swift */; };
 		F336C8CB26C16351001D910F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336C8CA26C16351001D910F /* LoadingViewController.swift */; };
 		F336C8CD26C1648A001D910F /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336C8CC26C1648A001D910F /* ConfirmationViewController.swift */; };
 		F336C8CF26C18216001D910F /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336C8CE26C18216001D910F /* ErrorViewController.swift */; };
@@ -128,6 +129,7 @@
 		C8985ECB2EB8A34D007FEB15 /* JumioLivenessClient.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:2MS98UEUJQ:Jumio Corporation"; lastKnownFileType = wrapper.xcframework; name = JumioLivenessClient.xcframework; path = Frameworks/JumioLivenessClient.xcframework; sourceTree = "<group>"; };
 		C8C455222E37E39900022E40 /* my */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = my; path = "../Frameworks/Localization/my.lproj/Localizable-Jumio.strings"; sourceTree = "<group>"; };
 		C8FDBE392A051A25001EB5AC /* JumioLiveness.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:2MS98UEUJQ:Jumio Corporation"; lastKnownFileType = wrapper.xcframework; name = JumioLiveness.xcframework; path = Frameworks/JumioLiveness.xcframework; sourceTree = "<group>"; };
+		DCC1300E303C6A2A00BD9614 /* FasterVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasterVerificationViewController.swift; sourceTree = "<group>"; };
 		F336C8CA26C16351001D910F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		F336C8CC26C1648A001D910F /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		F336C8CE26C18216001D910F /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				96EECB0027C62FFB003D8B52 /* RetryViewController.swift */,
 				BE3ED5AD299D25520088F7B5 /* DigitalIdentityViewController.swift */,
 				775A51BB2F1FB5B1003F3FDB /* DocumentFoundViewController.swift */,
+				DCC1300E303C6A2A00BD9614 /* FasterVerificationViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				F3772A0026C02DA00010AE21 /* StartViewController.swift in Sources */,
 				F37729F826C025970010AE21 /* ScanPartHandling.swift in Sources */,
 				967A1E6B26988857005A1233 /* SceneDelegate.swift in Sources */,
+				DCC1300F303C6A3500BD9614 /* FasterVerificationViewController.swift in Sources */,
 				F37729FA26C025A00010AE21 /* CredentialHandling.swift in Sources */,
 				F336C8CB26C16351001D910F /* LoadingViewController.swift in Sources */,
 				F3772A0726C105730010AE21 /* ScanViewController.swift in Sources */,
@@ -490,12 +494,12 @@
 				ENABLE_POINTER_AUTHENTICATION = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.18.0";
+				MARKETING_VERSION = "4.19.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDevelopmentSampleSwift;
@@ -521,12 +525,12 @@
 				ENABLE_POINTER_AUTHENTICATION = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				INFOPLIST_FILE = SampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "4.18.0";
+				MARKETING_VERSION = "4.19.0";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jumio.sample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = JumioDistributionSampleSwift;
@@ -589,7 +593,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -646,7 +650,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

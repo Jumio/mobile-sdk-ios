@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Geoptimaliseerd scannen voor betere apparaatprestaties";
 "jumio_id_scan_manual" = "Maak een foto van uw document";
 "jumio_id_scan_manual_tips" = "Zorg ervoor dat u het hele document vastlegt";
-"jumio_id_scan_prompt_analyzing" = "De afbeelding analyseren...";
 "jumio_id_scan_prompt_capture_success" = "Hebbes!";
 "jumio_id_scan_prompt_captured" = "Gevangen genomen";
 "jumio_id_scan_prompt_center_id" = "Centreer uw document";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Rechts kantelen";
 "jumio_liveness_prompt_tilt_up" = "Omhoog kantelen";
 "jumio_liveness_prompt_too_far" = "Kom dichterbij";
-"jumio_liveness_upfront_intro" = "We moeten een scan van je gezicht maken om te controleren of je een echt persoon bent.";
+"jumio_liveness_upfront_intro" = "We moeten een scan van je gezicht maken om je identiteit te verifiëren en om te controleren of je een echt persoon bent.";
 "jumio_loaders_almost_there" = "Bijna klaar...";
 "jumio_loaders_finishing_up" = "Aan het afronden...";
 "jumio_loaders_starting_camera" = "Camera starten...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Selecteer type identiteitsbewijs";
 "jumio_selfiedone_ID_Found" = "ID-bewijs gevonden";
 "jumio_selfiedone_continue" = "Doorgaan";
+"jumio_selfiedone_faster_verification_subtitle" = "Als u uw identiteit al heeft geverifieerd bij een van onze klanten, kunnen we mogelijk een identiteitsbewijs gebruiken dat u eerder heeft verstrekt.";
+"jumio_selfiedone_faster_verification_title" = "Kies voor een snellere verificatie";
+"jumio_selfiedone_no_scan_id_manually_button" = "Nee, scan ID handmatig";
 "jumio_selfiedone_scan_ID_manually" = "ID handmatig scannen";
-"jumio_selfiedone_we_found_your_ID" = "We hebben een van uw identificatiedocumenten gevonden";
+"jumio_selfiedone_start_verification_subtitle" = "U bent hiernaartoe doorverwezen door een Jumio-klant die gebruikmaakt van onze diensten voor identiteitsverificatie, fraudepreventie en accountintegriteit.";
+"jumio_selfiedone_submit_button" = "Indienen";
+"jumio_selfiedone_we_found_your_ID" = "We hebben een identiteitsbewijs gevonden dat u eerder heeft verstrekt";
+"jumio_selfiedone_yes_continue_button" = "Ja, doorgaan";
 "jumio_start_button" = "Beginnen";
 "jumio_start_instructions_01" = "Zoek een goed verlichte ondergrond";
 "jumio_start_instructions_02" = "Maak je klaar om een selfie te maken";

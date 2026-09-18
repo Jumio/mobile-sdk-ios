@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Scanning optimized for better device performance";
 "jumio_id_scan_manual" = "Take a photo of your document";
 "jumio_id_scan_manual_tips" = "Make sure to capture the whole document";
-"jumio_id_scan_prompt_analyzing" = "Analyzing the image...";
 "jumio_id_scan_prompt_capture_success" = "Got it!";
 "jumio_id_scan_prompt_captured" = "Captured";
 "jumio_id_scan_prompt_center_id" = "Center your document";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Tilt right";
 "jumio_liveness_prompt_tilt_up" = "Tilt up";
 "jumio_liveness_prompt_too_far" = "Move closer";
-"jumio_liveness_upfront_intro" = "We need to take a scan of your face to verify that you are a real person.";
+"jumio_liveness_upfront_intro" = "We need to take a scan of your face to verify your identity and that you are a real person";
 "jumio_loaders_almost_there" = "Almost there...";
 "jumio_loaders_finishing_up" = "Finishing up...";
 "jumio_loaders_starting_camera" = "Starting camera...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Select ID type";
 "jumio_selfiedone_ID_Found" = "ID Found";
 "jumio_selfiedone_continue" = "Continue";
+"jumio_selfiedone_faster_verification_subtitle" = "If you have already verified your identity with one of our customers, we may be able to use an ID document you previously provided";
+"jumio_selfiedone_faster_verification_title" = "Choose Faster Verification";
+"jumio_selfiedone_no_scan_id_manually_button" = "No, Scan ID Manually";
 "jumio_selfiedone_scan_ID_manually" = "Scan ID Manually";
-"jumio_selfiedone_we_found_your_ID" = "We found one of your identification documents";
+"jumio_selfiedone_start_verification_subtitle" = "You were directed here by a Jumio customer that utilizes our identity verification, fraud prevention, and account integrity services";
+"jumio_selfiedone_submit_button" = "Submit";
+"jumio_selfiedone_we_found_your_ID" = "We found an ID document you previously provided";
+"jumio_selfiedone_yes_continue_button" = "Yes, Continue";
 "jumio_start_button" = "Start";
 "jumio_start_instructions_01" = "Find a well-lit surface";
 "jumio_start_instructions_02" = "Be ready to take a selfie";

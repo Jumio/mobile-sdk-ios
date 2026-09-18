@@ -174,9 +174,6 @@ extension ScanPartHandling: Jumio.Scan.Part.Delegate {
         // NFC Updates: You can show updates in the UI in the background, when NFC progresses
         case .nfcExtractionStarted, .nfcExtractionFinished:
             break
-        case .nfcExtractionProgress:
-            // Progress in percent (0-100) in the currently extracted data group, as shown in the system dialog
-            print("NFC Progress: \(data as? Int ?? 0)")
         // ExtractionState: extraction state updates should be shown to the user to guide him through capturing process
         case .extractionState(let extractionState):
             // Make sure that the view is fully loaded, when you update your view based on extraction states to avoid crashes.

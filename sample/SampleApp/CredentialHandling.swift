@@ -8,6 +8,7 @@ import Jumio
 
 protocol CredentialHandlingDelegate: AnyObject {
     func credentialContains(lookupResult: Jumio.LookupResult)
+    func credentialContains(fasterVerification: Jumio.FasterVerification)
     func credentialNeedsConfiguration(for countries: [String])
     func credentialNeedsConfiguration(for acquireModes: [Jumio.Acquire.Mode])
     func credential(initialized scanPartHandling: ScanPartHandling)
@@ -36,8 +37,12 @@ class CredentialHandling {
         // starting a credential with given information
         credential = controller?.start(credentialInfo: info)
         
+        // Check, if faster verification is available.
+        if let idCredential = credential as? Jumio.IDCredential, let fasterVerification = idCredential.fasterVerification {
+            delegate?.credentialContains(fasterVerification: fasterVerification)
+        }
         // Check, if a lookup result is available.
-        if let idCredential = credential as? Jumio.IDCredential, let lookupResult = idCredential.lookupResult {
+        else if let idCredential = credential as? Jumio.IDCredential, let lookupResult = idCredential.lookupResult {
             // Ask the user whether the lookup result should be used
             delegate?.credentialContains(lookupResult: lookupResult)
         } else {
@@ -126,8 +131,15 @@ class CredentialHandling {
         (credential as? Jumio.IDCredential)?.digitalDocuments(for: country) ?? []
     }
     
-    func userConsented(to legalStatement: Jumio.LookupResult.LegalStatement, decision: Bool) {
+    func userConsented(to legalStatement: Jumio.LegalStatement, decision: Bool) {
         (credential as? Jumio.IDCredential)?.userConsented(to: legalStatement, decision: decision)
+    }
+    
+    func fasterVerificationConsented() {
+        if let idCredential = credential as? Jumio.IDCredential, let lookupResult = idCredential.lookupResult {
+            // Ask the user whether the lookup result should be used
+            delegate?.credentialContains(lookupResult: lookupResult)
+        }
     }
     
     private func configure(credential: Jumio.Credential?) {

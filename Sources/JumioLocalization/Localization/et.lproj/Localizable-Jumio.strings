@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Seadme parema jõudluse saavutamiseks on skannimist optimeeritud";
 "jumio_id_scan_manual" = "Tehke foto oma dokumendist";
 "jumio_id_scan_manual_tips" = "Kontrollige, et kogu dokument oleks pildil nähtav";
-"jumio_id_scan_prompt_analyzing" = "Pildi analüüsimine...";
 "jumio_id_scan_prompt_capture_success" = "Sain aru!";
 "jumio_id_scan_prompt_captured" = "Jäädvustatud";
 "jumio_id_scan_prompt_center_id" = "Tsentreerige oma dokument";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Kalluta paremale";
 "jumio_liveness_prompt_tilt_up" = "Kalluta üles";
 "jumio_liveness_prompt_too_far" = "Liigutage lähemale";
-"jumio_liveness_upfront_intro" = "Peame skannima Sinu näo kinnitamaks, et oled inimene, mitte robot.";
+"jumio_liveness_upfront_intro" = "Peame skannima teie näo, et tuvastada teie isik ja veenduda, et olete päris inimene.";
 "jumio_loaders_almost_there" = "Peaaegu valmis...";
 "jumio_loaders_finishing_up" = "Lõpetamine...";
 "jumio_loaders_starting_camera" = "Kaamera käivitamine...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Valige isikut tõendava dokumendi tüüp";
 "jumio_selfiedone_ID_Found" = "ID leitud";
 "jumio_selfiedone_continue" = "Jätka";
+"jumio_selfiedone_faster_verification_subtitle" = "Kui olete juba oma isikusamasust mõne meie kliendi juures kinnitanud, saame võib-olla kasutada teie poolt varem esitatud isikut tõendavat dokumenti.";
+"jumio_selfiedone_faster_verification_title" = "Valige kiirem verifitseerimine";
+"jumio_selfiedone_no_scan_id_manually_button" = "Ei, skanni dokument käsitsi";
 "jumio_selfiedone_scan_ID_manually" = "Skanni ID käsitsi";
-"jumio_selfiedone_we_found_your_ID" = "Leidsime ühe teie isikut tõendavatest dokumentidest";
+"jumio_selfiedone_start_verification_subtitle" = "Teid suunas siia Jumio klient, kes kasutab meie isikusamasuse tuvastamise, pettuste ennetamise ja konto tervikluse teenuseid.";
+"jumio_selfiedone_submit_button" = "Esita";
+"jumio_selfiedone_we_found_your_ID" = "Leidsime isikut tõendava dokumendi, mille te varem esitasite";
+"jumio_selfiedone_yes_continue_button" = "Jah, jätka";
 "jumio_start_button" = "Alusta";
 "jumio_start_instructions_01" = "Kasutage hästi valgustatud pinda";
 "jumio_start_instructions_02" = "Olge valmis selfit tegema";

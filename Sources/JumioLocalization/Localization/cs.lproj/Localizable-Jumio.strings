@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Optimalizace skenování pro zajištění lepšího výkonu zařízení";
 "jumio_id_scan_manual" = "Pořiďte snímek svého dokumentu";
 "jumio_id_scan_manual_tips" = "Ujistěte se, že jste zachytili celý dokument";
-"jumio_id_scan_prompt_analyzing" = "Analýza obrázku...";
 "jumio_id_scan_prompt_capture_success" = "Mám to!";
 "jumio_id_scan_prompt_captured" = "Zachyceno";
 "jumio_id_scan_prompt_center_id" = "Umístěte svůj dokument do středu";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Nakloňte doprava";
 "jumio_liveness_prompt_tilt_up" = "Nakloňte nahoru";
 "jumio_liveness_prompt_too_far" = "Pojďte blíž";
-"jumio_liveness_upfront_intro" = "Musíme pořídit sken vašeho obličeje, abychom si mohli ověřit, že jste skutečná osoba.";
+"jumio_liveness_upfront_intro" = "Musíme naskenovat váš obličej, abychom ověřili vaši totožnost a to, že jste skutečná osoba.";
 "jumio_loaders_almost_there" = "Téměř hotovo...";
 "jumio_loaders_finishing_up" = "Dokončování...";
 "jumio_loaders_starting_camera" = "Spouštění fotoaparátu...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Vyberte typ průkazu totožnosti";
 "jumio_selfiedone_ID_Found" = "Doklad totožnosti nalezen";
 "jumio_selfiedone_continue" = "Pokračovat";
+"jumio_selfiedone_faster_verification_subtitle" = "Pokud jste již ověřili svou totožnost u některého z našich zákazníků, možná budeme moci použít doklad totožnosti, který jste již dříve poskytli.";
+"jumio_selfiedone_faster_verification_title" = "Zvolte rychlejší ověření";
+"jumio_selfiedone_no_scan_id_manually_button" = "Ne, naskenovat průkaz manuálně";
 "jumio_selfiedone_scan_ID_manually" = "Naskenovat doklad ručně";
-"jumio_selfiedone_we_found_your_ID" = "Našli jsme jeden z vašich dokladů totožnosti";
+"jumio_selfiedone_start_verification_subtitle" = "Byli jste sem přesměrováni zákazníkem společnosti Jumio, který využívá naše služby ověřování totožnosti, prevence podvodů a integrity účtů.";
+"jumio_selfiedone_submit_button" = "Odeslat";
+"jumio_selfiedone_we_found_your_ID" = "Našli jsme doklad totožnosti, který jste dříve poskytli";
+"jumio_selfiedone_yes_continue_button" = "Ano, pokračovat";
 "jumio_start_button" = "Spustit";
 "jumio_start_instructions_01" = "Najděte si dobře osvětlenou plochu";
 "jumio_start_instructions_02" = "Připravte se na pořízení selfie";

@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Skeniranje optimizirano za bolje performanse uređaja";
 "jumio_id_scan_manual" = "Fotografirajte dokument";
 "jumio_id_scan_manual_tips" = "Make sure to capture the whole document";
-"jumio_id_scan_prompt_analyzing" = "Analiziranje slike...";
 "jumio_id_scan_prompt_capture_success" = "Razumijem!";
 "jumio_id_scan_prompt_captured" = "Zahvaćeno";
 "jumio_id_scan_prompt_center_id" = "Centrirajte dokument";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Nagni udesno";
 "jumio_liveness_prompt_tilt_up" = "Podigni glavu";
 "jumio_liveness_prompt_too_far" = "Približite se";
-"jumio_liveness_upfront_intro" = "Moramo skenirati vaše lice da bismo potvrdili da ste stvarna osoba.";
+"jumio_liveness_upfront_intro" = "Moramo skenirati vaše lice da bismo potvrdili vaš identitet i da ste stvarna osoba.";
 "jumio_loaders_almost_there" = "Skoro gotovo...";
 "jumio_loaders_finishing_up" = "Završava se...";
 "jumio_loaders_starting_camera" = "Pokretanje kamere...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Odaberite vrstu osobnog dokumenta";
 "jumio_selfiedone_ID_Found" = "Pronađen identifikacijski dokument";
 "jumio_selfiedone_continue" = "Nastavi";
+"jumio_selfiedone_faster_verification_subtitle" = "Ako ste već potvrdili svoj identitet kod jednog od naših klijenata, možda ćemo moći upotrijebiti osobni dokument koji ste prethodno ustupili.";
+"jumio_selfiedone_faster_verification_title" = "Odaberite bržu provjeru";
+"jumio_selfiedone_no_scan_id_manually_button" = "Ne, skeniraj dokument ručno";
 "jumio_selfiedone_scan_ID_manually" = "Ručno skeniraj osobni dokument";
-"jumio_selfiedone_we_found_your_ID" = "Pronašli smo jedan od vaših identifikacijskih dokumenata";
+"jumio_selfiedone_start_verification_subtitle" = "Ovdje vas je preusmjerio klijent tvrtke Jumio koji koristi naše usluge provjere identiteta, sprječavanja prijevara i integriteta računa.";
+"jumio_selfiedone_submit_button" = "Pošalji";
+"jumio_selfiedone_we_found_your_ID" = "Pronašli smo identifikacijski dokument koji ste prethodno priložili";
+"jumio_selfiedone_yes_continue_button" = "Da, nastavi";
 "jumio_start_button" = "Start";
 "jumio_start_instructions_01" = "Pronađite dobro osvijetljenu površinu";
 "jumio_start_instructions_02" = "Pripremite se za snimanje selfija";

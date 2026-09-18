@@ -71,7 +71,6 @@ class ViewController: UIViewController {
         
         guard let jumioVC = defaultUI?.viewController else { return }
         jumioViewController = jumioVC
-        jumioVC.modalPresentationStyle = .fullScreen
         present(jumioVC, animated: true)
     }
     

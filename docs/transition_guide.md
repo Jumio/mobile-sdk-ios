@@ -8,6 +8,42 @@ This section covers all technical changes that should be considered when updatin
 When updating your SDK version, **all** changes/updates made in in the meantime have to be taken into account and applied if necessary.
 **Example:** If you're updating from SDK version **3.7.2** to **3.9.2**, the changes outlined in **3.8.0, 3.9.0** and **3.9.1** are **still relevant**.
 
+## 4.19.0
+
+- Increased minimum iOS version to 15.0.
+
+#### Changes to Public API
+
+- Added `Jumio.FasterVerification`
+- Added `Jumio.IDCredential.fasterVerification`
+- Changed `Jumio.LookupResult.LegalStatement` to `Jumio.LegalStatement`
+- `Jumio.LookupResult` contains new optional property `country`
+- Changed `Jumio.IDCredential.userConsented(to: Jumio.LookupResult.LegalStatement, decision: Bool)` to `Jumio.IDCredential.userConsented(to: Jumio.LegalStatement, decision: Bool)`
+
+#### Logical Errors
+
+- Added `needConsentForLookupResult` when a legal statement was provided for look up result but user has not consented to it.
+- Added `needConsentForFasterVerification` when a legal statement was provided for faster verification but user has not consented to it before trying to get look up result.
+
+#### Localization Keys
+
+The following keys have been added:
+
+- `jumio_selfiedone_faster_verification_subtitle`
+- `jumio_selfiedone_faster_verification_title`
+- `jumio_selfiedone_no_scan_id_manually_button`
+- `jumio_selfiedone_start_verification_subtitle`
+- `jumio_selfiedone_submit_button`
+- `jumio_selfiedone_yes_continue_button`
+
+The following key has been removed:
+
+- `jumio_id_scan_prompt_analyzing`
+
+#### Customization options
+
+- Added `Jumio.Theme.fasterVerification`
+
 ## 4.18.0
 
 #### Changes to Public API
@@ -58,7 +94,7 @@ The following keys have been renamed:
 - Added `Jumio.LookupResult`
 - Added `Jumio.LookupResult.LegalStatement`
 - Added `Jumio.IDCredential.lookupResult`
-- Added `Jumio.IDCredential.userConsented(to: Jumio.LookupResult.LegalStatement, decision: Bool)
+- Added `Jumio.IDCredential.userConsented(to: Jumio.LookupResult.LegalStatement, decision: Bool)`
 - Added `Jumio.Credential.Info.order`
 - Added `Jumio.TermsOfUse`
 - Changed `Jumio.Controller.Delegate.jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?)` to `Jumio.Controller.Delegate.jumio(controller: Jumio.Controller, didInitializeWith credentialInformations: [Jumio.Credential.Info], consentItems: [Jumio.ConsentItem]?, termsOfUse: Jumio.TermsOfUse?)`.

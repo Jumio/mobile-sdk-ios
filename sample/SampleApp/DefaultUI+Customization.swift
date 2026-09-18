@@ -44,6 +44,8 @@ extension DefaultUI {
         customTheme.scanOverlay.livenessStroke = Jumio.Theme.Value(.yellow)
         customTheme.scanOverlay.livenessStrokeAnimation = Jumio.Theme.Value(.red)
         customTheme.scanOverlay.livenessStrokeAnimationCompleted = Jumio.Theme.Value(.orange)
+        customTheme.scanOverlay.idAlignedStroke = Jumio.Theme.Value(.purple)
+        customTheme.scanOverlay.idUnalignedStroke = Jumio.Theme.Value(.black)
         
         // NFC
         customTheme.nfc.passportCover = Jumio.Theme.Value(.red)

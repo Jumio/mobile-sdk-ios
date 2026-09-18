@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Сканирование оптимизировано для повышения производительности устройства";
 "jumio_id_scan_manual" = "Сфотографируйте свой документ";
 "jumio_id_scan_manual_tips" = "Убедитесь, что вы сфотографировали весь документ";
-"jumio_id_scan_prompt_analyzing" = "Анализируем изображение...";
 "jumio_id_scan_prompt_capture_success" = "Понятно!";
 "jumio_id_scan_prompt_captured" = "Отснято";
 "jumio_id_scan_prompt_center_id" = "Разместите документ по центру";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Наклоните вправо";
 "jumio_liveness_prompt_tilt_up" = "Поднимите вверх";
 "jumio_liveness_prompt_too_far" = "Подойдите ближе";
-"jumio_liveness_upfront_intro" = "Нам нужно отсканировать ваше лицо, чтобы убедиться, что вы реальный человек.";
+"jumio_liveness_upfront_intro" = "Нам нужно отсканировать ваше лицо, чтобы подтвердить вашу личность и убедиться, что вы реальный человек.";
 "jumio_loaders_almost_there" = "Почти готово...";
 "jumio_loaders_finishing_up" = "Завершение...";
 "jumio_loaders_starting_camera" = "Запуск камеры...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Выберите тип удостоверения личности";
 "jumio_selfiedone_ID_Found" = "Документ найден";
 "jumio_selfiedone_continue" = "Продолжить";
+"jumio_selfiedone_faster_verification_subtitle" = "Если вы уже подтвердили свою личность у одного из наших клиентов, возможно, мы сможем использовать предоставленный вами ранее документ, удостоверяющий личность.";
+"jumio_selfiedone_faster_verification_title" = "Выберите более быструю верификацию";
+"jumio_selfiedone_no_scan_id_manually_button" = "Нет, отсканировать документ вручную";
 "jumio_selfiedone_scan_ID_manually" = "Сканировать документ вручную";
-"jumio_selfiedone_we_found_your_ID" = "Мы нашли один из ваших документов, удостоверяющих личность";
+"jumio_selfiedone_start_verification_subtitle" = "Вы были перенаправлены сюда клиентом Jumio, который использует наши услуги по проверке личности, предотвращению мошенничества и защите аккаунтов.";
+"jumio_selfiedone_submit_button" = "Отправить";
+"jumio_selfiedone_we_found_your_ID" = "Мы нашли документ, удостоверяющий личность, который вы предоставили ранее";
+"jumio_selfiedone_yes_continue_button" = "Да, продолжить";
 "jumio_start_button" = "Начать";
 "jumio_start_instructions_01" = "Найдите хорошо освещенную поверхность";
 "jumio_start_instructions_02" = "Будьте готовы сделать селфи";

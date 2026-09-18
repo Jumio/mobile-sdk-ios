@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Оптимизирано сканиране за по-добра производителност на устройството";
 "jumio_id_scan_manual" = "Снимайте документа";
 "jumio_id_scan_manual_tips" = "Снимката трябва да обхваща целия документ";
-"jumio_id_scan_prompt_analyzing" = "Анализ на изображението...";
 "jumio_id_scan_prompt_capture_success" = "Готово!";
 "jumio_id_scan_prompt_captured" = "Заснет";
 "jumio_id_scan_prompt_center_id" = "Центрирайте документа";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Наклонете надясно";
 "jumio_liveness_prompt_tilt_up" = "Повдигнете нагоре";
 "jumio_liveness_prompt_too_far" = "Приближете се";
-"jumio_liveness_upfront_intro" = "Трябва да направим снимка на лицето ви, за да потвърдим, че сте истински човек.";
+"jumio_liveness_upfront_intro" = "Трябва да сканираме лицето ви, за да потвърдим самоличността ви и да се уверим, че сте истински човек.";
 "jumio_loaders_almost_there" = "Почти готово...";
 "jumio_loaders_finishing_up" = "Приключване...";
 "jumio_loaders_starting_camera" = "Стартиране на камерата...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Изберете тип документ за самоличност";
 "jumio_selfiedone_ID_Found" = "Документ за самоличност е намерен";
 "jumio_selfiedone_continue" = "Продължи";
+"jumio_selfiedone_faster_verification_subtitle" = "Ако вече сте потвърдили самоличността си при някой от нашите клиенти, е възможно да използваме документ за самоличност, който сте предоставили преди това.";
+"jumio_selfiedone_faster_verification_title" = "Изберете по-бърза верификация";
+"jumio_selfiedone_no_scan_id_manually_button" = "Не, сканирайте документа ръчно";
 "jumio_selfiedone_scan_ID_manually" = "Ръчно сканиране на документ";
-"jumio_selfiedone_we_found_your_ID" = "Намерихме един от вашите документи за самоличност";
+"jumio_selfiedone_start_verification_subtitle" = "Бяхте пренасочени насам от клиент на Jumio, който използва нашите услуги за проверка на самоличността, предотвратяване на измами и защита на профилите.";
+"jumio_selfiedone_submit_button" = "Изпрати";
+"jumio_selfiedone_we_found_your_ID" = "Намерихме документ за самоличност, който сте предоставили преди това";
+"jumio_selfiedone_yes_continue_button" = "Да, продължете";
 "jumio_start_button" = "Старт";
 "jumio_start_instructions_01" = "Намери добре осветена повърхност";
 "jumio_start_instructions_02" = "Подготви се за селфи";

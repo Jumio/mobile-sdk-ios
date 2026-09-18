@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Skanowanie zoptymalizowane pod kątem lepszej wydajności urządzenia";
 "jumio_id_scan_manual" = "Zrób zdjęcie swojego dokumentu";
 "jumio_id_scan_manual_tips" = "Upewnij się, że uchwycono cały dokument";
-"jumio_id_scan_prompt_analyzing" = "Analiza obrazu...";
 "jumio_id_scan_prompt_capture_success" = "Mamy to!";
 "jumio_id_scan_prompt_captured" = "Uchwycono";
 "jumio_id_scan_prompt_center_id" = "Wyśrodkuj swój dokument tożsamości";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Pochyl się w prawo";
 "jumio_liveness_prompt_tilt_up" = "Odchyl się w górę";
 "jumio_liveness_prompt_too_far" = "Przybliż twarz";
-"jumio_liveness_upfront_intro" = "Musimy wykonać skan Twojej twarzy, aby sprawdzić, czy jesteś prawdziwą osobą.";
+"jumio_liveness_upfront_intro" = "Musimy zeskanować Twoją twarz, aby zweryfikować Twoją tożsamość i potwierdzić, że jesteś prawdziwą osobą.";
 "jumio_loaders_almost_there" = "Prawie gotowe...";
 "jumio_loaders_finishing_up" = "Kończenie...";
 "jumio_loaders_starting_camera" = "Uruchamianie kamery...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Wybierz typ dokumentu tożsamości";
 "jumio_selfiedone_ID_Found" = "Znaleziono dokument tożsamości";
 "jumio_selfiedone_continue" = "Kontynuuj";
+"jumio_selfiedone_faster_verification_subtitle" = "Jeśli zweryfikowano już Twoją tożsamość u jednego z naszych klientów, być może będziemy mogli użyć wcześniej dostarczonego dokumentu tożsamości.";
+"jumio_selfiedone_faster_verification_title" = "Wybierz szybszą weryfikację";
+"jumio_selfiedone_no_scan_id_manually_button" = "Nie, zeskanuj dokument ręcznie";
 "jumio_selfiedone_scan_ID_manually" = "Zeskanuj dokument ręcznie";
-"jumio_selfiedone_we_found_your_ID" = "Znaleźliśmy jeden z Twoich dokumentów tożsamości";
+"jumio_selfiedone_start_verification_subtitle" = "Przekierowano Cię tutaj przez klienta Jumio, który korzysta z naszych usług weryfikacji tożsamości, zapobiegania oszustwom i weryfikacji autentyczności kont.";
+"jumio_selfiedone_submit_button" = "Prześlij";
+"jumio_selfiedone_we_found_your_ID" = "Znaleźliśmy wcześniej przesłany przez Ciebie dokument tożsamości";
+"jumio_selfiedone_yes_continue_button" = "Tak, kontynuuj";
 "jumio_start_button" = "Start";
 "jumio_start_instructions_01" = "Znajdź dobrze oświetloną powierzchnię";
 "jumio_start_instructions_02" = "Przygotuj się do zrobienia selfie";

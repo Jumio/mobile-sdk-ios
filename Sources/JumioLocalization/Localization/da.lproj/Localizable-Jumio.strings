@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Scanning optimeret til bedre enhedsydelse";
 "jumio_id_scan_manual" = "Tag et billede af dit dokument";
 "jumio_id_scan_manual_tips" = "Sørg for, at hele dokumentet er med på billedet";
-"jumio_id_scan_prompt_analyzing" = "Analyserer billedet...";
 "jumio_id_scan_prompt_capture_success" = "Forstået!";
 "jumio_id_scan_prompt_captured" = "Indfanget";
 "jumio_id_scan_prompt_center_id" = "Centrer dit dokument";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Hæld mod højre";
 "jumio_liveness_prompt_tilt_up" = "Kig opad";
 "jumio_liveness_prompt_too_far" = "Ryk tættere på";
-"jumio_liveness_upfront_intro" = "Vi er nødt til at scanne dit ansigt for at kunne bekræfte, at du er et menneske.";
+"jumio_liveness_upfront_intro" = "Vi er nødt til at scanne dit ansigt for at bekræfte din identitet, og at du er en rigtig person.";
 "jumio_loaders_almost_there" = "Næsten færdig...";
 "jumio_loaders_finishing_up" = "Afslutter...";
 "jumio_loaders_starting_camera" = "Starter kamera...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Vælg id-type";
 "jumio_selfiedone_ID_Found" = "ID fundet";
 "jumio_selfiedone_continue" = "Fortsæt";
+"jumio_selfiedone_faster_verification_subtitle" = "Hvis du allerede har bekræftet din identitet hos en af vores kunder, kan vi muligvis bruge et id-dokument, du tidligere har indsendt.";
+"jumio_selfiedone_faster_verification_title" = "Vælg hurtigere verificering";
+"jumio_selfiedone_no_scan_id_manually_button" = "Nej, scan id manuelt";
 "jumio_selfiedone_scan_ID_manually" = "Scan ID manuelt";
-"jumio_selfiedone_we_found_your_ID" = "Vi fandt et af dine identifikationsdokumenter";
+"jumio_selfiedone_start_verification_subtitle" = "Du er blevet viderestillet hertil af en Jumio-kunde, der bruger vores tjenester til identitetsbekræftelse, forebyggelse af svindel og kontointegritet.";
+"jumio_selfiedone_submit_button" = "Indsend";
+"jumio_selfiedone_we_found_your_ID" = "Vi fandt et id-dokument, som du tidligere har indsendt";
+"jumio_selfiedone_yes_continue_button" = "Ja, fortsæt";
 "jumio_start_button" = "Start";
 "jumio_start_instructions_01" = "Find en belyst flade";
 "jumio_start_instructions_02" = "Gør dig klar til at tage et selfie";

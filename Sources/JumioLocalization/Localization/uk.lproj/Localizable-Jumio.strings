@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Сканування оптимізовано для кращої продуктивності пристрою";
 "jumio_id_scan_manual" = "Сфотографуйте ваш документ";
 "jumio_id_scan_manual_tips" = "Переконайтеся, що ви захопили весь документ";
-"jumio_id_scan_prompt_analyzing" = "Аналіз зображення...";
 "jumio_id_scan_prompt_capture_success" = "Готово!";
 "jumio_id_scan_prompt_captured" = "Знято";
 "jumio_id_scan_prompt_center_id" = "Розташуйте документ по центру";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Нахиліть праворуч";
 "jumio_liveness_prompt_tilt_up" = "Нахиліть угору";
 "jumio_liveness_prompt_too_far" = "Підсуньтесь ближче";
-"jumio_liveness_upfront_intro" = "Нам потрібно просканувати ваше обличчя, щоб переконатися, що ви реальна людина.";
+"jumio_liveness_upfront_intro" = "Нам потрібно просканувати ваше обличчя, щоб підтвердити вашу особу та переконатися, що ви реальна людина.";
 "jumio_loaders_almost_there" = "Майже готово...";
 "jumio_loaders_finishing_up" = "Завершення...";
 "jumio_loaders_starting_camera" = "Запуск камери...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Виберіть тип посвідчення особи";
 "jumio_selfiedone_ID_Found" = "Документ знайдено";
 "jumio_selfiedone_continue" = "Продовжити";
+"jumio_selfiedone_faster_verification_subtitle" = "Якщо ви вже підтвердили свою особу в одного з наших клієнтів, можливо, ми зможемо використати наданий вами раніше документ, що посвідчує особу.";
+"jumio_selfiedone_faster_verification_title" = "Оберіть швидшу верифікацію";
+"jumio_selfiedone_no_scan_id_manually_button" = "Ні, відсканувати документ вручну";
 "jumio_selfiedone_scan_ID_manually" = "Сканувати документ вручну";
-"jumio_selfiedone_we_found_your_ID" = "Ми знайшли один із ваших документів, що посвідчують особу";
+"jumio_selfiedone_start_verification_subtitle" = "Вас сюди спрямував клієнт Jumio, який користується нашими послугами з перевірки особи, запобігання шахрайству та безпеки облікових записів.";
+"jumio_selfiedone_submit_button" = "Надіслати";
+"jumio_selfiedone_we_found_your_ID" = "Ми знайшли документ, що посвідчує особу, який ви надали раніше";
+"jumio_selfiedone_yes_continue_button" = "Так, продовжити";
 "jumio_start_button" = "Почати";
 "jumio_start_instructions_01" = "Знайдіть добре освітлену поверхню";
 "jumio_start_instructions_02" = "Приготуйтеся зробити селфі";

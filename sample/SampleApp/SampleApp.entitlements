@@ -10,7 +10,7 @@
 	<true/>
 	<key>com.apple.security.hardened-process.dyld-ro</key>
 	<true/>
-	<key>com.apple.security.hardened-process.enhanced-security-version</key>
+	<key>com.apple.security.hardened-process.enhanced-security-version-string</key>
 	<string>1</string>
 	<key>com.apple.security.hardened-process.platform-restrictions</key>
 	<string>2</string>

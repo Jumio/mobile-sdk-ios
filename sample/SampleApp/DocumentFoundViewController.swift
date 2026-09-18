@@ -10,6 +10,7 @@ import Jumio
 class DocumentFoundViewController: UIViewController {
     
     @IBOutlet weak var documentType: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var legalStatement: UILabel!
     
     var lookupResult: Jumio.LookupResult?
@@ -18,6 +19,7 @@ class DocumentFoundViewController: UIViewController {
         super.viewDidLoad()
         
         documentType.text = lookupResult?.documentType.rawValue
+        countryLabel.text = lookupResult?.country
         legalStatement.text = lookupResult?.legalStatement.text
     }
     

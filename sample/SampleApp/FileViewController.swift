@@ -45,12 +45,7 @@ class FileViewController: UIViewController {
         
         // The content types can be accessed via fileAttacher.fileRequirements?.mimeTypes.
         // Currently, only pdf is supported.
-        if #available(iOS 14.0, *) {
-            documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
-        } else {
-            documentPicker = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF)], in: .import)
-        }
-        
+        documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
         documentPicker.delegate = self
         // The user should not be able to select more than one file
         documentPicker.allowsMultipleSelection = false

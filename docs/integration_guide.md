@@ -48,7 +48,7 @@ Jumio’s products allow businesses to establish the genuine identity of their u
 
 ## Release Notes
 
-Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.18.0**
+Please refer to our [Change Log](changelog.md) for more information. Current SDK version: **4.19.0**
 
 For technical changes that should be considered when updating the SDK, please read our [Transition Guide](transition_guide.md).
 
@@ -89,19 +89,19 @@ Adapt your Podfile and add the pods according to the product(s) you want use. Ch
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '13.0'
+platform :ios, '15.0'
 use_frameworks! # Required for proper framework handling
 
 #Core (always add):
-pod 'Jumio/Jumio', '~>4.18.0' # Manual & DocFinder Capture
+pod 'Jumio/Jumio', '~>4.19.0' # Manual & DocFinder Capture
 
 #Addons:
-pod 'Jumio/Liveness', '~>4.18.0' # Liveness functionality
-pod 'Jumio/DefaultUI', '~>4.18.0' # Default UI functionality
-pod 'Jumio/NFC', '~>4.18.0' # NFC functionality
+pod 'Jumio/Liveness', '~>4.19.0' # Liveness functionality
+pod 'Jumio/DefaultUI', '~>4.19.0' # Default UI functionality
+pod 'Jumio/NFC', '~>4.19.0' # NFC functionality
 
 #All:
-pod 'Jumio/All', '~>4.18.0' # All Jumio products with all available scanning methods
+pod 'Jumio/All', '~>4.19.0' # All Jumio products with all available scanning methods
 ```
 
 #### Via Swift Package Manager
@@ -134,12 +134,12 @@ Adapt you Cartfile and add Jumio dependencies. Check the following example how a
 ```
 
 #Core (always add):
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.18.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/Jumio.json" == 4.19.0
 
 #Addons:
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.18.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.18.0
-binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioNFC.json" == 4.18.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioLiveness.json" == 4.19.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioDefaultUI.json" == 4.19.0
+binary "https://raw.githubusercontent.com/Jumio/mobile-sdk-ios/master/Carthage/JumioNFC.json" == 4.19.0
 
 ```
 
@@ -153,7 +153,7 @@ carthage update --use-xcframeworks
 
 ### Manually
 
-Download our frameworks manually via [ios-jumio-mobile-sdk-4.18.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.18.0/ios-jumio-mobile-sdk-4.18.0.zip).
+Download our frameworks manually via [ios-jumio-mobile-sdk-4.19.0.zip](https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/4.19.0/ios-jumio-mobile-sdk-4.19.0.zip).
 
 ⚠️&nbsp;__Note:__ Our sample project on GitHub contains the sample implementation without our frameworks. The project file contains a “Run Script Phase” which downloads our frameworks automatically during build time.
 
@@ -669,9 +669,19 @@ To use the document found in `Jumio.LookupResult` for the Selfie.Done workflow, 
 
 ```
 let idCredential = ...
-// The legalStatment is retrieved from the `Jumio.LookupResult.LegalStatement`
+// The legalStatment for look up is retrieved from the `Jumio.LegalStatement`
 idCredential.userConsented(to: legalStatement, decision: true)
 ```
+
+If Jumio.IDCredential.fasterVerification enabled, in order to use the document found in `Jumio.LookupResult` for the Selfie.Done workflow, a consent value `true` is mandatory for faster verification. 
+
+```
+let idCredential = ...
+// The legalStatment for faster verification is retrieved from the `Jumio.FasterVerification`
+idCredential.userConsented(to: legalStatement, decision: true)
+```
+
+If a look up result is available but not used and the scan part is cancelled, then the last given consent (faster verification consent or look up consent is to be resubmitted).
 
 In case of [`Jumio.IDCredential`][jumioIDCredential], you can retrieve all available countries from [`supportedCountries`][supportedCountries]. After selecting a specific country from that list, you can query available documents for that country by either calling `physicalDocuments(for:)` or `digitalDocuments(for:)`. To configure the [`Jumio.IDCredential`][jumioIDCredential], pass your desired document as well as the country to `setConfiguration()`:
 

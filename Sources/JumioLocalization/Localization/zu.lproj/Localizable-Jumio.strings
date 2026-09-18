@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Ukuskena kuthuthukisiwe ukuze idivayisi isebenze kangcono";
 "jumio_id_scan_manual" = "Thatha isithombe sedokhumenti yakho";
 "jumio_id_scan_manual_tips" = "Qiniseka ukuthi uthwebula isithombe sayo yonke incwadi";
-"jumio_id_scan_prompt_analyzing" = "Ihlaziya isithombe...";
 "jumio_id_scan_prompt_capture_success" = "Ngiyitholile!";
 "jumio_id_scan_prompt_captured" = "Kuthunjiwe";
 "jumio_id_scan_prompt_center_id" = "Beka idokhumenti phakathi nendawo";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Butshekisele kwesokudla";
 "jumio_liveness_prompt_tilt_up" = "Butshekisele phezulu";
 "jumio_liveness_prompt_too_far" = "Sondela";
-"jumio_liveness_upfront_intro" = "Kudingeka siskene ubuso bakho ukuze siqinisekise ukuthi ungumuntu ongokoqobo.";
+"jumio_liveness_upfront_intro" = "Sidinga ukuskena ubuso bakho ukuze siqinisekise ubuwena nokuthi ungumuntu wangempela.";
 "jumio_loaders_almost_there" = "Kucishe kwaphela...";
 "jumio_loaders_finishing_up" = "Iyaqedwa...";
 "jumio_loaders_starting_camera" = "Iqala ikhamera...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Khetha uhlobo lwe-ID";
 "jumio_selfiedone_ID_Found" = "I-ID itholakele";
 "jumio_selfiedone_continue" = "Qhubeka";
+"jumio_selfiedone_faster_verification_subtitle" = "Uma ngabe usuyiqinisekisile kakade into ekuveza ukuthi ungubani kwenye yamakhasimende ethu, kungenzeka sikwazi ukusebenzisa idokhumenti ye-ID owake wayinikeza ngaphambilini.";
+"jumio_selfiedone_faster_verification_title" = "Khetha Ukuqinisekisa Okusheshayo";
+"jumio_selfiedone_no_scan_id_manually_button" = "Cha, Skena i-ID Ngenqubo Yezandla";
 "jumio_selfiedone_scan_ID_manually" = "Skena i-ID mathupha";
-"jumio_selfiedone_we_found_your_ID" = "Sithole omunye wemibhalo yakho kamazisi";
+"jumio_selfiedone_start_verification_subtitle" = "Uqondiswe lapha ikhasimende le-Jumio elisebenzisa amasevisi ethu okuqinisekisa ubuwena, ukuvimbela ukukhwabanisa, nobuqotho be-akhawunti.";
+"jumio_selfiedone_submit_button" = "Hambisa";
+"jumio_selfiedone_we_found_your_ID" = "Sithole umazisi owunikeze ngaphambilini";
+"jumio_selfiedone_yes_continue_button" = "Yebo, Qhubeka";
 "jumio_start_button" = "Qala";
 "jumio_start_instructions_01" = "Thola indawo ekhanya kahle";
 "jumio_start_instructions_02" = "Lungela ukuzithatha isithombe";

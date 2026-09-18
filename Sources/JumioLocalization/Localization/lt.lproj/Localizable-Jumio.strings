@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Nuskaitymas optimizuotas siekiant pagreitinti procedūrą";
 "jumio_id_scan_manual" = "Nufotografuokite savo asmens dokumentą";
 "jumio_id_scan_manual_tips" = "Nufotografuokite visą dokumentą";
-"jumio_id_scan_prompt_analyzing" = "Analizuojamas vaizdas...";
 "jumio_id_scan_prompt_capture_success" = "Pavyko!";
 "jumio_id_scan_prompt_captured" = "Užfiksuota";
 "jumio_id_scan_prompt_center_id" = "Lygiuokite savo dokumentą centre";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Pasisukite į dešinę";
 "jumio_liveness_prompt_tilt_up" = "Palenkite aukštyn";
 "jumio_liveness_prompt_too_far" = "Prieikite arčiau";
-"jumio_liveness_upfront_intro" = "Norėdami įsitikinti, kad esate tikras asmuo, turėsime nuskaityti jūsų veidą.";
+"jumio_liveness_upfront_intro" = "Norėdami patvirtinti jūsų tapatybę ir įsitikinti, kad esate tikras asmuo, turėsime nuskaityti jūsų veidą.";
 "jumio_loaders_almost_there" = "Beveik baigta...";
 "jumio_loaders_finishing_up" = "Užbaigiama...";
 "jumio_loaders_starting_camera" = "Paleidžiama kamera...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Pasirinkite asmens dokumento tipą";
 "jumio_selfiedone_ID_Found" = "Asmens dokumentas rastas";
 "jumio_selfiedone_continue" = "Tęsti";
+"jumio_selfiedone_faster_verification_subtitle" = "Jei jau patvirtinote savo tapatybę vienam iš mūsų klientų, gali būti, kad galėsime panaudoti jūsų anksčiau pateiktą asmens dokumentą.";
+"jumio_selfiedone_faster_verification_title" = "Pasirinkite greitesnį patvirtinimą";
+"jumio_selfiedone_no_scan_id_manually_button" = "Ne, nuskaityti asmens dokumentą rankiniu būdu";
 "jumio_selfiedone_scan_ID_manually" = "Nuskaityti asmens dokumentą rankiniu būdu";
-"jumio_selfiedone_we_found_your_ID" = "Radome vieną iš jūsų tapatybės dokumentų";
+"jumio_selfiedone_start_verification_subtitle" = "Jus čia nukreipė „Jumio“ klientas, kuris naudojasi mūsų tapatybės patvirtinimo, sukčiavimo prevencijos ir paskyros vientisumo paslaugomis.";
+"jumio_selfiedone_submit_button" = "Pateikti";
+"jumio_selfiedone_we_found_your_ID" = "Radome jūsų anksčiau pateiktą asmens tapatybės dokumentą";
+"jumio_selfiedone_yes_continue_button" = "Taip, tęsti";
 "jumio_start_button" = "Pradėti";
 "jumio_start_instructions_01" = "Raskite gerai apšviestą paviršių";
 "jumio_start_instructions_02" = "Būkite pasiruošę pasidaryti asmenukę";

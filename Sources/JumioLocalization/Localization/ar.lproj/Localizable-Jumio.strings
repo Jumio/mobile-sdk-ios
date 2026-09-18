@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "تم تحسين المسح الضوئي للحصول على أداء أفضل للجهاز";
 "jumio_id_scan_manual" = "التقط صورة لمستندك";
 "jumio_id_scan_manual_tips" = "تأكد من التقاط المستند بأكمله";
-"jumio_id_scan_prompt_analyzing" = "تحليل الصورة...";
 "jumio_id_scan_prompt_capture_success" = "حسنًا!";
 "jumio_id_scan_prompt_captured" = "تم التقاطه";
 "jumio_id_scan_prompt_center_id" = "اجعل المستند في الوسط";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "إمالة إلى اليمين";
 "jumio_liveness_prompt_tilt_up" = "إمالة إلى الأعلى";
 "jumio_liveness_prompt_too_far" = "اقترب";
-"jumio_liveness_upfront_intro" = "نريد إجراء مسح لوجهك للتحقق من أنك شخص حقيقي.";
+"jumio_liveness_upfront_intro" = "نحتاج إلى إجراء مسح لوجهك للتحقق من هويتك والتأكد من أنك شخص حقيقي.";
 "jumio_loaders_almost_there" = "شارفنا على الانتهاء...";
 "jumio_loaders_finishing_up" = "جارٍ الإنهاء...";
 "jumio_loaders_starting_camera" = "جارٍ تشغيل الكاميرا...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "حدد نوع الهوية";
 "jumio_selfiedone_ID_Found" = "تم العثور على بطاقة الهوية";
 "jumio_selfiedone_continue" = "متابعة";
+"jumio_selfiedone_faster_verification_subtitle" = "إذا كنت قد تحققت بالفعل من هويتك لدى أحد عملائنا، فقد نتمكن من استخدام مستند هوية قدمته مسبقًا.";
+"jumio_selfiedone_faster_verification_title" = "اختر التحقق الأسرع";
+"jumio_selfiedone_no_scan_id_manually_button" = "لا، امسح بطاقة الهوية يدويًا";
 "jumio_selfiedone_scan_ID_manually" = "مسح بطاقة الهوية يدويًا";
-"jumio_selfiedone_we_found_your_ID" = "لقد وجدنا أحد مستندات إثبات هويتك";
+"jumio_selfiedone_start_verification_subtitle" = "تم توجيهك إلى هنا بواسطة أحد عملاء Jumio الذي يستخدم خدماتنا للتحقق من الهوية، ومنع الاحتيال، وسلامة الحسابات.";
+"jumio_selfiedone_submit_button" = "إرسال";
+"jumio_selfiedone_we_found_your_ID" = "لقد وجدنا مستند هوية قدمته سابقًا";
+"jumio_selfiedone_yes_continue_button" = "نعم، متابعة";
 "jumio_start_button" = "بدء";
 "jumio_start_instructions_01" = "ابحث عن سطح جيد الإضاءة";
 "jumio_start_instructions_02" = "استعد لالتقاط صورة ذاتية";

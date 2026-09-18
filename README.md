@@ -123,7 +123,7 @@ Once you start up the sample application, you'll be given the option of trying o
 
 The minimum requirements for the SDK are:
 
-- iOS 13.0 and higher
+- iOS 15.0 and higher
 - Internet connection
 - Jumio KYX or Jumio API v3
 

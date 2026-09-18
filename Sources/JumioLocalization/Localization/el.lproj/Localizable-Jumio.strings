@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Βελτιστοποιημένη σάρωση για καλύτερη απόδοση της συσκευής";
 "jumio_id_scan_manual" = "Βγάλτε μια φωτογραφία το έγγραφό σας";
 "jumio_id_scan_manual_tips" = "Φροντίστε να αποτυπώσετε ολόκληρο το έγγραφο";
-"jumio_id_scan_prompt_analyzing" = "Αναλύοντας την εικόνα...";
 "jumio_id_scan_prompt_capture_success" = "Το κατάλαβα!";
 "jumio_id_scan_prompt_captured" = "Καταγράφηκε";
 "jumio_id_scan_prompt_center_id" = "Κεντράρετε το έγγραφό σας";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Γείρετε προς τα δεξιά";
 "jumio_liveness_prompt_tilt_up" = "Γείρετε προς τα πάνω";
 "jumio_liveness_prompt_too_far" = "Ελάτε πιο κοντά";
-"jumio_liveness_upfront_intro" = "Πρέπει να κάνουμε σάρωση του προσώπου σας για να επαληθεύσουμε ότι είστε πραγματικό άτομο.";
+"jumio_liveness_upfront_intro" = "Πρέπει να σαρώσουμε το πρόσωπό σας για να επαληθεύσουμε την ταυτότητά σας και να βεβαιωθούμε ότι είστε πραγματικό άτομο.";
 "jumio_loaders_almost_there" = "Σχεδόν έτοιμο...";
 "jumio_loaders_finishing_up" = "Ολοκλήρωση...";
 "jumio_loaders_starting_camera" = "Εκκίνηση κάμερας...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Επιλέξτε τύπο εγγράφου ταυτοποίησης";
 "jumio_selfiedone_ID_Found" = "Βρέθηκε έγγραφο ταυτοποίησης";
 "jumio_selfiedone_continue" = "Συνέχεια";
+"jumio_selfiedone_faster_verification_subtitle" = "Εάν έχετε ήδη επαληθεύσει την ταυτότητά σας σε κάποιον από τους πελάτες μας, ενδέχεται να μπορέσουμε να χρησιμοποιήσουμε ένα έγγραφο ταυτοποίησης που έχετε παράσχει προηγουμένως.";
+"jumio_selfiedone_faster_verification_title" = "Επιλέξτε ταχύτερη επαλήθευση";
+"jumio_selfiedone_no_scan_id_manually_button" = "Όχι, μη αυτόματη σάρωση ταυτότητας";
 "jumio_selfiedone_scan_ID_manually" = "Σάρωση ταυτότητας με μη αυτόματο τρόπο";
-"jumio_selfiedone_we_found_your_ID" = "Βρήκαμε ένα από τα έγγραφα ταυτοποίησής σας";
+"jumio_selfiedone_start_verification_subtitle" = "Οδηγηθήκατε εδώ από έναν πελάτη της Jumio που χρησιμοποιεί τις υπηρεσίες επαλήθευσης ταυτότητας, πρόληψης απάτης και ακεραιότητας λογαριασμών.";
+"jumio_selfiedone_submit_button" = "Υποβολή";
+"jumio_selfiedone_we_found_your_ID" = "Βρήκαμε ένα έγγραφο ταυτοποίησης που είχατε υποβάλει προηγουμένως";
+"jumio_selfiedone_yes_continue_button" = "Ναι, συνεχίστε";
 "jumio_start_button" = "Έναρξη";
 "jumio_start_instructions_01" = "Βρείτε μια καλά φωτισμένη επιφάνεια";
 "jumio_start_instructions_02" = "Ετοιμαστείτε να βγάλετε μια selfie";

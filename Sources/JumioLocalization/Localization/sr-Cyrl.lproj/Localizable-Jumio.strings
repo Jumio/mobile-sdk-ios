@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Скенирање је оптимизовано за боље перформансе уређаја";
 "jumio_id_scan_manual" = "Фотографишите документ";
 "jumio_id_scan_manual_tips" = "Обавезно снимите цео документ";
-"jumio_id_scan_prompt_analyzing" = "Анализирање слике...";
 "jumio_id_scan_prompt_capture_success" = "Разумем!";
 "jumio_id_scan_prompt_captured" = "Снимљенo";
 "jumio_id_scan_prompt_center_id" = "Центрирајте документ";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Окрените се удесно";
 "jumio_liveness_prompt_tilt_up" = "Померите се нагоре";
 "jumio_liveness_prompt_too_far" = "Приближите се";
-"jumio_liveness_upfront_intro" = "Морамо да вам скенирамо лице да бисмо потврдили да сте стварна особа.";
+"jumio_liveness_upfront_intro" = "Морамо да вам скенирамо лице да бисмо проверили ваш идентитет и потврдили да сте стварна особа.";
 "jumio_loaders_almost_there" = "Скоро готово...";
 "jumio_loaders_finishing_up" = "Завршавање...";
 "jumio_loaders_starting_camera" = "Покретање камере...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Изаберите врсту личног документа";
 "jumio_selfiedone_ID_Found" = "Пронађен је идентификациони документ";
 "jumio_selfiedone_continue" = "Настави";
+"jumio_selfiedone_faster_verification_subtitle" = "Ако сте већ потврдили свој идентитет код једног од наших клијената, можда ћемо моћи да употребимо лични документ који сте претходно доставили.";
+"jumio_selfiedone_faster_verification_title" = "Изаберите бржу верификацију";
+"jumio_selfiedone_no_scan_id_manually_button" = "Не, скенирај документ ручно";
 "jumio_selfiedone_scan_ID_manually" = "Ручно скенирај лични документ";
-"jumio_selfiedone_we_found_your_ID" = "Пронашли смо један од ваших идентификационих докумената";
+"jumio_selfiedone_start_verification_subtitle" = "Овде вас је преусмерио клијент компаније Jumio који користи наше услуге верификације идентитета, спречавања превара и интегритета налога.";
+"jumio_selfiedone_submit_button" = "Пошаљи";
+"jumio_selfiedone_we_found_your_ID" = "Пронашли смо лични документ који сте претходно доставили";
+"jumio_selfiedone_yes_continue_button" = "Да, настави";
 "jumio_start_button" = "Започни";
 "jumio_start_instructions_01" = "Пронађите добро осветљену површину";
 "jumio_start_instructions_02" = "Будите спремни да направите селфи";

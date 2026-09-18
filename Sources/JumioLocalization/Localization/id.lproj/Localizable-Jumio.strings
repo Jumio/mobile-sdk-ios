@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Pemindaian dioptimalkan untuk menghasilkan performa perangkat yang lebih baik";
 "jumio_id_scan_manual" = "Ambil foto dokumen Anda";
 "jumio_id_scan_manual_tips" = "Pastikan menangkap seluruh dokumen";
-"jumio_id_scan_prompt_analyzing" = "Menganalisis gambar...";
 "jumio_id_scan_prompt_capture_success" = "Oke!";
 "jumio_id_scan_prompt_captured" = "Ditangkap";
 "jumio_id_scan_prompt_center_id" = "Posisikan dokumen Anda di tengah";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Miring kanan";
 "jumio_liveness_prompt_tilt_up" = "Geser ke atas";
 "jumio_liveness_prompt_too_far" = "Merapat";
-"jumio_liveness_upfront_intro" = "Kami perlu memindai wajah Anda untuk memverifikasi bahwa Anda benar-benar orang.";
+"jumio_liveness_upfront_intro" = "Kami perlu memindai wajah Anda untuk memverifikasi identitas Anda dan memastikan bahwa Anda adalah orang sungguhan.";
 "jumio_loaders_almost_there" = "Hampir selesai...";
 "jumio_loaders_finishing_up" = "Menyelesaikan...";
 "jumio_loaders_starting_camera" = "Memulai kamera...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Pilih jenis tanda pengenal";
 "jumio_selfiedone_ID_Found" = "ID ditemukan";
 "jumio_selfiedone_continue" = "Lanjutkan";
+"jumio_selfiedone_faster_verification_subtitle" = "Jika Anda telah memverifikasi identitas Anda dengan salah satu pelanggan kami, kami mungkin dapat menggunakan dokumen tanda pengenal yang Anda berikan sebelumnya.";
+"jumio_selfiedone_faster_verification_title" = "Pilih Verifikasi yang Lebih Cepat";
+"jumio_selfiedone_no_scan_id_manually_button" = "Tidak, Pindai ID Secara Manual";
 "jumio_selfiedone_scan_ID_manually" = "Pindai ID Secara Manual";
-"jumio_selfiedone_we_found_your_ID" = "Kami menemukan salah satu dokumen identifikasi Anda";
+"jumio_selfiedone_start_verification_subtitle" = "Anda diarahkan ke sini oleh pelanggan Jumio yang menggunakan layanan verifikasi identitas, pencegahan penipuan, dan integritas akun kami.";
+"jumio_selfiedone_submit_button" = "Kirim";
+"jumio_selfiedone_we_found_your_ID" = "Kami menemukan dokumen identitas yang Anda berikan sebelumnya";
+"jumio_selfiedone_yes_continue_button" = "Ya, Lanjutkan";
 "jumio_start_button" = "Mulai";
 "jumio_start_instructions_01" = "Cari permukaan yang cukup terang";
 "jumio_start_instructions_02" = "Bersiaplah untuk selfie";

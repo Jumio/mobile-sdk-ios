@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Skandering geoptimaliseer vir beter prestasie van toestel";
 "jumio_id_scan_manual" = "Neem ’n foto van u dokument";
 "jumio_id_scan_manual_tips" = "Sorg dat die hele dokument vasgelê word";
-"jumio_id_scan_prompt_analyzing" = "Analiseer die beeld...";
 "jumio_id_scan_prompt_capture_success" = "Het dit!";
 "jumio_id_scan_prompt_captured" = "Gevang";
 "jumio_id_scan_prompt_center_id" = "Sit u dokument in die middel";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Kantel regs";
 "jumio_liveness_prompt_tilt_up" = "Lig op";
 "jumio_liveness_prompt_too_far" = "Kom nader";
-"jumio_liveness_upfront_intro" = "Ons moet jou gesig skandeer om te bevestig dat jy ’n regte persoon is.";
+"jumio_liveness_upfront_intro" = "Ons moet jou gesig skandeer om jou identiteit te verifieer en te bevestig dat jy ’n regte persoon is.";
 "jumio_loaders_almost_there" = "Amper daar...";
 "jumio_loaders_finishing_up" = "Besig om af te handel...";
 "jumio_loaders_starting_camera" = "Kamera word gestart...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Kies ID-tipe";
 "jumio_selfiedone_ID_Found" = "ID gevind";
 "jumio_selfiedone_continue" = "Gaan voort";
+"jumio_selfiedone_faster_verification_subtitle" = "As u reeds u identiteit by een van ons kliënte geverifieer het, kan ons moontlik 'n identiteitsdokument wat u voorheen verskaf het, gebruik.";
+"jumio_selfiedone_faster_verification_title" = "Kies vinniger verifikasie";
+"jumio_selfiedone_no_scan_id_manually_button" = "Nee, skandeer ID handmatig";
 "jumio_selfiedone_scan_ID_manually" = "Skandeer ID handmatig";
-"jumio_selfiedone_we_found_your_ID" = "Ons het een van jou identifikasiedokumente gevind";
+"jumio_selfiedone_start_verification_subtitle" = "U is hierheen gewys deur 'n Jumio-kliënt wat ons dienste vir identiteitsverifikasie, bedrogvoorkoming en rekeningintegriteit gebruik.";
+"jumio_selfiedone_submit_button" = "Dien in";
+"jumio_selfiedone_we_found_your_ID" = "Ons het 'n ID-dokument gevind wat u voorheen verskaf het";
+"jumio_selfiedone_yes_continue_button" = "Ja, gaan voort";
 "jumio_start_button" = "Begin";
 "jumio_start_instructions_01" = "Kry 'n goedverligte oppervlak";
 "jumio_start_instructions_02" = "Wees gereed om 'n selfie te neem";

@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Skenēšana optimizēta, lai uzlabotu ierīces veiktspēju";
 "jumio_id_scan_manual" = "Nofotografējiet savu dokumentu";
 "jumio_id_scan_manual_tips" = "Pārliecinieties, ka nofotogrāfēts viss dokuments";
-"jumio_id_scan_prompt_analyzing" = "Analizējot attēlu...";
 "jumio_id_scan_prompt_capture_success" = "Izdevās!";
 "jumio_id_scan_prompt_captured" = "Fotografēts";
 "jumio_id_scan_prompt_center_id" = "Centrējiet savu dokumentu";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Nolieciet pa labi";
 "jumio_liveness_prompt_tilt_up" = "Paceliet augstāk";
 "jumio_liveness_prompt_too_far" = "Panāciet tuvāk";
-"jumio_liveness_upfront_intro" = "Mums ir jānoskenē Jūsu seja, lai pārbaudītu, vai esat īsta persona.";
+"jumio_liveness_upfront_intro" = "Mums ir jānoskenē jūsu seja, lai pārbaudītu jūsu identitāti un pārliecinātos, ka esat īsta persona.";
 "jumio_loaders_almost_there" = "Gandrīz gatavs...";
 "jumio_loaders_finishing_up" = "Pabeigšana...";
 "jumio_loaders_starting_camera" = "Notiek kameras palaišana...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Izvēlieties personu apliecinoša dokumenta veidu";
 "jumio_selfiedone_ID_Found" = "ID atrasts";
 "jumio_selfiedone_continue" = "Turpināt";
+"jumio_selfiedone_faster_verification_subtitle" = "Ja jūs jau esat verificējis savu identitāti pie kāda no mūsu klientiem, mēs, iespējams, varēsim izmantot jūsu iepriekš iesniegtu personu apliecinošu dokumentu.";
+"jumio_selfiedone_faster_verification_title" = "Izvēlieties ātrāku verifikāciju";
+"jumio_selfiedone_no_scan_id_manually_button" = "Nē, skenēt ID manuāli";
 "jumio_selfiedone_scan_ID_manually" = "Skenēt ID manuāli";
-"jumio_selfiedone_we_found_your_ID" = "Mēs atradām vienu no jūsu identifikācijas dokumentiem";
+"jumio_selfiedone_start_verification_subtitle" = "Jūs uz šejieni novirzīja Jumio klients, kurš izmanto mūsu identitātes pārbaudes, krāpšanas novēršanas un konta integritātes pakalpojumus.";
+"jumio_selfiedone_submit_button" = "Iesniegt";
+"jumio_selfiedone_we_found_your_ID" = "Mēs atradām personu apliecinošu dokumentu, ko iesniedzāt iepriekš";
+"jumio_selfiedone_yes_continue_button" = "Jā, turpināt";
 "jumio_start_button" = "Sākt";
 "jumio_start_instructions_01" = "Atrodiet labi apgaismotu virsmu";
 "jumio_start_instructions_02" = "Sagatavojieties pašportreta uzņemšanai";

@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Daha iyi cihaz performansı elde etmek için optimize edilmiş tarama";
 "jumio_id_scan_manual" = "Belgenizin fotoğrafını çekin";
 "jumio_id_scan_manual_tips" = "Belgenin tamamını çektiğinizden emin olun";
-"jumio_id_scan_prompt_analyzing" = "Görüntü analiz ediliyor...";
 "jumio_id_scan_prompt_capture_success" = "Tamamdır!";
 "jumio_id_scan_prompt_captured" = "Yakalandı";
 "jumio_id_scan_prompt_center_id" = "Belgenizi ortalayın";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Sağa eğin";
 "jumio_liveness_prompt_tilt_up" = "Yukarı kaldırın";
 "jumio_liveness_prompt_too_far" = "Yaklaşın";
-"jumio_liveness_upfront_intro" = "Gerçek bir insan olduğunuzu doğrulamak için yüzünüzü taramamız gerekiyor.";
+"jumio_liveness_upfront_intro" = "Kimliğinizi doğrulamak ve gerçek bir insan olduğunuzdan emin olmak için yüzünüzü taramamız gerekiyor.";
 "jumio_loaders_almost_there" = "Neredeyse tamamlandı...";
 "jumio_loaders_finishing_up" = "Bitiriliyor...";
 "jumio_loaders_starting_camera" = "Kamera başlatılıyor...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Kimlik türünü seçin";
 "jumio_selfiedone_ID_Found" = "Kimlik Bulundu";
 "jumio_selfiedone_continue" = "Devam Et";
+"jumio_selfiedone_faster_verification_subtitle" = "Kimliğinizi müşterilerimizden biri aracılığıyla zaten doğruladıysanız, daha önce sağlamış olduğunuz bir kimlik belgesini kullanmamız mümkün olabilir.";
+"jumio_selfiedone_faster_verification_title" = "Daha Hızlı Doğrulamayı Seçin";
+"jumio_selfiedone_no_scan_id_manually_button" = "Hayır, Kimliği Manuel Olarak Tara";
 "jumio_selfiedone_scan_ID_manually" = "Kimliği Manuel Olarak Tara";
-"jumio_selfiedone_we_found_your_ID" = "Kimlik belgelerinizden birini bulduk";
+"jumio_selfiedone_start_verification_subtitle" = "Buraya, kimlik doğrulama, dolandırıcılığı önleme ve hesap bütünlüğü hizmetlerimizi kullanan bir Jumio müşterisi tarafından yönlendirildiniz.";
+"jumio_selfiedone_submit_button" = "Gönder";
+"jumio_selfiedone_we_found_your_ID" = "Daha önce sağladığınız bir kimlik belgesini bulduk";
+"jumio_selfiedone_yes_continue_button" = "Evet, devam et";
 "jumio_start_button" = "Başla";
 "jumio_start_instructions_01" = "İyi aydınlatılmış bir yüzey bulun";
 "jumio_start_instructions_02" = "Selfie çekmeye hazır olun";

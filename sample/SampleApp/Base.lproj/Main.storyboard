@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1068,8 +1068,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Document Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxG-HK-Mig">
-                                <rect key="frame" x="81.5" y="312" width="251.5" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxG-HK-Mig">
+                                <rect key="frame" x="141.5" y="312" width="131" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1081,30 +1081,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOb-x8-LgP" customClass="CustomButton" customModule="SampleApp" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="778" width="99" height="50"/>
+                                <rect key="frame" x="138" y="768" width="138" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sbJ-Cn-bF5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="w5j-vd-Ao7"/>
                                 </constraints>
-                                <state key="normal" title="Scan manually"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Scan ID Manually"/>
                                 <connections>
                                     <action selector="retry:" destination="CHZ-sg-dMk" eventType="touchUpInside" id="8dn-yn-QMv"/>
                                     <action selector="scanManually:" destination="iiX-pa-Ljd" eventType="touchUpInside" id="Qr2-Tr-8Av"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHo-D7-qmY" customClass="CustomButton" customModule="SampleApp" customModuleProvider="target">
-                                <rect key="frame" x="176" y="720" width="62" height="50"/>
+                                <rect key="frame" x="172.5" y="710" width="69" height="50"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="3l2-Sx-bfj"/>
                                     <constraint firstAttribute="height" constant="50" id="pKF-ro-KxP"/>
                                 </constraints>
-                                <state key="normal" title="Continue"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="continueWithResult:" destination="iiX-pa-Ljd" eventType="touchUpInside" id="Oyl-f2-U0a"/>
                                     <action selector="retry:" destination="CHZ-sg-dMk" eventType="touchUpInside" id="gQ9-zH-ZOZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legal Statement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUf-7E-J2V">
-                                <rect key="frame" x="16" y="435.5" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="478.5" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48i-9p-dFt">
+                                <rect key="frame" x="168.5" y="411.5" width="77" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1113,24 +1123,97 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HsD-rR-2GD" firstAttribute="centerX" secondItem="XIO-T3-4qE" secondAttribute="centerX" id="0WK-LS-8bi"/>
-                            <constraint firstItem="XIO-T3-4qE" firstAttribute="bottom" secondItem="EOb-x8-LgP" secondAttribute="bottom" id="19A-b6-YDz"/>
+                            <constraint firstItem="XIO-T3-4qE" firstAttribute="bottom" secondItem="EOb-x8-LgP" secondAttribute="bottom" constant="10" id="19A-b6-YDz"/>
                             <constraint firstItem="OxG-HK-Mig" firstAttribute="centerX" secondItem="XIO-T3-4qE" secondAttribute="centerX" id="Gvl-AD-ej3"/>
                             <constraint firstItem="HUf-7E-J2V" firstAttribute="leading" secondItem="XIO-T3-4qE" secondAttribute="leading" constant="16" id="MMn-sL-j1t"/>
+                            <constraint firstItem="HUf-7E-J2V" firstAttribute="top" secondItem="48i-9p-dFt" secondAttribute="bottom" constant="40" id="Mjg-eo-Qdj"/>
                             <constraint firstItem="cHo-D7-qmY" firstAttribute="centerX" secondItem="XIO-T3-4qE" secondAttribute="centerX" id="eN4-gE-uuX"/>
                             <constraint firstItem="OxG-HK-Mig" firstAttribute="top" secondItem="XIO-T3-4qE" secondAttribute="centerY" constant="-150" id="gEs-Ef-GUA"/>
                             <constraint firstItem="HUf-7E-J2V" firstAttribute="trailing" secondItem="XIO-T3-4qE" secondAttribute="trailing" constant="-16" id="k8K-cY-f42"/>
                             <constraint firstItem="EOb-x8-LgP" firstAttribute="top" secondItem="cHo-D7-qmY" secondAttribute="bottom" constant="8" symbolic="YES" id="lko-DC-uC5"/>
+                            <constraint firstItem="48i-9p-dFt" firstAttribute="top" secondItem="HsD-rR-2GD" secondAttribute="bottom" constant="16" id="nsD-2q-oRo"/>
+                            <constraint firstItem="48i-9p-dFt" firstAttribute="centerX" secondItem="XIO-T3-4qE" secondAttribute="centerX" id="r5X-qf-2g8"/>
                             <constraint firstItem="HsD-rR-2GD" firstAttribute="top" secondItem="OxG-HK-Mig" secondAttribute="bottom" constant="16" id="u0z-J8-A9J"/>
                             <constraint firstItem="EOb-x8-LgP" firstAttribute="centerX" secondItem="XIO-T3-4qE" secondAttribute="centerX" id="xID-1z-Gy5"/>
-                            <constraint firstItem="HUf-7E-J2V" firstAttribute="top" secondItem="HsD-rR-2GD" secondAttribute="bottom" constant="40" id="ykK-Em-qwH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countryLabel" destination="48i-9p-dFt" id="zQc-Lh-bQt"/>
                         <outlet property="documentType" destination="HsD-rR-2GD" id="O5m-jY-4bs"/>
                         <outlet property="legalStatement" destination="HUf-7E-J2V" id="9Mp-Ah-Ohd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="amu-IG-owg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3429" y="840"/>
+        </scene>
+        <!--Faster Verification View Controller-->
+        <scene sceneID="8rn-Mu-g8p">
+            <objects>
+                <viewController storyboardIdentifier="fasterVerification" id="PSJ-Ek-cRs" customClass="FasterVerificationViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lP8-dV-RBK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Faster Verification" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcw-tW-1Oe">
+                                <rect key="frame" x="20" y="312" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oT-be-drU" customClass="CustomButton" customModule="SampleApp" customModuleProvider="target">
+                                <rect key="frame" x="147" y="710" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Ij7-cZ-2NI"/>
+                                    <constraint firstAttribute="height" constant="50" id="n90-fK-RCj"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Yes, Continue"/>
+                                <connections>
+                                    <action selector="continueWithResult:" destination="PSJ-Ek-cRs" eventType="touchUpInside" id="Mul-cO-9zu"/>
+                                    <action selector="retry:" destination="CHZ-sg-dMk" eventType="touchUpInside" id="oTp-kx-J9Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legal Statement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGw-nX-fGO">
+                                <rect key="frame" x="16" y="398" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XE-Ue-4pq" customClass="CustomButton" customModule="SampleApp" customModuleProvider="target">
+                                <rect key="frame" x="124" y="768" width="166" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="hI2-Sm-Rrw"/>
+                                    <constraint firstAttribute="height" constant="50" id="ksf-8u-lSD"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="No, Scan ID Manually"/>
+                                <connections>
+                                    <action selector="retry:" destination="CHZ-sg-dMk" eventType="touchUpInside" id="W26-gy-XiK"/>
+                                    <action selector="scanManually:" destination="PSJ-Ek-cRs" eventType="touchUpInside" id="22H-fC-AUe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E60-ie-FV5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dcw-tW-1Oe" firstAttribute="leading" secondItem="E60-ie-FV5" secondAttribute="leading" constant="20" id="1Cg-q3-rUS"/>
+                            <constraint firstItem="oGw-nX-fGO" firstAttribute="leading" secondItem="E60-ie-FV5" secondAttribute="leading" constant="16" id="6GQ-BD-o0t"/>
+                            <constraint firstItem="oGw-nX-fGO" firstAttribute="trailing" secondItem="E60-ie-FV5" secondAttribute="trailing" constant="-16" id="DcB-VC-tM9"/>
+                            <constraint firstItem="Dcw-tW-1Oe" firstAttribute="top" secondItem="E60-ie-FV5" secondAttribute="centerY" constant="-150" id="FGs-VJ-hia"/>
+                            <constraint firstItem="5oT-be-drU" firstAttribute="centerX" secondItem="E60-ie-FV5" secondAttribute="centerX" id="ILs-11-JGm"/>
+                            <constraint firstItem="E60-ie-FV5" firstAttribute="trailing" secondItem="Dcw-tW-1Oe" secondAttribute="trailing" constant="20" id="MFJ-AJ-9AB"/>
+                            <constraint firstItem="oGw-nX-fGO" firstAttribute="top" secondItem="Dcw-tW-1Oe" secondAttribute="bottom" constant="50" id="RZT-Ln-mbm"/>
+                            <constraint firstItem="E60-ie-FV5" firstAttribute="bottom" secondItem="3XE-Ue-4pq" secondAttribute="bottom" constant="10" id="Wy4-xu-6YY"/>
+                            <constraint firstItem="3XE-Ue-4pq" firstAttribute="centerX" secondItem="E60-ie-FV5" secondAttribute="centerX" id="slk-j0-9Ie"/>
+                            <constraint firstItem="3XE-Ue-4pq" firstAttribute="top" secondItem="5oT-be-drU" secondAttribute="bottom" constant="8" symbolic="YES" id="zNR-el-3Eg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="legalStatement" destination="oGw-nX-fGO" id="eaZ-nV-GIn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lL9-Dj-75f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3428.985507246377" y="126.5625"/>
         </scene>

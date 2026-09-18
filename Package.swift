@@ -1,13 +1,13 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 import PackageDescription
 
-let version = "4.18.0"
+let version = "4.19.0"
 
 let package = Package(
     name: "Jumio",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -64,27 +64,27 @@ let package = Package(
         .binaryTarget(
             name: "Jumio",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/Jumio.xcframework.zip",
-            checksum: "eddf062afa95ec8981bb59a56f97871eb9e245c27fd7686ecbd4b1d5d3a3100d"
+            checksum: "7e25432287478eecfa171e9688092701ccab5f6af1c7c14f0005124ef08146a8"
         ),
         .binaryTarget(
             name: "JumioLiveness",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLiveness.xcframework.zip",
-            checksum: "3efcf14eb49de31bc65709ec64466d19b4066526f9319ecebabd2b0d80594f5d"
+            checksum: "9af0c1ff8d619fa3f318878eeaef9436fb412190ca450d498f08aee487d2365a"
         ),
         .binaryTarget(
             name: "JumioLivenessClient",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioLivenessClient.xcframework.zip",
-            checksum: "9360d12471feeaa1c92fc8de8b58199b83027ace9fffb47ef2a490087e20d8c2"
+            checksum: "0d6016959772c86bb283666bf774f40b3591c20602ff99f40cae4ad6363d7c0f"
         ),
         .binaryTarget(
             name: "JumioDefaultUI",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioDefaultUI.xcframework.zip",
-            checksum: "9390419a150ccec12cec9f2969fbe9c859e0c0bc3bfc39711dbb3b61d885fbdf"
+            checksum: "e11d274e2d23d5df3fc62f38927a8d7c10c109f38cd6b239752487f2f226712f"
         ),
         .binaryTarget(
             name: "JumioNFC",
             url: "https://repo.mobile.jumio.ai/com/jumio/ios/jumio-mobile-sdk/\(version)/JumioNFC.xcframework.zip",
-            checksum: "254dad96300902463fc1e5f4fc35335f3fbd4283f4f4aae231855c18984a2406"
+            checksum: "d3cba8f7e131c8c353cee2697a344c7bb720de990c6895bb5948bf7a6a47bd4b"
         ),
     ]
 )

@@ -132,7 +132,6 @@
 "jumio_id_scan_hint_performance_fallback" = "Quy trình quét được tối ưu hóa để thiết bị đạt hiệu suất tốt hơn";
 "jumio_id_scan_manual" = "Chụp ảnh tài liệu của bạn";
 "jumio_id_scan_manual_tips" = "Đảm bảo chụp toàn bộ tài liệu";
-"jumio_id_scan_prompt_analyzing" = "Đang phân tích hình ảnh...";
 "jumio_id_scan_prompt_capture_success" = "Đã hiểu!";
 "jumio_id_scan_prompt_captured" = "Đã chụp";
 "jumio_id_scan_prompt_center_id" = "Căn giữa tài liệu của bạn";
@@ -184,7 +183,7 @@
 "jumio_liveness_prompt_tilt_right" = "Nghiêng phải";
 "jumio_liveness_prompt_tilt_up" = "Nghiêng lên";
 "jumio_liveness_prompt_too_far" = "Di chuyển lại gần hơn";
-"jumio_liveness_upfront_intro" = "Chúng tôi cần quét khuôn mặt bạn để xác minh rằng bạn là người thật.";
+"jumio_liveness_upfront_intro" = "Chúng tôi cần quét khuôn mặt bạn để xác minh danh tính của bạn và chắc chắn rằng bạn là người thật.";
 "jumio_loaders_almost_there" = "Sắp xong rồi...";
 "jumio_loaders_finishing_up" = "Đang hoàn tất...";
 "jumio_loaders_starting_camera" = "Đang khởi động máy ảnh...";
@@ -213,8 +212,14 @@
 "jumio_select_id_type" = "Chọn loại giấy tờ tùy thân";
 "jumio_selfiedone_ID_Found" = "Đã tìm thấy giấy tờ tùy thân";
 "jumio_selfiedone_continue" = "Tiếp tục";
+"jumio_selfiedone_faster_verification_subtitle" = "Nếu bạn đã xác minh danh tính với một trong các khách hàng của chúng tôi, chúng tôi có thể sử dụng giấy tờ tùy thân mà bạn đã cung cấp trước đó.";
+"jumio_selfiedone_faster_verification_title" = "Chọn xác minh nhanh hơn";
+"jumio_selfiedone_no_scan_id_manually_button" = "Không, Quét ID thủ công";
 "jumio_selfiedone_scan_ID_manually" = "Quét giấy tờ tùy thân thủ công";
-"jumio_selfiedone_we_found_your_ID" = "Chúng tôi đã tìm thấy một trong các giấy tờ tùy thân của bạn";
+"jumio_selfiedone_start_verification_subtitle" = "Bạn được chuyển hướng đến đây bởi một khách hàng của Jumio, đơn vị sử dụng các dịch vụ xác minh danh tính, phòng chống gian lận và bảo đảm tính toàn vẹn của tài khoản do chúng tôi cung cấp.";
+"jumio_selfiedone_submit_button" = "Gửi";
+"jumio_selfiedone_we_found_your_ID" = "Chúng tôi đã tìm thấy giấy tờ tùy thân mà bạn đã cung cấp trước đó";
+"jumio_selfiedone_yes_continue_button" = "Có, Tiếp tục";
 "jumio_start_button" = "Bắt đầu";
 "jumio_start_instructions_01" = "Tìm bề mặt có đủ ánh sáng";
 "jumio_start_instructions_02" = "Hãy sẵn sàng để chụp ảnh selfie";
